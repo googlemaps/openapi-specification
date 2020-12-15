@@ -32,6 +32,9 @@ import unified from "unified";
 import { OpenAPIV3 } from "openapi-types";
 import gfm from "remark-gfm";
 import slugify from "slugify";
+import remarkHtml from "remark-html";
+import remarkParse from "remark-parse";
+import prettier from "prettier";
 
 const argv = options({
   output: {
@@ -44,12 +47,14 @@ const argv = options({
   },
 }).argv;
 
-const processor = unified().use(gfm).use(stringify, {
+const mdProcessor = unified().use(gfm).use(stringify, {
   bullet: "-",
   fence: "`",
   fences: true,
   incrementListMarker: false,
 });
+
+const htmlProcessor = unified().use(remarkParse).use(gfm).use(remarkHtml);
 
 const main = async (argv: any) => {
   const spec = (await dereference(
@@ -99,14 +104,25 @@ const main = async (argv: any) => {
       nodes.push(table(["left"], rows));
     }
 
-    const markdown = processor.stringify(root(nodes));
     const regionTag = `maps_http_schema_${slugify(key)}`;
 
+    const markdown = mdProcessor.stringify(root(nodes));
     pack.entry(
       {
         name: `documentation/schemas/${key}.md`,
       },
       `<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${markdown}\n<!--- [END ${regionTag}] -->`
+    );
+
+    const html = await htmlProcessor.process(markdown);
+    pack.entry(
+      {
+        name: `documentation/schemas/${key}.html`,
+      },
+      prettier.format(
+        `<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${html}\n<!--- [END ${regionTag}] -->`,
+        { parser: "html" }
+      )
     );
   }
   pack.finalize();

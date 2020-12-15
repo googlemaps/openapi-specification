@@ -585,16 +585,22 @@ components:
       properties:
         homeMobileCountryCode:
           type: integer
+          description: The cell tower's Mobile Country Code (MCC).
         homeMobileNetworkCode:
           type: integer
+          description: The cell tower's Mobile Network Code. This is the MNC for GSM and WCDMA; CDMA uses the System ID (SID).
         radioType:
           type: string
+          description: 'The mobile radio type. Supported values are lte, gsm, cdma, and wcdma. While this field is optional, it should be included if a value is available, for more accurate results.'
         carrier:
           type: string
+          description: The carrier name.
         considerIp:
           type: string
+          description: Specifies whether to fall back to IP geolocation if wifi and cell tower signals are not available. Defaults to true. Set considerIp to false to disable fall back.
         cellTowers:
           type: array
+          description: An array of cell tower objects.
           items:
             type: object
             required:
@@ -626,6 +632,7 @@ components:
                 type: number
         wifiAccessPoints:
           type: array
+          description: An array of WiFi access point objects.
           items:
             type: object
             properties:

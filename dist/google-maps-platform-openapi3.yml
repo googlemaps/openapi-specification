@@ -1,0 +1,657 @@
+openapi: 3.0.1
+info:
+  title: Google Maps Platform
+  description: API Specification for Google Maps Platform
+  version: 0.0.0
+servers:
+  - url: 'https://www.googleapis.com'
+paths:
+  /geolocation/v1/geolocate:
+    post:
+      servers:
+        - url: 'https://www.googleapis.com'
+      tags:
+        - Geolocation API
+      description: |-
+        Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect. This document describes the protocol used to send this data to the server and to return a response to the client.
+
+        https://developers.google.com/maps/documentation/geolocation/intro
+      requestBody:
+        description: The request body must be formatted as JSON.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeolocationV1GeolocatePostRequestBody'
+            examples:
+              WIFI:
+                value:
+                  considerIp: 'false'
+                  wifiAccessPoints:
+                    - macAddress: '00:25:9c:cf:1c:ac'
+                      signalStrength: -43
+                      signalToNoiseRatio: 0
+                    - macAddress: '00:25:9c:cf:1c:ad'
+                      signalStrength: -55
+                      signalToNoiseRatio: 0
+              IP Only:
+                value:
+                  considerIp: 'true'
+        required: false
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  location:
+                    $ref: '#/components/schemas/LatLngLiteral'
+                  accuracy:
+                    type: number
+              examples:
+                default:
+                  value:
+                    location:
+                      lat: 33.3632486
+                      lng: -117.08696079999999
+                    accuracy: 30
+  /maps/api/elevation/json:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Elevation API
+      description: One of `path` or `locations` is **required.**
+      parameters:
+        - name: locations
+          in: query
+          style: pipeDelimited
+          explode: false
+          description: 'An array of comma separated {latitude,longitude} strings.'
+          example: '35,-100|40,-110'
+          schema:
+            $ref: '#/components/schemas/LatLngArrayString'
+        - name: path
+          in: query
+          style: pipeDelimited
+          explode: false
+          description: 'An array of comma separated {latitude,longitude} strings.'
+          example: '35,-110|33,-110|31,-110'
+          schema:
+            $ref: '#/components/schemas/LatLngArrayString'
+        - name: samples
+          in: query
+          description: Required if path parameter is set.
+          schema:
+            type: number
+          example: 10
+      responses:
+        '200':
+          description: Elevation Response
+          content:
+            application/json:
+              examples:
+                status = OK:
+                  value:
+                    results:
+                      - elevation: 1643.880493164062
+                        location:
+                          lat: 35
+                          lng: -110
+                        resolution: 9.543951988220215
+                      - elevation: 1748.557983398438
+                        location:
+                          lat: 31
+                          lng: -110
+                        resolution: 152.7032318115234
+                    status: OK
+              schema:
+                type: object
+                required:
+                  - status
+                properties:
+                  error_message:
+                    type: string
+                    example: Invalid request. Invalid 'locations' parameter.
+                  status:
+                    $ref: '#/components/schemas/ElevationStatus'
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        elevation:
+                          type: number
+                        resolution:
+                          type: number
+                        location:
+                          $ref: '#/components/schemas/LatLngLiteral'
+  /maps/api/geocode/json:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Geocode API
+      description: One of `path` or `locations` is **required.**
+      parameters:
+        - $ref: '#/components/parameters/language'
+        - $ref: '#/components/parameters/region'
+        - name: address
+          example: '1600 Amphitheatre+Parkway, Mountain View, CA'
+          description: |-
+            The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
+
+            https://developers.google.com/maps/faq#geocoder_queryformat
+          in: query
+          schema:
+            type: string
+        - name: components
+          style: pipeDelimited
+          explode: false
+          example:
+            - 'street_number:1600'
+            - 'route:Amphitheatre+Parkway'
+            - 'locality:Mountain+View'
+            - 'administrative_area_level_1:CA'
+            - 'country:US'
+          description: |-
+            A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
+
+            https://developers.google.com/maps/documentation/geocoding/intro#ComponentFiltering
+          in: query
+          schema:
+            items:
+              type: string
+            type: array
+        - name: bounds
+          description: |-
+            The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
+            in: query
+          example:
+            - '35,-100'
+            - '40,-110'
+          schema:
+            $ref: '#/components/schemas/LatLngArrayString'
+          in: query
+      responses:
+        '200':
+          description: Elevation Response
+          content:
+            application/json:
+              examples:
+                status = OK:
+                  value:
+                    results:
+                      - elevation: 1643.880493164062
+                        location:
+                          lat: 35
+                          lng: -110
+                        resolution: 9.543951988220215
+                      - elevation: 1748.557983398438
+                        location:
+                          lat: 31
+                          lng: -110
+                        resolution: 152.7032318115234
+                    status: OK
+              schema:
+                type: object
+                required:
+                  - status
+                properties:
+                  error_message:
+                    type: string
+                    example: Invalid request. Invalid 'locations' parameter.
+                  status:
+                    $ref: '#/components/schemas/ElevationStatus'
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        elevation:
+                          type: number
+                        resolution:
+                          type: number
+                        location:
+                          $ref: '#/components/schemas/LatLngLiteral'
+components:
+  parameters:
+    language:
+      name: language
+      in: query
+      description: |-
+        The language in which to return results.
+
+        https://developers.google.com/maps/faq#languagesupport
+      schema:
+        type: string
+        default: en
+        enum:
+          - ar
+          - bg
+          - bn
+          - ca
+          - cs
+          - da
+          - de
+          - el
+          - en
+          - en-AU
+          - en-GB
+          - es
+          - eu
+          - fa
+          - fi
+          - fil
+          - fr
+          - gl
+          - gu
+          - hi
+          - hr
+          - hu
+          - id
+          - it
+          - iw
+          - ja
+          - kn
+          - ko
+          - lt
+          - lv
+          - ml
+          - mr
+          - nl
+          - 'no'
+          - pl
+          - pt
+          - pt-BR
+          - pt-PT
+          - ro
+          - ru
+          - sk
+          - sl
+          - sr
+          - sv
+          - ta
+          - te
+          - th
+          - tl
+          - tr
+          - uk
+          - vi
+          - zh-CN
+          - zh-TW
+    region:
+      name: region
+      in: query
+      description: |-
+        The region code, specified as a ccTLD ("top-level domain") two-character value.
+
+        https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+      schema:
+        type: string
+        default: en
+        enum:
+          - ac
+          - ad
+          - ae
+          - af
+          - ag
+          - ai
+          - al
+          - am
+          - an
+          - ao
+          - aq
+          - ar
+          - as
+          - at
+          - au
+          - aw
+          - ax
+          - az
+          - ba
+          - bb
+          - bd
+          - be
+          - bf
+          - bg
+          - bh
+          - bi
+          - bj
+          - bl
+          - bm
+          - bn
+          - bo
+          - bq
+          - br
+          - bs
+          - bt
+          - bv
+          - bw
+          - by
+          - bz
+          - ca
+          - cc
+          - cd
+          - cf
+          - cg
+          - ch
+          - ci
+          - ck
+          - cl
+          - cm
+          - cn
+          - co
+          - cr
+          - cu
+          - cv
+          - cw
+          - cx
+          - cy
+          - cz
+          - de
+          - dj
+          - dk
+          - dm
+          - do
+          - dz
+          - ec
+          - ee
+          - eg
+          - eh
+          - er
+          - es
+          - et
+          - eu
+          - fi
+          - fj
+          - fk
+          - fm
+          - fo
+          - fr
+          - ga
+          - gb
+          - gd
+          - ge
+          - gf
+          - gg
+          - gh
+          - gi
+          - gl
+          - gm
+          - gn
+          - gp
+          - gq
+          - gr
+          - gs
+          - gt
+          - gu
+          - gw
+          - gy
+          - hk
+          - hm
+          - hn
+          - hr
+          - ht
+          - hu
+          - id
+          - ie
+          - il
+          - im
+          - in
+          - io
+          - iq
+          - ir
+          - is
+          - it
+          - je
+          - jm
+          - jo
+          - jp
+          - ke
+          - kg
+          - kh
+          - ki
+          - km
+          - kn
+          - kp
+          - kr
+          - kw
+          - ky
+          - kz
+          - la
+          - lb
+          - lc
+          - li
+          - lk
+          - lr
+          - ls
+          - lt
+          - lu
+          - lv
+          - ly
+          - ma
+          - mc
+          - md
+          - me
+          - mf
+          - mg
+          - mh
+          - mk
+          - ml
+          - mm
+          - mn
+          - mo
+          - mp
+          - mq
+          - mr
+          - ms
+          - mt
+          - mu
+          - mv
+          - mw
+          - mx
+          - my
+          - mz
+          - na
+          - nc
+          - ne
+          - nf
+          - ng
+          - ni
+          - nl
+          - 'no'
+          - np
+          - nr
+          - nu
+          - nz
+          - om
+          - pa
+          - pe
+          - pf
+          - pg
+          - ph
+          - pk
+          - pl
+          - pm
+          - pn
+          - pr
+          - ps
+          - pt
+          - pw
+          - py
+          - qa
+          - re
+          - ro
+          - rs
+          - ru
+          - rw
+          - sa
+          - sb
+          - sc
+          - sd
+          - se
+          - sg
+          - sh
+          - si
+          - sj
+          - sk
+          - sl
+          - sm
+          - sn
+          - so
+          - sr
+          - ss
+          - st
+          - su
+          - sv
+          - sx
+          - sy
+          - sz
+          - tc
+          - td
+          - tf
+          - tg
+          - th
+          - tj
+          - tk
+          - tl
+          - tm
+          - tn
+          - to
+          - tp
+          - tr
+          - tt
+          - tv
+          - tw
+          - tz
+          - ua
+          - ug
+          - uk
+          - um
+          - us
+          - uy
+          - uz
+          - va
+          - vc
+          - ve
+          - vg
+          - vi
+          - vn
+          - vu
+          - wf
+          - ws
+          - ye
+          - yt
+          - za
+          - zm
+          - zw
+  schemas:
+    ElevationStatus:
+      type: string
+      enum:
+        - OK
+        - INVALID_REQUEST
+    GeocodeStatus:
+      type: string
+      enum:
+        - OK
+        - INVALID_REQUEST
+    LatLngArrayString:
+      description: 'An array of comma separated {latitude,longitude} strings.'
+      example:
+        - '35,-100'
+        - '40,-110'
+      type: array
+      items:
+        type: string
+        minItems: 2
+    LatLngLiteral:
+      type: object
+      required:
+        - lat
+        - lng
+      properties:
+        lat:
+          type: number
+          description: Latitude in decimal degrees
+        lng:
+          type: number
+          description: Longitude in decimal degrees
+    GeolocationV1GeolocatePostRequestBody:
+      type: object
+      title: Geolocation Request Body
+      properties:
+        homeMobileCountryCode:
+          type: integer
+        homeMobileNetworkCode:
+          type: integer
+        radioType:
+          type: string
+        carrier:
+          type: string
+        considerIp:
+          type: string
+        cellTowers:
+          type: array
+          items:
+            type: object
+            required:
+              - cellId
+              - locationAreaCode
+              - mobileCountryCode
+              - mobileNetworkCode
+            properties:
+              cellId:
+                description: 'Unique identifier of the cell. On GSM, this is the Cell ID (CID); CDMA networks use the Base Station ID (BID). WCDMA networks use the UTRAN/GERAN Cell Identity (UC-Id), which is a 32-bit value concatenating the Radio Network Controller (RNC) and Cell ID. Specifying only the 16-bit Cell ID value in WCDMA networks may return inaccurate results.'
+                type: integer
+              locationAreaCode:
+                description: The Location Area Code (LAC) for GSM and WCDMA networks. The Network ID (NID) for CDMA networks.
+                type: integer
+              mobileCountryCode:
+                description: The cell tower's Mobile Country Code (MCC).
+                type: integer
+              mobileNetworkCode:
+                description: The cell tower's Mobile Network Code. This is the MNC for GSM and WCDMA; CDMA uses the System ID (SID).
+                type: integer
+              age:
+                description: 'The number of milliseconds since this cell was primary. If age is 0, the cellId represents a current measurement.'
+                type: integer
+              signalStrength:
+                description: Radio signal strength measured in dBm.
+                type: number
+              timingAdvance:
+                description: The timing advance value.
+                type: number
+        wifiAccessPoints:
+          type: array
+          items:
+            type: object
+            properties:
+              macAddress:
+                type: string
+              signalStrength:
+                type: integer
+              signalToNoiseRatio:
+                type: integer
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: key
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Elevation API
+    description: 'The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.'
+    externalDocs:
+      url: 'https://developers.google.com/maps/documentation/elevation/overview'
+  - name: Geocode API
+    description: The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.
+    externalDocs:
+      url: 'https://developers.google.com/maps/documentation/geocoding/overview'
+  - name: Geolocation API
+    description: The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.
+    externalDocs:
+      url: 'https://developers.google.com/maps/documentation/geolocation/overview'

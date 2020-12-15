@@ -1,0 +1,40 @@
+load("//rules:swagger_cli.bzl", "bundle", "validate")
+load("@rules_pkg//:pkg.bzl", "pkg_tar")
+
+exports_files(["tsconfig.json"], visibility = ["//visibility:public"])
+
+BUNDLE_NAME = "google-maps-platform-openapi3"
+
+[
+    bundle(
+        name = BUNDLE_NAME,
+        data = ["//specification:openapi3"],
+        entry = "$(locations //specification:openapi3)/index.yml",
+        type = type,
+        visibility = ["//visibility:public"],
+    )
+    for type in [
+        "yaml",
+        "json",
+    ]
+]
+
+validate(
+    name = "validate_yml_test",
+    data = "//:{}.yml".format(BUNDLE_NAME),
+)
+
+validate(
+    name = "validate_json_test",
+    data = "//:{}.json".format(BUNDLE_NAME),
+)
+
+pkg_tar(
+    name = "dist",
+    srcs = [
+        "//:{}.yml".format(BUNDLE_NAME),
+        "//:{}.json".format(BUNDLE_NAME),
+    ],
+    strip_prefix = ".",
+    deps = ["//generator/requests:snippets.tar", "//generator/documentation:schemas.tar"],
+)

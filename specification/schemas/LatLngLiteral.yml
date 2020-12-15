@@ -1,0 +1,11 @@
+type: object
+required:
+  - lat
+  - lng
+properties:
+  lat:
+    type: number
+    description: Latitude in decimal degrees
+  lng:
+    type: number
+    description: Longitude in decimal degrees

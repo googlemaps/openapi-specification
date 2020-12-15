@@ -1,0 +1,42 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "_lib",
+    srcs = ["schema.ts"],
+    deps = [
+        "@npm//@apidevtools/json-schema-ref-parser",
+        "@npm//@types/json-schema",
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//mdast-builder",
+        "@npm//openapi-types",
+        "@npm//remark-gfm",
+        "@npm//remark-stringify",
+        "@npm//slugify",
+        "@npm//tar-stream",
+        "@npm//unified",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "_schema_bin",
+    data = [
+        ":_lib",
+        "//specification:openapi3",
+    ],
+    entry_point = ":schema.ts",
+)
+
+genrule(
+    name = "schemas",
+    srcs = ["//:google-maps-platform-openapi3.json"],
+    outs = ["schemas.tar"],
+    cmd = "$(location :_schema_bin) " +
+          "--spec $(location //:google-maps-platform-openapi3.json) " +
+          "--output $@",
+    tools = [":_schema_bin"],
+)

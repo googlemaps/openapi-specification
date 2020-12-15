@@ -1,0 +1,33 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "_lib",
+    srcs = glob(["**/*.ts"]),
+    deps = [
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//postman-code-generators",
+        "@npm//postman-collection",
+        "@npm//tar-stream",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "_snippets_bin",
+    data = [
+        ":_lib",
+        "//specification:json-files",
+    ],
+    entry_point = ":snippets.ts",
+)
+
+genrule(
+    name = "snippets",
+    outs = ["snippets.tar"],
+    cmd = "$(location :_snippets_bin) --output $@",
+    tools = [":_snippets_bin"],
+)

@@ -1,0 +1,43 @@
+{
+  "name": "http-specification",
+  "version": "0.1.0",
+  "homepage": "https://github.com/googlemaps/openapi#readme",
+  "bugs": {
+    "url": "https://github.com/googlemaps/openapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/googlemaps/openapi.git"
+  },
+  "license": "Apache 2.0",
+  "files": [
+    "dist/*.json"
+  ],
+  "scripts": {
+    "build": "bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
+    "test": "bazel test ..."
+  },
+  "devDependencies": {
+    "@bazel/buildifier": "^3.4.0",
+    "@bazel/buildozer": "^3.4.0",
+    "@bazel/ibazel": "^0.13.2",
+    "@bazel/typescript": "^2.3.0",
+    "@types/json-schema": "^7.0.6",
+    "@types/node": "^14.14.7",
+    "@types/yargs": "^15.0.9",
+    "json-schema-ref-parser": "^9.0.6",
+    "jsonpath-plus": "^4.0.0",
+    "mdast-builder": "^1.1.1",
+    "openapi-types": "^7.0.1",
+    "postman-code-generators": "^1.1.1",
+    "postman-collection": "^3.6.8",
+    "remark-gfm": "^1.0.0",
+    "remark-stringify": "^9.0.0",
+    "slugify": "^1.4.6",
+    "swagger-cli": "^4.0.4",
+    "tar-stream": "^2.1.4",
+    "typescript": "^4.0.5",
+    "unified": "^9.2.0",
+    "yargs": "^16.1.0"
+  }
+}

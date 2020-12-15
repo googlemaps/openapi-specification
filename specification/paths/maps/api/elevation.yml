@@ -1,0 +1,85 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Elevation API
+description: |-
+  One of `path` or `locations` is **required.**
+parameters:  
+  - name: locations
+    in: query
+    style: pipeDelimited
+    explode: false
+    description: An array of comma separated {latitude,longitude} strings.
+    example: "35,-100|40,-110"
+    schema:
+      $ref: "../../../schemas/LatLngArrayString.yml"
+  - name: path
+    in: query
+    style: pipeDelimited
+    explode: false
+    description: An array of comma separated {latitude,longitude} strings.
+    example: "35,-110|33,-110|31,-110"
+    schema:
+      $ref: "../../../schemas/LatLngArrayString.yml"
+  - name: samples
+    in: query
+    description: |-
+      Required if path parameter is set.
+    schema:
+      type: number
+    example: 10
+responses:
+  "200":
+    description: "Elevation Response"
+    content:
+      application/json:
+        examples:
+          status = OK:
+            value: 
+              results:
+              - elevation: 1643.880493164062
+                location:
+                  lat: 35
+                  lng: -110
+                resolution: 9.543951988220215
+              - elevation: 1748.557983398438
+                location:
+                  lat: 31
+                  lng: -110
+                resolution: 152.7032318115234
+              status: OK
+        schema:
+          type: object
+          required:
+            - status
+          properties:
+            error_message: 
+              type: string
+              example: "Invalid request. Invalid 'locations' parameter."
+            status:
+              $ref: "../../../schemas/ElevationStatus.yml"
+            results:
+              type: array
+              items:
+                type: object
+                properties:
+                  elevation:
+                    type: number
+                  resolution:
+                    type: number
+                  location:
+                    $ref: "../../../schemas/LatLngLiteral.yml"

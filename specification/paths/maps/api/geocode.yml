@@ -1,0 +1,103 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Geocode API
+description: |-
+  One of `path` or `locations` is **required.**
+parameters:
+- "$ref": "../../../parameters/language.yml"
+- "$ref": "../../../parameters/region.yml"
+- name: address
+  example: 1600 Amphitheatre+Parkway, Mountain View, CA
+  description: |-
+    The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
+
+    https://developers.google.com/maps/faq#geocoder_queryformat
+  in: query  
+  schema:
+    type: string
+- name: components
+  style: pipeDelimited
+  explode: false
+  example:
+  # [START maps_openapi_geocode_param_components_example]
+  - street_number:1600
+  - route:Amphitheatre+Parkway
+  - locality:Mountain+View
+  - administrative_area_level_1:CA
+  - country:US
+  # [END maps_openapi_geocode_param_components_example]
+  description: |-
+    A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
+
+    https://developers.google.com/maps/documentation/geocoding/intro#ComponentFiltering
+  in: query
+  schema:
+    items:
+      type: string
+    type: array
+- name: bounds
+  description: |-
+    The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
+    in: query
+  example: 
+    - "35,-100"
+    - "40,-110"
+  schema:
+    $ref: "../../../schemas/LatLngArrayString.yml" 
+  in: query
+responses:
+  "200":
+    description: "Elevation Response"
+    content:
+      application/json:
+        examples:
+          status = OK:
+            value: 
+              results:
+              - elevation: 1643.880493164062
+                location:
+                  lat: 35
+                  lng: -110
+                resolution: 9.543951988220215
+              - elevation: 1748.557983398438
+                location:
+                  lat: 31
+                  lng: -110
+                resolution: 152.7032318115234
+              status: OK
+        schema:
+          type: object
+          required:
+            - status
+          properties:
+            error_message: 
+              type: string
+              example: "Invalid request. Invalid 'locations' parameter."
+            status:
+              $ref: "../../../schemas/ElevationStatus.yml"
+            results:
+              type: array
+              items:
+                type: object
+                properties:
+                  elevation:
+                    type: number
+                  resolution:
+                    type: number
+                  location:
+                    $ref: "../../../schemas/LatLngLiteral.yml"

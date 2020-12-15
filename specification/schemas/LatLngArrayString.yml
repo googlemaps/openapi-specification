@@ -1,0 +1,8 @@
+description: An array of comma separated {latitude,longitude} strings.
+example:
+  - 35,-100
+  - 40,-110
+type: array
+items:
+  type: string
+  minItems: 2

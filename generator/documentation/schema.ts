@@ -23,10 +23,11 @@ import {
   paragraph,
   text,
   inlineCode,
-  heading,
+  html as htmlNode,
   table,
   tableRow,
   tableCell,
+  link,
 } from "mdast-builder";
 import stringify from "remark-stringify";
 import unified from "unified";
@@ -57,10 +58,19 @@ const mdProcessor = unified().use(gfm).use(stringify, {
 
 const htmlProcessor = unified().use(remarkParse).use(gfm).use(remarkHtml);
 
+const isRef = (
+  obj:
+    | OpenAPIV3.ReferenceObject
+    | OpenAPIV3.ArraySchemaObject
+    | OpenAPIV3.NonArraySchemaObject
+): obj is OpenAPIV3.ReferenceObject => {
+  return (obj as OpenAPIV3.ReferenceObject).$ref !== undefined;
+};
+
 const main = async (argv: any) => {
-  const spec = (await dereference(
-    JSON.parse(readFileSync(argv.spec).toString())
-  )) as OpenAPIV3.Document;
+  const spec = JSON.parse(
+    readFileSync(argv.spec).toString()
+  ) as OpenAPIV3.Document;
 
   const pack = tar.pack();
 
@@ -71,7 +81,11 @@ const main = async (argv: any) => {
 
     const nodes: any = [];
 
-    nodes.push(heading(3, text("title" in schema ? schema.title! : key)));
+    nodes.push(
+      htmlNode(
+        `<h3 id="${key}">${"title" in schema ? schema.title! : key}</h3>`
+      )
+    );
 
     if ("description" in schema) {
       nodes.push(paragraph(text(schema.description!)));
@@ -81,6 +95,7 @@ const main = async (argv: any) => {
 
     if (schema.type === "object") {
       const rows: any = [];
+
       rows.push(
         tableRow([
           tableCell(text("Field")),
@@ -90,16 +105,30 @@ const main = async (argv: any) => {
       );
 
       Object.keys(schema.properties!).forEach((prop) => {
-        const property = schema.properties![prop] as
-          | OpenAPIV3.ArraySchemaObject
-          | OpenAPIV3.NonArraySchemaObject;
-        rows.push(
-          tableRow([
-            tableCell(inlineCode(prop)),
-            tableCell(text(property.type!)),
-            tableCell(text(property.description || "")),
-          ])
-        );
+        const property = schema.properties![prop];
+        const row: any[] = [];
+        row.push(tableCell(inlineCode(prop)));
+
+        if (isRef(property)) {
+          const name = property.$ref.split("/").pop()!;
+          const refLink = link(`#${name}`, name, [text(name)]);
+          row.push(tableCell(refLink));
+          row.push(tableCell([text("See "), refLink]));
+        } else {
+          if (property.type === "array") {
+            const name = (property.items as OpenAPIV3.ReferenceObject).$ref
+              .split("/")
+              .pop()!;
+            const refLink = link(`#${name}`, name, [text(name)]);
+            row.push(tableCell([text("Array<"), refLink, text(">")]));
+            row.push(tableCell([text("See "), refLink, text(" for more information.")]));
+          } else {
+            row.push(tableCell(text(property.type!)));
+            row.push(tableCell(text(property.description || "")));
+          }
+        }
+
+        rows.push(tableRow(row));
       });
       nodes.push(table(["left"], rows));
     }

@@ -12,17 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ElevationStatus:
-  $ref: "./ElevationStatus.yml"
-GeocodeStatus:
-  $ref: "./GeocodeStatus.yml"
-LatLngArrayString:
-  $ref: "./LatLngArrayString.yml"
-LatLngLiteral:
-  $ref: "./LatLngLiteral.yml"
-GeolocationV1GeolocatePostRequestBody:
-  $ref: "./GeolocationV1GeolocatePostRequestBody.yml"
-CellTower:
-  $ref: "./CellTower.yml"
-WifiAccessPoint:
-  $ref: "./WifiAccessPoint.yml"
+type: object
+properties:
+    macAddress:
+        type: string
+    signalStrength:
+        type: integer
+    signalToNoiseRatio:
+        type: integer

@@ -28,7 +28,7 @@ export const REQUESTS: SnippetRequest[] = [
     request: new PostJsonRequest({
       url: "https://www.googleapis.com/geolocation/v1/geolocate",
       json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/celltowers.json"
+        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.json"
       ),
     }),
   },
@@ -37,7 +37,7 @@ export const REQUESTS: SnippetRequest[] = [
     request: new PostJsonRequest({
       url: "https://www.googleapis.com/geolocation/v1/geolocate",
       json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/wifi.json"
+        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_wifi.json"
       ),
     }),
   },
@@ -46,7 +46,7 @@ export const REQUESTS: SnippetRequest[] = [
     request: new PostJsonRequest({
       url: "https://www.googleapis.com/geolocation/v1/geolocate",
       json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/ip.json"
+        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_ip.json"
       ),
     }),
   },

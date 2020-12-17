@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_LatLngArrayString] -->
-## LatLngArrayString
+### LatLngArrayString
 
 An array of comma separated {latitude,longitude} strings.
 

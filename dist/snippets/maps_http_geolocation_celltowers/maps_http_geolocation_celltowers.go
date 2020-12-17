@@ -16,8 +16,8 @@ func main() {
     payload := strings.NewReader(`{
   "cellTowers": [
     {
-      "cellId": 42,
-      "locationAreaCode": 415,
+      "cellId": 170402199,
+      "locationAreaCode": 35632,
       "mobileCountryCode": 310,
       "mobileNetworkCode": 410,
       "age": 0,

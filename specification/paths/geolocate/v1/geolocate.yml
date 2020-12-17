@@ -29,10 +29,13 @@ requestBody:
       examples:
         WIFI:
           value:
-            $ref: ./examples/wifi.json
+            $ref: ./examples//maps_http_geolocation_wifi.json
+        Cell Towers:
+          value:
+            $ref: ./examples//maps_http_geolocation_celltowers.json
         IP Only:
           value:
-            $ref: ./examples/ip.json
+            $ref: ./examples//maps_http_geolocation_ip.json
   required: false
 responses:
   "200":
@@ -47,9 +50,12 @@ responses:
             accuracy:
               type: number
         examples:
-          default:
+          WIFI:
             value:
-              location:
-                lat: 33.3632486
-                lng: -117.08696079999999
-              accuracy: 30
+              $ref: ../../../responses/maps_http_geolocation_wifi.json
+          Cell Towers:
+            value:
+              $ref: ../../../responses/maps_http_geolocation_celltowers.json
+          IP Only:
+            value:
+              $ref: ../../../responses/maps_http_geolocation_ip.json

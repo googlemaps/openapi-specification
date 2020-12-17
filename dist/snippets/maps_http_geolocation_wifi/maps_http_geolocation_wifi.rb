@@ -9,7 +9,7 @@ https.use_ssl = true
 
 request = Net::HTTP::Post.new(url)
 request["content-type"] = "application/json"
-request.body = "{\n  \"considerIp\": \"false\",\n  \"wifiAccessPoints\": [\n    {\n      \"macAddress\": \"00:25:9c:cf:1c:ac\",\n      \"signalStrength\": -43,\n      \"signalToNoiseRatio\": 0\n    },\n    {\n      \"macAddress\": \"00:25:9c:cf:1c:ad\",\n      \"signalStrength\": -55,\n      \"signalToNoiseRatio\": 0\n    }\n  ]\n}"
+request.body = "{\n  \"considerIp\": \"false\",\n  \"wifiAccessPoints\": [\n    {\n      \"macAddress\": \"84:d4:7e:09:a5:f1\",\n      \"signalStrength\": -43,\n      \"signalToNoiseRatio\": 0\n    },\n    {\n      \"macAddress\": \"44:48:c1:a6:f3:d0\",\n      \"signalStrength\": -55,\n      \"signalToNoiseRatio\": 0\n    }\n  ]\n}"
 
 response = https.request(request)
 puts response.read_body

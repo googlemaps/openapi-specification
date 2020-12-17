@@ -4,8 +4,8 @@ curl --location --request POST 'https://www.googleapis.com/geolocation/v1/geoloc
 --data-raw '{
   "cellTowers": [
     {
-      "cellId": 42,
-      "locationAreaCode": 415,
+      "cellId": 170402199,
+      "locationAreaCode": 35632,
       "mobileCountryCode": 310,
       "mobileNetworkCode": 410,
       "age": 0,

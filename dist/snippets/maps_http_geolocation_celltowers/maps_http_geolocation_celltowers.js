@@ -1,6 +1,6 @@
 // [START maps_http_geolocation_celltowers]
 var axios = require('axios');
-var data = JSON.stringify({"cellTowers":[{"cellId":42,"locationAreaCode":415,"mobileCountryCode":310,"mobileNetworkCode":410,"age":0,"signalStrength":-60,"timingAdvance":15}]});
+var data = JSON.stringify({"cellTowers":[{"cellId":170402199,"locationAreaCode":35632,"mobileCountryCode":310,"mobileNetworkCode":410,"age":0,"signalStrength":-60,"timingAdvance":15}]});
 
 var config = {
     method: 'post',

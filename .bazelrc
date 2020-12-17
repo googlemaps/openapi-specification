@@ -59,7 +59,10 @@ build --nolegacy_external_runfiles
 build --incompatible_strict_action_env
 run --incompatible_strict_action_env
 
-# Load any settings specific to the current user.
+build --action_env GOOGLE_MAPS_API_KEY
+run --action_env GOOGLE_MAPS_API_KEY
+
+# Load any settings specific to the current user
 # .bazelrc.user should appear in .gitignore so that settings are not shared with team members
 # This needs to be last statement in this
 # config, as the user configuration should be able to overwrite flags from this file.

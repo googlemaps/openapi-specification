@@ -1,6 +1,6 @@
 // [START maps_http_geolocation_wifi]
 var axios = require('axios');
-var data = JSON.stringify({"considerIp":"false","wifiAccessPoints":[{"macAddress":"00:25:9c:cf:1c:ac","signalStrength":-43,"signalToNoiseRatio":0},{"macAddress":"00:25:9c:cf:1c:ad","signalStrength":-55,"signalToNoiseRatio":0}]});
+var data = JSON.stringify({"considerIp":"false","wifiAccessPoints":[{"macAddress":"84:d4:7e:09:a5:f1","signalStrength":-43,"signalToNoiseRatio":0},{"macAddress":"44:48:c1:a6:f3:d0","signalStrength":-55,"signalToNoiseRatio":0}]});
 
 var config = {
     method: 'post',

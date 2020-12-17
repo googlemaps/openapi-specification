@@ -1,7 +1,10 @@
 load("//rules:swagger_cli.bzl", "bundle", "validate")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
 
-exports_files(["tsconfig.json"], visibility = ["//visibility:public"])
+exports_files(
+    ["tsconfig.json"],
+    visibility = ["//visibility:public"],
+)
 
 BUNDLE_NAME = "google-maps-platform-openapi3"
 
@@ -36,5 +39,8 @@ pkg_tar(
         "//:{}.json".format(BUNDLE_NAME),
     ],
     strip_prefix = ".",
-    deps = ["//generator/requests:snippets.tar", "//generator/documentation:schemas.tar"],
+    deps = [
+        "//generator/documentation:schemas.tar",
+        "//generator/requests:snippets.tar",
+    ],
 )

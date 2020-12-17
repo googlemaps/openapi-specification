@@ -9,7 +9,7 @@ https.use_ssl = true
 
 request = Net::HTTP::Post.new(url)
 request["content-type"] = "application/json"
-request.body = "{\n  \"cellTowers\": [\n    {\n      \"cellId\": 42,\n      \"locationAreaCode\": 415,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
+request.body = "{\n  \"cellTowers\": [\n    {\n      \"cellId\": 170402199,\n      \"locationAreaCode\": 35632,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
 
 response = https.request(request)
 puts response.read_body

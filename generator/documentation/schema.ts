@@ -22,6 +22,7 @@ import {
   root,
   paragraph,
   text,
+  inlineCode,
   heading,
   table,
   tableRow,
@@ -70,7 +71,7 @@ const main = async (argv: any) => {
 
     const nodes: any = [];
 
-    nodes.push(heading(2, text("title" in schema ? schema.title! : key)));
+    nodes.push(heading(3, text("title" in schema ? schema.title! : key)));
 
     if ("description" in schema) {
       nodes.push(paragraph(text(schema.description!)));
@@ -92,10 +93,9 @@ const main = async (argv: any) => {
         const property = schema.properties![prop] as
           | OpenAPIV3.ArraySchemaObject
           | OpenAPIV3.NonArraySchemaObject;
-
         rows.push(
           tableRow([
-            tableCell(text(prop)),
+            tableCell(inlineCode(prop)),
             tableCell(text(property.type!)),
             tableCell(text(property.description || "")),
           ])

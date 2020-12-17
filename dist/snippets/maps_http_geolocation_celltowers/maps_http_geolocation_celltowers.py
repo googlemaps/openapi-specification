@@ -3,7 +3,7 @@ import requests
 
 url = "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
 
-payload="{\n  \"cellTowers\": [\n    {\n      \"cellId\": 42,\n      \"locationAreaCode\": 415,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
+payload="{\n  \"cellTowers\": [\n    {\n      \"cellId\": 170402199,\n      \"locationAreaCode\": 35632,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
 headers = {
     'content-type': 'application/json'
 }

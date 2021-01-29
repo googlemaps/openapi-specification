@@ -1,17 +1,7 @@
-load("@npm//@bazel/typescript:index.bzl", "ts_library")
-
 filegroup(
     name = "openapi3",
     srcs = glob([
         "**/*.yml",
-        "**/*.json",
-    ]),
-    visibility = ["//visibility:public"],
-)
-
-filegroup(
-    name = "json-files",
-    srcs = glob([
         "**/*.json",
     ]),
     visibility = ["//visibility:public"],

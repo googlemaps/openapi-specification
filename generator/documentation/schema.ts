@@ -121,7 +121,9 @@ const main = async (argv: any) => {
               .pop()!;
             const refLink = link(`#${name}`, name, [text(name)]);
             row.push(tableCell([text("Array<"), refLink, text(">")]));
-            row.push(tableCell([text("See "), refLink, text(" for more information.")]));
+            row.push(
+              tableCell([text("See "), refLink, text(" for more information.")])
+            );
           } else {
             row.push(tableCell(text(property.type!)));
             row.push(tableCell(text(property.description || "")));

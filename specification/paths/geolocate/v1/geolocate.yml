@@ -29,13 +29,13 @@ requestBody:
       examples:
         WIFI:
           value:
-            $ref: ./examples//maps_http_geolocation_wifi.json
+            $ref: ./examples/maps_http_geolocation_wifi.yml
         Cell Towers:
           value:
-            $ref: ./examples//maps_http_geolocation_celltowers.json
+            $ref: ./examples/maps_http_geolocation_celltowers.yml
         IP Only:
           value:
-            $ref: ./examples//maps_http_geolocation_ip.json
+            $ref: ./examples/maps_http_geolocation_ip.yml
   required: false
 responses:
   "200":
@@ -52,10 +52,10 @@ responses:
         examples:
           WIFI:
             value:
-              $ref: ../../../responses/maps_http_geolocation_wifi.json
+              $ref: ../../../responses/maps_http_geolocation_wifi.yml
           Cell Towers:
             value:
-              $ref: ../../../responses/maps_http_geolocation_celltowers.json
+              $ref: ../../../responses/maps_http_geolocation_celltowers.yml
           IP Only:
             value:
-              $ref: ../../../responses/maps_http_geolocation_ip.json
+              $ref: ../../../responses/maps_http_geolocation_ip.yml

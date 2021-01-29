@@ -68,7 +68,7 @@ const regionTagComment = (
 
 const main = async (argv: any) => {
   const pack = tar.pack();
-  
+
   await Promise.all(
     SNIPPET_LANG_VARIANTS.map(([lang, variant]) =>
       REQUESTS.map(async (snippetRequest: SnippetRequest) => {

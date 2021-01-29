@@ -11,6 +11,7 @@ ts_library(
         "@npm//@types/yargs",
         "@npm//tar-stream",
         "@npm//yargs",
+        "@npm//prettier",
     ],
 )
 
@@ -26,5 +27,7 @@ nodejs_binary(
         "$(rootpath //generator/requests:snippets.tar)",
         "--skip",
         "maps_http_geolocation_ip", # non deterministic and skipped
+        "--skip",
+        "maps_http_geolocation_wifi", # non deterministic and skipped
     ],
 )

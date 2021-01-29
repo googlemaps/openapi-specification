@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-import { options, positional } from "yargs";
+import { options } from "yargs";
 import tar from "tar-stream";
 import { createReadStream, writeFileSync } from "fs";
 import { exec } from "child_process";
 import path from "path";
+import prettier from "prettier";
 
 const argv = options({
   archive: {
@@ -70,14 +71,12 @@ const executeRequest = async (request: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     exec(request, function (error, stdout, stderr) {
       if (error) {
-        console.debug(request);
         reject(stderr);
       }
 
       const response = JSON.parse(stdout);
 
       if (response.error) {
-        console.debug(request);
         reject(stdout);
         return;
       }
@@ -88,6 +87,7 @@ const executeRequest = async (request: string): Promise<string> => {
 };
 
 const main = async (argv: any) => {
+  console.log(argv);
   for (let [regionTag, request] of Object.entries(
     await extractRequests(argv.archive)
   )) {
@@ -98,8 +98,14 @@ const main = async (argv: any) => {
     const response = await executeRequest(request);
 
     writeFileSync(
-      path.join(argv.output, `${regionTag}.json`),
-      JSON.stringify(response, null, 2)
+      path.join(argv.output, `${regionTag}.yml`),
+      prettier.format(
+        `# [START ${regionTag}_response]
+      ${JSON.stringify(response, null, 2)}
+      # [END ${regionTag}_response]
+      `,
+        { parser: "yaml" }
+      )
     );
   }
 };

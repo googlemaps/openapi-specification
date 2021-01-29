@@ -14,40 +14,41 @@
  * limitations under the License.
  */
 
-import { SnippetRequest, PostJsonRequest } from "./types";
-import { readFileSync } from "fs";
-import path from "path";
+import { SnippetRequest, PostJsonRequest } from './types';
+import { readFileSync } from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
 
-function jsonRequestBody(filename) {
-  return JSON.parse(readFileSync(path.resolve(__dirname, filename)).toString());
+function parseRequestBody(filename) {
+	if (filename.match(/\.yml$/)) {
+		return yaml.load(readFileSync(path.resolve(__dirname, filename)).toString());
+	}
+
+	return JSON.parse(readFileSync(path.resolve(__dirname, filename)).toString());
 }
 
 export const REQUESTS: SnippetRequest[] = [
-  {
-    regionTag: "maps_http_geolocation_celltowers",
-    request: new PostJsonRequest({
-      url: "https://www.googleapis.com/geolocation/v1/geolocate",
-      json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.json"
-      ),
-    }),
-  },
-  {
-    regionTag: "maps_http_geolocation_wifi",
-    request: new PostJsonRequest({
-      url: "https://www.googleapis.com/geolocation/v1/geolocate",
-      json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_wifi.json"
-      ),
-    }),
-  },
-  {
-    regionTag: "maps_http_geolocation_ip",
-    request: new PostJsonRequest({
-      url: "https://www.googleapis.com/geolocation/v1/geolocate",
-      json: jsonRequestBody(
-        "../../specification/paths/geolocate/v1/examples/maps_http_geolocation_ip.json"
-      ),
-    }),
-  },
+	{
+		regionTag: 'maps_http_geolocation_celltowers',
+		request: new PostJsonRequest({
+			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
+			json: parseRequestBody(
+				'../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.yml'
+			),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geolocation_wifi',
+		request: new PostJsonRequest({
+			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
+			json: parseRequestBody('../../specification/paths/geolocate/v1/examples/maps_http_geolocation_wifi.yml'),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geolocation_ip',
+		request: new PostJsonRequest({
+			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
+			json: parseRequestBody('../../specification/paths/geolocate/v1/examples/maps_http_geolocation_ip.yml'),
+		}),
+	},
 ];

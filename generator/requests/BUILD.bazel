@@ -9,6 +9,7 @@ ts_library(
     deps = [
         "@npm//@types/node",
         "@npm//@types/yargs",
+        "@npm//js-yaml",
         "@npm//postman-code-generators",
         "@npm//postman-collection",
         "@npm//tar-stream",
@@ -20,7 +21,7 @@ nodejs_binary(
     name = "_snippets_bin",
     data = [
         ":_lib",
-        "//specification:json-files",
+        "//specification:openapi3",
     ],
     entry_point = ":snippets.ts",
 )

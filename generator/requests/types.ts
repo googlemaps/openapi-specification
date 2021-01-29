@@ -50,7 +50,7 @@ export class PostJsonRequest extends Request {
       mode: "raw",
       raw: JSON.stringify(options.json, null, 2),
     } as RequestBody.definition;
-    
+
     super(options);
   }
 }

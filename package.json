@@ -15,10 +15,13 @@
   ],
   "scripts": {
     "build": "bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
+    "build:responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses",
     "test": "bazel test ...",
-    "build:responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses"
+    "watch": "ibazel build ...",
+    "watch:test": "ibazel test ..."
   },
   "devDependencies": {
+    "@bazel/bazelisk": "^1.7.3",
     "@bazel/buildifier": "^3.4.0",
     "@bazel/buildozer": "^3.4.0",
     "@bazel/ibazel": "^0.13.2",

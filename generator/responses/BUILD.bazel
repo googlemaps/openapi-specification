@@ -25,15 +25,6 @@ nodejs_binary(
         "--archive",
         "$(rootpath //generator/requests:snippets.tar)",
         "--skip",
-        "maps_http_geolocation_ip",
+        "maps_http_geolocation_ip", # non deterministic and skipped
     ],
 )
-
-# genrule(
-#     name = "responses",
-#     srcs = ["//generator/requests:snippets.tar"],
-#     outs = ["responses.tar"],
-#     cmd = "$(location :_responses_bin) --archive $(location //generator/requests:snippets.tar) --output $@",
-#     tools = [":_responses_bin"],
-#     tags = ["manual"],
-# )

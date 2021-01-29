@@ -8,18 +8,3 @@
 1.  Ensure that your code has an appropriate set of tests which all pass.
 1.  Title your pull request following [Conventional Commits](https://www.conventionalcommits.org/) styling.
 1.  Submit a pull request.
-
-## Running the tests
-
-1.  Install dependencies:
-
-        npm i
-1.  Run lint
-
-        npm run lint
-        npm run format  # will fix some issues
-
-1.  Run the tests:
-
-        # Run unit tests.
-        npm test

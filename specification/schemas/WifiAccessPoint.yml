@@ -13,6 +13,8 @@
 # limitations under the License.
 
 type: object
+title: WiFi Access Point
+description: Attributes used to describe a WiFi access point.
 properties:
     macAddress:
         type: string

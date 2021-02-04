@@ -13,6 +13,7 @@
 # limitations under the License.
 
 type: object
+description: An object describing a specific location with Latitude and Longitude in decimal degrees.
 required:
   - lat
   - lng

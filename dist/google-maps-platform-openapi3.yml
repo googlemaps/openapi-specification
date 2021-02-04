@@ -572,11 +572,13 @@ components:
   schemas:
     ElevationStatus:
       type: string
+      description: Status codes returned by service.
       enum:
         - OK
         - INVALID_REQUEST
     GeocodeStatus:
       type: string
+      description: Status codes returned by service.
       enum:
         - OK
         - INVALID_REQUEST
@@ -591,6 +593,7 @@ components:
         minItems: 2
     LatLngLiteral:
       type: object
+      description: An object describing a specific location with Latitude and Longitude in decimal degrees.
       required:
         - lat
         - lng
@@ -604,6 +607,7 @@ components:
     GeolocationV1GeolocatePostRequestBody:
       type: object
       title: Geolocation Request Body
+      description: 'The request body must be formatted as JSON. The following fields are supported, and all fields are optional.'
       properties:
         homeMobileCountryCode:
           type: integer
@@ -622,7 +626,7 @@ components:
           description: Specifies whether to fall back to IP geolocation if wifi and cell tower signals are not available. Defaults to true. Set considerIp to false to disable fall back.
         cellTowers:
           type: array
-          description: An array of cell tower objects.
+          description: The request body's cellTowers array contains zero or more cell tower objects.
           items:
             $ref: '#/components/schemas/CellTower'
         wifiAccessPoints:
@@ -632,6 +636,8 @@ components:
             $ref: '#/components/schemas/WifiAccessPoint'
     CellTower:
       type: object
+      title: Cell Tower
+      description: 'Attributes used to describe a cell tower. The following optional fields are not currently used, but may be included if values are available: `age`, `signalStrength`, `timingAdvance`.'
       required:
         - cellId
         - locationAreaCode
@@ -661,6 +667,8 @@ components:
           type: number
     WifiAccessPoint:
       type: object
+      title: WiFi Access Point
+      description: Attributes used to describe a WiFi access point.
       properties:
         macAddress:
           type: string

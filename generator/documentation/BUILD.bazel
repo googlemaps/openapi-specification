@@ -5,11 +5,12 @@ package(default_visibility = ["//visibility:public"])
 
 ts_library(
     name = "_lib",
-    srcs = ["schema.ts"],
+    srcs = glob(["*.ts"]),
     deps = [
         "@npm//@apidevtools/json-schema-ref-parser",
         "@npm//@types/json-schema",
         "@npm//@types/node",
+        "@npm//@types/unist",
         "@npm//@types/yargs",
         "@npm//mdast-builder",
         "@npm//openapi-types",
@@ -22,6 +23,7 @@ ts_library(
         "@npm//tar-stream",
         "@npm//unified",
         "@npm//yargs",
+        "@npm//mdast-util-from-markdown"
     ],
 )
 
@@ -32,7 +34,10 @@ nodejs_binary(
         "//specification:openapi3",
     ],
     entry_point = ":schema.ts",
-    templated_args = ["--nobazel_node_patches"],
+    templated_args = [
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
 )
 
 genrule(

@@ -1,8 +1,10 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_GeolocationV1GeolocatePostRequestBody] -->
-<h3 id="GeolocationV1GeolocatePostRequestBody">Geolocation Request Body</h3>
+<h3 class="schema-object" id="GeolocationV1GeolocatePostRequestBody">Geolocation Request Body</h3>
 
-type: object
+The request body must be formatted as JSON. The following fields are supported, and all fields are optional.
+
+type: `object`
 
 | Field                   | Type                                                         | Description                                                                                                                                                                    |
 | :---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

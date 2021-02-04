@@ -1,8 +1,10 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_WifiAccessPoint] -->
-<h3 id="WifiAccessPoint">WifiAccessPoint</h3>
+<h3 class="schema-object" id="WifiAccessPoint">WiFi Access Point</h3>
 
-type: object
+Attributes used to describe a WiFi access point.
+
+type: `object`
 
 | Field                | Type    | Description |
 | :------------------- | ------- | ----------- |

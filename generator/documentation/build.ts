@@ -14,7 +14,18 @@
  * limitations under the License.
  */
 
-import { root, paragraph, text, inlineCode, html as htmlNode, table, tableRow, tableCell, link } from 'mdast-builder';
+import {
+	root,
+	paragraph,
+	text,
+	strong,
+	inlineCode,
+	html as htmlNode,
+	table,
+	tableRow,
+	tableCell,
+	link,
+} from 'mdast-builder';
 import { Parent } from 'unist';
 import { OpenAPIV3 } from 'openapi-types';
 import { isRef } from './helpers';
@@ -36,7 +47,9 @@ export const build = (
 
 	const nodes: any = [];
 
-	nodes.push(htmlNode(`<h3 class="schema-object" id="${key}">${schema.title == undefined ? key : schema.title}</h3>`));
+	nodes.push(
+		htmlNode(`<h3 class="schema-object" id="${key}">${schema.title == undefined ? key : schema.title}</h3>`)
+	);
 	if (schema.description) {
 		nodes.push(paragraph(fromMarkdown(schema.description)));
 	}
@@ -47,11 +60,20 @@ export const build = (
 		const rows: any = [];
 
 		// header row
-		rows.push(tableRow([tableCell(text('Field')), tableCell(text('Type')), tableCell(text('Description'))]));
+		rows.push(
+			tableRow([
+				tableCell(text('Field')),
+				tableCell(text('Required')),
+				tableCell(text('Type')),
+				tableCell(text('Description')),
+			])
+		);
 
 		// all fields
 		Object.keys(schema.properties!).forEach((key) => {
-			rows.push(propertyToRow(key, schema.properties![key]));
+			const required = Boolean(schema.required && schema.required.indexOf(key) !== -1);
+
+			rows.push(propertyToRow(key, schema.properties![key], required));
 		});
 
 		nodes.push(table(['left'], rows));
@@ -61,11 +83,19 @@ export const build = (
 
 const propertyToRow = (
 	key: string,
-	property: OpenAPIV3.ReferenceObject | OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject
+	property: OpenAPIV3.ReferenceObject | OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject,
+	required: boolean
 ): Parent => {
 	const row: any[] = [];
-	row.push(tableCell(inlineCode(key)));
-
+  row.push(tableCell(inlineCode(key)));
+  
+  // bold if required
+	if (required) {
+		row.push(tableCell([strong(text('required'))]));
+	} else {
+		row.push(tableCell([text('optional')]));
+  }
+  
 	if (isRef(property)) {
 		const name = property.$ref.split('/').pop()!;
 		const refLink = link(`#${name}`, name, [text(name)]);

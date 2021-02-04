@@ -6,10 +6,10 @@ Attributes used to describe a WiFi access point.
 
 type: `object`
 
-| Field                | Type    | Description |
-| :------------------- | ------- | ----------- |
-| `macAddress`         | string  |             |
-| `signalStrength`     | integer |             |
-| `signalToNoiseRatio` | integer |             |
+| Field                | Required | Type    | Description |
+| :------------------- | -------- | ------- | ----------- |
+| `macAddress`         | optional | string  |             |
+| `signalStrength`     | optional | integer |             |
+| `signalToNoiseRatio` | optional | integer |             |
 
 <!--- [END maps_http_schema_WifiAccessPoint] -->

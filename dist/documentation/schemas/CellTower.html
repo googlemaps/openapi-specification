@@ -11,6 +11,7 @@
   <thead>
     <tr>
       <th align="left">Field</th>
+      <th>Required</th>
       <th>Type</th>
       <th>Description</th>
     </tr>
@@ -18,6 +19,7 @@
   <tbody>
     <tr>
       <td align="left"><code>cellId</code></td>
+      <td><strong>required</strong></td>
       <td>integer</td>
       <td>
         Unique identifier of the cell. On GSM, this is the Cell ID (CID); CDMA
@@ -29,6 +31,7 @@
     </tr>
     <tr>
       <td align="left"><code>locationAreaCode</code></td>
+      <td><strong>required</strong></td>
       <td>integer</td>
       <td>
         The Location Area Code (LAC) for GSM and WCDMA networks. The Network ID
@@ -37,11 +40,13 @@
     </tr>
     <tr>
       <td align="left"><code>mobileCountryCode</code></td>
+      <td><strong>required</strong></td>
       <td>integer</td>
       <td>The cell tower's Mobile Country Code (MCC).</td>
     </tr>
     <tr>
       <td align="left"><code>mobileNetworkCode</code></td>
+      <td><strong>required</strong></td>
       <td>integer</td>
       <td>
         The cell tower's Mobile Network Code. This is the MNC for GSM and WCDMA;
@@ -50,6 +55,7 @@
     </tr>
     <tr>
       <td align="left"><code>age</code></td>
+      <td>optional</td>
       <td>integer</td>
       <td>
         The number of milliseconds since this cell was primary. If age is 0, the
@@ -58,11 +64,13 @@
     </tr>
     <tr>
       <td align="left"><code>signalStrength</code></td>
+      <td>optional</td>
       <td>number</td>
       <td>Radio signal strength measured in dBm.</td>
     </tr>
     <tr>
       <td align="left"><code>timingAdvance</code></td>
+      <td>optional</td>
       <td>number</td>
       <td>The timing advance value.</td>
     </tr>

@@ -9,9 +9,9 @@ ts_library(
     deps = [
         "@npm//@types/node",
         "@npm//@types/yargs",
+        "@npm//prettier",
         "@npm//tar-stream",
         "@npm//yargs",
-        "@npm//prettier",
     ],
 )
 
@@ -26,8 +26,9 @@ nodejs_binary(
         "--archive",
         "$(rootpath //generator/requests:snippets.tar)",
         "--skip",
-        "maps_http_geolocation_ip", # non deterministic and skipped
+        "maps_http_geolocation_ip",  # non deterministic and skipped
         "--skip",
-        "maps_http_geolocation_wifi", # non deterministic and skipped
+        "maps_http_geolocation_wifi",  # non deterministic and skipped
+        "--nobazel_node_patches",
     ],
 )

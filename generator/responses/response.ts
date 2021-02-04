@@ -74,7 +74,7 @@ const executeRequest = async (request: string): Promise<string> => {
         reject(stderr);
       }
 
-      const response = JSON.parse(stdout);
+      const response = JSON.parse(stdout) as any;
 
       if (response.error) {
         reject(stdout);
@@ -87,7 +87,6 @@ const executeRequest = async (request: string): Promise<string> => {
 };
 
 const main = async (argv: any) => {
-  console.log(argv);
   for (let [regionTag, request] of Object.entries(
     await extractRequests(argv.archive)
   )) {

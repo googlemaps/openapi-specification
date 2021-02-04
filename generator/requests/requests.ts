@@ -24,19 +24,19 @@ function parseRequestBody(filename) {
 		return yaml.load(readFileSync(path.resolve(__dirname, filename)).toString());
 	}
 
-	return JSON.parse(readFileSync(path.resolve(__dirname, filename)).toString());
+	return JSON.parse(readFileSync(path.resolve(__dirname, filename)).toString()) as any;
 }
 
 export const REQUESTS: SnippetRequest[] = [
-	{
-		regionTag: 'maps_http_geolocation_celltowers',
-		request: new PostJsonRequest({
-			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
-			json: parseRequestBody(
-				'../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.yml'
-			),
-		}),
-	},
+{
+	regionTag: 'maps_http_geolocation_celltowers',
+	request: new PostJsonRequest({
+		url: 'https://www.googleapis.com/geolocation/v1/geolocate',
+		json: parseRequestBody(
+			'../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.yml'
+		),
+	}),
+},
 	{
 		regionTag: 'maps_http_geolocation_wifi',
 		request: new PostJsonRequest({

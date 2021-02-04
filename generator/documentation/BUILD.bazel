@@ -32,6 +32,7 @@ nodejs_binary(
         "//specification:openapi3",
     ],
     entry_point = ":schema.ts",
+    templated_args = ["--nobazel_node_patches"],
 )
 
 genrule(
@@ -41,5 +42,8 @@ genrule(
     cmd = "$(location :_schema_bin) " +
           "--spec $(location //:google-maps-platform-openapi3.json) " +
           "--output $@",
-    tools = [":_schema_bin"],
+    tools = [
+        ":_lib",
+        ":_schema_bin",
+    ],
 )

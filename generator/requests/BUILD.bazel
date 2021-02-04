@@ -24,11 +24,14 @@ nodejs_binary(
         "//specification:openapi3",
     ],
     entry_point = ":snippets.ts",
+    templated_args = ["--bazel_patch_module_resolver"],  # https://github.com/bazelbuild/rules_nodejs/issues/2388
 )
 
 genrule(
     name = "snippets",
     outs = ["snippets.tar"],
     cmd = "$(location :_snippets_bin) --output $@",
-    tools = [":_snippets_bin"],
+    tools = [
+        ":_snippets_bin",
+    ],
 )

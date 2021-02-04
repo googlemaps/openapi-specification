@@ -1,6 +1,7 @@
 load("//rules:swagger_cli.bzl", "bundle", "validate")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
+load("@npm//openapi-examples-validator:index.bzl", "openapi_examples_validator_test")
 
 exports_files(
     ["tsconfig.json"],
@@ -66,4 +67,12 @@ nodejs_test(
         "--dist",
         "$(locations :dist_files)",
     ],
+)
+
+openapi_examples_validator_test(
+    name="validate_examples",
+    data= ["//:{}.json".format(BUNDLE_NAME)],
+    templated_args = [
+        "$(rootpath //:{}.json)".format(BUNDLE_NAME)
+    ]
 )

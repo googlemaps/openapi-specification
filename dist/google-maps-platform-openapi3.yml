@@ -86,7 +86,9 @@ paths:
           style: pipeDelimited
           explode: false
           description: 'An array of comma separated {latitude,longitude} strings.'
-          example: '35,-100|40,-110'
+          example:
+            - '35,-100'
+            - '40,-110'
           schema:
             $ref: '#/components/schemas/LatLngArrayString'
         - name: path
@@ -94,7 +96,10 @@ paths:
           style: pipeDelimited
           explode: false
           description: 'An array of comma separated {latitude,longitude} strings.'
-          example: '35,-110|33,-110|31,-110'
+          example:
+            - '35,-110'
+            - '33,-110'
+            - '31,-110'
           schema:
             $ref: '#/components/schemas/LatLngArrayString'
         - name: samples

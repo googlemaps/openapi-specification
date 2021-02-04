@@ -1,5 +1,6 @@
 load("//rules:swagger_cli.bzl", "bundle", "validate")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
 
 exports_files(
     ["tsconfig.json"],
@@ -42,5 +43,27 @@ pkg_tar(
     deps = [
         "//generator/documentation:schemas.tar",
         "//generator/requests:snippets.tar",
+    ],
+)
+
+# test diff
+filegroup(
+    name = "dist_files",
+    srcs = glob(["dist/**/*"]),
+)
+
+nodejs_test(
+    name = "dist-is-updated",
+    data = [
+        ":dist",
+        ":dist_files",
+        "//rules:dist-is-updated",
+    ],
+    entry_point = "//rules:dist-is-updated.ts",
+    templated_args = [
+        "--archive",
+        "$(rootpath :dist)",
+        "--dist",
+        "$(locations :dist_files)",
     ],
 )

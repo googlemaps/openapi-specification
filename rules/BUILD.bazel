@@ -1,0 +1,16 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "dist-is-updated",
+    srcs = ["dist-is-updated.ts"],
+    deps = [
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//dir-compare",
+        "@npm//tar",
+        "@npm//tmp",
+        "@npm//yargs",
+    ],
+)

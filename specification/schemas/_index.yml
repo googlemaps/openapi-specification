@@ -22,6 +22,8 @@ LatLngLiteral:
   $ref: "./LatLngLiteral.yml"
 GeolocationV1GeolocatePostRequestBody:
   $ref: "./GeolocationV1GeolocatePostRequestBody.yml"
+GeolocationV1GeolocatePostResponseBody:
+  $ref: "./GeolocationV1GeolocatePostResponseBody.yml"
 CellTower:
   $ref: "./CellTower.yml"
 WifiAccessPoint:

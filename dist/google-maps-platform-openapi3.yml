@@ -53,12 +53,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  location:
-                    $ref: '#/components/schemas/LatLngLiteral'
-                  accuracy:
-                    type: number
+                $ref: '#/components/schemas/GeolocationV1GeolocatePostResponseBody'
               examples:
                 WIFI:
                   value:
@@ -634,6 +629,16 @@ components:
           description: An array of WiFi access point objects.
           items:
             $ref: '#/components/schemas/WifiAccessPoint'
+    GeolocationV1GeolocatePostResponseBody:
+      type: object
+      required:
+        - location
+        - accuracy
+      properties:
+        location:
+          $ref: '#/components/schemas/LatLngLiteral'
+        accuracy:
+          type: number
     CellTower:
       type: object
       title: Cell Tower

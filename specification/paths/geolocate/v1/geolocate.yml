@@ -43,12 +43,7 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            location:
-              $ref: "../../../schemas/LatLngLiteral.yml"
-            accuracy:
-              type: number
+          $ref: "../../../schemas/GeolocationV1GeolocatePostResponseBody.yml" 
         examples:
           WIFI:
             value:

@@ -1,0 +1,7 @@
+type: object
+required: [location, accuracy]
+properties:
+  location:
+    $ref: "./LatLngLiteral.yml"
+  accuracy:
+    type: number

@@ -33,7 +33,7 @@ export const REQUESTS: SnippetRequest[] = [
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
 			json: parseRequestBody(
-				'../../specification/paths/geolocate/v1/examples/maps_http_geolocation_celltowers.yml'
+				'../../specification/requests/maps_http_geolocation_celltowers_request.yml'
 			),
 		}),
 	},
@@ -41,14 +41,14 @@ export const REQUESTS: SnippetRequest[] = [
 		regionTag: 'maps_http_geolocation_wifi',
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
-			json: parseRequestBody('../../specification/paths/geolocate/v1/examples/maps_http_geolocation_wifi.yml'),
+			json: parseRequestBody('../../specification/requests/maps_http_geolocation_wifi_request.yml'),
 		}),
 	},
 	{
 		regionTag: 'maps_http_geolocation_ip',
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
-			json: parseRequestBody('../../specification/paths/geolocate/v1/examples/maps_http_geolocation_ip.yml'),
+			json: parseRequestBody('../../specification/requests/maps_http_geolocation_ip_request.yml'),
 		}),
 	},
 	{
@@ -69,7 +69,7 @@ export const REQUESTS: SnippetRequest[] = [
 		regionTag: 'maps_http_geolocation_error_400_invalid_key',
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY',
-			json: parseRequestBody('../../specification/paths/geolocate/v1/examples/maps_http_geolocation_ip.yml'),
+			json: parseRequestBody('../../specification/requests/maps_http_geolocation_ip_request.yml'),
 		}),
 	},
 ];

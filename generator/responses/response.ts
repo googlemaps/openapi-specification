@@ -107,23 +107,29 @@ const main = async (argv: any) => {
   for (let [regionTag, request] of Object.entries(
     await extractRequests(argv.archive)
   )) {
+
     if (argv.skip.indexOf(regionTag) != -1) continue;
 
     request = request.replace("YOUR_API_KEY", process.env.GOOGLE_MAPS_API_KEY!);
 
     const response = await executeRequest(request, /error/i.test(regionTag));
 
+    regionTag += '_response';
+    const destination = path.join(argv.output, `${regionTag}.yml`);
+
     writeFileSync(
-      path.join(argv.output, `${regionTag}.yml`),
+      destination,
       prettier.format(
         `${header}
-        # [START ${regionTag}_response]
+        # [START ${regionTag}]
         ${JSON.stringify(response, null, 2)}
-        # [END ${regionTag}_response]
+        # [END ${regionTag}]
       `,
         { parser: "yaml" }
       )
     );
+
+    console.log(`Generated response for: ${regionTag}`);
   }
 };
 

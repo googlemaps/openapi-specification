@@ -107,6 +107,36 @@
                       },
                       "accuracy": 926
                     }
+                  },
+                  "Invalid": {
+                    "value": {
+                      "error": {
+                        "code": 400,
+                        "message": "Invalid value at 'cell_tower' (type.googleapis.com/maps_api.CellTower), \"foo\"",
+                        "errors": [
+                          {
+                            "message": "Invalid value at 'cell_tower' (type.googleapis.com/maps_api.CellTower), \"foo\"",
+                            "reason": "invalid"
+                          }
+                        ],
+                        "status": "INVALID_ARGUMENT"
+                      }
+                    }
+                  },
+                  "Not Found": {
+                    "value": {
+                      "error": {
+                        "code": 404,
+                        "message": "Not Found",
+                        "errors": [
+                          {
+                            "message": "Not Found",
+                            "domain": "geolocation",
+                            "reason": "notFound"
+                          }
+                        ]
+                      }
+                    }
                   }
                 }
               }

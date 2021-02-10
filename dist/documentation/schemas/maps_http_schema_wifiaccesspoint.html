@@ -15,21 +15,39 @@
   <tbody>
     <tr>
       <td align="left"><code>macAddress</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
-      <td></td>
+      <td>
+        The MAC address of the WiFi node. It's typically called a BSS, BSSID or
+        MAC address. Separators must be <code>:</code> (colon).
+      </td>
     </tr>
     <tr>
       <td align="left"><code>signalStrength</code></td>
       <td>optional</td>
       <td>integer</td>
-      <td></td>
+      <td>The current signal strength measured in dBm.</td>
     </tr>
     <tr>
       <td align="left"><code>signalToNoiseRatio</code></td>
       <td>optional</td>
       <td>integer</td>
-      <td></td>
+      <td>The current signal to noise ratio measured in dB.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>age</code></td>
+      <td>optional</td>
+      <td>integer</td>
+      <td>The number of milliseconds since this access point was detected.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>channel</code></td>
+      <td>optional</td>
+      <td>integer</td>
+      <td>
+        The channel over which the client is communication with the access
+        point.
+      </td>
     </tr>
   </tbody>
 </table>

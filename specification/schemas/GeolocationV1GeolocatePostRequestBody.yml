@@ -40,6 +40,6 @@ properties:
       $ref: "./CellTower.yml"
   wifiAccessPoints:
     type: array
-    description: An array of WiFi access point objects.
+    description: An array of two or more WiFi access point objects.
     items:
       $ref: "./WifiAccessPoint.yml"

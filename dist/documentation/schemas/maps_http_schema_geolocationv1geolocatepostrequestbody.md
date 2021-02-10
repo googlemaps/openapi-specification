@@ -14,6 +14,6 @@ type: `object`
 | `carrier`               | optional | string                                                       | The carrier name.                                                                                                                                                              |
 | `considerIp`            | optional | string                                                       | Specifies whether to fall back to IP geolocation if wifi and cell tower signals are not available. Defaults to true. Set considerIp to false to disable fall back.             |
 | `cellTowers`            | optional | Array<[CellTower](#CellTower "CellTower")>                   | The request body's cellTowers array contains zero or more cell tower objects. See [CellTower](#CellTower "CellTower") for more information.                                    |
-| `wifiAccessPoints`      | optional | Array<[WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint")> | An array of WiFi access point objects. See [WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint") for more information.                                                         |
+| `wifiAccessPoints`      | optional | Array<[WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint")> | An array of two or more WiFi access point objects. See [WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint") for more information.                                             |
 
 <!--- [END maps_http_schema_geolocationv1geolocatepostrequestbody] -->

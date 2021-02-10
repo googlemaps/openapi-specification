@@ -807,7 +807,7 @@
           },
           "wifiAccessPoints": {
             "type": "array",
-            "description": "An array of WiFi access point objects.",
+            "description": "An array of two or more WiFi access point objects.",
             "items": {
               "$ref": "#/components/schemas/WifiAccessPoint"
             }
@@ -876,14 +876,28 @@
         "type": "object",
         "title": "WiFi Access Point",
         "description": "Attributes used to describe a WiFi access point.",
+        "required": [
+          "macAddress"
+        ],
         "properties": {
           "macAddress": {
+            "description": "The MAC address of the WiFi node. It's typically called a BSS, BSSID or MAC address. Separators must be `:` (colon).",
             "type": "string"
           },
           "signalStrength": {
+            "description": "The current signal strength measured in dBm.",
             "type": "integer"
           },
           "signalToNoiseRatio": {
+            "description": "The current signal to noise ratio measured in dB.",
+            "type": "integer"
+          },
+          "age": {
+            "description": "The number of milliseconds since this access point was detected.",
+            "type": "integer"
+          },
+          "channel": {
+            "description": "The channel over which the client is communication with the access point.",
             "type": "integer"
           }
         }

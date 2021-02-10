@@ -6,10 +6,12 @@ Attributes used to describe a WiFi access point.
 
 type: `object`
 
-| Field                | Required | Type    | Description |
-| :------------------- | -------- | ------- | ----------- |
-| `macAddress`         | optional | string  |             |
-| `signalStrength`     | optional | integer |             |
-| `signalToNoiseRatio` | optional | integer |             |
+| Field                | Required     | Type    | Description                                                                                                          |
+| :------------------- | ------------ | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| `macAddress`         | **required** | string  | The MAC address of the WiFi node. It's typically called a BSS, BSSID or MAC address. Separators must be `:` (colon). |
+| `signalStrength`     | optional     | integer | The current signal strength measured in dBm.                                                                         |
+| `signalToNoiseRatio` | optional     | integer | The current signal to noise ratio measured in dB.                                                                    |
+| `age`                | optional     | integer | The number of milliseconds since this access point was detected.                                                     |
+| `channel`            | optional     | integer | The channel over which the client is communication with the access point.                                            |
 
 <!--- [END maps_http_schema_wifiaccesspoint] -->

@@ -54,13 +54,13 @@ const main = async (argv: any) => {
 
 	for (const key in spec.components!.schemas) {
 		const schema = spec.components!.schemas[key];
-    const regionTag = `maps_http_schema_${slugify(key)}`;
+    const regionTag = `maps_http_schema_${slugify(key).toLowerCase()}`;
     
     const markdown = mdProcessor.stringify(build(schema, key));
     // write markdown file
 		pack.entry(
 			{
-				name: `documentation/schemas/${key}.md`,
+				name: `documentation/schemas/${regionTag}.md`,
 			},
 			`<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${markdown}\n<!--- [END ${regionTag}] -->`
 		);
@@ -69,7 +69,7 @@ const main = async (argv: any) => {
     // write html file
 		pack.entry(
 			{
-				name: `documentation/schemas/${key}.html`,
+				name: `documentation/schemas/${regionTag}.html`,
 			},
 			prettier.format(
 				`<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${html}\n<!--- [END ${regionTag}] -->`,

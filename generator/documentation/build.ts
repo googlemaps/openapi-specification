@@ -100,13 +100,13 @@ const propertyToRow = (
 		const name = property.$ref.split('/').pop()!;
 		const refLink = link(`#${name}`, name, [text(name)]);
 		row.push(tableCell(refLink));
-		row.push(tableCell([text('See '), refLink]));
+		row.push(tableCell(refPropertyDesciption(refLink, property['description'])));
 	} else {
 		if (property.type === 'array') {
 			const name = (property.items as OpenAPIV3.ReferenceObject).$ref.split('/').pop()!;
 			const refLink = link(`#${name}`, name, [text(name)]);
 			row.push(tableCell([text('Array<'), refLink, text('>')]));
-			row.push(tableCell([text('See '), refLink, text(' for more information.')]));
+			row.push(tableCell(refPropertyDesciption(refLink, property.description)));
 		} else {
 			row.push(tableCell(text(property.type!)));
 			row.push(tableCell(text(property.description || '')));
@@ -115,3 +115,11 @@ const propertyToRow = (
 
 	return tableRow(row);
 };
+
+const refPropertyDesciption = (refLink: any, description?: string) => {
+	if (description) {
+		return [text(description), text(' See '), refLink, text(' for more information.')]
+	}
+
+	return [text('See '), refLink, text(' for more information.')]
+}

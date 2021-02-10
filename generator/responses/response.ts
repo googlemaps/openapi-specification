@@ -82,16 +82,18 @@ const extractRequests = async (
   });
 };
 
-const executeRequest = async (request: string): Promise<string> => {
+const executeRequest = async (request: string, captureError: boolean = false): Promise<string> => {
   return new Promise((resolve, reject) => {
     exec(request, function (error, stdout, stderr) {
+      // request failed with non 200 error
       if (error) {
         reject(stderr);
       }
 
       const response = JSON.parse(stdout) as any;
 
-      if (response.error) {
+      // might be a 200 but have an error body
+      if (response.error && !captureError) {
         reject(stdout);
         return;
       }
@@ -109,7 +111,7 @@ const main = async (argv: any) => {
 
     request = request.replace("YOUR_API_KEY", process.env.GOOGLE_MAPS_API_KEY!);
 
-    const response = await executeRequest(request);
+    const response = await executeRequest(request, /error/i.test(regionTag));
 
     writeFileSync(
       path.join(argv.output, `${regionTag}.yml`),

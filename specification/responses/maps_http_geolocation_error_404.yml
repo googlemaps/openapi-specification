@@ -12,12 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-type: object
-required: [location, accuracy]
-properties:
-  location:
-    description: The user’s estimated latitude and longitude, in degrees.
-    $ref: "./LatLngLiteral.yml"
-  accuracy:
-    description: The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location`.
-    type: number
+# [START maps_http_geolocation_error_404_response]
+{
+  "error":
+    {
+      "code": 404,
+      "message": "Not Found",
+      "errors":
+        [
+          {
+            "message": "Not Found",
+            "domain": "geolocation",
+            "reason": "notFound",
+          },
+        ],
+    },
+}
+# [END maps_http_geolocation_error_404_response]

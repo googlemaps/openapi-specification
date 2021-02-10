@@ -1,0 +1,80 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_CellTower] -->
+<h3 class="schema-object" id="CellTower">Cell Tower</h3>
+<p>
+  Attributes used to describe a cell tower. The following optional fields are
+  not currently used, but may be included if values are available:
+  <code>age</code>, <code>signalStrength</code>, <code>timingAdvance</code>.
+</p>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>cellId</code></td>
+      <td><strong>required</strong></td>
+      <td>integer</td>
+      <td>
+        Unique identifier of the cell. On GSM, this is the Cell ID (CID); CDMA
+        networks use the Base Station ID (BID). WCDMA networks use the
+        UTRAN/GERAN Cell Identity (UC-Id), which is a 32-bit value concatenating
+        the Radio Network Controller (RNC) and Cell ID. Specifying only the
+        16-bit Cell ID value in WCDMA networks may return inaccurate results.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>locationAreaCode</code></td>
+      <td><strong>required</strong></td>
+      <td>integer</td>
+      <td>
+        The Location Area Code (LAC) for GSM and WCDMA networks. The Network ID
+        (NID) for CDMA networks.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>mobileCountryCode</code></td>
+      <td><strong>required</strong></td>
+      <td>integer</td>
+      <td>The cell tower's Mobile Country Code (MCC).</td>
+    </tr>
+    <tr>
+      <td align="left"><code>mobileNetworkCode</code></td>
+      <td><strong>required</strong></td>
+      <td>integer</td>
+      <td>
+        The cell tower's Mobile Network Code. This is the MNC for GSM and WCDMA;
+        CDMA uses the System ID (SID).
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>age</code></td>
+      <td>optional</td>
+      <td>integer</td>
+      <td>
+        The number of milliseconds since this cell was primary. If age is 0, the
+        cellId represents a current measurement.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>signalStrength</code></td>
+      <td>optional</td>
+      <td>number</td>
+      <td>Radio signal strength measured in dBm.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>timingAdvance</code></td>
+      <td>optional</td>
+      <td>number</td>
+      <td>The timing advance value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_CellTower] -->

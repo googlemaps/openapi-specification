@@ -70,11 +70,24 @@ export const build = (
 		);
 
 		// all fields
-		Object.keys(schema.properties!).forEach((key) => {
-			const required = Boolean(schema.required && schema.required.indexOf(key) !== -1);
+		Object.keys(schema.properties!)
+			.sort((a: string, b: string) => {
+				if (schema.required) {
+					if (schema.required.indexOf(a) !== -1 && schema.required.indexOf(b) !== -1 ) {
+						return a < b ? -1 : 1;
+					} else if (schema.required.indexOf(a) !== -1 ) {
+						return -1;
+					} else if (schema.required.indexOf(b) !== -1 ) {
+						return 1;
+					}
+				}
+				return a < b ? -1 : 1;
+			})
+			.forEach((key) => {
+				const required = Boolean(schema.required && schema.required.indexOf(key) !== -1);
 
-			rows.push(propertyToRow(key, schema.properties![key], required));
-		});
+				rows.push(propertyToRow(key, schema.properties![key], required));
+			});
 
 		nodes.push(table(['left'], rows));
 	}
@@ -87,15 +100,15 @@ const propertyToRow = (
 	required: boolean
 ): Parent => {
 	const row: any[] = [];
-  row.push(tableCell(inlineCode(key)));
-  
-  // bold if required
+	row.push(tableCell(inlineCode(key)));
+
+	// bold if required
 	if (required) {
 		row.push(tableCell([strong(text('required'))]));
 	} else {
 		row.push(tableCell([text('optional')]));
-  }
-  
+	}
+
 	if (isRef(property)) {
 		const name = property.$ref.split('/').pop()!;
 		const refLink = link(`#${name}`, name, [text(name)]);
@@ -118,8 +131,8 @@ const propertyToRow = (
 
 const refPropertyDesciption = (refLink: any, description?: string) => {
 	if (description) {
-		return [text(description), text(' See '), refLink, text(' for more information.')]
+		return [text(description), text(' See '), refLink, text(' for more information.')];
 	}
 
-	return [text('See '), refLink, text(' for more information.')]
-}
+	return [text('See '), refLink, text(' for more information.')];
+};

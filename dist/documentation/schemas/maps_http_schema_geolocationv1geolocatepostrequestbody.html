@@ -19,6 +19,32 @@
   </thead>
   <tbody>
     <tr>
+      <td align="left"><code>carrier</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>The carrier name.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>cellTowers</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;<a href="#CellTower" title="CellTower">CellTower</a>></td>
+      <td>
+        The request body's cellTowers array contains zero or more cell tower
+        objects. See <a href="#CellTower" title="CellTower">CellTower</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>considerIp</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        Specifies whether to fall back to IP geolocation if wifi and cell tower
+        signals are not available. Defaults to true. Set considerIp to false to
+        disable fall back.
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>homeMobileCountryCode</code></td>
       <td>optional</td>
       <td>integer</td>
@@ -41,32 +67,6 @@
         The mobile radio type. Supported values are lte, gsm, cdma, and wcdma.
         While this field is optional, it should be included if a value is
         available, for more accurate results.
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>carrier</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>The carrier name.</td>
-    </tr>
-    <tr>
-      <td align="left"><code>considerIp</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        Specifies whether to fall back to IP geolocation if wifi and cell tower
-        signals are not available. Defaults to true. Set considerIp to false to
-        disable fall back.
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>cellTowers</code></td>
-      <td>optional</td>
-      <td>Array&#x3C;<a href="#CellTower" title="CellTower">CellTower</a>></td>
-      <td>
-        The request body's cellTowers array contains zero or more cell tower
-        objects. See <a href="#CellTower" title="CellTower">CellTower</a> for
-        more information.
       </td>
     </tr>
     <tr>

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_errordetail] -->
-<h3 class="schema-object" id="ErrorDetail">Error Message</h3>
+<h3 class="schema-object" id="ErrorDetail">Error Detail</h3>
 
 type: `object`
 

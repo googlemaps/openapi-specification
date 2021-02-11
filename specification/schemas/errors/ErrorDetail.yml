@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Error Message
+title: Error Detail
 required: [reason, message]
 properties:
   message:

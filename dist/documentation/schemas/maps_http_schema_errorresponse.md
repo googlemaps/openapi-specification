@@ -2,6 +2,8 @@
 <!--- [START maps_http_schema_errorresponse] -->
 <h3 class="schema-object" id="ErrorResponse">Error Response</h3>
 
+In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.
+
 type: `object`
 
 | Field   | Required     | Type                    | Description                                                                      |

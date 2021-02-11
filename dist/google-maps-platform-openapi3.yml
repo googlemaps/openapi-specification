@@ -15,7 +15,9 @@ paths:
       description: |-
         Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect. This document describes the protocol used to send this data to the server and to return a response to the client.
 
-        https://developers.google.com/maps/documentation/geolocation/intro
+        Communication is done over HTTPS using POST. Both request and response are formatted as JSON, and the content type of both is `application/json`.
+
+        You must specify a key in your request, included as the value of a`key` parameter. A `key` is your application's  API key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.google.com/maps/documentation/geolocation/get-api-key).
       requestBody:
         description: The request body must be formatted as JSON.
         content:
@@ -737,6 +739,7 @@ components:
     ErrorResponse:
       type: object
       title: Error Response
+      description: 'In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.'
       required:
         - error
       properties:
@@ -772,7 +775,7 @@ components:
             $ref: '#/components/schemas/ErrorDetail'
     ErrorDetail:
       type: object
-      title: Error Message
+      title: Error Detail
       required:
         - reason
         - message

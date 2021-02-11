@@ -13,6 +13,9 @@ ts_library(
         "@npm//@types/unist",
         "@npm//@types/yargs",
         "@npm//mdast-builder",
+        "@npm//mdast-util-from-markdown",
+        "@npm//mdast-util-gfm",
+        "@npm//micromark-extension-gfm",
         "@npm//openapi-types",
         "@npm//prettier",
         "@npm//remark-gfm",
@@ -23,7 +26,6 @@ ts_library(
         "@npm//tar-stream",
         "@npm//unified",
         "@npm//yargs",
-        "@npm//mdast-util-from-markdown"
     ],
 )
 

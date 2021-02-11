@@ -43,7 +43,7 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../../schemas/GeolocationV1GeolocatePostResponseBody.yml" 
+          $ref: "../../../schemas/GeolocationV1GeolocatePostResponseBody.yml"          
         examples:
           WIFI:
             value:
@@ -54,9 +54,27 @@ responses:
           IP Only:
             value:
               $ref: ../../../responses/maps_http_geolocation_ip_response.yml
-          Invalid:
+  "400":
+    description: Bad Request
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/errors/ErrorResponse.yml"
+        examples:
+          Bad Request:
             value:
               $ref: ../../../responses/maps_http_geolocation_error_400_response.yml
-          Not Found:
+          Invalid Key:
+            value:
+              $ref: ../../../responses/maps_http_geolocation_error_400_invalid_key_response.yml
+  "404":
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/errors/ErrorResponse.yml"
+        examples:
+          Invalid:            
             value:
               $ref: ../../../responses/maps_http_geolocation_error_404_response.yml
+              

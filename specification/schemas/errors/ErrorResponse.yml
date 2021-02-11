@@ -13,11 +13,11 @@
 # limitations under the License.
 
 type: object
-required: [location, accuracy]
+title: Error Response
+required: [error]
 properties:
-  location:
-    description: The user’s estimated latitude and longitude, in degrees.
-    $ref: "./LatLngLiteral.yml"
-  accuracy:
-    description: The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location`.
-    type: number
+  error:
+    description: An error return by the server.
+    $ref: "./Error.yml"
+example:
+  $ref: "../../responses/maps_http_geolocation_error_400_invalid_key_response.yml"

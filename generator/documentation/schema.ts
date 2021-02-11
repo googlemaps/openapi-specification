@@ -54,10 +54,9 @@ const main = async (argv: any) => {
 
 	for (const key in spec.components!.schemas) {
 		const schema = spec.components!.schemas[key];
-    const regionTag = `maps_http_schema_${slugify(key).toLowerCase()}`;
-    
-    const markdown = mdProcessor.stringify(build(schema, key));
-    // write markdown file
+		const regionTag = `maps_http_schema_${slugify(key).toLowerCase()}`;
+		const markdown = mdProcessor.stringify(build(schema, key));
+		// write markdown file
 		pack.entry(
 			{
 				name: `documentation/schemas/${regionTag}.md`,
@@ -65,8 +64,8 @@ const main = async (argv: any) => {
 			`<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${markdown}\n<!--- [END ${regionTag}] -->`
 		);
 
-    const html = await htmlProcessor.process(markdown);
-    // write html file
+		const html = await htmlProcessor.process(markdown);
+		// write html file
 		pack.entry(
 			{
 				name: `documentation/schemas/${regionTag}.html`,

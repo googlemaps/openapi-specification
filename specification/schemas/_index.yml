@@ -20,6 +20,7 @@ LatLngArrayString:
   $ref: "./LatLngArrayString.yml"
 LatLngLiteral:
   $ref: "./LatLngLiteral.yml"
+# Geolocation
 GeolocationV1GeolocatePostRequestBody:
   $ref: "./GeolocationV1GeolocatePostRequestBody.yml"
 GeolocationV1GeolocatePostResponseBody:
@@ -28,3 +29,10 @@ CellTower:
   $ref: "./CellTower.yml"
 WifiAccessPoint:
   $ref: "./WifiAccessPoint.yml"
+# Errors
+ErrorResponse:
+  $ref: "./errors/ErrorResponse.yml"
+Error:
+  $ref: "./errors/Error.yml"
+ErrorDetail:
+  $ref: "./errors/ErrorDetail.yml"

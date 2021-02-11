@@ -107,8 +107,20 @@
                       },
                       "accuracy": 926
                     }
-                  },
-                  "Invalid": {
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Bad Request": {
                     "value": {
                       "error": {
                         "code": 400,
@@ -123,7 +135,24 @@
                       }
                     }
                   },
-                  "Not Found": {
+                  "Invalid Key": {
+                    "value": {
+                      "$ref": "#/components/schemas/ErrorResponse/example"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Invalid": {
                     "value": {
                       "error": {
                         "code": 404,
@@ -900,6 +929,99 @@
             "description": "The channel over which the client is communication with the access point.",
             "type": "integer"
           }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "title": "Error Response",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "description": "An error return by the server.",
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "example": {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "errors"
+        ],
+        "properties": {
+          "code": {
+            "description": "This is the same as the HTTP status of the response.",
+            "type": "number"
+          },
+          "message": {
+            "description": "A short description of the error.",
+            "type": "string"
+          },
+          "errors": {
+            "description": "A list of errors which occurred. Each error contains an identifier for the type of error and a short description.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            }
+          }
+        }
+      },
+      "ErrorDetail": {
+        "type": "object",
+        "title": "Error Message",
+        "required": [
+          "reason",
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "description": "A short description of the error.",
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "description": "A reason for the error.",
+            "enum": [
+              "badRequest",
+              "dailyLimitExceeded",
+              "invalid",
+              "keyInvalid",
+              "notFound",
+              "parseError",
+              "userRateLimitExceeded"
+            ]
+          },
+          "domain": {
+            "type": "string",
+            "description": "The domain in which the error occurred.",
+            "enum": [
+              "global",
+              "geolocation",
+              "usageLimits"
+            ]
+          }
+        },
+        "example": {
+          "message": "API key not valid. Please pass a valid API key.",
+          "domain": "global",
+          "reason": "badRequest"
         }
       }
     },

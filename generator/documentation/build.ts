@@ -20,16 +20,26 @@ import {
 	text,
 	strong,
 	inlineCode,
+	code,
 	html as htmlNode,
 	table,
 	tableRow,
 	tableCell,
 	link,
 } from 'mdast-builder';
-import { Parent } from 'unist';
+import { Parent, Node } from 'unist';
 import { OpenAPIV3 } from 'openapi-types';
 import { isRef } from './helpers';
-import fromMarkdown from 'mdast-util-from-markdown';
+import syntax from 'micromark-extension-gfm';
+import gfm from 'mdast-util-gfm';
+
+import fromMarkdown_ from 'mdast-util-from-markdown';
+
+const fromMarkdown = (s: string) =>
+	fromMarkdown_(s, {
+		extensions: [syntax()],
+		mdastExtensions: [gfm.fromMarkdown],
+	});
 
 export interface PropertyRow {
 	field: Parent;
@@ -45,10 +55,11 @@ export const build = (
 		throw 'cannot handle ref here';
 	}
 
+	const title = schema.title == undefined ? key : schema.title;
 	const nodes: any = [];
 
 	nodes.push(
-		htmlNode(`<h3 class="schema-object" id="${key}">${schema.title == undefined ? key : schema.title}</h3>`)
+		htmlNode(`<h3 class="schema-object" id="${key}">${title}</h3>`)
 	);
 	if (schema.description) {
 		nodes.push(paragraph(fromMarkdown(schema.description)));
@@ -73,11 +84,11 @@ export const build = (
 		Object.keys(schema.properties!)
 			.sort((a: string, b: string) => {
 				if (schema.required) {
-					if (schema.required.indexOf(a) !== -1 && schema.required.indexOf(b) !== -1 ) {
+					if (schema.required.indexOf(a) !== -1 && schema.required.indexOf(b) !== -1) {
 						return a < b ? -1 : 1;
-					} else if (schema.required.indexOf(a) !== -1 ) {
+					} else if (schema.required.indexOf(a) !== -1) {
 						return -1;
-					} else if (schema.required.indexOf(b) !== -1 ) {
+					} else if (schema.required.indexOf(b) !== -1) {
 						return 1;
 					}
 				}
@@ -90,6 +101,11 @@ export const build = (
 			});
 
 		nodes.push(table(['left'], rows));
+
+		if (schema.example) {
+			nodes.push(htmlNode(`<h4 class="schema-object-example" id="${key}-example">Example</h4>`));
+			nodes.push(code("js", JSON.stringify(schema.example, null, 2)));
+		}
 	}
 	return root(nodes);
 };
@@ -116,13 +132,21 @@ const propertyToRow = (
 		row.push(tableCell(refPropertyDesciption(refLink, property['description'])));
 	} else {
 		if (property.type === 'array') {
-			const name = (property.items as OpenAPIV3.ReferenceObject).$ref.split('/').pop()!;
-			const refLink = link(`#${name}`, name, [text(name)]);
-			row.push(tableCell([text('Array<'), refLink, text('>')]));
-			row.push(tableCell(refPropertyDesciption(refLink, property.description)));
+			if (isRef(property.items)) {
+				const name = property.items.$ref.split('/').pop()!;
+				const refLink = link(`#${name}`, name, [text(name)]);
+				row.push(tableCell([text('Array&lt;'), refLink, text('&gt;')]));
+				row.push(tableCell(refPropertyDesciption(refLink, property.description)));
+			} else if (property.items.type === 'object') {
+				throw `Error: extract object to ref from array items for better documentation.`;
+			} else {
+				const name = property.items.type;
+				row.push(tableCell([text(`Array&lt;${name}&gt;`)]));
+				row.push(tableCell(nonRefPropertyDescription(property)));
+			}
 		} else {
 			row.push(tableCell(text(property.type!)));
-			row.push(tableCell(text(property.description || '')));
+			row.push(tableCell(nonRefPropertyDescription(property)));
 		}
 	}
 
@@ -131,8 +155,28 @@ const propertyToRow = (
 
 const refPropertyDesciption = (refLink: any, description?: string) => {
 	if (description) {
-		return [text(description), text(' See '), refLink, text(' for more information.')];
+		return [paragraph(fromMarkdown(description)), text(' See '), refLink, text(' for more information.')];
 	}
 
 	return [text('See '), refLink, text(' for more information.')];
+};
+
+const nonRefPropertyDescription = (property: OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject) => {
+	const nodes: Node[] = [];
+
+	nodes.push(fromMarkdown(property.description!));
+
+	if (property.enum) {
+		if (property.description) {
+			nodes.push(text(' '));
+		}
+		nodes.push(paragraph(text('The allowed values include: ')));
+		property.enum.forEach((value, i) => {
+			if (i !== 0) nodes.push(text(', '));
+			if (i == property.enum!.length - 1) nodes.push(text('and '));
+			nodes.push(inlineCode(value));
+
+		});
+	}
+	return nodes;
 };

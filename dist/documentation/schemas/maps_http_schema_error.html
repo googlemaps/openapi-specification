@@ -1,0 +1,43 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_error] -->
+<h3 class="schema-object" id="Error">Error</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>code</code></td>
+      <td><strong>required</strong></td>
+      <td>number</td>
+      <td>This is the same as the HTTP status of the response.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>errors</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a href="#ErrorDetail" title="ErrorDetail">ErrorDetail</a>>
+      </td>
+      <td>
+        A list of errors which occurred. Each error contains an identifier for
+        the type of error and a short description. See
+        <a href="#ErrorDetail" title="ErrorDetail">ErrorDetail</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>message</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>A short description of the error.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_error] -->

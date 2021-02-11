@@ -13,11 +13,16 @@
 # limitations under the License.
 
 type: object
-required: [location, accuracy]
+required: [code, message, errors]
 properties:
-  location:
-    description: The user’s estimated latitude and longitude, in degrees.
-    $ref: "./LatLngLiteral.yml"
-  accuracy:
-    description: The accuracy of the estimated location, in meters. This represents the radius of a circle around the given `location`.
+  code:
+    description: This is the same as the HTTP status of the response.
     type: number
+  message:
+    description: A short description of the error.
+    type: string
+  errors:
+    description: A list of errors which occurred. Each error contains an identifier for the type of error and a short description.
+    type: array
+    items:
+      $ref: "./ErrorDetail.yml"

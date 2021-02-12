@@ -14,4 +14,24 @@ type: `object`
 | `signalStrength`     | optional     | integer | The current signal strength measured in dBm.                                                                         |
 | `signalToNoiseRatio` | optional     | integer | The current signal to noise ratio measured in dB.                                                                    |
 
+<h4 class="schema-object-example" id="WifiAccessPoint-example">Example</h4>
+
+```js
+{
+  "considerIp": "false",
+  "wifiAccessPoints": [
+    {
+      "macAddress": "84:d4:7e:09:a5:f1",
+      "signalStrength": -43,
+      "signalToNoiseRatio": 0
+    },
+    {
+      "macAddress": "44:48:c1:a6:f3:d0",
+      "signalStrength": -55,
+      "signalToNoiseRatio": 0
+    }
+  ]
+}
+```
+
 <!--- [END maps_http_schema_wifiaccesspoint] -->

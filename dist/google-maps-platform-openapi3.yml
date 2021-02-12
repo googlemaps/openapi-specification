@@ -27,14 +27,7 @@ paths:
             examples:
               WIFI:
                 value:
-                  considerIp: 'false'
-                  wifiAccessPoints:
-                    - macAddress: '84:d4:7e:09:a5:f1'
-                      signalStrength: -43
-                      signalToNoiseRatio: 0
-                    - macAddress: '44:48:c1:a6:f3:d0'
-                      signalStrength: -55
-                      signalToNoiseRatio: 0
+                  $ref: '#/components/schemas/WifiAccessPoint/example'
               Cell Towers:
                 value:
                   $ref: '#/components/schemas/CellTower/example'
@@ -738,6 +731,15 @@ components:
         channel:
           description: The channel over which the client is communication with the access point.
           type: integer
+      example:
+        considerIp: 'false'
+        wifiAccessPoints:
+          - macAddress: '84:d4:7e:09:a5:f1'
+            signalStrength: -43
+            signalToNoiseRatio: 0
+          - macAddress: '44:48:c1:a6:f3:d0'
+            signalStrength: -55
+            signalToNoiseRatio: 0
     ErrorResponse:
       type: object
       title: Error Response

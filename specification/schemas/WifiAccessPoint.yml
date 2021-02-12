@@ -32,3 +32,5 @@ properties:
   channel:
     description: The channel over which the client is communication with the access point.
     type: integer
+example:
+  $ref: ../requests/maps_http_geolocation_wifi_request.yml

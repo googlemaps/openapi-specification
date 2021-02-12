@@ -32,7 +32,7 @@ WifiAccessPoint:
 # Errors
 ErrorResponse:
   $ref: "./errors/ErrorResponse.yml"
-Error:
-  $ref: "./errors/Error.yml"
+ErrorObject:
+  $ref: "./errors/ErrorObject.yml"
 ErrorDetail:
   $ref: "./errors/ErrorDetail.yml"

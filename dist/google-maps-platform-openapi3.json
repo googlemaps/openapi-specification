@@ -941,7 +941,7 @@
         "properties": {
           "error": {
             "description": "An error return by the server.",
-            "$ref": "#/components/schemas/Error"
+            "$ref": "#/components/schemas/ErrorObject"
           }
         },
         "example": {
@@ -959,7 +959,7 @@
           }
         }
       },
-      "Error": {
+      "ErrorObject": {
         "type": "object",
         "required": [
           "code",

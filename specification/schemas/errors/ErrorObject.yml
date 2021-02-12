@@ -13,12 +13,16 @@
 # limitations under the License.
 
 type: object
-title: Error Response
-description: In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.
-required: [error]
+required: [code, message, errors]
 properties:
-  error:
-    description: An error return by the server.
-    $ref: "./ErrorObject.yml"
-example:
-  $ref: "../../responses/maps_http_geolocation_error_400_invalid_key_response.yml"
+  code:
+    description: This is the same as the HTTP status of the response.
+    type: number
+  message:
+    description: A short description of the error.
+    type: string
+  errors:
+    description: A list of errors which occurred. Each error contains an identifier for the type of error and a short description.
+    type: array
+    items:
+      $ref: "./ErrorDetail.yml"

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_error] -->
-<h3 class="schema-object" id="Error">Error</h3>
+<!--- [START maps_http_schema_errorobject] -->
+<h3 class="schema-object" id="ErrorObject">ErrorObject</h3>
 
 type: `object`
 
@@ -10,4 +10,4 @@ type: `object`
 | `errors`  | **required** | Array&lt;[ErrorDetail](#ErrorDetail "ErrorDetail")&gt; | A list of errors which occurred. Each error contains an identifier for the type of error and a short description. See [ErrorDetail](#ErrorDetail "ErrorDetail") for more information. |
 | `message` | **required** | string                                                 | A short description of the error.                                                                                                                                                     |
 
-<!--- [END maps_http_schema_error] -->
+<!--- [END maps_http_schema_errorobject] -->

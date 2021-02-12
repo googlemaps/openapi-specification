@@ -6,9 +6,9 @@ In the case of an error, a standard format error response body will be returned 
 
 type: `object`
 
-| Field   | Required     | Type                    | Description                                                                      |
-| :------ | ------------ | ----------------------- | -------------------------------------------------------------------------------- |
-| `error` | **required** | [Error](#Error "Error") | An error return by the server. See [Error](#Error "Error") for more information. |
+| Field   | Required     | Type                                      | Description                                                                                        |
+| :------ | ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `error` | **required** | [ErrorObject](#ErrorObject "ErrorObject") | An error return by the server. See [ErrorObject](#ErrorObject "ErrorObject") for more information. |
 
 <h4 class="schema-object-example" id="ErrorResponse-example">Example</h4>
 

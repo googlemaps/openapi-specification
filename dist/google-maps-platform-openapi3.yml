@@ -745,7 +745,7 @@ components:
       properties:
         error:
           description: An error return by the server.
-          $ref: '#/components/schemas/Error'
+          $ref: '#/components/schemas/ErrorObject'
       example:
         error:
           code: 400
@@ -755,7 +755,7 @@ components:
               domain: global
               reason: badRequest
           status: INVALID_ARGUMENT
-    Error:
+    ErrorObject:
       type: object
       required:
         - code

@@ -53,3 +53,5 @@ properties:
   timingAdvance:
     description: The timing advance value.
     type: number
+example: 
+  $ref: ../requests/maps_http_geolocation_celltowers_request.yml

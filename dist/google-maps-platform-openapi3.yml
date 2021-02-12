@@ -37,14 +37,7 @@ paths:
                       signalToNoiseRatio: 0
               Cell Towers:
                 value:
-                  cellTowers:
-                    - cellId: 170402199
-                      locationAreaCode: 35632
-                      mobileCountryCode: 310
-                      mobileNetworkCode: 410
-                      age: 0
-                      signalStrength: -60
-                      timingAdvance: 15
+                  $ref: '#/components/schemas/CellTower/example'
               IP Only:
                 value:
                   considerIp: 'true'
@@ -714,6 +707,15 @@ components:
         timingAdvance:
           description: The timing advance value.
           type: number
+      example:
+        cellTowers:
+          - cellId: 170402199
+            locationAreaCode: 35632
+            mobileCountryCode: 310
+            mobileNetworkCode: 410
+            age: 0
+            signalStrength: -60
+            timingAdvance: 15
     WifiAccessPoint:
       type: object
       title: WiFi Access Point
@@ -757,6 +759,7 @@ components:
           status: INVALID_ARGUMENT
     ErrorObject:
       type: object
+      title: Error Object
       required:
         - code
         - message

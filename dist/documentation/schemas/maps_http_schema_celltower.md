@@ -16,4 +16,22 @@ type: `object`
 | `signalStrength`    | optional     | number  | Radio signal strength measured in dBm.                                                                                                                                                                                                                                                                                                                   |
 | `timingAdvance`     | optional     | number  | The timing advance value.                                                                                                                                                                                                                                                                                                                                |
 
+<h4 class="schema-object-example" id="CellTower-example">Example</h4>
+
+```js
+{
+  "cellTowers": [
+    {
+      "cellId": 170402199,
+      "locationAreaCode": 35632,
+      "mobileCountryCode": 310,
+      "mobileNetworkCode": 410,
+      "age": 0,
+      "signalStrength": -60,
+      "timingAdvance": 15
+    }
+  ]
+}
+```
+
 <!--- [END maps_http_schema_celltower] -->

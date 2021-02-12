@@ -613,6 +613,7 @@ components:
         minItems: 2
     LatLngLiteral:
       type: object
+      title: LatLng Literal
       description: An object describing a specific location with Latitude and Longitude in decimal degrees.
       required:
         - lat

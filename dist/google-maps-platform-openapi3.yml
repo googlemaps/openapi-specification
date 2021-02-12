@@ -656,6 +656,7 @@ components:
             $ref: '#/components/schemas/WifiAccessPoint'
     GeolocationV1GeolocatePostResponseBody:
       type: object
+      title: Geolocation Response Body
       description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
       required:
         - location

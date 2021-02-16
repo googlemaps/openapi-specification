@@ -16,8 +16,7 @@ type: `object`
 
 <h4 class="schema-object-example" id="WifiAccessPoint-example">Example</h4>
 
-```js
-{
+<pre class="notranslate lang-json prettyprint">{
   "considerIp": "false",
   "wifiAccessPoints": [
     {
@@ -31,7 +30,6 @@ type: `object`
       "signalToNoiseRatio": 0
     }
   ]
-}
-```
+}</pre>
 
 <!--- [END maps_http_schema_wifiaccesspoint] -->

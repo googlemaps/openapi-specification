@@ -13,14 +13,12 @@ type: `object`
 
 <h4 class="schema-object-example" id="GeolocationV1GeolocatePostResponseBody-example">Example</h4>
 
-```js
-{
+<pre class="notranslate lang-json prettyprint">{
   "location": {
     "lat": 37.421925,
     "lng": -122.0841293
   },
   "accuracy": 30
-}
-```
+}</pre>
 
 <!--- [END maps_http_schema_geolocationv1geolocatepostresponsebody] -->

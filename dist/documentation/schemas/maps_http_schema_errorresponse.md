@@ -12,8 +12,7 @@ type: `object`
 
 <h4 class="schema-object-example" id="ErrorResponse-example">Example</h4>
 
-```js
-{
+<pre class="notranslate lang-json prettyprint">{
   "error": {
     "code": 400,
     "message": "API key not valid. Please pass a valid API key.",
@@ -26,7 +25,6 @@ type: `object`
     ],
     "status": "INVALID_ARGUMENT"
   }
-}
-```
+}</pre>
 
 <!--- [END maps_http_schema_errorresponse] -->

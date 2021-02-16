@@ -12,12 +12,10 @@ type: `object`
 
 <h4 class="schema-object-example" id="ErrorDetail-example">Example</h4>
 
-```js
-{
+<pre class="notranslate lang-json prettyprint">{
   "message": "API key not valid. Please pass a valid API key.",
   "domain": "global",
   "reason": "badRequest"
-}
-```
+}</pre>
 
 <!--- [END maps_http_schema_errordetail] -->

@@ -20,7 +20,6 @@ import {
 	text,
 	strong,
 	inlineCode,
-	code,
 	html as htmlNode,
 	table,
 	tableRow,
@@ -104,7 +103,7 @@ export const build = (
 
 		if (schema.example) {
 			nodes.push(htmlNode(`<h4 class="schema-object-example" id="${key}-example">Example</h4>`));
-			nodes.push(code("js", JSON.stringify(schema.example, null, 2)));
+			nodes.push(htmlNode(`<pre class="notranslate lang-json prettyprint">${JSON.stringify(schema.example, null, 2)}</pre>`));
 		}
 	}
 	return root(nodes);

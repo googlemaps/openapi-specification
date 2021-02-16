@@ -18,8 +18,7 @@ type: `object`
 
 <h4 class="schema-object-example" id="CellTower-example">Example</h4>
 
-```js
-{
+<pre class="notranslate lang-json prettyprint">{
   "cellTowers": [
     {
       "cellId": 170402199,
@@ -31,7 +30,6 @@ type: `object`
       "timingAdvance": 15
     }
   ]
-}
-```
+}</pre>
 
 <!--- [END maps_http_schema_celltower] -->

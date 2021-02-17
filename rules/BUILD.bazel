@@ -1,4 +1,5 @@
 load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -12,5 +13,29 @@ ts_library(
         "@npm//tar",
         "@npm//tmp",
         "@npm//yargs",
+    ],
+)
+
+ts_library(
+    name = "_dereference_lib",
+    srcs = ["dereference.ts"],
+    deps = [
+        "@npm//@apidevtools/json-schema-ref-parser",
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//openapi-types",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "dereference",
+    data = [
+        ":_dereference_lib",
+    ],
+    entry_point = ":dereference.ts",
+    templated_args = [
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
     ],
 )

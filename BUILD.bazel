@@ -10,19 +10,12 @@ exports_files(
 
 BUNDLE_NAME = "google-maps-platform-openapi3"
 
-[
-    bundle(
-        name = BUNDLE_NAME,
-        data = ["//specification:openapi3"],
-        entry = "$(locations //specification:openapi3)/index.yml",
-        type = type,
-        visibility = ["//visibility:public"],
-    )
-    for type in [
-        "yaml",
-        "json",
-    ]
-]
+# has .yml and .json outputs
+bundle(
+    name = BUNDLE_NAME,
+    data = ["//specification:openapi3"],
+    entry = "$(locations //specification:openapi3)/index.yml",
+)
 
 validate(
     name = "validate_yml_test",

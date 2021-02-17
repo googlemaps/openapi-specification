@@ -27,10 +27,24 @@ paths:
             examples:
               WIFI:
                 value:
-                  $ref: '#/components/schemas/WifiAccessPoint/example'
+                  considerIp: 'false'
+                  wifiAccessPoints:
+                    - macAddress: '84:d4:7e:09:a5:f1'
+                      signalStrength: -43
+                      signalToNoiseRatio: 0
+                    - macAddress: '44:48:c1:a6:f3:d0'
+                      signalStrength: -55
+                      signalToNoiseRatio: 0
               Cell Towers:
                 value:
-                  $ref: '#/components/schemas/CellTower/example'
+                  cellTowers:
+                    - cellId: 170402199
+                      locationAreaCode: 35632
+                      mobileCountryCode: 310
+                      mobileNetworkCode: 410
+                      age: 0
+                      signalStrength: -60
+                      timingAdvance: 15
               IP Only:
                 value:
                   considerIp: 'true'
@@ -45,7 +59,10 @@ paths:
               examples:
                 WIFI:
                   value:
-                    $ref: '#/components/schemas/GeolocationV1GeolocatePostResponseBody/example'
+                    location:
+                      lat: 37.421925
+                      lng: -122.0841293
+                    accuracy: 30
                 Cell Towers:
                   value:
                     location:
@@ -76,7 +93,14 @@ paths:
                       status: INVALID_ARGUMENT
                 Invalid Key:
                   value:
-                    $ref: '#/components/schemas/ErrorResponse/example'
+                    error:
+                      code: 400
+                      message: API key not valid. Please pass a valid API key.
+                      errors:
+                        - message: API key not valid. Please pass a valid API key.
+                          domain: global
+                          reason: badRequest
+                      status: INVALID_ARGUMENT
         '404':
           description: Not Found
           content:

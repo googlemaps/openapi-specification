@@ -32,7 +32,11 @@ const argv = options({
 }).argv;
 
 export const isRef = (
-	obj: OpenAPIV3.ReferenceObject | OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject | OpenAPIV3.RequestBodyObject
+	obj:
+		| OpenAPIV3.ReferenceObject
+		| OpenAPIV3.ArraySchemaObject
+		| OpenAPIV3.NonArraySchemaObject
+		| OpenAPIV3.RequestBodyObject
 ): obj is OpenAPIV3.ReferenceObject => {
 	return (obj as OpenAPIV3.ReferenceObject).$ref !== undefined;
 };
@@ -62,21 +66,25 @@ const main = async (argv: any) => {
 				for (let content of Object.keys(requestBody.content)) {
 					const mediaTypeObject: OpenAPIV3.MediaTypeObject = requestBody.content[content]!;
 					console.log(content);
-					mediaTypeObject.examples = dereferencedSchema.paths[path]![method]!.requestBody!.content![content].examples;
+					mediaTypeObject.examples = dereferencedSchema.paths[path]![method]!.requestBody!.content![
+						content
+					].examples;
 				}
 			}
-			for (let code of Object.keys(operationObject.responses!)) {
-				const responseObject: OpenAPIV3.ResponseObject | OpenAPIV3.ReferenceObject = operationObject.responses![
-					code
-				]!;
-				if (isRef(responseObject)) continue;
+			if (operationObject.responses) {
+				for (let code of Object.keys(operationObject.responses)) {
+					const responseObject:
+						| OpenAPIV3.ResponseObject
+						| OpenAPIV3.ReferenceObject = operationObject.responses![code]!;
+					if (isRef(responseObject)) continue;
 
-				if (responseObject.content) {
-					for (let content of Object.keys(responseObject.content)) {
-						const mediaTypeObject: OpenAPIV3.MediaTypeObject = responseObject.content[content]!;
-						mediaTypeObject.examples = dereferencedSchema.paths[path]![method]!.responses![code]!.content![
-							content
-						].examples;
+					if (responseObject.content) {
+						for (let content of Object.keys(responseObject.content)) {
+							const mediaTypeObject: OpenAPIV3.MediaTypeObject = responseObject.content[content]!;
+							mediaTypeObject.examples = dereferencedSchema.paths[path]![method]!.responses![
+								code
+							]!.content![content].examples;
+						}
 					}
 				}
 			}

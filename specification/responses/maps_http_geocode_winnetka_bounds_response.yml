@@ -1,0 +1,70 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_geocode_winnetka_bounds_response]
+{
+  "results":
+    [
+      {
+        "address_components":
+          [
+            {
+              "long_name": "Winnetka",
+              "short_name": "Winnetka",
+              "types": ["neighborhood", "political"],
+            },
+            {
+              "long_name": "Los Angeles",
+              "short_name": "Los Angeles",
+              "types": ["locality", "political"],
+            },
+            {
+              "long_name": "Los Angeles County",
+              "short_name": "Los Angeles County",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
+              "long_name": "California",
+              "short_name": "CA",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "United States",
+              "short_name": "US",
+              "types": ["country", "political"],
+            },
+          ],
+        "formatted_address": "Winnetka, Los Angeles, CA, USA",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 34.2355209, "lng": -118.5534191 },
+                "southwest": { "lat": 34.1854649, "lng": -118.588556 },
+              },
+            "location": { "lat": 34.2048586, "lng": -118.5739621 },
+            "location_type": "APPROXIMATE",
+            "viewport":
+              {
+                "northeast": { "lat": 34.2355209, "lng": -118.5534191 },
+                "southwest": { "lat": 34.1854649, "lng": -118.588556 },
+              },
+          },
+        "place_id": "ChIJ0fd4S_KbwoAR2hRDrsr3HmQ",
+        "types": ["neighborhood", "political"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_geocode_winnetka_bounds_response]

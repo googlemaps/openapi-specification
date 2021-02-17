@@ -14,12 +14,67 @@
 
 ElevationStatus:
   $ref: "./ElevationStatus.yml"
-GeocodeStatus:
-  $ref: "./GeocodeStatus.yml"
+GeocodingStatus:
+  $ref: "./GeocodingStatus.yml"
 LatLngArrayString:
   $ref: "./LatLngArrayString.yml"
 LatLngLiteral:
   $ref: "./LatLngLiteral.yml"
+AddressComponents:
+  type: object
+  properties:
+    long_name:
+      type: string
+      description: The full text description or name of the address component as returned by the Geocoding.
+    short_name:
+      description: An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of `Alaska` and a short_name of `AK` using the 2-letter postal abbreviation.
+      type: string
+    types:
+      description: An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/places/web-service/supported_types).
+      type: array
+      items:
+        type: string
+Viewport:
+  type: object
+  properties:
+    northeast:
+      $ref: '#LatLngLiteral'
+    southwest:
+      $ref: '#LatLngLiteral'
+Geometry:
+  type: object
+  properties:
+    location:
+      $ref: '#LatLngLiteral'
+    location_type:
+      description: |
+        Stores additional data about the specified location. The following values are currently supported:
+
+        - "ROOFTOP" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.
+        - "RANGE_INTERPOLATED" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.
+        - "GEOMETRIC_CENTER" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).
+        - "APPROXIMATE" indicates that the returned result is approximate.
+      type: string
+    viewport:
+      $ref: '#Viewport'
+PlusCode:
+  type: object
+  description: An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).
+  externalDocs: 
+    url: https://plus.codes/
+    description: Site describing Plus Codes.
+  properties:
+    compound_code:
+      description: The `compound_code` is a 6 character or longer local code with an explicit location (`CWC8+R9, Mountain View, CA, USA`).
+      type: string
+    global_code:
+      description: The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).
+      type: string
+# Geocoding
+GeocodingResult:
+  $ref: "./GeocodingResult.yml"
+GeocodingResponse:
+  $ref: "./GeocodingResponse.yml"
 # Geolocation
 GeolocationV1GeolocatePostRequestBody:
   $ref: "./GeolocationV1GeolocatePostRequestBody.yml"

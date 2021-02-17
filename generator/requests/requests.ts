@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-import { SnippetRequest, PostJsonRequest } from './types';
+import { SnippetRequest, PostJsonRequest, Request } from './types';
+import { Url } from 'postman-collection';
+
 import { readFileSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
@@ -32,9 +34,7 @@ export const REQUESTS: SnippetRequest[] = [
 		regionTag: 'maps_http_geolocation_celltowers',
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate',
-			json: parseRequestBody(
-				'../../specification/requests/maps_http_geolocation_celltowers_request.yml'
-			),
+			json: parseRequestBody('../../specification/requests/maps_http_geolocation_celltowers_request.yml'),
 		}),
 	},
 	{
@@ -70,6 +70,201 @@ export const REQUESTS: SnippetRequest[] = [
 		request: new PostJsonRequest({
 			url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY',
 			json: parseRequestBody('../../specification/requests/maps_http_geolocation_ip_request.yml'),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'address', value: '1600 Amphitheatre Parkway, Mountain View, CA' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_reverse',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'latlng', value: '40.714224,-73.961452' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_reverse_filtering',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{ key: 'latlng', value: '40.714224,-73.961452' },
+					{ key: 'location_type', value: 'ROOFTOP' },
+					{ key: 'result_type', value: 'street_address' },
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_winnetka',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'address', value: 'Winnetka' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_winnetka_bounds',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{ key: 'address', value: 'Winnetka' },
+					{ key: 'bounds', value: '34.172684,-118.604794|34.236144,-118.500938' },
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_toledo',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'address', value: 'Toledo' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_toledo_region_es',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{ key: 'address', value: 'Toledo' },
+					{ key: 'region', value: 'es' },
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_components_filtering',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{ key: 'address', value: 'high st hasting' },
+					{ key: 'components', value: 'country:GB' },
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_components',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'components', value: 'locality:santa+cruz|country:ES' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_components_zero_results',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [{ key: 'components', value: 'administrative_area:TX|country:FR' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_components_zero_results_fixed',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{
+						key: 'components',
+						value: 'components=route:Annankatu|administrative_area:Helsinki|country:Finland',
+					},
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_place_id',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{
+						key: 'place_id',
+						value: 'ChIJd8BlQ2BZwokRAFUEcm_qrcA',
+					},
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_invalid_place',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{
+						key: 'place_id',
+						value: '1234',
+					},
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_zero_results',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+				query: [
+					{ key: 'latlng', value: '0,0' },
+					,
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_geocode_invalid_request',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/geocode/json',
+			}),
 		}),
 	},
 ];

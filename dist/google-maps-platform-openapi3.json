@@ -93,10 +93,10 @@
                   "Cell Towers": {
                     "value": {
                       "location": {
-                        "lat": 37.780206299999996,
-                        "lng": -122.41686869999998
+                        "lat": 37.7802088,
+                        "lng": -122.4166612
                       },
-                      "accuracy": 1480
+                      "accuracy": 1479
                     }
                   },
                   "IP Only": {
@@ -312,9 +312,9 @@
           }
         ],
         "tags": [
-          "Geocode API"
+          "Geocoding API"
         ],
-        "description": "One of `path` or `locations` is **required.**",
+        "description": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.\n\n**Geocoding** is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.\n\n**Reverse geocoding** is the process of converting geographic coordinates into a human-readable address.\n\nYou can also use the Geocoding API to find the address for a given place ID.\n\nTo see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned location_type field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.",
         "parameters": [
           {
             "$ref": "#/components/parameters/language"
@@ -325,7 +325,7 @@
           {
             "name": "address",
             "example": "1600 Amphitheatre+Parkway, Mountain View, CA",
-            "description": "The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.\n\nhttps://developers.google.com/maps/faq#geocoder_queryformat",
+            "description": "The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):\n\n`address=24%20Sussex%20Drive%20Ottawa%20ON`\n\nFormat plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):\n- global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).\n- compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).",
             "in": "query",
             "schema": {
               "type": "string"
@@ -342,13 +342,22 @@
               "administrative_area_level_1:CA",
               "country:US"
             ],
-            "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.\n\nhttps://developers.google.com/maps/documentation/geocoding/intro#ComponentFiltering",
+            "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.\n\nhttps://developers.google.com/maps/documentation/geocoding/overview#component-filtering",
             "in": "query",
             "schema": {
               "items": {
                 "type": "string"
               },
               "type": "array"
+            }
+          },
+          {
+            "name": "latlng",
+            "example": "40,-110",
+            "description": "The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -366,65 +375,1939 @@
         ],
         "responses": {
           "200": {
-            "description": "Elevation Response",
+            "description": "Gecoding Response",
             "content": {
               "application/json": {
                 "examples": {
-                  "status = OK": {
+                  "components_filtering_response": {
                     "value": {
                       "results": [
                         {
-                          "elevation": 1643.880493164062,
-                          "location": {
-                            "lat": 35,
-                            "lng": -110
+                          "address_components": [
+                            {
+                              "long_name": "High Street",
+                              "short_name": "High St",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Hastings",
+                              "short_name": "Hastings",
+                              "types": [
+                                "postal_town"
+                              ]
+                            },
+                            {
+                              "long_name": "East Sussex",
+                              "short_name": "East Sussex",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "England",
+                              "short_name": "England",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United Kingdom",
+                              "short_name": "GB",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "TN34",
+                              "short_name": "TN34",
+                              "types": [
+                                "postal_code",
+                                "postal_code_prefix"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "High St, Hastings TN34, UK",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 50.86038139999999,
+                                "lng": 0.596206
+                              },
+                              "southwest": {
+                                "lat": 50.8558471,
+                                "lng": 0.5904904
+                              }
+                            },
+                            "location": {
+                              "lat": 50.8584228,
+                              "lng": 0.5926005999999999
+                            },
+                            "location_type": "GEOMETRIC_CENTER",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 50.86038139999999,
+                                "lng": 0.596206
+                              },
+                              "southwest": {
+                                "lat": 50.8558471,
+                                "lng": 0.5904904
+                              }
+                            }
                           },
-                          "resolution": 9.543951988220215
-                        },
-                        {
-                          "elevation": 1748.557983398438,
-                          "location": {
-                            "lat": 31,
-                            "lng": -110
-                          },
-                          "resolution": 152.7032318115234
+                          "place_id": "ChIJ-Ws929sa30cRKgsMNVkPyws",
+                          "types": [
+                            "route"
+                          ]
                         }
                       ],
                       "status": "OK"
                     }
+                  },
+                  "components_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Santa Cruz de Tenerife",
+                              "short_name": "Santa Cruz de Tenerife",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Santa Cruz de Tenerife",
+                              "short_name": "TF",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Canary Islands",
+                              "short_name": "CN",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Spain",
+                              "short_name": "ES",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Santa Cruz de Tenerife, Spain",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 28.487616,
+                                "lng": -16.2356646
+                              },
+                              "southwest": {
+                                "lat": 28.4280248,
+                                "lng": -16.3370045
+                              }
+                            },
+                            "location": {
+                              "lat": 28.4636296,
+                              "lng": -16.2518467
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 28.487616,
+                                "lng": -16.2356646
+                              },
+                              "southwest": {
+                                "lat": 28.4280248,
+                                "lng": -16.3370045
+                              }
+                            }
+                          },
+                          "place_id": "ChIJcUElzOzMQQwRLuV30nMUEUM",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "components_zero_results_fixed_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Helsinki",
+                              "short_name": "HKI",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Finland",
+                              "short_name": "FI",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Helsinki, Finland",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 60.2978389,
+                                "lng": 25.2544849
+                              },
+                              "southwest": {
+                                "lat": 59.9224887,
+                                "lng": 24.7828758
+                              }
+                            },
+                            "location": {
+                              "lat": 60.16985569999999,
+                              "lng": 24.9383791
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 60.2978389,
+                                "lng": 25.2544849
+                              },
+                              "southwest": {
+                                "lat": 59.9224887,
+                                "lng": 24.7828758
+                              }
+                            }
+                          },
+                          "place_id": "ChIJkQYhlscLkkYRY_fiO4S9Ts0",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "components_zero_results_response": {
+                    "value": {
+                      "results": [],
+                      "status": "ZERO_RESULTS"
+                    }
+                  },
+                  "invalid_place": {
+                    "value": {
+                      "error_message": "Invalid request. Invalid 'place_id' parameter.",
+                      "results": [],
+                      "status": "INVALID_REQUEST"
+                    }
+                  },
+                  "invalid_request": {
+                    "value": {
+                      "error_message": "Invalid request. Missing the 'address', 'components', 'latlng' or 'place_id' parameter.",
+                      "results": [],
+                      "status": "INVALID_REQUEST"
+                    }
+                  },
+                  "place_id_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "277",
+                              "short_name": "277",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "277 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7142205,
+                              "lng": -73.9612903
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7155988302915,
+                                "lng": -73.9600127697085
+                              },
+                              "southwest": {
+                                "lat": 40.71290086970851,
+                                "lng": -73.9627107302915
+                              }
+                            }
+                          },
+                          "place_id": "ChIJd8BlQ2BZwokRAFUEcm_qrcA",
+                          "plus_code": {
+                            "compound_code": "P27Q+MF Brooklyn, NY",
+                            "global_code": "87G8P27Q+MF"
+                          },
+                          "types": [
+                            "street_address"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "1600",
+                              "short_name": "1600",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Amphitheatre Parkway",
+                              "short_name": "Amphitheatre Pkwy",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Mountain View",
+                              "short_name": "Mountain View",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Santa Clara County",
+                              "short_name": "Santa Clara County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "California",
+                              "short_name": "CA",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "94043",
+                              "short_name": "94043",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+                          "geometry": {
+                            "location": {
+                              "lat": 37.4222933,
+                              "lng": -122.0841442
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 37.4236422802915,
+                                "lng": -122.0827952197085
+                              },
+                              "southwest": {
+                                "lat": 37.4209443197085,
+                                "lng": -122.0854931802915
+                              }
+                            }
+                          },
+                          "place_id": "ChIJVYBZP-Oxj4ARls-qJ_G3tgM",
+                          "plus_code": {
+                            "compound_code": "CWC8+W8 Mountain View, CA, USA",
+                            "global_code": "849VCWC8+W8"
+                          },
+                          "types": [
+                            "street_address"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "reverse_filtering_response": {
+                    "value": {
+                      "plus_code": {
+                        "compound_code": "P27Q+MC New York, NY, USA",
+                        "global_code": "87G8P27Q+MC"
+                      },
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "277",
+                              "short_name": "277",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "277 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7142205,
+                              "lng": -73.9612903
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.71556948029149,
+                                "lng": -73.95994131970849
+                              },
+                              "southwest": {
+                                "lat": 40.7128715197085,
+                                "lng": -73.9626392802915
+                              }
+                            }
+                          },
+                          "place_id": "ChIJd8BlQ2BZwokRAFUEcm_qrcA",
+                          "plus_code": {
+                            "compound_code": "P27Q+MF Brooklyn, NY, USA",
+                            "global_code": "87G8P27Q+MF"
+                          },
+                          "types": [
+                            "street_address"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "reverse_response": {
+                    "value": {
+                      "plus_code": {
+                        "compound_code": "P27Q+MC New York, NY, USA",
+                        "global_code": "87G8P27Q+MC"
+                      },
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "277",
+                              "short_name": "277",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "277 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7142205,
+                              "lng": -73.9612903
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.71556948029149,
+                                "lng": -73.95994131970849
+                              },
+                              "southwest": {
+                                "lat": 40.7128715197085,
+                                "lng": -73.9626392802915
+                              }
+                            }
+                          },
+                          "place_id": "ChIJd8BlQ2BZwokRAFUEcm_qrcA",
+                          "plus_code": {
+                            "compound_code": "P27Q+MF Brooklyn, NY, USA",
+                            "global_code": "87G8P27Q+MF"
+                          },
+                          "types": [
+                            "street_address"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "279",
+                              "short_name": "279",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            },
+                            {
+                              "long_name": "4203",
+                              "short_name": "4203",
+                              "types": [
+                                "postal_code_suffix"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "279 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.7142628,
+                                "lng": -73.9612131
+                              },
+                              "southwest": {
+                                "lat": 40.7141534,
+                                "lng": -73.9613792
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7142015,
+                              "lng": -73.96130769999999
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7155570802915,
+                                "lng": -73.95994716970849
+                              },
+                              "southwest": {
+                                "lat": 40.7128591197085,
+                                "lng": -73.96264513029149
+                              }
+                            }
+                          },
+                          "place_id": "ChIJRYYERGBZwokRAM4n1GlcYX4",
+                          "types": [
+                            "premise"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "277",
+                              "short_name": "277",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "277 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "location": {
+                              "lat": 40.7142205,
+                              "lng": -73.9612903
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.71556948029149,
+                                "lng": -73.95994131970849
+                              },
+                              "southwest": {
+                                "lat": 40.7128715197085,
+                                "lng": -73.9626392802915
+                              }
+                            }
+                          },
+                          "place_id": "ChIJF0hlQ2BZwokRsrY2RAlFbAE",
+                          "plus_code": {
+                            "compound_code": "P27Q+MF Brooklyn, NY, USA",
+                            "global_code": "87G8P27Q+MF"
+                          },
+                          "types": [
+                            "establishment",
+                            "point_of_interest"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "291-275",
+                              "short_name": "291-275",
+                              "types": [
+                                "street_number"
+                              ]
+                            },
+                            {
+                              "long_name": "Bedford Avenue",
+                              "short_name": "Bedford Ave",
+                              "types": [
+                                "route"
+                              ]
+                            },
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "291-275 Bedford Ave, Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.7145065,
+                                "lng": -73.9612923
+                              },
+                              "southwest": {
+                                "lat": 40.7139055,
+                                "lng": -73.96168349999999
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7142045,
+                              "lng": -73.9614845
+                            },
+                            "location_type": "GEOMETRIC_CENTER",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7155549802915,
+                                "lng": -73.96013891970848
+                              },
+                              "southwest": {
+                                "lat": 40.7128570197085,
+                                "lng": -73.96283688029149
+                              }
+                            }
+                          },
+                          "place_id": "ChIJ8ThWRGBZwokR3E1zUisk3LU",
+                          "types": [
+                            "route"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "South Williamsburg",
+                              "short_name": "South Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "South Williamsburg, Brooklyn, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.7167119,
+                                "lng": -73.9420904
+                              },
+                              "southwest": {
+                                "lat": 40.6984866,
+                                "lng": -73.9699432
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7043921,
+                              "lng": -73.9565551
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7167119,
+                                "lng": -73.9420904
+                              },
+                              "southwest": {
+                                "lat": 40.6984866,
+                                "lng": -73.9699432
+                              }
+                            }
+                          },
+                          "place_id": "ChIJR3_ODdlbwokRYtN19kNtcuk",
+                          "types": [
+                            "neighborhood",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "11211",
+                              "short_name": "11211",
+                              "types": [
+                                "postal_code"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "New York",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Brooklyn, NY 11211, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.7280089,
+                                "lng": -73.9207299
+                              },
+                              "southwest": {
+                                "lat": 40.7008331,
+                                "lng": -73.9644697
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7093358,
+                              "lng": -73.9565551
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7280089,
+                                "lng": -73.9207299
+                              },
+                              "southwest": {
+                                "lat": 40.7008331,
+                                "lng": -73.9644697
+                              }
+                            }
+                          },
+                          "place_id": "ChIJvbEjlVdZwokR4KapM3WCFRw",
+                          "types": [
+                            "postal_code"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Williamsburg",
+                              "short_name": "Williamsburg",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Williamsburg, Brooklyn, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.7251773,
+                                "lng": -73.936498
+                              },
+                              "southwest": {
+                                "lat": 40.6979329,
+                                "lng": -73.96984499999999
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7081156,
+                              "lng": -73.9570696
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.7251773,
+                                "lng": -73.936498
+                              },
+                              "southwest": {
+                                "lat": 40.6979329,
+                                "lng": -73.96984499999999
+                              }
+                            }
+                          },
+                          "place_id": "ChIJQSrBBv1bwokRbNfFHCnyeYI",
+                          "types": [
+                            "neighborhood",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Brooklyn, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.739446,
+                                "lng": -73.8333651
+                              },
+                              "southwest": {
+                                "lat": 40.551042,
+                                "lng": -74.05663
+                              }
+                            },
+                            "location": {
+                              "lat": 40.6781784,
+                              "lng": -73.9441579
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.739446,
+                                "lng": -73.8333651
+                              },
+                              "southwest": {
+                                "lat": 40.551042,
+                                "lng": -74.05663
+                              }
+                            }
+                          },
+                          "place_id": "ChIJCSF8lBZEwokRhngABHRcdoI",
+                          "types": [
+                            "political",
+                            "sublocality",
+                            "sublocality_level_1"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Kings County",
+                              "short_name": "Kings County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Brooklyn",
+                              "short_name": "Brooklyn",
+                              "types": [
+                                "political",
+                                "sublocality",
+                                "sublocality_level_1"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Kings County, Brooklyn, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.739446,
+                                "lng": -73.8333651
+                              },
+                              "southwest": {
+                                "lat": 40.551042,
+                                "lng": -74.05663
+                              }
+                            },
+                            "location": {
+                              "lat": 40.6528762,
+                              "lng": -73.95949399999999
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.739446,
+                                "lng": -73.8333651
+                              },
+                              "southwest": {
+                                "lat": 40.551042,
+                                "lng": -74.05663
+                              }
+                            }
+                          },
+                          "place_id": "ChIJOwE7_GTtwokRs75rhW4_I6M",
+                          "types": [
+                            "administrative_area_level_2",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "New York",
+                              "short_name": "New York",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "New York, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.9175771,
+                                "lng": -73.70027209999999
+                              },
+                              "southwest": {
+                                "lat": 40.4773991,
+                                "lng": -74.25908989999999
+                              }
+                            },
+                            "location": {
+                              "lat": 40.7127753,
+                              "lng": -74.0059728
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.9175771,
+                                "lng": -73.70027209999999
+                              },
+                              "southwest": {
+                                "lat": 40.4773991,
+                                "lng": -74.25908989999999
+                              }
+                            }
+                          },
+                          "place_id": "ChIJOwg_06VPwokRYv534QaPC8g",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Long Island",
+                              "short_name": "Long Island",
+                              "types": [
+                                "establishment",
+                                "natural_feature"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Long Island, New York, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 41.1612401,
+                                "lng": -71.85620109999999
+                              },
+                              "southwest": {
+                                "lat": 40.5429789,
+                                "lng": -74.0419497
+                              }
+                            },
+                            "location": {
+                              "lat": 40.789142,
+                              "lng": -73.13496099999999
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 41.1612401,
+                                "lng": -71.85620109999999
+                              },
+                              "southwest": {
+                                "lat": 40.5429789,
+                                "lng": -74.0419497
+                              }
+                            }
+                          },
+                          "place_id": "ChIJy6Xu4VRE6IkRGA2UhmH59x0",
+                          "types": [
+                            "establishment",
+                            "natural_feature"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "New York, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 45.015861,
+                                "lng": -71.777491
+                              },
+                              "southwest": {
+                                "lat": 40.4773991,
+                                "lng": -79.7625901
+                              }
+                            },
+                            "location": {
+                              "lat": 43.2994285,
+                              "lng": -74.21793260000001
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 45.015861,
+                                "lng": -71.777491
+                              },
+                              "southwest": {
+                                "lat": 40.4773991,
+                                "lng": -79.7625901
+                              }
+                            }
+                          },
+                          "place_id": "ChIJqaUj8fBLzEwRZ5UY3sHGz90",
+                          "types": [
+                            "administrative_area_level_1",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "United States",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 71.5388001,
+                                "lng": -66.885417
+                              },
+                              "southwest": {
+                                "lat": 18.7763,
+                                "lng": 170.5957
+                              }
+                            },
+                            "location": {
+                              "lat": 37.09024,
+                              "lng": -95.712891
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 71.5388001,
+                                "lng": -66.885417
+                              },
+                              "southwest": {
+                                "lat": 18.7763,
+                                "lng": 170.5957
+                              }
+                            }
+                          },
+                          "place_id": "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                          "types": [
+                            "country",
+                            "political"
+                          ]
+                        },
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "P27Q+MC",
+                              "short_name": "P27Q+MC",
+                              "types": [
+                                "plus_code"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "New York",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New York",
+                              "short_name": "NY",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "P27Q+MC New York, NY, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 40.71425,
+                                "lng": -73.96137499999999
+                              },
+                              "southwest": {
+                                "lat": 40.714125,
+                                "lng": -73.9615
+                              }
+                            },
+                            "location": {
+                              "lat": 40.714224,
+                              "lng": -73.961452
+                            },
+                            "location_type": "ROOFTOP",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 40.71553648029149,
+                                "lng": -73.96008851970849
+                              },
+                              "southwest": {
+                                "lat": 40.71283851970849,
+                                "lng": -73.96278648029151
+                              }
+                            }
+                          },
+                          "place_id": "GhIJWAIpsWtbREARHyv4bYh9UsA",
+                          "plus_code": {
+                            "compound_code": "P27Q+MC New York, NY, USA",
+                            "global_code": "87G8P27Q+MC"
+                          },
+                          "types": [
+                            "plus_code"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "toledo_region_es_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Toledo",
+                              "short_name": "Toledo",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Toledo",
+                              "short_name": "TO",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Castile-La Mancha",
+                              "short_name": "CM",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Spain",
+                              "short_name": "ES",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Toledo, Spain",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 39.88605099999999,
+                                "lng": -3.9192423
+                              },
+                              "southwest": {
+                                "lat": 39.8383676,
+                                "lng": -4.0796176
+                              }
+                            },
+                            "location": {
+                              "lat": 39.8628316,
+                              "lng": -4.027323099999999
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 39.88605099999999,
+                                "lng": -3.9192423
+                              },
+                              "southwest": {
+                                "lat": 39.8383676,
+                                "lng": -4.0796176
+                              }
+                            }
+                          },
+                          "place_id": "ChIJ8f21C60Lag0R_q11auhbf8Y",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "toledo_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Toledo",
+                              "short_name": "Toledo",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Lucas County",
+                              "short_name": "Lucas County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Ohio",
+                              "short_name": "OH",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Toledo, OH, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 41.732844,
+                                "lng": -83.454229
+                              },
+                              "southwest": {
+                                "lat": 41.580266,
+                                "lng": -83.6942832
+                              }
+                            },
+                            "location": {
+                              "lat": 41.6528052,
+                              "lng": -83.5378674
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 41.732844,
+                                "lng": -83.454229
+                              },
+                              "southwest": {
+                                "lat": 41.580266,
+                                "lng": -83.6942832
+                              }
+                            }
+                          },
+                          "place_id": "ChIJeU4e_C2HO4gRRcM6RZ_IPHw",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "winnetka_bounds_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Winnetka",
+                              "short_name": "Winnetka",
+                              "types": [
+                                "neighborhood",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Los Angeles",
+                              "short_name": "Los Angeles",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Los Angeles County",
+                              "short_name": "Los Angeles County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "California",
+                              "short_name": "CA",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Winnetka, Los Angeles, CA, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 34.2355209,
+                                "lng": -118.5534191
+                              },
+                              "southwest": {
+                                "lat": 34.1854649,
+                                "lng": -118.588556
+                              }
+                            },
+                            "location": {
+                              "lat": 34.2048586,
+                              "lng": -118.5739621
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 34.2355209,
+                                "lng": -118.5534191
+                              },
+                              "southwest": {
+                                "lat": 34.1854649,
+                                "lng": -118.588556
+                              }
+                            }
+                          },
+                          "place_id": "ChIJ0fd4S_KbwoAR2hRDrsr3HmQ",
+                          "types": [
+                            "neighborhood",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "winnetka_response": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "Winnetka",
+                              "short_name": "Winnetka",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "New Trier Township",
+                              "short_name": "New Trier Township",
+                              "types": [
+                                "administrative_area_level_3",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Cook County",
+                              "short_name": "Cook County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Illinois",
+                              "short_name": "IL",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Winnetka, IL, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 42.1282269,
+                                "lng": -87.71080979999999
+                              },
+                              "southwest": {
+                                "lat": 42.0886089,
+                                "lng": -87.7708629
+                              }
+                            },
+                            "location": {
+                              "lat": 42.10808340000001,
+                              "lng": -87.735895
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 42.1282269,
+                                "lng": -87.71080979999999
+                              },
+                              "southwest": {
+                                "lat": 42.0886089,
+                                "lng": -87.7708629
+                              }
+                            }
+                          },
+                          "place_id": "ChIJW8Va5TnED4gRY91Ng47qy3Q",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "zero_results": {
+                    "value": {
+                      "results": [],
+                      "status": "ZERO_RESULTS"
+                    }
                   }
                 },
                 "schema": {
-                  "type": "object",
-                  "required": [
-                    "status"
-                  ],
-                  "properties": {
-                    "error_message": {
-                      "type": "string",
-                      "example": "Invalid request. Invalid 'locations' parameter."
-                    },
-                    "status": {
-                      "$ref": "#/components/schemas/ElevationStatus"
-                    },
-                    "results": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "elevation": {
-                            "type": "number"
-                          },
-                          "resolution": {
-                            "type": "number"
-                          },
-                          "location": {
-                            "$ref": "#/components/schemas/LatLngLiteral"
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/GeocodingResponse"
                 }
               }
             }
@@ -775,12 +2658,18 @@
           "INVALID_REQUEST"
         ]
       },
-      "GeocodeStatus": {
+      "GeocodingStatus": {
         "type": "string",
-        "description": "Status codes returned by service.",
+        "title": "Geocoding Status",
+        "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
-          "INVALID_REQUEST"
+          "INVALID_REQUEST",
+          "OVER_DAILY_LIMIT",
+          "OVER_QUERY_LIMIT",
+          "REQUEST_DENIED",
+          "UNKNOWN_ERROR",
+          "ZERO_RESULTS"
         ]
       },
       "LatLngArrayString": {
@@ -811,6 +2700,124 @@
           "lng": {
             "type": "number",
             "description": "Longitude in decimal degrees"
+          }
+        }
+      },
+      "AddressComponents": {
+        "type": "object",
+        "properties": {
+          "long_name": {
+            "type": "string",
+            "description": "The full text description or name of the address component as returned by the Geocoding."
+          },
+          "short_name": {
+            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of `Alaska` and a short_name of `AK` using the 2-letter postal abbreviation.",
+            "type": "string"
+          },
+          "types": {
+            "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/places/web-service/supported_types).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Viewport": {
+        "type": "object",
+        "properties": {
+          "northeast": {
+            "$ref": "#LatLngLiteral"
+          },
+          "southwest": {
+            "$ref": "#LatLngLiteral"
+          }
+        }
+      },
+      "Geometry": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "$ref": "#LatLngLiteral"
+          },
+          "location_type": {
+            "description": "Stores additional data about the specified location. The following values are currently supported:\n\n- \"ROOFTOP\" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.\n- \"RANGE_INTERPOLATED\" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.\n- \"GEOMETRIC_CENTER\" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).\n- \"APPROXIMATE\" indicates that the returned result is approximate.\n",
+            "type": "string"
+          },
+          "viewport": {
+            "$ref": "#Viewport"
+          }
+        }
+      },
+      "PlusCode": {
+        "type": "object",
+        "description": "An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).",
+        "externalDocs": {
+          "url": "https://plus.codes/",
+          "description": "Site describing Plus Codes."
+        },
+        "properties": {
+          "compound_code": {
+            "description": "The `compound_code` is a 6 character or longer local code with an explicit location (`CWC8+R9, Mountain View, CA, USA`).",
+            "type": "string"
+          },
+          "global_code": {
+            "description": "The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).",
+            "type": "string"
+          }
+        }
+      },
+      "GeocodingResult": {
+        "type": "object",
+        "title": "Geocoding Result",
+        "properties": {
+          "address_components": {
+            "description": "An array containing the separate components applicable to this address.",
+            "type": "array",
+            "items": {
+              "$ref": "#AddressComponents"
+            }
+          },
+          "formatted_address": {
+            "description": "The human-readable address of this location.",
+            "type": "string"
+          },
+          "geometry": {
+            "$ref": "#Geometry"
+          },
+          "place_id": {
+            "description": "A unique identifier that can be used with other Google APIs. For example, you can use the `place_id` in a Places API request to get details of a local business, such as phone number, opening hours, user reviews, and more. See the [place ID overview](https://developers.google.com/places/place-id).",
+            "type": "string"
+          },
+          "plus_code": {
+            "$ref": "#PlusCode"
+          },
+          "types": {
+            "description": "The `types[]` array indicates the type of the returned result. This array contains a set of zero or more tags identifying the type of feature returned in the result. For example, a geocode of \"Chicago\" returns \"locality\" which indicates that \"Chicago\" is a city, and also returns \"political\" which indicates it is a political entity.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "GeocodingResponse": {
+        "type": "object",
+        "title": "Geocoding Response Body",
+        "required": [
+          "status",
+          "results"
+        ],
+        "properties": {
+          "results": {
+            "description": "The",
+            "type": "array",
+            "items": {
+              "$ref": "#GeocodingResult"
+            }
+          },
+          "status": {
+            "$ref": "#GeocodingStatus"
           }
         }
       },
@@ -1098,7 +3105,7 @@
       }
     },
     {
-      "name": "Geocode API",
+      "name": "Geocoding API",
       "description": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
       "externalDocs": {
         "url": "https://developers.google.com/maps/documentation/geocoding/overview"

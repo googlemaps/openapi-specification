@@ -14,88 +14,91 @@
  * limitations under the License.
  */
 
-import { REQUESTS } from "./requests";
-import { SnippetRequest } from "./types";
-import { createWriteStream } from "fs";
-import { convert as generateSnippetCB } from "postman-code-generators";
-import { options } from "yargs";
-import { promisify } from "util";
-import tar from "tar-stream";
+import { REQUESTS } from './requests';
+import { SnippetRequest } from './types';
+import { createWriteStream } from 'fs';
+import { convert as generateSnippetCB } from 'postman-code-generators';
+import { options } from 'yargs';
+import { promisify } from 'util';
+import tar from 'tar-stream';
 
 enum CommentForm {
-  nodejs = "//",
-  go = "//",
-  curl = "#",
-  python = "#",
-  java = "//",
-  ruby = "#",
+	nodejs = '//',
+	go = '//',
+	curl = '#',
+	python = '#',
+	java = '//',
+	ruby = '#',
 }
 
 enum Extensions {
-  nodejs = "js",
-  go = "go",
-  curl = "sh",
-  python = "py",
-  java = "java",
-  ruby = "rb",
+	nodejs = 'js',
+	go = 'go',
+	curl = 'sh',
+	python = 'py',
+	java = 'java',
+	ruby = 'rb',
 }
 
 const SNIPPET_LANG_VARIANTS = [
-  ["nodejs", "axios"],
-  ["curl", "curl"],
-  ["go", "native"],
-  ["python", "requests"],
-  ["java", "okhttp"],
-  ["ruby", "net::http"],
+	['nodejs', 'axios'],
+	['curl', 'curl'],
+	['go', 'native'],
+	['python', 'requests'],
+	['java', 'okhttp'],
+	['ruby', 'net::http'],
 ];
+
+const GENERATOR_OPTIONS = {
+	nodejs: {},
+	go: {},
+	curl: { mulitLine: true, longFormat: false },
+	python: {indentCount: 4},
+	java: {},
+	ruby: {},
+};
 
 const generateSnippet = promisify(generateSnippetCB);
 
 const argv = options({
-  output: {
-    type: "string",
-    demandOption: true,
-  },
+	output: {
+		type: 'string',
+		demandOption: true,
+	},
 }).argv;
 
-const regionTagComment = (
-  type: "START" | "END",
-  regionTag: string,
-  lang: string
-) => {
-  return `${CommentForm[lang]} [${type} ${regionTag}]`;
+const regionTagComment = (type: 'START' | 'END', regionTag: string, lang: string) => {
+	return `${CommentForm[lang]} [${type} ${regionTag}]`;
 };
 
 const main = async (argv: any) => {
-  const pack = tar.pack();
+	const pack = tar.pack();
 
-  await Promise.all(
-    SNIPPET_LANG_VARIANTS.map(([lang, variant]) =>
-      REQUESTS.map(async (snippetRequest: SnippetRequest) => {
-        const { request, regionTag } = snippetRequest;
-        const snippet = [
-          regionTagComment("START", regionTag, lang),
-          await generateSnippet(lang, variant, request, {
-            indentCount: 4,
-            indentType: "Space",
-            trimRequestBody: true,
-            followRedirect: true,
-          }),
-          regionTagComment("END", regionTag, lang),
-        ].join("\n");
+	await Promise.all(
+		SNIPPET_LANG_VARIANTS.map(([lang, variant]) =>
+			REQUESTS.map(async (snippetRequest: SnippetRequest) => {
+				const { request, regionTag } = snippetRequest;
+				const snippet = [
+					regionTagComment('START', regionTag, lang),
+					await generateSnippet(lang, variant, request, {
+						trimRequestBody: true,
+						...GENERATOR_OPTIONS[lang],
+					}),
+					regionTagComment('END', regionTag, lang),
+				].join('\n');
 
-        pack.entry(
-          {
-            name: `snippets/${regionTag}/${regionTag}.${Extensions[lang]}`,
-          },
-          snippet
-        );
-      })
-    ).flat()
-  );
+				pack.entry(
+					{
+						name: `snippets/${regionTag}/${regionTag}.${Extensions[lang]}`,
+					},
+					snippet
+				);
+			})
+		).flat()
+	);
 
-  pack.finalize();
-  pack.pipe(createWriteStream(argv.output));
+	pack.finalize();
+	pack.pipe(createWriteStream(argv.output));
 };
 
 main(argv);

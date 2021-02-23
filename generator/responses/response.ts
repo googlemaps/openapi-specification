@@ -84,12 +84,12 @@ const extractRequests = async (
 
 const executeRequest = async (request: string, captureError: boolean = false): Promise<string> => {
   return new Promise((resolve, reject) => {
+    
     exec(request, function (error, stdout, stderr) {
       // request failed with non 200 error
       if (error) {
         reject(stderr);
       }
-
       const response = JSON.parse(stdout) as any;
 
       // might be a 200 but have an error body

@@ -1,0 +1,44 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_pluscode] -->
+<h3 class="schema-object" id="PlusCode">PlusCode</h3>
+<p>
+  An encoded location reference, derived from latitude and longitude
+  coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a
+  degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as
+  a replacement for street addresses in places where they do not exist (where
+  buildings are not numbered or streets are not named).
+</p>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>compound_code</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        The <code>compound_code</code> is a 6 character or longer local code
+        with an explicit location (<code>CWC8+R9, Mountain View, CA, USA</code
+        >).
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>global_code</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        The <code>global_code</code> is a 4 character area code and 6 character
+        or longer local code (<code>849VCWC8+R9</code>).
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_pluscode] -->

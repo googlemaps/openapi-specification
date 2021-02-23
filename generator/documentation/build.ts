@@ -54,6 +54,8 @@ export const build = (
 		throw 'cannot handle ref here';
 	}
 
+	console.log(`Generating documentation for ${key}`)
+
 	const title = schema.title == undefined ? key : schema.title;
 	const nodes: any = [];
 
@@ -131,9 +133,9 @@ const propertyToRow = (
 		row.push(tableCell(refPropertyDesciption(refLink, property['description'])));
 	} else {
 		if (property.type === 'array') {
-			if (isRef(property.items)) {
+			if (isRef(property.items)) {				
 				const name = property.items.$ref.split('/').pop()!;
-				const refLink = link(`#${name}`, name, [text(name)]);
+				const refLink = link(`#${name}`, name, [text(name)]);				
 				row.push(tableCell([text('Array&lt;'), refLink, text('&gt;')]));
 				row.push(tableCell(refPropertyDesciption(refLink, property.description)));
 			} else if (property.items.type === 'object') {
@@ -141,11 +143,11 @@ const propertyToRow = (
 			} else {
 				const name = property.items.type;
 				row.push(tableCell([text(`Array&lt;${name}&gt;`)]));
-				row.push(tableCell(nonRefPropertyDescription(property)));
+				row.push(tableCell(nonRefPropertyDescription(property, key)));
 			}
 		} else {
 			row.push(tableCell(text(property.type!)));
-			row.push(tableCell(nonRefPropertyDescription(property)));
+			row.push(tableCell(nonRefPropertyDescription(property, key)));
 		}
 	}
 
@@ -160,10 +162,20 @@ const refPropertyDesciption = (refLink: any, description?: string) => {
 	return [text('See '), refLink, text(' for more information.')];
 };
 
-const nonRefPropertyDescription = (property: OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject) => {
+const nonRefPropertyDescription = (property: OpenAPIV3.ArraySchemaObject | OpenAPIV3.NonArraySchemaObject, key: string) => {
 	const nodes: Node[] = [];
 
-	nodes.push(fromMarkdown(property.description!));
+	if (!property.description) {
+		throw `
+		
+		
+		Please add a description for '${key}'.
+		
+		
+		`
+	}
+
+	nodes.push(fromMarkdown(property.description));
 
 	if (property.enum) {
 		if (property.description) {

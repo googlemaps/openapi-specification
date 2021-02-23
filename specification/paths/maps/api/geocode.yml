@@ -15,18 +15,30 @@
 servers:
   - url: https://maps.googleapis.com
 tags:
-  - Geocode API
+  - Geocoding API
 description: |-
-  One of `path` or `locations` is **required.**
+  The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.
+  
+  **Geocoding** is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.
+
+  **Reverse geocoding** is the process of converting geographic coordinates into a human-readable address.
+
+  You can also use the Geocoding API to find the address for a given place ID.
+
+  To see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned location_type field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.
 parameters:
 - "$ref": "../../../parameters/language.yml"
 - "$ref": "../../../parameters/region.yml"
 - name: address
   example: 1600 Amphitheatre+Parkway, Mountain View, CA
   description: |-
-    The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
+    The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
 
-    https://developers.google.com/maps/faq#geocoder_queryformat
+    `address=24%20Sussex%20Drive%20Ottawa%20ON`
+
+    Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
+    - global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
+    - compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
   in: query  
   schema:
     type: string
@@ -44,12 +56,19 @@ parameters:
   description: |-
     A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
 
-    https://developers.google.com/maps/documentation/geocoding/intro#ComponentFiltering
+    https://developers.google.com/maps/documentation/geocoding/overview#component-filtering
   in: query
   schema:
     items:
       type: string
     type: array
+- name: latlng
+  example: 40,-110
+  description: |-
+    The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
+  in: query  
+  schema:
+    type: string
 - name: bounds
   description: |-
     The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
@@ -62,42 +81,54 @@ parameters:
   in: query
 responses:
   "200":
-    description: "Elevation Response"
+    description: "Gecoding Response"
     content:
       application/json:
         examples:
-          status = OK:
+          components_filtering_response:
             value: 
-              results:
-              - elevation: 1643.880493164062
-                location:
-                  lat: 35
-                  lng: -110
-                resolution: 9.543951988220215
-              - elevation: 1748.557983398438
-                location:
-                  lat: 31
-                  lng: -110
-                resolution: 152.7032318115234
-              status: OK
+              $ref: ../../../responses/maps_http_geocode_components_filtering_response.yml
+          components_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_components_response.yml
+          components_zero_results_fixed_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_components_zero_results_fixed_response.yml
+          components_zero_results_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_components_zero_results_response.yml
+          invalid_place:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_invalid_place_response.yml  
+          invalid_request:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_invalid_request_response.yml  
+          place_id_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_place_id_response.yml
+          response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_response.yml
+          reverse_filtering_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_reverse_filtering_response.yml
+          reverse_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_reverse_response.yml
+          toledo_region_es_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_toledo_region_es_response.yml
+          toledo_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_toledo_response.yml
+          winnetka_bounds_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_winnetka_bounds_response.yml
+          winnetka_response:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_winnetka_response.yml
+          zero_results:
+            value: 
+              $ref: ../../../responses/maps_http_geocode_zero_results_response.yml            
         schema:
-          type: object
-          required:
-            - status
-          properties:
-            error_message: 
-              type: string
-              example: "Invalid request. Invalid 'locations' parameter."
-            status:
-              $ref: "../../../schemas/ElevationStatus.yml"
-            results:
-              type: array
-              items:
-                type: object
-                properties:
-                  elevation:
-                    type: number
-                  resolution:
-                    type: number
-                  location:
-                    $ref: "../../../schemas/LatLngLiteral.yml"
+          $ref: "../../../schemas/GeocodingResponse.yml"

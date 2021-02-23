@@ -1,0 +1,75 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_geocode_components_filtering_response]
+{
+  "results":
+    [
+      {
+        "address_components":
+          [
+            {
+              "long_name": "High Street",
+              "short_name": "High St",
+              "types": ["route"],
+            },
+            {
+              "long_name": "Hastings",
+              "short_name": "Hastings",
+              "types": ["postal_town"],
+            },
+            {
+              "long_name": "East Sussex",
+              "short_name": "East Sussex",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
+              "long_name": "England",
+              "short_name": "England",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "United Kingdom",
+              "short_name": "GB",
+              "types": ["country", "political"],
+            },
+            {
+              "long_name": "TN34",
+              "short_name": "TN34",
+              "types": ["postal_code", "postal_code_prefix"],
+            },
+          ],
+        "formatted_address": "High St, Hastings TN34, UK",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 50.86038139999999, "lng": 0.596206 },
+                "southwest": { "lat": 50.8558471, "lng": 0.5904904 },
+              },
+            "location": { "lat": 50.8584228, "lng": 0.5926005999999999 },
+            "location_type": "GEOMETRIC_CENTER",
+            "viewport":
+              {
+                "northeast": { "lat": 50.86038139999999, "lng": 0.596206 },
+                "southwest": { "lat": 50.8558471, "lng": 0.5904904 },
+              },
+          },
+        "place_id": "ChIJ-Ws929sa30cRKgsMNVkPyws",
+        "types": ["route"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_geocode_components_filtering_response]

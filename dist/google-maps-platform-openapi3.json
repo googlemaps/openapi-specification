@@ -2817,6 +2817,7 @@
         }
       },
       "AddressComponents": {
+        "title": "Address Components",
         "type": "object",
         "properties": {
           "long_name": {
@@ -2837,33 +2838,40 @@
         }
       },
       "Viewport": {
+        "title": "Viewport",
         "type": "object",
+        "required": [
+          "northeast",
+          "southwest"
+        ],
         "properties": {
           "northeast": {
-            "$ref": "#LatLngLiteral"
+            "$ref": "#/components/schemas/LatLngLiteral"
           },
           "southwest": {
-            "$ref": "#LatLngLiteral"
+            "$ref": "#/components/schemas/LatLngLiteral"
           }
         }
       },
       "Geometry": {
         "type": "object",
+        "title": "Geometry",
         "properties": {
           "location": {
-            "$ref": "#LatLngLiteral"
+            "$ref": "#/components/schemas/LatLngLiteral"
           },
           "location_type": {
             "description": "Stores additional data about the specified location. The following values are currently supported:\n\n- \"ROOFTOP\" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.\n- \"RANGE_INTERPOLATED\" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.\n- \"GEOMETRIC_CENTER\" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).\n- \"APPROXIMATE\" indicates that the returned result is approximate.\n",
             "type": "string"
           },
           "viewport": {
-            "$ref": "#Viewport"
+            "$ref": "#/components/schemas/Viewport"
           }
         }
       },
       "PlusCode": {
         "type": "object",
+        "title": "Plus Code",
         "description": "An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).",
         "externalDocs": {
           "url": "https://plus.codes/",
@@ -2898,7 +2906,7 @@
           },
           "location": {
             "description": "A location element of the position for which elevation data is being computed. Note that for path requests, the set of location elements will contain the sampled points along the path.",
-            "$ref": "#LatLngLiteral"
+            "$ref": "#/components/schemas/LatLngLiteral"
           }
         }
       },
@@ -2916,12 +2924,12 @@
             "example": "Invalid request. Invalid 'locations' parameter."
           },
           "status": {
-            "$ref": "#ElevationStatus"
+            "$ref": "#/components/schemas/ElevationStatus"
           },
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#ElevationResult"
+              "$ref": "#/components/schemas/ElevationResult"
             }
           }
         }
@@ -2947,7 +2955,7 @@
             "description": "An array containing the separate components applicable to this address.",
             "type": "array",
             "items": {
-              "$ref": "#AddressComponents"
+              "$ref": "#/components/schemas/AddressComponents"
             }
           },
           "formatted_address": {
@@ -2955,14 +2963,14 @@
             "type": "string"
           },
           "geometry": {
-            "$ref": "#Geometry"
+            "$ref": "#/components/schemas/Geometry"
           },
           "place_id": {
             "description": "A unique identifier that can be used with other Google APIs. For example, you can use the `place_id` in a Places API request to get details of a local business, such as phone number, opening hours, user reviews, and more. See the [place ID overview](https://developers.google.com/places/place-id).",
             "type": "string"
           },
           "plus_code": {
-            "$ref": "#PlusCode"
+            "$ref": "#/components/schemas/PlusCode"
           },
           "types": {
             "description": "The `types[]` array indicates the type of the returned result. This array contains a set of zero or more tags identifying the type of feature returned in the result. For example, a geocode of \"Chicago\" returns \"locality\" which indicates that \"Chicago\" is a city, and also returns \"political\" which indicates it is a political entity.",
@@ -2985,11 +2993,11 @@
             "description": "The",
             "type": "array",
             "items": {
-              "$ref": "#GeocodingResult"
+              "$ref": "#/components/schemas/GeocodingResult"
             }
           },
           "status": {
-            "$ref": "#GeocodingStatus"
+            "$ref": "#/components/schemas/GeocodingStatus"
           }
         }
       },

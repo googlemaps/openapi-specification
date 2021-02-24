@@ -23,8 +23,8 @@ properties:
     type: string
     example: "Invalid request. Invalid 'locations' parameter."
   status:
-    $ref: "#ElevationStatus"
+    $ref: "./ElevationStatus.yml"
   results:
     type: array
     items:
-      $ref: "#ElevationResult"
+      $ref: "./ElevationResult.yml"

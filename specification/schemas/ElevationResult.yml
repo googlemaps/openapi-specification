@@ -26,4 +26,4 @@ properties:
     type: number
   location:
     description: A location element of the position for which elevation data is being computed. Note that for path requests, the set of location elements will contain the sampled points along the path.
-    $ref: "#LatLngLiteral"
+    $ref: "./LatLngLiteral.yml"

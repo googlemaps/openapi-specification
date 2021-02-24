@@ -19,17 +19,17 @@ properties:
     description: An array containing the separate components applicable to this address.
     type: array
     items:
-      $ref: '#AddressComponents'
+      $ref: './AddressComponents.yml'
   formatted_address:
     description: The human-readable address of this location.
     type: string
   geometry:
-    $ref: '#Geometry'
+    $ref: './Geometry.yml'
   place_id:
     description: A unique identifier that can be used with other Google APIs. For example, you can use the `place_id` in a Places API request to get details of a local business, such as phone number, opening hours, user reviews, and more. See the [place ID overview](https://developers.google.com/places/place-id).
     type: string
   plus_code:
-    $ref: '#PlusCode'
+    $ref: './PlusCode.yml'
   types:
     description: The `types[]` array indicates the type of the returned result. This array contains a set of zero or more tags identifying the type of feature returned in the result. For example, a geocode of "Chicago" returns "locality" which indicates that "Chicago" is a city, and also returns "political" which indicates it is a political entity.
     type: array

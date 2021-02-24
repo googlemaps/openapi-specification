@@ -1,4 +1,4 @@
-# Copyright 2021 Google LLC
+# Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+title: Viewport
 type: object
-title: Geocoding Response Body
-required: [status, results]
+required: [northeast, southwest]
 properties:
-  results:
-    description: The 
-    type: array
-    items:      
-      $ref: './GeocodingResult.yml'
-  status:
-    $ref: './GeocodingStatus.yml'
+  northeast:
+    $ref: './LatLngLiteral.yml'
+  southwest:
+    $ref: './LatLngLiteral.yml'

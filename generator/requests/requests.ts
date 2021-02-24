@@ -365,4 +365,86 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_timezone",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "location", value: "39.6034810,-119.6822510" },
+          { key: "timestamp", value: "1331161200" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_timezone_dstoffset",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "location", value: "39.6034810,-119.6822510" },
+          { key: "timestamp", value: "1331766000" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_timezone_localized",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "location", value: "39.6034810,-119.6822510" },
+          { key: "timestamp", value: "1331766000" },
+          { key: "language", value: "es" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_timezone_not_found",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "location", value: "0,0" },
+          { key: "timestamp", value: "1331161200" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_timezone_invalid",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "location", value: "" },
+        ],
+      }),
+    }),
+  },{
+    regionTag: "maps_http_timezone_request_denied",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/timezone/json",
+        query: [
+          { key: "key", value: "" },
+        ],
+      }),
+    }),
+  },
 ];

@@ -47,6 +47,11 @@ CellTower:
   $ref: "./CellTower.yml"
 WifiAccessPoint:
   $ref: "./WifiAccessPoint.yml"
+# Time Zone
+TimeZoneResponse:
+  $ref: "./TimeZoneResponse.yml"
+TimeZoneStatus:
+  $ref: "./TimeZoneStatus.yml"  
 # Errors
 ErrorResponse:
   $ref: "./errors/ErrorResponse.yml"

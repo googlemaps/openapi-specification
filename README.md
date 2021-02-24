@@ -14,16 +14,16 @@ An OpenAPI specification for Google Maps Platform APIs.
 
 | API                | Status       |
 | ------------------ | ------------ |
-| GeoLocation        | **Complete** |
 | Elevation          | **Complete** |
 | GeoCoding          | **Complete** |
-| Distance           | Not Started  |
+| GeoLocation        | **Complete** |
+| Time Zone          | **Complete** |
 | Directions         | Not Started  |
-| Time Zone          | Not Started  |
-| Roads              | Not Started  |
+| Distance           | Not Started  |
 | Maps Static        | Not Started  |
-| Street View Static | Not Started  |
 | Places             | Not Started  |
+| Roads              | Not Started  |
+| Street View Static | Not Started  |
 
 ## Development
 

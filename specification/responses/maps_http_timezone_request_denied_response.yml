@@ -1,4 +1,4 @@
-# Copyright 2020 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,15 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-/geolocation/v1/geolocate:
-  post:
-    $ref: "./geolocate/v1/geolocate.yml"
-/maps/api/elevation/json:
-  get:
-    $ref: "./maps/api/elevation.yml"
-/maps/api/geocode/json:
-  get:
-    $ref: "./maps/api/geocode.yml"
-/maps/api/timezone/json:
-  get:
-    $ref: "./maps/api/timezone.yml"
+# [START maps_http_timezone_request_denied_response]
+{
+  "errorMessage": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+  "status": "REQUEST_DENIED",
+}
+# [END maps_http_timezone_request_denied_response]

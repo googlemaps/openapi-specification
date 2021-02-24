@@ -27,38 +27,13 @@ plugins:
               }
             ],
             "countMatches": true
-          },
-          {
-            "files": ["dist/google-maps-platform-openapi3.yml"],
-            "from": "  version: .*",
-            "to": "  version: ${nextRelease.version}",
-            "results": [
-              {
-                "file": "dist/google-maps-platform-openapi3.yml",
-                "hasChanged": true,
-                "numMatches": 1,
-                "numReplacements": 1
-              }
-            ],
-            "countMatches": true
-          },
-          {
-            "files": ["dist/google-maps-platform-openapi3.json"],
-            "from": "\"version\": \".*\"",
-            "to": "\"version\": \"${nextRelease.version}\"",
-            "results": [
-              {
-                "file": "dist/google-maps-platform-openapi3.json",
-                "hasChanged": true,
-                "numMatches": 1,
-                "numReplacements": 1
-              }
-            ],
-            "countMatches": true
-          }
+          },         
         ]
       }
     ]
+  - ["@semantic-release/exec", {
+      "prepareCmd": "npm run build",
+    }]
   - ["@semantic-release/github", {
       "assets": [
         {"path": "dist/google-maps-platform-openapi3.json", "label": "OpenAPI 3 JSON Specification"},

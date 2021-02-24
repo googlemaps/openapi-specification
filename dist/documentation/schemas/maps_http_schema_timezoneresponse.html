@@ -1,0 +1,83 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_timezoneresponse] -->
+<h3 class="schema-object" id="TimeZoneResponse">Time Zone Response Body</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>dstOffset</code></td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        The offset for daylight-savings time in seconds. This will be zero if
+        the time zone is not in Daylight Savings Time during the specified
+        <code>timestamp</code>.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>errorMessage</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        Detailed information about the reasons behind the given status code.
+        Included if status other than <code>Ok</code>.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>rawOffset</code></td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        The offset from UTC (in seconds) for the given location. This does not
+        take into effect daylight savings.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#TimeZoneStatus" title="TimeZoneStatus">TimeZoneStatus</a>
+      </td>
+      <td>
+        See
+        <a href="#TimeZoneStatus" title="TimeZoneStatus">TimeZoneStatus</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>timeZoneId</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        a string containing the ID of the time zone, such as
+        "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by
+        <a href="http://cldr.unicode.org/"
+          >Unicode Common Locale Data Repository (CLDR) project</a
+        >, and currently available in file timezone.xml. When a timezone has
+        several IDs, the canonical one is returned. In xml responses, this is
+        the first alias of each timezone. For example, "Asia/Calcutta" is
+        returned, not "Asia/Kolkata".
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>timeZoneName</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        The long form name of the time zone. This field will be localized if the
+        language parameter is set. eg. <code>Pacific Daylight Time</code> or
+        <code>Australian Eastern Daylight Time</code>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_timezoneresponse] -->

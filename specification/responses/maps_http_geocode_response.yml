@@ -35,6 +35,11 @@
               "types": ["locality", "political"],
             },
             {
+              "long_name": "Santa Clara County",
+              "short_name": "Santa Clara County",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
               "long_name": "California",
               "short_name": "CA",
               "types": ["administrative_area_level_1", "political"],
@@ -95,6 +100,11 @@
               "types": ["locality", "political"],
             },
             {
+              "long_name": "Santa Clara County",
+              "short_name": "Santa Clara County",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
               "long_name": "California",
               "short_name": "CA",
               "types": ["administrative_area_level_1", "political"],
@@ -113,21 +123,21 @@
         "formatted_address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
         "geometry":
           {
-            "location": { "lat": 37.409353, "lng": -122.1049174 },
+            "location": { "lat": 37.4131208, "lng": -122.1039424 },
             "location_type": "ROOFTOP",
             "viewport":
               {
                 "northeast":
-                  { "lat": 37.41070198029149, "lng": -122.1035684197085 },
+                  { "lat": 37.4144697802915, "lng": -122.1025934197085 },
                 "southwest":
-                  { "lat": 37.40800401970849, "lng": -122.1062663802915 },
+                  { "lat": 37.4117718197085, "lng": -122.1052913802915 },
               },
           },
         "place_id": "ChIJUV89TiG7j4ARWiEl0F5eP-o",
         "plus_code":
           {
-            "compound_code": "CV5W+P2 Mountain View, CA, USA",
-            "global_code": "849VCV5W+P2",
+            "compound_code": "CV7W+6C Mountain View, CA, USA",
+            "global_code": "849VCV7W+6C",
           },
         "types": ["street_address"],
       },

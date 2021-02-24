@@ -1,0 +1,63 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Time Zone API
+description: |
+  The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations. You request the time zone information for a specific latitude/longitude pair and date. The API returns the name of that time zone, the time offset from UTC, and the daylight savings offset.
+parameters:
+  - "$ref": "../../../parameters/language.yml"
+  - name: location    
+    description: |
+      A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
+    schema:
+      type: string
+    required: true
+    in: query
+    example: "39.6034810,-119.6822510"
+  - name: timestamp
+    in: query
+    description: |
+      The desired time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the `timestamp` to determine whether or not Daylight Savings should be applied, based on the time zone of the `location`. 
+      
+      Note that the API does not take historical time zones into account. That is, if you specify a past timestamp, the API does not take into account the possibility that the location was previously in a different time zone.
+    schema:
+      type: number
+    required: true
+    example: 1331161200
+responses:
+  "200":
+    description: "Time Zone Response"
+    content:
+      application/json:
+        examples:        
+          timezone:
+            value:
+              $ref: ../../../responses/maps_http_timezone_response.yml
+          timezone_dstoffset:
+            value:
+              $ref: ../../../responses/maps_http_timezone_dstoffset_response.yml
+          timezone_invalid:
+            value:
+              $ref: ../../../responses/maps_http_timezone_invalid_response.yml
+          timezone_not_found:
+            value:
+              $ref: ../../../responses/maps_http_timezone_not_found_response.yml
+          timezone_request_denied_response:
+            value:
+              $ref: ../../../responses/maps_http_timezone_request_denied_response.yml
+        schema:
+          $ref: "../../../schemas/TimeZoneResponse.yml"

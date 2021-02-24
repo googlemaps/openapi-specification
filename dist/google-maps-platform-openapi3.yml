@@ -556,6 +556,11 @@ paths:
                             types:
                               - locality
                               - political
+                          - long_name: Santa Clara County
+                            short_name: Santa Clara County
+                            types:
+                              - administrative_area_level_2
+                              - political
                           - long_name: California
                             short_name: CA
                             types:
@@ -608,6 +613,11 @@ paths:
                             types:
                               - locality
                               - political
+                          - long_name: Santa Clara County
+                            short_name: Santa Clara County
+                            types:
+                              - administrative_area_level_2
+                              - political
                           - long_name: California
                             short_name: CA
                             types:
@@ -625,20 +635,20 @@ paths:
                         formatted_address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, USA'
                         geometry:
                           location:
-                            lat: 37.409353
-                            lng: -122.1049174
+                            lat: 37.4131208
+                            lng: -122.1039424
                           location_type: ROOFTOP
                           viewport:
                             northeast:
-                              lat: 37.41070198029149
-                              lng: -122.1035684197085
+                              lat: 37.4144697802915
+                              lng: -122.1025934197085
                             southwest:
-                              lat: 37.40800401970849
-                              lng: -122.1062663802915
+                              lat: 37.4117718197085
+                              lng: -122.1052913802915
                         place_id: ChIJUV89TiG7j4ARWiEl0F5eP-o
                         plus_code:
-                          compound_code: 'CV5W+P2 Mountain View, CA, USA'
-                          global_code: 849VCV5W+P2
+                          compound_code: 'CV7W+6C Mountain View, CA, USA'
+                          global_code: 849VCV7W+6C
                         types:
                           - street_address
                     status: OK
@@ -1606,6 +1616,66 @@ paths:
                     status: ZERO_RESULTS
               schema:
                 $ref: '#/components/schemas/GeocodingResponse'
+  /maps/api/timezone/json:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Time Zone API
+      description: |
+        The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations. You request the time zone information for a specific latitude/longitude pair and date. The API returns the name of that time zone, the time offset from UTC, and the daylight savings offset.
+      parameters:
+        - $ref: '#/components/parameters/language'
+        - name: location
+          description: |
+            A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
+          schema:
+            type: string
+          required: true
+          in: query
+          example: '39.6034810,-119.6822510'
+        - name: timestamp
+          in: query
+          description: |
+            The desired time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the `timestamp` to determine whether or not Daylight Savings should be applied, based on the time zone of the `location`. 
+
+            Note that the API does not take historical time zones into account. That is, if you specify a past timestamp, the API does not take into account the possibility that the location was previously in a different time zone.
+          schema:
+            type: number
+          required: true
+          example: 1331161200
+      responses:
+        '200':
+          description: Time Zone Response
+          content:
+            application/json:
+              examples:
+                timezone:
+                  value:
+                    dstOffset: 0
+                    rawOffset: -28800
+                    status: OK
+                    timeZoneId: America/Los_Angeles
+                    timeZoneName: Pacific Standard Time
+                timezone_dstoffset:
+                  value:
+                    dstOffset: 3600
+                    rawOffset: -28800
+                    status: OK
+                    timeZoneId: America/Los_Angeles
+                    timeZoneName: Pacific Daylight Time
+                timezone_invalid:
+                  value:
+                    status: INVALID_REQUEST
+                timezone_not_found:
+                  value:
+                    status: ZERO_RESULTS
+                timezone_request_denied_response:
+                  value:
+                    errorMessage: 'You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account'
+                    status: REQUEST_DENIED
+              schema:
+                $ref: '#/components/schemas/TimeZoneResponse'
 components:
   parameters:
     language:
@@ -2257,6 +2327,53 @@ components:
           - macAddress: '44:48:c1:a6:f3:d0'
             signalStrength: -55
             signalToNoiseRatio: 0
+    TimeZoneResponse:
+      type: object
+      title: Time Zone Response Body
+      properties:
+        dstOffset:
+          description: The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.
+          type: number
+        rawOffset:
+          description: The offset from UTC (in seconds) for the given location. This does not take into effect daylight savings.
+          type: number
+        timeZoneId:
+          description: 'a string containing the ID of the time zone, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by [Unicode Common Locale Data Repository (CLDR) project](http://cldr.unicode.org/), and currently available in file timezone.xml. When a timezone has several IDs, the canonical one is returned. In xml responses, this is the first alias of each timezone. For example, "Asia/Calcutta" is returned, not "Asia/Kolkata".'
+          type: string
+        timeZoneName:
+          description: The long form name of the time zone. This field will be localized if the language parameter is set. eg. `Pacific Daylight Time` or `Australian Eastern Daylight Time`.
+          type: string
+        status:
+          $ref: '#/components/schemas/TimeZoneStatus'
+        errorMessage:
+          description: Detailed information about the reasons behind the given status code. Included if status other than `Ok`.
+          type: string
+    TimeZoneStatus:
+      type: string
+      title: Time Zone Status
+      description: |
+        The `status` field within the Time Zone response object contains the status of the request. The "status" field may contain the following values:
+
+        - `OK` indicates that the request was successful.
+        - `INVALID_REQUEST` indicates that the request was malformed.
+        - `OVER_DAILY_LIMIT` indicates any of the following:
+          - The API key is missing or invalid.
+          - Billing has not been enabled on your account.
+          - A self-imposed usage cap has been exceeded.
+          - The provided method of payment is no longer valid (for example, a credit card has expired).
+
+        - `OVER_QUERY_LIMIT` indicates the requestor has exceeded quota.
+        - `REQUEST_DENIED` indicates that the API did not complete the request. Confirm that the request was sent over HTTPS instead of HTTP.
+        - `UNKNOWN_ERROR` indicates an unknown error.
+        - `ZERO_RESULTS` indicates that no time zone data could be found for the specified position or time. Confirm that the request is for a location on land, and not over water.
+      enum:
+        - OK
+        - INVALID_REQUEST
+        - OVER_DAILY_LIMIT
+        - OVER_QUERY_LIMIT
+        - REQUEST_DENIED
+        - UNKNOWN_ERROR
+        - ZERO_RESULTS
     ErrorResponse:
       type: object
       title: Error Response
@@ -2347,3 +2464,7 @@ tags:
     description: The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.
     externalDocs:
       url: 'https://developers.google.com/maps/documentation/geolocation/overview'
+  - name: Time Zone API
+    description: 'The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.'
+    externalDocs:
+      url: 'https://developers.google.com/maps/documentation/timezone/overview'

@@ -1,0 +1,54 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_timezonestatus] -->
+<h3 class="schema-object" id="TimeZoneStatus">Time Zone Status</h3>
+<p>
+  The <code>status</code> field within the Time Zone response object contains
+  the status of the request. The "status" field may contain the following
+  values:
+</p>
+<ul>
+  <li>
+    <p><code>OK</code> indicates that the request was successful.</p>
+  </li>
+  <li>
+    <p>
+      <code>INVALID_REQUEST</code> indicates that the request was malformed.
+    </p>
+  </li>
+  <li>
+    <p><code>OVER_DAILY_LIMIT</code> indicates any of the following:</p>
+    <ul>
+      <li>The API key is missing or invalid.</li>
+      <li>Billing has not been enabled on your account.</li>
+      <li>A self-imposed usage cap has been exceeded.</li>
+      <li>
+        The provided method of payment is no longer valid (for example, a credit
+        card has expired).
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>
+      <code>OVER_QUERY_LIMIT</code> indicates the requestor has exceeded quota.
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>REQUEST_DENIED</code> indicates that the API did not complete the
+      request. Confirm that the request was sent over HTTPS instead of HTTP.
+    </p>
+  </li>
+  <li>
+    <p><code>UNKNOWN_ERROR</code> indicates an unknown error.</p>
+  </li>
+  <li>
+    <p>
+      <code>ZERO_RESULTS</code> indicates that no time zone data could be found
+      for the specified position or time. Confirm that the request is for a
+      location on land, and not over water.
+    </p>
+  </li>
+</ul>
+<p>type: <code>string</code></p>
+
+<!--- [END maps_http_schema_timezonestatus] -->

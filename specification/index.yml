@@ -49,3 +49,8 @@ tags:
       The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.
     externalDocs:
       url: https://developers.google.com/maps/documentation/geolocation/overview
+  - name: Time Zone API
+    description: |-
+      The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.
+    externalDocs:
+      url: https://developers.google.com/maps/documentation/timezone/overview      

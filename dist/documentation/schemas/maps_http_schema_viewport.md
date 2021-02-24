@@ -4,9 +4,9 @@
 
 type: `object`
 
-| Field       | Required | Type                                               | Description                                                                  |
-| :---------- | -------- | -------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `northeast` | optional | [#LatLngLiteral](##LatLngLiteral "#LatLngLiteral") | See [#LatLngLiteral](##LatLngLiteral "#LatLngLiteral") for more information. |
-| `southwest` | optional | [#LatLngLiteral](##LatLngLiteral "#LatLngLiteral") | See [#LatLngLiteral](##LatLngLiteral "#LatLngLiteral") for more information. |
+| Field       | Required | Type                                            | Description                                                               |
+| :---------- | -------- | ----------------------------------------------- | ------------------------------------------------------------------------- |
+| `northeast` | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+| `southwest` | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
 
 <!--- [END maps_http_schema_viewport] -->

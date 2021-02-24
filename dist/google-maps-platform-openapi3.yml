@@ -66,8 +66,8 @@ paths:
                 Cell Towers:
                   value:
                     location:
-                      lat: 37.7802088
-                      lng: -122.4166612
+                      lat: 37.780187700000006
+                      lng: -122.41665049999999
                     accuracy: 1479
                 IP Only:
                   value:
@@ -123,13 +123,29 @@ paths:
         - url: 'https://maps.googleapis.com'
       tags:
         - Elevation API
-      description: One of `path` or `locations` is **required.**
+      description: |
+        The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes. With the Elevation API, you can develop hiking and biking applications, positioning applications, or low resolution surveying applications.
+
+        Elevation data is available for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values). In those cases where Google does not possess exact elevation measurements at the precise location you request, the service interpolates and returns an averaged value using the four nearest locations. Elevation values are expressed relative to local mean sea level (LMSL).
+
+        Requests to the Elevation API utilize different parameters based on whether the request is for discrete locations or for an ordered path. For discrete locations, requests for elevation return data on the specific locations passed in the request; for paths, elevation requests are instead sampled along the given path.
       parameters:
         - name: locations
           in: query
           style: pipeDelimited
           explode: false
-          description: 'An array of comma separated {latitude,longitude} strings.'
+          description: |
+            Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
+
+            The locations parameter may take the following arguments:
+
+            - A single coordinate: `locations=40.714728,-73.998672`
+            - An array of coordinates separated using the pipe ('|') character: `locations=40.714728,-73.998672|-34.397,150.644`
+            - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): `locations=enc:gfo}EtohhU`
+
+            Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
+
+            You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
           example:
             - '35,-100'
             - '40,-110'
@@ -158,24 +174,62 @@ paths:
           content:
             application/json:
               examples:
-                status = OK:
+                elevation_locations:
                   value:
                     results:
-                      - elevation: 1643.880493164062
+                      - elevation: 1608.637939453125
                         location:
-                          lat: 35
-                          lng: -110
-                        resolution: 9.543951988220215
-                      - elevation: 1748.557983398438
-                        location:
-                          lat: 31
-                          lng: -110
-                        resolution: 152.7032318115234
+                          lat: 39.7391536
+                          lng: -104.9847034
+                        resolution: 4.771975994110107
                     status: OK
+                elevation_locations_multiple:
+                  value:
+                    results:
+                      - elevation: 1608.637939453125
+                        location:
+                          lat: 39.7391536
+                          lng: -104.9847034
+                        resolution: 4.771975994110107
+                      - elevation: -52.79492568969727
+                        location:
+                          lat: 36.455556
+                          lng: -116.866667
+                        resolution: 19.08790397644043
+                    status: OK
+                elevation_path:
+                  value:
+                    results:
+                      - elevation: 4411.94189453125
+                        location:
+                          lat: 36.578581
+                          lng: -118.291994
+                        resolution: 19.08790397644043
+                      - elevation: 1372.8359375
+                        location:
+                          lat: 36.41150289067028
+                          lng: -117.5602607523847
+                        resolution: 9.543951988220215
+                      - elevation: -84.51690673828125
+                        location:
+                          lat: 36.23998
+                          lng: -116.83171
+                        resolution: 9.543951988220215
+                    status: OK
+                elevation_path_missing_samples:
+                  value:
+                    results: []
+                    status: INVALID_REQUEST
+                elevation_invalid_key:
+                  value:
+                    error_message: The provided API key is invalid.
+                    results: []
+                    status: REQUEST_DENIED
               schema:
                 type: object
                 required:
                   - status
+                  - results
                 properties:
                   error_message:
                     type: string
@@ -502,11 +556,6 @@ paths:
                             types:
                               - locality
                               - political
-                          - long_name: Santa Clara County
-                            short_name: Santa Clara County
-                            types:
-                              - administrative_area_level_2
-                              - political
                           - long_name: California
                             short_name: CA
                             types:
@@ -524,20 +573,72 @@ paths:
                         formatted_address: '1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA'
                         geometry:
                           location:
-                            lat: 37.4222933
-                            lng: -122.0841442
+                            lat: 37.4222934
+                            lng: -122.0841409
                           location_type: ROOFTOP
                           viewport:
                             northeast:
-                              lat: 37.4236422802915
-                              lng: -122.0827952197085
+                              lat: 37.4236423802915
+                              lng: -122.0827919197085
                             southwest:
-                              lat: 37.4209443197085
-                              lng: -122.0854931802915
+                              lat: 37.4209444197085
+                              lng: -122.0854898802915
                         place_id: ChIJVYBZP-Oxj4ARls-qJ_G3tgM
                         plus_code:
                           compound_code: 'CWC8+W8 Mountain View, CA, USA'
                           global_code: 849VCWC8+W8
+                        types:
+                          - street_address
+                      - address_components:
+                          - long_name: '1600'
+                            short_name: '1600'
+                            types:
+                              - street_number
+                          - long_name: Amphitheatre Parkway
+                            short_name: Amphitheatre Parkway
+                            types:
+                              - route
+                          - long_name: Monta Loma
+                            short_name: Monta Loma
+                            types:
+                              - neighborhood
+                              - political
+                          - long_name: Mountain View
+                            short_name: Mountain View
+                            types:
+                              - locality
+                              - political
+                          - long_name: California
+                            short_name: CA
+                            types:
+                              - administrative_area_level_1
+                              - political
+                          - long_name: United States
+                            short_name: US
+                            types:
+                              - country
+                              - political
+                          - long_name: '94043'
+                            short_name: '94043'
+                            types:
+                              - postal_code
+                        formatted_address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, USA'
+                        geometry:
+                          location:
+                            lat: 37.409353
+                            lng: -122.1049174
+                          location_type: ROOFTOP
+                          viewport:
+                            northeast:
+                              lat: 37.41070198029149
+                              lng: -122.1035684197085
+                            southwest:
+                              lat: 37.40800401970849
+                              lng: -122.1062663802915
+                        place_id: ChIJUV89TiG7j4ARWiEl0F5eP-o
+                        plus_code:
+                          compound_code: 'CV5W+P2 Mountain View, CA, USA'
+                          global_code: 849VCV5W+P2
                         types:
                           - street_address
                     status: OK
@@ -1838,37 +1939,6 @@ components:
           - zm
           - zw
   schemas:
-    ElevationStatus:
-      type: string
-      description: Status codes returned by service.
-      enum:
-        - OK
-        - INVALID_REQUEST
-    GeocodingStatus:
-      type: string
-      title: Geocoding Status
-      description: |
-        The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The "status" field may contain the following values:
-
-        - `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.
-        - `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.
-        - `OVER_DAILY_LIMIT` indicates any of the following:
-          - The API key is missing or invalid.
-          - Billing has not been enabled on your account.
-          - A self-imposed usage cap has been exceeded.
-          - The provided method of payment is no longer valid (for example, a credit card has expired).
-        - `OVER_QUERY_LIMIT` indicates that you are over your quota.
-        - `REQUEST_DENIED` indicates that your request was denied.
-        - `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.
-        - `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.
-      enum:
-        - OK
-        - INVALID_REQUEST
-        - OVER_DAILY_LIMIT
-        - OVER_QUERY_LIMIT
-        - REQUEST_DENIED
-        - UNKNOWN_ERROR
-        - ZERO_RESULTS
     LatLngArrayString:
       description: 'An array of comma separated {latitude,longitude} strings.'
       example:
@@ -1942,6 +2012,61 @@ components:
         global_code:
           description: The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).
           type: string
+    ElevationResult:
+      type: object
+      title: Elevation Result
+      required:
+        - elevation
+        - location
+      properties:
+        elevation:
+          description: The elevation of the location in meters.
+          type: number
+        resolution:
+          description: 'The value indicating the maximum distance between data points from which the elevation was interpolated, in meters. This property will be missing if the resolution is not known. Note that elevation data becomes more coarse (larger resolution values) when multiple points are passed. To obtain the most accurate elevation value for a point, it should be queried independently.'
+          type: number
+        location:
+          description: 'A location element of the position for which elevation data is being computed. Note that for path requests, the set of location elements will contain the sampled points along the path.'
+          $ref: '#LatLngLiteral'
+    ElevationResponse:
+      type: object
+      title: Elevation Response
+      required:
+        - status
+        - results
+      properties:
+        error_message:
+          description: Detailed information about the reasons behind the given status code.
+          type: string
+          example: Invalid request. Invalid 'locations' parameter.
+        status:
+          $ref: '#ElevationStatus'
+        results:
+          type: array
+          items:
+            $ref: '#ElevationResult'
+    ElevationStatus:
+      type: string
+      title: Elevation Status
+      description: |
+        Status codes returned by service.
+        - `OK` indicating the API request was successful.
+        - `INVALID_REQUEST` indicating the API request was malformed.
+        - `OVER_DAILY_LIMIT` indicating any of the following:
+          - The API key is missing or invalid.
+          - Billing has not been enabled on your account.
+          - A self-imposed usage cap has been exceeded.
+          - The provided method of payment is no longer valid (for example, a credit card has expired).
+        - `OVER_QUERY_LIMIT` indicating the requestor has exceeded quota.
+        - `REQUEST_DENIED` indicating the API did not complete the request.
+        - `UNKNOWN_ERROR` indicating an unknown error.
+      enum:
+        - OK
+        - INVALID_REQUEST
+        - OVER_DAILY_LIMIT
+        - OVER_QUERY_LIMIT
+        - REQUEST_DENIED
+        - UNKNOWN_ERROR
     GeocodingResult:
       type: object
       title: Geocoding Result
@@ -1980,6 +2105,31 @@ components:
             $ref: '#GeocodingResult'
         status:
           $ref: '#GeocodingStatus'
+    GeocodingStatus:
+      type: string
+      title: Geocoding Status
+      description: |
+        The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The "status" field may contain the following values:
+
+        - `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.
+        - `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.
+        - `OVER_DAILY_LIMIT` indicates any of the following:
+          - The API key is missing or invalid.
+          - Billing has not been enabled on your account.
+          - A self-imposed usage cap has been exceeded.
+          - The provided method of payment is no longer valid (for example, a credit card has expired).
+        - `OVER_QUERY_LIMIT` indicates that you are over your quota.
+        - `REQUEST_DENIED` indicates that your request was denied.
+        - `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.
+        - `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.
+      enum:
+        - OK
+        - INVALID_REQUEST
+        - OVER_DAILY_LIMIT
+        - OVER_QUERY_LIMIT
+        - REQUEST_DENIED
+        - UNKNOWN_ERROR
+        - ZERO_RESULTS
     GeolocationV1GeolocatePostRequestBody:
       type: object
       title: Geolocation Request Body

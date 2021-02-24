@@ -15,7 +15,7 @@ An OpenAPI specification for Google Maps Platform APIs.
 | API                | Status       |
 | ------------------ | ------------ |
 | GeoLocation        | **Complete** |
-| Elevation          | In Progress  |
+| Elevation          | **Complete** |
 | GeoCoding          | **Complete** |
 | Distance           | Not Started  |
 | Directions         | Not Started  |

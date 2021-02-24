@@ -35,3 +35,4 @@ jobs:
             "@semantic-release/github
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: skip # required in verify conditions

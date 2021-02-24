@@ -1,5 +1,6 @@
 {
   "name": "http-specification",
+  "private": true,
   "version": "0.1.0",
   "homepage": "https://github.com/googlemaps/openapi-specification#readme",
   "bugs": {
@@ -28,6 +29,7 @@
     "@bazel/typescript": "3.2.0",
     "@google/semantic-release-replace-plugin": "^1.0.2",
     "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/npm": "^7.0.10",
     "@types/json-schema": "^7.0.6",
     "@types/node": "^14.14.31",
     "@types/postman-collection": "^3.5.5",

@@ -1,0 +1,49 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_elevationresult] -->
+<h3 class="schema-object" id="ElevationResult">Elevation Result</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>elevation</code></td>
+      <td><strong>required</strong></td>
+      <td>number</td>
+      <td>The elevation of the location in meters.</td>
+    </tr>
+    <tr>
+      <td align="left"><code>location</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
+      <td>
+        A location element of the position for which elevation data is being
+        computed. Note that for path requests, the set of location elements will
+        contain the sampled points along the path. See
+        <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>resolution</code></td>
+      <td>optional</td>
+      <td>number</td>
+      <td>
+        The value indicating the maximum distance between data points from which
+        the elevation was interpolated, in meters. This property will be missing
+        if the resolution is not known. Note that elevation data becomes more
+        coarse (larger resolution values) when multiple points are passed. To
+        obtain the most accurate elevation value for a point, it should be
+        queried independently.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_elevationresult] -->

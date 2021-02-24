@@ -4,9 +4,9 @@
 
 type: `object`
 
-| Field     | Required     | Type                                                                  | Description                                                                            |
-| :-------- | ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `results` | **required** | Array&lt;[#GeocodingResult](##GeocodingResult "#GeocodingResult")&gt; | The See [#GeocodingResult](##GeocodingResult "#GeocodingResult") for more information. |
-| `status`  | **required** | [#GeocodingStatus](##GeocodingStatus "#GeocodingStatus")              | See [#GeocodingStatus](##GeocodingStatus "#GeocodingStatus") for more information.     |
+| Field     | Required     | Type                                                               | Description                                                                         |
+| :-------- | ------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| `results` | **required** | Array&lt;[GeocodingResult](#GeocodingResult "GeocodingResult")&gt; | The See [GeocodingResult](#GeocodingResult "GeocodingResult") for more information. |
+| `status`  | **required** | [GeocodingStatus](#GeocodingStatus "GeocodingStatus")              | See [GeocodingStatus](#GeocodingStatus "GeocodingStatus") for more information.     |
 
 <!--- [END maps_http_schema_geocodingresponse] -->

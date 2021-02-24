@@ -250,10 +250,7 @@ export const REQUESTS: SnippetRequest[] = [
 				protocol: 'https',
 				host: 'maps.googleapis.com',
 				path: '/maps/api/geocode/json',
-				query: [
-					{ key: 'latlng', value: '0,0' },
-					,
-				],
+				query: [{ key: 'latlng', value: '0,0' }, ,],
 			}),
 		}),
 	},
@@ -264,6 +261,78 @@ export const REQUESTS: SnippetRequest[] = [
 				protocol: 'https',
 				host: 'maps.googleapis.com',
 				path: '/maps/api/geocode/json',
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_locations',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [{ key: 'locations', value: '39.7391536,-104.9847034' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_locations_multiple',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [{ key: 'locations', value: '39.7391536,-104.9847034|36.455556,-116.866667' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_locations_encoded',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [{ key: 'locations', value: 'enc:gfo}EtohhU' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_path',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [
+					{ key: 'path', value: '36.578581,-118.291994|36.23998,-116.83171' },
+					{ key: 'samples', value: '3' },
+				],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_path_missing_samples',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [{ key: 'path', value: '35,-100|40,-110|45,-100' }],
+			}),
+		}),
+	},
+	{
+		regionTag: 'maps_http_elevation_invalid_key',
+		request: new Request({
+			url: new Url({
+				protocol: 'https',
+				host: 'maps.googleapis.com',
+				path: '/maps/api/elevation/json',
+				query: [
+					{ key: 'locations', value: '39.7391536,-104.9847034' },
+					{ key: 'key', value: 'invalid' },
+				],
 			}),
 		}),
 	},

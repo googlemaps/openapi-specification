@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ElevationStatus:
-  $ref: "./ElevationStatus.yml"
-GeocodingStatus:
-  $ref: "./GeocodingStatus.yml"
 LatLngArrayString:
   $ref: "./LatLngArrayString.yml"
 LatLngLiteral:
@@ -70,11 +66,20 @@ PlusCode:
     global_code:
       description: The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).
       type: string
+# Elevation
+ElevationResult:
+  $ref: "./ElevationResult.yml"
+ElevationResponse:
+  $ref: "./ElevationResponse.yml"
+ElevationStatus:
+  $ref: "./ElevationStatus.yml"
 # Geocoding
 GeocodingResult:
   $ref: "./GeocodingResult.yml"
 GeocodingResponse:
   $ref: "./GeocodingResponse.yml"
+GeocodingStatus:
+  $ref: "./GeocodingStatus.yml"
 # Geolocation
 GeolocationV1GeolocatePostRequestBody:
   $ref: "./GeolocationV1GeolocatePostRequestBody.yml"

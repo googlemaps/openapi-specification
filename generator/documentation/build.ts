@@ -127,14 +127,14 @@ const propertyToRow = (
 	}
 
 	if (isRef(property)) {
-		const name = property.$ref.split('/').pop()!;
+		const name = refName(property);
 		const refLink = link(`#${name}`, name, [text(name)]);
 		row.push(tableCell(refLink));
 		row.push(tableCell(refPropertyDesciption(refLink, property['description'])));
 	} else {
 		if (property.type === 'array') {
 			if (isRef(property.items)) {				
-				const name = property.items.$ref.split('/').pop()!;
+				const name = refName(property.items);
 				const refLink = link(`#${name}`, name, [text(name)]);				
 				row.push(tableCell([text('Array&lt;'), refLink, text('&gt;')]));
 				row.push(tableCell(refPropertyDesciption(refLink, property.description)));
@@ -191,3 +191,7 @@ const nonRefPropertyDescription = (property: OpenAPIV3.ArraySchemaObject | OpenA
 	}
 	return nodes;
 };
+
+const refName = ({$ref}: OpenAPIV3.ReferenceObject): string => {
+	return $ref.split('/').pop()!.replace("#", "")
+}

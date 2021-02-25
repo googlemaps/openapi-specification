@@ -1,4 +1,4 @@
-# Copyright 2020 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-/geolocation/v1/geolocate:
-  post:
-    $ref: "./geolocate/v1/geolocate.yml"
-/maps/api/elevation/json:
-  get:
-    $ref: "./maps/api/elevation.yml"
-/maps/api/geocode/json:
-  get:
-    $ref: "./maps/api/geocode.yml"
-/maps/api/timezone/json:
-  get:
-    $ref: "./maps/api/timezone.yml"
-/v1/snapToRoads:
-  get:
-    $ref: "./snapToRoads.yml"
-/v1/nearestRoads:
-  get:
-    $ref: "./nearestRoads.yml"
+# [START maps_http_roads_nearest_error_404_response]
+{}
+# [END maps_http_roads_nearest_error_404_response]

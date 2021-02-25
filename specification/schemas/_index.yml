@@ -16,6 +16,8 @@ LatLngArrayString:
   $ref: "./LatLngArrayString.yml"
 LatLngLiteral:
   $ref: "./LatLngLiteral.yml"
+LatitudeLongitudeLiteral:
+  $ref: "./LatitudeLongitudeLiteral.yml"
 AddressComponents:
   $ref: "./AddressComponents.yml"
 Viewport:
@@ -47,6 +49,17 @@ CellTower:
   $ref: "./CellTower.yml"
 WifiAccessPoint:
   $ref: "./WifiAccessPoint.yml"
+# Roads
+NearestRoadsError:
+  $ref: "./NearestRoadsError.yml"
+NearestRoadsErrorResponse:
+  $ref: "./NearestRoadsErrorResponse.yml"
+NearestRoadsResponse:
+  $ref: "./NearestRoadsResponse.yml"
+SnappedPoint:
+  $ref: "./SnappedPoint.yml"
+SnapToRoadsResposne:
+  $ref: "./SnapToRoadsResponse.yml"
 # Time Zone
 TimeZoneResponse:
   $ref: "./TimeZoneResponse.yml"

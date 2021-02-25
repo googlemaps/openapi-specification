@@ -27,7 +27,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GeolocationV1GeolocatePostRequestBody"
+                "$ref": "#/components/schemas/GeolocationRequest"
               },
               "examples": {
                 "WIFI": {
@@ -78,7 +78,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeolocationV1GeolocatePostResponseBody"
+                  "$ref": "#/components/schemas/GeolocationResponse"
                 },
                 "examples": {
                   "WIFI": {
@@ -3976,7 +3976,6 @@
         ],
         "properties": {
           "results": {
-            "description": "The",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/GeocodingResult"
@@ -4001,7 +4000,7 @@
           "ZERO_RESULTS"
         ]
       },
-      "GeolocationV1GeolocatePostRequestBody": {
+      "GeolocationRequest": {
         "type": "object",
         "title": "Geolocation Request Body",
         "description": "The request body must be formatted as JSON. The following fields are supported, and all fields are optional.",
@@ -4042,7 +4041,7 @@
           }
         }
       },
-      "GeolocationV1GeolocatePostResponseBody": {
+      "GeolocationResponse": {
         "type": "object",
         "title": "Geolocation Response Body",
         "description": "A successful geolocation request will return a JSON-formatted response defining a location and radius.",

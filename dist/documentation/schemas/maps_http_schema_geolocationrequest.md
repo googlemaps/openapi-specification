@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_geolocationv1geolocatepostrequestbody] -->
-<h3 class="schema-object" id="GeolocationV1GeolocatePostRequestBody">Geolocation Request Body</h3>
+<!--- [START maps_http_schema_geolocationrequest] -->
+<h3 class="schema-object" id="GeolocationRequest">Geolocation Request Body</h3>
 
 The request body must be formatted as JSON. The following fields are supported, and all fields are optional.
 
@@ -16,4 +16,4 @@ type: `object`
 | `radioType`             | optional | string                                                             | The mobile radio type. Supported values are lte, gsm, cdma, and wcdma. While this field is optional, it should be included if a value is available, for more accurate results. |
 | `wifiAccessPoints`      | optional | Array&lt;[WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint")&gt; | An array of two or more WiFi access point objects. See [WifiAccessPoint](#WifiAccessPoint "WifiAccessPoint") for more information.                                             |
 
-<!--- [END maps_http_schema_geolocationv1geolocatepostrequestbody] -->
+<!--- [END maps_http_schema_geolocationrequest] -->

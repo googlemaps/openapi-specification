@@ -27,7 +27,7 @@ requestBody:
   content:
     "application/json":
       schema:
-         $ref: "../../../schemas/GeolocationV1GeolocatePostRequestBody.yml" 
+         $ref: "../../../schemas/GeolocationRequest.yml" 
       examples:
         WIFI:
           value:
@@ -45,7 +45,7 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../../schemas/GeolocationV1GeolocatePostResponseBody.yml"          
+          $ref: "../../../schemas/GeolocationResponse.yml"          
         examples:
           WIFI:
             value:

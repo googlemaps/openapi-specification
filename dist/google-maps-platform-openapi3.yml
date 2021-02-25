@@ -23,7 +23,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GeolocationV1GeolocatePostRequestBody'
+              $ref: '#/components/schemas/GeolocationRequest'
             examples:
               WIFI:
                 value:
@@ -55,7 +55,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GeolocationV1GeolocatePostResponseBody'
+                $ref: '#/components/schemas/GeolocationResponse'
               examples:
                 WIFI:
                   value:
@@ -2702,7 +2702,6 @@ components:
         - results
       properties:
         results:
-          description: The
           type: array
           items:
             $ref: '#/components/schemas/GeocodingResult'
@@ -2733,7 +2732,7 @@ components:
         - REQUEST_DENIED
         - UNKNOWN_ERROR
         - ZERO_RESULTS
-    GeolocationV1GeolocatePostRequestBody:
+    GeolocationRequest:
       type: object
       title: Geolocation Request Body
       description: 'The request body must be formatted as JSON. The following fields are supported, and all fields are optional.'
@@ -2763,7 +2762,7 @@ components:
           description: An array of two or more WiFi access point objects.
           items:
             $ref: '#/components/schemas/WifiAccessPoint'
-    GeolocationV1GeolocatePostResponseBody:
+    GeolocationResponse:
       type: object
       title: Geolocation Response Body
       description: A successful geolocation request will return a JSON-formatted response defining a location and radius.

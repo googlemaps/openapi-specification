@@ -41,10 +41,10 @@ GeocodingResponse:
 GeocodingStatus:
   $ref: "./GeocodingStatus.yml"
 # Geolocation
-GeolocationV1GeolocatePostRequestBody:
-  $ref: "./GeolocationV1GeolocatePostRequestBody.yml"
-GeolocationV1GeolocatePostResponseBody:
-  $ref: "./GeolocationV1GeolocatePostResponseBody.yml"
+GeolocationRequest:
+  $ref: "./GeolocationRequest.yml"
+GeolocationResponse:
+  $ref: "./GeolocationResponse.yml"
 CellTower:
   $ref: "./CellTower.yml"
 WifiAccessPoint:

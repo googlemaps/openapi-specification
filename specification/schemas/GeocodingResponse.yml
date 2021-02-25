@@ -17,7 +17,6 @@ title: Geocoding Response Body
 required: [status, results]
 properties:
   results:
-    description: The 
     type: array
     items:      
       $ref: './GeocodingResult.yml'

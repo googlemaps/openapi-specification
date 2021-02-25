@@ -2145,42 +2145,49 @@ paths:
                   value:
                     warningMessage: Input path is too sparse. You should provide a path where consecutive points are closer to each other. Refer to the 'path' parameter in Google Roads API documentation.
               schema:
-                type: object
-                title: Snap to Roads Response Body
-                properties:
-                  snappedPoints:
-                    description: An array of snapped points.
-                    type: array
-                    items:
-                      type: object
-                      title: Snap to Roads Response Body
-                      required:
-                        - location
-                        - placeId
-                      properties:
-                        location:
-                          type: object
-                          title: Latitidue Longitude Literal
-                          description: An object describing a specific location with Latitude and Longitude in decimal degrees.
-                          required:
-                            - latitude
-                            - longitude
-                          properties:
-                            latitude:
-                              type: number
-                              description: Latitude in decimal degrees
-                            longitude:
-                              type: number
-                              description: Longitude in decimal degrees
-                        originalIndex:
-                          description: 'An integer that indicates the corresponding value in the original request. Each value in the request should map to a snapped value in the response. However, if you''ve set interpolate=true, then it''s possible that the response will contain more coordinates than the request. Interpolated values will not have an `originalIndex`. These values are indexed from `0`, so a point with an originalIndex of `4` will be the snapped value of the 5th latitude/longitude passed to the path parameter.'
-                          type: number
-                        placeId:
-                          description: A unique identifier for a place. All place IDs returned by the Roads API correspond to road segments.
-                          type: string
-                  warning_message:
-                    description: A string continaing a user-visible warning.
-                    type: string
+                $ref: '#/components/schemas/SnapToRoadsResposne'
+  /v1/nearestRoads:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Roads API
+      description: This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.
+      parameters:
+        - name: points
+          description: |
+            The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
+            Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.
+          required: true
+          in: query
+          style: pipeDelimited
+          explode: false
+          example:
+            - '60.170880,24.942795'
+            - '60.170879,24.942796'
+            - '60.170877,24.942796'
+          schema:
+            $ref: '#/components/schemas/LatLngArrayString'
+      responses:
+        '200':
+          description: 'For each valid request, the Roads API will return a response in the format indicated within the request URL.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NearestRoadsResponse'
+        '400':
+          description: 'For each valid request, the Roads API will return a response in the format indicated within the request URL.'
+          content:
+            application/json:
+              examples:
+                Bad Request:
+                  value:
+                    error:
+                      code: 400
+                      message: '"points" is a required parameter.'
+                      status: INVALID_ARGUMENT
+              schema:
+                $ref: '#/components/schemas/NearestRoadsErrorResponse'
 components:
   parameters:
     language:
@@ -2537,6 +2544,20 @@ components:
         lng:
           type: number
           description: Longitude in decimal degrees
+    LatitudeLongitudeLiteral:
+      type: object
+      title: Latitidue Longitude Literal
+      description: An object describing a specific location with Latitude and Longitude in decimal degrees.
+      required:
+        - latitude
+        - longitude
+      properties:
+        latitude:
+          type: number
+          description: Latitude in decimal degrees
+        longitude:
+          type: number
+          description: Longitude in decimal degrees
     AddressComponents:
       title: Address Components
       type: object
@@ -2832,6 +2853,65 @@ components:
           - macAddress: '44:48:c1:a6:f3:d0'
             signalStrength: -55
             signalToNoiseRatio: 0
+    NearestRoadsError:
+      type: object
+      title: Nearest Roads Error
+      required:
+        - code
+        - message
+        - status
+      properties:
+        code:
+          description: This is the same as the HTTP status of the response.
+          type: number
+        message:
+          description: A short description of the error.
+          type: string
+        status:
+          description: An error such as `INVALID_ARGUMENT`.
+          type: string
+    NearestRoadsErrorResponse:
+      type: object
+      title: Nearest Roads Response Body
+      properties:
+        error:
+          $ref: '#/components/schemas/NearestRoadsError'
+    NearestRoadsResponse:
+      type: object
+      title: Nearest Roads Response Body
+      properties:
+        snappedPoints:
+          description: An array of snapped points.
+          type: array
+          items:
+            $ref: '#/components/schemas/SnappedPoint'
+    SnappedPoint:
+      type: object
+      title: Snap to Roads Response Body
+      required:
+        - location
+        - placeId
+      properties:
+        location:
+          $ref: '#/components/schemas/LatitudeLongitudeLiteral'
+        originalIndex:
+          description: 'An integer that indicates the corresponding value in the original request. Each value in the request should map to a snapped value in the response. However, if you''ve set interpolate=true, then it''s possible that the response will contain more coordinates than the request. Interpolated values will not have an `originalIndex`. These values are indexed from `0`, so a point with an originalIndex of `4` will be the snapped value of the 5th latitude/longitude passed to the path parameter.'
+          type: number
+        placeId:
+          description: A unique identifier for a place. All place IDs returned by the Roads API correspond to road segments.
+          type: string
+    SnapToRoadsResposne:
+      type: object
+      title: Snap to Roads Response Body
+      properties:
+        snappedPoints:
+          description: An array of snapped points.
+          type: array
+          items:
+            $ref: '#/components/schemas/SnappedPoint'
+        warning_message:
+          description: A string continaing a user-visible warning.
+          type: string
     TimeZoneResponse:
       type: object
       title: Time Zone Response Body

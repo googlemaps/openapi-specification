@@ -495,4 +495,52 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_roads_nearest",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "roads.googleapis.com",
+        path: "/v1/nearestRoads",
+        query: [
+          {
+            key: "points",
+            value: "60.170880,24.942795|60.170879,24.942796|60.170877,24.942796",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_roads_nearest_error_400",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "roads.googleapis.com",
+        path: "/v1/nearestRoads",
+        query: [
+          {
+            key: "points",
+            value: "",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_roads_nearest_error_404",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "roads.googleapis.com",
+        path: "/v1/nearestRoads",
+        query: [
+          {
+            key: "points",
+            value: "0,0",
+          },
+        ],
+      }),
+    }),
+  },
 ];

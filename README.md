@@ -25,6 +25,9 @@ An OpenAPI specification for Google Maps Platform APIs.
 | Places             | Not Started  |
 | Street View Static | Not Started  |
 
+> **Note**: New APIs will be documented using Google Discovery documents and Protobuf files.
+
+
 ## Development
 
 The repository makes use of [Bazel](bazel.build) to generate outputs from the specification and sample requests.

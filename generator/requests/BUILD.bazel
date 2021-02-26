@@ -1,11 +1,12 @@
 load("@npm//@bazel/typescript:index.bzl", "ts_library")
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@npm//jest-cli:index.bzl", "jest_test")
 
 package(default_visibility = ["//visibility:public"])
 
 ts_library(
     name = "_lib",
-    srcs = glob(["**/*.ts"]),
+    srcs = glob(["**/*.ts"], exclude=["**/*.test.ts"]),
     deps = [
         "@npm//@types/node",
         "@npm//@types/yargs",
@@ -33,5 +34,38 @@ genrule(
     cmd = "$(location :_snippets_bin) --output $@",
     tools = [
         ":_snippets_bin",
+    ],
+)
+
+
+ts_library(
+    name = "_requests_test_ts",
+    srcs = ["requests.test.ts"],
+    deps = [
+        "@npm//@types/jest",
+        "@npm//@types/node",
+        "@npm//openapi-types",
+        "@npm//openapi-jsonschema-parameters",
+        "@npm//openapi-request-validator",
+        ":_lib",
+    ],
+)
+
+jest_test(
+    name = "requests_test",
+    data = [
+        ":_requests_test_ts",
+        "//:jest.config.js",
+        "//specification:openapi3",
+        "//:google-maps-platform-openapi3.json"
+    ],
+    args = [
+        "--no-cache",
+        "--no-watchman",
+        "--ci",
+        "--colors",
+        "--runTestsByPath",
+        # TODO jest does not allow symlinks https://github.com/bazelbuild/rules_nodejs/issues/2135#issuecomment-712390888
+        "generator/requests/requests.test.js"
     ],
 )

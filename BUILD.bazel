@@ -4,7 +4,7 @@ load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
 load("@npm//openapi-examples-validator:index.bzl", "openapi_examples_validator_test")
 
 exports_files(
-    ["tsconfig.json"],
+    ["tsconfig.json", "jest.config.js"],
     visibility = ["//visibility:public"],
 )
 

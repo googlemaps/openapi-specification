@@ -17,10 +17,10 @@ An OpenAPI specification for Google Maps Platform APIs.
 | Elevation          | **Complete** |
 | GeoCoding          | **Complete** |
 | GeoLocation        | **Complete** |
+| Distance           | **Complete** |
 | Roads              | **Complete** |
 | Time Zone          | **Complete** |
 | Directions         | Not Started  |
-| Distance           | Not Started  |
 | Maps Static        | Not Started  |
 | Places             | Not Started  |
 | Street View Static | Not Started  |

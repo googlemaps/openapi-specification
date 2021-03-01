@@ -26,6 +26,21 @@ Geometry:
   $ref: "./Geometry.yml"
 PlusCode:
   $ref: "./PlusCode.yml"
+TravelMode:
+  $ref: "./TravelMode.yml"
+# Distance Matrix
+DistanceMatrixElementStatus:
+  $ref: "./DistanceMatrixElementStatus.yml"
+DistanceMatrixResponse:
+  $ref: "./DistanceMatrixResponse.yml"
+DistanceMatrixRow:
+  $ref: "./DistanceMatrixRow.yml"
+DistanceMatrixElement:
+  $ref: "./DistanceMatrixElement.yml"
+DistanceMatrixObject:
+  $ref: "./DistanceMatrixObject.yml"
+DistanceMatrixStatus:
+  $ref: "./DistanceMatrixStatus.yml"
 # Elevation
 ElevationResult:
   $ref: "./ElevationResult.yml"

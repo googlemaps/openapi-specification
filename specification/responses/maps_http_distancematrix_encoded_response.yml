@@ -1,0 +1,85 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_distancematrix_encoded_response]
+{
+  "destination_addresses":
+    [
+      "339 Hicks St, Brooklyn, NY 11201, USA",
+      "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+      "102-01 66th Rd, Queens, NY 11375, USA",
+      "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+      "324 Beach 19th St, Far Rockaway, NY 11691, USA",
+      "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+      "102-01 66th Rd, Queens, NY 11375, USA",
+      "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+      "324 Beach 19th St, Far Rockaway, NY 11691, USA",
+    ],
+  "origin_addresses": ["P.O. Box 793, Brooklyn, NY 11207, USA"],
+  "rows":
+    [
+      {
+        "elements":
+          [
+            {
+              "distance": { "text": "10.4 km", "value": 10423 },
+              "duration": { "text": "33 mins", "value": 1997 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "4.8 km", "value": 4823 },
+              "duration": { "text": "19 mins", "value": 1131 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "13.6 km", "value": 13550 },
+              "duration": { "text": "22 mins", "value": 1330 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "25.6 km", "value": 25550 },
+              "duration": { "text": "30 mins", "value": 1775 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "21.3 km", "value": 21308 },
+              "duration": { "text": "34 mins", "value": 2066 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "4.8 km", "value": 4823 },
+              "duration": { "text": "19 mins", "value": 1131 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "13.6 km", "value": 13550 },
+              "duration": { "text": "22 mins", "value": 1330 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "25.6 km", "value": 25550 },
+              "duration": { "text": "30 mins", "value": 1775 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "21.3 km", "value": 21308 },
+              "duration": { "text": "34 mins", "value": 2066 },
+              "status": "OK",
+            },
+          ],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_distancematrix_encoded_response]

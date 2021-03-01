@@ -3416,6 +3416,429 @@
           }
         }
       }
+    },
+    "/maps/api/distanceMatrix/json": {
+      "get": {
+        "servers": [
+          {
+            "url": "https://maps.googleapis.com"
+          }
+        ],
+        "tags": [
+          "Distance Matrix API"
+        ],
+        "description": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.",
+        "parameters": [
+          {
+            "name": "origins",
+            "description": "The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: `origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:`\n",
+            "required": true,
+            "in": "query",
+            "style": "pipeDelimited",
+            "explode": false,
+            "example": [
+              "Vancouver BC",
+              "Seattle"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "destinations",
+            "description": "One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.",
+            "required": true,
+            "in": "query",
+            "style": "pipeDelimited",
+            "explode": false,
+            "example": [
+              "San Francisco",
+              "Victoria BC"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "mode",
+            "description": "For the calculation of distances, you may specify the transportation mode to use. By default, distances are calculated for driving mode. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time). You can also optionally include a transit_mode and/or a transit_routing_preference.",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/TravelMode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response for the Distance Matrix API query.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "avoid_response": {
+                    "value": {
+                      "destination_addresses": [
+                        "Victoria, BC, Canada"
+                      ],
+                      "origin_addresses": [
+                        "Seattle, WA, USA"
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "341 km",
+                                "value": 340962
+                              },
+                              "duration": {
+                                "text": "5 hours 34 mins",
+                                "value": 20062
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "bicycling_response": {
+                    "value": {
+                      "destination_addresses": [
+                        "San Francisco, CA, USA",
+                        "Victoria, BC, Canada"
+                      ],
+                      "origin_addresses": [
+                        "Vancouver, BC, Canada",
+                        "Seattle, WA, USA"
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "1,725 km",
+                                "value": 1725005
+                              },
+                              "duration": {
+                                "text": "3 days 21 hours",
+                                "value": 335718
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "140 km",
+                                "value": 139623
+                              },
+                              "duration": {
+                                "text": "6 hours 48 mins",
+                                "value": 24476
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        },
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "1,469 km",
+                                "value": 1468780
+                              },
+                              "duration": {
+                                "text": "3 days 7 hours",
+                                "value": 284624
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "146 km",
+                                "value": 146499
+                              },
+                              "duration": {
+                                "text": "2 hours 53 mins",
+                                "value": 10375
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "encoded_response": {
+                    "value": {
+                      "destination_addresses": [
+                        "339 Hicks St, Brooklyn, NY 11201, USA",
+                        "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+                        "102-01 66th Rd, Queens, NY 11375, USA",
+                        "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+                        "324 Beach 19th St, Far Rockaway, NY 11691, USA",
+                        "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+                        "102-01 66th Rd, Queens, NY 11375, USA",
+                        "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+                        "324 Beach 19th St, Far Rockaway, NY 11691, USA"
+                      ],
+                      "origin_addresses": [
+                        "P.O. Box 793, Brooklyn, NY 11207, USA"
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "10.4 km",
+                                "value": 10423
+                              },
+                              "duration": {
+                                "text": "33 mins",
+                                "value": 1997
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "4.8 km",
+                                "value": 4823
+                              },
+                              "duration": {
+                                "text": "19 mins",
+                                "value": 1131
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "13.6 km",
+                                "value": 13550
+                              },
+                              "duration": {
+                                "text": "22 mins",
+                                "value": 1330
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "25.6 km",
+                                "value": 25550
+                              },
+                              "duration": {
+                                "text": "30 mins",
+                                "value": 1775
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "21.3 km",
+                                "value": 21308
+                              },
+                              "duration": {
+                                "text": "34 mins",
+                                "value": 2066
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "4.8 km",
+                                "value": 4823
+                              },
+                              "duration": {
+                                "text": "19 mins",
+                                "value": 1131
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "13.6 km",
+                                "value": 13550
+                              },
+                              "duration": {
+                                "text": "22 mins",
+                                "value": 1330
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "25.6 km",
+                                "value": 25550
+                              },
+                              "duration": {
+                                "text": "30 mins",
+                                "value": 1775
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "21.3 km",
+                                "value": 21308
+                              },
+                              "duration": {
+                                "text": "34 mins",
+                                "value": 2066
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "place_id_response": {
+                    "value": {
+                      "destination_addresses": [
+                        "Sydney NSW, Australia"
+                      ],
+                      "origin_addresses": [
+                        "Bennelong Point, Sydney NSW 2000, Australia"
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "1.7 km",
+                                "value": 1696
+                              },
+                              "duration": {
+                                "text": "8 mins",
+                                "value": 474
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "plus_code_response": {
+                    "value": {
+                      "destination_addresses": [
+                        "San Francisco, CA, USA"
+                      ],
+                      "origin_addresses": [
+                        ""
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "status": "NOT_FOUND"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "response": {
+                    "value": {
+                      "destination_addresses": [
+                        "Lexington, MA, USA",
+                        "Concord, MA, USA"
+                      ],
+                      "origin_addresses": [
+                        "Boston, MA, USA",
+                        "Charlestown, Boston, MA, USA"
+                      ],
+                      "rows": [
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "20.4 km",
+                                "value": 20418
+                              },
+                              "duration": {
+                                "text": "28 mins",
+                                "value": 1680
+                              },
+                              "duration_in_traffic": {
+                                "text": "29 mins",
+                                "value": 1756
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "32.7 km",
+                                "value": 32747
+                              },
+                              "duration": {
+                                "text": "32 mins",
+                                "value": 1933
+                              },
+                              "duration_in_traffic": {
+                                "text": "35 mins",
+                                "value": 2102
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        },
+                        {
+                          "elements": [
+                            {
+                              "distance": {
+                                "text": "18.4 km",
+                                "value": 18394
+                              },
+                              "duration": {
+                                "text": "27 mins",
+                                "value": 1634
+                              },
+                              "duration_in_traffic": {
+                                "text": "29 mins",
+                                "value": 1739
+                              },
+                              "status": "OK"
+                            },
+                            {
+                              "distance": {
+                                "text": "30.7 km",
+                                "value": 30723
+                              },
+                              "duration": {
+                                "text": "31 mins",
+                                "value": 1887
+                              },
+                              "duration_in_traffic": {
+                                "text": "35 mins",
+                                "value": 2089
+                              },
+                              "status": "OK"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/DistanceMatrixResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3873,6 +4296,133 @@
             "type": "string"
           }
         }
+      },
+      "TravelMode": {
+        "type": "string",
+        "title": "Travel Mode",
+        "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+        "enum": [
+          "driving",
+          "walking",
+          "bicycling",
+          "transit"
+        ]
+      },
+      "DistanceMatrixElementStatus": {
+        "type": "string",
+        "title": "Distance Matrix Element Status",
+        "description": "- `OK` indicates the response contains a valid result.\n- `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be geocoded.\n- `ZERO_RESULTS` indicates no route could be found between the origin and destination.\n- `MAX_ROUTE_LENGTH_EXCEEDED` indicates the requested route is too long and cannot be processed.\n",
+        "enum": [
+          "OK",
+          "NOT_FOUND",
+          "ZERO_RESULTS",
+          "MAX_ROUTE_LENGTH_EXCEEDED"
+        ]
+      },
+      "DistanceMatrixResponse": {
+        "type": "object",
+        "title": "Distance Matrix Response Body",
+        "required": [
+          "origin_addresses",
+          "destination_addresses",
+          "rows",
+          "status"
+        ],
+        "properties": {
+          "origin_addresses": {
+            "description": "An array of addresses as returned by the API from your original request. These are formatted by the geocoder and localized according to the language parameter passed with the request.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "destination_addresses": {
+            "description": "An array of addresses as returned by the API from your original request. As with origin_addresses, these are localized if appropriate.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rows": {
+            "description": "An array of elements, which in turn each contain a `status`, `duration`, and `distance` element.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DistanceMatrixRow"
+            }
+          },
+          "status": {
+            "description": "Contains metadata on the request.",
+            "$ref": "#/components/schemas/DistanceMatrixStatus"
+          }
+        }
+      },
+      "DistanceMatrixRow": {
+        "type": "object",
+        "title": "Distance Matrix Row",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "description": "When the Distance Matrix API returns results, it places them within a JSON rows array. Even if no results are returned (such as when the origins and/or destinations don't exist), it still returns an empty array. \nRows are ordered according to the values in the origin parameter of the request. Each row corresponds to an origin, and each element within that row corresponds to a pairing of the origin with a destination value.\nEach row array contains one or more element entries, which in turn contain the information about a single origin-destination pairing.\n",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DistanceMatrixElement"
+            }
+          }
+        }
+      },
+      "DistanceMatrixElement": {
+        "type": "object",
+        "title": "Distance Matrix Element",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "distance": {
+            "$ref": "#/components/schemas/DistanceMatrixObject"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/DistanceMatrixObject"
+          },
+          "status": {
+            "description": "A status for the element.",
+            "$ref": "#/components/schemas/DistanceMatrixElementStatus"
+          }
+        }
+      },
+      "DistanceMatrixObject": {
+        "type": "object",
+        "title": "Distance Matrix Object",
+        "required": [
+          "text",
+          "value"
+        ],
+        "properties": {
+          "text": {
+            "description": "String value.",
+            "type": "string"
+          },
+          "value": {
+            "description": "Numeric value.",
+            "type": "number"
+          }
+        }
+      },
+      "DistanceMatrixStatus": {
+        "type": "string",
+        "title": "Distance Matrix Status",
+        "description": "Status codes returned by service.\n- `OK` indicates the response contains a valid result.\n- `INVALID_REQUEST` indicates that the provided request was invalid.\n- `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit.\n- `MAX_DIMENSIONS_EXCEEDED` indicates that the number of origins or destinations exceeds the per-query limit.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates the service has received too many requests from your application within the allowed time period.\n- `REQUEST_DENIED` indicates that the service denied use of the Distance Matrix service by your application.\n- `UNKNOWN_ERROR` indicates a Distance Matrix request could not be processed due to a server error. The request may succeed if you try again.\n",
+        "enum": [
+          "OK",
+          "INVALID_REQUEST",
+          "MAX_ELEMENTS_EXCEEDED",
+          "MAX_DIMENSIONS_EXCEEDED",
+          "OVER_DAILY_LIMIT",
+          "OVER_QUERY_LIMIT",
+          "REQUEST_DENIED",
+          "UNKNOWN_ERROR"
+        ]
       },
       "ElevationResult": {
         "type": "object",

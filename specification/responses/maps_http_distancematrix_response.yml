@@ -1,0 +1,58 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_distancematrix_response]
+{
+  "destination_addresses": ["Lexington, MA, USA", "Concord, MA, USA"],
+  "origin_addresses": ["Boston, MA, USA", "Charlestown, Boston, MA, USA"],
+  "rows":
+    [
+      {
+        "elements":
+          [
+            {
+              "distance": { "text": "20.4 km", "value": 20418 },
+              "duration": { "text": "28 mins", "value": 1680 },
+              "duration_in_traffic": { "text": "29 mins", "value": 1756 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "32.7 km", "value": 32747 },
+              "duration": { "text": "32 mins", "value": 1933 },
+              "duration_in_traffic": { "text": "35 mins", "value": 2102 },
+              "status": "OK",
+            },
+          ],
+      },
+      {
+        "elements":
+          [
+            {
+              "distance": { "text": "18.4 km", "value": 18394 },
+              "duration": { "text": "27 mins", "value": 1634 },
+              "duration_in_traffic": { "text": "29 mins", "value": 1739 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "30.7 km", "value": 30723 },
+              "duration": { "text": "31 mins", "value": 1887 },
+              "duration_in_traffic": { "text": "35 mins", "value": 2089 },
+              "status": "OK",
+            },
+          ],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_distancematrix_response]

@@ -12,24 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-/geolocation/v1/geolocate:
-  post:
-    $ref: "./geolocate/v1/geolocate.yml"
-/maps/api/elevation/json:
-  get:
-    $ref: "./maps/api/elevation.yml"
-/maps/api/geocode/json:
-  get:
-    $ref: "./maps/api/geocode.yml"
-/maps/api/timezone/json:
-  get:
-    $ref: "./maps/api/timezone.yml"
-/v1/snapToRoads:
-  get:
-    $ref: "./snapToRoads.yml"
-/v1/nearestRoads:
-  get:
-    $ref: "./nearestRoads.yml"
-/maps/api/distanceMatrix/json:
-  get:
-    $ref: "./distanceMatrix.yml"
+type: string
+title: Distance Matrix Element Status
+description: |
+  - `OK` indicates the response contains a valid result.
+  - `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be geocoded.
+  - `ZERO_RESULTS` indicates no route could be found between the origin and destination.
+  - `MAX_ROUTE_LENGTH_EXCEEDED` indicates the requested route is too long and cannot be processed.
+enum:
+  - OK
+  - NOT_FOUND
+  - ZERO_RESULTS
+  - MAX_ROUTE_LENGTH_EXCEEDED

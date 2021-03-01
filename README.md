@@ -1,4 +1,4 @@
-# Google Maps Platform API Specification (OpenAPI3)
+# Google Maps Platform OpenAPI3 Specification
 
 ![Build](https://github.com/googlemaps/openapi-specification/workflows/Build/badge.svg)
 ![Release](https://github.com/googlemaps/openapi-specification/workflows/Release/badge.svg)

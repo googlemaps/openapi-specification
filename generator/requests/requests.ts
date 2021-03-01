@@ -505,7 +505,8 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "points",
-            value: "60.170880,24.942795|60.170879,24.942796|60.170877,24.942796",
+            value:
+              "60.170880,24.942795|60.170879,24.942796|60.170877,24.942796",
           },
         ],
       }),
@@ -539,6 +540,184 @@ export const REQUESTS: SnippetRequest[] = [
             key: "points",
             value: "0,0",
           },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "Boston,MA|Charlestown,MA",
+          },
+          {
+            key: "destinations",
+            value: "Lexington,MA|Concord,MA",
+          },
+          {
+            key: "departure_time",
+            value: "now",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_bicycling",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "Vancouver BC|Seattle",
+          },
+          {
+            key: "destinations",
+            value: "San Francisco|Victoria BC",
+          },
+          {
+            key: "mode",
+            value: "bicycling",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_encoded",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "40.6655101,-73.89188969999998",
+          },
+          {
+            key: "destinations",
+            value:
+              "enc:_kjwFjtsbMt%60EgnKcqLcaOzkGari%40naPxhVg%7CJjjb%40cqLcaOzkGari%40naPxhV:",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_plus_code",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "849VCWC8+R9",
+          },
+          {
+            key: "destinations",
+            value: "San Francisco",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_place_id",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE",
+          },
+          {
+            key: "destinations",
+            value: "Sydney",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_avoid",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "Seattle",
+          },
+          {
+            key: "destinations",
+            value: "Victoria BC",
+          },
+          {
+            key: "avoid",
+            value: "tolls",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_all",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "Seattle, WA",
+          },
+          {
+            key: "destinations",
+            value: "North Fork, WA",
+          },
+          {
+            key: "avoid",
+            value: "highways",
+          },
+          {
+            key: "units",
+            value: "imperial",
+          },
+          {
+            key: "arrival_time",
+            value: "1614709737",
+          },
+          {
+            key: "traffic_model",
+            value: "pessimistic",
+          },
+          {
+            key: "mode",
+            value: "transit",
+          },
+          {
+            key: "transit_mode",
+            value: "bus",
+          },
+          { key: "transit_routing_preference", value: "less_walking" },
         ],
       }),
     }),

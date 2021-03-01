@@ -1,0 +1,46 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_distancematrixstatus] -->
+<h3 class="schema-object" id="DistanceMatrixStatus">Distance Matrix Status</h3>
+<p>Status codes returned by service.</p>
+<ul>
+  <li><code>OK</code> indicates the response contains a valid result.</li>
+  <li>
+    <code>INVALID_REQUEST</code> indicates that the provided request was
+    invalid.
+  </li>
+  <li>
+    <code>MAX_ELEMENTS_EXCEEDED</code> indicates that the product of origins and
+    destinations exceeds the per-query limit.
+  </li>
+  <li>
+    <code>MAX_DIMENSIONS_EXCEEDED</code> indicates that the number of origins or
+    destinations exceeds the per-query limit.
+  </li>
+  <li>
+    <code>OVER_DAILY_LIMIT</code> indicates any of the following:
+    <ul>
+      <li>The API key is missing or invalid.</li>
+      <li>Billing has not been enabled on your account.</li>
+      <li>A self-imposed usage cap has been exceeded.</li>
+      <li>
+        The provided method of payment is no longer valid (for example, a credit
+        card has expired).
+      </li>
+    </ul>
+  </li>
+  <li>
+    <code>OVER_QUERY_LIMIT</code> indicates the service has received too many
+    requests from your application within the allowed time period.
+  </li>
+  <li>
+    <code>REQUEST_DENIED</code> indicates that the service denied use of the
+    Distance Matrix service by your application.
+  </li>
+  <li>
+    <code>UNKNOWN_ERROR</code> indicates a Distance Matrix request could not be
+    processed due to a server error. The request may succeed if you try again.
+  </li>
+</ul>
+<p>type: <code>string</code></p>
+
+<!--- [END maps_http_schema_distancematrixstatus] -->

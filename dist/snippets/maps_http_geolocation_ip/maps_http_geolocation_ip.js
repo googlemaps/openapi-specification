@@ -1,6 +1,8 @@
 // [START maps_http_geolocation_ip]
 var axios = require('axios');
-var data = JSON.stringify({"considerIp":"true"});
+var data = JSON.stringify({
+  "considerIp": "true"
+});
 
 var config = {
   method: 'post',

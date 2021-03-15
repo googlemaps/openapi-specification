@@ -1,6 +1,8 @@
 // [START maps_http_geolocation_error_400]
 var axios = require('axios');
-var data = JSON.stringify({"cellTowers":"foo"});
+var data = JSON.stringify({
+  "cellTowers": "foo"
+});
 
 var config = {
   method: 'post',

@@ -1,9 +1,12 @@
 # [START maps_http_geolocation_error_404]
 import requests
+import json
 
 url = "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
 
-payload="{\n  \"considerIP\": false\n}"
+payload = json.dumps({
+    "considerIP": False
+})
 headers = {
     'content-type': 'application/json'
 }

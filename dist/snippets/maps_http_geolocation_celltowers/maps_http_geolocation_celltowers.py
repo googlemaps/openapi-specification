@@ -1,9 +1,22 @@
 # [START maps_http_geolocation_celltowers]
 import requests
+import json
 
 url = "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
 
-payload="{\n  \"cellTowers\": [\n    {\n      \"cellId\": 170402199,\n      \"locationAreaCode\": 35632,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
+payload = json.dumps({
+    "cellTowers": [
+        {
+            "cellId": 170402199,
+            "locationAreaCode": 35632,
+            "mobileCountryCode": 310,
+            "mobileNetworkCode": 410,
+            "age": 0,
+            "signalStrength": -60,
+            "timingAdvance": 15
+        }
+    ]
+})
 headers = {
     'content-type': 'application/json'
 }

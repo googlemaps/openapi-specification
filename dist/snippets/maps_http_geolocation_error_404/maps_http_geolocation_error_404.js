@@ -1,6 +1,8 @@
 // [START maps_http_geolocation_error_404]
 var axios = require('axios');
-var data = JSON.stringify({"considerIP":false});
+var data = JSON.stringify({
+  "considerIP": false
+});
 
 var config = {
   method: 'post',

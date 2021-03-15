@@ -1,9 +1,12 @@
 # [START maps_http_geolocation_ip]
 import requests
+import json
 
 url = "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
 
-payload="{\n  \"considerIp\": \"true\"\n}"
+payload = json.dumps({
+    "considerIp": "true"
+})
 headers = {
     'content-type': 'application/json'
 }

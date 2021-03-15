@@ -1,9 +1,12 @@
 # [START maps_http_geolocation_error_400]
 import requests
+import json
 
 url = "https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
 
-payload="{\n  \"cellTowers\": \"foo\"\n}"
+payload = json.dumps({
+    "cellTowers": "foo"
+})
 headers = {
     'content-type': 'application/json'
 }

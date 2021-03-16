@@ -1,0 +1,7 @@
+[START maps_http_directions_plus_codes]
+https://maps.googleapis.com/maps/api/directions/json
+  ?origin=JJ88+QC Millbrae
+  &destination=CWC8+R9 Mountain View
+  &mode=transit
+  &key=YOUR_API_KEY
+[END maps_http_directions_plus_codes]

@@ -1,0 +1,54 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type: object
+title: Directions Route
+required:
+  [
+    bounds,
+    copyrights,
+    legs,
+    overview_polyline,
+    summary,
+    warnings,
+    waypoint_order,
+  ]
+properties:
+  legs:
+    description: TODO
+    type: array
+    items:
+      $ref: "./DirectionsRoute.yml"
+  bounds:
+    description: TODO
+    $ref: "./Bounds.yml"
+  copyrights:
+    type: string
+    description: TODO
+  summary:
+    type: string
+    description: TODO
+  waypoint_order:
+    type: array
+    description: TODO
+    items:
+      type: integer
+  warnings:
+    type: array
+    description: TODO
+    items:
+      type: string
+  overview_polyline:
+    description: TODO
+    # $ref: "./DirectionsPolyline.yml"

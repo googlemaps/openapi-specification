@@ -13,12 +13,19 @@
 # limitations under the License.
 
 type: object
-title: Distance Matrix Object
-required: [text, value]
+title: Directions Response Body
+required: [geocoded_waypoints, routes, status]
 properties:
-  text:
-    description: String value. 
-    type: string
-  value:
-    description: Numeric value. 
-    type: number
+  geocoded_waypoints:
+    description: TODO
+    type: array
+    items:
+      $ref: "./DirectionsGeocodedWaypoint.yml"
+  routes:
+    description: TODO
+    type: array
+    items:
+      $ref: "./DirectionsRoute.yml"
+  status:
+    description: Contains metadata on the request.
+    $ref: "./DirectionsStatus.yml"

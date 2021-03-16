@@ -1,0 +1,144 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_plus_codes_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "partial_match": true,
+        "place_id": "ChIJB5B2CJAKj4ARa1qX_PThidM",
+        "types": ["locality", "political"],
+      },
+      {
+        "geocoder_status": "OK",
+        "partial_match": true,
+        "place_id": "ChIJiQHsW0m3j4ARm69rRkrUF3w",
+        "types": ["locality", "political"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 37.6001863, "lng": -122.07595 },
+            "southwest": { "lat": 37.3944, "lng": -122.3869529 },
+          },
+        "copyrights": "Map data ©2021 Google",
+        "fare": { "currency": "USD", "text": "$6.00", "value": 6 },
+        "legs":
+          [
+            {
+              "arrival_time":
+                {
+                  "text": "11:36am",
+                  "time_zone": "America/Los_Angeles",
+                  "value": 1615833360,
+                },
+              "departure_time":
+                {
+                  "text": "10:58am",
+                  "time_zone": "America/Los_Angeles",
+                  "value": 1615831080,
+                },
+              "distance": { "text": "22.5 mi", "value": 36170 },
+              "duration": { "text": "38 mins", "value": 2280 },
+              "end_address": "Mountain View, CA, USA",
+              "end_location": { "lat": 37.3944, "lng": -122.07599 },
+              "start_address": "Millbrae, CA, USA",
+              "start_location": { "lat": 37.6001863, "lng": -122.3868224 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "22.5 mi", "value": 36170 },
+                    "duration": { "text": "38 mins", "value": 2280 },
+                    "end_location": { "lat": 37.3944, "lng": -122.07599 },
+                    "html_instructions": "Train towards San Jose Diridon",
+                    "polyline":
+                      {
+                        "points": "exndFrt~iVPZ?ApCqCVWdEeEvCwCp@u@h@o@j@u@h@u@R]Xc@^o@f@aATg@Zs@b@cAv@uBV}@t@_Ct@{BbA_Df@}ARq@J[bAcDFOjAuDnBkGhAmD`AwCz@oCf@aBHWx@mCdAaD~@yCz@qCbA}CfAiDz@sCz@mC`A{Cr@cCd@yAb@sATy@BEt@aCt@{B|@sCz@mCbA_Dz@kC~@yCdBmFf@{AXaATs@L_@FS@E`@mAb@uAj@kB`@mA`@qAh@gBf@_BRk@Vy@b@sAf@aBHUVy@h@eBh@_Bf@_Bf@}APk@`@qALa@FQd@{Af@cBj@iBf@{ATu@Ng@l@iBf@}Ad@{Aj@aB`@oALc@l@iBtAoEV{@Ne@~@{CxAuEHSx@cC`A}CZcA`@oAb@wAb@uAb@uA^oAFSRm@`@oAj@iBf@}A`@kAVq@HWLYb@eA\\u@LWFMP_@@Cb@}@HQDIHOHOZm@NYVa@JUHMVa@BGj@{@BER[`@k@Za@JMJMFI~@mABEh@m@JMZ]RWDEh@m@FERYb@c@RUX]LOLMX]LMLMv@}@XYJMHM^a@r@u@X[Z]dAiA~AeBr@w@`@e@f@k@TWv@}@nAwAPSp@w@~@iAd@g@VYzAaBd@g@VYbBkBTWnAwA`AiAV[HIFEZ_@h@k@FIb@c@d@e@NOn@m@FGb@g@`@c@RUvA_BxCgDrC}C~IaKhCsCpAuAjB}A`BgAvA}@~BmApAk@\\OtBy@rIyCLExDaBlDoBfBiAhAy@tAeAlEiD`FcEpB}AhA_AjAaAlA_A`Ay@|BgB`BsAnAcAx@o@hA_Ad@_@POPOtGkFnDyClD}Cj@g@nAiA@?x@s@XY@Ax@s@b@_@HIPQHGNO@ANMHIFGZY`@_@VSZ[v@q@`@_@XWTU\\YDE^]f@i@l@o@\\_@^a@l@u@f@m@d@m@t@eANUd@q@t@eAt@eAh@w@x@kAn@aAz@qAx@oAr@mA@Ar@kAh@}@Vc@BEh@}@\\m@FKNUr@kA?Al@cA\\m@bAeBdAeBr@iAj@cAr@mA`A_BVc@R]PY^q@Ze@b@s@^q@f@}@b@s@b@s@h@{@b@m@d@o@?Aj@u@h@q@p@{@h@s@f@o@n@w@PW^e@`@g@FKHIHK`@i@b@k@^e@j@u@p@w@n@s@j@s@JM`@c@j@q@l@u@b@k@NQHKX_@DERWX_@FIBCRWV_@BCV[X]@En@y@NONSX_@PUz@gAfDyEpAgBjB}B`ByBnBqC|@sAvBeDtCoEzA{B~B{Cx@aAvJuLzDsEZ_@Z]xPqSdFeGvCoDzAgBpSqVbE_Fxb@_h@nDgEzAoBfBaCl@{@~@wAT]fAgBdCkE~BgE|AuCTc@NYP[bB_DtByDpBuDbByCz@aBn@kAd@{@x@yAj@gA~AwC|@aBPYbBaDHO~BmE?AfAmBTa@Tc@FKLWTc@d@{@PYBIJQ\\m@LWVc@j@gAXg@lBkDv@yAp@qAvAiCd@w@rByDjBkDTc@HQf@}@d@}@^w@Rc@Ti@`@q@j@iAh@_ADGz@_Bz@}AjAyBlAyBfAsB`AiBbAeB`@u@nA_ChAuBf@}@f@aALSrAeCt@uAzBaEd@}@^u@^q@b@w@^o@^s@`@w@f@{@Vi@Zi@f@}@fAqBdAoBdAoBf@}@LUh@cAl@eAVi@HQTc@Tc@FK\\q@p@eAdCuEzCwFnBmDfAsBbAkBpAkCr@qAZo@d@}@bDcGr@qArAeChAqBTa@v@yAt@uAz@_Bl@iAx@yAf@}@HO|@aBp@oAbB}Cz@}Ap@kAt@sAn@gAz@{Al@gATc@N[Ve@n@mAx@yAr@qA~@eBb@{@h@aAf@}@NY^o@n@mAj@cA`@y@j@cAJSXk@f@{@j@gAh@aAVg@j@cAb@y@`@u@DEb@{@b@w@d@}@BC`@u@\\m@LUNWJSJO`@s@b@y@^o@Tc@\\o@Xe@Xk@Xg@PYnBqDvAiC\\q@JM`@o@P[PYJQJOjC{ElC_FfCuEdBaDfBeDb@{@P[d@y@b@w@Zm@T]DGFMTc@`@o@`@m@`@m@t@gA?An@}@RY^i@h@{@b@o@`@o@\\k@@ATa@HOT_@BGFM@AXi@b@y@Xg@HQTa@Ta@JU^o@LUBEVe@BId@{@LUTa@Vc@LWb@y@d@{@\\q@^u@`@aA^{@`@_A\\w@Xq@n@qA?ARc@Zu@^{@`@y@z@aBv@yAh@aAfAoB@Ef@_ATa@DGx@{ATc@FI\\o@NYVc@Tc@FMb@y@Tc@@A~@cBb@y@n@iAl@gAr@qAf@_Al@eAh@eA\\k@d@aAl@eAh@cAb@w@t@wAn@iAr@qAl@cAp@qAf@aA~@eBh@aA`AiBt@wAh@aAdBaDh@cAt@qAn@oAp@mAl@gA^q@P_@h@aAf@}@JQ?AFKDIXk@v@uAf@_AR_@Ta@n@iAR_@LUZm@JQt@uAv@yAl@gAR]BCtAeCpA{Bd@{@x@{Ap@mAr@sAx@yAZk@Tc@r@sAr@qAz@_Bz@_B`AgBr@sA|@aBt@uAr@qAp@mAn@oAt@uAx@yAl@iAx@{ApEsItEsIjDmGnQe\\pAgChC{EdCsEpBqDtByDxAaDxB}DtDaHrD{Gj@gAbAiBt@uAb@u@LU\\q@HO`@w@p@kA^q@p@qA|@kBx@gBr@iBx@{Bv@_CxAcFj@iBtHqWHYxH{WdCoIn@wBvBoHxDuMzAcFd@_BtCwJ|@{C`AeD~FgSNi@t@gCFUpAmERs@x@qCJF",
+                      },
+                    "start_location":
+                      { "lat": 37.6001863, "lng": -122.3868224 },
+                    "transit_details":
+                      {
+                        "arrival_stop":
+                          {
+                            "location": { "lat": 37.3944, "lng": -122.07599 },
+                            "name": "Mountain View",
+                          },
+                        "arrival_time":
+                          {
+                            "text": "11:36am",
+                            "time_zone": "America/Los_Angeles",
+                            "value": 1615833360,
+                          },
+                        "departure_stop":
+                          {
+                            "location":
+                              { "lat": 37.6001863, "lng": -122.3868224 },
+                            "name": "Millbrae",
+                          },
+                        "departure_time":
+                          {
+                            "text": "10:58am",
+                            "time_zone": "America/Los_Angeles",
+                            "value": 1615831080,
+                          },
+                        "headsign": "San Jose Diridon",
+                        "line":
+                          {
+                            "agencies":
+                              [
+                                {
+                                  "name": "Caltrain",
+                                  "phone": "1 (800) 660-4287",
+                                  "url": "http://www.caltrain.com/",
+                                },
+                              ],
+                            "color": "#f2e4bf",
+                            "name": "Limited A",
+                            "short_name": "LTD A",
+                            "text_color": "#000000",
+                            "vehicle":
+                              {
+                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/rail2.png",
+                                "name": "Train",
+                                "type": "HEAVY_RAIL",
+                              },
+                          },
+                        "num_stops": 7,
+                        "trip_short_name": "236",
+                      },
+                    "travel_mode": "TRANSIT",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint": [],
+            },
+          ],
+        "overview_polyline":
+          {
+            "points": "exndFrt~iVPXhDiD|I}IzAeBtAkBl@aAfAqBp@{AzAyDlA}DtDkLzMgb@xL}_@pIoX`Ucs@pOof@nFaQtGkS|DmM~EkOdFiPvCcJrAiDzByEdCoEfAeBtAiBtBkC`AiArDcE|DoEnDyD|EoF~IeK|FoG~DuEvA{A`BcBv@u@dAkAxK{LhNuOpAuAjB}AxDeCpEyBrCiA`J_DxDaBlDoBpDcCbHoFrIaHdH{F|NoLdMeKxEeEdDwCvCkCjE{DnBgBzB}BrCeDpC{DnEoGjBsClB}CvBoDrA}BlIkNzGeLnCwEvCmEzGyIbEkFxDuEfCyCrCqDvCyDjAyAbFaH|DeFpEkGtDyFpFkIxD}EvJuLzDsEv@}@r_@od@~bAylAbEqFlBsC|AeCdGsKtCoFzRm^zE{IlFaKvEqIfGaLfNiWlA{Br@{Av@{AtAiChE_IzG}LbL{SfVyc@|BiE|@eBnAwB`HmMvDaHtCwFxGcMfFkJ`KcRbGwKnE_IlBsDpEmIjHyMjGkLjKiRbJqPpAsBVa@xG{LxJyQvB{Dx@wAzCsEbBcClCgE~AuCnHaNtB_EbCsFxEmKjH}MzDiHpHaN~H{NfEwHbE{HhMyU~KqSxFkKpEaIxEwIfKqRfLaTjGoL`KaRnQe\\pAgCnGoLfFkJxAaDxB}DhJ}PnBqDdCsE|BeEnB}DlBqEpB{FdCmI~Vw{@|Lab@hSir@dBaGx@qCJF",
+          },
+        "summary": "",
+        "warnings": [],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_plus_codes_response]

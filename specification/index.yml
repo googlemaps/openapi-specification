@@ -34,6 +34,11 @@ components:
 security:
   - ApiKeyAuth: []
 tags:
+  - name: Directions API
+    description: |-
+      The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.
+    externalDocs:
+      url: https://developers.google.com/maps/documentation/directions/overview
   - name: Elevation API
     description: |-
       The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.

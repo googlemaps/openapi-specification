@@ -15,6 +15,9 @@
 /geolocation/v1/geolocate:
   post:
     $ref: "./geolocate/v1/geolocate.yml"
+/maps/api/directions/json:
+  get:
+    $ref: "./directions.yml"
 /maps/api/elevation/json:
   get:
     $ref: "./maps/api/elevation.yml"

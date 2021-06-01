@@ -1,5 +1,6 @@
 # [START maps_http_geolocation_wifi]
 require "uri"
+require "json"
 require "net/http"
 
 url = URI("https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY")
@@ -9,7 +10,21 @@ https.use_ssl = true
 
 request = Net::HTTP::Post.new(url)
 request["content-type"] = "application/json"
-request.body = "{\n  \"considerIp\": \"false\",\n  \"wifiAccessPoints\": [\n    {\n      \"macAddress\": \"84:d4:7e:09:a5:f1\",\n      \"signalStrength\": -43,\n      \"signalToNoiseRatio\": 0\n    },\n    {\n      \"macAddress\": \"44:48:c1:a6:f3:d0\",\n      \"signalStrength\": -55,\n      \"signalToNoiseRatio\": 0\n    }\n  ]\n}"
+request.body = JSON.dump({
+  "considerIp": "false",
+  "wifiAccessPoints": [
+    {
+      "macAddress": "84:d4:7e:09:a5:f1",
+      "signalStrength": -43,
+      "signalToNoiseRatio": 0
+    },
+    {
+      "macAddress": "44:48:c1:a6:f3:d0",
+      "signalStrength": -55,
+      "signalToNoiseRatio": 0
+    }
+  ]
+})
 
 response = https.request(request)
 puts response.read_body

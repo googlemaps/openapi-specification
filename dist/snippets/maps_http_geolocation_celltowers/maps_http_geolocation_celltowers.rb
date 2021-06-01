@@ -1,5 +1,6 @@
 # [START maps_http_geolocation_celltowers]
 require "uri"
+require "json"
 require "net/http"
 
 url = URI("https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY")
@@ -9,7 +10,19 @@ https.use_ssl = true
 
 request = Net::HTTP::Post.new(url)
 request["content-type"] = "application/json"
-request.body = "{\n  \"cellTowers\": [\n    {\n      \"cellId\": 170402199,\n      \"locationAreaCode\": 35632,\n      \"mobileCountryCode\": 310,\n      \"mobileNetworkCode\": 410,\n      \"age\": 0,\n      \"signalStrength\": -60,\n      \"timingAdvance\": 15\n    }\n  ]\n}"
+request.body = JSON.dump({
+  "cellTowers": [
+    {
+      "cellId": 170402199,
+      "locationAreaCode": 35632,
+      "mobileCountryCode": 310,
+      "mobileNetworkCode": 410,
+      "age": 0,
+      "signalStrength": -60,
+      "timingAdvance": 15
+    }
+  ]
+})
 
 response = https.request(request)
 puts response.read_body

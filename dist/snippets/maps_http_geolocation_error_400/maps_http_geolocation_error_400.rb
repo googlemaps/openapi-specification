@@ -1,5 +1,6 @@
 # [START maps_http_geolocation_error_400]
 require "uri"
+require "json"
 require "net/http"
 
 url = URI("https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY")
@@ -9,7 +10,9 @@ https.use_ssl = true
 
 request = Net::HTTP::Post.new(url)
 request["content-type"] = "application/json"
-request.body = "{\n  \"cellTowers\": \"foo\"\n}"
+request.body = JSON.dump({
+  "cellTowers": "foo"
+})
 
 response = https.request(request)
 puts response.read_body

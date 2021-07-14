@@ -5,6 +5,7 @@
 Status codes returned by service.
 
 -   `OK` indicating the API request was successful.
+-   `DATA_NOT_AVAILABLE` indicating that there's no available data for the input locations.
 -   `INVALID_REQUEST` indicating the API request was malformed.
 -   `OVER_DAILY_LIMIT` indicating any of the following:
     -   The API key is missing or invalid.

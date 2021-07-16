@@ -78,8 +78,7 @@ export const REQUESTS: SnippetRequest[] = [
   {
     regionTag: "maps_http_geolocation_error_400_invalid_key",
     request: new PostJsonRequest({
-      url:
-        "https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY",
+      url: "https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY",
       json: parseRequestBody(
         "../../specification/requests/maps_http_geolocation_ip_request.yml"
       ),
@@ -837,13 +836,12 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "origin",
-            value: "JJ88+QC Millbrae",
+            value: "JJ88+P9 Millbrae",
           },
           {
             key: "destination",
-            value: "CWC8+R9 Mountain View",
+            value: "CWC8+9R Mountain View, CA, USA",
           },
-          { key: "mode", value: "transit" },
         ],
       }),
     }),

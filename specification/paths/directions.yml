@@ -209,6 +209,6 @@ responses:
               $ref: "../responses/maps_http_directions_toronto_montreal_response.yml"
           waypoints_optimize_response:
             value:
-            $ref: "../responses/maps_http_directions_waypoints_optimize_response.yml"
+              $ref: "../responses/maps_http_directions_waypoints_optimize_response.yml"
         schema:
           $ref: "../schemas/DirectionsResponse.yml"

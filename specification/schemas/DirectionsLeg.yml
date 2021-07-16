@@ -45,7 +45,9 @@ properties:
     $ref: "./TravelMode.yml"
   steps:
     description: Individual steps that make up the leg.
-    $ref: "./DirectionsStep.yml"
+    type: array
+    items:
+      $ref: "./DirectionsStep.yml"
   traffic_speed_entry:
     description: TODO
     # type: array

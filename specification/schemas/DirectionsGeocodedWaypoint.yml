@@ -13,12 +13,18 @@
 # limitations under the License.
 
 type: object
-title: Distance Matrix Object
-required: [text, value]
-properties:
-  text:
-    description: String value. 
+title: Directions Geocoded Waypoint
+# required: []
+properties: 
+  geocoder_status:
+    description: TODO
     type: string
-  value:
-    description: Numeric value. 
-    type: number
+  place_id:
+    description: TODO
+    type: string
+  types: 
+    description: TODO
+    type: array
+    items: 
+      type: string # TODO use enum
+ 

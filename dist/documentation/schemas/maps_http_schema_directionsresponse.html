@@ -1,0 +1,80 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_directionsresponse] -->
+<h3 class="schema-object" id="DirectionsResponse">Directions Response Body</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>geocoded_waypoints</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a
+          href="#DirectionsGeocodedWaypoint"
+          title="DirectionsGeocodedWaypoint"
+          >DirectionsGeocodedWaypoint</a
+        >>
+      </td>
+      <td>
+        Contains an array with details about the geocoding of origin,
+        destination and waypoints. See
+        <a href="#DirectionsGeocodedWaypoint" title="DirectionsGeocodedWaypoint"
+          >DirectionsGeocodedWaypoint</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>routes</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a href="#DirectionsRoute" title="DirectionsRoute"
+          >DirectionsRoute</a
+        >>
+      </td>
+      <td>
+        Contains an array of routes from the origin to the destination. See
+        Routes below. Routes consist of nested Legs and Steps. See
+        <a href="#DirectionsRoute" title="DirectionsRoute">DirectionsRoute</a>
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        <a href="#DirectionsStatus" title="DirectionsStatus"
+          >DirectionsStatus</a
+        >
+      </td>
+      <td>
+        Contains metadata on the request. See
+        <a href="#DirectionsStatus" title="DirectionsStatus"
+          >DirectionsStatus</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>available_travel_modes</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        Contains an array of available travel modes. This field is returned when
+        a request specifies a travel mode and gets no results. The array
+        contains the available travel modes in the countries of the given set of
+        waypoints. This field is not returned if one or more of the waypoints
+        are 'via waypoints'.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_directionsresponse] -->

@@ -20,7 +20,7 @@ description: |
   - `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).
   - `transit` requests distance calculation via public transit routes (where available). 
 enum:
-  - driving
-  - walking
-  - bicycling
-  - transit
+  - DRIVING
+  - WALKING
+  - BICYCLING
+  - TRANSIT

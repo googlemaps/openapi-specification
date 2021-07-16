@@ -17,9 +17,9 @@ title: Distance Matrix Element
 required: [status]
 properties:
   distance:
-    $ref: "./DistanceMatrixObject.yml"
+    $ref: "./TextValueObject.yml"
   duration:
-    $ref: "./DistanceMatrixObject.yml"
+    $ref: "./TextValueObject.yml"
   status:
     description: A status for the element.
     $ref: "./DistanceMatrixElementStatus.yml"

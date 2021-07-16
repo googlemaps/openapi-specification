@@ -1,0 +1,300 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_region_toledo_es_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJ8f21C60Lag0R_q11auhbf8Y",
+        "types": ["locality", "political"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJgTwKgJcpQg0RaSKMYcHeNsQ",
+        "types": ["locality", "political"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 40.4165207, "lng": -3.7025932 },
+            "southwest": { "lat": 39.862808, "lng": -4.029406799999999 },
+          },
+        "copyrights": "Map data ©2021 Inst. Geogr. Nacional",
+        "legs":
+          [
+            {
+              "distance": { "text": "74.3 km", "value": 74341 },
+              "duration": { "text": "57 mins", "value": 3424 },
+              "end_address": "Madrid, Spain",
+              "end_location": { "lat": 40.4165207, "lng": -3.705076 },
+              "start_address": "Toledo, Spain",
+              "start_location": { "lat": 39.862808, "lng": -4.0273727 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "0.6 km", "value": 615 },
+                    "duration": { "text": "2 mins", "value": 101 },
+                    "end_location":
+                      { "lat": 39.8681019, "lng": -4.029378299999999 },
+                    "html_instructions": "Head <b>northwest</b> on <b>Av. de la Reconquista</b> toward <b>Calle de la Diputación</b>",
+                    "polyline":
+                      {
+                        "points": "quhrF`rqWCBQJUJm@PQFg@Ni@JeBh@}@XaD|@{@Vk@Ns@RUFoA^u@R_AXwA`@WHMBG@C?E?GAC?IC",
+                      },
+                    "start_location": { "lat": 39.862808, "lng": -4.0273727 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 km", "value": 174 },
+                    "duration": { "text": "1 min", "value": 25 },
+                    "end_location": { "lat": 39.8675297, "lng": -4.0275807 },
+                    "html_instructions": "At the roundabout, take the <b>1st</b> exit onto <b>Calle Duque de Lerma</b>",
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "svirFr~qW?AAEAEACACACCCACF_@H[FQNi@j@cB`@qAHW",
+                      },
+                    "start_location":
+                      { "lat": 39.8681019, "lng": -4.029378299999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.6 km", "value": 594 },
+                    "duration": { "text": "2 mins", "value": 92 },
+                    "end_location": { "lat": 39.8688577, "lng": -4.021535 },
+                    "html_instructions": 'At the roundabout, take the <b>3rd</b> exit onto <b>Av. Gral. Villalba</b><div style="font-size:0.9em">Go through 1 roundabout</div>',
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "asirFjsqW@?@??A@?@A@A@?DI@C@C@A@C@C@CDS?A@O?G@G?GAKAA?AAAAA?CAAA?AAAAAAA?AAA?A?AAA?A?A?C@A?A?A@A@A??@A@CBQMIIEEACISCIIWEQEMI[Oi@?CYy@@E?K?A?A?AAA?A?AA??A?AAAAA?AA??AA??AA?A??AA?A?A?A?UcAOi@Mi@Mk@I]AMCOAQAQCWCgA?k@EuCCaCA{@?O",
+                      },
+                    "start_location": { "lat": 39.8675297, "lng": -4.0275807 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 km", "value": 198 },
+                    "duration": { "text": "1 min", "value": 28 },
+                    "end_location": { "lat": 39.8700417, "lng": -4.0208568 },
+                    "html_instructions": "At the roundabout, take the <b>3rd</b> exit onto <b>Av. de Madrid</b>",
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "k{irFrmpW@A@A@A@A@A?A@A@A?A@A?A@A?C?A@A?C?C?C?A?CAC?AAC?AAAACAAA??AAAAAC?AAA?A?A?A?AAA@A?A?A?]W_@U{@a@o@YGACAKBE@A@A@EDCFAH?F?H",
+                      },
+                    "start_location": { "lat": 39.8688577, "lng": -4.021535 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.4 km", "value": 415 },
+                    "duration": { "text": "1 min", "value": 56 },
+                    "end_location": { "lat": 39.8737356, "lng": -4.0207605 },
+                    "html_instructions": "Turn <b>right</b> to stay on <b>Av. de Madrid</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "wbjrFjipWEFCBABC@E@E@G?M?a@Aq@CsBCK?s@As@CcCE{@?{AEo@AGAOECAMA",
+                      },
+                    "start_location": { "lat": 39.8700417, "lng": -4.0208568 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "1.1 km", "value": 1065 },
+                    "duration": { "text": "1 min", "value": 63 },
+                    "end_location": { "lat": 39.8830007, "lng": -4.0190202 },
+                    "html_instructions": "At the roundabout, take the <b>2nd</b> exit onto the <b>A-42</b> ramp to <b>Madrid</b>",
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "{yjrFvhpW?C?CAC?AACAAACAAAACAAAAACAC?A?AAA@C?A?A?A@A?C@A?A@C@A@ABA@AB?@ABE?A?KDGDG@I@KBgACoCEQEW?[A[AgAAu@CiBEi@EKCyAMiAM[G_@I[Mk@S_@Qa@Qa@OQGKEICICYGIAIAKAQCUCO?Q?OAS?]?Q?g@@EAG?GAG?IAIAGCKAYI[KCAo@WmAe@q@SMCiAS_@B",
+                      },
+                    "start_location": { "lat": 39.8737356, "lng": -4.0207605 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "19.2 km", "value": 19159 },
+                    "duration": { "text": "11 mins", "value": 641 },
+                    "end_location":
+                      { "lat": 40.0333486, "lng": -3.925665899999999 },
+                    "html_instructions": "Merge onto <b>A-42</b>",
+                    "maneuver": "merge",
+                    "polyline":
+                      {
+                        "points": "wslrFz}oWKA]C[CS?UA[@u@@kBFaBFsBBS@c@?kA?uCAY?eACS?I?{@ESCK?QCKASAGAMAIC_@Ea@GUE_AQSEOC[G]I]I[I]I]I[I_@KGAGCYGMCUG[I_@Ka@KuBg@]Im@Ok@Mu@OiAUKAMCA?iAQaAM{@MWCUEi@K[GSEOCwA[s@Qu@So@Oc@Ke@KKC_@Io@Qu@Q]ISGMC]I[GoBe@_Cm@kAYyA]i@QaBc@CA_A[oDyAy@]mAe@yD}Aw@]qCgAaAe@u@_@_@S}@i@_Ao@UOIEa@Ye@Ye@WOIu@]o@Wa@OYMsBu@YK[McC}@iE_BYMwDwAOGKESGsHsCgE}AWKg@QeC_AqIaDgC}@gC_AoBu@oAe@{Ak@qCeAeBq@cE{AmCcAkAc@QGQG[MmAe@_Bm@qAg@_A]a@MeA]}@SICsAYw@M}B]cCa@a@G}@OaGaAwASg@KOE[Ge@MICe@M{@YMEGA[M[KyAe@GCQEoAc@c@OwAc@_DeAo@SeA]eAYk@OA?s@Mg@Ia@Iq@ImBYaB_@UGEC}@Yu@YMEg@Uk@Wo@YSMQIo@a@{@g@_@Wg@[mCmBaAs@oA}@]UmAu@q@[e@U{@e@SMKIQKGCGESKoDgCgGmEwCuBKI{AcAYQe@Um@WgAc@IE}@Y_Be@oBm@_Bc@e@OaAYo@Su@Wc@Uq@_@EAe@Yg@[iDwBWQOKOK]UuBqA}AcAeBiAwCoBUOUMGGqA{@i@_@_@Y[WYUYWYWe@a@eB}Ae@_@c@[]WYQm@_@UOc@W_@SCA[QKGMGk@Y}@c@q@]yAs@UMIE_@UWO]S]WcAq@k@c@a@]QKc@][WUQ]Yo@g@}AkAiCgBcC_BgCcBa@WSKg@]g@[MKKE_Am@OKiAq@uBoAm@]qAy@w@g@y@i@gAu@w@i@iCkB}B}AYSCAEE}B{A}AcAeAq@w@i@IGIG_BcAwA}@oKaHmUgOaMeIq@c@e@[ECKG_C}AmCeBmCeBcC_BiBkAmAy@wBuAwGkEkBmAQK_BeASMgAs@yDgCy@i@s@c@ECIGs@e@iCaBoAw@i@_@OKIEYQqAw@kBcAOIm@YKG[OSKICoB}@y@[uAg@u@YyAe@y@U]KgAYs@SwAY{@QICc@GOCwAU{@MwAQ{@IwAOa@C_AG{@Ee@AYA]A]A]?_@A]?y@?M?c@?}@@G?s@@M?Q@Y@K?W@e@@}@DSBM?O@aCPcAHmAJQ@[BWBy@Fu@FC?[BC@]B[@a@BYB]@c@By@BW@u@BcA?]?]?_@A]A]Ca@A[C]E[C]E_@E]G]G[G_@I]I]I[K_@KYKYK_@M[OYK]Q[O[QYO[SYQYQ[SYSYUWS[WWUYWUUWYWWWYWYUYUYU]UYU]S[U]S]Q]S]S_@Q_@Q]Qa@Q_@O_@Oa@Q_@Wq@GQMa@Qe@]cAM_@K_@Qg@M_@K]?C[cA[iAK_@Og@W}@EKACIYEK?CSq@k@mBi@iBK_@Oe@Og@e@aBi@kB[eAi@iBeAqDi@eBMc@}@uCm@oBSq@Ww@Wu@Us@M]Wq@[}@a@iAa@_AeAcCSe@c@_Ac@aA_AoB}@kBg@}@c@}@c@w@Ua@S[S]S]e@y@U]e@u@W_@QWk@{@_AsAk@u@OUW[W]MOIKOS[_@_AkAMMa@e@UWY[UWCEQQWY_@a@e@e@WWCCSQYYq@o@USWWYYYUEEcB{Au@m@wBgBOMgA{@AAm@g@m@e@k@c@eAy@o@i@YU[UYUkByA{CaCkByA",
+                      },
+                    "start_location": { "lat": 39.8830007, "lng": -4.0190202 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "47.1 km", "value": 47071 },
+                    "duration": { "text": "30 mins", "value": 1796 },
+                    "end_location": { "lat": 40.3957623, "lng": -3.7039499 },
+                    "html_instructions": "Keep <b>left</b> to stay on <b>A-42</b>",
+                    "maneuver": "keep-left",
+                    "polyline":
+                      {
+                        "points": "m_jsFlv}ViEkDkFcEsAgAk@c@qB_BIGKI_BoAIIg@_@{E{DgA{@oCwBw@o@m@e@oAaAu@m@yAkA]W?A]Wo@g@aF}Dq@i@oAcAWSQMAAMKWUq@g@mJuHo@g@q@i@eG}Ea@[a@]mCuBg@c@[UWSo@i@YSWUOMKIWSWUYSQMKKKG][WSWQWUo@e@YWWSYUUSYSi@c@YUYU}@u@}@s@WSWS[WKKWSUQSQs@g@_@[q@i@m@g@u@k@m@g@w@m@o@i@g@a@OKMMw@m@cBsAoDqCk@e@m@g@c@a@MKm@k@y@u@KIgAiA{A{AeBkBwCyCoBqBkAoAWWkBmBcAeAWWgAiAmAoAeAgA{@}@s@w@USa@a@w@y@e@g@u@w@QQ_@]KMKKoAqAaBeB}A_BGIAA}@_A_BaByA}AgAiAeAeACCk@q@SUS[U[Ua@Wc@Q_@Ui@Se@Qg@Og@K_@Me@Ki@Ie@EWMw@Gk@UoBSeBYmCMiAMeA[qCYmCIu@YyBE[UmBc@_EIy@_AeIK}@c@cE]sCa@sDAK]wCK_AQqASuBGc@yAuMk@cFCSE]?A?AACASAG?GCMESW_CAISkBUwB?CIi@MgAGa@Kq@WqA_@gBOm@_@gA_@iAc@iAISAASe@CIg@aAi@aAw@sA_@k@i@u@W[EEY_@OOs@w@i@k@c@_@e@a@SOm@c@[Uq@c@a@S_@SUMuAo@uBcA_@Qq@[wMoGYMOIwAq@_LiFCCkEsByGaDuFmC_CgAeFgCq@_@sAu@iBcAgC_B_@W}@k@uBuAgCaBc@YWQa@WCC]UgDuBcBiAq@a@cBiAGCOK_@UWQQKc@YwDeCuA}@u@e@]UCCaCiBu@k@[YQQw@s@kAmA[]SUw@_Aq@}@o@}@U[g@w@i@_Ae@y@o@iA]o@_CwE[m@uA_C{A{Bi@s@UYCC}@aAe@g@EEk@k@w@s@YWu@q@iA_AmA{@iAw@sAy@iCsAu@[qAs@}CcAaCq@aCk@w@OkEiAcEeAUGSGcAUqCq@eDy@aDy@cLwCoBi@aG{A]IqA]sD{@EAu@Sg@Mi@O]KsCq@qA]e@MkBe@yEoAu@SgBi@sCaAMEaBk@uAe@y@Y{@YGA{@[CAyBs@SGaBm@yDoAeBo@i@QyCaAUIcBq@yAm@uB{@wFeCqAi@aBq@w@Y[KqBs@[KuAc@sBm@gAWiCm@wAYs@M_AOWEa@GSCQCYCUGqAQk@G{@K_@GyAY}A[}A]a@K_Be@ECy@WaA_@c@OSI[K_A]mDsAgDoAA?_@OkEaBmAe@uAi@}As@iB}@y@e@g@Wg@WoCiAsBw@eAa@m@UgBq@m@Sy@[yCiAkAc@aA_@q@WwAg@uBy@}@[oAc@mA_@EAu@SQEmAY{@Sk@Oq@Sa@Mi@SEAaC}@qAe@uAi@A?kBq@wAk@kAi@cCmAi@Ww@]wAo@cBs@aC}@aC_ASGsCeAsCeAeBo@]KmAe@_@O{FuBgDoASIkHkCiAa@mCcAYK]M{EgB}B{@]MmFoBWKYK_FiBKECAOGkCaAqDsA}FwBGCWK_@MUIgAc@aDkA]MA?]Mi@SGCMEMEYMcE{AsAi@kAa@oAg@EA_@Qi@Sw@_@c@UOIGEQKKIOIc@[e@_@i@e@OOUUa@c@Y]i@q@U]e@w@IOGMKO[m@Yq@Ui@Uk@Qg@KWSm@o@mBk@eB}@oCgBoFeD_K_@gAqDcLKYIWSk@{@mCk@aBk@cBKUEIKUSc@KU_@o@U]Y_@[a@]a@e@e@YWWSWUSMA?[SKGk@Yk@Uc@Qm@Mg@KEAk@Gq@IaAE_A@W@{@Di@Ds@JA?E@oAR_APc@Fu@N}@NyAX{AV{@N{AXyAV{AXyB^uCf@sDn@{AXq@Lu@N}B^YFoAPkANs@BC@u@?m@CWAMAM?_AIw@Mk@MEAw@Ua@OOGc@QKGg@Uo@a@SO}@q@CCq@i@a@[aHsFeEeDm@g@o@i@q@i@g@_@_@YSOCCOKIGEEWQGEUQIEWWq@i@iCoB_BcAaB{@aBq@_A]]MqA_@{@SQEOCA?}@Oc@IE?A?QCmAM{@Gy@GA?_@CeFWkCOkBIyBKgBKyOy@G?MAYAgAIUA}DScCOa@C{BS}BYuB[yAY_Ce@yBg@}D_A{Cs@m@Mo@OoEeA}@UuCo@wCs@EAICMCYGiBa@eLiC}HiBmBc@_Bc@cAYm@Uu@[CA{@a@c@Ua@Ua@YYQIG_@[g@c@][c@c@WYSW_@c@S[W_@S[S[O[U_@O]Q[M]O[M_@Sg@M_@K_@M_@GS]sAMk@Q{@Kg@SeAI_@O{@SkAu@kEc@eCe@iCSiA]kBWkA[kAOm@Y{@?AQi@_@{@e@aAuAgC{@mAsA{Aw@y@uAgAm@a@w@a@KGeBs@AA[KsAe@{Bo@GCc@Ma@KYIOEYIuCaA[M_@Qi@Uk@Yi@Yi@[}A}@MI_@UoAu@e@YqC_BsBmAUMeDqB{@g@i@[uCeB_@UaDmBgEeC_@U_Ak@_@Ue@Yy@e@iGsDeBcAs@c@i@]e@Ue@[IEiF}C_DkBwA{@SKmBiAuCeBGEyA{@MIcDmBmBiAaBaA}FiDaBaAi@]u@c@_@UeAo@uEoCcBaAwA}@sAw@yA{@aBaAaCwAcEcCu@a@OKeAq@iC_ByCaB_CuA{Aw@gB_AaDcBy@e@cB_AmEiCmBiA[SWO{A}@mDuBsAw@CA]Ua@UiC{Ac@W[Qy@a@w@]]Og@Ma@Ig@K]EOAa@C_@Ak@?c@Bw@Fc@DW@aAPkB^sJxAoInAcBX{@JiCb@_@FyJ|AqFx@eG`Am@Je@Fa@Fk@Jm@FsAHk@Bq@Am@Ak@Cs@Ia@IYI]K[Mi@YYSWOa@Yq@k@m@g@}@u@g@a@eByA}BkB{@s@MKc@]_Aw@}OsMaBsAuBcB]Y{AoA_@Yy@s@KG?AWSsBeBeCsBwBeBwAmA}BmBuBiBsAiAgByAa@_@wBeBcBuAII_Aw@g@_@e@_@{AqAk@g@g@_@mAcAk@c@g@[c@Uc@Sm@S[I]I[G_@Ec@CCA_@AGAuDEgEWaBKgCOe@EyAIgAIs@Go@CkCQq@E{BIgAEa@A[AMAM?oBIs@EOAu@EGAI?s@G{@EoAIgAII?aBKm@Ee@Cy@IWAYCyCSC?WCcAEKAC?OAsBOYCWAuDWIAMAE?u@G{@GKAuCWmIu@kAKc@EKA_AIm@GiAOiAOu@IgBSo@G_AIwAKqAIq@Ei@EsAIcAImCO{CUmCQSAWA}CSo@Eo@EaBMMA_BKSAiEYw@Gg@CcAIwIm@A?IAIAmDS?AsBMI?{@Gk@EcAGsAKWAgBMQAk@Eg@Eg@E_@A_@CGA[CYAKAoAGq@AYCY?oAGoCK]?q@EUAiBIWCkAG}BMmF[aAGm@EkBMMAK?}DWSAq@Ec@EKAC?a@CIAG?E?iAIaAGEA_CMs@EsAKWAkAIKAe@CcCOGA{BMgDSeBMe@E_@EI?QCYAa@AWAQ?M?MAK?KAOA[CYCy@KUEMAKAKC[E_B_@oAWYG{Co@q@MMEA?s@QYIWIq@[m@]EAa@W]S]WWYMO[[gAiAcAeAUWEEUUUWa@c@UWQQcAeAg@k@mAoAIKGG_@c@SSw@}@QSa@k@e@w@e@y@q@cBm@mBs@eCe@_BWy@[eA_@qAg@cBM_@M[O_@O_@Sc@IOAAS_@QWGKOWMOMQW[SWSSKIIG{BqBQQMKCCAAA?SQSS_Ay@u@q@_@]CAAACCCCi@e@KKYWAAs@k@[Y][a@_@WUm@g@",
+                      },
+                    "start_location":
+                      { "lat": 40.0333486, "lng": -3.925665899999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "1.7 km", "value": 1693 },
+                    "duration": { "text": "2 mins", "value": 112 },
+                    "end_location": { "lat": 40.4001319, "lng": -3.7183967 },
+                    "html_instructions": "Take exit <b>2A</b> to merge onto <b>M-30</b> toward <b>A-5</b>/<wbr/><b>Badajoz</b>/<wbr/><b>A-6</b>",
+                    "maneuver": "ramp-right",
+                    "polyline":
+                      {
+                        "points": "oxpuFtlrUIWEGGIEGAGEOAKAA?EAI?G@G?A?IBK@IBI?ADIDIDKJOHKLKHIJGDAFEDAFADADAP@H@BB@?HDDBFFBB@D@BBFBF@H?L?N@b@EHGFUd@Ud@CHg@tAQr@EPGTGRMj@?@Id@S`A?l@?TETETEVCNADMl@q@rDKf@ENMj@ABg@pBCJ?@Oh@Oh@Mh@Oh@Mh@A@Of@Qj@Yx@Yr@s@hB]n@CFQ^CDCDEFEJEJ{BfDwA~BMPINQXEHQ\\CFOd@Qj@AB]fCIl@EREVIl@Ij@SzAEPER?j@@\\?HDn@@`@Fz@DlAFlA",
+                      },
+                    "start_location": { "lat": 40.3957623, "lng": -3.7039499 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.5 km", "value": 487 },
+                    "duration": { "text": "1 min", "value": 38 },
+                    "end_location": { "lat": 40.4026657, "lng": -3.7219427 },
+                    "html_instructions": "Keep <b>left</b> to stay on <b>M-30</b>",
+                    "maneuver": "keep-left",
+                    "polyline":
+                      {
+                        "points": "ysquF~fuU?\\@T?H@V?V?HAd@?@Cj@Gf@G\\GVAFCFIZCFA@K`@Sr@s@EWEMEC?KEECc@DO@O@C@UFE@IBUJa@ZWZKNMPGFMZIPUx@EDMPY`@",
+                      },
+                    "start_location": { "lat": 40.4001319, "lng": -3.7183967 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.7 km", "value": 692 },
+                    "duration": { "text": "1 min", "value": 41 },
+                    "end_location":
+                      { "lat": 40.40876859999999, "lng": -3.7214006 },
+                    "html_instructions": "Keep <b>left</b> to stay on <b>M-30</b>",
+                    "maneuver": "keep-left",
+                    "polyline":
+                      {
+                        "points": "ucruFb}uUkA\\YDK?a@DYBc@BA?aAHi@FW@e@Du@BQ?c@?i@C]AC?KASCc@Gi@Kc@KYGECk@OoA_@q@UYKICy@UMEo@Iw@EyAA",
+                      },
+                    "start_location": { "lat": 40.4026657, "lng": -3.7219427 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 km", "value": 259 },
+                    "duration": { "text": "1 min", "value": 27 },
+                    "end_location": { "lat": 40.4110837, "lng": -3.721353 },
+                    "html_instructions": "Take exit <b>17</b> toward <b>Pᵒ V. del Puerto</b>/<wbr/><b>C/<wbr/> Segovia</b>",
+                    "maneuver": "ramp-right",
+                    "polyline":
+                      {
+                        "points": "yisuFvyuUm@QMAk@BQ?Q@A?a@@A?S@M?[?aABG?{@@A?U?G@S?M?UG",
+                      },
+                    "start_location":
+                      { "lat": 40.40876859999999, "lng": -3.7214006 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 km", "value": 324 },
+                    "duration": { "text": "1 min", "value": 65 },
+                    "end_location": { "lat": 40.4139789, "lng": -3.7209563 },
+                    "html_instructions": "Merge onto <b>P.º de la Virgen del Puerto</b>",
+                    "maneuver": "merge",
+                    "polyline":
+                      { "points": "gxsuFlyuUkAAIAu@Co@Ew@GUCk@GGAmBSUAsAKm@G" },
+                    "start_location": { "lat": 40.4110837, "lng": -3.721353 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.8 km", "value": 764 },
+                    "duration": { "text": "2 mins", "value": 115 },
+                    "end_location": { "lat": 40.413898, "lng": -3.7119377 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Calle de Segovia</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "kjtuF~vuUBu@?m@@_D?q@@kB@y@?e@?a@@{A@iC?C?e@?k@?mA?E?S@e@?}A?]?q@?u@?mC?i@?K?_@?M?O?C?G?]?I?W?_A?}A?M@c@?IAQ",
+                      },
+                    "start_location": { "lat": 40.4139789, "lng": -3.7209563 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.1 km", "value": 95 },
+                    "duration": { "text": "1 min", "value": 25 },
+                    "end_location":
+                      { "lat": 40.4144408, "lng": -3.712543399999999 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Calle de la Villa</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      {
+                        "points": "{ituFr~sUS?W?A?A?A@ERGZCHEREPELAD?@A@A@A?A@A?A?CAAAAA",
+                      },
+                    "start_location": { "lat": 40.413898, "lng": -3.7119377 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "84 m", "value": 84 },
+                    "duration": { "text": "1 min", "value": 21 },
+                    "end_location": { "lat": 40.414991, "lng": -3.7122205 },
+                    "html_instructions": "<b>Calle de la Villa</b> turns <b>right</b> and becomes <b>Calle del Pretil de los Consejos</b>",
+                    "polyline": { "points": "gmtuFjbtUEKCECCCCACEAC?iALEm@" },
+                    "start_location":
+                      { "lat": 40.4144408, "lng": -3.712543399999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "26 m", "value": 26 },
+                    "duration": { "text": "1 min", "value": 7 },
+                    "end_location":
+                      { "lat": 40.4152243, "lng": -3.712259699999999 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Calle del Sacramento</b>",
+                    "maneuver": "turn-left",
+                    "polyline": { "points": "uptuFj`tUm@F" },
+                    "start_location": { "lat": 40.414991, "lng": -3.7122205 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.6 km", "value": 626 },
+                    "duration": { "text": "3 mins", "value": 171 },
+                    "end_location": { "lat": 40.4165207, "lng": -3.705076 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Calle Mayor</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "crtuFr`tUCMIaACYAOE]C[AAI{@?CSiBGk@ESE[UuAESAGCKIg@EWIm@Ge@?GIe@Ga@Ge@AC?IAG?CGo@Ek@Gq@Ek@?ICSEs@CYOiBCa@QkC",
+                      },
+                    "start_location":
+                      { "lat": 40.4152243, "lng": -3.712259699999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint": [],
+            },
+          ],
+        "overview_polyline":
+          {
+            "points": "quhrF`rqWcHzBaNzDeG~A][?k@lA{Dr@mBR]HmA[WQDWE[g@mAeE?]QOeAcE[kFEiJHOEo@{@_@kCqA]@Ol@q@T{NUcDOQKOUi@@QPe@NuFKmJY_Fm@iCeAaCq@wCKkBE}FoBcCUcBIwOXoJOsC]}KcCuHkBsIyAkHqA_ImB_LmCqHmBmHuCiRcIkG{Dk\\gMueAs`@aLeEaFoA{IuA{OqCqGsByPoFmLuBaHmCiLwHoJyFqSwNiEcCoFiBwH{B{DaBsIoFwQqL_IwGiGaEoHsDcG{DuH_GiPuKsMaI_NiJudAoq@iu@if@aJ}FqIuEqNgFmIiBgH_AuFa@qGIaPh@cPhAeIDqFg@kFqA_FyBsEaD}DcEgDeFoC_GiGoR{ImZmHaVuFuNkIsPgE}GqMqP{LoLi]oX}cA}x@qp@{h@sP{MgXwTq|@g~@qGuHoCiHuBoPqCiVaMghAqBoQkAmGsBiGmEiIsFkGmGeEokA}j@eUoN}NoJsKaHuJuHsDaE_DoE}CsF{CeGqD{FaCsCoCmCgFeE}IaFoFwBcG}A}MgDgi@aNoMcDwJcCkOoEcKkDiVgIsXcLwIqC}ImBaHcAaFu@}HkBcMsEuKaEkJaEyG_DoIaDoSwHsLiDyMuEoQ{HgXaKyv@kYyd@{PkMyEsGuCgEgD_EwFcEqK_Rck@yEyM{AcCyBaCeEcC_Cm@_FUiI`A_QzCaZhFiFl@_CCsCYkCu@mF_DkYcUsGaFaE_CaDoA}DgA{Eo@oVqAoWuA_N{@mMuBu]eI}_@{I_IwByCuAqFiEoDeFeC{F_C}J_FyX}AaGwAiDqCuEkCuCgEsCaLuDkJkDue@_Yml@u]wn@e_@gYsP_ZqPsd@_X_DeAwBWgDHiFx@yr@rK{J|AyE`@_EQuBm@}BwAeEkDq_@c[uIeHgh@{b@}F}E{CiBkE{@eLa@iJk@oQ_AgTkAuXiBs`@sDqPqAuV_Bqg@iDuSsAaa@kBqTuA{k@uDkMiC}Aa@}BeAuB}AuD{DuE_FeGyG_DaG_DmKsD{KeBoCwL_LuHwGi@wADaAx@sA|@a@|@\\L`ACl@]l@sAxDc@fB]vCwApI}ApGyBvHoChGiGzJ[n@aA|EiAtH^|J@~Co@|DMb@Sr@s@Ee@KOEiADi@N{ArAm@fAcArBsCh@_Hd@aDK_IqB}Ae@oEWyBOw@B{EF{FSgK_ALg]@_Q?cE@m@UQ]@WlAUl@QQMQIAiALEm@q@EM{AMkAmAoJq@uEqAsOQkC",
+          },
+        "summary": "A-42",
+        "warnings": [],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_region_toledo_es_response]

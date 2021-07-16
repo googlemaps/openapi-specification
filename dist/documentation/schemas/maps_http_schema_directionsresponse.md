@@ -1,0 +1,14 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_directionsresponse] -->
+<h3 class="schema-object" id="DirectionsResponse">Directions Response Body</h3>
+
+type: `object`
+
+| Field                    | Required     | Type                                                                                                | Description                                                                                                                                                                                                                                                                                                   |
+| :----------------------- | ------------ | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `geocoded_waypoints`     | **required** | Array&lt;[DirectionsGeocodedWaypoint](#DirectionsGeocodedWaypoint "DirectionsGeocodedWaypoint")&gt; | Contains an array with details about the geocoding of origin, destination and waypoints. See [DirectionsGeocodedWaypoint](#DirectionsGeocodedWaypoint "DirectionsGeocodedWaypoint") for more information.                                                                                                     |
+| `routes`                 | **required** | Array&lt;[DirectionsRoute](#DirectionsRoute "DirectionsRoute")&gt;                                  | Contains an array of routes from the origin to the destination. See Routes below. Routes consist of nested Legs and Steps. See [DirectionsRoute](#DirectionsRoute "DirectionsRoute") for more information.                                                                                                    |
+| `status`                 | **required** | [DirectionsStatus](#DirectionsStatus "DirectionsStatus")                                            | Contains metadata on the request. See [DirectionsStatus](#DirectionsStatus "DirectionsStatus") for more information.                                                                                                                                                                                          |
+| `available_travel_modes` | optional     | Array&lt;string&gt;                                                                                 | Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'. |
+
+<!--- [END maps_http_schema_directionsresponse] -->

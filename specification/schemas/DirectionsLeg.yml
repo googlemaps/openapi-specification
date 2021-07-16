@@ -1,0 +1,56 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type: object
+title: Directions Leg
+# required: []
+properties:
+  distance:
+    description: Distance of the leg.
+    $ref: "./TextValueObject.yml"
+  duration:
+    description: Duration of the leg.
+    $ref: "./TextValueObject.yml"
+  end_address:
+    description: The end address of the leg.
+    type: string
+  end_location:
+    description: The end location of the leg.
+    $ref: "./LatLngLiteral.yml"
+  html_instructions:
+    type: string
+    description: Formatted instructions for the leg
+  polyline:
+    # $ref: "./DirectionsPolyline.yml"
+    description: TODO
+  start_address:
+    description: The start address of the leg.
+    type: string
+  start_location:
+    description: The start location of the leg.
+    $ref: "./LatLngLiteral.yml"
+  travel_mode:
+    description: The mode of travel for the leg.
+    $ref: "./TravelMode.yml"
+  steps:
+    description: Individual steps that make up the leg.
+    type: array
+    items:
+      $ref: "./DirectionsStep.yml"
+  traffic_speed_entry:
+    description: TODO
+    # type: array
+  via_waypoint:
+    type: array
+    $ref: "./DirectionsViaWaypoint.yml"

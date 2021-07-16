@@ -1,0 +1,333 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_brooklyn_queens_transit_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJCSF8lBZEwokRhngABHRcdoI",
+        "types": ["political", "sublocality", "sublocality_level_1"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJK1kKR2lDwokRBXtcbIvRCUE",
+        "types": ["political", "sublocality", "sublocality_level_1"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 40.7287859, "lng": -73.78972379999999 },
+            "southwest": { "lat": 40.6755839, "lng": -73.9481861 },
+          },
+        "copyrights": "Map data ©2021",
+        "legs":
+          [
+            {
+              "arrival_time":
+                {
+                  "text": "1:33pm",
+                  "time_zone": "America/New_York",
+                  "value": 1626456826,
+                },
+              "departure_time":
+                {
+                  "text": "12:36pm",
+                  "time_zone": "America/New_York",
+                  "value": 1626453414,
+                },
+              "distance": { "text": "10.9 mi", "value": 17464 },
+              "duration": { "text": "57 mins", "value": 3412 },
+              "end_address": "Queens, NY, USA",
+              "end_location": { "lat": 40.728112, "lng": -73.7947583 },
+              "start_address": "Brooklyn, NY, USA",
+              "start_location": { "lat": 40.6781906, "lng": -73.9442531 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "0.2 mi", "value": 350 },
+                    "duration": { "text": "5 mins", "value": 306 },
+                    "end_location": { "lat": 40.6783327, "lng": -73.9481861 },
+                    "html_instructions": "Walk to Nostrand Av",
+                    "polyline":
+                      { "points": "u}gwFpfibMJ@T@E|BK|D?\\IjDAb@AL?A]xE" },
+                    "start_location": { "lat": 40.6781906, "lng": -73.9442531 },
+                    "steps":
+                      [
+                        {
+                          "distance": { "text": "36 ft", "value": 11 },
+                          "duration": { "text": "1 min", "value": 8 },
+                          "end_location":
+                            { "lat": 40.6780173, "lng": -73.9442693 },
+                          "html_instructions": "Head <b>south</b> on <b>Brooklyn Ave</b> toward <b>Atlantic Ave</b>",
+                          "polyline": { "points": "u}gwFpfibMJ@T@" },
+                          "start_location":
+                            { "lat": 40.6781906, "lng": -73.9442531 },
+                          "travel_mode": "WALKING",
+                        },
+                        {
+                          "distance": { "text": "0.2 mi", "value": 247 },
+                          "duration": { "text": "3 mins", "value": 205 },
+                          "end_location":
+                            { "lat": 40.6781752, "lng": -73.9471056 },
+                          "html_instructions": 'Turn <b>right</b> onto <b>Atlantic Ave</b><div style="font-size:0.9em">Destination will be on the left</div>',
+                          "maneuver": "turn-right",
+                          "polyline":
+                            { "points": "s|gwFtfibME|BK|D?\\IjDAb@AL" },
+                          "start_location":
+                            { "lat": 40.6780173, "lng": -73.9442693 },
+                          "travel_mode": "WALKING",
+                        },
+                        {
+                          "distance": { "text": "302 ft", "value": 92 },
+                          "duration": { "text": "2 mins", "value": 93 },
+                          "end_location":
+                            { "lat": 40.6783327, "lng": -73.9481861 },
+                          "html_instructions": 'Take entrance <span class="location"></span>',
+                          "polyline": { "points": "s}gwFjxibM]xE" },
+                          "start_location":
+                            { "lat": 40.678185, "lng": -73.947105 },
+                          "travel_mode": "WALKING",
+                        },
+                      ],
+                    "travel_mode": "WALKING",
+                  },
+                  {
+                    "distance": { "text": "7.6 mi", "value": 12271 },
+                    "duration": { "text": "14 mins", "value": 840 },
+                    "end_location": { "lat": 40.6996082, "lng": -73.8085299 },
+                    "html_instructions": "Train towards Far Rockaway",
+                    "polyline":
+                      {
+                        "points": "q~gwFd_jbMGAF_CBaA@o@@_@@]FaDLiF@o@B{A?KJsFJgE@o@?E@s@@MLoGH{CBm@@o@?G@YDsBJcGD{@@o@@i@@[LiGHiD@o@Bw@?GFgCJgG@UBmA@O@{@JaEHoD@}@Bw@@w@@e@FeCFsCDsBBw@@c@DkBFgDDgB@YDoA@o@?GBg@?OBm@@o@?C@k@Bm@JyEHwEX}JBeA@o@^wPHsEJuET{JHyDXmOFiC@m@BcAH_BBe@B[Ds@TiDJ{ABW@[Bo@Ba@@k@?uBAmCKkIKsDQsFOsDEu@W}DO_CI_AYiDIw@k@}FIs@_@yC]yCGa@_AkGMaAi@aDSeAi@uC{@qEaAiFQ{@O{@e@aCcAmFKk@gA{F[eBg@gCmIyc@UkAiDqQcCsMiCaNsCgO[gBUsAm@_DsByKeEwT{BqLiCyMiB{JgCaN_@qBMk@_AaFoBmK{DkSoA{GoBiKw@iEeBaJuBaLyAyHkCiNYwAWwAyAwHaAeFm@yCi@uCy@mEu@aEu@qD_@{BIc@[eBK]Ss@YmAK]CKOi@Ok@KWCGMi@Ok@I]CMMi@?EGi@AKCa@Cm@GiAEq@C[Kk@Mk@i@kBSw@WgAESAAKi@Km@Kk@Kk@Mk@e@eCEYFC",
+                      },
+                    "start_location": { "lat": 40.6783327, "lng": -73.9481861 },
+                    "transit_details":
+                      {
+                        "arrival_stop":
+                          {
+                            "location":
+                              { "lat": 40.6996082, "lng": -73.8085299 },
+                            "name": "Jamaica",
+                          },
+                        "arrival_time":
+                          {
+                            "text": "12:56pm",
+                            "time_zone": "America/New_York",
+                            "value": 1626454560,
+                          },
+                        "departure_stop":
+                          {
+                            "location":
+                              { "lat": 40.6783327, "lng": -73.9481861 },
+                            "name": "Nostrand Av",
+                          },
+                        "departure_time":
+                          {
+                            "text": "12:42pm",
+                            "time_zone": "America/New_York",
+                            "value": 1626453720,
+                          },
+                        "headsign": "Far Rockaway",
+                        "line":
+                          {
+                            "agencies":
+                              [
+                                {
+                                  "name": "Long Island Rail Road",
+                                  "phone": "1 (718) 558-7400",
+                                  "url": "http://www.mta.info/lirr",
+                                },
+                              ],
+                            "color": "#6e3219",
+                            "name": "Far Rockaway",
+                            "text_color": "#ffffff",
+                            "vehicle":
+                              {
+                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/rail2.png",
+                                "name": "Train",
+                                "type": "HEAVY_RAIL",
+                              },
+                          },
+                        "num_stops": 2,
+                        "trip_short_name": "2850",
+                      },
+                    "travel_mode": "TRANSIT",
+                  },
+                  {
+                    "distance": { "text": "387 ft", "value": 118 },
+                    "duration": { "text": "2 mins", "value": 111 },
+                    "end_location": { "lat": 40.7004832, "lng": -73.8078264 },
+                    "html_instructions": "Walk to Archer Av/Sutphin Blvd",
+                    "polyline": { "points": "qclwFhvnaMqCmAIBQaA" },
+                    "start_location": { "lat": 40.6996082, "lng": -73.8085299 },
+                    "steps":
+                      [
+                        {
+                          "distance": { "text": "289 ft", "value": 88 },
+                          "duration": { "text": "1 min", "value": 89 },
+                          "end_location":
+                            { "lat": 40.700344, "lng": -73.80813599999999 },
+                          "html_instructions": 'Take exit <span class="location"></span>',
+                          "polyline": { "points": "qclwFhvnaMqCmA" },
+                          "start_location":
+                            { "lat": 40.6996082, "lng": -73.8085299 },
+                          "travel_mode": "WALKING",
+                        },
+                        {
+                          "distance": { "text": "98 ft", "value": 30 },
+                          "duration": { "text": "1 min", "value": 22 },
+                          "end_location":
+                            { "lat": 40.7004832, "lng": -73.8078264 },
+                          "html_instructions": "Head <b>east</b> on <b>Archer Ave</b> toward <b>Sutphin Blvd</b>",
+                          "polyline": { "points": "mhlwF~snaMQaA" },
+                          "start_location":
+                            { "lat": 40.7003881, "lng": -73.80815799999999 },
+                          "travel_mode": "WALKING",
+                        },
+                      ],
+                    "travel_mode": "WALKING",
+                  },
+                  {
+                    "distance": { "text": "2.8 mi", "value": 4494 },
+                    "duration": { "text": "22 mins", "value": 1348 },
+                    "end_location": { "lat": 40.728783, "lng": -73.792847 },
+                    "html_instructions": "Bus towards Little Neck Little Neck Pkwy",
+                    "polyline":
+                      {
+                        "points": "gilwF|qnaMEBGWO}@a@aCOiBC[?I]iBKe@?MWoAAIa@sBCOGBOFc@NUHWJWHQy@c@{BIc@_@qB[eBEWy@iECSIg@e@cCg@cBKY_@sAQk@]kAm@sBUs@CIk@_BK[Qm@m@qBk@kB}@}CGM_@uA_@uAc@{AOk@I]k@qBEQG_@Ia@g@gCG[CQGW@KAQKg@_@kB[eBQHs@\\qAn@ID{C|AeD~A_Bv@{@b@e@Ti@Xw@^SJLb@Pn@Rv@HZJb@OMEAC?E??@SDE?]Cw@?K?a@?U?I?O@S@K@I@UD}@RIDi@REBeA`@IDC@G@C@A?KDI@IBM@M@M?M?K?GAG?KAOCIAGCKAICECOEGCGEUKYOi@YAACAkCwAKE_@UICMICAg@QGCEAGAC?C?WAKAM?IAMAM?OAWAWAUAM?EAG?MC]KSGICICKEICIGQGQMm@g@W[EGEEGKEICEIOGK@M?A?AAAGOEMEMCG?AA?IEICc@Ma@M}@Y[Ia@OGCKISIQEIAG?QA{ACQ@yAA[@a@?a@@sAB]?E?Q@Q??@iABQ@e@BQ@OBQBOFODOHOLULo@d@s@`@[P]PSLUNODYLSHIB]LWH[JWDQBu@Tu@VOBID}Af@A@IBk@PYJi@Pa@LGB{Ad@E?MDw@VAK",
+                      },
+                    "start_location": { "lat": 40.700516, "lng": -73.807831 },
+                    "transit_details":
+                      {
+                        "arrival_stop":
+                          {
+                            "location": { "lat": 40.728783, "lng": -73.792847 },
+                            "name": "Utopia Pkwy/75 Av",
+                          },
+                        "arrival_time":
+                          {
+                            "text": "1:30pm",
+                            "time_zone": "America/New_York",
+                            "value": 1626456628,
+                          },
+                        "departure_stop":
+                          {
+                            "location": { "lat": 40.700516, "lng": -73.807831 },
+                            "name": "Archer Av/Sutphin Blvd",
+                          },
+                        "departure_time":
+                          {
+                            "text": "1:08pm",
+                            "time_zone": "America/New_York",
+                            "value": 1626455280,
+                          },
+                        "headsign": "Little Neck Little Neck Pkwy",
+                        "line":
+                          {
+                            "agencies":
+                              [
+                                {
+                                  "name": "MTA",
+                                  "url": "http://www.mta.info/",
+                                },
+                              ],
+                            "color": "#1d59b3",
+                            "name": "Little Neck or Queensborough Community College - Jamaica",
+                            "short_name": "Q30",
+                            "text_color": "#ffffff",
+                            "vehicle":
+                              {
+                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                "name": "Bus",
+                                "type": "BUS",
+                              },
+                          },
+                        "num_stops": 16,
+                      },
+                    "travel_mode": "TRANSIT",
+                  },
+                  {
+                    "distance": { "text": "0.1 mi", "value": 231 },
+                    "duration": { "text": "3 mins", "value": 197 },
+                    "end_location": { "lat": 40.728112, "lng": -73.7947583 },
+                    "html_instructions": "Walk to Queens, NY, USA",
+                    "polyline":
+                      { "points": "}yqwFftkaMr@U?\\J\\Jv@DV@FL~@BZBL\\vC" },
+                    "start_location": { "lat": 40.7287859, "lng": -73.7928353 },
+                    "steps":
+                      [
+                        {
+                          "distance": { "text": "108 ft", "value": 33 },
+                          "duration": { "text": "1 min", "value": 25 },
+                          "end_location":
+                            { "lat": 40.7285274, "lng": -73.7928836 },
+                          "html_instructions": "Head <b>south</b> on <b>Utopia Pkwy</b> toward <b>75th Ave</b>",
+                          "polyline": { "points": "}yqwFftkaMr@U?\\" },
+                          "start_location":
+                            { "lat": 40.7287859, "lng": -73.7928353 },
+                          "travel_mode": "WALKING",
+                        },
+                        {
+                          "distance": { "text": "0.1 mi", "value": 178 },
+                          "duration": { "text": "3 mins", "value": 157 },
+                          "end_location":
+                            { "lat": 40.728112, "lng": -73.7947583 },
+                          "html_instructions": "Turn <b>right</b> onto <b>75th Ave</b>",
+                          "maneuver": "turn-right",
+                          "polyline":
+                            { "points": "ixqwFntkaMJ\\Jv@DV@FL~@BZBL\\vC" },
+                          "start_location":
+                            { "lat": 40.7285274, "lng": -73.7928836 },
+                          "travel_mode": "WALKING",
+                        },
+                        {
+                          "distance": { "text": "66 ft", "value": 20 },
+                          "duration": { "text": "1 min", "value": 15 },
+                          "end_location":
+                            { "lat": 40.728112, "lng": -73.7947583 },
+                          "html_instructions": "Turn <b>right</b> onto <b>175th St</b>",
+                          "maneuver": "turn-right",
+                          "polyline": { "points": "uuqwFf`laM" },
+                          "start_location":
+                            { "lat": 40.728112, "lng": -73.7947583 },
+                          "travel_mode": "WALKING",
+                        },
+                      ],
+                    "travel_mode": "WALKING",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint": [],
+            },
+          ],
+        "overview_polyline":
+          {
+            "points": "u}gwFpfibM`@BQzHMzF]vEGAF_CDqBB}@ZwOXwN`@yQvA{q@rAwn@RwHPwHh@kUxB}eATeFj@qIJyCAcGKkIKsDQsFUiFg@}Hc@iFu@uHi@mEe@{DmAmI}@gFeBgJiCcNiV{pA{XkzAeGk[qF}Y}EmWuZc`BuKmk@{BwLeA}DSu@[cAk@{BQw@Go@QeDImAYwA{A_GkB}JFCqCmAIBQaAMBWuAa@aCOiBCe@i@oCW}Ac@}BCOGBs@Vm@TWHQy@m@_D{ByLM{@e@cCg@cBk@mBo@wBcAgDo@iBwBgHeAkD_AkDiBwG_A{EKm@GW@KMy@{@qEaD|AyRtJ|@fDJb@OMIA_@FcCCcABiB\\yCjAa@Jw@Bg@Cm@Kg@QaB{@yEgC}@Yk@CiCKi@EeA[q@Y_Au@]c@Wa@Q[@OOa@KWyAe@yAc@i@S_@S[GgCCyD@iCDmBFw@Da@F_@L_@VuCfBwAt@uAh@s@Ti@HeCv@cGnBaBd@eA\\CMr@U?\\J\\Jv@F^r@`G",
+          },
+        "summary": "",
+        "warnings":
+          [
+            "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths.",
+          ],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_brooklyn_queens_transit_response]

@@ -14,22 +14,9 @@
 
 # [START maps_http_distancematrix_all_response]
 {
-  "destination_addresses":
-    ["North Fork Campground, 233 Co Hwy 685, Randle, WA 98377, USA"],
+  "destination_addresses": ["North Bend, WA 98045, USA"],
   "origin_addresses": ["Seattle, WA, USA"],
-  "rows":
-    [
-      {
-        "elements":
-          [
-            {
-              "distance": { "text": "156 mi", "value": 250388 },
-              "duration": { "text": "15 hours 17 mins", "value": 54992 },
-              "status": "OK",
-            },
-          ],
-      },
-    ],
+  "rows": [{ "elements": [{ "status": "ZERO_RESULTS" }] }],
   "status": "OK",
 }
 # [END maps_http_distancematrix_all_response]

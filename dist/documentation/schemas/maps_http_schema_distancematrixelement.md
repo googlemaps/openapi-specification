@@ -7,7 +7,7 @@ type: `object`
 | Field      | Required     | Type                                                                                      | Description                                                                                                                                   |
 | :--------- | ------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `status`   | **required** | [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") | A status for the element. See [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") for more information. |
-| `distance` | optional     | [DistanceMatrixObject](#DistanceMatrixObject "DistanceMatrixObject")                      | See [DistanceMatrixObject](#DistanceMatrixObject "DistanceMatrixObject") for more information.                                                |
-| `duration` | optional     | [DistanceMatrixObject](#DistanceMatrixObject "DistanceMatrixObject")                      | See [DistanceMatrixObject](#DistanceMatrixObject "DistanceMatrixObject") for more information.                                                |
+| `distance` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                               |
+| `duration` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                               |
 
 <!--- [END maps_http_schema_distancematrixelement] -->

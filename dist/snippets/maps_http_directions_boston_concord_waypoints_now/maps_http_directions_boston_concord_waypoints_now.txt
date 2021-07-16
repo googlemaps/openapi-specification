@@ -1,0 +1,8 @@
+[START maps_http_directions_boston_concord_waypoints_now]
+https://maps.googleapis.com/maps/api/directions/json
+  ?origin=Boston, MA
+  &destination=Concord, MA
+  &waypoints=via:Charlestown,MA|via:Lexington,MA
+  &departure_time=now
+  &key=YOUR_API_KEY
+[END maps_http_directions_boston_concord_waypoints_now]

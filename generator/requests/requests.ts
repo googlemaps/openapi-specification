@@ -78,8 +78,7 @@ export const REQUESTS: SnippetRequest[] = [
   {
     regionTag: "maps_http_geolocation_error_400_invalid_key",
     request: new PostJsonRequest({
-      url:
-        "https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY",
+      url: "https://www.googleapis.com/geolocation/v1/geolocate?key=INVALID_KEY",
       json: parseRequestBody(
         "../../specification/requests/maps_http_geolocation_ip_request.yml"
       ),
@@ -718,6 +717,365 @@ export const REQUESTS: SnippetRequest[] = [
             value: "bus",
           },
           { key: "transit_routing_preference", value: "less_walking" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_disneyland",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Disneyland",
+          },
+          {
+            key: "destination",
+            value: "Universal Studios Hollywood",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_toronto_montreal",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Toronto",
+          },
+          {
+            key: "destination",
+            value: "Montreal",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_toronto_montreal_bicycling",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Toronto",
+          },
+          {
+            key: "destination",
+            value: "Montreal",
+          },
+          { key: "avoid", value: "highways" },
+          { key: "mode", value: "bicycling" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_brooklyn_queens_transit",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Brooklyn",
+          },
+          {
+            key: "destination",
+            value: "Queens",
+          },
+          { key: "mode", value: "transit" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_brooklyn_queens_transit_departure_time",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Brooklyn",
+          },
+          {
+            key: "destination",
+            value: "Queens",
+          },
+          { key: "mode", value: "transit" },
+          { key: "departure_time", value: "1343641500" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_plus_codes",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "JJ88+P9 Millbrae",
+          },
+          {
+            key: "destination",
+            value: "CWC8+9R Mountain View, CA, USA",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_placed_id",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "place_id:ChIJ685WIFYViEgRHlHvBbiD5nE",
+          },
+          {
+            key: "destination",
+            value: "place_id:ChIJA01I-8YVhkgRGJb0fW4UX7Y",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_boston_concord_waypoints",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Boston, MA",
+          },
+          {
+            key: "destination",
+            value: "Concord, MA",
+          },
+          {
+            key: "waypoints",
+            value: "via:Charlestown,MA|via:Lexington,MA",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_boston_concord_waypoints_now",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Boston, MA",
+          },
+          {
+            key: "destination",
+            value: "Concord, MA",
+          },
+          {
+            key: "waypoints",
+            value: "via:Charlestown,MA|via:Lexington,MA",
+          },
+          {
+            key: "departure_time",
+            value: "now",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_boston_concord_waypoints_via",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Boston, MA",
+          },
+          {
+            key: "destination",
+            value: "Concord, MA",
+          },
+          {
+            key: "waypoints",
+            value: "Charlestown,MA|via:Lexington,MA",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_sydney_perth_waypoints_latlng",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Sydney, AU",
+          },
+          {
+            key: "destination",
+            value: "Perth, AU",
+          },
+          {
+            key: "waypoints",
+            value: "via:-37.81223,144.96254|via:-34.92788,138.60008",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_sydney_perth_waypoints_polyline",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Sydney, AU",
+          },
+          {
+            key: "destination",
+            value: "Perth, AU",
+          },
+          {
+            key: "waypoints",
+            value: "via:enc:lexeF{~wsZejrPjtye@:",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_waypoints_optimize",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Adelaide, SA",
+          },
+          {
+            key: "destination",
+            value: "Adelaide, SA",
+          },
+          {
+            key: "waypoints",
+            value:
+              "optimize:true|Barossa Valley, SA|Clare, SA|Connawarra, SA|McLaren Vale, SA",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_region_toledo_es",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Toledo",
+          },
+          {
+            key: "destination",
+            value: "Madrid",
+          },
+          {
+            key: "region",
+            value: "es",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_region_toledo_default",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Toledo",
+          },
+          {
+            key: "destination",
+            value: "Madrid",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_chicago_los_angeles",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Chicago, IL",
+          },
+          {
+            key: "destination",
+            value: "Los Angeles, CA",
+          },
+          { key: "waypoints", value: "Joplin, MO|Oklahoma City, OK" },
         ],
       }),
     }),

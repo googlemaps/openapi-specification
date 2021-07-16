@@ -1,0 +1,104 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_directionsroute] -->
+<h3 class="schema-object" id="DirectionsRoute">Directions Route</h3>
+<p>Routes consist of nested Legs and Steps.</p>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>bounds</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#Bounds" title="Bounds">Bounds</a></td>
+      <td>
+        Contains the viewport bounding box of the
+        <code>overview_polyline</code>. See
+        <a href="#Bounds" title="Bounds">Bounds</a> for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>copyrights</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        Ccontains an array of warnings to be displayed when showing these
+        directions. You must handle and display these warnings yourself.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>legs</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a href="#DirectionsLeg" title="DirectionsLeg"
+          >DirectionsLeg</a
+        >>
+      </td>
+      <td>
+        an array which contains information about a leg of the route, between
+        two locations within the given route. A separate leg will be present for
+        each waypoint or destination specified. (A route with no waypoints will
+        contain exactly one leg within the legs array.) Each leg consists of a
+        series of steps. See
+        <a href="#DirectionsLeg" title="DirectionsLeg">DirectionsLeg</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>overview_polyline</code></td>
+      <td><strong>required</strong></td>
+      <td>object</td>
+      <td>
+        Contains an object that holds an encoded polyline representation of the
+        route. This polyline is an approximate (smoothed) path of the resulting
+        directions.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>summary</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        Contains a short textual description for the route, suitable for naming
+        and disambiguating the route from alternatives.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>warnings</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;string></td>
+      <td>
+        Contains an array of warnings to be displayed when showing these
+        directions. You must handle and display these warnings yourself.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>waypoint_order</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;integer></td>
+      <td>
+        An array indicating the order of any waypoints in the calculated route.
+        This waypoints may be reordered if the request was passed optimize:true
+        within its waypoints parameter.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>fare</code></td>
+      <td>optional</td>
+      <td></td>
+      <td>
+        If present, contains the total fare (that is, the total ticket costs) on
+        this route. This property is only returned for transit requests and only
+        for routes where fare information is available for all transit legs.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_directionsroute] -->

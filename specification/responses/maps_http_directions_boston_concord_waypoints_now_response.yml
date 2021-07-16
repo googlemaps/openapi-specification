@@ -1,0 +1,382 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_boston_concord_waypoints_now_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJGzE9DS1l44kRoOhiASS_fHg",
+        "types": ["locality", "political"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJGwVKWe5w44kRcr4b9E25-Go",
+        "types": ["neighborhood", "political"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJy1hS39qd44kRzRM2FsiFNoU",
+        "types": ["locality", "political"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJ9SKkJkCa44kRkKR4K5p3zlg",
+        "types": ["locality", "political"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 42.4614275, "lng": -71.0552091 },
+            "southwest": { "lat": 42.3597872, "lng": -71.3496743 },
+          },
+        "copyrights": "Map data ©2021",
+        "legs":
+          [
+            {
+              "distance": { "text": "22.1 mi", "value": 35551 },
+              "duration": { "text": "51 mins", "value": 3034 },
+              "duration_in_traffic": { "text": "55 mins", "value": 3272 },
+              "end_address": "Concord, MA, USA",
+              "end_location": { "lat": 42.460387, "lng": -71.3489306 },
+              "start_address": "Boston, MA, USA",
+              "start_location": { "lat": 42.3597872, "lng": -71.0598473 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "0.2 mi", "value": 397 },
+                    "duration": { "text": "2 mins", "value": 109 },
+                    "end_location":
+                      { "lat": 42.36128129999999, "lng": -71.0637912 },
+                    "html_instructions": "Head <b>north</b> on <b>Cambridge St</b> toward <b>Sudbury St</b>",
+                    "polyline":
+                      {
+                        "points": "ukpaG`{upLKDSHCBULSNUTKHMJKJIJGFIJIJGHCDMZIR[v@Or@CNGREPERADAPETCTAJALALAP?RAT?d@@d@?B@~A?H@d@",
+                      },
+                    "start_location": { "lat": 42.3597872, "lng": -71.0598473 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 mi", "value": 342 },
+                    "duration": { "text": "2 mins", "value": 101 },
+                    "end_location": { "lat": 42.3642865, "lng": -71.0633199 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Staniford St</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "_upaGtsvpLaADgADq@Bc@?Q?S?QASAWCYEMCQE[IGCOCKEICYUWMOIQIUAS@SA",
+                      },
+                    "start_location":
+                      { "lat": 42.36128129999999, "lng": -71.0637912 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 mi", "value": 491 },
+                    "duration": { "text": "3 mins", "value": 181 },
+                    "end_location":
+                      { "lat": 42.3668926, "lng": -71.05850219999999 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Causeway St</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "ygqaGvpvpLQc@AGUg@MYUi@KSOYO[e@eAGOw@kBIOISKW[w@KWO_@Se@Qa@Yq@Q_@Se@[u@]s@ISMSWa@",
+                      },
+                    "start_location": { "lat": 42.3642865, "lng": -71.0633199 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 mi", "value": 512 },
+                    "duration": { "text": "2 mins", "value": 92 },
+                    "end_location": { "lat": 42.3708118, "lng": -71.0614952 },
+                    "html_instructions": "Turn <b>left</b> onto <b>N Washington St</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      {
+                        "points": "axqaGrrupLKFm@ZIFEBABCDEHCDCDEDA?EDEDe@XSLIHKNELGL?@ELCNGLGNEJGDGFSJk@\\oAt@GD_@Ra@RqAr@OHYPEBYLIBMBK@M?K@MBIFKFIFGFGJOFMJ",
+                      },
+                    "start_location":
+                      { "lat": 42.3668926, "lng": -71.05850219999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.5 mi", "value": 818 },
+                    "duration": { "text": "2 mins", "value": 106 },
+                    "end_location": { "lat": 42.3762299, "lng": -71.0552091 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Chelsea St</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "qpraGjevpLGAE@GBGBGBIDI@IBC?C?E?MACCo@eAKO[g@?Aa@q@Yc@MQeAgBIMg@w@QYGGo@aAACY_@IKMOQMe@m@ACMOMM[_@]_@u@_AACW[OUa@e@CEQWMSKO_@s@Q]Sc@KOCE[c@QUY[IKuAwA",
+                      },
+                    "start_location": { "lat": 42.3708118, "lng": -71.0614952 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.1 mi", "value": 181 },
+                    "duration": { "text": "1 min", "value": 26 },
+                    "end_location":
+                      { "lat": 42.37707049999999, "lng": -71.0570588 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Vine St</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      { "points": "mrsaG`~tpLKXGLUd@MTYl@Yl@Wj@GNEZKn@Ih@" },
+                    "start_location": { "lat": 42.3762299, "lng": -71.0552091 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.9 mi", "value": 1399 },
+                    "duration": { "text": "3 mins", "value": 166 },
+                    "end_location": { "lat": 42.3834369, "lng": -71.0716963 },
+                    "html_instructions": "Continue onto <b>Bunker Hill St</b>",
+                    "polyline":
+                      {
+                        "points": "uwsaGriupLI\\Mf@IZgAlEI^YjAYjAYfAK`@Mj@YhAKZKh@Sx@W`AMf@]vA[nAW~@Ob@CJGPc@dAk@xAi@pASf@g@nAYp@s@fBm@zA]z@m@zAIPO`@g@pACFg@nAO\\Sf@GPaAbCw@pBEJGNSf@Sf@KXQb@CFQd@[v@O\\GNSp@",
+                      },
+                    "start_location":
+                      { "lat": 42.37707049999999, "lng": -71.0570588 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.1 mi", "value": 154 },
+                    "duration": { "text": "1 min", "value": 25 },
+                    "end_location": { "lat": 42.384481, "lng": -71.072822 },
+                    "html_instructions": "Continue onto <b>Main St</b>",
+                    "polyline":
+                      {
+                        "points": "o_uaGbexpLQj@O\\O\\ILQBSNQJWPEFMJGDEDA@_@T",
+                      },
+                    "start_location": { "lat": 42.3834369, "lng": -71.0716963 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 mi", "value": 420 },
+                    "duration": { "text": "1 min", "value": 56 },
+                    "end_location":
+                      { "lat": 42.3856915, "lng": -71.07614339999999 },
+                    "html_instructions": "At the traffic circle, take the <b>3rd</b> exit and stay on <b>Main St</b>",
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "_fuaGblxpLIAoAOMFGDGDGFGFEHCFA?AF?@CN?@AJ?F?H@F?F@F@B?@Xl@D@t@XF@HTBN@L?HAHCPEL[|@GJQb@ITGPENUn@GROb@ELCBCFCDCDEFOPUX",
+                      },
+                    "start_location": { "lat": 42.384481, "lng": -71.072822 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.5 mi", "value": 757 },
+                    "duration": { "text": "1 min", "value": 80 },
+                    "end_location": { "lat": 42.3906533, "lng": -71.0824377 },
+                    "html_instructions": "Continue onto <b>Mystic Ave</b>",
+                    "polyline":
+                      {
+                        "points": "qmuaGz`ypLe@f@s@z@MNMPU^KNk@t@EBY^GHMJGFMNy@jAq@`A_C~CkAdBSZ]h@o@`AMNuAjBc@l@Yb@[b@U`@QXW\\g@r@EDIJ",
+                      },
+                    "start_location":
+                      { "lat": 42.3856915, "lng": -71.07614339999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "105 ft", "value": 32 },
+                    "duration": { "text": "1 min", "value": 2 },
+                    "end_location": { "lat": 42.390895, "lng": -71.0826483 },
+                    "html_instructions": "Continue straight to stay on <b>Mystic Ave</b>",
+                    "maneuver": "straight",
+                    "polyline": { "points": "qlvaGfhzpLq@h@" },
+                    "start_location": { "lat": 42.3906533, "lng": -71.0824377 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "1.5 mi", "value": 2453 },
+                    "duration": { "text": "2 mins", "value": 98 },
+                    "end_location": { "lat": 42.4080669, "lng": -71.1011125 },
+                    "html_instructions": "Merge onto <b>I-93 N</b> via the ramp on the <b>left</b> to <b>Lawrence</b>",
+                    "maneuver": "ramp-left",
+                    "polyline":
+                      {
+                        "points": "cnvaGpizpLCP?@[Z]\\a@ZEBYTUPC@CBEDWR]ZIFq@l@aAt@}@v@e@j@GFSTc@n@_@h@SZGJKRQVYd@INEHGHILCBOVi@z@OV?@E^KLg@r@]f@OVGLMRo@`Ai@v@k@|@A?]f@Y`@yClEY`@Y`@}@rACBEFGHy@lAOPwC`E[`@i@p@_@`@m@v@MLuAzAwAtACB}@x@_Av@MJu@p@C@cA~@}BnBcBxA}ArAg@b@o@l@i@`@MHURmB`BSNCB}CnCwBhBA@yBlBOLwBnB_@\\gA~@",
+                      },
+                    "start_location": { "lat": 42.390895, "lng": -71.0826483 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "2.1 mi", "value": 3400 },
+                    "duration": { "text": "5 mins", "value": 321 },
+                    "end_location": { "lat": 42.4147393, "lng": -71.1313878 },
+                    "html_instructions": "Take exit <b>22</b> to merge onto <b>MA-16 W</b>/<wbr/><b>Mystic Valley Pkwy</b> toward <b>Arlington</b>",
+                    "maneuver": "ramp-right",
+                    "polyline":
+                      {
+                        "points": "myyaG||}pLWCIDEBKFyAn@o@PMDA@u@Lg@DM?[?w@Cy@Ig@CMA[Ic@AwBKk@Aa@@UBc@JC@k@ROHYRIFONOLGDOTOTQ\\MZMZM`@?@aA`FYxAWpAGTMj@K\\Ob@Qb@KTW`@]j@KPo@`AKRYd@Yd@_AzAINw@lAKPq@dAWb@S\\CFGL[z@Md@Mj@CFUfAYpACPCHGXI`@GRABGTELGNEJMTGNGJMPKPEDILMRCHQZGTCNMl@Mj@I^?@CHCNAJANQf@GNQb@MVCFU`@GJGNIRIREPENG`@EP?BAFCZABAZATAb@Cp@@BAV?PCbBCx@?r@GhDAf@GpDEfD?\\CrBGtD?RAr@AZ?f@Bh@@n@BP@\\B^@h@?d@Cl@An@?n@?P?T?L@V@VB\\B\\D^Db@Fj@Jh@BJLd@FVLZHPNXR\\TX\\ZFBH@JBJBB@PFFLBDBHDLF`@FZH^H\\DJBJDJBHJVJVBDJTXj@JPVb@PXV`@PVPXNTd@j@XZp@l@p@j@t@r@|@|@\\\\NNDPVb@DF@@FD",
+                      },
+                    "start_location": { "lat": 42.4080669, "lng": -71.1011125 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "1.4 mi", "value": 2288 },
+                    "duration": { "text": "4 mins", "value": 259 },
+                    "end_location": { "lat": 42.3982572, "lng": -71.1416168 },
+                    "html_instructions": "At the traffic circle, take the <b>2nd</b> exit onto <b>MA-16 W</b>/<wbr/><b>Alewife Brook Pkwy</b>",
+                    "maneuver": "roundabout-right",
+                    "polyline":
+                      {
+                        "points": "cc{aGdzcqLBFBDDBD@B?DA@A@ADE?A@EXO`@OR?\\@`@@v@@L?J?DAXCPCLCJCXITITENELCTEFC`AEbA@t@Dr@@l@A@AXCPC\\Ed@M`@KfB_@N?D?RAV@L@B@D?LDLD\\RJHHDVTFFFDLPFH@BPVFHHJLXBH\\`Ab@bAP\\BDR`@\\l@@@LPFLTX@BJJFFFFPPDDDDVRz@r@RPPLPHPJHDB@FBJDNDRFTDTDNBN@N@L?R?j@ApBCH?`BC`A?v@AR?N?P@H@XDFBHBRHJDLHLJLJJJRRLPVXVXb@`@HFt@l@PNFDHFf@b@LLLNtAzALLTXNZN\\J\\HVBNDPDRBPBPBZBX@^Bb@Bl@@f@@Z@X@PDf@Df@BJBNF^JZNh@P^P\\RZr@|@JNXTHFJHVNNLHHPRJT",
+                      },
+                    "start_location": { "lat": 42.4147393, "lng": -71.1313878 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "4.7 mi", "value": 7607 },
+                    "duration": { "text": "5 mins", "value": 298 },
+                    "end_location":
+                      { "lat": 42.421642, "lng": -71.22724869999999 },
+                    "html_instructions": "Merge onto <b>MA-2 W</b> via the ramp to <b>Concord</b>",
+                    "maneuver": "ramp-right",
+                    "polyline":
+                      {
+                        "points": "c|waGbzeqLTn@V|@DPBP?V@P?TKXi@`COr@?BERCJEVENALABCLQbAKf@Op@m@nC?BYpAKl@GTk@lCKb@EXENCHuBfKADUfAm@xCaAzEQv@Ib@Kd@IXENERK^Oh@ITsA|DmA|CQf@g@pAKRa@bAABIRCFKVSb@Wh@Qb@[l@w@|A}AzCW^o@lAUf@KXWp@a@vAERGRI^UjAc@~Be@dCKf@CNI`@SfAShAA?EZA@CPI\\G\\CPWvAWlA]nBGXYnAk@`CuAdFqA`Fe@dBCF{@bDy@tC_@xAsApF_AdEw@~DaAtFEP_AhGa@jDOzAGl@a@hEUbCa@dEKbAM~@AFGd@Kn@M|@]tBABc@xBk@dC]tAMf@[nAQp@EPKb@i@vBeA`Em@bCGTSp@_AzC{@lCCJK\\u@|BITGRWx@KXSl@Od@Oh@?@]jASt@[hAg@vBE\\I`@[~Ag@bCy@nEEVGf@W`B_@pBSnAI`@ENCRSnAi@nDE\\Gb@YlCEXI~@Ix@QbCEr@Cd@Cd@Ep@Ez@E`ACp@G~BA`@?BChCAd@A\\GpCIvFGnF?FGdD?RA`@Ax@AV?JCr@EhAEt@Cf@I`AEl@MrAGf@Eh@QfBOrAMjAIp@?@ALGf@AFe@dDIh@QdAY`Ba@rBa@dBEPGXU`AmAdEaA`DENOd@ITCHYr@KXSn@AB_@jAMd@Sp@Or@YvASrAQhAKbAEn@Gp@E|@Cd@Cx@An@Ah@CxACfB?b@?^",
+                      },
+                    "start_location": { "lat": 42.3982572, "lng": -71.1416168 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "2.1 mi", "value": 3392 },
+                    "duration": { "text": "5 mins", "value": 306 },
+                    "end_location": { "lat": 42.4473497, "lng": -71.2271531 },
+                    "html_instructions": 'Take exit <b>129B</b> to merge onto <b>Waltham St</b> toward <b>Lexington</b><div style="font-size:0.9em">Pass by The UPS Store (on the left in 1.2&nbsp;mi)</div>',
+                    "maneuver": "ramp-right",
+                    "polyline":
+                      {
+                        "points": "gn|aGhqvqLGVCPATAr@At@Ch@AN?@Eb@WlEM`BSzCARCNCLCJEHCDADGHEDEDGDC@MHs@La@E]GQ@SFs@Ik@GC?e@ESAkAKOAaBO]CE?{@GWAkAKA?[CaAGKASAo@Gi@ESAa@E[Ak@E[@M?I@YBGBG@I@C@YHc@NC@s@TOFoAb@UJA?WL[PKFSJUNe@Xc@Xy@d@uBnA]Rc@VMHULk@\\C@c@VQJ[RSJQFKDGDYJa@LWFYHWDOBeARgARQDo@LC@_@FA@}@NGBu@NIBG@QDUD_@FSDWBWBS@OBQ@s@Fm@DO@{@Fe@DY@S@E?IAE?EAMAEAGCMEGEKEIIYWCCMMWY}@_AMOQOa@_@USQKMIQIAAOGYIg@MWISGEC}@g@QOo@c@YW]c@k@u@a@m@o@}@q@{@_@c@ACYYUY_A_A[[GEUSc@_@k@e@]YcAw@c@][WQKCC_@Qa@MeAYiAW_@IMCUGEAKEQGQKKEKIUQQOk@i@aA{@CCu@q@CC]Y][",
+                      },
+                    "start_location":
+                      { "lat": 42.421642, "lng": -71.22724869999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 mi", "value": 276 },
+                    "duration": { "text": "1 min", "value": 46 },
+                    "end_location": { "lat": 42.4488223, "lng": -71.2298603 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Massachusetts Ave</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      {
+                        "points": "}nabGtpvqLg@nAGJu@fBe@bAYr@Q`@EJABGNWl@]r@A@Q`@SX",
+                      },
+                    "start_location": { "lat": 42.4473497, "lng": -71.2271531 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "1.8 mi", "value": 2822 },
+                    "duration": { "text": "4 mins", "value": 248 },
+                    "end_location": { "lat": 42.4456767, "lng": -71.2629326 },
+                    "html_instructions": "Turn <b>left</b> to stay on <b>Massachusetts Ave</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      {
+                        "points": "cxabGrawqL?L?L?H?HAFEXGR]lAQj@_@vAMl@I^CLE\\APCPANAXAj@?\\?LLlF@VBdA?j@BzB?d@@\\@X@NBLHp@H`@Fb@D^Ht@DZ^tC@HNrAP|AL`ALjAHt@NzAHv@Fh@?BHl@@HHb@F\\ZbBNn@Ln@Ln@Hd@Hf@B^@^?v@?v@A~@?r@?b@Bf@Df@BZHh@DX@DHf@f@fCP|@F\\D\\BTBZ?T?J?HCj@E~@?T?J?P@Z@\\Hz@Dt@Dh@@P?F@p@?f@@DE|BA\\?Z?B@T?ZPtCBh@@TDdA?^@NAf@Cd@Ed@Eh@APEh@Eh@Gx@AT?N?@?Z?\\@TB`@B^H~@Dt@BVDb@Fv@F^FX@FDNFRJ^BJd@pADJL\\Pf@Rh@?@DNFV@@DPBT@DBP@R@H@P@\\?@?j@?`@AP?BEj@?L]jG?DAN?R?P@\\@\\DZHZ@FDHL\\DFJRJN@@\\h@",
+                      },
+                    "start_location": { "lat": 42.4488223, "lng": -71.2298603 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "2.5 mi", "value": 4042 },
+                    "duration": { "text": "4 mins", "value": 234 },
+                    "end_location": { "lat": 42.4531621, "lng": -71.3097617 },
+                    "html_instructions": 'Turn <b>right</b> onto <b>MA-2A W</b>/<wbr/><b>Marrett Rd</b><div style="font-size:0.9em">Continue to follow MA-2A W</div>',
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "odabGhp}qLwAtBa@l@SVmC|Da@f@AD_@z@GRKd@Ib@Il@UnB]`DCTGr@KvAAJGt@MrBQxBEj@[|DEd@O~A?HI~@OfBKpAErAEzACrAErBGzAA`@C|@ErAE~AG~BAhA?f@B^Bb@H|@Df@Jx@H|@Df@Dh@@T@Z@T?N?hC@hC@jA?`C?dB?J?n@?lBBtDBxA?T?nA@N?P?TAVCTCTGd@Or@AB]vAGXUv@ABSh@AFMXUl@Wj@e@z@u@rAWj@c@~@Sj@A@Sf@ABY~@Wz@Ux@IZADMd@?@Ib@Gj@Gx@A@GbAEd@Gt@AHIfACVEj@IjA[hEKbBOvBAHYzDMbBEn@Ej@s@~JQhCGn@GfAIfA_@zEEv@C\\APCZ?FCf@ARGrAE|@?JAVEz@KdCKnCG~A?@[pIA^APEzACr@?T",
+                      },
+                    "start_location": { "lat": 42.4456767, "lng": -71.2629326 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "2.2 mi", "value": 3474 },
+                    "duration": { "text": "4 mins", "value": 237 },
+                    "end_location": { "lat": 42.4602875, "lng": -71.348514 },
+                    "html_instructions": "Slight <b>right</b> onto <b>Lexington Rd</b>",
+                    "maneuver": "turn-slight-right",
+                    "polyline":
+                      {
+                        "points": "gsbbG~tfrLKRELMf@S`AW`AIRGPKVWh@uAtCsAlC[t@Qn@_@hAk@jBO`@Qb@ILa@t@wAjCo@fAo@hAi@z@Wf@Ub@EJIPMZOh@Sl@K^K^Mp@CJANEVCZA\\EpACh@CZA\\EZCPIh@I`@GVWdAMb@GRo@`CQh@e@bB}@xCMb@Uz@ADOx@QnAEl@AZAn@HhAHfADj@?@@R?T?D?RA\\CnAAPC|@Cx@An@Cr@?d@AX?V?f@?^@l@Bv@BhADpADhAFp@JjALdBPrBFh@LtAH|@FxA@LB\\?D@`@Bp@?r@@|@Bl@@^D^BXJf@DZXpAHd@BRF`@B^@RBx@BjAFtBBbAFxAXbFLlBBn@?N?H?d@?FC|@OzCMnBG`AOzAI`ACXOhAETStAO~@O`@GNQZc@l@i@|@[f@q@fAMVKXa@nAc@hAO^KXMRIN",
+                      },
+                    "start_location": { "lat": 42.4531621, "lng": -71.3097617 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "203 ft", "value": 62 },
+                    "duration": { "text": "1 min", "value": 9 },
+                    "end_location":
+                      { "lat": 42.46078600000001, "lng": -71.348839 },
+                    "html_instructions": "Continue onto <b>MA-62 E</b>",
+                    "polyline": { "points": "y_dbGdgnrLa@JEDe@b@UJ" },
+                    "start_location": { "lat": 42.4602875, "lng": -71.348514 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "276 ft", "value": 84 },
+                    "duration": { "text": "1 min", "value": 11 },
+                    "end_location": { "lat": 42.4614275, "lng": -71.3493778 },
+                    "html_instructions": "Continue straight onto <b>Monument Square</b>",
+                    "maneuver": "straight",
+                    "polyline": { "points": "}bdbGfinrLuAhAi@`@" },
+                    "start_location":
+                      { "lat": 42.46078600000001, "lng": -71.348839 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "486 ft", "value": 148 },
+                    "duration": { "text": "1 min", "value": 23 },
+                    "end_location": { "lat": 42.460387, "lng": -71.3489306 },
+                    "html_instructions": "Turn <b>left</b> onto <b>MA-62 W</b>",
+                    "maneuver": "turn-left",
+                    "polyline": { "points": "}fdbGrlnrLTx@~AcAJIf@[PQRW" },
+                    "start_location": { "lat": 42.4614275, "lng": -71.3493778 },
+                    "travel_mode": "DRIVING",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint":
+                [
+                  {
+                    "location":
+                      { "lat": 42.3781732, "lng": -71.06024889999999 },
+                    "step_index": 6,
+                    "step_interpolation": 0.2067887491420608,
+                  },
+                  {
+                    "location": { "lat": 42.4473497, "lng": -71.2271531 },
+                    "step_index": 15,
+                    "step_interpolation": 1,
+                  },
+                ],
+            },
+          ],
+        "overview_polyline":
+          {
+            "points": "ukpaG`{upL}B|AkAbBy@nCU~@SjC?dB@hB@d@aADyBHu@?qAGcCk@sAw@i@?SAQc@Wo@c@cAqAoCwCgHiD}He@u@y@b@UTgA`Ao@t@Ql@]n@gAp@{GvDoBd@e@b@k@R}@VSAs@iAiAkBiFgI{BoCiEiFaCgEkA{A_BcBSf@wAvC_@z@QjAk@jCeCdKqC`L_BnG_AfCkHtQcKlWaCtG_@z@[PcAt@]Xi@RoAOMFOJONMXC`A\\z@z@ZPVBp@m@hB}ApE_HzIcJ`M_HxJgBlCeAlAqCbCaEfD_C`C_B`C}AfCiAlBE^s@`AcA`BeCvDiIrLuIhLiFvFoC`CeNtLaLrJcGfFwClCgA~@WCIDQJwCfAmBTuDQeEYgCNyAr@q@j@_AdB}A`HgAlFy@zBqF|IwDlG{@tCs@jDu@pCmAtBk@nAi@hCIf@m@jBqAvC]jCs@~e@CjCJhC?dH^hFd@rBz@dBr@t@PDZHXTFN^jBt@zBhCpE`BvBvEjEl@l@\\t@RVRJNKZWt@O~@BvA?dAO`Cm@dCChBFzAKlE_A`A?d@H`Ah@xAdBfCzF`B`C~ClChBt@jAP|A?lKGj@Jv@\\|C~CfDtChC~Ch@bB`@bEZxFf@tBb@|@fAxAz@v@bAz@~@tCDz@uA`H{ErU}Gp\\{C`KeEnKiAhCiEfIiB`Ey@~CaD|P{@tEwAfHyFnTyCzKsCvLyBtLwBbPaB`Q}AxK{DtPeDrMsCfJ{ClJaAlDsA`GcCjMsAjIyBtO_AhM_@dOe@zZa@zJ{AlOgBvLqAdGkDxLyBrGkAbFw@pGUnEKzGKlBIhDgAdPg@dAmA^_AMe@HiCWqE_@cHe@wFa@kBPmFhB}OhJcDxAiHvAsDt@oDf@sGb@eAQw@m@gBkBkCuBiBi@iBcAiA{@iAyAcDkEoEmEqDuCqAy@gG}A{@c@uCgC{AsA][g@nA}@rBwAdD_AtBg@jAAh@yBzIQbEZpQpDxZjAbIt@tDN~CAnEVtC|A~IEtEZ`GApHVpFD|Cg@jHRbFn@zFvBlG^jBDnDe@dKRrBZv@v@nA{GxJc@l@g@nAu@fF_BrR}ArRi@fSOpIVhDf@`HBpVFdM_@dC}@lDe@nAiChFqAxCgAfDo@`CYjCm@vHwF|w@kApXe@~MChAQ`@cA~DaChFoBbEq@xBmApD{HhNgBbG_@dGUtBw@bDsEbPi@rEVlFEdEOzIHnE^xGhA~NPvHjAjHz@pTPvDSfGo@nIm@nE_@`BYj@{CzEsChHg@P{@n@_CjBTx@~AcAr@e@d@i@",
+          },
+        "summary": "MA-2 W",
+        "warnings": [],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_boston_concord_waypoints_now_response]

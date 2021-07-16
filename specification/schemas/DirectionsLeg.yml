@@ -17,28 +17,34 @@ title: Directions Leg
 # required: []
 properties:
   distance:
-    description: TODO
+    description: Distance of the leg.
     $ref: "./TextValueObject.yml"
   duration:
-    description: TODO
+    description: Duration of the leg.
     $ref: "./TextValueObject.yml"
+  end_address:
+    description: The end address of the leg.
+    type: string
   end_location:
-    description: TODO
+    description: The end location of the leg.
     $ref: "./LatLngLiteral.yml"
   html_instructions:
     type: string
-    description: TODO
+    description: Formatted instructions for the leg
   polyline:
     # $ref: "./DirectionsPolyline.yml"
     description: TODO
+  start_address:
+    description: The start address of the leg.
+    type: string
   start_location:
-    description: TODO
+    description: The start location of the leg.
     $ref: "./LatLngLiteral.yml"
   travel_mode:
-    description: TODO
+    description: The mode of travel for the leg.
     $ref: "./TravelMode.yml"
   steps:
-    description: TODO
+    description: Individual steps that make up the leg.
     $ref: "./DirectionsStep.yml"
   traffic_speed_entry:
     description: TODO

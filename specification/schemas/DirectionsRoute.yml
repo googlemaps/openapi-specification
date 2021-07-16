@@ -14,6 +14,7 @@
 
 type: object
 title: Directions Route
+description: Routes consist of nested Legs and Steps.
 required:
   [
     bounds,
@@ -26,29 +27,32 @@ required:
   ]
 properties:
   legs:
-    description: TODO
+    description: an array which contains information about a leg of the route, between two locations within the given route. A separate leg will be present for each waypoint or destination specified. (A route with no waypoints will contain exactly one leg within the legs array.) Each leg consists of a series of steps.
     type: array
     items:
-      $ref: "./DirectionsRoute.yml"
+      $ref: "./DirectionsLeg.yml"
   bounds:
-    description: TODO
+    description: Contains the viewport bounding box of the `overview_polyline`.
     $ref: "./Bounds.yml"
   copyrights:
     type: string
-    description: TODO
+    description: Ccontains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
   summary:
     type: string
-    description: TODO
+    description: Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives.
   waypoint_order:
     type: array
-    description: TODO
+    description: An array indicating the order of any waypoints in the calculated route. This waypoints may be reordered if the request was passed optimize:true within its waypoints parameter.
     items:
       type: integer
   warnings:
     type: array
-    description: TODO
+    description: Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
     items:
       type: string
   overview_polyline:
-    description: TODO
-    # $ref: "./DirectionsPolyline.yml"
+    description: Contains an object that holds an encoded polyline representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.
+    $ref: "./DirectionsOverviewPolyline.yml"
+  fare:
+    description: If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.
+    # $ref: "./DirectionsFare.yml" TODO(jpoehnelt)

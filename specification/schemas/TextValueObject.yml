@@ -14,6 +14,7 @@
 
 type: object
 title: Text Value Object
+description: An object containing a numeric value and its formatted text representation.
 required: [text, value]
 properties:
   text:

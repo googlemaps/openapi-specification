@@ -195,11 +195,11 @@
         "tags": [
           "Directions API"
         ],
-        "description": "TODO",
+        "description": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
         "parameters": [
           {
             "name": "origin",
-            "description": "TODO\n",
+            "description": "The place ID, address, or textual latitude/longitude value from which you wish to calculate directions/\n* Place IDs must be prefixed with place_id:. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see Place Autocomplete and Directions. For more about place IDs, see the Place ID overview.\n  `origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE`\n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  `origin=24+Sussex+Drive+Ottawa+ON`\n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  `origin=41.43206,-81.38992`\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20). Global code is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is 849VCWC8%2BR9). Compound code is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is CWC8%2BR9%20Mountain%20View%20CA%20USA).\n",
             "required": true,
             "in": "query",
             "example": "Vancouver, BC",
@@ -209,7 +209,7 @@
           },
           {
             "name": "destination",
-            "description": "TODO",
+            "description": "The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.",
             "required": true,
             "in": "query",
             "example": "Victoria, BC",
@@ -219,11 +219,40 @@
           },
           {
             "name": "mode",
-            "description": "When you calculate directions, you may specify the transportation mode to use. By default, directions are calculated as driving directions. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time).",
+            "description": "When you calculate directions, you may specify the transportation mode to use. By default, directions are calculated as driving directions. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time).\n",
             "in": "query",
             "schema": {
               "$ref": "#/components/schemas/TravelMode"
             }
+          },
+          {
+            "name": "waypoints",
+            "description": "Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:\n* Place ID: The unique value specific to a location (ChIJGwVKWe5w44kRcr4b9E25-Go).\n* Address string (Charlestown, Boston,MA)\n* Latitude/longitude coordinates (lat/lng): an explicit value pair. (-34.92788%2C138.60008 comma, no space)\n* Encoded polyline that can be specified by a set of any of the above. (enc:lexeF{~wsZejrPjtye@:)\n",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alternatives",
+            "description": "If set to true, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints.\n",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "avoid",
+            "description": "Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n",
+            "in": "query",
+            "example": "highways",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "description": "The language in which to return results.\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian.\n"
           }
         ],
         "responses": {
@@ -23914,6 +23943,7 @@
       "TextValueObject": {
         "type": "object",
         "title": "Text Value Object",
+        "description": "An object containing a numeric value and its formatted text representation.",
         "required": [
           "text",
           "value"
@@ -24037,14 +24067,14 @@
         ],
         "properties": {
           "geocoded_waypoints": {
-            "description": "TODO",
+            "description": "Contains an array with details about the geocoding of origin, destination and waypoints.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DirectionsGeocodedWaypoint"
             }
           },
           "routes": {
-            "description": "TODO",
+            "description": "Contains an array of routes from the origin to the destination. See Routes below. Routes consist of nested Legs and Steps.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DirectionsRoute"
@@ -24053,6 +24083,13 @@
           "status": {
             "description": "Contains metadata on the request.",
             "$ref": "#/components/schemas/DirectionsStatus"
+          },
+          "available_travel_modes": {
+            "description": "Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -24101,34 +24138,42 @@
         "title": "Directions Leg",
         "properties": {
           "distance": {
-            "description": "TODO",
+            "description": "Distance of the leg.",
             "$ref": "#/components/schemas/TextValueObject"
           },
           "duration": {
-            "description": "TODO",
+            "description": "Duration of the leg.",
             "$ref": "#/components/schemas/TextValueObject"
           },
+          "end_address": {
+            "description": "The end address of the leg.",
+            "type": "string"
+          },
           "end_location": {
-            "description": "TODO",
+            "description": "The end location of the leg.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "html_instructions": {
             "type": "string",
-            "description": "TODO"
+            "description": "Formatted instructions for the leg"
           },
           "polyline": {
             "description": "TODO"
           },
+          "start_address": {
+            "description": "The start address of the leg.",
+            "type": "string"
+          },
           "start_location": {
-            "description": "TODO",
+            "description": "The start location of the leg.",
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "travel_mode": {
-            "description": "TODO",
+            "description": "The mode of travel for the leg.",
             "$ref": "#/components/schemas/TravelMode"
           },
           "steps": {
-            "description": "TODO",
+            "description": "Individual steps that make up the leg.",
             "$ref": "#/components/schemas/DirectionsStep"
           },
           "traffic_speed_entry": {
@@ -24143,6 +24188,7 @@
       "DirectionsRoute": {
         "type": "object",
         "title": "Directions Route",
+        "description": "Routes consist of nested Legs and Steps.",
         "required": [
           "bounds",
           "copyrights",
@@ -24154,40 +24200,54 @@
         ],
         "properties": {
           "legs": {
-            "description": "TODO",
+            "description": "an array which contains information about a leg of the route, between two locations within the given route. A separate leg will be present for each waypoint or destination specified. (A route with no waypoints will contain exactly one leg within the legs array.) Each leg consists of a series of steps.",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/DirectionsRoute"
+              "$ref": "#/components/schemas/DirectionsLeg"
             }
           },
           "bounds": {
-            "description": "TODO",
+            "description": "Contains the viewport bounding box of the `overview_polyline`.",
             "$ref": "#/components/schemas/Bounds"
           },
           "copyrights": {
             "type": "string",
-            "description": "TODO"
+            "description": "Ccontains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself."
           },
           "summary": {
             "type": "string",
-            "description": "TODO"
+            "description": "Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives."
           },
           "waypoint_order": {
             "type": "array",
-            "description": "TODO",
+            "description": "An array indicating the order of any waypoints in the calculated route. This waypoints may be reordered if the request was passed optimize:true within its waypoints parameter.",
             "items": {
               "type": "integer"
             }
           },
           "warnings": {
             "type": "array",
-            "description": "TODO",
+            "description": "Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.",
             "items": {
               "type": "string"
             }
           },
           "overview_polyline": {
-            "description": "TODO"
+            "description": "Contains an object that holds an encoded polyline representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.",
+            "type": "object",
+            "title": "Directions Overview Polyline",
+            "required": [
+              "points"
+            ],
+            "properties": {
+              "points": {
+                "description": "An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.",
+                "type": "string"
+              }
+            }
+          },
+          "fare": {
+            "description": "If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs."
           }
         }
       },

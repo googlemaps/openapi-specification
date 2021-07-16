@@ -17,15 +17,11 @@
 import { createWriteStream, readFileSync } from "fs";
 import { options } from "yargs";
 import tar from "tar-stream";
-import stringify from "remark-stringify";
-import unified from "unified";
 import { OpenAPIV3 } from "openapi-types";
-import gfm from "remark-gfm";
 import slugify from "slugify";
-import remarkHtml from "remark-html";
-import remarkParse from "remark-parse";
 import prettier from "prettier";
 import { build } from "./build";
+import { mdProcessor, htmlProcessor } from "./processors";
 
 const argv = options({
   output: {
@@ -37,15 +33,6 @@ const argv = options({
     demandOption: true,
   },
 }).argv;
-
-const mdProcessor = unified().use(gfm).use(stringify, {
-  bullet: "-",
-  fence: "`",
-  fences: true,
-  incrementListMarker: false,
-});
-
-const htmlProcessor = unified().use(remarkParse).use(gfm).use(remarkHtml);
 
 const main = async (argv: any) => {
   const spec = JSON.parse(

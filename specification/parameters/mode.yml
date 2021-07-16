@@ -1,0 +1,5 @@
+name: mode
+description: For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. 
+in: query
+schema:
+  $ref: "../schemas/TravelMode.yml"

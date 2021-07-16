@@ -27,17 +27,17 @@ requestBody:
   content:
     "application/json":
       schema:
-         $ref: "../../../schemas/GeolocationRequest.yml" 
+         $ref: "../schemas/GeolocationRequest.yml" 
       examples:
         WIFI:
           value:
-            $ref: ../../../requests/maps_http_geolocation_wifi_request.yml
+            $ref: ../requests/maps_http_geolocation_wifi_request.yml
         Cell Towers:
           value:
-            $ref: ../../../requests/maps_http_geolocation_celltowers_request.yml
+            $ref: ../requests/maps_http_geolocation_celltowers_request.yml
         IP Only:
           value:
-            $ref: ../../../requests/maps_http_geolocation_ip_request.yml
+            $ref: ../requests/maps_http_geolocation_ip_request.yml
   required: false
 responses:
   "200":
@@ -45,37 +45,37 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../../schemas/GeolocationResponse.yml"          
+          $ref: "../schemas/GeolocationResponse.yml"          
         examples:
           WIFI:
             value:
-              $ref: ../../../responses/maps_http_geolocation_wifi_response.yml
+              $ref: ../responses/maps_http_geolocation_wifi_response.yml
           Cell Towers:
             value:
-              $ref: ../../../responses/maps_http_geolocation_celltowers_response.yml
+              $ref: ../responses/maps_http_geolocation_celltowers_response.yml
           IP Only:
             value:
-              $ref: ../../../responses/maps_http_geolocation_ip_response.yml
+              $ref: ../responses/maps_http_geolocation_ip_response.yml
   "400":
     description: Bad Request
     content:
       application/json:
         schema:
-          $ref: "../../../schemas/errors/ErrorResponse.yml"
+          $ref: "../schemas/errors/ErrorResponse.yml"
         examples:
           Bad Request:
             value:
-              $ref: ../../../responses/maps_http_geolocation_error_400_response.yml
+              $ref: ../responses/maps_http_geolocation_error_400_response.yml
           Invalid Key:
             value:
-              $ref: ../../../responses/maps_http_geolocation_error_400_invalid_key_response.yml
+              $ref: ../responses/maps_http_geolocation_error_400_invalid_key_response.yml
   "404":
     description: Not Found
     content:
       application/json:
         schema:
-          $ref: "../../../schemas/errors/ErrorResponse.yml"
+          $ref: "../schemas/errors/ErrorResponse.yml"
         examples:
           Invalid:            
             value:
-              $ref: ../../../responses/maps_http_geolocation_error_404_response.yml
+              $ref: ../responses/maps_http_geolocation_error_404_response.yml

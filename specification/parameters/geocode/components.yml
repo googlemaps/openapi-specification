@@ -1,0 +1,20 @@
+name: components
+style: pipeDelimited
+explode: false
+example:
+# [START maps_openapi_geocode_param_components_example]
+- street_number:1600
+- route:Amphitheatre+Parkway
+- locality:Mountain+View
+- administrative_area_level_1:CA
+- country:US
+# [END maps_openapi_geocode_param_components_example]
+description: |-
+  A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
+
+  https://developers.google.com/maps/documentation/geocoding/overview#component-filtering
+in: query
+schema:
+  items:
+    type: string
+  type: array

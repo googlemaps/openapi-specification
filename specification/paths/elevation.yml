@@ -23,40 +23,9 @@ description: |
   
   Requests to the Elevation API utilize different parameters based on whether the request is for discrete locations or for an ordered path. For discrete locations, requests for elevation return data on the specific locations passed in the request; for paths, elevation requests are instead sampled along the given path.
 parameters:  
-  - name: locations
-    in: query
-    style: pipeDelimited
-    explode: false
-    description: |
-      Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
-
-      The locations parameter may take the following arguments:
-
-      - A single coordinate: `locations=40.714728,-73.998672`
-      - An array of coordinates separated using the pipe ('|') character: `locations=40.714728,-73.998672|-34.397,150.644`
-      - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): `locations=enc:gfo}EtohhU`
-      
-      Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
-
-      You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
-    example: ["35,-100", "40,-110"]
-    schema:
-      $ref: "../../../schemas/LatLngArrayString.yml"
-  - name: path
-    in: query
-    style: pipeDelimited
-    explode: false
-    description: An array of comma separated {latitude,longitude} strings.
-    example: ["35,-110","33,-110","31,-110"]
-    schema:
-      $ref: "../../../schemas/LatLngArrayString.yml"
-  - name: samples
-    in: query
-    description: |-
-      Required if path parameter is set.
-    schema:
-      type: number
-    example: 10
+  - "$ref": "../parameters/elevation/locations.yml"
+  - "$ref": "../parameters/elevation/path.yml"
+  - "$ref": "../parameters/elevation/samples.yml"
 responses:
   "200":
     description: "Elevation Response"
@@ -65,19 +34,19 @@ responses:
         examples:        
           elevation_locations:
             value:
-              $ref: ../../../responses/maps_http_elevation_locations_response.yml
+              $ref: ../responses/maps_http_elevation_locations_response.yml
           elevation_locations_multiple:
             value:
-              $ref: ../../../responses/maps_http_elevation_locations_multiple_response.yml
+              $ref: ../responses/maps_http_elevation_locations_multiple_response.yml
           elevation_path:
             value:
-              $ref: ../../../responses/maps_http_elevation_path_response.yml
+              $ref: ../responses/maps_http_elevation_path_response.yml
           elevation_path_missing_samples:
             value:
-              $ref: ../../../responses/maps_http_elevation_path_missing_samples_response.yml
+              $ref: ../responses/maps_http_elevation_path_missing_samples_response.yml
           elevation_invalid_key:
             value:
-              $ref: ../../../responses/maps_http_elevation_invalid_key_response.yml
+              $ref: ../responses/maps_http_elevation_invalid_key_response.yml
         schema:
           type: object
           required:
@@ -88,7 +57,7 @@ responses:
               type: string
               example: "Invalid request. Invalid 'locations' parameter."
             status:
-              $ref: "../../../schemas/ElevationStatus.yml"
+              $ref: "../schemas/ElevationStatus.yml"
             results:
               type: array
               items:
@@ -99,4 +68,4 @@ responses:
                   resolution:
                     type: number
                   location:
-                    $ref: "../../../schemas/LatLngLiteral.yml"
+                    $ref: "../schemas/LatLngLiteral.yml"

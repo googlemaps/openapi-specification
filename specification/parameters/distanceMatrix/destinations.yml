@@ -1,0 +1,12 @@
+name: destinations
+description: One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
+required: true
+in: query
+style: pipeDelimited
+explode: false
+example:
+  ["San Francisco", "Victoria BC"]
+schema:
+  type: array
+  items: 
+    type: string

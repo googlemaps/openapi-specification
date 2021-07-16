@@ -1,0 +1,10 @@
+name: bounds
+description: |-
+  The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
+  in: query
+example: 
+  - "35,-100"
+  - "40,-110"
+schema:
+  $ref: "../../schemas/LatLngArrayString.yml" 
+in: query

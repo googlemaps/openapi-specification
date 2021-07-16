@@ -1,0 +1,88 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Geocoding API
+description: |-
+  The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.
+
+  **Geocoding** is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.
+
+  **Reverse geocoding** is the process of converting geographic coordinates into a human-readable address.
+
+  You can also use the Geocoding API to find the address for a given place ID.
+
+  To see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned location_type field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.
+parameters:
+  - "$ref": "../parameters/geocode/address.yml"
+  - "$ref": "../parameters/geocode/components.yml"
+  - "$ref": "../parameters/geocode/latlng.yml"
+  - "$ref": "../parameters/geocode/bounds.yml"
+  - "$ref": "../parameters/language.yml"
+  - "$ref": "../parameters/region.yml"
+responses:
+  "200":
+    description: "Gecoding Response"
+    content:
+      application/json:
+        examples:
+          components_filtering_response:
+            value:
+              $ref: ../responses/maps_http_geocode_components_filtering_response.yml
+          components_response:
+            value:
+              $ref: ../responses/maps_http_geocode_components_response.yml
+          components_zero_results_fixed_response:
+            value:
+              $ref: ../responses/maps_http_geocode_components_zero_results_fixed_response.yml
+          components_zero_results_response:
+            value:
+              $ref: ../responses/maps_http_geocode_components_zero_results_response.yml
+          invalid_place:
+            value:
+              $ref: ../responses/maps_http_geocode_invalid_place_response.yml
+          invalid_request:
+            value:
+              $ref: ../responses/maps_http_geocode_invalid_request_response.yml
+          place_id_response:
+            value:
+              $ref: ../responses/maps_http_geocode_place_id_response.yml
+          response:
+            value:
+              $ref: ../responses/maps_http_geocode_response.yml
+          reverse_filtering_response:
+            value:
+              $ref: ../responses/maps_http_geocode_reverse_filtering_response.yml
+          reverse_response:
+            value:
+              $ref: ../responses/maps_http_geocode_reverse_response.yml
+          toledo_region_es_response:
+            value:
+              $ref: ../responses/maps_http_geocode_toledo_region_es_response.yml
+          toledo_response:
+            value:
+              $ref: ../responses/maps_http_geocode_toledo_response.yml
+          winnetka_bounds_response:
+            value:
+              $ref: ../responses/maps_http_geocode_winnetka_bounds_response.yml
+          winnetka_response:
+            value:
+              $ref: ../responses/maps_http_geocode_winnetka_response.yml
+          zero_results:
+            value:
+              $ref: ../responses/maps_http_geocode_zero_results_response.yml
+        schema:
+          $ref: "../schemas/GeocodingResponse.yml"

@@ -148,12 +148,7 @@ paths:
           example: 'Victoria, BC'
           schema:
             type: string
-        - name: mode
-          description: |
-            When you calculate directions, you may specify the transportation mode to use. By default, directions are calculated as driving directions. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time).
-          in: query
-          schema:
-            $ref: '#/components/schemas/TravelMode'
+        - $ref: '#/components/parameters/mode'
         - name: waypoints
           description: |
             Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:
@@ -186,8 +181,6 @@ paths:
               - highways
               - ferries
               - indoor
-        - $ref: '#/components/parameters/language'
-        - $ref: '#/components/parameters/region'
         - name: units
           description: |
             Specifies the unit system to use when displaying results.
@@ -263,6 +256,8 @@ paths:
             enum:
               - less_walking
               - fewer_transfers
+        - $ref: '#/components/parameters/language'
+        - $ref: '#/components/parameters/region'
       responses:
         '200':
           description: Response for the Distance Matrix API query.
@@ -14202,8 +14197,6 @@ paths:
 
         To see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned location_type field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.
       parameters:
-        - $ref: '#/components/parameters/language'
-        - $ref: '#/components/parameters/region'
         - name: address
           example: '1600 Amphitheatre+Parkway, Mountain View, CA'
           description: |-
@@ -14251,6 +14244,8 @@ paths:
           schema:
             $ref: '#/components/schemas/LatLngArrayString'
           in: query
+        - $ref: '#/components/parameters/language'
+        - $ref: '#/components/parameters/region'
       responses:
         '200':
           description: Gecoding Response
@@ -16114,11 +16109,7 @@ paths:
             type: array
             items:
               type: string
-        - name: mode
-          description: 'For the calculation of distances, you may specify the transportation mode to use. By default, distances are calculated for driving mode. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time). You can also optionally include a transit_mode and/or a transit_routing_preference.'
-          in: query
-          schema:
-            $ref: '#/components/schemas/TravelMode'
+        - $ref: '#/components/parameters/mode'
       responses:
         '200':
           description: Response for the Distance Matrix API query.
@@ -16411,6 +16402,12 @@ components:
           - vi
           - zh-CN
           - zh-TW
+    mode:
+      name: mode
+      description: 'For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used.'
+      in: query
+      schema:
+        $ref: '#/components/schemas/TravelMode'
     region:
       name: region
       in: query

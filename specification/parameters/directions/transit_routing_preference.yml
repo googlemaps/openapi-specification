@@ -1,0 +1,12 @@
+name: transit_routing_preference
+description: |
+  Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:
+  * `less_walking` indicates that the calculated route should prefer limited amounts of walking.
+  * `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.
+in: query
+example: less_walking
+schema:
+  type: string
+  enum:
+    - less_walking
+    - fewer_transfers

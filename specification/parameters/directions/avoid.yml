@@ -1,0 +1,16 @@
+name: avoid
+description: |
+  Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
+  * `tolls` indicates that the calculated route should avoid toll roads/bridges.
+  * `highways` indicates that the calculated route should avoid highways.
+  * `ferries` indicates that the calculated route should avoid ferries.
+  * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+in: query
+example: highways
+schema:
+  type: string
+  enum:
+    - tolls
+    - highways
+    - ferries
+    - indoor

@@ -95,13 +95,20 @@ const main = async (argv: any) => {
           (p: OpenAPIV3.ParameterObject) => !p.required
         );
 
-        nodes.push(
-          htmlNode('<h3 id="required-parameters">Required Parameters</h3>')
-        );
+        if (required.length) {
+          nodes.push(
+            htmlNode('<h3 id="required-parameters">Required Parameters</h3>')
+          );
+        }
         nodes.push(list("unordered", required.map(build)));
-        nodes.push(
-          htmlNode('<h3 id="optional-parameters">Optional Parameters</h3>')
-        );
+
+        if (required.length) {
+          nodes.push(
+            htmlNode('<h3 id="optional-parameters">Optional Parameters</h3>')
+          );
+        } else {
+          nodes.push(htmlNode('<h3 id="parameters">Parameters</h3>'));
+        }
         nodes.push(list("unordered", optional.map(build)));
 
         const markdown = mdProcessor.stringify(root(nodes));

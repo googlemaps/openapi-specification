@@ -46,7 +46,7 @@ const build = (p: OpenAPIV3.ParameterObject): Parent => {
   const nodes: any = [];
   nodes.push(
     htmlNode(
-      `<h4 id="${p.name.toLowerCase()}">${p.name}</h4>`
+      `<h3 id="${p.name.toLowerCase()}">${p.name}</h3>`
     )
   );
 
@@ -99,17 +99,17 @@ const main = async (argv: any) => {
 
         if (required.length) {
           nodes.push(
-            htmlNode('<h3 id="required-parameters">Required parameters</h3>')
+            htmlNode('<h2 id="required-parameters">Required parameters</h2>')
           );
         }
         nodes.push(list("unordered", required.map(build)));
 
         if (required.length) {
           nodes.push(
-            htmlNode('<h3 id="optional-parameters">Optional parameters</h3>')
+            htmlNode('<h2 id="optional-parameters">Optional parameters</h2>')
           );
         } else {
-          nodes.push(htmlNode('<h3 id="parameters">Parameters</h3>'));
+          nodes.push(htmlNode('<h2 id="parameters">Parameters</h2>'));
         }
         nodes.push(list("unordered", optional.map(build)));
 

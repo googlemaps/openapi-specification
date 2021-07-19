@@ -4,7 +4,7 @@
 
 <h3 id="parameters">Parameters</h3>
 
--   <h4 id="locations"><code>locations</code></h4>
+-   <code id="locations">locations</code>
 
     Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
 
@@ -18,11 +18,11 @@
 
     You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
 
--   <h4 id="path"><code>path</code></h4>
+-   <code id="path">path</code>
 
     An array of comma separated {latitude,longitude} strings.
 
--   <h4 id="samples"><code>samples</code></h4>
+-   <code id="samples">samples</code>
 
     Required if path parameter is set.
 

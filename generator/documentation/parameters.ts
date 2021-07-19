@@ -46,7 +46,7 @@ const build = (p: OpenAPIV3.ParameterObject): Parent => {
   const nodes: any = [];
   nodes.push(
     htmlNode(
-      `<h4 id="${p.name.toLowerCase()}" class="param-pre-style">${p.name}</h4>`
+      `<h4 id="${p.name.toLowerCase()}">${p.name}</h4>`
     )
   );
 
@@ -95,22 +95,6 @@ const main = async (argv: any) => {
 
         const optional = parameters.filter(
           (p: OpenAPIV3.ParameterObject) => !p.required
-        );
-
-        nodes.push(
-          htmlNode(`
-<!--- This style allows for <code> styling in <h> -->        
-<style>
-.param-pre-style {
-  width: fit-content;
-  padding: var(--devsite-inline-code-padding,4px 4px);
-  font: 500 90%/1 var(--devsite-code-font-family);
-  box-sizing: border-box;
-  background: var(--devsite-code-background);
-  color: var(--devsite-code-color);
-}
-</style>
-`)
         );
 
         if (required.length) {

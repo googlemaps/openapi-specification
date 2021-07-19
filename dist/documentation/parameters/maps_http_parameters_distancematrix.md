@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_distancematrix] -->
-<h3 id="required-parameters">Required Parameters</h3>
+<h3 id="required-parameters">Required parameters</h3>
 
 -   <h4 id="destinations">destinations</h4>
 
@@ -21,7 +21,7 @@
         -   Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`
         -   You can also include multiple encoded polylines, separated by the pipe character `|`. For example: `origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:`
 
-<h3 id="optional-parameters">Optional Parameters</h3>
+<h3 id="optional-parameters">Optional parameters</h3>
 
 -   <h4 id="mode">mode</h4>
 

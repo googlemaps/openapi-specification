@@ -145,25 +145,25 @@
     <p>
       Specifies the desired time of departure. You can specify the time as an
       integer in seconds since midnight, January 1, 1970 UTC. If a
-      departure_time later than 9999-12-31T23:59:59.999999999Z is specified, the
-      API will fall back the departure_time to 9999-12-31T23:59:59.999999999Z.
-      Alternatively, you can specify a value of now, which sets the departure
-      time to the current time (correct to the nearest second). The departure
-      time may be specified in two cases:
+      <code>departure_time</code> later than 9999-12-31T23:59:59.999999999Z is
+      specified, the API will fall back the <code>departure_time</code> to
+      9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of
+      now, which sets the departure time to the current time (correct to the
+      nearest second). The departure time may be specified in two cases:
     </p>
     <ul>
       <li>
         For requests where the travel mode is transit: You can optionally
-        specify one of departure_time or arrival_time. If neither time is
-        specified, the departure_time defaults to now (that is, the departure
-        time defaults to the current time).
+        specify one of <code>departure_time</code> or <code>arrival_time</code>.
+        If neither time is specified, the <code>departure_time</code> defaults
+        to now (that is, the departure time defaults to the current time).
       </li>
       <li>
         For requests where the travel mode is driving: You can specify the
-        departure_time to receive a route and trip duration (response field:
-        duration_in_traffic) that take traffic conditions into account. The
-        departure_time must be set to the current time or some time in the
-        future. It cannot be in the past.
+        <code>departure_time</code> to receive a route and trip duration
+        (response field: duration_in_traffic) that take traffic conditions into
+        account. The <code>departure_time</code> must be set to the current time
+        or some time in the future. It cannot be in the past.
       </li>
     </ul>
     <p>
@@ -242,17 +242,17 @@
       Specifies the assumptions to use when calculating time in traffic. This
       setting affects the value returned in the duration_in_traffic field in the
       response, which contains the predicted time in traffic based on historical
-      averages. The traffic_model parameter may only be specified for driving
-      directions where the request includes a departure_time. The available
-      values for this parameter are:
+      averages. The <code>traffic_model</code> parameter may only be specified
+      for driving directions where the request includes a
+      <code>departure_time</code>. The available values for this parameter are:
     </p>
     <ul>
       <li>
         <code>best_guess</code> (default) indicates that the returned
         duration_in_traffic should be the best estimate of travel time given
         what is known about both historical traffic conditions and live traffic.
-        Live traffic becomes more important the closer the departure_time is to
-        now.
+        Live traffic becomes more important the closer the
+        <code>departure_time</code> is to now.
       </li>
       <li>
         <code>pessimistic</code> indicates that the returned duration_in_traffic

@@ -91,7 +91,38 @@
     <p>
       For the calculation of distances and directions, you may specify the
       transportation mode to use. By default, <code>DRIVING</code> mode is used.
+      By default, directions are calculated as driving directions. The following
+      travel modes are supported:
     </p>
+    <ul>
+      <li>
+        <code>DRIVING</code> (default) indicates standard driving directions or
+        distance using the road network.
+      </li>
+      <li>
+        <code>WALKING</code> requests walking directions or distance via
+        pedestrian paths &#x26; sidewalks (where available).
+      </li>
+      <li>
+        <code>BICYCLING</code> requests bicycling directions or distance via
+        bicycle paths &#x26; preferred streets (where available).
+      </li>
+      <li>
+        <code>TRANSIT</code> requests directions or distance via public transit
+        routes (where available). If you set the mode to transit, you can
+        optionally specify either a <code>departure_time</code> or an
+        <code>arrival_time</code>. If neither time is specified, the
+        <code>departure_time</code> defaults to now (that is, the departure time
+        defaults to the current time). You can also optionally include a
+        <code>transit_mode</code> and/or a
+        <code>transit_routing_preference</code>.
+      </li>
+    </ul>
+    <div class="note">
+      Note: Both walking and bicycling directions may sometimes not include
+      clear pedestrian or bicycling paths, so these directions will return
+      warnings in the returned result which you must display to the user.
+    </div>
   </li>
 </ul>
 

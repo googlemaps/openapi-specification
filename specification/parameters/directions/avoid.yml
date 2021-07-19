@@ -19,8 +19,16 @@ description: |
   * `highways` indicates that the calculated route should avoid highways.
   * `ferries` indicates that the calculated route should avoid ferries.
   * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+
+  It's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: 
+  
+  ```
+  avoid=tolls|highways|ferries.
+  ```
 in: query
-example: highways
+examples: 
+ - highways
+ - tolls|highways|ferries
 schema:
   type: string
   enum:

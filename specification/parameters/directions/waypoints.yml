@@ -67,13 +67,21 @@ description: |
   <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. [Learn more about how Google Maps Platform products are billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)</div>
 in: query
 examples:
-  - Charlestown,MA|Lexington,MA
-  - Charlestown,MA|via:Lexington,MA
-  - optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA
-  - ChIJGwVKWe5w44kRcr4b9E25-Go
-  - -34.92788%2C138.60008
-  - "enc:lexeF{~wsZejrPjtye@:"
-  - "via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:"
-  - "side_of_road:via:enc:lexeF{~wsZejrPjtye@:"
+  multiple:
+    value: MA|Lexington,MA
+  via:
+    value: Charlestown,MA|via:Lexington,MA
+  optimize:
+    value: optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA
+  place:
+    value: ChIJGwVKWe5w44kRcr4b9E25-Go
+  location:
+    value: -34.92788%2C138.60008
+  encoded:
+    value: "enc:lexeF{~wsZejrPjtye@:"
+  via_encoded:
+    value: "via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:"
+  modifier:
+    value: "side_of_road:via:enc:lexeF{~wsZejrPjtye@:"
 schema:
   type: string

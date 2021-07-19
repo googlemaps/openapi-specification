@@ -156,9 +156,12 @@ paths:
           required: true
           in: query
           examples:
-            - 'Vancouver, BC'
-            - 'side_of_road:37.7663444,-122.4412006'
-            - 'heading=90:37.773279,-122.468780'
+            simple:
+              value: 'Vancouver, BC'
+            modifier_side_of_road:
+              value: 'side_of_road:37.7663444,-122.4412006'
+            modifier_heading:
+              value: 'heading=90:37.773279,-122.468780'
           schema:
             type: string
         - name: destination
@@ -224,14 +227,22 @@ paths:
             <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. [Learn more about how Google Maps Platform products are billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)</div>
           in: query
           examples:
-            - 'Charlestown,MA|Lexington,MA'
-            - 'Charlestown,MA|via:Lexington,MA'
-            - 'optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA'
-            - ChIJGwVKWe5w44kRcr4b9E25-Go
-            - '-34.92788%2C138.60008'
-            - 'enc:lexeF{~wsZejrPjtye@:'
-            - 'via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:'
-            - 'side_of_road:via:enc:lexeF{~wsZejrPjtye@:'
+            multiple:
+              value: 'MA|Lexington,MA'
+            via:
+              value: 'Charlestown,MA|via:Lexington,MA'
+            optimize:
+              value: 'optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA'
+            place:
+              value: ChIJGwVKWe5w44kRcr4b9E25-Go
+            location:
+              value: '-34.92788%2C138.60008'
+            encoded:
+              value: 'enc:lexeF{~wsZejrPjtye@:'
+            via_encoded:
+              value: 'via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:'
+            modifier:
+              value: 'side_of_road:via:enc:lexeF{~wsZejrPjtye@:'
           schema:
             type: string
         - name: alternatives
@@ -255,15 +266,14 @@ paths:
             ```
           in: query
           examples:
-            - highways
-            - tolls|highways|ferries
+            single:
+              value: highways
+              summary: A example using a single restriction.
+            multiple:
+              value: tolls|highways|ferries
+              summary: A example using a multiple restrictions.
           schema:
             type: string
-            enum:
-              - tolls
-              - highways
-              - ferries
-              - indoor
         - name: units
           description: |
             Specifies the unit system to use when displaying results.

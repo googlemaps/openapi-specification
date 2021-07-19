@@ -27,12 +27,11 @@ description: |
   ```
 in: query
 examples: 
- - highways
- - tolls|highways|ferries
+ single: 
+  value: highways
+  summary: A example using a single restriction.
+ multiple: 
+  value: tolls|highways|ferries
+  summary: A example using a multiple restrictions. 
 schema:
   type: string
-  enum:
-    - tolls
-    - highways
-    - ferries
-    - indoor

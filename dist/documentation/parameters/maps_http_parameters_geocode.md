@@ -4,7 +4,7 @@
 
 <h3 id="parameters">Parameters</h3>
 
--   <h4 id="address"><code>address</code></h4>
+-   <code id="address">address</code>
 
     The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
 
@@ -15,18 +15,18 @@
     -   global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
     -   compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
 
--   <h4 id="bounds"><code>bounds</code></h4>
+-   <code id="bounds">bounds</code>
 
     The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
     in: query
 
--   <h4 id="components"><code>components</code></h4>
+-   <code id="components">components</code>
 
     A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
 
 
 
--   <h4 id="language"><code>language</code></h4>
+-   <code id="language">language</code>
 
     The language in which to return results.
 
@@ -36,11 +36,11 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h4 id="latlng"><code>latlng</code></h4>
+-   <code id="latlng">latlng</code>
 
     The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
 
--   <h4 id="region"><code>region</code></h4>
+-   <code id="region">region</code>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 

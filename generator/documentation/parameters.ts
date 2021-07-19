@@ -44,9 +44,7 @@ const argv = options({
 
 const build = (p: OpenAPIV3.ParameterObject): Parent => {
   const nodes: any = [];
-  nodes.push(
-    htmlNode(`<h4 id="${p.name.toLowerCase()}"><code>${p.name}</code></h4>`)
-  );
+  nodes.push(htmlNode(`<code id="${p.name.toLowerCase()}">${p.name}</code>`));
 
   if (p.description) {
     nodes.push(paragraph(fromMarkdown(p.description)));

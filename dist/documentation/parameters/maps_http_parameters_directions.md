@@ -2,13 +2,13 @@
 <!--- [START maps_http_parameters_directions] -->
 <h3 id="required-parameters">Required Parameters</h3>
 
--   <h4 id="destination"><code>destination</code></h4>
+-   <code id="destination">destination</code>
 
     The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.
 
--   <h4 id="origin"><code>origin</code></h4>
+-   <code id="origin">origin</code>
 
-    The place ID, address, or textual latitude/longitude value from which you wish to calculate directions/
+    The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
 
     -   Place IDs must be prefixed with place_id:. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
         `origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE` For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.
@@ -21,15 +21,15 @@
 
 <h3 id="optional-parameters">Optional Parameters</h3>
 
--   <h4 id="alternatives"><code>alternatives</code></h4>
+-   <code id="alternatives">alternatives</code>
 
     If set to true, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints.
 
--   <h4 id="arrival_time"><code>arrival_time</code></h4>
+-   <code id="arrival_time">arrival_time</code>
 
     Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
 
--   <h4 id="avoid"><code>avoid</code></h4>
+-   <code id="avoid">avoid</code>
 
     Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
 
@@ -38,7 +38,7 @@
     -   `ferries` indicates that the calculated route should avoid ferries.
     -   `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
 
--   <h4 id="departure_time"><code>departure_time</code></h4>
+-   <code id="departure_time">departure_time</code>
 
     Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a departure_time later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the departure_time to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
 
@@ -47,7 +47,7 @@
 
     Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.
 
--   <h4 id="language"><code>language</code></h4>
+-   <code id="language">language</code>
 
     The language in which to return results.
 
@@ -57,15 +57,15 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h4 id="mode"><code>mode</code></h4>
+-   <code id="mode">mode</code>
 
     For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used.
 
--   <h4 id="region"><code>region</code></h4>
+-   <code id="region">region</code>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <h4 id="traffic_model"><code>traffic_model</code></h4>
+-   <code id="traffic_model">traffic_model</code>
 
     Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The traffic_model parameter may only be specified for driving directions where the request includes a departure_time. The available values for this parameter are:
 
@@ -75,7 +75,7 @@
 
     The default value of `best_guess` will give the most useful predictions for the vast majority of use cases. It is possible the `best_guess` travel time prediction may be shorter than `optimistic`, or alternatively, longer than `pessimistic`, due to the way the `best_guess` prediction model integrates live traffic information.
 
--   <h4 id="transit_mode"><code>transit_mode</code></h4>
+-   <code id="transit_mode">transit_mode</code>
 
     Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:
 
@@ -85,14 +85,14 @@
     -   `tram` indicates that the calculated route should prefer travel by tram and light rail.
     -   `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.
 
--   <h4 id="transit_routing_preference"><code>transit_routing_preference</code></h4>
+-   <code id="transit_routing_preference">transit_routing_preference</code>
 
     Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:
 
     -   `less_walking` indicates that the calculated route should prefer limited amounts of walking.
     -   `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.
 
--   <h4 id="units"><code>units</code></h4>
+-   <code id="units">units</code>
 
     Specifies the unit system to use when displaying results.
 
@@ -105,7 +105,7 @@
 
     Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.
 
--   <h4 id="waypoints"><code>waypoints</code></h4>
+-   <code id="waypoints">waypoints</code>
 
     Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:
 

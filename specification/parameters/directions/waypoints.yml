@@ -1,0 +1,25 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: waypoints
+description: |
+  Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:
+  * Place ID: The unique value specific to a location (ChIJGwVKWe5w44kRcr4b9E25-Go).
+  * Address string (Charlestown, Boston,MA)
+  * Latitude/longitude coordinates (lat/lng): an explicit value pair. (-34.92788%2C138.60008 comma, no space)
+  * Encoded polyline that can be specified by a set of any of the above. (enc:lexeF{~wsZejrPjtye@:)
+in: query
+schema:
+  type: string
+  

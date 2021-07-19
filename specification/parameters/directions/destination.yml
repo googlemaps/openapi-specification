@@ -1,4 +1,4 @@
-# Copyright 2020 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language:
-  $ref: './language.yml'
-mode:
-  $ref: './mode.yml'
-region:
-  $ref: './region.yml'
+name: destination
+description: "The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter."
+required: true
+in: query
+example: "Victoria, BC"
+schema:
+  type: string
+  

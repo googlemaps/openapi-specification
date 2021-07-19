@@ -29,16 +29,7 @@ import {
 import { Parent, Node } from "unist";
 import { OpenAPIV3 } from "openapi-types";
 import { isRef } from "./helpers";
-import syntax from "micromark-extension-gfm";
-import gfm from "mdast-util-gfm";
-
-import fromMarkdown_ from "mdast-util-from-markdown";
-
-const fromMarkdown = (s: string) =>
-  fromMarkdown_(s, {
-    extensions: [syntax()],
-    mdastExtensions: [gfm.fromMarkdown],
-  });
+import { fromMarkdown } from "./processors";
 
 export interface PropertyRow {
   field: Parent;

@@ -1,0 +1,26 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: transit_mode
+description: |
+  Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:
+  * `bus` indicates that the calculated route should prefer travel by bus.
+  * `subway` indicates that the calculated route should prefer travel by subway.
+  * `train` indicates that the calculated route should prefer travel by train.
+  * `tram` indicates that the calculated route should prefer travel by tram and light rail.
+  * `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.
+in: query
+example: train|tram|subway
+schema:
+  type: string

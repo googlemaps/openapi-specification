@@ -35,6 +35,7 @@ pkg_tar(
     ],
     strip_prefix = ".",
     deps = [
+        "//generator/documentation:parameters.tar",
         "//generator/documentation:schemas.tar",
         "//generator/requests:snippets.tar",
     ],

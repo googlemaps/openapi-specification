@@ -54,3 +54,29 @@ genrule(
         ":_schema_bin",
     ],
 )
+
+nodejs_binary(
+    name = "_parameters_bin",
+    data = [
+        ":_lib",
+        "//specification:openapi3",
+    ],
+    entry_point = ":parameters.ts",
+    templated_args = [
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
+)
+
+genrule(
+    name = "parameters",
+    srcs = ["//:google-maps-platform-openapi3.json"],
+    outs = ["parameters.tar"],
+    cmd = "$(location :_parameters_bin) " +
+          "--spec $(location //:google-maps-platform-openapi3.json) " +
+          "--output $@",
+    tools = [
+        ":_lib",
+        ":_parameters_bin",
+    ],
+)

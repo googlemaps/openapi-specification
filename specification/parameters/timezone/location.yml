@@ -1,4 +1,4 @@
-# Copyright 2020 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language:
-  $ref: './language.yml'
-mode:
-  $ref: './mode.yml'
-region:
-  $ref: './region.yml'
+name: location    
+description: |
+  A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
+schema:
+  type: string
+required: true
+in: query
+example: "39.6034810,-119.6822510"

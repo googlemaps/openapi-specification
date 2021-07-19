@@ -199,7 +199,7 @@
         "parameters": [
           {
             "name": "origin",
-            "description": "The place ID, address, or textual latitude/longitude value from which you wish to calculate directions/\n* Place IDs must be prefixed with place_id:. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see Place Autocomplete and Directions. For more about place IDs, see the Place ID overview.\n  `origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE`\n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  `origin=24+Sussex+Drive+Ottawa+ON`\n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  `origin=41.43206,-81.38992`\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20). Global code is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is 849VCWC8%2BR9). Compound code is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is CWC8%2BR9%20Mountain%20View%20CA%20USA).\n",
+            "description": "The place ID, address, or textual latitude/longitude value from which you wish to calculate directions/\n* Place IDs must be prefixed with place_id:. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n  `origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE` For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.\n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  `origin=24+Sussex+Drive+Ottawa+ON`\n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  `origin=41.43206,-81.38992`\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20). Global code is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is 849VCWC8%2BR9). Compound code is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is CWC8%2BR9%20Mountain%20View%20CA%20USA).\n",
             "required": true,
             "in": "query",
             "example": "Vancouver, BC",
@@ -218,12 +218,7 @@
             }
           },
           {
-            "name": "mode",
-            "description": "When you calculate directions, you may specify the transportation mode to use. By default, directions are calculated as driving directions. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time).\n",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/TravelMode"
-            }
+            "$ref": "#/components/parameters/mode"
           },
           {
             "name": "waypoints",
@@ -255,12 +250,6 @@
                 "indoor"
               ]
             }
-          },
-          {
-            "$ref": "#/components/parameters/language"
-          },
-          {
-            "$ref": "#/components/parameters/region"
           },
           {
             "name": "units",
@@ -327,6 +316,12 @@
                 "fewer_transfers"
               ]
             }
+          },
+          {
+            "$ref": "#/components/parameters/language"
+          },
+          {
+            "$ref": "#/components/parameters/region"
           }
         ],
         "responses": {
@@ -20152,12 +20147,6 @@
         "description": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.\n\n**Geocoding** is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.\n\n**Reverse geocoding** is the process of converting geographic coordinates into a human-readable address.\n\nYou can also use the Geocoding API to find the address for a given place ID.\n\nTo see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned location_type field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.",
         "parameters": [
           {
-            "$ref": "#/components/parameters/language"
-          },
-          {
-            "$ref": "#/components/parameters/region"
-          },
-          {
             "name": "address",
             "example": "1600 Amphitheatre+Parkway, Mountain View, CA",
             "description": "The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):\n\n`address=24%20Sussex%20Drive%20Ottawa%20ON`\n\nFormat plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):\n- global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).\n- compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).",
@@ -20206,6 +20195,12 @@
               "$ref": "#/components/schemas/LatLngArrayString"
             },
             "in": "query"
+          },
+          {
+            "$ref": "#/components/parameters/language"
+          },
+          {
+            "$ref": "#/components/parameters/region"
           }
         ],
         "responses": {
@@ -23150,12 +23145,7 @@
             }
           },
           {
-            "name": "mode",
-            "description": "For the calculation of distances, you may specify the transportation mode to use. By default, distances are calculated for driving mode. If you set the mode to transit you can optionally specify either a departure_time or an arrival_time. If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time). You can also optionally include a transit_mode and/or a transit_routing_preference.",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/TravelMode"
-            }
+            "$ref": "#/components/parameters/mode"
           }
         ],
         "responses": {
@@ -23589,6 +23579,14 @@
             "zh-CN",
             "zh-TW"
           ]
+        }
+      },
+      "mode": {
+        "name": "mode",
+        "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used.",
+        "in": "query",
+        "schema": {
+          "$ref": "#/components/schemas/TravelMode"
         }
       },
       "region": {

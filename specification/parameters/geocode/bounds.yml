@@ -1,4 +1,4 @@
-# Copyright 2020 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language:
-  $ref: './language.yml'
-mode:
-  $ref: './mode.yml'
-region:
-  $ref: './region.yml'
+name: bounds
+description: |-
+  The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
+  in: query
+example: 
+  - "35,-100"
+  - "40,-110"
+schema:
+  $ref: "../../schemas/LatLngArrayString.yml" 
+in: query

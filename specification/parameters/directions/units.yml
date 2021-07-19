@@ -1,0 +1,34 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: units
+description: |
+  Specifies the unit system to use when displaying results.
+
+  Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
+
+  For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
+
+  * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
+  * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
+
+  Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.
+example: metric
+in: query
+schema:
+  type: string
+  enum:
+    - imperial
+    - metric
+  

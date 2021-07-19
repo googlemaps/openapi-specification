@@ -14,19 +14,19 @@
 
 /geolocation/v1/geolocate:
   post:
-    $ref: "./geolocate/v1/geolocate.yml"
+    $ref: "./geolocate.yml"
 /maps/api/directions/json:
   get:
     $ref: "./directions.yml"
 /maps/api/elevation/json:
   get:
-    $ref: "./maps/api/elevation.yml"
+    $ref: "./elevation.yml"
 /maps/api/geocode/json:
   get:
-    $ref: "./maps/api/geocode.yml"
+    $ref: "./geocode.yml"
 /maps/api/timezone/json:
   get:
-    $ref: "./maps/api/timezone.yml"
+    $ref: "./timezone.yml"
 /v1/snapToRoads:
   get:
     $ref: "./snapToRoads.yml"

@@ -10,20 +10,38 @@
 
     The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
 
-    -   Place IDs must be prefixed with place_id:. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
-        `origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE` For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.
+    -   Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+
+        ```
+        origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE
+        ```
+
     -   If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.
-        `origin=24+Sussex+Drive+Ottawa+ON`
+
+        ```
+        origin=24+Sussex+Drive+Ottawa+ON
+        ```
+
         Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.
+
     -   If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.
-        `origin=41.43206,-81.38992`
-    -   Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20). Global code is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is 849VCWC8%2BR9). Compound code is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is CWC8%2BR9%20Mountain%20View%20CA%20USA).
+
+        ```
+        origin=41.43206,-81.38992
+        ```
+
+    -   Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`).
+
+        -   **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`).
+        -   **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
+
+    <div class="note">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
 
 <h3 id="optional-parameters">Optional Parameters</h3>
 
 -   <code id="alternatives">alternatives</code>
 
-    If set to true, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints.
+    If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
 
 -   <code id="arrival_time">arrival_time</code>
 
@@ -109,9 +127,9 @@
 
     Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:
 
-    -   Place ID: The unique value specific to a location (ChIJGwVKWe5w44kRcr4b9E25-Go).
-    -   Address string (Charlestown, Boston,MA)
-    -   Latitude/longitude coordinates (lat/lng): an explicit value pair. (-34.92788%2C138.60008 comma, no space)
-    -   Encoded polyline that can be specified by a set of any of the above. (enc:lexeF{\~wsZejrPjtye@:)
+    -   Place ID: The unique value specific to a location (`ChIJGwVKWe5w44kRcr4b9E25-Go`).
+    -   Address string (`Charlestown, Boston,MA`)
+    -   Latitude/longitude coordinates (lat/lng): an explicit value pair. (`-34.92788%2C138.60008` comma, no space)
+    -   Encoded polyline that can be specified by a set of any of the above. (`enc:lexeF{~wsZejrPjtye@:`)
 
 <!--- [END maps_http_parameters_directions] -->

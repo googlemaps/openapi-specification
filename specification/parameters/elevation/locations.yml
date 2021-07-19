@@ -22,8 +22,14 @@ description: |
   The locations parameter may take the following arguments:
 
   - A single coordinate: `locations=40.714728,-73.998672`
-  - An array of coordinates separated using the pipe ('|') character: `locations=40.714728,-73.998672|-34.397,150.644`
-  - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): `locations=enc:gfo}EtohhU`
+  - An array of coordinates separated using the pipe ('|') character: 
+    ```
+    locations=40.714728,-73.998672|-34.397,150.644
+    ```
+  - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): 
+    ```
+    locations=enc:gfo}EtohhU
+    ```
   
   Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
 

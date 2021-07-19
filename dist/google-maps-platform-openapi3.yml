@@ -14090,8 +14090,14 @@ paths:
             The locations parameter may take the following arguments:
 
             - A single coordinate: `locations=40.714728,-73.998672`
-            - An array of coordinates separated using the pipe ('|') character: `locations=40.714728,-73.998672|-34.397,150.644`
-            - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): `locations=enc:gfo}EtohhU`
+            - An array of coordinates separated using the pipe ('|') character: 
+              ```
+              locations=40.714728,-73.998672|-34.397,150.644
+              ```
+            - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): 
+              ```
+              locations=enc:gfo}EtohhU
+              ```
 
             Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
 
@@ -14219,7 +14225,9 @@ paths:
           description: |-
             The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
 
-            `address=24%20Sussex%20Drive%20Ottawa%20ON`
+            ```
+            address=24%20Sussex%20Drive%20Ottawa%20ON
+            ```
 
             Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
             - global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
@@ -16101,7 +16109,10 @@ paths:
               - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
             - **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.
               - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`
-              - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: `origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:`
+              - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: 
+                ```
+                origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:
+                ```
           required: true
           in: query
           style: pipeDelimited

@@ -8,7 +8,9 @@
 
     The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
 
-    `address=24%20Sussex%20Drive%20Ottawa%20ON`
+    ```
+    address=24%20Sussex%20Drive%20Ottawa%20ON
+    ```
 
     Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
 

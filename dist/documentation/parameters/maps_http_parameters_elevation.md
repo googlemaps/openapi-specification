@@ -2,9 +2,9 @@
 <!--- [START maps_http_parameters_elevation] -->
 
 
-<h3 id="parameters">Parameters</h3>
+<h2 id="parameters">Parameters</h2>
 
--   <h4 id="locations">locations</h4>
+-   <h3 id="locations">locations</h3>
 
     Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
 
@@ -24,11 +24,11 @@
 
     You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
 
--   <h4 id="path">path</h4>
+-   <h3 id="path">path</h3>
 
     An array of comma separated {latitude,longitude} strings.
 
--   <h4 id="samples">samples</h4>
+-   <h3 id="samples">samples</h3>
 
     Required if path parameter is set.
 

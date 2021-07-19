@@ -68,7 +68,7 @@ const main = async (argv: any) => {
       const { parameters } = path[method];
 
       if (parameters) {
-        const regionTag = `maps_http_schema_${slugify(key)
+        const regionTag = `maps_http_parameters_${slugify(key)
           .toLowerCase()
           .replace(/(v1|mapsapi|json)/g, "")}`;
         const nodes: any = [];

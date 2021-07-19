@@ -1,12 +1,26 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_distancematrix] -->
+
+<!--- This style allows for <code> styling in <h> -->        
+<style>
+.param-pre-style {
+  width: fit-content;
+  padding: var(--devsite-inline-code-padding,4px 4px);
+  font: 500 90%/1 var(--devsite-code-font-family);
+  box-sizing: border-box;
+  background: var(--devsite-code-background);
+  color: var(--devsite-code-color);
+}
+</style>
+
+
 <h3 id="required-parameters">Required Parameters</h3>
 
--   <code id="destinations">destinations</code>
+-   <h4 id="destinations" class="param-pre-style">destinations</h4>
 
     One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
 
--   <code id="origins">origins</code>
+-   <h4 id="origins" class="param-pre-style">origins</h4>
 
     The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:
 
@@ -23,7 +37,7 @@
 
 <h3 id="optional-parameters">Optional Parameters</h3>
 
--   <code id="mode">mode</code>
+-   <h4 id="mode" class="param-pre-style">mode</h4>
 
     For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used.
 

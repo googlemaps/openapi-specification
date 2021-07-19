@@ -43,6 +43,9 @@ description: |
 
 required: true
 in: query
-example: Vancouver, BC
+examples: 
+  - Vancouver, BC
+  - side_of_road:37.7663444,-122.4412006
+  - heading=90:37.773279,-122.468780
 schema:
   type: string

@@ -139,6 +139,13 @@
         indoor steps for walking and transit directions.
       </li>
     </ul>
+    <p>
+      It's possible to request a route that avoids any combination of tolls,
+      highways and ferries by passing multiple restrictions to the avoid
+      parameter. For example:
+    </p>
+    <pre><code>avoid=tolls|highways|ferries.
+</code></pre>
   </li>
   <li>
     <h4 id="departure_time">departure_time</h4>
@@ -220,7 +227,38 @@
     <p>
       For the calculation of distances and directions, you may specify the
       transportation mode to use. By default, <code>DRIVING</code> mode is used.
+      By default, directions are calculated as driving directions. The following
+      travel modes are supported:
     </p>
+    <ul>
+      <li>
+        <code>DRIVING</code> (default) indicates standard driving directions or
+        distance using the road network.
+      </li>
+      <li>
+        <code>WALKING</code> requests walking directions or distance via
+        pedestrian paths &#x26; sidewalks (where available).
+      </li>
+      <li>
+        <code>BICYCLING</code> requests bicycling directions or distance via
+        bicycle paths &#x26; preferred streets (where available).
+      </li>
+      <li>
+        <code>TRANSIT</code> requests directions or distance via public transit
+        routes (where available). If you set the mode to transit, you can
+        optionally specify either a <code>departure_time</code> or an
+        <code>arrival_time</code>. If neither time is specified, the
+        <code>departure_time</code> defaults to now (that is, the departure time
+        defaults to the current time). You can also optionally include a
+        <code>transit_mode</code> and/or a
+        <code>transit_routing_preference</code>.
+      </li>
+    </ul>
+    <div class="note">
+      Note: Both walking and bicycling directions may sometimes not include
+      clear pedestrian or bicycling paths, so these directions will return
+      warnings in the returned result which you must display to the user.
+    </div>
   </li>
   <li>
     <h4 id="region">region</h4>
@@ -360,31 +398,162 @@
   </li>
   <li>
     <h4 id="waypoints">waypoints</h4>
+    <div class="caution">
+      Caution: Requests using more than 10 waypoints (between 11 and 25), or
+      waypoint optimization, are billed at a higher rate. Learn more about
+      billing for Google Maps Platform products.
+    </div>
     <p>
       Specifies an array of intermediate locations to include along the route
       between the origin and destination points as pass through or stopover
       locations. Waypoints alter a route by directing it through the specified
       location(s). The API supports waypoints for these travel modes: driving,
-      walking and bicycling; not transit. You can specify waypoints using the
-      following values:
+      walking and bicycling; not transit. You can supply one or more locations
+      separated by the pipe character (<code>|</code> or <code>%7C</code>), in
+      the form of a place ID, an address, or latitude/longitude coordinates. By
+      default, the Directions service calculates a route using the waypoints in
+      the order they are given. The precedence for parsing the value of the
+      waypoint is place ID, latitude/longitude coordinates, then address.
     </p>
     <ul>
       <li>
-        Place ID: The unique value specific to a location
-        (<code>ChIJGwVKWe5w44kRcr4b9E25-Go</code>).
+        If you pass a place ID, you must prefix it with <code>place_id:</code>.
+        You can retrieve place IDs from the Geocoding API and the Places API
+        (including Place Autocomplete). For an example using place IDs from
+        Place Autocomplete, see
+        <a
+          href="/maps/documentation/javascript/examples/places-autocomplete-directions"
+          >Place Autocomplete and Directions</a
+        >. For more about place IDs, see the
+        <a href="/maps/documentation/places/web-service/place-id"
+          >Place ID overview</a
+        >.
+        <div class="note">
+          For efficiency and accuracy, use place ID's when possible. These ID's
+          are uniquely explicit like a lat/lng value pair and provide geocoding
+          benefits for routing such as access points and traffic variables.
+          Unlike an address, ID's do not require the service to perform a search
+          or an intermediate request for place details; therefore, performance
+          is better.
+        </div>
       </li>
-      <li>Address string (<code>Charlestown, Boston,MA</code>)</li>
       <li>
-        Latitude/longitude coordinates (lat/lng): an explicit value pair. (<code
-          >-34.92788%2C138.60008</code
-        >
-        comma, no space)
+        If you pass latitude/longitude coordinates, the values go directly to
+        the front-end server to calculate directions without geocoding. The
+        points are snapped to roads and might not provide the accuracy your app
+        needs. Use coordinates when you are confident the values truly specify
+        the points your app needs for routing without regard to possible access
+        points or additional geocoding details. Ensure that a comma
+        (<code>%2C</code>) and not a space (<code>%20</code>) separates the
+        latitude and longitude values.
       </li>
       <li>
-        Encoded polyline that can be specified by a set of any of the above.
-        (<code>enc:lexeF{~wsZejrPjtye@:</code>)
+        If you pass an address, the Directions service will geocode the string
+        and convert it into latitude/longitude coordinates to calculate
+        directions. If the address value is ambiguous, the value might evoke a
+        search to disambiguate from similar addresses. For example, "1st Street"
+        could be a complete value or a partial value for "1st street NE" or "1st
+        St SE". This result may be different from that returned by the Geocoding
+        API. You can avoid possible misinterpretations using place IDs.
+      </li>
+      <li>
+        Alternatively, you can supply an encoded set of points using the
+        <a
+          href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm"
+          >Encoded Polyline Algorithm</a
+        >. You will find an encoded set is useful for a large number of
+        waypoints, because the URL is significantly shorter. All web services
+        have a URL limit of 8192 characters.
+        <ul>
+          <li>
+            Encoded polylines must be prefixed with <code>enc:</code> and
+            followed by a colon (<code>:</code>). For example:
+            <code>waypoints=enc:gfo}EtohhU:</code>.
+          </li>
+          <li>
+            You can also include multiple encoded polylines, separated by the
+            pipe character (<code>|</code>). For example,
+            <code
+              >waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|
+              via:enc:udymA{~bxM:</code
+            >
+          </li>
+        </ul>
       </li>
     </ul>
+    <h5>Influence routes with stopover and pass through points</h5>
+    <p>
+      For each waypoint in the request, the directions response appends an entry
+      to the <code>legs</code> array to provide the details for stopovers on
+      that leg of the journey.
+    </p>
+    <p>
+      If you'd like to influence the route using waypoints without adding a
+      stopover, add the prefix <code>via:</code> to the waypoint. Waypoints
+      prefixed with <code>via:</code> will not add an entry to the
+      <code>legs</code> array, but will route the journey through the waypoint.
+    </p>
+    <p>
+      The following URL modifies the previous request such that the journey is
+      routed through Lexington without stopping:
+    </p>
+    <pre><code>https://maps.googleapis.com/maps/api/directions/json?
+origin=Boston,MA&#x26;destination=Concord,MA
+&#x26;waypoints=Charlestown,MA|via:Lexington,MA  
+</code></pre>
+    <p>
+      The <code>via:</code> prefix is most effective when creating routes in
+      response to the user dragging the waypoints on the map. Doing so allows
+      the user to see how the final route may look in real-time and helps ensure
+      that waypoints are placed in locations that are accessible to the
+      Directions API.
+    </p>
+    <div class="caution">
+      Caution: Using the `via:` prefix to avoid stopovers results in directions
+      that are strict in their interpretation of the waypoint. This
+      interpretation may result in severe detours on the route or `ZERO_RESULTS`
+      in the response status code if the Directions API is unable to create
+      directions through that point.
+    </div>
+    <h5>Optimize your waypoints</h5>
+    <p>
+      By default, the Directions service calculates a route through the provided
+      waypoints in their given order. Optionally, you may pass
+      <code>optimize:true</code> as the first argument within the waypoints
+      parameter to allow the Directions service to optimize the provided route
+      by rearranging the waypoints in a more efficient order. (This optimization
+      is an application of the traveling salesperson problem.) Travel time is
+      the primary factor which is optimized, but other factors such as distance,
+      number of turns and many more may be taken into account when deciding
+      which route is the most efficient. All waypoints must be stopovers for the
+      Directions service to optimize their route.
+    </p>
+    <p>
+      If you instruct the Directions service to optimize the order of its
+      waypoints, their order will be returned in the
+      <code>waypoint_order</code> field within the routes object. The
+      <code>waypoint_order</code> field returns values which are zero-based.
+    </p>
+    <p>
+      The following example calculates a road journey from Adelaide, South
+      Australia to each of South Australia's main wine regions using route
+      optimization.
+    </p>
+    <pre><code>https://maps.googleapis.com/maps/api/directions/json?
+origin=Adelaide,SA&#x26;destination=Adelaide,SA
+&#x26;waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA
+</code></pre>
+    <p>
+      Inspection of the calculated route will indicate that calculation uses
+      waypoints in the following waypoint order:
+    </p>
+    <pre><code>"waypoint_order": [ 3, 2, 0, 1 ]
+</code></pre>
+    <div class="caution">
+      Caution: Requests using waypoint optimization are billed at a higher rate.
+      [Learn more about how Google Maps Platform products are
+      billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)
+    </div>
   </li>
 </ul>
 

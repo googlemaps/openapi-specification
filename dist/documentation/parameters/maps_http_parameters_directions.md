@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_directions] -->
-<h3 id="required-parameters">Required Parameters</h3>
+<h3 id="required-parameters">Required parameters</h3>
 
 -   <h4 id="destination">destination</h4>
 
@@ -37,7 +37,7 @@
 
     <div class="note">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
 
-<h3 id="optional-parameters">Optional Parameters</h3>
+<h3 id="optional-parameters">Optional parameters</h3>
 
 -   <h4 id="alternatives">alternatives</h4>
 

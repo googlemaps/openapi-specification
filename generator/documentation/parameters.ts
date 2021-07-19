@@ -99,14 +99,14 @@ const main = async (argv: any) => {
 
         if (required.length) {
           nodes.push(
-            htmlNode('<h3 id="required-parameters">Required Parameters</h3>')
+            htmlNode('<h3 id="required-parameters">Required parameters</h3>')
           );
         }
         nodes.push(list("unordered", required.map(build)));
 
         if (required.length) {
           nodes.push(
-            htmlNode('<h3 id="optional-parameters">Optional Parameters</h3>')
+            htmlNode('<h3 id="optional-parameters">Optional parameters</h3>')
           );
         } else {
           nodes.push(htmlNode('<h3 id="parameters">Parameters</h3>'));

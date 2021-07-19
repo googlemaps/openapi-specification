@@ -1,12 +1,26 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_directions] -->
+
+<!--- This style allows for <code> styling in <h> -->        
+<style>
+.param-pre-style {
+  width: fit-content;
+  padding: var(--devsite-inline-code-padding,4px 4px);
+  font: 500 90%/1 var(--devsite-code-font-family);
+  box-sizing: border-box;
+  background: var(--devsite-code-background);
+  color: var(--devsite-code-color);
+}
+</style>
+
+
 <h3 id="required-parameters">Required Parameters</h3>
 
--   <code id="destination">destination</code>
+-   <h4 id="destination" class="param-pre-style">destination</h4>
 
     The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.
 
--   <code id="origin">origin</code>
+-   <h4 id="origin" class="param-pre-style">origin</h4>
 
     The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
 
@@ -39,15 +53,15 @@
 
 <h3 id="optional-parameters">Optional Parameters</h3>
 
--   <code id="alternatives">alternatives</code>
+-   <h4 id="alternatives" class="param-pre-style">alternatives</h4>
 
     If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
 
--   <code id="arrival_time">arrival_time</code>
+-   <h4 id="arrival_time" class="param-pre-style">arrival_time</h4>
 
     Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
 
--   <code id="avoid">avoid</code>
+-   <h4 id="avoid" class="param-pre-style">avoid</h4>
 
     Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
 
@@ -56,7 +70,7 @@
     -   `ferries` indicates that the calculated route should avoid ferries.
     -   `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
 
--   <code id="departure_time">departure_time</code>
+-   <h4 id="departure_time" class="param-pre-style">departure_time</h4>
 
     Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a departure_time later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the departure_time to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
 
@@ -65,7 +79,7 @@
 
     Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.
 
--   <code id="language">language</code>
+-   <h4 id="language" class="param-pre-style">language</h4>
 
     The language in which to return results.
 
@@ -75,15 +89,15 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <code id="mode">mode</code>
+-   <h4 id="mode" class="param-pre-style">mode</h4>
 
     For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used.
 
--   <code id="region">region</code>
+-   <h4 id="region" class="param-pre-style">region</h4>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <code id="traffic_model">traffic_model</code>
+-   <h4 id="traffic_model" class="param-pre-style">traffic_model</h4>
 
     Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The traffic_model parameter may only be specified for driving directions where the request includes a departure_time. The available values for this parameter are:
 
@@ -93,7 +107,7 @@
 
     The default value of `best_guess` will give the most useful predictions for the vast majority of use cases. It is possible the `best_guess` travel time prediction may be shorter than `optimistic`, or alternatively, longer than `pessimistic`, due to the way the `best_guess` prediction model integrates live traffic information.
 
--   <code id="transit_mode">transit_mode</code>
+-   <h4 id="transit_mode" class="param-pre-style">transit_mode</h4>
 
     Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:
 
@@ -103,14 +117,14 @@
     -   `tram` indicates that the calculated route should prefer travel by tram and light rail.
     -   `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.
 
--   <code id="transit_routing_preference">transit_routing_preference</code>
+-   <h4 id="transit_routing_preference" class="param-pre-style">transit_routing_preference</h4>
 
     Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:
 
     -   `less_walking` indicates that the calculated route should prefer limited amounts of walking.
     -   `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.
 
--   <code id="units">units</code>
+-   <h4 id="units" class="param-pre-style">units</h4>
 
     Specifies the unit system to use when displaying results.
 
@@ -123,7 +137,7 @@
 
     Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.
 
--   <code id="waypoints">waypoints</code>
+-   <h4 id="waypoints" class="param-pre-style">waypoints</h4>
 
     Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit. You can specify waypoints using the following values:
 

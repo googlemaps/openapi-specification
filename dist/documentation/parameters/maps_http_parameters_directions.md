@@ -69,7 +69,7 @@
     -   For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
     -   For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
 
-    Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.
+    <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
 
 -   <h3 id="language">language</h3>
 
@@ -134,7 +134,7 @@
     -   `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
     -   `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
 
-    Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.
+    <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
 
 -   <h3 id="waypoints">waypoints</h3>
 

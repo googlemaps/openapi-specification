@@ -23,7 +23,7 @@ description: |
   * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
   * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
 
-  Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.
+  <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
 example: metric
 in: query
 schema:

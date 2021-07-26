@@ -1,0 +1,12 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placeopeninghoursperiod] -->
+<h3 class="schema-object" id="PlaceOpeningHoursPeriod">Place Geometry</h3>
+
+type: `object`
+
+| Field   | Required | Type                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :------ | -------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `close` | optional | [PlaceOpeningHoursPeriodDetail](#PlaceOpeningHoursPeriodDetail "PlaceOpeningHoursPeriodDetail") | May contain a pair of day and time objects describing when the place closes. If a place is always open, the close section will be missing from the response. Clients can rely on always-open being represented as an open period containing day with value `0` and time with value `0000`, and no `close`. See [PlaceOpeningHoursPeriodDetail](#PlaceOpeningHoursPeriodDetail "PlaceOpeningHoursPeriodDetail") for more information. |
+| `open`  | optional | [PlaceOpeningHoursPeriodDetail](#PlaceOpeningHoursPeriodDetail "PlaceOpeningHoursPeriodDetail") | Contains a pair of day and time objects describing when the place opens. See [PlaceOpeningHoursPeriodDetail](#PlaceOpeningHoursPeriodDetail "PlaceOpeningHoursPeriodDetail") for more information.                                                                                                                                                                                                                                   |
+
+<!--- [END maps_http_schema_placeopeninghoursperiod] -->

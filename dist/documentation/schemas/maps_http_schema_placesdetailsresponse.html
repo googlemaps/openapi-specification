@@ -1,0 +1,52 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placesdetailsresponse] -->
+<h3 class="schema-object" id="PlacesDetailsResponse">
+  Places Details Response Body
+</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>html_attributions</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;string></td>
+      <td>TODO</td>
+    </tr>
+    <tr>
+      <td align="left"><code>result</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#Place" title="Place">Place</a></td>
+      <td>
+        Contains an array of routes from the origin to the destination. See
+        Routes below. Routes consist of nested Legs and Steps. See
+        <a href="#Place" title="Place">Place</a> for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#PlacesStatus" title="PlacesStatus">PlacesStatus</a></td>
+      <td>
+        Contains metadata on the request. See
+        <a href="#PlacesStatus" title="PlacesStatus">PlacesStatus</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>info_messages</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>Contains additional information about the request.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_placesdetailsresponse] -->

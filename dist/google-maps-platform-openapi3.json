@@ -23552,6 +23552,407 @@
           }
         }
       }
+    },
+    "/maps/api/place/details/json": {
+      "get": {
+        "servers": [
+          {
+            "url": "https://maps.googleapis.com"
+          }
+        ],
+        "tags": [
+          "Places API"
+        ],
+        "description": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
+        "parameters": [
+          {
+            "name": "place_id",
+            "description": "A textual identifier that uniquelyidentifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).\nFor more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "in": "query",
+            "example": "ChIJN1t_tDeuEmsRUsoyG83frY4"
+          },
+          {
+            "name": "fields",
+            "description": "Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.\n\nFields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.\n\n**Basic**\n\nThe Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `name`, `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.\n\n**Contact**\n\nThe Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`\n\n**Atmosphere**\n\nThe Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.\n\n<div class=\"caution\">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>\n",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "explode": false,
+            "in": "query",
+            "examples": {
+              "basic": {
+                "value": [
+                  "formatted_address"
+                ]
+              },
+              "multiple": {
+                "value": [
+                  "formatted_address",
+                  "name",
+                  "geometry"
+                ]
+              },
+              "compound": {
+                "value": [
+                  "opening_hours/open_now"
+                ]
+              },
+              "all": {
+                "value": [
+                  "*"
+                ]
+              }
+            }
+          },
+          {
+            "name": "sessiontoken",
+            "description": "A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes. Use this for Place Details requests that are called following an autocomplete request in the same user session.\n",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
+          },
+          {
+            "$ref": "#/components/parameters/language"
+          },
+          {
+            "$ref": "#/components/parameters/region"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response for the Distance Matrix API query.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "details": {
+                    "value": {
+                      "html_attributions": [],
+                      "result": {
+                        "address_components": [
+                          {
+                            "long_name": "48",
+                            "short_name": "48",
+                            "types": [
+                              "street_number"
+                            ]
+                          },
+                          {
+                            "long_name": "Pirrama Road",
+                            "short_name": "Pirrama Rd",
+                            "types": [
+                              "route"
+                            ]
+                          },
+                          {
+                            "long_name": "Pyrmont",
+                            "short_name": "Pyrmont",
+                            "types": [
+                              "locality",
+                              "political"
+                            ]
+                          },
+                          {
+                            "long_name": "Council of the City of Sydney",
+                            "short_name": "Sydney",
+                            "types": [
+                              "administrative_area_level_2",
+                              "political"
+                            ]
+                          },
+                          {
+                            "long_name": "New South Wales",
+                            "short_name": "NSW",
+                            "types": [
+                              "administrative_area_level_1",
+                              "political"
+                            ]
+                          },
+                          {
+                            "long_name": "Australia",
+                            "short_name": "AU",
+                            "types": [
+                              "country",
+                              "political"
+                            ]
+                          },
+                          {
+                            "long_name": "2009",
+                            "short_name": "2009",
+                            "types": [
+                              "postal_code"
+                            ]
+                          }
+                        ],
+                        "adr_address": "<span class=\"street-address\">48 Pirrama Rd</span>, <span class=\"locality\">Pyrmont</span> <span class=\"region\">NSW</span> <span class=\"postal-code\">2009</span>, <span class=\"country-name\">Australia</span>",
+                        "business_status": "OPERATIONAL",
+                        "formatted_address": "48 Pirrama Rd, Pyrmont NSW 2009, Australia",
+                        "formatted_phone_number": "(02) 9374 4000",
+                        "geometry": {
+                          "location": {
+                            "lat": -33.866489,
+                            "lng": 151.1958561
+                          },
+                          "viewport": {
+                            "northeast": {
+                              "lat": -33.8655112697085,
+                              "lng": 151.1971156302915
+                            },
+                            "southwest": {
+                              "lat": -33.86820923029149,
+                              "lng": 151.1944176697085
+                            }
+                          }
+                        },
+                        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                        "international_phone_number": "+61 2 9374 4000",
+                        "name": "Google Workplace 6",
+                        "opening_hours": {
+                          "open_now": false,
+                          "periods": [
+                            {
+                              "close": {
+                                "day": 1,
+                                "time": "1700"
+                              },
+                              "open": {
+                                "day": 1,
+                                "time": "0900"
+                              }
+                            },
+                            {
+                              "close": {
+                                "day": 2,
+                                "time": "1700"
+                              },
+                              "open": {
+                                "day": 2,
+                                "time": "0900"
+                              }
+                            },
+                            {
+                              "close": {
+                                "day": 3,
+                                "time": "1700"
+                              },
+                              "open": {
+                                "day": 3,
+                                "time": "0900"
+                              }
+                            },
+                            {
+                              "close": {
+                                "day": 4,
+                                "time": "1700"
+                              },
+                              "open": {
+                                "day": 4,
+                                "time": "0900"
+                              }
+                            },
+                            {
+                              "close": {
+                                "day": 5,
+                                "time": "1700"
+                              },
+                              "open": {
+                                "day": 5,
+                                "time": "0900"
+                              }
+                            }
+                          ],
+                          "weekday_text": [
+                            "Monday: 9:00 AM – 5:00 PM",
+                            "Tuesday: 9:00 AM – 5:00 PM",
+                            "Wednesday: 9:00 AM – 5:00 PM",
+                            "Thursday: 9:00 AM – 5:00 PM",
+                            "Friday: 9:00 AM – 5:00 PM",
+                            "Saturday: Closed",
+                            "Sunday: Closed"
+                          ]
+                        },
+                        "photos": [
+                          {
+                            "height": 3024,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/105067373811767106297\">Shaun Craig</a>"
+                            ],
+                            "photo_reference": "Aap_uEDY1GahdnFHaMArH3g6W4bELCIn9yaZ0XGqh1-G2lX3OwzTExM6g-_0U8qedk5o3R1SmtMK-NMt34dDMcCNnc4DWREX0vQEH9DjvfF70ZPHo3IFbT-TU_oCNCCB3kxe36EsdXeoKEtRH74NueUIeslebZuVeteDpKvpwVqxRpZFVSjS",
+                            "width": 4032
+                          },
+                          {
+                            "height": 3264,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/102493344958625549078\">Heyang Li</a>"
+                            ],
+                            "photo_reference": "Aap_uEBsIMS7ziLftv_H0CtLIxcWei_FoiKHBBOhA8ITGEnRouapXIM3i75jT10qwPooWLHE5ETxQg_dZLjAhSStAYEt_Y4iyzCWS9z1_OxGPWe4wncQN8HkI0BAd01Ps9KBzTbRPCOuxP7X1-T5V8ownaFj4iMTYhpuOZD8a06gA8D_3BNv",
+                            "width": 4912
+                          },
+                          {
+                            "height": 1836,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/116807455538142476628\">Anand Ema</a>"
+                            ],
+                            "photo_reference": "Aap_uEDyx7GIQx3RDmd_aDDUIl0d9DKCpZIqjjLCAPQ33bo-wbtkOZf4qQoFSWT_JxAa3GgUxjz4yk6JQ0S0wUC6ns4Ut7g2QOwdwZW79W-QAxnG3BDdBkKXmeXGT_hq0fxZc25vQfd17_O61JP9n6gsr3KAC85M1ypLC0VbOtofOF99kEko",
+                            "width": 3264
+                          },
+                          {
+                            "height": 3024,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/115886271727815775491\">Anthony Huynh</a>"
+                            ],
+                            "photo_reference": "Aap_uEBDdrtrX2RJ0ljE6_0y00-DFf8x9pcNPYQ7LxWw3hm_bHU5ifDSYw1Z0z0WzcpCILmhCz8xJm1wObCWBBFRgnVAl1ZthXYOzFtPFS4sc6tex-ZVs-rE_Nci3TcylA2F-wasgQel3BYQjJw2JDZ8n6Ex5zhbfTo9hTYitgkhVcHOuWgC",
+                            "width": 4032
+                          },
+                          {
+                            "height": 3024,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/102939237947063969663\">Jasen Baker</a>"
+                            ],
+                            "photo_reference": "Aap_uEBwkb30-eLkSwu_2J5MEUXHSpOU5QU8Of_NPyI44MCCbmjNIy65QUlvEqQ0TQXsWbfuqCRJUXFPmOOXUZBDt_Nwh_8SXQUzb4MU-F1-jM1pMfuTcy4QbSRXXXXsXe_jZlLBbmP_47LPmYS0RFyjCRB6kIfAvLsrOLcAUYta8t4_7DzB",
+                            "width": 4032
+                          },
+                          {
+                            "height": 3024,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/100678816592586275978\">Jeremy Hsiao</a>"
+                            ],
+                            "photo_reference": "Aap_uECSpiVKjd6MACpjbr-Y_WcgDIO8tjUG5tMXtV9KwaYQni00dMJOQGmB6fG-fR7QDFqxlyt-jmEheeg96fraWr_wUW54wPEYHjQwtosczhk8wcT9zevPmDrN2gxXKJa-wzWw1yI8QvWtTnCPnkGUSrJt2jx0offdMd5YFvoA-1dPy-YP",
+                            "width": 4032
+                          },
+                          {
+                            "height": 3024,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/100678816592586275978\">Jeremy Hsiao</a>"
+                            ],
+                            "photo_reference": "Aap_uECuzDryALMS85IQTddDnpv0LuqZLgn14JQL5ro38rEHvJr5ed5XkNY4_8T6f8e-ac8b7Jm9HHw8coH2iVeMj1p8XwhRH1rAlqcbRbGqKiE9XPy-5smlhKuTrrQvefP1wt4EEPTqxRNK3biaCbza9t2v3WTzi0cI1NatAhe4Ausdtu8-",
+                            "width": 4032
+                          },
+                          {
+                            "height": 3036,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/100482974853389838438\">Mark Vozzo</a>"
+                            ],
+                            "photo_reference": "Aap_uEAglkc3LvKPErRt8k8DZWq_0OxR2F2hU-SwWuUI2Ac5IkNXswV4FSZHSN_IWP5_yo2PxwZfD4ufWMpju5cxkAQixYdiUKyBN4p4zwscixEw_YR0u5h1oAwXkrOBaeQS2_ePxW57Yylb1CSd9sL82ZL_ESyvqTY9uGFEtUeL3QGdVsjZ",
+                            "width": 4048
+                          },
+                          {
+                            "height": 498,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/103245129386449712319\">Simon TestOne</a>"
+                            ],
+                            "photo_reference": "Aap_uEDwfed4-AQ5e7Vr-mTFiTXLCMPXBAAJGQGEQJw4rDMuFSsUc_EjrI5q-ifNPste-HO4pS7BqX2N6d4unMy3n1eTOqq8tiaqgJsuicC7wF1zuDDqWQEyDEOJdwKtQPCVucuej1lA2WzHHA6-eMm0h3_b1Wnvmhz1wvQ7LYY75lf8-52l",
+                            "width": 750
+                          },
+                          {
+                            "height": 2432,
+                            "html_attributions": [
+                              "<a href=\"https://maps.google.com/maps/contrib/103456711016089391251\">Damien</a>"
+                            ],
+                            "photo_reference": "Aap_uEAkT7z_a6B9Jih2e9iiBqeVQ3Nq2sj_ZxfzdrFCIkENXN1E4Q786BW3YVCPF_GB3LD4hb9lbI6M9hEJ19EZFk1rW-ksGlZFckXtBcFfoDepgJMCLYpcg53vDmkKwzzQKQ-bqt5I2wQe9wP3HB44dck7ZvhiyNOybtzQcXfADciIv3-j",
+                            "width": 3286
+                          }
+                        ],
+                        "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+                        "plus_code": {
+                          "compound_code": "45MW+C8 Pyrmont NSW, Australia",
+                          "global_code": "4RRH45MW+C8"
+                        },
+                        "rating": 4.1,
+                        "reference": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+                        "reviews": [
+                          {
+                            "author_name": "Mark Smith (Mark ZZZ Smith)",
+                            "author_url": "https://www.google.com/maps/contrib/109015045837507592030/reviews",
+                            "language": "en",
+                            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gi-thk-CV41Ymw9Udvr0O5WL8Iguf9HYAKKyEWDxw=s128-c0x00000000-cc-rp-mo",
+                            "rating": 5,
+                            "relative_time_description": "a year ago",
+                            "text": "Great place to visit, cafeteria great. Also has a good toilet.",
+                            "time": 1589072760
+                          },
+                          {
+                            "author_name": "Agent Cliff (The Mediator)",
+                            "author_url": "https://www.google.com/maps/contrib/100253428394439543029/reviews",
+                            "language": "en",
+                            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GhSLTmC1QVzI8oXWkDvqv_fTq1Xmm7_gM2udfRlbw=s128-c0x00000000-cc-rp-mo-ba3",
+                            "rating": 4,
+                            "relative_time_description": "5 months ago",
+                            "text": "Had an office tour here a few years ago and absolutely loved the look of it , as an AV person I was very impressed with the meeting rooms and loved the themes. Most of the staff were generally friendly and I was offered a range of different waters when waiting at reception.\n\nThe office is beautifully designed, onsite chef cooked a pretty alright lunch, staff interviewing as well were quite friendly and knew to be precise for technical interviews. I’d like to come back again one day for another tour just to see how it’s all going :)",
+                            "time": 1614291725
+                          },
+                          {
+                            "author_name": "Xavier Le Baron",
+                            "author_url": "https://www.google.com/maps/contrib/104602961630797902494/reviews",
+                            "language": "en",
+                            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GhbuCpv4_XNH8EWPZoGFwgWjiCQvCcVYiwJNxnMIPs=s128-c0x00000000-cc-rp-mo-ba4",
+                            "rating": 5,
+                            "relative_time_description": "3 months ago",
+                            "text": "Possibly the best office in Sydney? :)\nWhat an amazing place to work at!",
+                            "time": 1618388082
+                          },
+                          {
+                            "author_name": "Binod Mainali",
+                            "author_url": "https://www.google.com/maps/contrib/110005203185645729740/reviews",
+                            "language": "en",
+                            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GitXX8rr6uxnCeLo4Kwd_UKm7ctfOYH9r7tcocqeg=s128-c0x00000000-cc-rp-mo",
+                            "rating": 1,
+                            "relative_time_description": "6 months ago",
+                            "text": "I had some problem with google account, there is no way to contact google customer service. The only people i can contact to is the google ad Team. Google only cares about its ad what a selfish tech. There is not even a live chat, my password linked with google is compromised but there is no one to talk to. the 1800 no is a useless no or even the no provided at this store is useless. Google support only asks to send a feedback of the problem and nothing else. I had sent it but its been more than a month no one has contacted still. Such a selfish, greedy billionaire tech giant. Cant believe, even a small struggling bussiness has someone to chat to. Such a low pathetic moral of google . Humanity will not be too long if our biggest tech are surround by just greed of $$$$$$....Shame on you # greedygoogle#greedysundarpichai#Australiagoogletaxloot.",
+                            "time": 1611295578
+                          },
+                          {
+                            "author_name": "doug cliff",
+                            "author_url": "https://www.google.com/maps/contrib/114222669528052367599/reviews",
+                            "language": "en",
+                            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gjbd1ELb3S4E0R10kvV2h9EtBuME8xb9yWbtXa3qyU=s128-c0x00000000-cc-rp-mo-ba6",
+                            "rating": 4,
+                            "relative_time_description": "7 months ago",
+                            "text": "It appears from reading the reviews that Google in not too good at talking to people on the phone. I guess when you are as big as they are they can do what they want as there is not really another alternative. I use their services such as maps and mail but also contribute a lot of data such as photo’s and reviews. I was under the impression that what I was doing was helping others in the community. I had not realised that google could pick and choose who used these services and can block out any one out they don’t like. I was very upset when they black baned some Chinese manufactures who are making really good products. I had also not realised that Google is a slave to any crazy president that gets into power. Anyway I will keep using  their products as they are good and hope that one day they will be available for all to use.",
+                            "time": 1608012004
+                          }
+                        ],
+                        "types": [
+                          "point_of_interest",
+                          "establishment"
+                        ],
+                        "url": "https://maps.google.com/?cid=10281119596374313554",
+                        "user_ratings_total": 931,
+                        "utc_offset": 600,
+                        "vicinity": "48 Pirrama Road, Pyrmont",
+                        "website": "http://google.com/"
+                      },
+                      "status": "OK"
+                    }
+                  },
+                  "fields": {
+                    "value": {
+                      "html_attributions": [],
+                      "result": {
+                        "formatted_phone_number": "(02) 9374 4000",
+                        "name": "Google Workplace 6",
+                        "rating": 4.1
+                      },
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/PlacesDetailsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -24931,6 +25332,373 @@
           "domain": "global",
           "reason": "badRequest"
         }
+      },
+      "Place": {
+        "type": "object",
+        "title": "Place Details",
+        "properties": {
+          "address_components": {
+            "description": "An array containing the separate components applicable to this address.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceAddressComponent"
+            }
+          },
+          "adr_address": {
+            "description": "A representation of the place's address in the [adr microformat](http://microformats.org/wiki/adr).",
+            "type": "string",
+            "example": "<span class=\"street-address\">48 Pirrama Rd</span>, <span class=\"locality\">Pyrmont</span> <span class=\"region\">NSW</span> <span class=\"postal-code\">2009</span>, <span class=\"country-name\">Australia</span>"
+          },
+          "business_status": {
+            "description": "Indicates the operational status of the place, if it is a business. It can contain one of the following values:\n- `OPERATIONAL`\n- `CLOSED_TEMPORARILY`\n- `CLOSED_PERMANENTLY`\n\nIf no data exists, business_status is not returned.\n",
+            "type": "string",
+            "enum": [
+              "OPERATIONAL",
+              "CLOSED_TEMPORARILY",
+              "CLOSED_PERMANENTLY"
+            ]
+          },
+          "formatted_address": {
+            "description": "A string containing the human-readable address of this place.\n\nOften this address is equivalent to the postal address. Note that some countries, such as the United Kingdom, do not allow distribution of true postal addresses due to licensing restrictions.\n\nThe formatted address is logically composed of one or more address components. For example, the address \"111 8th Avenue, New York, NY\" consists of the following components: \"111\" (the street number), \"8th Avenue\" (the route), \"New York\" (the city) and \"NY\" (the US state).\n\nDo not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.\n",
+            "type": "string",
+            "example": "48 Pirrama Rd, Pyrmont NSW 2009, Australia"
+          },
+          "formatted_phone_number": {
+            "description": "Contains the place's phone number in its [local format](http://en.wikipedia.org/wiki/Local_conventions_for_writing_telephone_numbers).",
+            "type": "string",
+            "example": "(02) 9374 4000"
+          },
+          "geometry": {
+            "description": "Contains the location and viewport for the location.",
+            "$ref": "#/components/schemas/PlaceGeometry"
+          },
+          "icon": {
+            "description": "Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.",
+            "type": "string",
+            "example": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png"
+          },
+          "international_phone_number": {
+            "description": "Contains the place's phone number in international format. International format includes the country code, and is prefixed with the plus, +, sign. For example, the international_phone_number for Google's Sydney, Australia office is `+61 2 9374 4000`.",
+            "type": "string",
+            "example": "+61 2 9374 4000"
+          },
+          "name": {
+            "description": "Contains the human-readable name for the returned result. For `establishment` results, this is usually the canonicalized business name.",
+            "type": "string",
+            "example": "Google Workplace 6"
+          },
+          "opening_hours": {
+            "description": "Contains hours of operation.",
+            "$ref": "#/components/schemas/PlaceOpeningHours"
+          },
+          "photos": {
+            "description": "An array of photo objects, each containing a reference to an image. A Place Details request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlacePhoto"
+            }
+          },
+          "place_id": {
+            "description": "A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the `place_id` field of a Places API request. For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).",
+            "type": "string",
+            "example": "ChIJN1t_tDeuEmsRUsoyG83frY4"
+          },
+          "plus_code": {
+            "description": "TODO",
+            "$ref": "#/components/schemas/PlacePlusCode"
+          },
+          "price_level": {
+            "description": "The price level of the place, on a scale of 0 to 4. The exact amount indicated by a specific value will vary from region to region. Price levels are interpreted as follows:\n- 0 Free\n- 1 Inexpensive\n- 2 Moderate\n- 3 Expensive\n- 4 Very Expensive\n",
+            "type": "number"
+          },
+          "rating": {
+            "description": "Contains the place's rating, from 1.0 to 5.0, based on aggregated user reviews.",
+            "type": "number",
+            "example": 4.1
+          },
+          "reference": {
+            "description": "Deprecated",
+            "type": "string"
+          },
+          "reviews": {
+            "description": "A JSON array of up to five reviews. If a language parameter was specified in the Place Details request, the Places Service will bias the results to prefer reviews written in that language.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceReview"
+            }
+          },
+          "types": {
+            "description": "Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "point_of_interest",
+              "establishment"
+            ]
+          },
+          "url": {
+            "description": "Contains the URL of the official Google page for this place. This will be the Google-owned page that contains the best available information about the place. Applications must link to or embed this page on any screen that shows detailed results about the place to the user.",
+            "type": "string",
+            "example": "https://maps.google.com/?cid=10281119596374313554"
+          },
+          "user_ratings_total": {
+            "description": "The total number of reviews, with or without text, for this place.",
+            "type": "number",
+            "example": 931
+          },
+          "utc_offset": {
+            "description": "Contains the number of minutes this place’s current timezone is offset from UTC. For example, for places in Sydney, Australia during daylight saving time this would be 660 (+11 hours from UTC), and for places in California outside of daylight saving time this would be -480 (-8 hours from UTC).",
+            "type": "number",
+            "example": 600
+          },
+          "vicinity": {
+            "description": "A simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country. For example, Google's Sydney, Australia office has a vicinity value of `48 Pirrama Road, Pyrmont`.",
+            "type": "string",
+            "example": "48 Pirrama Road, Pyrmont"
+          },
+          "website": {
+            "description": "The authoritative website for this place, such as a business' homepage.",
+            "type": "string",
+            "example": "http://google.com"
+          }
+        }
+      },
+      "PlacePhoto": {
+        "type": "object",
+        "title": "Place Photo",
+        "properties": {
+          "height": {
+            "description": "The height of the photo.",
+            "type": "number"
+          },
+          "width": {
+            "description": "The width of the photo.",
+            "type": "number"
+          },
+          "html_attributions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The HTML attributions for the photo."
+          },
+          "photo_reference": {
+            "description": "A string used to identify the photo when you perform a Photo request.",
+            "type": "string",
+            "example": "Aap_uEDY1GahdnFHaMArH3g6W4bELCIn9yaZ0XGqh1-G2lX3OwzTExM6g-_0U8qedk5o3R1SmtMK-NMt34dDMcCNnc4DWREX0vQEH9DjvfF70ZPHo3IFbT-TU_oCNCCB3kxe36EsdXeoKEtRH74NueUIeslebZuVeteDpKvpwVqxRpZFVSjS"
+          }
+        }
+      },
+      "PlaceOpeningHours": {
+        "type": "object",
+        "title": "Place Opening Hours",
+        "properties": {
+          "open_now": {
+            "description": "A boolean value indicating if the place is open at the current time.",
+            "type": "boolean"
+          },
+          "periods": {
+            "description": "An array of opening periods covering seven days, starting from Sunday, in chronological order.\n",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceOpeningHoursPeriod"
+            }
+          },
+          "weekday_text": {
+            "description": "A boolean value indicating if the place is open at the current time.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "Monday: 9:00 AM – 5:00 PM",
+              "Tuesday: 9:00 AM – 5:00 PM",
+              "Wednesday: 9:00 AM – 5:00 PM",
+              "Thursday: 9:00 AM – 5:00 PM",
+              "Friday: 9:00 AM – 5:00 PM",
+              "Saturday: Closed",
+              "Sunday: Closed"
+            ]
+          }
+        }
+      },
+      "PlaceOpeningHoursPeriod": {
+        "type": "object",
+        "title": "Place Geometry",
+        "properties": {
+          "open": {
+            "description": "Contains a pair of day and time objects describing when the place opens.",
+            "$ref": "#/components/schemas/PlaceOpeningHoursPeriodDetail"
+          },
+          "close": {
+            "description": "May contain a pair of day and time objects describing when the place closes. If a place is always open, the close section will be missing from the response. Clients can rely on always-open being represented as an open period containing day with value `0` and time with value `0000`, and no `close`.\n",
+            "$ref": "#/components/schemas/PlaceOpeningHoursPeriodDetail"
+          }
+        }
+      },
+      "PlaceOpeningHoursPeriodDetail": {
+        "type": "object",
+        "title": "Place Period Detail",
+        "properties": {
+          "day": {
+            "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
+            "type": "number"
+          },
+          "time": {
+            "description": "May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.",
+            "type": "string",
+            "example": 1700
+          }
+        }
+      },
+      "PlaceGeometry": {
+        "type": "object",
+        "title": "Place Geometry",
+        "properties": {
+          "location": {
+            "description": "Contains the geocoded latitude, longitude value for this place.",
+            "$ref": "#/components/schemas/LatLngLiteral"
+          },
+          "viewport": {
+            "description": "Viewport bounds for this place.",
+            "$ref": "#/components/schemas/Bounds"
+          }
+        }
+      },
+      "PlacePlusCode": {
+        "type": "object",
+        "title": "Place Plus Code",
+        "required": [
+          "compound_code",
+          "global_code"
+        ],
+        "properties": {
+          "compound_code": {
+            "description": "Todo",
+            "type": "string",
+            "example": "45MW+C8 Pyrmont NSW, Australia"
+          },
+          "global_code": {
+            "description": "Todo",
+            "type": "string",
+            "example": "4RRH45MW+C8"
+          }
+        }
+      },
+      "PlaceReview": {
+        "type": "object",
+        "title": "Place Review",
+        "properties": {
+          "author_name": {
+            "description": "The name of the user who submitted the review. Anonymous reviews are attributed to \"A Google user\".",
+            "type": "string",
+            "example": "A Google User"
+          },
+          "author_url": {
+            "description": "The URL to the user's Google Maps Local Guides profile, if available.",
+            "type": "string"
+          },
+          "profile_photo_url": {
+            "description": "The URL to the user's profile photo, if available.",
+            "type": "string"
+          },
+          "language": {
+            "description": "An IETF language code indicating the language used in the user's review. This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.",
+            "type": "string"
+          },
+          "rating": {
+            "description": "The user's overall rating for this place. This is a whole number, ranging from 1 to 5.",
+            "type": "number"
+          },
+          "relative_time_description": {
+            "description": "The time that the review was submitted in text, relative to the current time.",
+            "type": "string"
+          },
+          "text": {
+            "description": "The user's review. When reviewing a location with Google Places, text reviews are considered optional. Therefore, this field may by empty. Note that this field may include simple HTML markup. For example, the entity reference `&amp;` may represent an ampersand character.",
+            "type": "string"
+          },
+          "time": {
+            "description": "The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.",
+            "type": "number"
+          }
+        }
+      },
+      "PlaceAddressComponent": {
+        "type": "object",
+        "title": "Place Address Component",
+        "properties": {
+          "long_name": {
+            "description": "The full text description or name of the address component as returned by the Geocoder.",
+            "type": "string",
+            "example": "Council of the City of Sydney"
+          },
+          "short_name": {
+            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of \"Alaska\" and a short_name of \"AK\" using the 2-letter postal abbreviation.",
+            "type": "string",
+            "example": "Sydney"
+          },
+          "types": {
+            "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "administrative_area_level_2",
+              "political"
+            ]
+          }
+        }
+      },
+      "PlacesDetailsResponse": {
+        "type": "object",
+        "title": "Places Details Response Body",
+        "required": [
+          "html_attributions",
+          "result",
+          "status"
+        ],
+        "properties": {
+          "html_attributions": {
+            "description": "TODO",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "description": "Contains an array of routes from the origin to the destination. See Routes below. Routes consist of nested Legs and Steps.",
+            "$ref": "#/components/schemas/Place"
+          },
+          "status": {
+            "description": "Contains metadata on the request.",
+            "$ref": "#/components/schemas/PlacesStatus"
+          },
+          "info_messages": {
+            "description": "Contains additional information about the request.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PlacesStatus": {
+        "type": "string",
+        "title": "Elevation Status",
+        "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `ZERO_RESULTS` indicating that the referenced location, `place_id`, was valid but no longer refers to a valid result. This may occur if the establishment is no longer in business. \n- `NOT_FOUND` indicating that that the referenced location, `place_id`, was not found in the Places database. \n- `INVALID_REQUEST` indicating the API request was malformed.\n- `OVER_QUERY_LIMIT` indicating any of the following:\n  - You have exceeded the QPS limits.\n  - Billing has not been enabled on your account.\n  - The monthly $200 credit, or a self-imposed usage cap, has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n  See the [Maps FAQ](https://developers.google.com/maps/faq#over-limit-key-error) for more information about how to resolve this error.\n- `REQUEST_DENIED` indicating that your request was denied, generally because:\n  - The request is missing an API key.\n  - The `key` parameter is invalid.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
+        "enum": [
+          "OK",
+          "ZERO_RESULTS",
+          "INVALID_REQUEST",
+          "OVER_DAILY_LIMIT",
+          "OVER_QUERY_LIMIT",
+          "REQUEST_DENIED",
+          "UNKNOWN_ERROR"
+        ]
       }
     },
     "securitySchemes": {

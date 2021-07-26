@@ -36,3 +36,6 @@
 /maps/api/distanceMatrix/json:
   get:
     $ref: "./distanceMatrix.yml"
+/maps/api/place/details/json:
+  get:
+    $ref: "./places/details.yml"

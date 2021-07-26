@@ -1,0 +1,142 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_parameters_placedetails] -->
+<h2 id="required-parameters">Required parameters</h2>
+<ul>
+  <li>
+    <h3 id="place_id">place_id</h3>
+    <p>
+      A textual identifier that uniquelyidentifies a place, returned from a
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/search"
+        >Place Search</a
+      >. For more information about place IDs, see the
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/place-id"
+        >place ID overview</a
+      >.
+    </p>
+  </li>
+</ul>
+<h2 id="optional-parameters">Optional parameters</h2>
+<ul>
+  <li>
+    <h3 id="fields">fields</h3>
+    <p>
+      Use the fields parameter to specify a comma-separated list of place data
+      types to return. For example:
+      <code>fields=formatted_address,name,geometry</code>. Use a forward slash
+      when specifying compound values. For example:
+      <code>opening_hours/open_now</code>.
+    </p>
+    <p>
+      Fields are divided into three billing categories: Basic, Contact, and
+      Atmosphere. Basic fields are billed at base rate, and incur no additional
+      charges. Contact and Atmosphere fields are billed at a higher rate. See
+      the
+      <a href="https://cloud.google.com/maps-platform/pricing/sheet/"
+        >pricing sheet</a
+      >
+      for more information. Attributions, <code>html_attributions</code>, are
+      always returned with every call, regardless of whether the field has been
+      requested.
+    </p>
+    <p><strong>Basic</strong></p>
+    <p>
+      The Basic category includes the following fields:
+      <code>address_component</code>, <code>adr_address</code>,
+      <code>business_status</code>, <code>formatted_address</code>,
+      <code>geometry</code>, <code>icon</code>, <code>name</code>,
+      <code>photo</code>, <code>place_id</code>, <code>plus_code</code>,
+      <code>type</code>, <code>url</code>, <code>utc_offset</code>,
+      <code>vicinity</code>.
+    </p>
+    <p><strong>Contact</strong></p>
+    <p>
+      The Contact category includes the following fields:
+      <code>formatted_phone_number</code>,
+      <code>international_phone_number</code>, <code>opening_hours</code>,
+      <code>website</code>
+    </p>
+    <p><strong>Atmosphere</strong></p>
+    <p>
+      The Atmosphere category includes the following fields:
+      <code>price_level</code>, <code>rating</code>, <code>review</code>,
+      <code>user_ratings_total</code>.
+    </p>
+    <div class="caution">
+      Caution: Place Search requests and Place Details requests do not return
+      the same fields. Place Search requests return a subset of the fields that
+      are returned by Place Details requests. If the field you want is not
+      returned by Place Search, you can use Place Search to get a place_id, then
+      use that Place ID to make a Place Details request.
+    </div>
+  </li>
+  <li>
+    <h3 id="language">language</h3>
+    <p>The language in which to return results.</p>
+    <ul>
+      <li>
+        See the
+        <a href="https://developers.google.com/maps/faq#languagesupport"
+          >list of supported languages</a
+        >. Google often updates the supported languages, so this list may not be
+        exhaustive.
+      </li>
+      <li>
+        If <code>language</code> is not supplied, the API attempts to use the
+        preferred language as specified in the
+        <code>Accept-Language</code> header, or the native language of the
+        domain from which the request is sent.
+      </li>
+      <li>
+        The API does its best to provide a street address that is readable for
+        both the user and locals. To achieve that goal, it returns street
+        addresses in the local language, transliterated to a script readable by
+        the user if necessary, observing the preferred language. All other
+        addresses are returned in the preferred language. Address components are
+        all returned in the same language, which is chosen from the first
+        component.
+      </li>
+      <li>
+        If a name is not available in the preferred language, the API uses the
+        closest match.
+      </li>
+      <li>
+        The preferred language has a small influence on the set of results that
+        the API chooses to return, and the order in which they are returned. The
+        geocoder interprets abbreviations differently depending on language,
+        such as the abbreviations for street types, or synonyms that may be
+        valid in one language but not in another. For example, <em>utca</em> and
+        <em>tér</em> are synonyms for street in Hungarian.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="region">region</h3>
+    <p>
+      The region code, specified as a
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains"
+        >ccTLD ("top-level domain")</a
+      >
+      two-character value. Most ccTLD codes are identical to ISO 3166-1 codes,
+      with some notable exceptions. For example, the United Kingdom's ccTLD is
+      "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the
+      entity of "The United Kingdom of Great Britain and Northern Ireland").
+    </p>
+  </li>
+  <li>
+    <h3 id="sessiontoken">sessiontoken</h3>
+    <p>
+      A random string which identifies an autocomplete
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/details#session_tokens"
+        >session</a
+      >
+      for billing purposes. Use this for Place Details requests that are called
+      following an autocomplete request in the same user session.
+    </p>
+  </li>
+</ul>
+
+<!--- [END maps_http_parameters_placedetails] -->

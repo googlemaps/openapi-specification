@@ -1080,4 +1080,40 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_details",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/details/json",
+        query: [
+          {
+            key: "place_id",
+            value: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_details_fields",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/details/json",
+        query: [
+          {
+            key: "place_id",
+            value: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+          },
+          {
+            key: "fields",
+            value: "name,rating,formatted_phone_number",
+          },
+        ],
+      }),
+    }),
+  },
 ];

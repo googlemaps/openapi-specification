@@ -45,6 +45,9 @@ The repository makes use of [Bazel](bazel.build) to generate outputs from the sp
 
     > **Note**: The `dist/` folder is included in this repo and should be updated with all changes.
 
+    > **Note**: If a documentation item is not generated, be sure it is included
+    in the appropriate index.yml file.
+
 1. `npm run build:responses` (optional)
 
     > **Note**: This is an optional step requiring an API key. Set the `GOOGLE_MAPS_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.

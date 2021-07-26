@@ -1,0 +1,50 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_parameters_placedetails] -->
+<h2 id="required-parameters">Required parameters</h2>
+
+-   <h3 id="place_id">place_id</h3>
+
+    A textual identifier that uniquelyidentifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
+    For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+
+<h2 id="optional-parameters">Optional parameters</h2>
+
+-   <h3 id="fields">fields</h3>
+
+    Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.
+
+    Fields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.
+
+    **Basic**
+
+    The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `name`, `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
+
+    **Contact**
+
+    The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+
+    **Atmosphere**
+
+    The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+
+    <div class="caution">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
+
+-   <h3 id="language">language</h3>
+
+    The language in which to return results.
+
+    -   See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.
+    -   If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.
+    -   The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.
+    -   If a name is not available in the preferred language, the API uses the closest match.
+    -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
+
+-   <h3 id="region">region</h3>
+
+    The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
+
+-   <h3 id="sessiontoken">sessiontoken</h3>
+
+    A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes. Use this for Place Details requests that are called following an autocomplete request in the same user session.
+
+<!--- [END maps_http_parameters_placedetails] -->

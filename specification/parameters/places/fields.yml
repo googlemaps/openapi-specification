@@ -1,0 +1,56 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: fields
+description: |
+  Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.
+
+  Fields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.
+
+  **Basic**
+
+  The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `name`, `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
+
+  **Contact**
+
+  The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+
+  **Atmosphere**
+
+  The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+
+  <div class="caution">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
+
+schema:
+  type: array
+  items:
+    type: string
+  minItems: 1
+explode: false
+in: query
+examples:
+  basic:
+    value:
+      - formatted_address
+  multiple:
+    value:
+      - formatted_address
+      - name
+      - geometry
+  compound:
+    value:
+      - opening_hours/open_now
+  all:
+    value: 
+    - "*"

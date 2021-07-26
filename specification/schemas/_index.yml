@@ -98,7 +98,7 @@ SnapToRoadsResponse:
 TimeZoneResponse:
   $ref: "./TimeZoneResponse.yml"
 TimeZoneStatus:
-  $ref: "./TimeZoneStatus.yml"  
+  $ref: "./TimeZoneStatus.yml"
 # Errors
 ErrorResponse:
   $ref: "./errors/ErrorResponse.yml"
@@ -106,3 +106,26 @@ ErrorObject:
   $ref: "./errors/ErrorObject.yml"
 ErrorDetail:
   $ref: "./errors/ErrorDetail.yml"
+# Places
+Place:
+  $ref: "./Place.yml"
+PlacePhoto:
+  $ref: "./PlacePhoto.yml"
+PlaceOpeningHours:
+  $ref: "./PlaceOpeningHours.yml"
+PlaceOpeningHoursPeriod:
+  $ref: "./PlaceOpeningHoursPeriod.yml"
+PlaceOpeningHoursPeriodDetail:
+  $ref: "./PlaceOpeningHoursPeriodDetail.yml"
+PlaceGeometry:
+  $ref: "./PlaceGeometry.yml"
+PlacePlusCode:
+  $ref: "./PlacePlusCode.yml"
+PlaceReview:
+  $ref: "./PlaceReview.yml"
+PlaceAddressComponent:
+  $ref: "./PlaceAddressComponent.yml"
+PlacesDetailsResponse:
+  $ref: "./PlacesDetailsResponse.yml"
+PlacesStatus:
+  $ref: "./PlacesStatus.yml"

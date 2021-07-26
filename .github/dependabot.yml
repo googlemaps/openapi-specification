@@ -18,8 +18,3 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    ignore: 
-      - dependency-name: "postman-collection"
-        versions: ["4.x"]
-      - dependency-name: "@types/postman-collection"
-        versions: ["4.x"]

@@ -45,23 +45,20 @@
       <td>optional</td>
       <td>string</td>
       <td>
-        Indicates the operational status of the place, if it is a business. It
-        can contain one of the following values:
+        Indicates the operational status of the place, if it is a business. If
+        no data exists, <code>business_status</code> is not returned. The
+        allowed values include: <code>OPERATIONAL</code>,
+        <code>CLOSED_TEMPORARILY</code>, and <code>CLOSED_PERMANENTLY</code>
       </td>
+    </tr>
+    <tr>
+      <td align="left"><code>formatted_address</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>A string containing the human-readable address of this place.</td>
     </tr>
   </tbody>
 </table>
-<ul>
-  <li><code>OPERATIONAL</code></li>
-  <li><code>CLOSED_TEMPORARILY</code></li>
-  <li><code>CLOSED_PERMANENTLY</code></li>
-</ul>
-<p>
-  If no data exists, business_status is not returned. The allowed values
-  include: <code>OPERATIONAL</code>, <code>CLOSED_TEMPORARILY</code>, and
-  <code>CLOSED_PERMANENTLY</code> | | <code>formatted_address</code> | optional
-  | string | A string containing the human-readable address of this place.
-</p>
 <p>
   Often this address is equivalent to the postal address. Note that some
   countries, such as the United Kingdom, do not allow distribution of true

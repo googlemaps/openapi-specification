@@ -25350,7 +25350,7 @@
             "example": "<span class=\"street-address\">48 Pirrama Rd</span>, <span class=\"locality\">Pyrmont</span> <span class=\"region\">NSW</span> <span class=\"postal-code\">2009</span>, <span class=\"country-name\">Australia</span>"
           },
           "business_status": {
-            "description": "Indicates the operational status of the place, if it is a business. It can contain one of the following values:\n- `OPERATIONAL`\n- `CLOSED_TEMPORARILY`\n- `CLOSED_PERMANENTLY`\n\nIf no data exists, business_status is not returned.\n",
+            "description": "Indicates the operational status of the place, if it is a business. If no data exists, `business_status` is not returned.\n",
             "type": "string",
             "enum": [
               "OPERATIONAL",

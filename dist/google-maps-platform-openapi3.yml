@@ -17932,7 +17932,7 @@ components:
 
             The formatted address is logically composed of one or more address components. For example, the address "111 8th Avenue, New York, NY" consists of the following components: "111" (the street number), "8th Avenue" (the route), "New York" (the city) and "NY" (the US state).
 
-            Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.
+            Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.      
           type: string
           example: '48 Pirrama Rd, Pyrmont NSW 2009, Australia'
         formatted_phone_number:
@@ -17946,6 +17946,12 @@ components:
           description: Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.
           type: string
           example: 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png'
+        icon_background_color:
+          description: Contains the default HEX color code for the place's category.
+          type: string
+        icon_mask_base_uri:
+          description: 'Contains the URL of a recommended icon, minus the `.svg` or `.png` file type extension.'
+          type: string
         international_phone_number:
           description: 'Contains the place''s phone number in international format. International format includes the country code, and is prefixed with the plus, +, sign. For example, the international_phone_number for Google''s Sydney, Australia office is `+61 2 9374 4000`.'
           type: string

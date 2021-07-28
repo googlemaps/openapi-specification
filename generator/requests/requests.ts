@@ -1116,4 +1116,97 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_findplacefromtext_mca",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: "Museum of Contemporary Art Australia",
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          {
+            key: "fields",
+            value: "formatted_address,name,rating,opening_hours,geometry",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_locationbias",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: "mongolian",
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          {
+            key: "locationbias",
+            value: "circle:2000@47.6918452,-122.2226413",
+          },
+          {
+            key: "fields",
+            value: "formatted_address,name,rating,opening_hours,geometry",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_phonenumber",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("+16502530000"),
+          },
+          {
+            key: "inputtype",
+            value: "phonenumber",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_error",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("+16502530000"),
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          { key: "fields", value: "invalid" },
+        ],
+      }),
+    }),
+  },
 ];

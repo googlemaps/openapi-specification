@@ -1,0 +1,39 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_findplacefromtext_locationbias_response]
+{
+  "candidates":
+    [
+      {
+        "formatted_address": "9738 NE 117th Ln ste c, Kirkland, WA 98034, United States",
+        "geometry":
+          {
+            "location": { "lat": 47.7057677, "lng": -122.2111481 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 47.70711752989273, "lng": -122.2097982701073 },
+                "southwest":
+                  { "lat": 47.70441787010729, "lng": -122.2124979298927 },
+              },
+          },
+        "name": "Mongolian Grill Kirkland",
+        "opening_hours": { "open_now": true },
+        "rating": 4.4,
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_findplacefromtext_locationbias_response]

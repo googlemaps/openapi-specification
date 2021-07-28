@@ -92,10 +92,17 @@ const executeRequest = async (
       if (error) {
         reject(stderr);
       }
-      const response = JSON.parse(stdout) as any;
 
+      let response: any;
+
+      try {
+        response = JSON.parse(stdout) as any;
+      } catch (e) {
+        reject(stdout);
+        return;
+      }
       // might be a 200 but have an error body
-      if (response.error && !captureError) {        
+      if (response.error && !captureError) {
         reject(stdout);
         return;
       }

@@ -52,8 +52,8 @@
       {
         "bounds":
           {
-            "northeast": { "lat": -33.8358894, "lng": 140.8551911 },
-            "southwest": { "lat": -37.2918204, "lng": 138.4958877 },
+            "northeast": { "lat": -33.83588640000001, "lng": 140.8552322 },
+            "southwest": { "lat": -37.2918592, "lng": 138.4958877 },
           },
         "copyrights": "Map data ©2021 Google",
         "legs":
@@ -365,7 +365,7 @@
                     "maneuver": "turn-right",
                     "polyline":
                       {
-                        "points": "rffuEutbnYgG{BkA]}Bs@w@WaA_@}@[mA]y@QWGUEQAYA_G?iCAuAEg@EYGe@O{Ak@kAc@SIcC_AkFoB{@a@qB{@a@Oa@Ou@[oBy@e@Sq@YICIC[Ia@Ii@I]Cc@Ea@CeA?[@WBwAHYBmDT_@@i@@e@Cc@E_@ECAUEWGSGMEQIQIUMu@c@_BaAc@UCCi@WYKa@Qe@Oc@O]Ia@Gi@Ie@E[Ag@Ci@?Q?Q@YBy@He@FgAD",
+                        "points": "rffuEutbnYgG{BkA]}Bs@w@WaA_@}@[mA]y@QWGUEQAYA_G?iCAuAEg@EYGe@O{Ak@kAc@SIcC_AkFoB{@a@qB{@a@Oa@Ou@[oBy@e@S[MUKICIC[Ia@Ii@I]Cc@Ea@CeA?[@WBwAHYBmDT_@@i@@e@Cc@E_@ECAUEWGSGMEQIQIUMu@c@_BaAc@UCCi@WYKa@Qe@Oc@O]Ia@Gi@Ie@E[Ag@Ci@?Q?Q@YBy@He@FgAD",
                       },
                     "start_location": { "lat": -35.098822, "lng": 138.7913065 },
                     "travel_mode": "DRIVING",
@@ -972,31 +972,17 @@
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "1.6 km", "value": 1554 },
-                    "duration": { "text": "1 min", "value": 85 },
-                    "end_location": { "lat": -34.8842525, "lng": 138.5717542 },
-                    "html_instructions": "Keep <b>right</b>",
+                    "distance": { "text": "7.0 km", "value": 6998 },
+                    "duration": { "text": "8 mins", "value": 477 },
+                    "end_location": { "lat": -34.9315515, "lng": 138.5703998 },
+                    "html_instructions": 'Keep <b>right</b> to continue on <b>North-South Motorway</b>/<wbr/><b>A2</b><div style="font-size:0.9em">Continue to follow A2</div>',
                     "maneuver": "keep-right",
                     "polyline":
                       {
-                        "points": "prysEurwlYB?fBCrCA`DIpBKlBOdC]l@Kb@G\\E@?JC|AQb@EjBUTCrAIPAnDE|B?rGAB?vGAzCCrE@vC@hCG",
+                        "points": "prysEurwlYB?fBCrCA`DIpBKlBOdC]l@Kb@G\\E@?JC|AQb@EjBUTCrAIPAnDE|B?rGAB?vGAzCCrE@hA?lA@\\AjBEdBFtADl@Jf@JpAXB@`A^\\Nj@Xd@V^Vt@b@nAt@@?d@T`@NRFxAf@jDr@`@JdATnEz@hFfA|ATt@N|Bj@~Dx@~A\\TFr@PfA\\H@JBnDz@B?hBZx@Jn@Fl@Dl@Dp@@r@Bj@@j@@B?n@DTBl@DRBr@Jp@HTDTFh@Jh@LRFRDZJD@FBD@D@d@LVFxBh@v@Pn@JbANB@h@D|@HB?f@Fj@Hr@Hn@D^Fr@HfCVVB~Ef@t@Ft@HbBJdEJbADx@HbCRfANdAVZDR@N@L?P?B?`@CRELEpB{@xCuA`@QfAe@zBaAPEnB}@z@_@bAc@|@_@rAk@dBw@l@Uz@]n@Y|CqAxAo@bAc@JEnCkAtB_Ap@YRI\\IREx@ObCSfBGh@A`AGl@EH?JAd@CPAx@CF?x@?`A?p@AlA?bCIz@C|@EdAEj@APApDKRA~@CtBI^A`CMrAIfBI~@E",
                       },
                     "start_location":
                       { "lat": -34.8703257, "lng": 138.5708282 },
-                    "travel_mode": "DRIVING",
-                  },
-                  {
-                    "distance": { "text": "5.4 km", "value": 5444 },
-                    "duration": { "text": "7 mins", "value": 392 },
-                    "end_location": { "lat": -34.9315515, "lng": 138.5703998 },
-                    "html_instructions": 'Merge onto <b>North-South Motorway</b>/<wbr/><b>A2</b><div style="font-size:0.9em">Continue to follow A2</div>',
-                    "maneuver": "merge",
-                    "polyline":
-                      {
-                        "points": "pi|sEmxwlYdBFtADl@Jf@JpAXB@`A^\\Nj@Xd@V^Vt@b@nAt@@?d@T`@NRFxAf@jDr@`@JdATnEz@hFfA|ATt@N|Bj@~Dx@~A\\TFr@PfA\\H@JBnDz@B?hBZx@Jn@Fl@Dl@Dp@@r@Bj@@j@@B?n@DTBl@DRBr@Jp@HTDTFh@Jh@LRFRDZJD@FBD@D@d@LVFxBh@v@Pn@JbANB@h@D|@HB?f@Fj@Hr@Hn@D^Fr@HfCVVB~Ef@t@Ft@HbBJdEJbADx@HbCRfANdAVZDR@N@L?P?B?`@CRELEpB{@xCuA`@QfAe@zBaAPEnB}@z@_@bAc@|@_@rAk@dBw@l@Uz@]n@Y|CqAxAo@bAc@JEnCkAtB_Ap@YRI\\IREx@ObCSfBGh@A`AGl@EH?JAd@CPAx@CF?x@?`A?p@AlA?bCIz@C|@EdAEj@APApDKRA~@CtBI^A`CMrAIfBI~@E",
-                      },
-                    "start_location":
-                      { "lat": -34.8842525, "lng": 138.5717542 },
                     "travel_mode": "DRIVING",
                   },
                   {
@@ -1044,7 +1030,7 @@
           ],
         "overview_polyline":
           {
-            "points": "j~dtEmm}lYhw@ltArdBj}A`zFeR`uB~AriAvcB|pAlDjdEjkArhBb\\roAbxC|xGlaAvsDd_@h|A`[`uBmyD|bBstClb@whBuAmtDzvAy|An_@ieB~n@o|AraAiNyNc_Aw`GwiFamDczEmiAqzCceB}YkmD_aBqvB_aCkzBdBmtBc[m_@g}BbResA_xAokCgr@ml@_OugC`ToaGj_CsaDzaCwhBdhBikDxgBerKuMosF~iAk_HjaAstH{x@}bGtr@eaHyKwpHrgGg|FhqGu|K|~DicClyAmgCjmLsfJfrNayNr_FayKdgD{cIhaFs|EvaH{eD~hFssArcOasGpxOufLhiG_nIn{PctVnqCgkD|aBo|M~|@{cElpDs~C`lMskKntC}pBhkDhBhiFro@zcFwp@zoKaBrkNsaAxoPxr@ppF_qBbzAxL~bD{sD|rMocO~cL{bLpgPa_N`yJmvFvjG}rCtiOixEnfFsnBleAws@hgCiB~pCii@t~QulHjkHivEdhIqzC`hIpmBt`D|E_sCqHmdDqViwC_wA_gDr`BkkIduBmgClrCwnHfsCuwLdiEo~BdFi`Btr@{HxAu~LrfEcmKrxDywI~zDywLx~IwzNbqLobNfnOqwIb{KsjB[wfF~vBq|Nkr@cuObbA}qKiFywEvjAyoFw}@cvFmFe`Kl{Ic_KxgJkxBxnOioCvqG}fCl}CgoStoYa|MnuKisFbiE{zHhmCogGpnAmtFrqDavGhjDc_EnqIoxCdlIyqKb|M_wIrkHmkFbfEybBzeD{cDruAqxFpgGonBzmFmmE|rDwmEleC{z@veEvLflB}oBtjAmpCd|DemF|hBqeF|_CcmNvgC_bK~ZgfBzqBu_BhrCqQ`gGgV~`BupBzq@e`BdYehBv`D_pEvgIijBhxByiAtjC{yCrfBqq@vwBgpBzRu~GwYyw@_iA{Q{uAewCcbBmqDqoBodA~CdOns@dChaDcm@ruDiRflLfr@b`GvE`hDw`CiO_wFh_@}oGmFcwHc^w_E_eCuaBggAwjKflCkvMrdH_kH~lDu}J_h@ofJd~@cvCx}Ayl@zyAkjAn[kaEv]wdDjt@ivNfzBwaAdZd}McnCljHaq@hzEqaApzB{dDtgJejApiJhd@fpGi`BzqMi|GtgEsrCbxJodA`lD~yCn{OhwAlzI_n@x{Jjb@zxDjrDfoAdjFfdCd`Al~GdgE|OdqFh~AnsCz_BfW`rFgsArbDtEx~C`lA|yAd~@~uAoCddCmMrpG{IjkBcB~vAqr@_Qm{C",
+            "points": "j~dtEmm}lYhw@ltArdBj}A`zFeR`uB~AriAvcB|pAlDjdEjkArhBb\\roAbxC|xGlaAvsDd_@h|A`[`uBmyD|bBstClb@whBuAmtDzvAy|An_@ieB~n@o|AraAiNyNc_Aw`GwiFamDczEmiAqzCceB}YkmD_aBqvB_aCkzBdBisBmZw`@{|BvR_sAixAglC_r@kk@oOqeC`TicGf}BwaDfbCogBriBskD~gBqsKsL{lFzhA_fHpaAsrHqx@kdGjr@s|GuN_rHnjGgaGjdGupK`iEunCnzAqeC`nLihJ~iNumN`iFceLtbDe|H~}EucF|eHgdDlbFsqAvcOeoGl~OekLd}F{|HzhQ}gWxqCigDzcBo_Nr}@_fE|hDcxCzoMynKftCktB|dD|@`_Flk@btFoi@xmKsCzmNoaAj|Oxs@ldG_pBt}AtJ~aDkrD|sMydOx|K}|KdnPedNvyJowFbiGcrCrjOsxEdgFcoBh~Iu`Bh~QqlHpkHyvEzdIazCpjIxlBlcD`CmlCeG{iDgSevCcyA_hDf`BkkIvtBehCxrConHhsCouL`iEg_C|F{zAxp@wPvCg}LjeEgmKbyDooInvDqwLf}IwbObvLacNpnOguIdzKwlBh@chFbwBmyNmr@_qO`aAuvKaE_xE`kAqpFg~@uwFkFo}JbyIo`KfeJyxB`iOwnCh{GmdCdyCqpSbqY{yMfuKiwFplEurHviCeoGhrAm_FtaDknD`bAg|BzvBa_EvpI{vC~eIeoKt_NuyIbnHylFvfEqcBxfD}aDzsA{xF|fGkoBvnFqkEhrDu|DpkB_oAzaF|MxjBgoB~kAqqC~{DsmFphBwaFd_CooNriCwbKnZgfBbqBe`BrrCiRveGqSv`ByrBzs@_`BfYq[v_AikA`_BelB`yDkcBdmCmiBpyByiAbjCcyCrfBes@`xBulBnWauGq_@geAyfA_RcuA{vCicBepDcoBuu@ru@wh@bxIiTjiL~t@r}FbDnkDe_CcKwvFb_@q}FQ}cI}c@ucE}bCcaB}iAcmKdjCquM|dHagHjlDkbKef@meJj}@wwCd}A}l@l{AeiAvZcaEb^efD|t@wmNtwBsjAt\\t{M{mCniHsp@fzEuaA|rBu_D~lJqoApmJpc@rpGu_BbhMmvGvbEmsCjfKmjAzlDrzCbtOhxAh|Ikn@naKhb@vxDjpD`oAjkF`dCf`Ax~G`gErN`oFj_BvuCruAfZpzF}sA~bDhBv|CfiAvxAxbAjwAcC|fCgNrnGmJzfBb@|~Aaq@uQw`D",
           },
         "summary": "M2",
         "warnings": [],

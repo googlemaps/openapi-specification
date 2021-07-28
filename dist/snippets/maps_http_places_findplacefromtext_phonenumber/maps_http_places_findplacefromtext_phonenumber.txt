@@ -1,0 +1,6 @@
+[START maps_http_places_findplacefromtext_phonenumber]
+https://maps.googleapis.com/maps/api/place/findplacefromtext/json
+  ?input=%2B16502530000
+  &inputtype=phonenumber
+  &key=YOUR_API_KEY
+[END maps_http_places_findplacefromtext_phonenumber]

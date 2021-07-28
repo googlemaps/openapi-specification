@@ -39,3 +39,12 @@
 /maps/api/place/details/json:
   get:
     $ref: "./places/details.yml"
+/maps/api/place/findplacefromtext/json:
+  get:
+    $ref: "./places/findplacefromtext.yml"
+/maps/api/place/nearbysearch/json:  
+  get:
+    $ref: "./places/nearbysearch.yml"
+/maps/api/place/textsearch/json:  
+  get:
+    $ref: "./places/textsearch.yml"

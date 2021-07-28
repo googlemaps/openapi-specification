@@ -1,0 +1,39 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Places API
+description: The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.
+parameters:
+  - "$ref": "../../parameters/places/place_id.yml"
+  - "$ref": "../../parameters/places/fields.yml"
+  - "$ref": "../../parameters/places/sessiontoken.yml"
+  - "$ref": "../../parameters/language.yml"
+  - "$ref": "../../parameters/region.yml"
+responses:
+  "200":
+    description: Response for the Distance Matrix API query.
+    content:
+      application/json:
+        examples:
+          details:
+            value:
+              $ref: "../../responses/maps_http_places_details_response.yml"
+          fields:
+            value:
+              $ref: "../../responses/maps_http_places_details_fields_response.yml"          
+        schema:
+          $ref: "../../schemas/PlacesDetailsResponse.yml"

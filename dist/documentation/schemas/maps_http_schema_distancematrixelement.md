@@ -4,10 +4,10 @@
 
 type: `object`
 
-| Field      | Required     | Type                                                                                      | Description                                                                                                                                   |
-| :--------- | ------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `status`   | **required** | [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") | A status for the element. See [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") for more information. |
-| `distance` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                               |
-| `duration` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                               |
+| Field      | Required     | Type                                                                                      | Description                                                                                                                                                                     |
+| :--------- | ------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `status`   | **required** | [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") | <div class="ref-property-description"><p>A status for the element.</p><p>See <a href="#DistanceMatrixElementStatus">DistanceMatrixElementStatus</a> for more information.</div> |
+| `distance` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                                                                 |
+| `duration` | optional     | [TextValueObject](#TextValueObject "TextValueObject")                                     | See [TextValueObject](#TextValueObject "TextValueObject") for more information.                                                                                                 |
 
 <!--- [END maps_http_schema_distancematrixelement] -->

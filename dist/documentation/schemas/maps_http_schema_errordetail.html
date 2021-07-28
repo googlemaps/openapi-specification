@@ -16,17 +16,26 @@
       <td align="left"><code>message</code></td>
       <td><strong>required</strong></td>
       <td>string</td>
-      <td>A short description of the error.</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>A short description of the error.</p>
+        </div>
+      </td>
     </tr>
     <tr>
       <td align="left"><code>reason</code></td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        A reason for the error. The allowed values include:
-        <code>badRequest</code>, <code>dailyLimitExceeded</code>,
-        <code>invalid</code>, <code>keyInvalid</code>, <code>notFound</code>,
-        <code>parseError</code>, and <code>userRateLimitExceeded</code>
+        <div class="nonref-property-description">
+          <p>A reason for the error.</p>
+          <div class="notranslate">
+            The allowed values include: <code>badRequest</code>,
+            <code>dailyLimitExceeded</code>, <code>invalid</code>,
+            <code>keyInvalid</code>, <code>notFound</code>,
+            <code>parseError</code>, and <code>userRateLimitExceeded</code>
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
@@ -34,9 +43,13 @@
       <td>optional</td>
       <td>string</td>
       <td>
-        The domain in which the error occurred. The allowed values include:
-        <code>global</code>, <code>geolocation</code>, and
-        <code>usageLimits</code>
+        <div class="nonref-property-description">
+          <p>The domain in which the error occurred.</p>
+          <div class="notranslate">
+            The allowed values include: <code>global</code>,
+            <code>geolocation</code>, and <code>usageLimits</code>
+          </div>
+        </div>
       </td>
     </tr>
   </tbody>

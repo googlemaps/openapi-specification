@@ -44,13 +44,16 @@ const main = async (argv: any) => {
   for (const key in spec.components!.schemas) {
     const schema = spec.components!.schemas[key];
     const regionTag = `maps_http_schema_${slugify(key).toLowerCase()}`;
-    const markdown = mdProcessor.stringify(build(schema, key));
+    const markdown = mdProcessor.stringify(await build(schema, key));
     // write markdown file
     pack.entry(
       {
         name: `documentation/schemas/${regionTag}.md`,
       },
-      `<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${markdown}\n<!--- [END ${regionTag}] -->`
+      prettier.format(
+        `<!--- This is a generated file, do not edit! -->\n<!--- [START ${regionTag}] -->\n${markdown}\n<!--- [END ${regionTag}] -->`,
+        { parser: "markdown" }
+      )
     );
 
     const html = await htmlProcessor.process(markdown);

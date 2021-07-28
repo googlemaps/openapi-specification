@@ -6,9 +6,9 @@ An object containing a numeric value and its formatted text representation.
 
 type: `object`
 
-| Field   | Required     | Type   | Description    |
-| :------ | ------------ | ------ | -------------- |
-| `text`  | **required** | string | String value.  |
-| `value` | **required** | number | Numeric value. |
+| Field   | Required     | Type   | Description                                                          |
+| :------ | ------------ | ------ | -------------------------------------------------------------------- |
+| `text`  | **required** | string | <div class="nonref-property-description"><p>String value.</p></div>  |
+| `value` | **required** | number | <div class="nonref-property-description"><p>Numeric value.</p></div> |
 
 <!--- [END maps_http_schema_textvalueobject] -->

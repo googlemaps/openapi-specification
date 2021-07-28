@@ -4,10 +4,10 @@
 
 type: `object`
 
-| Field             | Required | Type                | Description |
-| :---------------- | -------- | ------------------- | ----------- |
-| `geocoder_status` | optional | string              | TODO        |
-| `place_id`        | optional | string              | TODO        |
-| `types`           | optional | Array&lt;string&gt; | TODO        |
+| Field             | Required | Type                | Description                                                |
+| :---------------- | -------- | ------------------- | ---------------------------------------------------------- |
+| `geocoder_status` | optional | string              | <div class="nonref-property-description"><p>TODO</p></div> |
+| `place_id`        | optional | string              | <div class="nonref-property-description"><p>TODO</p></div> |
+| `types`           | optional | Array&lt;string&gt; | <div class="nonref-property-description"><p>TODO</p></div> |
 
 <!--- [END maps_http_schema_directionsgeocodedwaypoint] -->

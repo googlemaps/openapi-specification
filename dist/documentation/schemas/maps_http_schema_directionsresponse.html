@@ -23,12 +23,17 @@
         >>
       </td>
       <td>
-        Contains an array with details about the geocoding of origin,
-        destination and waypoints. See
-        <a href="#DirectionsGeocodedWaypoint" title="DirectionsGeocodedWaypoint"
-          >DirectionsGeocodedWaypoint</a
-        >
-        for more information.
+        <div class="ref-property-description">
+          <p>
+            Contains an array with details about the geocoding of origin,
+            destination and waypoints.
+          </p>
+          <p>
+            See
+            <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a>
+            for more information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -40,10 +45,16 @@
         >>
       </td>
       <td>
-        Contains an array of routes from the origin to the destination. See
-        Routes below. Routes consist of nested Legs and Steps. See
-        <a href="#DirectionsRoute" title="DirectionsRoute">DirectionsRoute</a>
-        for more information.
+        <div class="ref-property-description">
+          <p>
+            Contains an array of routes from the origin to the destination. See
+            Routes below. Routes consist of nested Legs and Steps.
+          </p>
+          <p>
+            See <a href="#DirectionsRoute">DirectionsRoute</a> for more
+            information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -55,11 +66,13 @@
         >
       </td>
       <td>
-        Contains metadata on the request. See
-        <a href="#DirectionsStatus" title="DirectionsStatus"
-          >DirectionsStatus</a
-        >
-        for more information.
+        <div class="ref-property-description">
+          <p>Contains metadata on the request.</p>
+          <p>
+            See <a href="#DirectionsStatus">DirectionsStatus</a> for more
+            information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -67,11 +80,15 @@
       <td>optional</td>
       <td>Array&#x3C;string></td>
       <td>
-        Contains an array of available travel modes. This field is returned when
-        a request specifies a travel mode and gets no results. The array
-        contains the available travel modes in the countries of the given set of
-        waypoints. This field is not returned if one or more of the waypoints
-        are 'via waypoints'.
+        <div class="nonref-property-description">
+          <p>
+            Contains an array of available travel modes. This field is returned
+            when a request specifies a travel mode and gets no results. The
+            array contains the available travel modes in the countries of the
+            given set of waypoints. This field is not returned if one or more of
+            the waypoints are 'via waypoints'.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

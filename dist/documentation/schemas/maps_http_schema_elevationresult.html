@@ -16,18 +16,27 @@
       <td align="left"><code>elevation</code></td>
       <td><strong>required</strong></td>
       <td>number</td>
-      <td>The elevation of the location in meters.</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>The elevation of the location in meters.</p>
+        </div>
+      </td>
     </tr>
     <tr>
       <td align="left"><code>location</code></td>
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        A location element of the position for which elevation data is being
-        computed. Note that for path requests, the set of location elements will
-        contain the sampled points along the path. See
-        <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
-        more information.
+        <div class="ref-property-description">
+          <p>
+            A location element of the position for which elevation data is being
+            computed. Note that for path requests, the set of location elements
+            will contain the sampled points along the path.
+          </p>
+          <p>
+            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -35,12 +44,16 @@
       <td>optional</td>
       <td>number</td>
       <td>
-        The value indicating the maximum distance between data points from which
-        the elevation was interpolated, in meters. This property will be missing
-        if the resolution is not known. Note that elevation data becomes more
-        coarse (larger resolution values) when multiple points are passed. To
-        obtain the most accurate elevation value for a point, it should be
-        queried independently.
+        <div class="nonref-property-description">
+          <p>
+            The value indicating the maximum distance between data points from
+            which the elevation was interpolated, in meters. This property will
+            be missing if the resolution is not known. Note that elevation data
+            becomes more coarse (larger resolution values) when multiple points
+            are passed. To obtain the most accurate elevation value for a point,
+            it should be queried independently.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

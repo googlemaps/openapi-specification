@@ -6,9 +6,9 @@ An encoded location reference, derived from latitude and longitude coordinates, 
 
 type: `object`
 
-| Field           | Required | Type   | Description                                                                                                              |
-| :-------------- | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `compound_code` | optional | string | The `compound_code` is a 6 character or longer local code with an explicit location (`CWC8+R9, Mountain View, CA, USA`). |
-| `global_code`   | optional | string | The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).                       |
+| Field           | Required | Type   | Description                                                                                                                                                                                          |
+| :-------------- | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `compound_code` | optional | string | <div class="nonref-property-description"><p>The <code>compound_code</code> is a 6 character or longer local code with an explicit location (<code>CWC8+R9, Mountain View, CA, USA</code>).</p></div> |
+| `global_code`   | optional | string | <div class="nonref-property-description"><p>The <code>global_code</code> is a 4 character area code and 6 character or longer local code (<code>849VCWC8+R9</code>).</p></div>                       |
 
 <!--- [END maps_http_schema_pluscode] -->

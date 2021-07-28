@@ -4,10 +4,10 @@
 
 type: `object`
 
-| Field           | Required     | Type                                                               | Description                                                                     |
-| :-------------- | ------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| `results`       | **required** | Array&lt;[ElevationResult](#ElevationResult "ElevationResult")&gt; | See [ElevationResult](#ElevationResult "ElevationResult") for more information. |
-| `status`        | **required** | [ElevationStatus](#ElevationStatus "ElevationStatus")              | See [ElevationStatus](#ElevationStatus "ElevationStatus") for more information. |
-| `error_message` | optional     | string                                                             | Detailed information about the reasons behind the given status code.            |
+| Field           | Required     | Type                                                               | Description                                                                                                                |
+| :-------------- | ------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| `results`       | **required** | Array&lt;[ElevationResult](#ElevationResult "ElevationResult")&gt; | See [ElevationResult](#ElevationResult "ElevationResult") for more information.                                            |
+| `status`        | **required** | [ElevationStatus](#ElevationStatus "ElevationStatus")              | See [ElevationStatus](#ElevationStatus "ElevationStatus") for more information.                                            |
+| `error_message` | optional     | string                                                             | <div class="nonref-property-description"><p>Detailed information about the reasons behind the given status code.</p></div> |
 
 <!--- [END maps_http_schema_elevationresponse] -->

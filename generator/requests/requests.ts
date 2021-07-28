@@ -1231,4 +1231,60 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_textsearch",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("restaurants in Sydney"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch_incomplete_address",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("123 main street"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch_location",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("123 main street"),
+          },
+          {
+            key: "location",
+            value: "42.3675294,-71.186966",
+          },
+          {
+            key: "radius",
+            value: "10000",
+          },
+        ],
+      }),
+    }),
+  },
 ];

@@ -1,0 +1,921 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_textsearch_response]
+{
+  "html_attributions": [],
+  "next_page_token": "Aap_uEClksgsbyvQKXl7MvDr_qbCSFdi3bgm0hQurqCKp82tYA1vpXIo0Vda0nB5D-1oOguQt4Vh9noEN2NgS8WWeMFrxD1kD01zYZEdAKbECyObBSDVQVFBKqvnpjpNFt2BFKbIUl6yLY6MDL64G24nNimyHh6Cf7SBwnqXFFTSp83U9wvppNF3zJRprhzoEkTmVd4m3NGyppr7EeUfsNIE29Sv0b0W0pzK7KPalYHaBXZr3MgRpfJpsRe7P6YUoC2yy6uzdWjWN7FGuWxhCLQT_wq87tke0hF8nBT-V6_FF7wOk7Pok4jdSrPucgTkhfAbZP37wI7u6aBocJTw4zmQ7G2Q80guYZv_3LII_ljc-GCnTJMudtonDQVxdUgOyB76fQR0kSdwE_GiQ9j1_tuT",
+  "results":
+    [
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "15 Bligh St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8651392, "lng": 151.2104493 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86386197010728, "lng": 151.2119049298927 },
+                "southwest":
+                  { "lat": -33.86656162989272, "lng": 151.2092052701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Restaurant Hubert",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1200,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/111546023805203421810">Qamar K</a>',
+                ],
+              "photo_reference": "Aap_uEBseReFmIJSguY7ueVoxLNVNSUTcY7sJg7-exEXZGVo7DkRlT2ssSxmw-yE-4rowAyXM6h7o4ISM0-rsfKL8HtM7Fp-AXm8_kAxtDjRJI2Vjo391lM6c5O1ihYHIGCxSjnY5CsdHfGlMSUe5FxdK3kNaLkQj13TjIygQhnrCK4CV4rB",
+              "width": 1600,
+            },
+          ],
+        "place_id": "ChIJF5-RdGquEmsR5rN_H74uSqQ",
+        "plus_code":
+          {
+            "compound_code": "46M6+W5 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M6+W5",
+          },
+        "price_level": 3,
+        "rating": 4.6,
+        "reference": "ChIJF5-RdGquEmsR5rN_H74uSqQ",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 2228,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "1 Macquarie St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8592041, "lng": 151.2132635 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.85786707010728, "lng": 151.2147093298927 },
+                "southwest":
+                  { "lat": -33.86056672989272, "lng": 151.2120096701072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Aria Restaurant Sydney",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 1169,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/104093802548855304589">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEDUSmWY2nnc780t49prgHv9w8-R0ymQ1B-g7ETuEjQaIAc91qT4vT9hfocO92O4MUsChN-zLv-xsUWgveqB_qCfLqj_oTGO4GmSXgszpliMDHVv3RYRZg2jHEItVuN2EjnUYMzIBNVUtkNfF9Bd-k21bF9ffys0aGw4EhkxRzgtvixa",
+              "width": 1559,
+            },
+          ],
+        "place_id": "ChIJdxxU1WeuEmsR11c4fswX-Io",
+        "plus_code":
+          {
+            "compound_code": "46R7+88 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46R7+88",
+          },
+        "price_level": 4,
+        "rating": 4.5,
+        "reference": "ChIJdxxU1WeuEmsR11c4fswX-Io",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 1727,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Bennelong Point, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8574171, "lng": 151.2147279 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.85669205000001, "lng": 151.2155154798927 },
+                "southwest":
+                  { "lat": -33.85959225000001, "lng": 151.2128158201072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Bennelong",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1000,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/112111459665476218482">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEAHurwqckzwtLUZUxKwOBYXE9GzUzi4AVhfu8C8Bo0fbiZUGg50cmF7PvL1LeoL_auNx2yvuAVA3NwnwAyLV4awifUgd5x7h9CR4-6BygVDcCADr3g2YI_RZ63zHh1VLDjgSHbyg0Aks7jo1U23Lrn0XLsn5aYCxFEfeWGqM1iiTXUQ",
+              "width": 1500,
+            },
+          ],
+        "place_id": "ChIJQcmNYGauEmsR84D5HAJJUhw",
+        "plus_code":
+          {
+            "compound_code": "46V7+2V Sydney, New South Wales, Australia",
+            "global_code": "4RRH46V7+2V",
+          },
+        "price_level": 4,
+        "rating": 4.5,
+        "reference": "ChIJQcmNYGauEmsR84D5HAJJUhw",
+        "types":
+          ["bar", "restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 1174,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "27 O'Connell St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8652017, "lng": 151.2088233 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86401937010727, "lng": 151.2103577298927 },
+                "southwest":
+                  { "lat": -33.86671902989272, "lng": 151.2076580701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Bentley Restaurant + Bar",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2160,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/105098754908654894271">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEDogmKjQOJ9PBeR3S-duKDyPigN3dCLQZ2yO3sRHEdL17-TwtJfJi7W_2PzqG-aI361kweP6oNhw2_jGPEK0kTwzego-c2WbnsSNvA4fyIiVMt6ynokFqxkncAuGZXJEF-V-YtJm5MBvfXSnOI23YeSmlwYYagApUJDVhGQ3O39Mzgh",
+              "width": 2160,
+            },
+          ],
+        "place_id": "ChIJybJExkGuEmsRmpbxj1gH_-U",
+        "plus_code":
+          {
+            "compound_code": "46M5+WG Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M5+WG",
+          },
+        "price_level": 4,
+        "rating": 4.4,
+        "reference": "ChIJybJExkGuEmsRmpbxj1gH_-U",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 573,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "529 Kent St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.875154, "lng": 151.204976 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.87378712010729, "lng": 151.2065244298927 },
+                "southwest":
+                  { "lat": -33.87648677989273, "lng": 151.2038247701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Tetsuya's Restaurant",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 609,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/107060832889946983460">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEBM7QvXQZn81TH6R1PiLol06fxctyy83-izm73ts0Bt23OqARpWJ6dYOcY3rK42mE_H2xrWUSdXLXd7I2Dj_3CJhsAdq-8FeRavNzBz2lfRAsi2zjhE4Brv48q-i1bT6_i05ByfBQ3T4ZVxocxfZyxHnkzAJJLwfIelGJz28gKahUwJ",
+              "width": 1080,
+            },
+          ],
+        "place_id": "ChIJxXSgfDyuEmsR3X5VXGjBkFg",
+        "plus_code":
+          {
+            "compound_code": "46F3+WX Sydney, New South Wales, Australia",
+            "global_code": "4RRH46F3+WX",
+          },
+        "price_level": 4,
+        "rating": 4.6,
+        "reference": "ChIJxXSgfDyuEmsR3X5VXGjBkFg",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 1103,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "3 Bridge Ln, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.864064, "lng": 151.2080881 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86267822010728, "lng": 151.2094013298927 },
+                "southwest":
+                  { "lat": -33.86537787989272, "lng": 151.2067016701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Mr. Wong",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1841,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/101774867537142928950">Stephen Sander</a>',
+                ],
+              "photo_reference": "Aap_uEAGRpyBf-xi2-55j7yth385FkbDg8uevmvGjcIM6GVHFIzCTjRSOcK9iEwwrobedjp1QZ7y6hUDBGb9VaFOcx0UekVMO71XNo5-vcbGFsVh9V7C3Fj-lh0OK6B2YojrO8IoKBfxexmKqQCgo3I4SUgm57dtcRZ8yxtWHKvx7N1Q0ZHZ",
+              "width": 1841,
+            },
+          ],
+        "place_id": "ChIJT2CGg0GuEmsRYLRNCFoOvv4",
+        "plus_code":
+          {
+            "compound_code": "46P5+96 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46P5+96",
+          },
+        "price_level": 3,
+        "rating": 4.4,
+        "reference": "ChIJT2CGg0GuEmsRYLRNCFoOvv4",
+        "types":
+          [
+            "meal_takeaway",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+        "user_ratings_total": 3450,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "Australia Square, 264, level 47 George St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.864967, "lng": 151.207785 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86368497010728, "lng": 151.2093183298927 },
+                "southwest":
+                  { "lat": -33.86638462989272, "lng": 151.2066186701072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "O Bar and Dining",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 2160,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/117228487523125909724">Karl Chong</a>',
+                ],
+              "photo_reference": "Aap_uECKXMpzp06a1r9I0PSZwEx2cjITnLRo-T5uUlyIbQ_SMnv6tL4qSq2V9lLb7pPmhidRKpwMER1-y-FfQy0pVVTUVC5mowDwo_35OmMTLrMMkStOUY7TuPumbavSQw0w5cvaKw8VZh_q1fWMn4-JEjAt-QiHTzkMtbyAeeREgNdSOgfx",
+              "width": 3840,
+            },
+          ],
+        "place_id": "ChIJnzttoEGuEmsRjBEqGkOTGG8",
+        "plus_code":
+          {
+            "compound_code": "46P5+24 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46P5+24",
+          },
+        "price_level": 4,
+        "rating": 4.4,
+        "reference": "ChIJnzttoEGuEmsRjBEqGkOTGG8",
+        "types":
+          [
+            "night_club",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+        "user_ratings_total": 3259,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "5 Sydney Customs House, 31 Alfred St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.862079, "lng": 151.2108919 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86049307010727, "lng": 151.2124314798927 },
+                "southwest":
+                  { "lat": -33.86319272989272, "lng": 151.2097318201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Cafe Sydney",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2268,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106542425349524667212">William Bond</a>',
+                ],
+              "photo_reference": "Aap_uEB2cBbyzEYzKEn-8_VOScJs33PVSSOBcXk9KspxzwIK5gsAwXXtRegOU-X5fsmQ7NUPbP7DC4eNvlpw0LHZrfEgu2_GIcfotbZabIn2UtZAlgq8vnei-rHlk9RvsuAX9b7ixHxiW71qVzVmJ3z6XBmLzVhZniblKWT1o1GYSPVzwd3c",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJOahrAxKuEmsRiJOniUNkOZY",
+        "plus_code":
+          {
+            "compound_code": "46Q6+59 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46Q6+59",
+          },
+        "price_level": 4,
+        "rating": 4.5,
+        "reference": "ChIJOahrAxKuEmsRiJOniUNkOZY",
+        "types":
+          [
+            "cafe",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+        "user_ratings_total": 2447,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "Shop 100/412-414 George St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8694151, "lng": 151.2071166 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86806547010728, "lng": 151.2084946798927 },
+                "southwest":
+                  { "lat": -33.87076512989272, "lng": 151.2057950201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "The Restaurant Pendolino",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/110825702408315759103">Steven Phan</a>',
+                ],
+              "photo_reference": "Aap_uEDJt8C4imSt9KF6lPtqDLTSQNabCVUO72AyhCPqt8rmvEXu7hoH-H_JBm5WskBx_0MUAMnDQPYRyeOFpZ9-whnXF-RTjtE3h6-_25i-HpZTkDR1M3Ls7eUezkStC8vCtAxT2hQPXlMj-a6xneF38r4ELNnjLvbySNrBNLbiPXyMChcG",
+              "width": 3024,
+            },
+          ],
+        "place_id": "ChIJL1zhdD-uEmsRgDPXKOx1JyU",
+        "plus_code":
+          {
+            "compound_code": "46J4+6R Sydney, New South Wales, Australia",
+            "global_code": "4RRH46J4+6R",
+          },
+        "price_level": 3,
+        "rating": 4.6,
+        "reference": "ChIJL1zhdD-uEmsRgDPXKOx1JyU",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 490,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "66 Hunter St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.866098, "lng": 151.2102038 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86481367010728, "lng": 151.2114897798927 },
+                "southwest":
+                  { "lat": -33.86751332989272, "lng": 151.2087901201072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Rockpool Bar & Grill",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106766339982846402399">Ben Watt</a>',
+                ],
+              "photo_reference": "Aap_uEDx5A94T8F_g9W5IEdiUJSlBJyRWHotA6RjatDCXUiv_SchWZ1zjgH56D_OjmodCw5G_IXmVe7e5hGG3xxw_WoXeXYTBt-UIuCi37_OVlmyZwZWSTp70aBbelsto-KckzojbGwO2iQsVxTD2U6Y-bEqGfaWGR-1UpdxuzY9FN9SGL1o",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJV8rt1UGuEmsRf1fObMkd93M",
+        "plus_code":
+          {
+            "compound_code": "46M6+H3 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M6+H3",
+          },
+        "price_level": 4,
+        "rating": 4.4,
+        "reference": "ChIJV8rt1UGuEmsRf1fObMkd93M",
+        "types":
+          ["bar", "restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 2077,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "46-52 Meagher St, Chippendale NSW 2008, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8874605, "lng": 151.2008331 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.88617642010727, "lng": 151.2021869298927 },
+                "southwest":
+                  { "lat": -33.88887607989272, "lng": 151.1994872701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Ester Restaurant",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 600,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/103895372720443224150">Ester Restaurant</a>',
+                ],
+              "photo_reference": "Aap_uECCFRW1n4QOi6KVy9_meWgQhui8HRQfGPEy6eavBmZNOvEc_4t7_SkF3EHSS9LJOCsbHW11nvVCv_7RLOGhhIU57xKyvW4f4NdQpl053q9xtYji6goUagaz9bPEY6H_Doc-HrlVAyTuQrHhDCYucgkld2_QHXns_zivFebyh1--ZmC-",
+              "width": 900,
+            },
+          ],
+        "place_id": "ChIJ7WdhetixEmsRzIf7Q-q6ocY",
+        "plus_code":
+          {
+            "compound_code": "4672+28 Chippendale, New South Wales, Australia",
+            "global_code": "4RRH4672+28",
+          },
+        "price_level": 3,
+        "rating": 4.6,
+        "reference": "ChIJ7WdhetixEmsRzIf7Q-q6ocY",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 892,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "209 Clarence St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.869997, "lng": 151.205185 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86860937010728, "lng": 151.2066464798927 },
+                "southwest":
+                  { "lat": -33.87130902989272, "lng": 151.2039468201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Fortune Village Chinese Restaurant",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2160,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/105012537489946736943">noriyasu yamamoto</a>',
+                ],
+              "photo_reference": "Aap_uEAegW-Fv5cxYgTpBj3mZtQRpa4hcaDvUUu0vVGs4z-A_25r97Fup9l4r3dn9B1ygJ_h9E8o0g0w_Z3ZXbfLz90xCOeiIbdsvI8V8Cay5Z_k-TYd0dqBc1U16RwS7Kle6p-YcafHqP5kHXnAEM0LugCE7ssB4ISLDHfCv0rzAFtqN3w",
+              "width": 3840,
+            },
+          ],
+        "place_id": "ChIJ6SyQGT-uEmsRdQsqqRXMO40",
+        "plus_code":
+          {
+            "compound_code": "46J4+23 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46J4+23",
+          },
+        "price_level": 2,
+        "rating": 4.4,
+        "reference": "ChIJ6SyQGT-uEmsRdQsqqRXMO40",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 533,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "17-19 Alberta St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8777986, "lng": 151.2105307 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.87645557010728, "lng": 151.2119555798927 },
+                "southwest":
+                  { "lat": -33.87915522989272, "lng": 151.2092559201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Alberto's Lounge",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2048,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/111201659328955901486">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uECPRu_h6iMPrWU1kpw7B1r2OQ7sYzPl49Qy2aslSj3VO_V6HiafAlK3BxN2pfLgmPSUQg5hg4P6e8D6ANl7AKBxtXW_AZGv_J66_Ep0pUuJt6QY20LC4SJGyC1VB40leTo-QoXgcWRcG9yVgdDpUXh_GrYCBTS-T8qpihsKSS7EOuTx",
+              "width": 2048,
+            },
+          ],
+        "place_id": "ChIJU_xO9hOvEmsRERZv-itx524",
+        "plus_code":
+          {
+            "compound_code": "46C6+V6 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46C6+V6",
+          },
+        "rating": 4.6,
+        "reference": "ChIJU_xO9hOvEmsRERZv-itx524",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 402,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "1/2-12 Angel Pl, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8669662, "lng": 151.2078951 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86569342010727, "lng": 151.2093679798927 },
+                "southwest":
+                  { "lat": -33.86839307989271, "lng": 151.2066683201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Restaurant Leo",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 4032,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106430289661725122400">Dung Danh</a>',
+                ],
+              "photo_reference": "Aap_uEBfRpA_9qsfhd4UljgGqvwKAyZX3TOoROosB0h6EfjbIrcukJpgc0j7JMjPu8JLOYkZxaykLk0utxEcQReJb2XTDLwUbJHBtTGZsZHhwHblaHOwkVO_IsvP1vvSBvL5RKI63U9Pm7RY-rQ_jF2qhBxbY-4KImptHwO8T_8R6q76jQeR",
+              "width": 3024,
+            },
+          ],
+        "place_id": "ChIJdUQVmkivEmsR17LsrDLkE8w",
+        "plus_code":
+          {
+            "compound_code": "46M5+65 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M5+65",
+          },
+        "rating": 4.6,
+        "reference": "ChIJdUQVmkivEmsR17LsrDLkE8w",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 54,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "4 Ash St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8669418, "lng": 151.2075261 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86557222010728, "lng": 151.2089249298927 },
+                "southwest":
+                  { "lat": -33.86827187989272, "lng": 151.2062252701072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Mercado",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2976,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/108274093076057456665">Odelia Omirza</a>',
+                ],
+              "photo_reference": "Aap_uEBayCYfcqY8uggg4YQ0KE2iHYAbC4S9iicc6yf35aeSS_1BTBbE7tXzhltwYvNB2A9Va4AExbe9SVejYS3IB0cc-ZMo-64G4vaVzMR9Wwi0yB_QYHHxBc8N6_11befXwsgGc6N8LGhz3Sin_iNoW5fQ7i9f-J_pyXL7t7IUu1MBwvO8",
+              "width": 3451,
+            },
+          ],
+        "place_id": "ChIJCXaGXkCuEmsR_O_xTuWrmT8",
+        "plus_code":
+          {
+            "compound_code": "46M5+62 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M5+62",
+          },
+        "price_level": 3,
+        "rating": 4.4,
+        "reference": "ChIJCXaGXkCuEmsR_O_xTuWrmT8",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 471,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "215 Clarence St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8701773, "lng": 151.2052264 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86882012010729, "lng": 151.2066789798927 },
+                "southwest":
+                  { "lat": -33.87151977989273, "lng": 151.2039793201072 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Above Par",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 4480,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/117988371050792124693">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEBxToWino9WHCT-meE7MHUcxofgmnMjYrN5128zjpMs9KXZnkdXVJEP6YGmRHl4tX34IAE9eUXXTNGSD_z3WfIYJBu5TgAq_3Zm6mRmP63lXSG7Vao8BjUm4EA63SePBe9FXQk5F-yx6Fb-CqJO3k2PkNqkc60_xzACPihBYJ3JBcyv",
+              "width": 6720,
+            },
+          ],
+        "place_id": "ChIJ6ZnbPHyvEmsRSqoVKNWWR0I",
+        "plus_code":
+          {
+            "compound_code": "46H4+W3 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46H4+W3",
+          },
+        "rating": 4.7,
+        "reference": "ChIJ6ZnbPHyvEmsRSqoVKNWWR0I",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 122,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "5 Kensington St, Chippendale NSW 2008, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8848073, "lng": 151.2015895 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.88340327010728, "lng": 151.2029597798927 },
+                "southwest":
+                  { "lat": -33.88610292989272, "lng": 151.2002601201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Automata Restaurant",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2160,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/115459156040026284590">Daniel Lu</a>',
+                ],
+              "photo_reference": "Aap_uEDSgf-B6drv6nAv77tQWvZN5Sk43JAaSdYLvve5LcFkCL4j_u1nqR7VKVIeW5CYrp9wy9-kwa7jDTZaZPWJj9VYKJO3_cnIv5p3nApfVcqr6gat2Wr5fycq2RL67jBCxgBIZgJJOzXXoxPz5DzsI9cshofD5wMKu8vC2io8WetSJ7Fl",
+              "width": 2160,
+            },
+          ],
+        "place_id": "ChIJhfcGASeuEmsRmj19JwYiqUo",
+        "plus_code":
+          {
+            "compound_code": "4682+3J Chippendale, New South Wales, Australia",
+            "global_code": "4RRH4682+3J",
+          },
+        "price_level": 3,
+        "rating": 4.4,
+        "reference": "ChIJhfcGASeuEmsRmj19JwYiqUo",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 443,
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "formatted_address": "60 Carrington St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8668185, "lng": 151.2064637 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86546022010727, "lng": 151.2076971798927 },
+                "southwest":
+                  { "lat": -33.86815987989272, "lng": 151.2049975201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Bopp & Tone",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/103069650560025175040">John Pisani</a>',
+                ],
+              "photo_reference": "Aap_uEDCbp3LDKajgvj2R2Yxg_-1FCPIb-7X4Gw_HmJII39NsFF9hMaoWtn8UOzR9l-R6or1aRgdBV2-IBba1XUsCXinUPmIWWX7CizLTSXRaKbp-IBb7xYQqYbml4hSyVJzYPNFKc-0deDa1QzVzFyL-Ng4yMUFbIYCn8O-0s_lFBJs3bNH",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJfTxskB6vEmsRXPSIwVlleUA",
+        "plus_code":
+          {
+            "compound_code": "46M4+7H Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M4+7H",
+          },
+        "price_level": 1,
+        "rating": 4.6,
+        "reference": "ChIJfTxskB6vEmsRXPSIwVlleUA",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 463,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "123 Clarence St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8671505, "lng": 151.2049296 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86580297010728, "lng": 151.2063584798927 },
+                "southwest":
+                  { "lat": -33.86850262989272, "lng": 151.2036588201073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Machiavelli",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1080,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/117432876140729060441">Eat Sydney</a>',
+                ],
+              "photo_reference": "Aap_uECDvIMbvlfy4FAkN1vDDMArqGG4OovDLSOzKK5QzAWDOmmAmBMoqqEAZeYINNRB8zXC-EbaUrIpJ4E0_wJMtHC1s9nTK_3E67rLaeaqC9PpQwlVDzUf65VVNpLMtGcNZBAn6-QQeXioW9qC5f9OhGbVQDZWzNDDac3etZnXrnMk69E8",
+              "width": 1616,
+            },
+          ],
+        "place_id": "ChIJgVcAr0CuEmsRJjJm03tgFtE",
+        "plus_code":
+          {
+            "compound_code": "46M3+4X Sydney, New South Wales, Australia",
+            "global_code": "4RRH46M3+4X",
+          },
+        "price_level": 3,
+        "rating": 4.5,
+        "reference": "ChIJgVcAr0CuEmsRJjJm03tgFtE",
+        "types":
+          [
+            "meal_takeaway",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+        "user_ratings_total": 492,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "98 Clarence St, Sydney NSW 2000, Australia",
+        "geometry":
+          {
+            "location": { "lat": -33.8679688, "lng": 151.2053027 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86662567010728, "lng": 151.2065763298927 },
+                "southwest":
+                  { "lat": -33.86932532989272, "lng": 151.2038766701073 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Bistro Papillon",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/111498270794405053298">Ben H</a>',
+                ],
+              "photo_reference": "Aap_uECG78Q9MRj5OeavwBu53eow42q0piLcPXlpJuis2eCWsLTWn2L9s_pFDHZFx-oxlaZRry2XCQMDSmQbweMZyPvCcFLYqw_HvZy42p1cefNmfk-PmRm2vOp8GPhCVxBki0LW0UvG52_mVW2O55yy_8i6lvuoEYEkUHzQCdPHOuUYvNbo",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJywXDWT-uEmsRxyuZ0Inwi04",
+        "plus_code":
+          {
+            "compound_code": "46J4+R4 Sydney, New South Wales, Australia",
+            "global_code": "4RRH46J4+R4",
+          },
+        "price_level": 3,
+        "rating": 4.5,
+        "reference": "ChIJywXDWT-uEmsRxyuZ0Inwi04",
+        "types":
+          [
+            "meal_takeaway",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+        "user_ratings_total": 459,
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_textsearch_response]

@@ -13,20 +13,25 @@
 # limitations under the License.
 
 type: object
-title: Places Details Response Body
-required: [html_attributions, result, status]
+title: Places Text Search Response Body
+required: [html_attributions, results, status]
 properties:
   html_attributions:
     description: May contain a set of attributions about this listing which must be displayed to the user (some listings may not have attribution).
     type: array
     items:
       type: string
-  result:
-    description: Contains the detailed information about the place requested.
-    $ref: "./Place.yml"
+  results:
+    description: Contains an array of places.
+    type: array
+    items:
+      $ref: "./Place.yml"
   status:
     description: Contains metadata on the request.
     $ref: "./PlacesStatus.yml"
+  error_message:
+    description: Contains additional information about the request.
+    type: string
   info_messages:
     description: Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
     type: array

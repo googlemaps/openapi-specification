@@ -2,32 +2,15 @@
 <!--- [START maps_http_parameters_placetextsearch] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="place_id">place_id</h3>
+-   <h3 id="location">location</h3>
 
-    A textual identifier that uniquelyidentifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
-    For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+    The latitude/longitude around which to retrieve place information. This must be specified as `latitude,longitude`.
+
+-   <h3 id="query">query</h3>
+
+    The text string on which to search, for example: "restaurant" or "123 Main Street". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
 
 <h2 id="optional-parameters">Optional parameters</h2>
-
--   <h3 id="fields">fields</h3>
-
-    Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.
-
-    Fields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.
-
-    **Basic**
-
-    The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `name`, `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
-
-    **Contact**
-
-    The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
-
-    **Atmosphere**
-
-    The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
-
-    <div class="caution">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
 
 -   <h3 id="language">language</h3>
 
@@ -39,12 +22,36 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
+-   <h3 id="maxprice">maxprice</h3>
+
+    Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+
+-   <h3 id="minprice">minprice</h3>
+
+    Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+
+-   <h3 id="opennow">opennow</h3>
+
+    Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
+
+-   <h3 id="pagetoken">pagetoken</h3>
+
+    Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
+
+-   <h3 id="radius">radius</h3>
+
+    Defines the distance (in meters) within which to return place results.
+
+    <div class="note">Note: Radius must be specified with default `rankby=prominence` and not included if `rankby=distance` is specified.</div>
+
 -   <h3 id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <h3 id="sessiontoken">sessiontoken</h3>
+-   <h3 id="type">type</h3>
 
-    A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes. Use this for Place Details requests that are called following an autocomplete request in the same user session.
+    Restricts the results to places matching the specified type. Only one type may be specified (if more than one type is provided, all types following the first entry are ignored). See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
+
+    <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
 
 <!--- [END maps_http_parameters_placetextsearch] -->

@@ -16,24 +16,37 @@ servers:
   - url: https://maps.googleapis.com
 tags:
   - Places API
-description: The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.
+description: |
+  The Google Places API Text Search Service is a web service that returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa" or "123 Main Street". The service responds with a list of places matching the text string and any location bias that has been set.
+
+  The service is especially useful for making [ambiguous address](https://developers.google.com/maps/documentation/geocoding/best-practices) queries in an automated system, and non-address components of the string may match businesses as well as addresses. Examples of ambiguous address queries are incomplete addresses, poorly formatted addresses, or a request that includes non-address components such as business names.
+
+  The search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.
 parameters:
-  - "$ref": "../../parameters/places/place_id.yml"
-  - "$ref": "../../parameters/places/fields.yml"
-  - "$ref": "../../parameters/places/sessiontoken.yml"
+  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/maxprice.yml"
+  - "$ref": "../../parameters/places/minprice.yml"
+  - "$ref": "../../parameters/places/opennow.yml"
+  - "$ref": "../../parameters/places/pagetoken.yml"
+  - "$ref": "../../parameters/places/query.yml"
+  - "$ref": "../../parameters/places/radius.yml"
+  - "$ref": "../../parameters/places/type.yml"
   - "$ref": "../../parameters/language.yml"
   - "$ref": "../../parameters/region.yml"
 responses:
   "200":
-    description: Response for the Distance Matrix API query.
+    description: Response for the Places Text Search request.
     content:
       application/json:
         examples:
-          details:
+          default:
             value:
-              $ref: "../../responses/maps_http_places_details_response.yml"
-          fields:
+              $ref: "../../responses/maps_http_places_textsearch_response.yml"
+          location:
             value:
-              $ref: "../../responses/maps_http_places_details_fields_response.yml"          
+              $ref: "../../responses/maps_http_places_textsearch_location_response.yml"
+          incomplete_address:
+            value:
+              $ref: "../../responses/maps_http_places_textsearch_incomplete_address_response.yml"
         schema:
-          $ref: "../../schemas/PlacesDetailsResponse.yml"
+          $ref: "../../schemas/PlacesTextSearchResponse.yml"

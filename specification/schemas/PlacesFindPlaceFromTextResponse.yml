@@ -28,3 +28,8 @@ properties:
     description: Contains additional information about the request.
     type: string
     example: "Error while parsing 'fields' parameter: Unsupported field name 'invalid'. "
+  info_messages:
+    description: Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+    type: array
+    items:
+      type: string

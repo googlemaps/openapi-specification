@@ -49,9 +49,9 @@
         "legs":
           [
             {
-              "distance": { "text": "22.1 mi", "value": 35551 },
-              "duration": { "text": "50 mins", "value": 3021 },
-              "duration_in_traffic": { "text": "1 hour 1 min", "value": 3686 },
+              "distance": { "text": "22.1 mi", "value": 35613 },
+              "duration": { "text": "50 mins", "value": 3005 },
+              "duration_in_traffic": { "text": "59 mins", "value": 3521 },
               "end_address": "Concord, MA, USA",
               "end_location": { "lat": 42.460387, "lng": -71.3489306 },
               "start_address": "Boston, MA, USA",
@@ -59,44 +59,76 @@
               "steps":
                 [
                   {
-                    "distance": { "text": "0.2 mi", "value": 397 },
-                    "duration": { "text": "2 mins", "value": 109 },
-                    "end_location":
-                      { "lat": 42.36128129999999, "lng": -71.0637912 },
+                    "distance": { "text": "0.1 mi", "value": 178 },
+                    "duration": { "text": "1 min", "value": 36 },
+                    "end_location": { "lat": 42.360989, "lng": -71.0611984 },
                     "html_instructions": "Head <b>north</b> on <b>Cambridge St</b> toward <b>Sudbury St</b>",
                     "polyline":
                       {
-                        "points": "ukpaG`{upLKDSHCBULSNUTKHMJKJIJGFIJIJGHCDMZIR[v@Or@CNGREPERADAPETCTAJALALAP?RAT?d@@d@?B@~A?H@d@",
+                        "points": "ukpaG`{upLKDSHCBULSNUTKHMJKJIJGFIJIJGHCDMZIR[v@",
                       },
                     "start_location": { "lat": 42.3597872, "lng": -71.0598473 },
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "0.2 mi", "value": 342 },
-                    "duration": { "text": "2 mins", "value": 101 },
-                    "end_location": { "lat": 42.3642865, "lng": -71.0633199 },
-                    "html_instructions": "Turn <b>right</b> onto <b>Staniford St</b>",
+                    "distance": { "text": "0.2 mi", "value": 273 },
+                    "duration": { "text": "1 min", "value": 70 },
+                    "end_location": { "lat": 42.3624195, "lng": -71.0585323 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Sudbury St</b>",
                     "maneuver": "turn-right",
                     "polyline":
                       {
-                        "points": "_upaGtsvpLaADgADq@Bc@?Q?S?QASAWCYEMCQE[IGCOCKEICYUWMOIQIUAS@SA",
+                        "points": "espaGncvpLUSECAAEEEICCCEIMCIEI[{@Ys@M[_@_Ac@mAk@yAUk@GQEM",
                       },
-                    "start_location":
-                      { "lat": 42.36128129999999, "lng": -71.0637912 },
+                    "start_location": { "lat": 42.360989, "lng": -71.0611984 },
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "0.3 mi", "value": 491 },
-                    "duration": { "text": "3 mins", "value": 168 },
+                    "distance": { "text": "325 ft", "value": 99 },
+                    "duration": { "text": "1 min", "value": 36 },
+                    "end_location": { "lat": 42.362919, "lng": -71.0591664 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Merrimac St</b>",
+                    "maneuver": "turn-left",
+                    "polyline":
+                      { "points": "c|paGxrupLI_@MJMPIJGHMXELM`@CJET" },
+                    "start_location": { "lat": 42.3624195, "lng": -71.0585323 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "456 ft", "value": 139 },
+                    "duration": { "text": "1 min", "value": 27 },
+                    "end_location":
+                      { "lat": 42.3633266, "lng": -71.06076159999999 },
+                    "html_instructions": "Continue straight to stay on <b>Merrimac St</b>",
+                    "maneuver": "straight",
+                    "polyline": { "points": "g_qaGxvupLSxAI^s@bE" },
+                    "start_location": { "lat": 42.362919, "lng": -71.0591664 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.1 mi", "value": 212 },
+                    "duration": { "text": "1 min", "value": 57 },
+                    "end_location": { "lat": 42.364815, "lng": -71.0623301 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Portland St</b>",
+                    "maneuver": "turn-right",
+                    "polyline":
+                      { "points": "yaqaGv`vpLE?C?C?C@EDGDMNQR_BhBa@d@gBvB" },
+                    "start_location":
+                      { "lat": 42.3633266, "lng": -71.06076159999999 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 mi", "value": 391 },
+                    "duration": { "text": "2 mins", "value": 136 },
                     "end_location":
                       { "lat": 42.3668926, "lng": -71.05850219999999 },
                     "html_instructions": "Turn <b>right</b> onto <b>Causeway St</b>",
                     "maneuver": "turn-right",
                     "polyline":
                       {
-                        "points": "ygqaGvpvpLQc@AGUg@MYUi@KSOYO[e@eAGOGOo@{AIOISKW[w@KWO_@Se@Qa@Yq@Q_@Se@[u@]s@ISMSWa@",
+                        "points": "ckqaGpjvpLO[e@eAGOGOo@{AIOISKW[w@KWO_@Se@Qa@Yq@Q_@Se@[u@]s@ISMSWa@",
                       },
-                    "start_location": { "lat": 42.3642865, "lng": -71.0633199 },
+                    "start_location": { "lat": 42.364815, "lng": -71.0623301 },
                     "travel_mode": "DRIVING",
                   },
                   {
@@ -357,12 +389,12 @@
                   {
                     "location":
                       { "lat": 42.3781732, "lng": -71.06024889999999 },
-                    "step_index": 6,
+                    "step_index": 9,
                     "step_interpolation": 0.2067887491420608,
                   },
                   {
                     "location": { "lat": 42.4473497, "lng": -71.2271531 },
-                    "step_index": 15,
+                    "step_index": 18,
                     "step_interpolation": 1,
                   },
                 ],
@@ -370,7 +402,7 @@
           ],
         "overview_polyline":
           {
-            "points": "ukpaG`{upL}B|AkAbBoAnESjC?dB@hB@d@aADyBHu@?qAGcCk@sAw@i@?SAQc@Wo@c@cAqAoCgCgGoDiIWg@Wa@KFw@b@GFQZSPoA`ASj@Yx@c@XaIpEw@Xs@FuA|@_AX[EwA_C{EwHuAqBgAoAuDsEwC}E}@oAc@g@uAwAKX]r@g@bA_AdCcDtNsCjLsCrKqH~QuKnX{BbG{@tBoAp@a@^a@VyAQe@ZSXE`ABT^n@|@ZN|@g@fB_BnEaAxAiEpFqHxJoIzL{A|BiBnB_@n@_BrAuCbCmD`DkBjCaBnCmAnBQn@qFlIeInLyHjKqDbEyEjEkM|KkHfGaSdQg@DuChAmBZ{CMuBQcDMw@DcBj@cAx@y@nAi@zA{BbL{@pCcDpFeGxJu@vBaAlEk@dCkA~Ba@p@k@nBu@jD{AdDi@pCm@r]KrJB|CJxBErDP`E\\dCl@jBvAlB\\Hh@ZT~@n@fCvBfEjAhBbD`D`D~Cd@~@TVPAFIZUt@OdCD|@I|Bk@\\IdCCxCBnGgA|@B~@^tArAp@fAvAlDdBtClC`CjBfAlC`@jLKjBZt@f@dAjAtCfCfElEt@nBRfAX|FNzBZvAfAbCbBjB|@p@\\h@l@lBHz@@f@u@zCYvAOx@_B~HoKbh@{C`KeEnKsGpMiB`Ey@~CaD|P{@tEwAfHyFnTyCzKsCvLyBtLwBbPaB`Q}AxK{DtPeDrMsCfJ{ClJaAlDsA`GcCjMsAjIyBtO_AhM_@dOe@zZa@zJ{AlOgBvLqAdGkDxLyBrGkAbFw@pGUnEKzGKlBIhDgAdPg@dAmA^_AMe@HiCWqE_@cHe@wFa@kBPmFhBmF|CoHjEcDxA}MlCoDf@sGb@eAQ_DyCkCuBiBi@iBcAiA{@iAyAcDkEoEmEqDuCqAy@gG}A{@c@uCgC{AsA][g@nA}@rBwAdD_AtBg@jAAh@yBzIQbEZpQv@fGxBpRjAbIt@tDN~CAnEVtC|A~IEtEZ`GApHVpFD|Cg@jHRbFn@zFvBlG^jBDnDe@dKRrBZv@v@nA{GxJkA|Bu@fF_BrR}ArRi@fSOpIVhDf@`HJvd@_@dC}@lDe@nAiChFqAxCgAfDo@`CYjCm@vHkBzWiD|g@m@tOe@~MChAQ`@cA~DaChFoBbEq@xBmApD{HhNgBbG_@dGUtBw@bDsEbPi@rEVlFEdEOzIHnE^xGhA~NPvHjAjHz@zTP|DQlGq@xHm@nE_@`BYj@{CzEsChHg@P{@n@_CjBTx@~AcAr@e@d@i@",
+            "points": "ukpaG`{upL}B|AkAbBe@jA[WQU{BsFmBeFOm@[\\e@|@k@|C}@bFI?ULaDrDgBvBO[m@uAkAoCcAgCiD}He@u@y@b@UTgA`Ao@t@Ql@]n@gAp@{GvDoBd@e@b@k@R}@VSAs@iAiAkBiFgIeIyJaCgEkA{A_BcBSf@wAvCq@fCqDpOqC`L_BnG_AfCkHtQ_E~JeIbT_@z@[PcAt@]Xi@RoAOMFOJONMXC`A\\z@z@ZPVBp@m@hB}ApEaBrBaEhF_J~L_HxJgBlCeAlAqCbCaEfD_C`C_B`C}AfCiAlBE^s@`AcA`BeCvDiIrLuIhLiFvFoC`CeNtLaLrJcGfFwClCgA~@WCIDQJwCfAmBTuDQeEYgCNyAr@q@j@_AdB}A`HgAlFy@zBqD`GoFzI_AzCs@`Dq@rCkAvBm@fAg@~Bo@nC}AhDa@`CMxGa@jXIxGHrC@lHVrEd@fCn@~Ah@v@d@^`@H`@\\XtAr@bCbCpExArBrDhDzAzAT`@f@r@RRLEFMz@_@p@@rBB~@MdCm@hAIxBF|BEvBc@pCa@n@DdAh@zA`BzBbFlBzCtCfCfBz@nAV`ABfLKfB`@|B|BpC~BjCnC`ApA|@lDVdGPlBf@tBjBvCz@v@bAz@~@tCDz@eAdF]jBqElTeHl]a@|A{DzKcChGwHfO{AjEm@rCmCpNqAbHkBzIqEtPiFdS_ElSaBtLWhCeBvQuBnMaErPoClKkCrI_DxJmAlEsAvGeExUuBlO_AjN[fNe@v[e@nJuA`NiChPeArEeD|KwBrGqApGk@nFY|MWbGiAbPk@|@QJuAFwBGeIq@qGc@gG]iBXkFlBwOfJiDtAuGpAaEx@oDb@gG`@gAWeDcD{AoAq@]mBi@eC_BiGaIyFoFaDgCwAo@wFwAcEgDuBkBkCfGsBxEe@z@?ZGt@wAdFa@xBIlAJdINrJxD`\\pAzHn@lDDnD@~DXfCzA`JIjE\\`HCzG\\zGC|Bc@tGXhGXrCVdAnBzF`@|BB~Cc@~KR|Ad@bALP\\h@wAtBu@dAoDdFu@zBgAbJgA|N}AzSi@rSEpG^bEVdDBjEF|W?dH{A`Hy@xBkCfFmAtCiAxDu@tEu@`KsFhw@aBja@M`E_@~A}@hDmEdJeDnJwHfNeBbG]vG]xBu@tC{EhQ[hEX~DI`GK|HN`Gf@lH~@vLRxHhAjHPnGr@zNBrB_@zIaBtMmAzBeCdEaBrEYl@k@ZwC~Bi@`@Tx@jBmAlAeA",
           },
         "summary": "MA-2 W",
         "warnings": [],

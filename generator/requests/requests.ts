@@ -1209,4 +1209,26 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_nearbysearch",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/nearbysearch/json",
+        query: [
+          {
+            key: "location",
+            value: "-33.8670522,151.1957362",
+          },
+          {
+            key: "radius",
+            value: "1500",
+          },
+          { key: "type", value: "restaurant" },
+          { key: "keyword", value: "cruise" },
+        ],
+      }),
+    }),
+  },
 ];

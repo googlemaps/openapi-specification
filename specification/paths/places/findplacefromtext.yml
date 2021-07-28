@@ -27,7 +27,7 @@ parameters:
   - "$ref": "../../parameters/language.yml"
 responses:
   "200":
-    description: Response for the Distance Matrix API query.
+    description: Response for the Find Place From Text request.
     content:
       application/json:
         examples:

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_placesdetailsresponse] -->
-<h3 class="schema-object" id="PlacesDetailsResponse">
+<!--- [START maps_http_schema_placesfindplacefromtextresponse] -->
+<h3 class="schema-object" id="PlacesFindPlaceFromTextResponse">
   Places Details Response Body
 </h3>
 <p>type: <code>object</code></p>
@@ -15,25 +15,12 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"><code>html_attributions</code></td>
+      <td align="left"><code>candidates</code></td>
       <td><strong>required</strong></td>
-      <td>Array&#x3C;string></td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            May contain a set of attributions about this listing which must be
-            displayed to the user (some listings may not have attribution).
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>result</code></td>
-      <td><strong>required</strong></td>
-      <td><a href="#Place" title="Place">Place</a></td>
+      <td>Array&#x3C;<a href="#Place" title="Place">Place</a>></td>
       <td>
         <div class="ref-property-description">
-          <p>Contains the detailed information about the place requested.</p>
+          <p>Contains an array of Place candidates.</p>
           <p>See <a href="#Place">Place</a> for more information.</p>
         </div>
       </td>
@@ -52,9 +39,9 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>info_messages</code></td>
+      <td align="left"><code>error_message</code></td>
       <td>optional</td>
-      <td>Array&#x3C;string></td>
+      <td>string</td>
       <td>
         <div class="nonref-property-description">
           <p>Contains additional information about the request.</p>
@@ -64,4 +51,4 @@
   </tbody>
 </table>
 
-<!--- [END maps_http_schema_placesdetailsresponse] -->
+<!--- [END maps_http_schema_placesfindplacefromtextresponse] -->

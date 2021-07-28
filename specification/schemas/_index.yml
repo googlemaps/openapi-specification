@@ -127,5 +127,9 @@ PlaceAddressComponent:
   $ref: "./PlaceAddressComponent.yml"
 PlacesDetailsResponse:
   $ref: "./PlacesDetailsResponse.yml"
+PlacesFindPlaceFromTextResponse:
+  $ref: "./PlacesFindPlaceFromTextResponse.yml"
+PlacesNearbySearchResponse:
+  $ref: "./PlacesNearbySearchResponse.yml"
 PlacesStatus:
   $ref: "./PlacesStatus.yml"

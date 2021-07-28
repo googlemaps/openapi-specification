@@ -1,7 +1,7 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_placesdetailsresponse] -->
-<h3 class="schema-object" id="PlacesDetailsResponse">
-  Places Details Response Body
+<!--- [START maps_http_schema_placesnearbysearchresponse] -->
+<h3 class="schema-object" id="PlacesNearbySearchResponse">
+  Places Nearby Search Response Body
 </h3>
 <p>type: <code>object</code></p>
 <table>
@@ -28,12 +28,12 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>result</code></td>
+      <td align="left"><code>results</code></td>
       <td><strong>required</strong></td>
-      <td><a href="#Place" title="Place">Place</a></td>
+      <td>Array&#x3C;<a href="#Place" title="Place">Place</a>></td>
       <td>
         <div class="ref-property-description">
-          <p>Contains the detailed information about the place requested.</p>
+          <p>Contains an array of places.</p>
           <p>See <a href="#Place">Place</a> for more information.</p>
         </div>
       </td>
@@ -64,4 +64,4 @@
   </tbody>
 </table>
 
-<!--- [END maps_http_schema_placesdetailsresponse] -->
+<!--- [END maps_http_schema_placesnearbysearchresponse] -->

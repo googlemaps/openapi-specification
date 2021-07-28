@@ -18,22 +18,26 @@ tags:
   - Places API
 description: The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.
 parameters:
-  - "$ref": "../../parameters/places/place_id.yml"
   - "$ref": "../../parameters/places/fields.yml"
-  - "$ref": "../../parameters/places/sessiontoken.yml"
+  - "$ref": "../../parameters/places/keyword.yml"
+  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/maxprice.yml"
+  - "$ref": "../../parameters/places/minprice.yml"
+  - "$ref": "../../parameters/places/name.yml"
+  - "$ref": "../../parameters/places/opennow.yml"
+  - "$ref": "../../parameters/places/pagetoken.yml"
+  - "$ref": "../../parameters/places/rankby.yml"
+  - "$ref": "../../parameters/places/radius.yml"
+  - "$ref": "../../parameters/places/type.yml"
   - "$ref": "../../parameters/language.yml"
-  - "$ref": "../../parameters/region.yml"
 responses:
   "200":
     description: Response for the Distance Matrix API query.
     content:
       application/json:
         examples:
-          details:
+          default:
             value:
-              $ref: "../../responses/maps_http_places_details_response.yml"
-          fields:
-            value:
-              $ref: "../../responses/maps_http_places_details_fields_response.yml"          
+              $ref: "../../responses/maps_http_places_nearbysearch_response.yml"          
         schema:
-          $ref: "../../schemas/PlacesDetailsResponse.yml"
+          $ref: "../../schemas/PlacesNearbySearchResponse.yml"

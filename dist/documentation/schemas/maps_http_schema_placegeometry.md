@@ -4,9 +4,9 @@
 
 type: `object`
 
-| Field      | Required | Type                                            | Description                                                                                                                               |
-| :--------- | -------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `location` | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | Contains the geocoded latitude, longitude value for this place. See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
-| `viewport` | optional | [Bounds](#Bounds "Bounds")                      | Viewport bounds for this place. See [Bounds](#Bounds "Bounds") for more information.                                                      |
+| Field      | Required | Type                                            | Description                                                                                                                                                                               |
+| :--------- | -------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `location` | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | <div class="ref-property-description"><p>Contains the geocoded latitude, longitude value for this place.</p><p>See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.</div> |
+| `viewport` | optional | [Bounds](#Bounds "Bounds")                      | <div class="ref-property-description"><p>Viewport bounds for this place.</p><p>See <a href="#Bounds">Bounds</a> for more information.</div>                                               |
 
 <!--- [END maps_http_schema_placegeometry] -->

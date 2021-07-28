@@ -4,9 +4,9 @@
 
 type: `object`
 
-| Field           | Required     | Type   | Description |
-| :-------------- | ------------ | ------ | ----------- |
-| `compound_code` | **required** | string | Todo        |
-| `global_code`   | **required** | string | Todo        |
+| Field           | Required     | Type   | Description                                                |
+| :-------------- | ------------ | ------ | ---------------------------------------------------------- |
+| `compound_code` | **required** | string | <div class="nonref-property-description"><p>Todo</p></div> |
+| `global_code`   | **required** | string | <div class="nonref-property-description"><p>Todo</p></div> |
 
 <!--- [END maps_http_schema_placepluscode] -->

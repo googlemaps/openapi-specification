@@ -4,9 +4,9 @@
 
 type: `object`
 
-| Field             | Required | Type                                                      | Description                                                                                        |
-| :---------------- | -------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `snappedPoints`   | optional | Array&lt;[SnappedPoint](#SnappedPoint "SnappedPoint")&gt; | An array of snapped points. See [SnappedPoint](#SnappedPoint "SnappedPoint") for more information. |
-| `warning_message` | optional | string                                                    | A string continaing a user-visible warning.                                                        |
+| Field             | Required | Type                                                      | Description                                                                                                                                         |
+| :---------------- | -------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `snappedPoints`   | optional | Array&lt;[SnappedPoint](#SnappedPoint "SnappedPoint")&gt; | <div class="ref-property-description"><p>An array of snapped points.</p><p>See <a href="#SnappedPoint">SnappedPoint</a> for more information.</div> |
+| `warning_message` | optional | string                                                    | <div class="nonref-property-description"><p>A string continaing a user-visible warning.</p></div>                                                   |
 
 <!--- [END maps_http_schema_snaptoroadsresposne] -->

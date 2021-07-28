@@ -6,9 +6,9 @@ An object describing a specific location with Latitude and Longitude in decimal 
 
 type: `object`
 
-| Field | Required     | Type   | Description                  |
-| :---- | ------------ | ------ | ---------------------------- |
-| `lat` | **required** | number | Latitude in decimal degrees  |
-| `lng` | **required** | number | Longitude in decimal degrees |
+| Field | Required     | Type   | Description                                                                        |
+| :---- | ------------ | ------ | ---------------------------------------------------------------------------------- |
+| `lat` | **required** | number | <div class="nonref-property-description"><p>Latitude in decimal degrees</p></div>  |
+| `lng` | **required** | number | <div class="nonref-property-description"><p>Longitude in decimal degrees</p></div> |
 
 <!--- [END maps_http_schema_latlngliteral] -->

@@ -18,9 +18,13 @@
       <td><strong>required</strong></td>
       <td><a href="#Bounds" title="Bounds">Bounds</a></td>
       <td>
-        Contains the viewport bounding box of the
-        <code>overview_polyline</code>. See
-        <a href="#Bounds" title="Bounds">Bounds</a> for more information.
+        <div class="ref-property-description">
+          <p>
+            Contains the viewport bounding box of the
+            <code>overview_polyline</code>.
+          </p>
+          <p>See <a href="#Bounds">Bounds</a> for more information.</p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -28,8 +32,12 @@
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        Ccontains an array of warnings to be displayed when showing these
-        directions. You must handle and display these warnings yourself.
+        <div class="nonref-property-description">
+          <p>
+            Ccontains an array of warnings to be displayed when showing these
+            directions. You must handle and display these warnings yourself.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -41,13 +49,18 @@
         >>
       </td>
       <td>
-        an array which contains information about a leg of the route, between
-        two locations within the given route. A separate leg will be present for
-        each waypoint or destination specified. (A route with no waypoints will
-        contain exactly one leg within the legs array.) Each leg consists of a
-        series of steps. See
-        <a href="#DirectionsLeg" title="DirectionsLeg">DirectionsLeg</a> for
-        more information.
+        <div class="ref-property-description">
+          <p>
+            an array which contains information about a leg of the route,
+            between two locations within the given route. A separate leg will be
+            present for each waypoint or destination specified. (A route with no
+            waypoints will contain exactly one leg within the legs array.) Each
+            leg consists of a series of steps.
+          </p>
+          <p>
+            See <a href="#DirectionsLeg">DirectionsLeg</a> for more information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -55,9 +68,13 @@
       <td><strong>required</strong></td>
       <td>object</td>
       <td>
-        Contains an object that holds an encoded polyline representation of the
-        route. This polyline is an approximate (smoothed) path of the resulting
-        directions.
+        <div class="nonref-property-description">
+          <p>
+            Contains an object that holds an encoded polyline representation of
+            the route. This polyline is an approximate (smoothed) path of the
+            resulting directions.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -65,8 +82,12 @@
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        Contains a short textual description for the route, suitable for naming
-        and disambiguating the route from alternatives.
+        <div class="nonref-property-description">
+          <p>
+            Contains a short textual description for the route, suitable for
+            naming and disambiguating the route from alternatives.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -74,8 +95,12 @@
       <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
-        Contains an array of warnings to be displayed when showing these
-        directions. You must handle and display these warnings yourself.
+        <div class="nonref-property-description">
+          <p>
+            Contains an array of warnings to be displayed when showing these
+            directions. You must handle and display these warnings yourself.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -83,9 +108,13 @@
       <td><strong>required</strong></td>
       <td>Array&#x3C;integer></td>
       <td>
-        An array indicating the order of any waypoints in the calculated route.
-        This waypoints may be reordered if the request was passed optimize:true
-        within its waypoints parameter.
+        <div class="nonref-property-description">
+          <p>
+            An array indicating the order of any waypoints in the calculated
+            route. This waypoints may be reordered if the request was passed
+            optimize:true within its waypoints parameter.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -93,9 +122,14 @@
       <td>optional</td>
       <td></td>
       <td>
-        If present, contains the total fare (that is, the total ticket costs) on
-        this route. This property is only returned for transit requests and only
-        for routes where fare information is available for all transit legs.
+        <div class="nonref-property-description">
+          <p>
+            If present, contains the total fare (that is, the total ticket
+            costs) on this route. This property is only returned for transit
+            requests and only for routes where fare information is available for
+            all transit legs.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

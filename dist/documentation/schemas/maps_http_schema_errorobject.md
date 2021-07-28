@@ -4,10 +4,10 @@
 
 type: `object`
 
-| Field     | Required     | Type                                                   | Description                                                                                                                                                                           |
-| :-------- | ------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `code`    | **required** | number                                                 | This is the same as the HTTP status of the response.                                                                                                                                  |
-| `errors`  | **required** | Array&lt;[ErrorDetail](#ErrorDetail "ErrorDetail")&gt; | A list of errors which occurred. Each error contains an identifier for the type of error and a short description. See [ErrorDetail](#ErrorDetail "ErrorDetail") for more information. |
-| `message` | **required** | string                                                 | A short description of the error.                                                                                                                                                     |
+| Field     | Required     | Type                                                   | Description                                                                                                                                                                                                                             |
+| :-------- | ------------ | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `code`    | **required** | number                                                 | <div class="nonref-property-description"><p>This is the same as the HTTP status of the response.</p></div>                                                                                                                              |
+| `errors`  | **required** | Array&lt;[ErrorDetail](#ErrorDetail "ErrorDetail")&gt; | <div class="ref-property-description"><p>A list of errors which occurred. Each error contains an identifier for the type of error and a short description.</p><p>See <a href="#ErrorDetail">ErrorDetail</a> for more information.</div> |
+| `message` | **required** | string                                                 | <div class="nonref-property-description"><p>A short description of the error.</p></div>                                                                                                                                                 |
 
 <!--- [END maps_http_schema_errorobject] -->

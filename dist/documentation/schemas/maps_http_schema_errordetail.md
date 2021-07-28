@@ -4,11 +4,11 @@
 
 type: `object`
 
-| Field     | Required     | Type   | Description                                                                                                                                                            |
-| :-------- | ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `message` | **required** | string | A short description of the error.                                                                                                                                      |
-| `reason`  | **required** | string | A reason for the error. The allowed values include: `badRequest`, `dailyLimitExceeded`, `invalid`, `keyInvalid`, `notFound`, `parseError`, and `userRateLimitExceeded` |
-| `domain`  | optional     | string | The domain in which the error occurred. The allowed values include: `global`, `geolocation`, and `usageLimits`                                                         |
+| Field     | Required     | Type   | Description                                                                                                                                                                                                                                                |
+| :-------- | ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `message` | **required** | string | <div class="nonref-property-description"><p>A short description of the error.</p></div>                                                                                                                                                                    |
+| `reason`  | **required** | string | <div class="nonref-property-description"><p>A reason for the error.</p><div class="notranslate">The allowed values include: `badRequest`, `dailyLimitExceeded`, `invalid`, `keyInvalid`, `notFound`, `parseError`, and `userRateLimitExceeded`</div></div> |
+| `domain`  | optional     | string | <div class="nonref-property-description"><p>The domain in which the error occurred.</p><div class="notranslate">The allowed values include: `global`, `geolocation`, and `usageLimits`</div></div>                                                         |
 
 <h4 class="schema-object-example" id="ErrorDetail-example">Example</h4>
 

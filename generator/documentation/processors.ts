@@ -5,7 +5,7 @@ import remarkParse from "remark-parse";
 import fromMarkdown_ from "mdast-util-from-markdown";
 import gfm from "remark-gfm";
 import syntax from "micromark-extension-gfm";
-import { gfmFromMarkdown, gfmToMarkdown } from "mdast-util-gfm";
+import { gfmFromMarkdown } from "mdast-util-gfm";
 
 export const fromMarkdown = (s: string) =>
   fromMarkdown_(s, {

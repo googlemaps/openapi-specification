@@ -17,9 +17,13 @@
       <td>optional</td>
       <td>number</td>
       <td>
-        The offset for daylight-savings time in seconds. This will be zero if
-        the time zone is not in Daylight Savings Time during the specified
-        <code>timestamp</code>.
+        <div class="nonref-property-description">
+          <p>
+            The offset for daylight-savings time in seconds. This will be zero
+            if the time zone is not in Daylight Savings Time during the
+            specified <code>timestamp</code>.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -27,8 +31,12 @@
       <td>optional</td>
       <td>string</td>
       <td>
-        Detailed information about the reasons behind the given status code.
-        Included if status other than <code>Ok</code>.
+        <div class="nonref-property-description">
+          <p>
+            Detailed information about the reasons behind the given status code.
+            Included if status other than <code>Ok</code>.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -36,8 +44,12 @@
       <td>optional</td>
       <td>number</td>
       <td>
-        The offset from UTC (in seconds) for the given location. This does not
-        take into effect daylight savings.
+        <div class="nonref-property-description">
+          <p>
+            The offset from UTC (in seconds) for the given location. This does
+            not take into effect daylight savings.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -57,14 +69,19 @@
       <td>optional</td>
       <td>string</td>
       <td>
-        a string containing the ID of the time zone, such as
-        "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by
-        <a href="http://cldr.unicode.org/"
-          >Unicode Common Locale Data Repository (CLDR) project</a
-        >, and currently available in file timezone.xml. When a timezone has
-        several IDs, the canonical one is returned. In xml responses, this is
-        the first alias of each timezone. For example, "Asia/Calcutta" is
-        returned, not "Asia/Kolkata".
+        <div class="nonref-property-description">
+          <p>
+            a string containing the ID of the time zone, such as
+            "America/Los_Angeles" or "Australia/Sydney". These IDs are defined
+            by
+            <a href="http://cldr.unicode.org/"
+              >Unicode Common Locale Data Repository (CLDR) project</a
+            >, and currently available in file timezone.xml. When a timezone has
+            several IDs, the canonical one is returned. In xml responses, this
+            is the first alias of each timezone. For example, "Asia/Calcutta" is
+            returned, not "Asia/Kolkata".
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -72,9 +89,14 @@
       <td>optional</td>
       <td>string</td>
       <td>
-        The long form name of the time zone. This field will be localized if the
-        language parameter is set. eg. <code>Pacific Daylight Time</code> or
-        <code>Australian Eastern Daylight Time</code>.
+        <div class="nonref-property-description">
+          <p>
+            The long form name of the time zone. This field will be localized if
+            the language parameter is set. eg.
+            <code>Pacific Daylight Time</code> or
+            <code>Australian Eastern Daylight Time</code>.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

@@ -22,11 +22,16 @@
       <td><strong>required</strong></td>
       <td>integer</td>
       <td>
-        Unique identifier of the cell. On GSM, this is the Cell ID (CID); CDMA
-        networks use the Base Station ID (BID). WCDMA networks use the
-        UTRAN/GERAN Cell Identity (UC-Id), which is a 32-bit value concatenating
-        the Radio Network Controller (RNC) and Cell ID. Specifying only the
-        16-bit Cell ID value in WCDMA networks may return inaccurate results.
+        <div class="nonref-property-description">
+          <p>
+            Unique identifier of the cell. On GSM, this is the Cell ID (CID);
+            CDMA networks use the Base Station ID (BID). WCDMA networks use the
+            UTRAN/GERAN Cell Identity (UC-Id), which is a 32-bit value
+            concatenating the Radio Network Controller (RNC) and Cell ID.
+            Specifying only the 16-bit Cell ID value in WCDMA networks may
+            return inaccurate results.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -34,23 +39,35 @@
       <td><strong>required</strong></td>
       <td>integer</td>
       <td>
-        The Location Area Code (LAC) for GSM and WCDMA networks. The Network ID
-        (NID) for CDMA networks.
+        <div class="nonref-property-description">
+          <p>
+            The Location Area Code (LAC) for GSM and WCDMA networks. The Network
+            ID (NID) for CDMA networks.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
       <td align="left"><code>mobileCountryCode</code></td>
       <td><strong>required</strong></td>
       <td>integer</td>
-      <td>The cell tower's Mobile Country Code (MCC).</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>The cell tower's Mobile Country Code (MCC).</p>
+        </div>
+      </td>
     </tr>
     <tr>
       <td align="left"><code>mobileNetworkCode</code></td>
       <td><strong>required</strong></td>
       <td>integer</td>
       <td>
-        The cell tower's Mobile Network Code. This is the MNC for GSM and WCDMA;
-        CDMA uses the System ID (SID).
+        <div class="nonref-property-description">
+          <p>
+            The cell tower's Mobile Network Code. This is the MNC for GSM and
+            WCDMA; CDMA uses the System ID (SID).
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -58,21 +75,33 @@
       <td>optional</td>
       <td>integer</td>
       <td>
-        The number of milliseconds since this cell was primary. If age is 0, the
-        cellId represents a current measurement.
+        <div class="nonref-property-description">
+          <p>
+            The number of milliseconds since this cell was primary. If age is 0,
+            the cellId represents a current measurement.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
       <td align="left"><code>signalStrength</code></td>
       <td>optional</td>
       <td>number</td>
-      <td>Radio signal strength measured in dBm.</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Radio signal strength measured in dBm.</p>
+        </div>
+      </td>
     </tr>
     <tr>
       <td align="left"><code>timingAdvance</code></td>
       <td>optional</td>
       <td>number</td>
-      <td>The timing advance value.</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>The timing advance value.</p>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>

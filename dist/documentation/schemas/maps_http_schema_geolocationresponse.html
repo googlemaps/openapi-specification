@@ -23,16 +23,21 @@
       <td><strong>required</strong></td>
       <td>number</td>
       <td>
-        The accuracy of the estimated location, in meters. This represents the
-        radius of a circle around the given <code>location</code>. If your
-        Geolocation response shows a very high value in the
-        <code>accuracy</code> field, the service may be geolocating based on the
-        request IP, instead of WiFi points or cell towers. This can happen if no
-        cell towers or access points are valid or recognized. To confirm that
-        this is the issue, set <code>considerIp</code> to <code>false</code> in
-        your request. If the response is a <code>404</code>, you've confirmed
-        that your <code>wifiAccessPoints</code> and
-        <code>cellTowers</code> objects could not be geolocated.
+        <div class="nonref-property-description">
+          <p>
+            The accuracy of the estimated location, in meters. This represents
+            the radius of a circle around the given <code>location</code>. If
+            your Geolocation response shows a very high value in the
+            <code>accuracy</code> field, the service may be geolocating based on
+            the request IP, instead of WiFi points or cell towers. This can
+            happen if no cell towers or access points are valid or recognized.
+            To confirm that this is the issue, set <code>considerIp</code> to
+            <code>false</code> in your request. If the response is a
+            <code>404</code>, you've confirmed that your
+            <code>wifiAccessPoints</code> and <code>cellTowers</code> objects
+            could not be geolocated.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -40,9 +45,12 @@
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        The user’s estimated latitude and longitude, in degrees. See
-        <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
-        more information.
+        <div class="ref-property-description">
+          <p>The user’s estimated latitude and longitude, in degrees.</p>
+          <p>
+            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

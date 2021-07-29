@@ -1,0 +1,80 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placesautocompleteresponse] -->
+<h3 class="schema-object" id="PlacesAutocompleteResponse">
+  Places Query Autocomplete Response Body
+</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>predictions</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a
+          href="#PlaceAutocompletePrediction"
+          title="PlaceAutocompletePrediction"
+          >PlaceAutocompletePrediction</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains an array of predictions.</p>
+          <p>
+            See
+            <a href="#PlaceAutocompletePrediction"
+              >PlaceAutocompletePrediction</a
+            >
+            for more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#PlacesStatus" title="PlacesStatus">PlacesStatus</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains metadata on the request.</p>
+          <p>
+            See <a href="#PlacesStatus">PlacesStatus</a> for more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>error_message</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Contains additional information about the request.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>info_messages</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains additional information about the request. This field is
+            only returned for successful requests. It may not always be
+            returned, and its content is subject to change.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_placesautocompleteresponse] -->

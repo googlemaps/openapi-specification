@@ -29,6 +29,8 @@ nodejs_binary(
         "maps_http_geolocation_ip",  # non deterministic and skipped
         "--skip",
         "maps_http_geolocation_wifi",  # non deterministic and skipped
+               "--skip",
+        "maps_http_places_photo",  # non json response and skipped
         "--nobazel_node_patches",
     ],
 )

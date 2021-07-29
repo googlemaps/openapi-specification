@@ -1,0 +1,274 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_details_response]
+{
+  "html_attributions": [],
+  "result":
+    {
+      "address_components":
+        [
+          { "long_name": "48", "short_name": "48", "types": ["street_number"] },
+          {
+            "long_name": "Pirrama Road",
+            "short_name": "Pirrama Rd",
+            "types": ["route"],
+          },
+          {
+            "long_name": "Pyrmont",
+            "short_name": "Pyrmont",
+            "types": ["locality", "political"],
+          },
+          {
+            "long_name": "Council of the City of Sydney",
+            "short_name": "Sydney",
+            "types": ["administrative_area_level_2", "political"],
+          },
+          {
+            "long_name": "New South Wales",
+            "short_name": "NSW",
+            "types": ["administrative_area_level_1", "political"],
+          },
+          {
+            "long_name": "Australia",
+            "short_name": "AU",
+            "types": ["country", "political"],
+          },
+          {
+            "long_name": "2009",
+            "short_name": "2009",
+            "types": ["postal_code"],
+          },
+        ],
+      "adr_address": '<span class="street-address">48 Pirrama Rd</span>, <span class="locality">Pyrmont</span> <span class="region">NSW</span> <span class="postal-code">2009</span>, <span class="country-name">Australia</span>',
+      "business_status": "OPERATIONAL",
+      "formatted_address": "48 Pirrama Rd, Pyrmont NSW 2009, Australia",
+      "formatted_phone_number": "(02) 9374 4000",
+      "geometry":
+        {
+          "location": { "lat": -33.866489, "lng": 151.1958561 },
+          "viewport":
+            {
+              "northeast":
+                { "lat": -33.8655112697085, "lng": 151.1971156302915 },
+              "southwest":
+                { "lat": -33.86820923029149, "lng": 151.1944176697085 },
+            },
+        },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "international_phone_number": "+61 2 9374 4000",
+      "name": "Google Workplace 6",
+      "opening_hours":
+        {
+          "open_now": false,
+          "periods":
+            [
+              {
+                "close": { "day": 1, "time": "1700" },
+                "open": { "day": 1, "time": "0900" },
+              },
+              {
+                "close": { "day": 2, "time": "1700" },
+                "open": { "day": 2, "time": "0900" },
+              },
+              {
+                "close": { "day": 3, "time": "1700" },
+                "open": { "day": 3, "time": "0900" },
+              },
+              {
+                "close": { "day": 4, "time": "1700" },
+                "open": { "day": 4, "time": "0900" },
+              },
+              {
+                "close": { "day": 5, "time": "1700" },
+                "open": { "day": 5, "time": "0900" },
+              },
+            ],
+          "weekday_text":
+            [
+              "Monday: 9:00 AM – 5:00 PM",
+              "Tuesday: 9:00 AM – 5:00 PM",
+              "Wednesday: 9:00 AM – 5:00 PM",
+              "Thursday: 9:00 AM – 5:00 PM",
+              "Friday: 9:00 AM – 5:00 PM",
+              "Saturday: Closed",
+              "Sunday: Closed",
+            ],
+        },
+      "photos":
+        [
+          {
+            "height": 3024,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/105067373811767106297">Shaun Craig</a>',
+              ],
+            "photo_reference": "Aap_uEDC34vs-MFrDKEhC9vZ5qS-Nca1-xTtQpP7fNOTjseRZIKapE6vRJclIyQcjTdxvCreoN0Rr8UarnqjcpMAfM-TWQQ25FW2IpSxoAG86HNYXR_ylwAzJ7j7x45n3Z_I2ptWCJQcu8Z3hsn8CuFwLkhidfiVNpK2dTIBUQ1Xu_mJBAru",
+            "width": 4032,
+          },
+          {
+            "height": 3264,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/102493344958625549078">Heyang Li</a>',
+              ],
+            "photo_reference": "Aap_uEAV8QFYwoJRYc4_HiF01drDQPqidyW2-AIltuFps6W3H4UDILRdPPQ-e1HP_XB4lwzXwaJTlOS0__KZceSlUHCfGL3Cu-RE3acfgBaNTb1zK08MuHA6m4gbBhoJ70D-MvtkQ2LXYoJs_vdVMO94zoqwjwDvF1YvKBpP4nx4xIwUdK-8",
+            "width": 4912,
+          },
+          {
+            "height": 1836,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/116807455538142476628">Anand Ema</a>',
+              ],
+            "photo_reference": "Aap_uEDRUg3e3tGMTHuVKYvAZKSp9KKopzaLlISXIJA1PfFCo7lSaM9Nydq-zjwwe-v7vURETGK1otvOrqLYSLDWG7xBTo_FLOezGg0wB-1ihXnFfE_jWIuLO5M2m6WZ_JWV3txCVSnDi3Nb22UdLQ-B48ecfe63_xwM4vGsgDIUlfleySZC",
+            "width": 3264,
+          },
+          {
+            "height": 3024,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/115886271727815775491">Anthony Huynh</a>',
+              ],
+            "photo_reference": "Aap_uEC-n_ohSpvCkRqhvG7zTLhe37EwJbSwcQ8O3MTHJ-Y2AG_brj7JA78YvWK9U6oSPbnfbTnGQMJAFPPU0q1hCGjCnEc6AOAmk6NGK6xwWzSDxISfbeBkNhmz_7EShTvNc398ZwBoFOGXvAt-3n76g-4FWk5eA_LZOOM_H8qyBYW4pb8j",
+            "width": 4032,
+          },
+          {
+            "height": 3024,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/102939237947063969663">Jasen Baker</a>',
+              ],
+            "photo_reference": "Aap_uEDPZZr0MR4VS_j1rmnVmBHFFfafvVvte77GEq_V5k4vJAi4yzLRMG97Og769rfowGLks1Iqw50UBKbMzGV_SGWgRSleO65s8LxlCceBPptgW45LLFV7dEOWaPeT3NFLejI75N11IPKECAjVvDhKbNdIUmWzOKFluCDD5axGXzilqbJq",
+            "width": 4032,
+          },
+          {
+            "height": 3024,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/100678816592586275978">Jeremy Hsiao</a>',
+              ],
+            "photo_reference": "Aap_uECEVGEMb98ic0YrzJfMANV5oaxFTp-TcRjKvmgxpG2KposvLoKECUIDdauMgJIYtw5GPZ2rpsy3AC4imSXdGLJvzEEgeGqTX91t4Cw2uH4ExLHCirCo9PeAVMhUsGbOyvVw3gMu4IUldVGw7RUug08HgDCk2B3Qt9W2E9nt_AzEzyLo",
+            "width": 4032,
+          },
+          {
+            "height": 3024,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/100678816592586275978">Jeremy Hsiao</a>',
+              ],
+            "photo_reference": "Aap_uECl7MhrsVf95wbQZfPoDIoX0CZz94CgX3RPnecwW7gKlvmW8_6aK_fDY3hNGzXbDssWIUCwavFIpEin6oiwHCE08jW69RB5lZGPCpUbzZeV1pzRj9Txj8Gp1vFctuKbtLzDbbfzY4I5UEiH7LTPJIyw9HvBOujn9KfuME7bIJ6A-bMd",
+            "width": 4032,
+          },
+          {
+            "height": 3036,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/100482974853389838438">Mark Vozzo</a>',
+              ],
+            "photo_reference": "Aap_uEDv7_B_SYoGjskgXu5xhXdB9CbTb20epV0Shm6bBAIaOtgxl_N4YC8tkL1iML3Ub4nwzrYY8pzSga-gAbSEW8dWT7lsEGpb4L-lhyK25GOjsZmxdw-S9Gb_ndyfY3N8QiCqpu-YV1afSdAYNU6qTt2rUZhb3PY7bAlQiDgaUS5uxK8t",
+            "width": 4048,
+          },
+          {
+            "height": 498,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/103245129386449712319">Simon TestOne</a>',
+              ],
+            "photo_reference": "Aap_uEDHR1td9jqqk_bm_YVPIwS2D9tuI7Snd5C3fxNn_xaPEirSGjcMBoiYBXrTsi5qY8OWuWbjDVwGLiX84L7XxyrmjfyycbRmnZNuJsG7l3vHJBr_A1I6fAlhv-DGSHGNo0UdWMt1eJDPdvny-Vfzd4_AhmTg5qCZEK5TAc_4TB2WRvAa",
+            "width": 750,
+          },
+          {
+            "height": 2432,
+            "html_attributions":
+              [
+                '<a href="https://maps.google.com/maps/contrib/103456711016089391251">Damien</a>',
+              ],
+            "photo_reference": "Aap_uECimaJXm9IhCiasy-bvQa3ISX-S0LWs-QTrmCNcrXcoA12sIkZMfeEyNM514A6RsD9c_8tfz6BuDDRHMvDUO5irH7jQfUyhFC-gLKapLpOmAqwsKcfOBRC2cLq4IVyVlMq3vXBhzTdeFUJCoumIMaaimAzORoPAwfEuB0b33cjM62K1",
+            "width": 3286,
+          },
+        ],
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "plus_code":
+        {
+          "compound_code": "45MW+C8 Pyrmont NSW, Australia",
+          "global_code": "4RRH45MW+C8",
+        },
+      "rating": 4.1,
+      "reference": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "reviews":
+        [
+          {
+            "author_name": "Mark Smith (Mark ZZZ Smith)",
+            "author_url": "https://www.google.com/maps/contrib/109015045837507592030/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gi-thk-CV41Ymw9Udvr0O5WL8Iguf9HYAKKyEWDxw=s128-c0x00000000-cc-rp-mo",
+            "rating": 5,
+            "relative_time_description": "a year ago",
+            "text": "Great place to visit, cafeteria great. Also has a good toilet.",
+            "time": 1589072760,
+          },
+          {
+            "author_name": "Agent Cliff (The Mediator)",
+            "author_url": "https://www.google.com/maps/contrib/100253428394439543029/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GhSLTmC1QVzI8oXWkDvqv_fTq1Xmm7_gM2udfRlbw=s128-c0x00000000-cc-rp-mo-ba3",
+            "rating": 4,
+            "relative_time_description": "5 months ago",
+            "text": "Had an office tour here a few years ago and absolutely loved the look of it , as an AV person I was very impressed with the meeting rooms and loved the themes. Most of the staff were generally friendly and I was offered a range of different waters when waiting at reception.\n\nThe office is beautifully designed, onsite chef cooked a pretty alright lunch, staff interviewing as well were quite friendly and knew to be precise for technical interviews. I’d like to come back again one day for another tour just to see how it’s all going :)",
+            "time": 1614291725,
+          },
+          {
+            "author_name": "Xavier Le Baron",
+            "author_url": "https://www.google.com/maps/contrib/104602961630797902494/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GhbuCpv4_XNH8EWPZoGFwgWjiCQvCcVYiwJNxnMIPs=s128-c0x00000000-cc-rp-mo-ba4",
+            "rating": 5,
+            "relative_time_description": "3 months ago",
+            "text": "Possibly the best office in Sydney? :)\nWhat an amazing place to work at!",
+            "time": 1618388082,
+          },
+          {
+            "author_name": "Binod Mainali",
+            "author_url": "https://www.google.com/maps/contrib/110005203185645729740/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GitXX8rr6uxnCeLo4Kwd_UKm7ctfOYH9r7tcocqeg=s128-c0x00000000-cc-rp-mo",
+            "rating": 1,
+            "relative_time_description": "6 months ago",
+            "text": "I had some problem with google account, there is no way to contact google customer service. The only people i can contact to is the google ad Team. Google only cares about its ad what a selfish tech. There is not even a live chat, my password linked with google is compromised but there is no one to talk to. the 1800 no is a useless no or even the no provided at this store is useless. Google support only asks to send a feedback of the problem and nothing else. I had sent it but its been more than a month no one has contacted still. Such a selfish, greedy billionaire tech giant. Cant believe, even a small struggling bussiness has someone to chat to. Such a low pathetic moral of google . Humanity will not be too long if our biggest tech are surround by just greed of $$$$$$....Shame on you # greedygoogle#greedysundarpichai#Australiagoogletaxloot.",
+            "time": 1611295578,
+          },
+          {
+            "author_name": "doug cliff",
+            "author_url": "https://www.google.com/maps/contrib/114222669528052367599/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gjbd1ELb3S4E0R10kvV2h9EtBuME8xb9yWbtXa3qyU=s128-c0x00000000-cc-rp-mo-ba6",
+            "rating": 4,
+            "relative_time_description": "7 months ago",
+            "text": "It appears from reading the reviews that Google in not too good at talking to people on the phone. I guess when you are as big as they are they can do what they want as there is not really another alternative. I use their services such as maps and mail but also contribute a lot of data such as photo’s and reviews. I was under the impression that what I was doing was helping others in the community. I had not realised that google could pick and choose who used these services and can block out any one out they don’t like. I was very upset when they black baned some Chinese manufactures who are making really good products. I had also not realised that Google is a slave to any crazy president that gets into power. Anyway I will keep using  their products as they are good and hope that one day they will be available for all to use.",
+            "time": 1608012004,
+          },
+        ],
+      "types": ["point_of_interest", "establishment"],
+      "url": "https://maps.google.com/?cid=10281119596374313554",
+      "user_ratings_total": 931,
+      "utc_offset": 600,
+      "vicinity": "48 Pirrama Road, Pyrmont",
+      "website": "http://google.com/",
+    },
+  "status": "OK",
+}
+# [END maps_http_places_details_response]

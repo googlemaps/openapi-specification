@@ -1,0 +1,71 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placesdetailsresponse] -->
+<h3 class="schema-object" id="PlacesDetailsResponse">
+  Places Details Response Body
+</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>html_attributions</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            May contain a set of attributions about this listing which must be
+            displayed to the user (some listings may not have attribution).
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>result</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#Place" title="Place">Place</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains the detailed information about the place requested.</p>
+          <p>See <a href="#Place">Place</a> for more information.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#PlacesStatus" title="PlacesStatus">PlacesStatus</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains metadata on the request.</p>
+          <p>
+            See <a href="#PlacesStatus">PlacesStatus</a> for more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>info_messages</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains additional information about the request. This field is
+            only returned for successful requests. It may not always be
+            returned, and its content is subject to change.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_placesdetailsresponse] -->

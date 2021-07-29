@@ -20,9 +20,9 @@ An OpenAPI specification for Google Maps Platform APIs.
 | Distance           | **Complete** |
 | Roads              | **Complete** |
 | Time Zone          | **Complete** |
-| Directions         | **Complete** |
+| Directions         | **In Progress** |
 | Maps Static        | Not Started  |
-| Places             | Not Started  |
+| Places             | **Complete** |
 | Street View Static | Not Started  |
 
 > **Note**: New APIs will be documented using Google Discovery documents and Protobuf files.
@@ -44,6 +44,9 @@ The repository makes use of [Bazel](bazel.build) to generate outputs from the sp
     - Code snippets in multiple languages for sample requests
 
     > **Note**: The `dist/` folder is included in this repo and should be updated with all changes.
+
+    > **Note**: If a documentation item is not generated, be sure it is included
+    in the appropriate index.yml file.
 
 1. `npm run build:responses` (optional)
 

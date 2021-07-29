@@ -1,0 +1,206 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_parameters_placenearbysearch] -->
+<h2 id="required-parameters">Required parameters</h2>
+<ul>
+  <li>
+    <h3 id="location">location</h3>
+    <p>
+      The point around which to retrieve place information. This must be
+      specified as <code>latitude,longitude</code>.
+    </p>
+  </li>
+</ul>
+<h2 id="optional-parameters">Optional parameters</h2>
+<ul>
+  <li>
+    <h3 id="fields">fields</h3>
+    <p>
+      Use the fields parameter to specify a comma-separated list of place data
+      types to return. For example:
+      <code>fields=formatted_address,name,geometry</code>. Use a forward slash
+      when specifying compound values. For example:
+      <code>opening_hours/open_now</code>.
+    </p>
+    <p>
+      Fields are divided into three billing categories: Basic, Contact, and
+      Atmosphere. Basic fields are billed at base rate, and incur no additional
+      charges. Contact and Atmosphere fields are billed at a higher rate. See
+      the
+      <a href="https://cloud.google.com/maps-platform/pricing/sheet/"
+        >pricing sheet</a
+      >
+      for more information. Attributions, <code>html_attributions</code>, are
+      always returned with every call, regardless of whether the field has been
+      requested.
+    </p>
+    <p><strong>Basic</strong></p>
+    <p>
+      The Basic category includes the following fields:
+      <code>address_component</code>, <code>adr_address</code>,
+      <code>business_status</code>, <code>formatted_address</code>,
+      <code>geometry</code>, <code>icon</code>, <code>name</code>,
+      <code>photo</code>, <code>place_id</code>, <code>plus_code</code>,
+      <code>type</code>, <code>url</code>, <code>utc_offset</code>,
+      <code>vicinity</code>.
+    </p>
+    <p><strong>Contact</strong></p>
+    <p>
+      The Contact category includes the following fields:
+      <code>formatted_phone_number</code>,
+      <code>international_phone_number</code>, <code>opening_hours</code>,
+      <code>website</code>
+    </p>
+    <p><strong>Atmosphere</strong></p>
+    <p>
+      The Atmosphere category includes the following fields:
+      <code>price_level</code>, <code>rating</code>, <code>review</code>,
+      <code>user_ratings_total</code>.
+    </p>
+    <div class="caution">
+      Caution: Place Search requests and Place Details requests do not return
+      the same fields. Place Search requests return a subset of the fields that
+      are returned by Place Details requests. If the field you want is not
+      returned by Place Search, you can use Place Search to get a place_id, then
+      use that Place ID to make a Place Details request.
+    </div>
+  </li>
+  <li>
+    <h3 id="keyword">keyword</h3>
+    <p>
+      A term to be matched against all content that Google has indexed for this
+      place, including but not limited to name, type, and address, as well as
+      customer reviews and other third-party content.
+    </p>
+  </li>
+  <li>
+    <h3 id="language">language</h3>
+    <p>The language in which to return results.</p>
+    <ul>
+      <li>
+        See the
+        <a href="https://developers.google.com/maps/faq#languagesupport"
+          >list of supported languages</a
+        >. Google often updates the supported languages, so this list may not be
+        exhaustive.
+      </li>
+      <li>
+        If <code>language</code> is not supplied, the API attempts to use the
+        preferred language as specified in the
+        <code>Accept-Language</code> header, or the native language of the
+        domain from which the request is sent.
+      </li>
+      <li>
+        The API does its best to provide a street address that is readable for
+        both the user and locals. To achieve that goal, it returns street
+        addresses in the local language, transliterated to a script readable by
+        the user if necessary, observing the preferred language. All other
+        addresses are returned in the preferred language. Address components are
+        all returned in the same language, which is chosen from the first
+        component.
+      </li>
+      <li>
+        If a name is not available in the preferred language, the API uses the
+        closest match.
+      </li>
+      <li>
+        The preferred language has a small influence on the set of results that
+        the API chooses to return, and the order in which they are returned. The
+        geocoder interprets abbreviations differently depending on language,
+        such as the abbreviations for street types, or synonyms that may be
+        valid in one language but not in another. For example, <em>utca</em> and
+        <em>tér</em> are synonyms for street in Hungarian.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="maxprice">maxprice</h3>
+    <p>
+      Restricts results to only those places within the specified range. Valid
+      values range between 0 (most affordable) to 4 (most expensive), inclusive.
+      The exact amount indicated by a specific value will vary from region to
+      region.
+    </p>
+  </li>
+  <li>
+    <h3 id="minprice">minprice</h3>
+    <p>
+      Restricts results to only those places within the specified range. Valid
+      values range between 0 (most affordable) to 4 (most expensive), inclusive.
+      The exact amount indicated by a specific value will vary from region to
+      region.
+    </p>
+  </li>
+  <li>
+    <h3 id="name">name</h3>
+    <p>
+      <em>Not Recommended</em> A term to be matched against all content that
+      Google has indexed for this place. Equivalent to <code>keyword</code>. The
+      <code>name</code> field is no longer restricted to place names. Values in
+      this field are combined with values in the keyword field and passed as
+      part of the same search string. We recommend using only the
+      <code>keyword</code> parameter for all search terms.
+    </p>
+  </li>
+  <li>
+    <h3 id="opennow">opennow</h3>
+    <p>
+      Returns only those places that are open for business at the time the query
+      is sent. Places that do not specify opening hours in the Google Places
+      database will not be returned if you include this parameter in your query.
+    </p>
+  </li>
+  <li>
+    <h3 id="pagetoken">pagetoken</h3>
+    <p>
+      Returns up to 20 results from a previously run search. Setting a
+      <code>pagetoken</code> parameter will execute a search with the same
+      parameters used previously — all parameters other than pagetoken will be
+      ignored.
+    </p>
+  </li>
+  <li>
+    <h3 id="radius">radius</h3>
+    <p>
+      Defines the distance (in meters) within which to return place results.
+    </p>
+  </li>
+  <li>
+    <h3 id="rankby">rankby</h3>
+    <p>Specifies the order in which results are listed. Possible values are:</p>
+    <ul>
+      <li>
+        <code>prominence</code> (default). This option sorts results based on
+        their importance. Ranking will favor prominent places within the set
+        radius over nearby places that match but that are less prominent.
+        Prominence can be affected by a place's ranking in Google's index,
+        global popularity, and other factors. When prominence is specified, the
+        <code>radius</code> parameter is required.
+      </li>
+      <li>
+        <code>distance</code>. This option biases search results in ascending
+        order by their distance from the specified location. When
+        <code>distance</code> is specified, one or more of <code>keyword</code>,
+        <code>name</code>, or <code>type</code> is required.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="type">type</h3>
+    <p>
+      Restricts the results to places matching the specified type. Only one type
+      may be specified (if more than one type is provided, all types following
+      the first entry are ignored). See the list of
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/supported_types"
+        >supported types</a
+      >.
+    </p>
+    <div class="note">
+      Note: Adding both `keyword` and `type` with the same value
+      (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield
+      `ZERO_RESULTS`.
+    </div>
+  </li>
+</ul>
+
+<!--- [END maps_http_parameters_placenearbysearch] -->

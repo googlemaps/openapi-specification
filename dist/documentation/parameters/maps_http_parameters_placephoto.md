@@ -1,0 +1,55 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_parameters_placephoto] -->
+<h2 id="required-parameters">Required parameters</h2>
+
+-   <h3 id="query">query</h3>
+
+    The text string on which to search, for example: "restaurant" or "123 Main Street". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
+
+<h2 id="optional-parameters">Optional parameters</h2>
+
+-   <h3 id="language">language</h3>
+
+    The language in which to return results.
+
+    -   See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.
+    -   If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.
+    -   The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.
+    -   If a name is not available in the preferred language, the API uses the closest match.
+    -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
+
+-   <h3 id="location">location</h3>
+
+    The point around which to retrieve place information. This must be specified as `latitude,longitude`.
+
+-   <h3 id="maxprice">maxprice</h3>
+
+    Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+
+-   <h3 id="minprice">minprice</h3>
+
+    Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+
+-   <h3 id="opennow">opennow</h3>
+
+    Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
+
+-   <h3 id="pagetoken">pagetoken</h3>
+
+    Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
+
+-   <h3 id="radius">radius</h3>
+
+    Defines the distance (in meters) within which to return place results.
+
+-   <h3 id="region">region</h3>
+
+    The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
+
+-   <h3 id="type">type</h3>
+
+    Restricts the results to places matching the specified type. Only one type may be specified (if more than one type is provided, all types following the first entry are ignored). See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
+
+    <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
+
+<!--- [END maps_http_parameters_placephoto] -->

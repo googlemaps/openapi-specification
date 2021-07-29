@@ -98,7 +98,7 @@ SnapToRoadsResponse:
 TimeZoneResponse:
   $ref: "./TimeZoneResponse.yml"
 TimeZoneStatus:
-  $ref: "./TimeZoneStatus.yml"  
+  $ref: "./TimeZoneStatus.yml"
 # Errors
 ErrorResponse:
   $ref: "./errors/ErrorResponse.yml"
@@ -106,3 +106,44 @@ ErrorObject:
   $ref: "./errors/ErrorObject.yml"
 ErrorDetail:
   $ref: "./errors/ErrorDetail.yml"
+# Places
+Place:
+  $ref: "./Place.yml"
+PlaceAddressComponent:
+  $ref: "./PlaceAddressComponent.yml"
+PlaceAutocompleteMatchedSubstring:
+  $ref: "./PlaceAutocompleteMatchedSubstring.yml"
+PlaceAutocompletePrediction:
+  $ref: "./PlaceAutocompletePrediction.yml"
+PlaceAutocompleteStructuredFormat:
+  $ref: "./PlaceAutocompleteStructuredFormat.yml"
+PlaceAutocompleteTerm:
+  $ref: "./PlaceAutocompleteTerm.yml"
+PlacePhoto:
+  $ref: "./PlacePhoto.yml"
+PlaceOpeningHours:
+  $ref: "./PlaceOpeningHours.yml"
+PlaceOpeningHoursPeriod:
+  $ref: "./PlaceOpeningHoursPeriod.yml"
+PlaceOpeningHoursPeriodDetail:
+  $ref: "./PlaceOpeningHoursPeriodDetail.yml"
+PlaceGeometry:
+  $ref: "./PlaceGeometry.yml"
+PlacePlusCode:
+  $ref: "./PlacePlusCode.yml"
+PlaceReview:
+  $ref: "./PlaceReview.yml"
+PlacesAutocompleteResponse:
+  $ref: "./PlacesAutocompleteResponse.yml"
+PlacesDetailsResponse:
+  $ref: "./PlacesDetailsResponse.yml"
+PlacesFindPlaceFromTextResponse:
+  $ref: "./PlacesFindPlaceFromTextResponse.yml"
+PlacesNearbySearchResponse:
+  $ref: "./PlacesNearbySearchResponse.yml"
+PlacesQueryAutocompleteResponse:
+  $ref: "./PlacesQueryAutocompleteResponse.yml"
+PlacesStatus:
+  $ref: "./PlacesStatus.yml"
+PlacesTextSearchResponse:
+  $ref: "./PlacesTextSearchResponse.yml"

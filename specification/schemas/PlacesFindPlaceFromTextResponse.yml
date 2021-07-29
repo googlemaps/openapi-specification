@@ -1,0 +1,37 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type: object
+title: Places Details Response Body
+required: [candidates, status]
+properties:
+  candidates:
+    description: |
+      Contains an array of Place candidates.
+      <div class="caution">Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
+    type: array
+    items:
+      $ref: "./Place.yml"
+  status:
+    description: Contains metadata on the request.
+    $ref: "./PlacesStatus.yml"
+  error_message:
+    description: Contains additional information about the request.
+    type: string
+    example: "Error while parsing 'fields' parameter: Unsupported field name 'invalid'. "
+  info_messages:
+    description: Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+    type: array
+    items:
+      type: string

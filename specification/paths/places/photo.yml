@@ -1,0 +1,43 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Places API
+description: |
+  The Google Places API Text Search Service is a web service that returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa" or "123 Main Street". The service responds with a list of places matching the text string and any location bias that has been set.
+
+  The service is especially useful for making [ambiguous address](https://developers.google.com/maps/documentation/geocoding/best-practices) queries in an automated system, and non-address components of the string may match businesses as well as addresses. Examples of ambiguous address queries are incomplete addresses, poorly formatted addresses, or a request that includes non-address components such as business names.
+
+  The search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.
+parameters:
+  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/maxprice.yml"
+  - "$ref": "../../parameters/places/minprice.yml"
+  - "$ref": "../../parameters/places/opennow.yml"
+  - "$ref": "../../parameters/places/pagetoken.yml"
+  - "$ref": "../../parameters/places/query.yml"
+  - "$ref": "../../parameters/places/radius.yml"
+  - "$ref": "../../parameters/places/type.yml"
+  - "$ref": "../../parameters/language.yml"
+  - "$ref": "../../parameters/region.yml"
+responses:
+  "200":
+    description: Response for the Places Text Search request.
+    content:
+      image/*:
+        schema:
+          type: string
+          format: binary

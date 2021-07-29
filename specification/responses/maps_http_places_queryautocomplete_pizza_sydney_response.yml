@@ -1,0 +1,152 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_queryautocomplete_pizza_sydney_response]
+{
+  "predictions":
+    [
+      {
+        "description": "West Sydney Pizza & Pasta, Minchin Drive, Minchinbury NSW, Australia",
+        "matched_substrings": [{ "length": 25, "offset": 0 }],
+        "place_id": "ChIJs0qD-XOaEmsRiGFC9mSxp5E",
+        "reference": "ChIJs0qD-XOaEmsRiGFC9mSxp5E",
+        "structured_formatting":
+          {
+            "main_text": "West Sydney Pizza & Pasta",
+            "main_text_matched_substrings": [{ "length": 25, "offset": 0 }],
+            "secondary_text": "Minchin Drive, Minchinbury NSW, Australia",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "West Sydney Pizza & Pasta" },
+            { "offset": 27, "value": "Minchin Drive" },
+            { "offset": 42, "value": "Minchinbury" },
+            { "offset": 54, "value": "NSW" },
+            { "offset": 59, "value": "Australia" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Casa Incontro Pizza & Pasta Family Restaurant, Hume Highway, Campbellfield VIC, Australia",
+        "matched_substrings": [{ "length": 45, "offset": 0 }],
+        "place_id": "ChIJ6SSOYANQ1moR9reZqqvtkCM",
+        "reference": "ChIJ6SSOYANQ1moR9reZqqvtkCM",
+        "structured_formatting":
+          {
+            "main_text": "Casa Incontro Pizza & Pasta Family Restaurant",
+            "main_text_matched_substrings": [{ "length": 45, "offset": 0 }],
+            "secondary_text": "Hume Highway, Campbellfield VIC, Australia",
+          },
+        "terms":
+          [
+            {
+              "offset": 0,
+              "value": "Casa Incontro Pizza & Pasta Family Restaurant",
+            },
+            { "offset": 47, "value": "Hume Highway" },
+            { "offset": 61, "value": "Campbellfield" },
+            { "offset": 75, "value": "VIC" },
+            { "offset": 80, "value": "Australia" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Alexandra's Pizza Sydney, Charlotte Street, Sydney, NS, Canada",
+        "matched_substrings": [{ "length": 24, "offset": 0 }],
+        "place_id": "ChIJOwKCOS77Z0sR6kjvyajTllk",
+        "reference": "ChIJOwKCOS77Z0sR6kjvyajTllk",
+        "structured_formatting":
+          {
+            "main_text": "Alexandra's Pizza Sydney",
+            "main_text_matched_substrings": [{ "length": 24, "offset": 0 }],
+            "secondary_text": "Charlotte Street, Sydney, NS, Canada",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Alexandra's Pizza Sydney" },
+            { "offset": 26, "value": "Charlotte Street" },
+            { "offset": 44, "value": "Sydney" },
+            { "offset": 52, "value": "NS" },
+            { "offset": 56, "value": "Canada" },
+          ],
+        "types":
+          [
+            "meal_delivery",
+            "meal_takeaway",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Country Gourmet Pizza, Belmore Road, Sydney NSW, Australia",
+        "matched_substrings":
+          [{ "length": 5, "offset": 16 }, { "length": 6, "offset": 37 }],
+        "place_id": "ChIJpeUfwhiyEmsRWK8F-No562c",
+        "reference": "ChIJpeUfwhiyEmsRWK8F-No562c",
+        "structured_formatting":
+          {
+            "main_text": "Country Gourmet Pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 16 }],
+            "secondary_text": "Belmore Road, Sydney NSW, Australia",
+            "secondary_text_matched_substrings":
+              [{ "length": 6, "offset": 14 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Country Gourmet Pizza" },
+            { "offset": 23, "value": "Belmore Road" },
+            { "offset": 37, "value": "Sydney" },
+            { "offset": 44, "value": "NSW" },
+            { "offset": 49, "value": "Australia" },
+          ],
+        "types":
+          [
+            "meal_takeaway",
+            "cafe",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Sindbad's Kebab & Pizza, Market Street, Sydney NSW, Australia",
+        "matched_substrings":
+          [{ "length": 5, "offset": 18 }, { "length": 6, "offset": 40 }],
+        "place_id": "ChIJWY3PWBSvEmsRmSEiLeOxm9I",
+        "reference": "ChIJWY3PWBSvEmsRmSEiLeOxm9I",
+        "structured_formatting":
+          {
+            "main_text": "Sindbad's Kebab & Pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 18 }],
+            "secondary_text": "Market Street, Sydney NSW, Australia",
+            "secondary_text_matched_substrings":
+              [{ "length": 6, "offset": 15 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Sindbad's Kebab & Pizza" },
+            { "offset": 25, "value": "Market Street" },
+            { "offset": 40, "value": "Sydney" },
+            { "offset": 47, "value": "NSW" },
+            { "offset": 52, "value": "Australia" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_queryautocomplete_pizza_sydney_response]

@@ -1,0 +1,74 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_textsearch_location_response]
+{
+  "html_attributions": [],
+  "results":
+    [
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "123 Main St, Northeast Harbor, ME 04662, United States",
+        "geometry":
+          {
+            "location": { "lat": 44.2937113, "lng": -68.2892093 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 44.29511312989272, "lng": -68.28777657010727 },
+                "southwest":
+                  { "lat": 44.29241347010728, "lng": -68.29047622989272 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "123 Main Street Restaurant : Seasonal June 21 -Labor Day",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 768,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/102531981953403924466">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEDJPn2zJiB5D1-IzyHu88bllXss0TZAx_rtpC6M8Gb2EQ32Shv8TuikV6c3z2jWvtT5NtHdj3V41rbEItAT-KUx2IhniEBQMjG0IyCRG7HCUQ0GuPJM9RZgoRg8a5eUUus-KqkQSWh_sZscwCSISbuIABJv0XxH9K432JXixvD0bTk",
+              "width": 1024,
+            },
+          ],
+        "place_id": "ChIJS10S9VW8rkwRhkCRo51uFnc",
+        "plus_code":
+          {
+            "compound_code": "7PV6+F8 Northeast Harbor, Mt Desert, ME, United States",
+            "global_code": "87PH7PV6+F8",
+          },
+        "rating": 4.5,
+        "reference": "ChIJS10S9VW8rkwRhkCRo51uFnc",
+        "types":
+          [
+            "bakery",
+            "cafe",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+        "user_ratings_total": 74,
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_textsearch_location_response]

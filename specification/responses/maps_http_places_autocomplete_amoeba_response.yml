@@ -1,0 +1,148 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_autocomplete_amoeba_response]
+{
+  "predictions":
+    [
+      {
+        "description": "Amoeba Music, Haight Street, San Francisco, CA, USA",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJ5YQQf1GHhYARPKG7WLIaOko",
+        "reference": "ChIJ5YQQf1GHhYARPKG7WLIaOko",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba Music",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Haight Street, San Francisco, CA, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba Music" },
+            { "offset": 14, "value": "Haight Street" },
+            { "offset": 29, "value": "San Francisco" },
+            { "offset": 44, "value": "CA" },
+            { "offset": 48, "value": "USA" },
+          ],
+        "types":
+          [
+            "electronics_store",
+            "home_goods_store",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Amoeba Music, Telegraph Avenue, Berkeley, CA, USA",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJr7uwwy58hYARBY-e7-QVwqw",
+        "reference": "ChIJr7uwwy58hYARBY-e7-QVwqw",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba Music",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Telegraph Avenue, Berkeley, CA, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba Music" },
+            { "offset": 14, "value": "Telegraph Avenue" },
+            { "offset": 32, "value": "Berkeley" },
+            { "offset": 42, "value": "CA" },
+            { "offset": 46, "value": "USA" },
+          ],
+        "types":
+          [
+            "electronics_store",
+            "home_goods_store",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Amoeba Music, Hollywood Boulevard, Los Angeles, CA, USA",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJRdmfADq_woARYaVhnfQSUTI",
+        "reference": "ChIJRdmfADq_woARYaVhnfQSUTI",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba Music",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Hollywood Boulevard, Los Angeles, CA, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba Music" },
+            { "offset": 14, "value": "Hollywood Boulevard" },
+            { "offset": 35, "value": "Los Angeles" },
+            { "offset": 48, "value": "CA" },
+            { "offset": 52, "value": "USA" },
+          ],
+        "types":
+          [
+            "electronics_store",
+            "home_goods_store",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Amoeba, Sunset Boulevard, Los Angeles, CA, USA",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJc4h0lUK_woAR00GNJt9ZHXo",
+        "reference": "ChIJc4h0lUK_woAR00GNJt9ZHXo",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Sunset Boulevard, Los Angeles, CA, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba" },
+            { "offset": 8, "value": "Sunset Boulevard" },
+            { "offset": 26, "value": "Los Angeles" },
+            { "offset": 39, "value": "CA" },
+            { "offset": 43, "value": "USA" },
+          ],
+        "types": ["point_of_interest", "establishment"],
+      },
+      {
+        "description": "Amoeba CrossFit, Park Creek Drive, Clovis, CA, USA",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJofL3OWJdlIARad2hrCjYFU0",
+        "reference": "ChIJofL3OWJdlIARad2hrCjYFU0",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba CrossFit",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Park Creek Drive, Clovis, CA, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba CrossFit" },
+            { "offset": 17, "value": "Park Creek Drive" },
+            { "offset": 35, "value": "Clovis" },
+            { "offset": 43, "value": "CA" },
+            { "offset": 47, "value": "USA" },
+          ],
+        "types": ["gym", "health", "point_of_interest", "establishment"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_autocomplete_amoeba_response]

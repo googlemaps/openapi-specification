@@ -1,0 +1,134 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type: object
+title: Place
+properties:
+  address_components:
+    description: An array containing the separate components applicable to this address.
+    type: array
+    items:
+      $ref: "./PlaceAddressComponent.yml"
+  adr_address:
+    description: A representation of the place's address in the [adr microformat](http://microformats.org/wiki/adr).
+    type: string
+    example: '<span class="street-address">48 Pirrama Rd</span>, <span class="locality">Pyrmont</span> <span class="region">NSW</span> <span class="postal-code">2009</span>, <span class="country-name">Australia</span>'
+  business_status:
+    description: |
+      Indicates the operational status of the place, if it is a business. If no data exists, `business_status` is not returned.
+    type: string
+    enum:
+      - OPERATIONAL
+      - CLOSED_TEMPORARILY
+      - CLOSED_PERMANENTLY
+  formatted_address:
+    description: |
+      A string containing the human-readable address of this place.
+
+      Often this address is equivalent to the postal address. Note that some countries, such as the United Kingdom, do not allow distribution of true postal addresses due to licensing restrictions.
+
+      The formatted address is logically composed of one or more address components. For example, the address "111 8th Avenue, New York, NY" consists of the following components: "111" (the street number), "8th Avenue" (the route), "New York" (the city) and "NY" (the US state).
+
+      Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.      
+    
+    type: string
+    example: "48 Pirrama Rd, Pyrmont NSW 2009, Australia"
+  formatted_phone_number:
+    description: Contains the place's phone number in its [local format](http://en.wikipedia.org/wiki/Local_conventions_for_writing_telephone_numbers).
+    type: string
+    example: "(02) 9374 4000"
+  geometry:
+    description: Contains the location and viewport for the location.
+    $ref: "./PlaceGeometry.yml"
+  icon:
+    description: Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.
+    type: string
+    example: https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png
+  icon_background_color: 
+    description: Contains the default HEX color code for the place's category.
+    type: string
+  icon_mask_base_uri:
+    description: Contains the URL of a recommended icon, minus the `.svg` or `.png` file type extension.
+    type: string
+  international_phone_number:
+    description: Contains the place's phone number in international format. International format includes the country code, and is prefixed with the plus, +, sign. For example, the international_phone_number for Google's Sydney, Australia office is `+61 2 9374 4000`.
+    type: string
+    example: "+61 2 9374 4000"
+  name:
+    description: Contains the human-readable name for the returned result. For `establishment` results, this is usually the canonicalized business name.
+    type: string
+    example: Google Workplace 6
+  opening_hours:
+    description: Contains hours of operation.
+    $ref: "./PlaceOpeningHours.yml"
+  photos:
+    description: An array of photo objects, each containing a reference to an image. A request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.
+    type: array
+    items:
+      $ref: "./PlacePhoto.yml"
+  place_id:
+    description: A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the `place_id` field of a Places API request. For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+    type: string
+    example: ChIJN1t_tDeuEmsRUsoyG83frY4
+  plus_code:
+    description: |
+      An encoded location reference, derived from latitude and longitude coordinates, that represents an area: 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [Open Location Code](https://en.wikipedia.org/wiki/Open_Location_Code) and [plus codes](https://plus.codes/).
+    $ref: "./PlacePlusCode.yml"
+  price_level:
+    description: |
+      The price level of the place, on a scale of 0 to 4. The exact amount indicated by a specific value will vary from region to region. Price levels are interpreted as follows:
+      - 0 Free
+      - 1 Inexpensive
+      - 2 Moderate
+      - 3 Expensive
+      - 4 Very Expensive
+    type: number
+  rating:
+    description: Contains the place's rating, from 1.0 to 5.0, based on aggregated user reviews.
+    type: number
+    example: 4.1
+  reference:
+    description: Deprecated
+    type: string
+  reviews:
+    description: A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.
+    type: array
+    items:
+      $ref: "./PlaceReview.yml"
+  types:
+    description: Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).
+    type: array
+    items:        
+      type: string
+    example: ["point_of_interest", "establishment"]
+  url:
+    description: Contains the URL of the official Google page for this place. This will be the Google-owned page that contains the best available information about the place. Applications must link to or embed this page on any screen that shows detailed results about the place to the user.
+    type: string
+    example: https://maps.google.com/?cid=10281119596374313554
+  user_ratings_total:
+    description: The total number of reviews, with or without text, for this place.
+    type: number
+    example: 931
+  utc_offset:
+    description: Contains the number of minutes this place’s current timezone is offset from UTC. For example, for places in Sydney, Australia during daylight saving time this would be 660 (+11 hours from UTC), and for places in California outside of daylight saving time this would be -480 (-8 hours from UTC).
+    type: number
+    example: 600
+  vicinity:
+    description: A simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country. For example, Google's Sydney, Australia office has a vicinity value of `48 Pirrama Road, Pyrmont`.
+    type: string
+    example: "48 Pirrama Road, Pyrmont"
+  website:
+    description: The authoritative website for this place, such as a business' homepage.
+    type: string
+    example: http://google.com

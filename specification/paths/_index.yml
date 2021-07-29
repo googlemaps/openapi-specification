@@ -36,3 +36,24 @@
 /maps/api/distanceMatrix/json:
   get:
     $ref: "./distanceMatrix.yml"
+/maps/api/place/details/json:
+  get:
+    $ref: "./places/details.yml"
+/maps/api/place/findplacefromtext/json:
+  get:
+    $ref: "./places/findplacefromtext.yml"
+/maps/api/place/nearbysearch/json:  
+  get:
+    $ref: "./places/nearbysearch.yml"
+/maps/api/place/textsearch/json:  
+  get:
+    $ref: "./places/textsearch.yml"
+/maps/api/place/photo:  
+  get:
+    $ref: "./places/photo.yml"
+/maps/api/place/queryautocomplete/json:  
+  get:
+    $ref: "./places/queryautocomplete.yml"
+/maps/api/place/autocomplete/json:  
+  get:
+    $ref: "./places/autocomplete.yml"

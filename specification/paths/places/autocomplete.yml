@@ -1,0 +1,56 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Places API
+description: |
+  The Place Autocomplete service is a web service that returns place predictions in response to an HTTP request. The request specifies a textual search string and optional geographic bounds. The service can be used to provide autocomplete functionality for text-based geographic searches, by returning places such as businesses, addresses and points of interest as a user types.
+  <div class="note">Note: You can use Place Autocomplete even without a map. If you do show a map, it must be a Google map. When you display predictions from the Place Autocomplete service without a map, you must include the ['Powered by Google'](https://developers.google.com/maps/documentation/places/web-service/policies#logo_requirementshttps://developers.google.com/maps/documentation/places/web-service/policies#logo_requirements) logo.</div>
+
+  The Place Autocomplete service can match on full words and substrings, resolving place names, addresses, and plus codes. Applications can therefore send queries as the user types, to provide on-the-fly place predictions.
+
+  The returned predictions are designed to be presented to the user to aid them in selecting the desired place. You can send a [Place Details](https://developers.google.com/maps/documentation/places/web-service/details#PlaceDetailsRequests) request for more information about any of the places which are returned.
+parameters:
+  - name: input
+    description: |
+      The text string on which to search. The Place Autocomplete service will return candidate matches based on this string and order results based on their perceived relevance.
+    schema:
+      type: string
+    required: true
+    in: query
+  - "$ref": "../../parameters/places/sessiontoken.yml"
+  - "$ref": "../../parameters/places/components.yml"
+  - "$ref": "../../parameters/places/strictbounds.yml"
+  - "$ref": "../../parameters/places/offset.yml"
+  - "$ref": "../../parameters/places/origin.yml"
+  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/radius.yml"
+  - "$ref": "../../parameters/places/types.yml"
+  - "$ref": "../../parameters/language.yml"
+responses:
+  "200":
+    description: Response for the Autocomplete request.
+    content:
+      application/json:
+        examples:
+          paris:
+            value:
+              $ref: "../../responses/maps_http_places_autocomplete_paris_response.yml"
+          no_results:
+            value:
+              $ref: "../../responses/maps_http_places_autocomplete_amoeba_strict_response.yml"
+        schema:
+          $ref: "../../schemas/PlacesAutocompleteResponse.yml"

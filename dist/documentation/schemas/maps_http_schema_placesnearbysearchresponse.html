@@ -1,0 +1,104 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placesnearbysearchresponse] -->
+<h3 class="schema-object" id="PlacesNearbySearchResponse">
+  Places Nearby Search Response Body
+</h3>
+<p>type: <code>object</code></p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>html_attributions</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            May contain a set of attributions about this listing which must be
+            displayed to the user (some listings may not have attribution).
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>results</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;<a href="#Place" title="Place">Place</a>></td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains an array of places.</p>
+          <div class="caution">
+            Place Search requests return a subset of the fields that are
+            returned by Place Details requests. If the field you want is not
+            returned by Place Search, you can use Place Search to get a
+            <code>place_id</code>, then use that Place ID to make a Place
+            Details request.
+          </div>
+          <p>See <a href="#Place">Place</a> for more information.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>status</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#PlacesStatus" title="PlacesStatus">PlacesStatus</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>Contains metadata on the request.</p>
+          <p>
+            See <a href="#PlacesStatus">PlacesStatus</a> for more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>error_message</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Contains additional information about the request.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>info_messages</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains additional information about the request. This field is
+            only returned for successful requests. It may not always be
+            returned, and its content is subject to change.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>next_page_token</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains a token that can be used to return up to 20 additional
+            results. A next_page_token will not be returned if there are no
+            additional results to display. The maximum number of results that
+            can be returned is 60. There is a short delay between when a
+            next_page_token is issued, and when it will become valid.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--- [END maps_http_schema_placesnearbysearchresponse] -->

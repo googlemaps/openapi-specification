@@ -1,0 +1,54 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Places API
+description: |
+  A Find Place request takes a text input and returns a place. The input can be any kind of Places text data, such as a name, address, or phone number. The request must be a string. A Find Place request using non-string data such as a lat/lng coordinate or plus code generates an error.
+  <div class="note">Note: If you omit the fields parameter from a Find Place request, only the place_id for the result will be returned.</div>
+parameters:
+  - "$ref": "../../parameters/places/fields.yml"
+  - name: input    
+    description: |
+      Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.
+    schema:
+      type: string
+    required: true
+    in: query
+    example: "Museum of Contemporary Art Australia"
+  - "$ref": "../../parameters/places/inputtype.yml"
+  - "$ref": "../../parameters/places/locationbias.yml"
+  - "$ref": "../../parameters/language.yml"
+responses:
+  "200":
+    description: Response for the Find Place From Text request.
+    content:
+      application/json:
+        examples:
+          mca:
+            value:
+              $ref: "../../responses/maps_http_places_findplacefromtext_mca_response.yml"
+          phonenumber:
+            value:
+              $ref: "../../responses/maps_http_places_findplacefromtext_phonenumber_response.yml"          
+          locationbias:
+            value:
+              $ref: "../../responses/maps_http_places_findplacefromtext_locationbias_response.yml"       
+          error:
+            value:
+              $ref: "../../responses/maps_http_places_findplacefromtext_error_response.yml"   
+        schema:
+          $ref: "../../schemas/PlacesFindPlaceFromTextResponse.yml"

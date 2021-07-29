@@ -1,0 +1,134 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_queryautocomplete_pizza_response]
+{
+  "predictions":
+    [
+      {
+        "description": "PIZZA PARADISO, Mariscal Antonio José de Sucre, Buenos Aires, Argentina",
+        "matched_substrings": [{ "length": 14, "offset": 0 }],
+        "place_id": "ChIJZQIEIV61vJURXNINvCJNDgg",
+        "reference": "ChIJZQIEIV61vJURXNINvCJNDgg",
+        "structured_formatting":
+          {
+            "main_text": "PIZZA PARADISO",
+            "main_text_matched_substrings": [{ "length": 14, "offset": 0 }],
+            "secondary_text": "Mariscal Antonio José de Sucre, Buenos Aires, Argentina",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "PIZZA PARADISO" },
+            { "offset": 16, "value": "Mariscal Antonio José de Sucre" },
+            { "offset": 48, "value": "Buenos Aires" },
+            { "offset": 62, "value": "Argentina" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Pizza Paradiso Mediterranean Grill, Lower Honoapiilani Road, Lahaina, HI, USA",
+        "matched_substrings": [{ "length": 34, "offset": 0 }],
+        "place_id": "ChIJffjit6_Vqn4RLxkOpB72o9E",
+        "reference": "ChIJffjit6_Vqn4RLxkOpB72o9E",
+        "structured_formatting":
+          {
+            "main_text": "Pizza Paradiso Mediterranean Grill",
+            "main_text_matched_substrings": [{ "length": 34, "offset": 0 }],
+            "secondary_text": "Lower Honoapiilani Road, Lahaina, HI, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Pizza Paradiso Mediterranean Grill" },
+            { "offset": 36, "value": "Lower Honoapiilani Road" },
+            { "offset": 61, "value": "Lahaina" },
+            { "offset": 70, "value": "HI" },
+            { "offset": 74, "value": "USA" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Budapest, Pizza Paradicsom Non-Stop Étterem és Pizzéria, Vörösvári Way, Hungary",
+        "matched_substrings": [{ "length": 45, "offset": 10 }],
+        "place_id": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
+        "reference": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
+        "structured_formatting":
+          {
+            "main_text": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
+            "main_text_matched_substrings": [{ "length": 45, "offset": 0 }],
+            "secondary_text": "Budapest, Vörösvári Way, Hungary",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Budapest" },
+            {
+              "offset": 10,
+              "value": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
+            },
+            { "offset": 57, "value": "Vörösvári Way" },
+            { "offset": 72, "value": "Hungary" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Pizza Party - Friday happiness, Marmelete, Portugal",
+        "matched_substrings": [{ "length": 30, "offset": 0 }],
+        "place_id": "ChIJM_kLmcg8Gw0R96yPWZIN_Oo",
+        "reference": "ChIJM_kLmcg8Gw0R96yPWZIN_Oo",
+        "structured_formatting":
+          {
+            "main_text": "Pizza Party - Friday happiness",
+            "main_text_matched_substrings": [{ "length": 30, "offset": 0 }],
+            "secondary_text": "Marmelete, Portugal",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Pizza Party - Friday happiness" },
+            { "offset": 32, "value": "Marmelete" },
+            { "offset": 43, "value": "Portugal" },
+          ],
+        "types":
+          [
+            "night_club",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment",
+          ],
+      },
+      {
+        "description": "Parlor Pizza Bar West Loop, North Green Street, Chicago, IL, USA",
+        "matched_substrings": [{ "length": 26, "offset": 0 }],
+        "place_id": "ChIJ2Wfqc8rSD4gRMs6hdBZ0Pck",
+        "reference": "ChIJ2Wfqc8rSD4gRMs6hdBZ0Pck",
+        "structured_formatting":
+          {
+            "main_text": "Parlor Pizza Bar West Loop",
+            "main_text_matched_substrings": [{ "length": 26, "offset": 0 }],
+            "secondary_text": "North Green Street, Chicago, IL, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Parlor Pizza Bar West Loop" },
+            { "offset": 28, "value": "North Green Street" },
+            { "offset": 48, "value": "Chicago" },
+            { "offset": 57, "value": "IL" },
+            { "offset": 61, "value": "USA" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_queryautocomplete_pizza_response]

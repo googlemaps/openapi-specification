@@ -1080,4 +1080,416 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_details",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/details/json",
+        query: [
+          {
+            key: "place_id",
+            value: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_details_fields",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/details/json",
+        query: [
+          {
+            key: "place_id",
+            value: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+          },
+          {
+            key: "fields",
+            value: "name,rating,formatted_phone_number",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_mca",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: "Museum of Contemporary Art Australia",
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          {
+            key: "fields",
+            value: "formatted_address,name,rating,opening_hours,geometry",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_locationbias",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: "mongolian",
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          {
+            key: "locationbias",
+            value: "circle:2000@47.6918452,-122.2226413",
+          },
+          {
+            key: "fields",
+            value: "formatted_address,name,rating,opening_hours,geometry",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_phonenumber",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("+16502530000"),
+          },
+          {
+            key: "inputtype",
+            value: "phonenumber",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_findplacefromtext_error",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/findplacefromtext/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("+16502530000"),
+          },
+          {
+            key: "inputtype",
+            value: "textquery",
+          },
+          { key: "fields", value: "invalid" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_nearbysearch",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/nearbysearch/json",
+        query: [
+          {
+            key: "location",
+            value: "-33.8670522,151.1957362",
+          },
+          {
+            key: "radius",
+            value: "1500",
+          },
+          { key: "type", value: "restaurant" },
+          { key: "keyword", value: "cruise" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("restaurants in Sydney"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch_incomplete_address",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("123 main street"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch_location",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("123 main street"),
+          },
+          {
+            key: "location",
+            value: "42.3675294,-71.186966",
+          },
+          {
+            key: "radius",
+            value: "10000",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_textsearch_pagetoken",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/nearbysearch/json",
+        query: [
+          {
+            key: "pagetoken",
+            value:
+              "CpQCAgEAAFxg8o-eU7_uKn7Yqjana-HQIx1hr5BrT4zBaEko29ANsXtp9mrqN0yrKWhf-y2PUpHRLQb1GT-mtxNcXou8TwkXhi1Jbk-ReY7oulyuvKSQrw1lgJElggGlo0d6indiH1U-tDwquw4tU_UXoQ_sj8OBo8XBUuWjuuFShqmLMP-0W59Vr6CaXdLrF8M3wFR4dUUhSf5UC4QCLaOMVP92lyh0OdtF_m_9Dt7lz-Wniod9zDrHeDsz_by570K3jL1VuDKTl_U1cJ0mzz_zDHGfOUf7VU1kVIs1WnM9SGvnm8YZURLTtMLMWx8-doGUE56Af_VfKjGDYW361OOIj9GmkyCFtaoCmTMIr5kgyeUSnB-IEhDlzujVrV6O9Mt7N4DagR6RGhT3g1viYLS4kO5YindU6dm3GIof1Q",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_photo", // Note: Generated code does not support binary response well
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/photo",
+        query: [
+          {
+            key: "photoreference",
+            value:
+              "CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU",
+          },
+          {
+            key: "maxwidth",
+            value: "400",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_paris",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Paris",
+          },
+          {
+            key: "types",
+            value: "geocode",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_amoeba",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "amoeba",
+          },
+          {
+            key: "types",
+            value: "establishment",
+          },
+          {
+            key: "location",
+            value: "37.76999,-122.44696",
+          },
+          {
+            key: "radius",
+            value: "500",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_amoeba_strict",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "amoeba",
+          },
+          {
+            key: "types",
+            value: "establishment",
+          },
+          {
+            key: "location",
+            value: "37.76999,-122.44696",
+          },
+          {
+            key: "radius",
+            value: "500",
+          },
+          { key: "strictbounds", value: "true" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_fr",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Vict",
+          },
+          {
+            key: "types",
+            value: "geocode",
+          },
+          { key: "language", value: "fr" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_pt_br",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Vict",
+          },
+          {
+            key: "types",
+            value: "(cities)",
+          },
+          { key: "language", value: "pt_BR" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near par"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza_fr",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near par"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza_sydney",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near Sydney"),
+          },
+        ],
+      }),
+    }),
+  },
 ];

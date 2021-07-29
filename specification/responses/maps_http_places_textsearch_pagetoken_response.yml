@@ -1,0 +1,727 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_textsearch_pagetoken_response]
+{
+  "html_attributions": [],
+  "next_page_token": "Aap_uEBCfuVTsUR5C6Y70Z4yg4YZHdlJSx4koboe1p0SC-nBKnK9aR8pihSH1mo_JNkZYoq6YaRX8mq7jpM1V3o0tBZGJjQuWbpH99r_ouJIOvwxzbGOt6NzFOLT-k2QGinq8fD88HbWAaZ8O7_YS6Z-1Yr7PC4j6g7P9vvekE10aLyq6s8SMXroCbpsrLvu4aBfGSAjhmwLTX9Ibrairn3gnZLeT_tffv38Eo5lNseptfZWW5XrrD4O8UHuDvNDos8UyGR7AJsMHK7oJ5eUJ-FOD_91lyqef03eQJiavUNmPjhrKuclcUxoNa0vrMNZPkPUKIJnVHe9LfWc8AAViub8wBrNkC5njIZpZByFtAdbxTpy0QFOKFon9JkV6vD8nuahqny9kye07wOYhlZIbB2A-g3RR2HsMQXto8msUfbmBT2O5Gw7-niIbMnDJclgJ7UCXVfW_EqE5aU41Im5DhOCMkXRLeb6U0-J6OvSKH_zMf6VLyVcY55fcPgIclJTlqg1AFfZw7LQecXIXgZ_460kLKtegllE0NBnvgsIAg2jlnBWDR9fXvNFsFPG8Tz8ra6NM_D6-S071eSE_R69KImaGs3sKiiPQb_ESCA",
+  "results":
+    [
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8670097, "lng": 151.1959641 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8652676697085, "lng": 151.1970051802915 },
+                "southwest":
+                  { "lat": -33.8679656302915, "lng": 151.1943072197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+        "name": "Baggios",
+        "photos":
+          [
+            {
+              "height": 1114,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/118404824153733122989">Kate Conroy</a>',
+                ],
+              "photo_reference": "Aap_uEBSzv6uG9etNbdNwTZy7hfyoUh2PKzNCtO6SR1hchMcX0gnLLclgt2e9soYaqKGw7FDIh1hCQisV7ebcUlZCJc_6mBxx48tXbf2i74zO1VwTHAZwVZ5vHH--JcvC2Ez5kL-3tmYIt1yPC4r2AaGFo2dRG9E-BKSZ63ZVlD8ZvqXa5aQ",
+              "width": 2388,
+            },
+          ],
+        "place_id": "ChIJTVawZ9mvEmsRxZwZN_GD6S0",
+        "plus_code":
+          {
+            "compound_code": "45MW+59 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+59",
+          },
+        "reference": "ChIJTVawZ9mvEmsRxZwZN_GD6S0",
+        "scope": "GOOGLE",
+        "types": ["cafe", "food", "point_of_interest", "establishment"],
+        "vicinity": "Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.86710999999999, "lng": 151.1959991 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86581966970849, "lng": 151.1971902802915 },
+                "southwest":
+                  { "lat": -33.86851763029148, "lng": 151.1944923197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Life From A Suitcase",
+        "photos":
+          [
+            {
+              "height": 2160,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/105505602978119898120">Abdullah Al Mamun</a>',
+                ],
+              "photo_reference": "Aap_uEApA5PhGj4Lo7CD7YTVMTNcLlwHo0YfvEM5GLojflhP6psmdBdY5mH5_nz9Wd36O9pifgHbiK2GZ-Jc7g3CFAWtV4N-d5r5jvrCN63kvmrhOVQAcwBQD67KeAzKZ_ldd3zkuF4lMamBD5tmBgt20ny2e5jnml9pY_agsJ7KmWSLnsf7",
+              "width": 3840,
+            },
+          ],
+        "place_id": "ChIJoTCOpkWvEmsRCzAIBl5AclA",
+        "plus_code":
+          {
+            "compound_code": "45MW+59 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+59",
+          },
+        "reference": "ChIJoTCOpkWvEmsRCzAIBl5AclA",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "vicinity": "48A Pirrama Road, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.867207, "lng": 151.195496 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8658306697085, "lng": 151.1969185302915 },
+                "southwest":
+                  { "lat": -33.8685286302915, "lng": 151.1942205697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "The Star, Pirrama Rd, Set Down",
+        "place_id": "ChIJoRq0rDeuEmsR2W2P5nSeiB4",
+        "plus_code":
+          {
+            "compound_code": "45MW+45 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+45",
+          },
+        "reference": "ChIJoRq0rDeuEmsR2W2P5nSeiB4",
+        "scope": "GOOGLE",
+        "types": ["transit_station", "point_of_interest", "establishment"],
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8667652, "lng": 151.1956967 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8651454197085, "lng": 151.1968714802915 },
+                "southwest":
+                  { "lat": -33.8678433802915, "lng": 151.1941735197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Expansion",
+        "place_id": "ChIJYx0qtTeuEmsRqgT0xozr1DA",
+        "plus_code":
+          {
+            "compound_code": "45MW+77 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+77",
+          },
+        "reference": "ChIJYx0qtTeuEmsRqgT0xozr1DA",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8669106, "lng": 151.1953754 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8655466697085, "lng": 151.1967794302915 },
+                "southwest":
+                  { "lat": -33.8682446302915, "lng": 151.1940814697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "The Star, Pirrama Rd",
+        "photos":
+          [
+            {
+              "height": 2340,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/101362612882148803241">Sandra Holwek</a>',
+                ],
+              "photo_reference": "Aap_uEBEEDAG0zwjAbgO1ZtgjhIto-p-V9Pu_b10J1sPQOrRTfDJZjPFCvU77W75ZHXCpvJDrJUgkdQrtQ4UFFu37FSyzwCCLPjRlIWBTzn5BCCGdYtSKiW5frFEfQNb5fEwY2BhOVEpC51SCAj0LTI_Qx0bWvxy30vT6qxrMUNE_HsPYdcG",
+              "width": 4160,
+            },
+          ],
+        "place_id": "ChIJC0JLTDauEmsR3GOrBl3xbbc",
+        "plus_code":
+          {
+            "compound_code": "45MW+65 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+65",
+          },
+        "rating": 5,
+        "reference": "ChIJC0JLTDauEmsR3GOrBl3xbbc",
+        "scope": "GOOGLE",
+        "types": ["transit_station", "point_of_interest", "establishment"],
+        "user_ratings_total": 1,
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8673595, "lng": 151.1955698 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8659744697085, "lng": 151.1970461802915 },
+                "southwest":
+                  { "lat": -33.8686724302915, "lng": 151.1943482197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Marquee Sydney, The Star",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2268,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/100936716492343709003">Goldie Goldie</a>',
+                ],
+              "photo_reference": "Aap_uEClBl0KCcipb49swN5nnzMBPwZFopjmOY3c2K6lLRTM0Z2GTQgUP5dEvA1KFi4xzBlVn2E6eLVkhNl6_vbFhOk2wROm0lPFWYAm3LHz6KoNLEBhtSATw9m7I1x1-0_NveWuA7SMebXd7k5hEfp9GhwyyVA56mu8ePidph9frDA_Uj3U",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJYdJUVDauEmsRp-7oNoEMhuQ",
+        "plus_code":
+          {
+            "compound_code": "45MW+36 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+36",
+          },
+        "price_level": 3,
+        "rating": 3.3,
+        "reference": "ChIJYdJUVDauEmsRp-7oNoEMhuQ",
+        "scope": "GOOGLE",
+        "types": ["night_club", "bar", "point_of_interest", "establishment"],
+        "user_ratings_total": 319,
+        "vicinity": "Pirrama Road, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.86697330000001, "lng": 151.1963034 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86562431970851, "lng": 151.1976523802915 },
+                "southwest":
+                  { "lat": -33.86832228029151, "lng": 151.1949544197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Casino Wharf",
+        "photos":
+          [
+            {
+              "height": 3096,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/108901116777704647158">Shakar Abdullah</a>',
+                ],
+              "photo_reference": "Aap_uEBs90PECq1wdFpVnTPlpfPQrA-hm6foq40h8Z1EaxUB3-xrjdbhJsk43yL0piu6NXG33xqskcWwjb1JnnnAydEb6QTjEskkGm2PLSw1yHqcIeJ_lshqsOKaSK6_lTv6RZpIdXjH1pefSvQc2LOiW381eh8PggImhVahdZG83yEaQcVN",
+              "width": 5504,
+            },
+          ],
+        "place_id": "ChIJ7xwTtzeuEmsR7-WvCn94qQ4",
+        "plus_code":
+          {
+            "compound_code": "45MW+6G Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+6G",
+          },
+        "rating": 4.2,
+        "reference": "ChIJ7xwTtzeuEmsR7-WvCn94qQ4",
+        "scope": "GOOGLE",
+        "types": ["transit_station", "point_of_interest", "establishment"],
+        "user_ratings_total": 17,
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8666593, "lng": 151.1960631 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8651255697085, "lng": 151.1973047802915 },
+                "southwest":
+                  { "lat": -33.8678235302915, "lng": 151.1946068197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "google Cloud",
+        "place_id": "ChIJNa7wyTeuEmsRF4P1lQOoDh4",
+        "plus_code":
+          {
+            "compound_code": "45MW+8C Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+8C",
+          },
+        "reference": "ChIJNa7wyTeuEmsRF4P1lQOoDh4",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8665443, "lng": 151.1957644 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8650471697085, "lng": 151.1971682802915 },
+                "southwest":
+                  { "lat": -33.8677451302915, "lng": 151.1944703197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+        "name": "The Press Coffee",
+        "place_id": "ChIJXysTVTauEmsRcB4ykrx7bMQ",
+        "plus_code":
+          {
+            "compound_code": "45MW+98 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+98",
+          },
+        "reference": "ChIJXysTVTauEmsRcB4ykrx7bMQ",
+        "scope": "GOOGLE",
+        "types": ["cafe", "food", "point_of_interest", "establishment"],
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "geometry":
+          {
+            "location": { "lat": -33.8675674, "lng": 151.1956091 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8661628697085, "lng": 151.1970671802915 },
+                "southwest":
+                  { "lat": -33.8688608302915, "lng": 151.1943692197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+        "name": "Cherry at The Star",
+        "permanently_closed": true,
+        "photos":
+          [
+            {
+              "height": 992,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/113210398723584203092">Cherry at The Star</a>',
+                ],
+              "photo_reference": "Aap_uEA7khZBA6LGg4LceJTeen_gw2Dy7ng9c8gYbSsCEYxAona6586Kcfr_sMG14Hl5UN-n6FNK8mKKGyj73BuLjz-aw6PsXuzsj5jF9dOV0FdmXX8hwifBSpKEf7BYI9QAIOmTDf1TyDBcs7AwY7cUVKMOLVET3gLONMPJIvYyFhF3RXLN",
+              "width": 1650,
+            },
+          ],
+        "place_id": "ChIJ1-v38TauEmsR41TkSleEZ-U",
+        "plus_code":
+          {
+            "compound_code": "45JW+X6 Pyrmont NSW, Australia",
+            "global_code": "4RRH45JW+X6",
+          },
+        "rating": 3.8,
+        "reference": "ChIJ1-v38TauEmsR41TkSleEZ-U",
+        "scope": "GOOGLE",
+        "types": ["night_club", "bar", "point_of_interest", "establishment"],
+        "user_ratings_total": 49,
+        "vicinity": "THE STAR, 80 Pyrmont Street, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.86737879999999, "lng": 151.1952268 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8661077197085, "lng": 151.1968885802915 },
+                "southwest":
+                  { "lat": -33.8688056802915, "lng": 151.1941906197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "The Star",
+        "photos":
+          [
+            {
+              "height": 781,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/116220967134626559383">Privacy Security</a>',
+                ],
+              "photo_reference": "Aap_uEC_SqKqtgvQ7EGb3wC5OK55Rf9OFcWHazS2ohBav-LmMCOltE_Mn56qrWQvdssAlg7rW6VtbJjDxowZtrVZG1wS_uz3rJPkZKF2DjFLayc2SQTkF6hZle-komDobTZAi_0PA-2hHUB861N21Aex8H4vqWei_1QML9A29n_oNNzHY9ms",
+              "width": 1080,
+            },
+          ],
+        "place_id": "ChIJw1SqUTauEmsRnlzd7kKbyWM",
+        "plus_code":
+          {
+            "compound_code": "45MW+23 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+23",
+          },
+        "rating": 4.2,
+        "reference": "ChIJw1SqUTauEmsRnlzd7kKbyWM",
+        "scope": "GOOGLE",
+        "types":
+          [
+            "light_rail_station",
+            "transit_station",
+            "point_of_interest",
+            "establishment",
+          ],
+        "user_ratings_total": 60,
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.866489, "lng": 151.1958561 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8650278197085, "lng": 151.1972428802915 },
+                "southwest":
+                  { "lat": -33.8677257802915, "lng": 151.1945449197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+        "name": "Igor Spiroski executive chef",
+        "opening_hours": { "open_now": true },
+        "place_id": "ChIJP2xKNByvEmsR5TwlU99XBws",
+        "plus_code":
+          {
+            "compound_code": "45MW+C8 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+C8",
+          },
+        "reference": "ChIJP2xKNByvEmsR5TwlU99XBws",
+        "scope": "GOOGLE",
+        "types": ["school", "point_of_interest", "establishment"],
+        "vicinity": "48 Pirrama Road, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.866489, "lng": 151.1958561 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8650278197085, "lng": 151.1972428802915 },
+                "southwest":
+                  { "lat": -33.8677257802915, "lng": 151.1945449197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Kingsbourne International Realty",
+        "place_id": "ChIJ____yjeuEmsRQI547lN3AAE",
+        "reference": "ChIJ____yjeuEmsRQI547lN3AAE",
+        "scope": "GOOGLE",
+        "types": ["real_estate_agency", "point_of_interest", "establishment"],
+        "vicinity": "48 Pirrama Road, Sydney",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.866489, "lng": 151.1958561 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8650278197085, "lng": 151.1972428802915 },
+                "southwest":
+                  { "lat": -33.8677257802915, "lng": 151.1945449197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "McEwan Net",
+        "place_id": "ChIJ____yjeuEmsReGqH4RHQdlA",
+        "reference": "ChIJ____yjeuEmsReGqH4RHQdlA",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "vicinity": "48 Pirrama Road, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.866489, "lng": 151.1958561 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8655112697085, "lng": 151.1971156302915 },
+                "southwest":
+                  { "lat": -33.86820923029149, "lng": 151.1944176697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Google Workplace 6",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/105067373811767106297">Shaun Craig</a>',
+                ],
+              "photo_reference": "Aap_uECi3e1NDsREIlixz4t_jxfl1PqyW2Vgel5vxXr7LgCqIzO1Q78Xd1mRvYrQDj2_xl8_bTHGWOwfriJ9KSLNnKjnNHFllQRak-uFKGp_TruGS9vzPny5pO99XIVclFgY2SX2RNeOB27AK1TNlyjXycoDOYUn1W7nfLzWKuORCrcznunq",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+        "plus_code":
+          {
+            "compound_code": "45MW+C8 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+C8",
+          },
+        "rating": 4.1,
+        "reference": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 931,
+        "vicinity": "48 Pirrama Road, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8676204, "lng": 151.1955323 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8662064197085, "lng": 151.1970403302915 },
+                "southwest":
+                  { "lat": -33.8689043802915, "lng": 151.1943423697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/parking-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/parking_pinlet",
+        "name": "The Star Parking Station",
+        "place_id": "ChIJdbRKZHqvEmsRP0KvU-mOKFM",
+        "plus_code":
+          {
+            "compound_code": "45JW+X6 Pyrmont NSW, Australia",
+            "global_code": "4RRH45JW+X6",
+          },
+        "rating": 3,
+        "reference": "ChIJdbRKZHqvEmsRP0KvU-mOKFM",
+        "scope": "GOOGLE",
+        "types": ["parking", "point_of_interest", "establishment"],
+        "user_ratings_total": 1,
+        "vicinity": "Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8677499, "lng": 151.1956285 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.86633911970851, "lng": 151.1971286802915 },
+                "southwest":
+                  { "lat": -33.8690370802915, "lng": 151.1944307197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Lotus Pond",
+        "opening_hours": { "open_now": true },
+        "place_id": "ChIJS_-h7TauEmsRdmDJ2CvXToY",
+        "plus_code":
+          {
+            "compound_code": "45JW+W7 Pyrmont NSW, Australia",
+            "global_code": "4RRH45JW+W7",
+          },
+        "rating": 4,
+        "reference": "ChIJS_-h7TauEmsRdmDJ2CvXToY",
+        "scope": "GOOGLE",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 3,
+        "vicinity": "80 Pyrmont Street, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8663304, "lng": 151.1958556 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8649403197085, "lng": 151.1972106302915 },
+                "southwest":
+                  { "lat": -33.8676382802915, "lng": 151.1945126697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Signorelli Gastronomia",
+        "photos":
+          [
+            {
+              "height": 390,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/112179085393170343226">Signorelli Gastronomia</a>',
+                ],
+              "photo_reference": "Aap_uECWoG0v7b3SOWGd0WC6GRcB6Y0wKaYP0vXsFpzudi_v2H_NYLJ7gwMgGh8_VXml9HnFneyUtmWZGHj9HllAgwzIctV3h416U1u43-eoNx7CYjnbFiHUzqjGMRt0DuSHDTy1q9A3ZrohAZ_cPWDQ1WXSrtQt59G8GsMJSlHjtJ-azTP3",
+              "width": 960,
+            },
+          ],
+        "place_id": "ChIJFcJDMzauEmsRy81NJCujoY8",
+        "plus_code":
+          {
+            "compound_code": "45MW+F8 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+F8",
+          },
+        "price_level": 1,
+        "rating": 4.1,
+        "reference": "ChIJFcJDMzauEmsRy81NJCujoY8",
+        "scope": "GOOGLE",
+        "types": ["food", "point_of_interest", "establishment"],
+        "user_ratings_total": 29,
+        "vicinity": "Signorelli Gastronomia, Trouton Place, Pyrmont",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8662849, "lng": 151.1955744 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8648757197085, "lng": 151.1968986802915 },
+                "southwest":
+                  { "lat": -33.8675736802915, "lng": 151.1942007197085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+        "name": "Channel Sales",
+        "place_id": "ChIJq_qYNDauEmsRhguNtCezF-Y",
+        "plus_code":
+          {
+            "compound_code": "45MW+F6 Pyrmont NSW, Australia",
+            "global_code": "4RRH45MW+F6",
+          },
+        "reference": "ChIJq_qYNDauEmsRhguNtCezF-Y",
+        "scope": "GOOGLE",
+        "types": ["point_of_interest", "establishment"],
+        "vicinity": "Australia",
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry":
+          {
+            "location": { "lat": -33.8678074, "lng": 151.1953681 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": -33.8663481697085, "lng": 151.1969868302915 },
+                "southwest":
+                  { "lat": -33.8690461302915, "lng": 151.1942888697085 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "icon_background_color": "#FF9E67",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+        "name": "Pizzeria",
+        "photos":
+          [
+            {
+              "height": 1960,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106029929261427351012">David</a>',
+                ],
+              "photo_reference": "Aap_uEDR_WB_E7B3c0y6jZW5GmghQ1uFPxKioCIRSDp0nC0nqqZiiQ-MSi20DGhsYSRe8-tlBGxx6-UTIMgLQU0yFRrqdG6FXR1gXStbdZMyadKrpmEjXLR8N5bJVSrSi9M_4C4KvVj1aNjsl5ujBM7joWyYFygbKUIuZ_PTij5S18nYkxa-",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJHeyLbOavEmsRajbggVkfoEo",
+        "plus_code":
+          {
+            "compound_code": "45JW+V4 Pyrmont NSW, Australia",
+            "global_code": "4RRH45JW+V4",
+          },
+        "rating": 5,
+        "reference": "ChIJHeyLbOavEmsRajbggVkfoEo",
+        "scope": "GOOGLE",
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+        "user_ratings_total": 2,
+        "vicinity": "The Star Casino, Shop 17B/80 Pyrmont Street, Pyrmont",
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_textsearch_pagetoken_response]

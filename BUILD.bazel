@@ -70,3 +70,17 @@ openapi_examples_validator_test(
         "$(rootpath //:{}.json)".format(BUNDLE_NAME)
     ]
 )
+
+nodejs_test(
+    name = "schema-in-index",
+    data = [
+        ":dist",
+        "//specification:openapi3",
+        "//rules:schema-in-index",
+    ],
+    entry_point = "//rules:schema-in-index.ts",
+    templated_args = [
+        "--archive",
+        "$(rootpath :dist)",        
+    ],
+)

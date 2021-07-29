@@ -17,6 +17,20 @@ ts_library(
 )
 
 ts_library(
+    name = "schema-in-index",
+    srcs = ["schema-in-index.ts"],
+    deps = [
+        "@npm//@types/node",
+        "@npm//@types/glob",
+        "@npm//@types/yargs",
+        "@npm//glob",
+        "@npm//tar",
+        "@npm//tmp",
+        "@npm//yargs",
+    ],
+)
+
+ts_library(
     name = "_dereference_lib",
     srcs = ["dereference.ts"],
     deps = [

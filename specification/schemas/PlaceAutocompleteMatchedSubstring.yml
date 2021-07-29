@@ -16,8 +16,8 @@ type: object
 title: Matched Substring
 properties:
   length:
-    description: TODO
+    description: Length of the matched substring in the prediction result text.
     type: number
   offset:
-    description: TODO
+    description: Start location of the matched substring in the prediction result text.
     type: number

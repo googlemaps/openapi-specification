@@ -16,11 +16,11 @@ type: object
 title: Autocomplete Structured Format
 properties:
   main_text:
-    description: TODO
+    description: Contains the main text of a prediction, usually the name of the place.
     type: string
   main_text_matched_substrings:
-    description: TODO
-    $ref: './PlaceAutocompleteMatchedSubstring.yml'
+    description: Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.
+    $ref: "./PlaceAutocompleteMatchedSubstring.yml"
   secondary_text:
-    description: TODO
+    description: Contains the secondary text of a prediction, usually the location of the place.
     type: string

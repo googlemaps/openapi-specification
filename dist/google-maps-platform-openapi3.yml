@@ -18929,34 +18929,7 @@ paths:
                     predictions: []
                     status: ZERO_RESULTS
               schema:
-                type: object
-                title: Places Autocomplete Response Body
-                required:
-                  - predictions
-                  - status
-                properties:
-                  predictions:
-                    description: |
-                      Contains an array of places.
-                      <div class="caution">Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a `place_id`, then use that Place ID to make a Place Details request.</div>
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/Place'
-                  status:
-                    description: Contains metadata on the request.
-                    $ref: '#/components/schemas/PlacesStatus'
-                  error_message:
-                    description: Contains additional information about the request.
-                    type: string
-                  info_messages:
-                    description: 'Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.'
-                    type: array
-                    items:
-                      type: string
-                  next_page_token:
-                    description: |
-                      Contains a token that can be used to return up to 20 additional results. A next_page_token will not be returned if there are no additional results to display. The maximum number of results that can be returned is 60. There is a short delay between when a next_page_token is issued, and when it will become valid.
-                    type: string
+                $ref: '#/components/schemas/PlacesAutocompleteResponse'
 components:
   parameters:
     language:
@@ -20256,6 +20229,90 @@ components:
           description: 'The authoritative website for this place, such as a business'' homepage.'
           type: string
           example: 'http://google.com'
+    PlaceAddressComponent:
+      type: object
+      title: Place Address Component
+      properties:
+        long_name:
+          description: The full text description or name of the address component as returned by the Geocoder.
+          type: string
+          example: Council of the City of Sydney
+        short_name:
+          description: 'An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of "Alaska" and a short_name of "AK" using the 2-letter postal abbreviation.'
+          type: string
+          example: Sydney
+        types:
+          description: 'An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).'
+          type: array
+          items:
+            type: string
+          example:
+            - administrative_area_level_2
+            - political
+    PlaceAutocompleteMatchedSubstring:
+      type: object
+      title: Matched Substring
+      properties:
+        length:
+          description: Length of the matched substring in the prediction result text.
+          type: number
+        offset:
+          description: Start location of the matched substring in the prediction result text.
+          type: number
+    PlaceAutocompletePrediction:
+      type: object
+      title: Place Autocomplete Prediction
+      properties:
+        description:
+          description: 'Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name.'
+          type: string
+          example: 'Paris, France'
+        matched_substrings:
+          description: 'A list of substrings that describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.'
+          $ref: '#/components/schemas/PlaceAutocompleteMatchedSubstring'
+        place_id:
+          description: 'A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the placeId field of a Places API request. For more information about place IDs, see the [Place IDs](https://developers.google.com/maps/documentation/places/web-service/place-id) overview.'
+          type: string
+        reference:
+          description: (Deprecated) See place_id.
+          type: string
+        structured_formatting:
+          description: Provides pre-formatted text that can be shown in your autocomplete results.
+          $ref: '#/components/schemas/PlaceAutocompleteStructuredFormat'
+        terms:
+          description: 'Contains an array of terms identifying each section of the returned description (a section of the description is generally terminated with a comma). Each entry in the array has a `value` field, containing the text of the term, and an `offset` field, defining the start position of this term in the description, measured in Unicode characters.'
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceAutocompleteTerm'
+        types:
+          description: |
+            Contains an array of types that apply to this place. For example: `[ "political", "locality" ]` or `[ "establishment", "geocode", "beauty_salon" ]`. The array can contain multiple values. Learn more about [Place types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
+          type: array
+          items:
+            type: string
+    PlaceAutocompleteStructuredFormat:
+      type: object
+      title: Autocomplete Structured Format
+      properties:
+        main_text:
+          description: 'Contains the main text of a prediction, usually the name of the place.'
+          type: string
+        main_text_matched_substrings:
+          description: 'Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.'
+          $ref: '#/components/schemas/PlaceAutocompleteMatchedSubstring'
+        secondary_text:
+          description: 'Contains the secondary text of a prediction, usually the location of the place.'
+          type: string
+    PlaceAutocompleteTerm:
+      type: object
+      title: Autocomplete Term
+      properties:
+        value:
+          description: The text of the term.
+          type: string
+        offset:
+          description: 'Defines the start position of this term in the description, measured in Unicode characters'
+          type: number
     PlacePhoto:
       type: object
       title: Place Photo
@@ -20377,26 +20434,31 @@ components:
         time:
           description: 'The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.'
           type: number
-    PlaceAddressComponent:
+    PlacesAutocompleteResponse:
       type: object
-      title: Place Address Component
+      title: Places Autocomplete Response Body
+      required:
+        - predictions
+        - status
       properties:
-        long_name:
-          description: The full text description or name of the address component as returned by the Geocoder.
+        predictions:
+          description: |
+            Contains an array of places.
+            <div class="caution">Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a `place_id`, then use that Place ID to make a Place Details request.</div>
+          type: array
+          items:
+            $ref: '#/components/schemas/Place'
+        status:
+          description: Contains metadata on the request.
+          $ref: '#/components/schemas/PlacesStatus'
+        error_message:
+          description: Contains additional information about the request.
           type: string
-          example: Council of the City of Sydney
-        short_name:
-          description: 'An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of "Alaska" and a short_name of "AK" using the 2-letter postal abbreviation.'
-          type: string
-          example: Sydney
-        types:
-          description: 'An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).'
+        info_messages:
+          description: 'Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.'
           type: array
           items:
             type: string
-          example:
-            - administrative_area_level_2
-            - political
     PlacesDetailsResponse:
       type: object
       title: Places Details Response Body

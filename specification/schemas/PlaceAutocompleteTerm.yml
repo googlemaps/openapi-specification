@@ -16,8 +16,8 @@ type: object
 title: Autocomplete Term
 properties:
   value:
-    description: TODO
+    description: The text of the term.
     type: string
   offset:
-    description: TODO
+    description: Defines the start position of this term in the description, measured in Unicode characters
     type: number

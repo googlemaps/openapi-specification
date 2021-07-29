@@ -109,6 +109,16 @@ ErrorDetail:
 # Places
 Place:
   $ref: "./Place.yml"
+PlaceAddressComponent:
+  $ref: "./PlaceAddressComponent.yml"
+PlaceAutocompleteMatchedSubstring:
+  $ref: "./PlaceAutocompleteMatchedSubstring.yml"
+PlaceAutocompletePrediction:
+  $ref: "./PlaceAutocompletePrediction.yml"
+PlaceAutocompleteStructuredFormat:
+  $ref: "./PlaceAutocompleteStructuredFormat.yml"
+PlaceAutocompleteTerm:
+  $ref: "./PlaceAutocompleteTerm.yml"
 PlacePhoto:
   $ref: "./PlacePhoto.yml"
 PlaceOpeningHours:
@@ -123,8 +133,8 @@ PlacePlusCode:
   $ref: "./PlacePlusCode.yml"
 PlaceReview:
   $ref: "./PlaceReview.yml"
-PlaceAddressComponent:
-  $ref: "./PlaceAddressComponent.yml"
+PlacesAutocompleteResponse:
+  $ref: "./PlacesAutocompleteResponse.yml"
 PlacesDetailsResponse:
   $ref: "./PlacesDetailsResponse.yml"
 PlacesFindPlaceFromTextResponse:

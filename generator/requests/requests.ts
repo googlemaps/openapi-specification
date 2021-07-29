@@ -1320,9 +1320,128 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "maxwidth",
             value: "400",
-          },          
+          },
         ],
       }),
     }),
-  },  
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_paris",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Paris",
+          },
+          {
+            key: "types",
+            value: "geocode",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_amoeba",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "amoeba",
+          },
+          {
+            key: "types",
+            value: "establishment",
+          },
+          {
+            key: "location",
+            value: "37.76999,-122.44696",
+          },
+          {
+            key: "radius",
+            value: "500",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_amoeba_strict",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "amoeba",
+          },
+          {
+            key: "types",
+            value: "establishment",
+          },
+          {
+            key: "location",
+            value: "37.76999,-122.44696",
+          },
+          {
+            key: "radius",
+            value: "500",
+          },
+          { key: "strictbounds", value: "true" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_fr",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Vict",
+          },
+          {
+            key: "types",
+            value: "geocode",
+          },
+          { key: "language", value: "fr" },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_autocomplete_pt_br",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: "Vict",
+          },
+          {
+            key: "types",
+            value: "(cities)",
+          },
+          { key: "language", value: "pt_BR" },
+        ],
+      }),
+    }),
+  },
 ];

@@ -1,0 +1,117 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_autocomplete_fr_response]
+{
+  "predictions":
+    [
+      {
+        "description": "Victoria Station, Londres, Royaume-Uni",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJDdMfySEFdkgRVkEX9DXbVvU",
+        "reference": "ChIJDdMfySEFdkgRVkEX9DXbVvU",
+        "structured_formatting":
+          {
+            "main_text": "Victoria Station",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "Londres, Royaume-Uni",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victoria Station" },
+            { "offset": 18, "value": "Londres" },
+            { "offset": 27, "value": "Royaume-Uni" },
+          ],
+        "types": ["premise", "geocode"],
+      },
+      {
+        "description": "Victoria, BC, Canada",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJcWGw3Ytzj1QR7Ui7HnTz6Dg",
+        "reference": "ChIJcWGw3Ytzj1QR7Ui7HnTz6Dg",
+        "structured_formatting":
+          {
+            "main_text": "Victoria",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "BC, Canada",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victoria" },
+            { "offset": 10, "value": "BC" },
+            { "offset": 14, "value": "Canada" },
+          ],
+        "types": ["locality", "political", "geocode"],
+      },
+      {
+        "description": "Victorville, Californie, États-Unis",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJedLdY1pkw4ARdjT0JVkRlQ0",
+        "reference": "ChIJedLdY1pkw4ARdjT0JVkRlQ0",
+        "structured_formatting":
+          {
+            "main_text": "Victorville",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "Californie, États-Unis",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victorville" },
+            { "offset": 13, "value": "Californie" },
+            { "offset": 25, "value": "États-Unis" },
+          ],
+        "types": ["locality", "political", "geocode"],
+      },
+      {
+        "description": "Victoria, Texas, États-Unis",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
+        "reference": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
+        "structured_formatting":
+          {
+            "main_text": "Victoria",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "Texas, États-Unis",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victoria" },
+            { "offset": 10, "value": "Texas" },
+            { "offset": 17, "value": "États-Unis" },
+          ],
+        "types": ["locality", "political", "geocode"],
+      },
+      {
+        "description": "Victoria Station, Manchester, Royaume-Uni",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJBZFitcexe0gR2y8J3ATzfLk",
+        "reference": "ChIJBZFitcexe0gR2y8J3ATzfLk",
+        "structured_formatting":
+          {
+            "main_text": "Victoria Station",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "Manchester, Royaume-Uni",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victoria Station" },
+            { "offset": 18, "value": "Manchester" },
+            { "offset": 30, "value": "Royaume-Uni" },
+          ],
+        "types": ["premise", "geocode"],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_autocomplete_fr_response]

@@ -4,7 +4,7 @@
 
 -   <h3 id="location">location</h3>
 
-    The latitude/longitude around which to retrieve place information. This must be specified as `latitude,longitude`.
+    The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
@@ -65,8 +65,6 @@
 -   <h3 id="radius">radius</h3>
 
     Defines the distance (in meters) within which to return place results.
-
-    <div class="note">Note: Radius must be specified with default `rankby=prominence` and not included if `rankby=distance` is specified.</div>
 
 -   <h3 id="rankby">rankby</h3>
 

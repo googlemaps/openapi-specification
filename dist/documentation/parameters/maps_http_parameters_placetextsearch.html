@@ -3,13 +3,6 @@
 <h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 id="location">location</h3>
-    <p>
-      The latitude/longitude around which to retrieve place information. This
-      must be specified as <code>latitude,longitude</code>.
-    </p>
-  </li>
-  <li>
     <h3 id="query">query</h3>
     <p>
       The text string on which to search, for example: "restaurant" or "123 Main
@@ -61,6 +54,13 @@
     </ul>
   </li>
   <li>
+    <h3 id="location">location</h3>
+    <p>
+      The point around which to retrieve place information. This must be
+      specified as <code>latitude,longitude</code>.
+    </p>
+  </li>
+  <li>
     <h3 id="maxprice">maxprice</h3>
     <p>
       Restricts results to only those places within the specified range. Valid
@@ -100,10 +100,6 @@
     <p>
       Defines the distance (in meters) within which to return place results.
     </p>
-    <div class="note">
-      Note: Radius must be specified with default `rankby=prominence` and not
-      included if `rankby=distance` is specified.
-    </div>
   </li>
   <li>
     <h3 id="region">region</h3>

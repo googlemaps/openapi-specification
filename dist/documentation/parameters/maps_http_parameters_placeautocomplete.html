@@ -1,0 +1,198 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_parameters_placeautocomplete] -->
+<h2 id="required-parameters">Required parameters</h2>
+<ul>
+  <li>
+    <h3 id="input">input</h3>
+    <p>
+      The text string on which to search. The Place Autocomplete service will
+      return candidate matches based on this string and order results based on
+      their perceived relevance.
+    </p>
+  </li>
+</ul>
+<h2 id="optional-parameters">Optional parameters</h2>
+<ul>
+  <li>
+    <h3 id="components">components</h3>
+    <p>
+      A grouping of places to which you would like to restrict your results.
+      Currently, you can use components to filter by up to 5 countries.
+      Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible
+      country code. For example: <code>components=country:fr</code> would
+      restrict your results to places within France. Multiple countries must be
+      passed as multiple <code>country:XX</code> filters, with the pipe
+      character <code>|</code> as a separator. For example:
+      <code
+        >components=country:us|country:pr|country:vi|country:gu|country:mp</code
+      >
+      would restrict your results to places within the United States and its
+      unincorporated organized territories.
+    </p>
+    <div class="note">
+      <strong>Note:</strong> If you receive unexpected results with a country
+      code, verify that you are using a code which includes the countries,
+      dependent territories, and special areas of geographical interest you
+      intend. You can find code information at
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
+        target="blank"
+        class="external"
+        >Wikipedia: List of ISO 3166 country codes</a
+      >
+      or the
+      <a
+        href="https://www.iso.org/obp/ui/#search"
+        target="blank"
+        class="external"
+        >ISO Online Browsing Platform</a
+      >.
+    </div>
+  </li>
+  <li>
+    <h3 id="language">language</h3>
+    <p>The language in which to return results.</p>
+    <ul>
+      <li>
+        See the
+        <a href="https://developers.google.com/maps/faq#languagesupport"
+          >list of supported languages</a
+        >. Google often updates the supported languages, so this list may not be
+        exhaustive.
+      </li>
+      <li>
+        If <code>language</code> is not supplied, the API attempts to use the
+        preferred language as specified in the
+        <code>Accept-Language</code> header, or the native language of the
+        domain from which the request is sent.
+      </li>
+      <li>
+        The API does its best to provide a street address that is readable for
+        both the user and locals. To achieve that goal, it returns street
+        addresses in the local language, transliterated to a script readable by
+        the user if necessary, observing the preferred language. All other
+        addresses are returned in the preferred language. Address components are
+        all returned in the same language, which is chosen from the first
+        component.
+      </li>
+      <li>
+        If a name is not available in the preferred language, the API uses the
+        closest match.
+      </li>
+      <li>
+        The preferred language has a small influence on the set of results that
+        the API chooses to return, and the order in which they are returned. The
+        geocoder interprets abbreviations differently depending on language,
+        such as the abbreviations for street types, or synonyms that may be
+        valid in one language but not in another. For example, <em>utca</em> and
+        <em>tér</em> are synonyms for street in Hungarian.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="location">location</h3>
+    <p>
+      The point around which to retrieve place information. This must be
+      specified as <code>latitude,longitude</code>.
+    </p>
+  </li>
+  <li>
+    <h3 id="offset">offset</h3>
+    <p>
+      The position, in the input term, of the last character that the service
+      uses to match predictions. For example, if the input is
+      <code>Google</code> and the offset is 3, the service will match on
+      <code>Goo</code>. The string determined by the offset is matched against
+      the first word in the input term only. For example, if the input term is
+      <code>Google abc</code> and the offset is 3, the service will attempt to
+      match against <code>Goo abc</code>. If no offset is supplied, the service
+      will use the whole term. The offset should generally be set to the
+      position of the text caret.
+    </p>
+  </li>
+  <li>
+    <h3 id="origin">origin</h3>
+    <p>
+      The origin point from which to calculate straight-line distance to the
+      destination (returned as <code>distance_meters</code>). If this value is
+      omitted, straight-line distance will not be returned. Must be specified as
+      <code>latitude,longitude</code>.
+    </p>
+  </li>
+  <li>
+    <h3 id="radius">radius</h3>
+    <p>
+      Defines the distance (in meters) within which to return place results.
+    </p>
+  </li>
+  <li>
+    <h3 id="sessiontoken">sessiontoken</h3>
+    <p>
+      A random string which identifies an autocomplete
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/details#session_tokens"
+        >session</a
+      >
+      for billing purposes. Use this for Place Details requests that are called
+      following an autocomplete request in the same user session.
+    </p>
+  </li>
+  <li>
+    <h3 id="strictbounds">strictbounds</h3>
+    <p>
+      Returns only those places that are strictly within the region defined by
+      <code>location</code> and <code>radius</code>. This is a restriction,
+      rather than a bias, meaning that results outside this region will not be
+      returned even if they match the user input.
+    </p>
+  </li>
+  <li>
+    <h3 id="types">types</h3>
+    <p>
+      You may restrict results from a Place Autocomplete request to be of a
+      certain type by passing a types parameter. The parameter specifies a type
+      or a type collection, as listed in the supported types below. If nothing
+      is specified, all types are returned. In general only a single type is
+      allowed. The exception is that you can safely mix the geocode and
+      establishment types, but note that this will have the same effect as
+      specifying no types. The supported types are:
+    </p>
+    <ul>
+      <li>
+        <code>geocode</code> instructs the Place Autocomplete service to return
+        only geocoding results, rather than business results. Generally, you use
+        this request to disambiguate results where the location specified may be
+        indeterminate.
+      </li>
+      <li>
+        <code>address</code> instructs the Place Autocomplete service to return
+        only geocoding results with a precise address. Generally, you use this
+        request when you know the user will be looking for a fully specified
+        address.
+      </li>
+      <li>
+        <code>establishment</code> instructs the Place Autocomplete service to
+        return only business results.
+      </li>
+      <li>
+        <code>(regions)</code> type collection instructs the Places service to
+        return any result matching the following types:
+        <ul>
+          <li><code>locality</code></li>
+          <li><code>sublocality</code></li>
+          <li><code>postal_code</code></li>
+          <li><code>country</code></li>
+          <li><code>administrative_area_level_1</code></li>
+          <li><code>administrative_area_level_2</code></li>
+        </ul>
+      </li>
+      <li>
+        <code>(cities)</code> type collection instructs the Places service to
+        return results that match <code>locality</code> or
+        <code>administrative_area_level_3</code>.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!--- [END maps_http_parameters_placeautocomplete] -->

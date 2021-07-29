@@ -21,7 +21,14 @@ description: |
   <div class="note">Note: If you omit the fields parameter from a Find Place request, only the place_id for the result will be returned.</div>
 parameters:
   - "$ref": "../../parameters/places/fields.yml"
-  - "$ref": "../../parameters/places/input.yml"
+  - name: input    
+    description: |
+      Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.
+    schema:
+      type: string
+    required: true
+    in: query
+    example: "Museum of Contemporary Art Australia"
   - "$ref": "../../parameters/places/inputtype.yml"
   - "$ref": "../../parameters/places/locationbias.yml"
   - "$ref": "../../parameters/language.yml"

@@ -15,7 +15,6 @@
 name: radius
 description: |
   Defines the distance (in meters) within which to return place results. 
-  <div class="note">Note: Radius must be specified with default `rankby=prominence` and not included if `rankby=distance` is specified.</div>
 schema:
   type: number
 in: query

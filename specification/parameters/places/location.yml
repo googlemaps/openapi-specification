@@ -14,8 +14,7 @@
 
 name: location
 description: |
-  The latitude/longitude around which to retrieve place information. This must be specified as `latitude,longitude`.
-required: true
+  The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 schema:
   type: string
 in: query

@@ -48,3 +48,6 @@
 /maps/api/place/textsearch/json:  
   get:
     $ref: "./places/textsearch.yml"
+/maps/api/place/photo:  
+  get:
+    $ref: "./places/photo.yml"

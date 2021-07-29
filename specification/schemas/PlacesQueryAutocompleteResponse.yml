@@ -13,16 +13,23 @@
 # limitations under the License.
 
 type: object
-title: Autocomplete Structured Format
+title: Places Autocomplete Response Body
+required: [predictions, status]
 properties:
-  main_text:
-    description: Contains the main text of a prediction, usually the name of the place.
-    type: string
-  main_text_matched_substrings:
-    description: Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.
+  predictions:
+    description: |
+      Contains an array of predictions.
     type: array
     items:
-      $ref: "./PlaceAutocompleteMatchedSubstring.yml"
-  secondary_text:
-    description: Contains the secondary text of a prediction, usually the location of the place.
+      $ref: "./PlaceAutocompletePrediction.yml"
+  status:
+    description: Contains metadata on the request.
+    $ref: "./PlacesStatus.yml"
+  error_message:
+    description: Contains additional information about the request.
     type: string
+  info_messages:
+    description: Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+    type: array
+    items:
+      type: string

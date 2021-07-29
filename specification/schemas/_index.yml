@@ -141,6 +141,8 @@ PlacesFindPlaceFromTextResponse:
   $ref: "./PlacesFindPlaceFromTextResponse.yml"
 PlacesNearbySearchResponse:
   $ref: "./PlacesNearbySearchResponse.yml"
+PlacesQueryAutocompleteResponse:
+  $ref: "./PlacesQueryAutocompleteResponse.yml"
 PlacesStatus:
   $ref: "./PlacesStatus.yml"
 PlacesTextSearchResponse:

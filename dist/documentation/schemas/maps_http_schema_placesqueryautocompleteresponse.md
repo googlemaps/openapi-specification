@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_placesautocompleteresponse] -->
-<h3 class="schema-object" id="PlacesAutocompleteResponse">Places Query Autocomplete Response Body</h3>
+<!--- [START maps_http_schema_placesqueryautocompleteresponse] -->
+<h3 class="schema-object" id="PlacesQueryAutocompleteResponse">Places Autocomplete Response Body</h3>
 
 type: `object`
 
@@ -11,4 +11,4 @@ type: `object`
 | `error_message` | optional     | string                                                                                                 | <div class="nonref-property-description"><p>Contains additional information about the request.</p></div>                                                                                                                           |
 | `info_messages` | optional     | Array&lt;string&gt;                                                                                    | <div class="nonref-property-description"><p>Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.</p></div> |
 
-<!--- [END maps_http_schema_placesautocompleteresponse] -->
+<!--- [END maps_http_schema_placesqueryautocompleteresponse] -->

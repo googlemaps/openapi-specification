@@ -1444,4 +1444,52 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near par"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza_fr",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near par"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_pizza_sydney",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("pizza near Sydney"),
+          },
+        ],
+      }),
+    }),
+  },
 ];

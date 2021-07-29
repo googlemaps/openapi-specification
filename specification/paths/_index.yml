@@ -51,6 +51,9 @@
 /maps/api/place/photo:  
   get:
     $ref: "./places/photo.yml"
+/maps/api/place/queryautocomplete/json:  
+  get:
+    $ref: "./places/queryautocomplete.yml"
 /maps/api/place/autocomplete/json:  
   get:
     $ref: "./places/autocomplete.yml"

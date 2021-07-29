@@ -21,7 +21,9 @@ properties:
     example: Paris, France
   matched_substrings:
     description: A list of substrings that describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.
-    $ref: './PlaceAutocompleteMatchedSubstring.yml'
+    type: array
+    items:
+      $ref: './PlaceAutocompleteMatchedSubstring.yml'
   place_id:
     description: A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the placeId field of a Places API request. For more information about place IDs, see the [Place IDs](https://developers.google.com/maps/documentation/places/web-service/place-id) overview.
     type: string

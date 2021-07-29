@@ -13,16 +13,15 @@
 # limitations under the License.
 
 type: object
-title: Places Autocomplete Response Body
+title: Places Query Autocomplete Response Body
 required: [predictions, status]
 properties:
   predictions:
     description: |
-      Contains an array of places.
-      <div class="caution">Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a `place_id`, then use that Place ID to make a Place Details request.</div>
+      Contains an array of predictions.
     type: array
     items:
-      $ref: "./Place.yml"
+      $ref: "./PlaceAutocompletePrediction.yml"
   status:
     description: Contains metadata on the request.
     $ref: "./PlacesStatus.yml"

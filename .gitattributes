@@ -1,2 +1,4 @@
-dist/**    linguist-generated
+dist/**/*.html    linguist-generated
+dist/snippets/*    linguist-generated
+!dist/snippets/*.sh    linguist-generated
 dist/**    -merge

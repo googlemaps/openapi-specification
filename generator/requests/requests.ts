@@ -1305,7 +1305,7 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
-    regionTag: "maps_http_places_photo",
+    regionTag: "maps_http_places_photo", // Note: Generated code does not support binary response well
     request: new Request({
       url: new Url({
         protocol: "https",

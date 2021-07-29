@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Directions Response Body
+title: Response body
 required: [geocoded_waypoints, routes, status]
 properties:
   geocoded_waypoints:

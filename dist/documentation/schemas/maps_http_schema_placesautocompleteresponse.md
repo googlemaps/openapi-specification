@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placesautocompleteresponse] -->
-<h3 class="schema-object" id="PlacesAutocompleteResponse">Places Query Autocomplete Response Body</h3>
+<h3 class="schema-object" id="PlacesAutocompleteResponse">Response body</h3>
 
 type: `object`
 

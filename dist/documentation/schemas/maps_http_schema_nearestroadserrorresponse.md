@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_nearestroadserrorresponse] -->
-<h3 class="schema-object" id="NearestRoadsErrorResponse">Nearest Roads Response Body</h3>
+<h3 class="schema-object" id="NearestRoadsErrorResponse">Error response body</h3>
 
 type: `object`
 

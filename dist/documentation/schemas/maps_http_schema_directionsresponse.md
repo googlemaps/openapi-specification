@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsresponse] -->
-<h3 class="schema-object" id="DirectionsResponse">Directions Response Body</h3>
+<h3 class="schema-object" id="DirectionsResponse">Response body</h3>
 
 type: `object`
 

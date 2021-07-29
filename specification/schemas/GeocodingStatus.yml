@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: string
-title: Geocoding Status
+title: Status codes
 description: |
   The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The "status" field may contain the following values:
 

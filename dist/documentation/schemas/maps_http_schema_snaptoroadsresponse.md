@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_snaptoroadsresponse] -->
-<h3 class="schema-object" id="SnapToRoadsResponse">Snap to Roads Response Body</h3>
+<h3 class="schema-object" id="SnapToRoadsResponse">Response body</h3>
 
 type: `object`
 

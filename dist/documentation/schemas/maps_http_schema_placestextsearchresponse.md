@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placestextsearchresponse] -->
-<h3 class="schema-object" id="PlacesTextSearchResponse">Places Text Search Response Body</h3>
+<h3 class="schema-object" id="PlacesTextSearchResponse">Response body</h3>
 
 type: `object`
 

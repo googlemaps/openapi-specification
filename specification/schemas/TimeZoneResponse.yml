@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Time Zone Response Body
+title: Response body
 properties:
   dstOffset:
     description: The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.

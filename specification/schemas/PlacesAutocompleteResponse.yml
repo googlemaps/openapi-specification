@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Places Query Autocomplete Response Body
+title: Response body
 required: [predictions, status]
 properties:
   predictions:

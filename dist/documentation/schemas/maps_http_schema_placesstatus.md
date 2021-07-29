@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placesstatus] -->
-<h3 class="schema-object" id="PlacesStatus">Places Response Status</h3>
+<h3 class="schema-object" id="PlacesStatus">Status codes</h3>
 
 Status codes returned by service.
 

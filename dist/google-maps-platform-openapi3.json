@@ -27934,7 +27934,7 @@
       },
       "DistanceMatrixElementStatus": {
         "type": "string",
-        "title": "Distance Matrix Element Status",
+        "title": "Element status codes",
         "description": "- `OK` indicates the response contains a valid result.\n- `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be geocoded.\n- `ZERO_RESULTS` indicates no route could be found between the origin and destination.\n- `MAX_ROUTE_LENGTH_EXCEEDED` indicates the requested route is too long and cannot be processed.\n",
         "enum": [
           "OK",
@@ -27945,7 +27945,7 @@
       },
       "DistanceMatrixResponse": {
         "type": "object",
-        "title": "Distance Matrix Response Body",
+        "title": "Response body",
         "required": [
           "origin_addresses",
           "destination_addresses",
@@ -28017,7 +28017,7 @@
       },
       "DistanceMatrixStatus": {
         "type": "string",
-        "title": "Distance Matrix Status",
+        "title": "Status codes",
         "description": "Status codes returned by service.\n- `OK` indicates the response contains a valid result.\n- `INVALID_REQUEST` indicates that the provided request was invalid.\n- `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit.\n- `MAX_DIMENSIONS_EXCEEDED` indicates that the number of origins or destinations exceeds the per-query limit.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates the service has received too many requests from your application within the allowed time period.\n- `REQUEST_DENIED` indicates that the service denied use of the Distance Matrix service by your application.\n- `UNKNOWN_ERROR` indicates a Distance Matrix request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
@@ -28032,7 +28032,7 @@
       },
       "DirectionsResponse": {
         "type": "object",
-        "title": "Directions Response Body",
+        "title": "Response body",
         "required": [
           "geocoded_waypoints",
           "routes",
@@ -28219,7 +28219,7 @@
       },
       "DirectionsStatus": {
         "type": "string",
-        "title": "Directions Status",
+        "title": "Status codes",
         "description": "TODO",
         "enum": [
           "OK",
@@ -28310,7 +28310,7 @@
       },
       "ElevationResponse": {
         "type": "object",
-        "title": "Elevation Response",
+        "title": "Response body",
         "required": [
           "status",
           "results"
@@ -28334,7 +28334,7 @@
       },
       "ElevationStatus": {
         "type": "string",
-        "title": "Elevation Status",
+        "title": "Status codes",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `DATA_NOT_AVAILABLE` indicating that there's no available data for the input locations. \n- `INVALID_REQUEST` indicating the API request was malformed.\n- `OVER_DAILY_LIMIT` indicating any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicating the requestor has exceeded quota.\n- `REQUEST_DENIED` indicating the API did not complete the request.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -28382,7 +28382,7 @@
       },
       "GeocodingResponse": {
         "type": "object",
-        "title": "Geocoding Response Body",
+        "title": "Response body",
         "required": [
           "status",
           "results"
@@ -28401,7 +28401,7 @@
       },
       "GeocodingStatus": {
         "type": "string",
-        "title": "Geocoding Status",
+        "title": "Status codes",
         "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
@@ -28415,7 +28415,7 @@
       },
       "GeolocationRequest": {
         "type": "object",
-        "title": "Geolocation Request Body",
+        "title": "Request body",
         "description": "The request body must be formatted as JSON. The following fields are supported, and all fields are optional.",
         "properties": {
           "homeMobileCountryCode": {
@@ -28456,7 +28456,7 @@
       },
       "GeolocationResponse": {
         "type": "object",
-        "title": "Geolocation Response Body",
+        "title": "Response body",
         "description": "A successful geolocation request will return a JSON-formatted response defining a location and radius.",
         "required": [
           "location",
@@ -28604,7 +28604,7 @@
       },
       "NearestRoadsErrorResponse": {
         "type": "object",
-        "title": "Nearest Roads Response Body",
+        "title": "Error response body",
         "properties": {
           "error": {
             "$ref": "#/components/schemas/NearestRoadsError"
@@ -28613,7 +28613,7 @@
       },
       "NearestRoadsResponse": {
         "type": "object",
-        "title": "Nearest Roads Response Body",
+        "title": "Response body",
         "properties": {
           "snappedPoints": {
             "description": "An array of snapped points.",
@@ -28647,7 +28647,7 @@
       },
       "SnapToRoadsResponse": {
         "type": "object",
-        "title": "Snap to Roads Response Body",
+        "title": "Response body",
         "properties": {
           "snappedPoints": {
             "description": "An array of snapped points.",
@@ -28664,7 +28664,7 @@
       },
       "TimeZoneResponse": {
         "type": "object",
-        "title": "Time Zone Response Body",
+        "title": "Response body",
         "properties": {
           "dstOffset": {
             "description": "The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.",
@@ -28693,7 +28693,7 @@
       },
       "TimeZoneStatus": {
         "type": "string",
-        "title": "Time Zone Status",
+        "title": "Status codes",
         "description": "The `status` field within the Time Zone response object contains the status of the request. The \"status\" field may contain the following values:\n\n- `OK` indicates that the request was successful.\n- `INVALID_REQUEST` indicates that the request was malformed.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n\n- `OVER_QUERY_LIMIT` indicates the requestor has exceeded quota.\n- `REQUEST_DENIED` indicates that the API did not complete the request. Confirm that the request was sent over HTTPS instead of HTTP.\n- `UNKNOWN_ERROR` indicates an unknown error.\n- `ZERO_RESULTS` indicates that no time zone data could be found for the specified position or time. Confirm that the request is for a location on land, and not over water.\n",
         "enum": [
           "OK",
@@ -29223,7 +29223,7 @@
       },
       "PlacesAutocompleteResponse": {
         "type": "object",
-        "title": "Places Query Autocomplete Response Body",
+        "title": "Response body",
         "required": [
           "predictions",
           "status"
@@ -29255,7 +29255,7 @@
       },
       "PlacesDetailsResponse": {
         "type": "object",
-        "title": "Places Details Response Body",
+        "title": "Response body",
         "required": [
           "html_attributions",
           "result",
@@ -29288,7 +29288,7 @@
       },
       "PlacesFindPlaceFromTextResponse": {
         "type": "object",
-        "title": "Places Details Response Body",
+        "title": "Response body",
         "required": [
           "candidates",
           "status"
@@ -29321,7 +29321,7 @@
       },
       "PlacesNearbySearchResponse": {
         "type": "object",
-        "title": "Places Nearby Search Response Body",
+        "title": "Response body",
         "required": [
           "html_attributions",
           "results",
@@ -29365,7 +29365,7 @@
       },
       "PlacesQueryAutocompleteResponse": {
         "type": "object",
-        "title": "Places Autocomplete Response Body",
+        "title": "Response body",
         "required": [
           "predictions",
           "status"
@@ -29397,7 +29397,7 @@
       },
       "PlacesStatus": {
         "type": "string",
-        "title": "Places Response Status",
+        "title": "Status codes",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `ZERO_RESULTS` indicating that the referenced location, `place_id`, was valid but no longer refers to a valid result. This may occur if the establishment is no longer in business. \n- `NOT_FOUND` indicating that that the referenced location, `place_id`, was not found in the Places database. \n- `INVALID_REQUEST` indicating the API request was malformed.\n- `OVER_QUERY_LIMIT` indicating any of the following:\n  - You have exceeded the QPS limits.\n  - Billing has not been enabled on your account.\n  - The monthly $200 credit, or a self-imposed usage cap, has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n  See the [Maps FAQ](https://developers.google.com/maps/faq#over-limit-key-error) for more information about how to resolve this error.\n- `REQUEST_DENIED` indicating that your request was denied, generally because:\n  - The request is missing an API key.\n  - The `key` parameter is invalid.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -29411,7 +29411,7 @@
       },
       "PlacesTextSearchResponse": {
         "type": "object",
-        "title": "Places Text Search Response Body",
+        "title": "Response body",
         "required": [
           "html_attributions",
           "results",

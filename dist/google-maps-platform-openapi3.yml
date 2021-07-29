@@ -16122,7 +16122,7 @@ paths:
                   value:
                     warningMessage: Input path is too sparse. You should provide a path where consecutive points are closer to each other. Refer to the 'path' parameter in Google Roads API documentation.
               schema:
-                $ref: '#/components/schemas/SnapToRoadsResposne'
+                $ref: '#/components/schemas/SnapToRoadsResponse'
   /v1/nearestRoads:
     get:
       servers:
@@ -17143,14 +17143,7 @@ components:
             type: string
         overview_polyline:
           description: Contains an object that holds an encoded polyline representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.
-          type: object
-          title: Directions Overview Polyline
-          required:
-            - points
-          properties:
-            points:
-              description: 'An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.'
-              type: string
+          $ref: '#/components/schemas/DirectionsOverviewPolyline'
         fare:
           description: 'If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.'
     DirectionsStatus:
@@ -17182,6 +17175,16 @@ components:
           type: array
           items:
             type: string
+    DirectionsOverviewPolyline:
+      type: object
+      title: Directions Overview Polyline
+      description: 'Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).'
+      required:
+        - points
+      properties:
+        points:
+          description: 'An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.'
+          type: string
     DirectionsViaWaypoint:
       type: object
       title: Directions Via Waypoint
@@ -17481,7 +17484,7 @@ components:
         placeId:
           description: A unique identifier for a place. All place IDs returned by the Roads API correspond to road segments.
           type: string
-    SnapToRoadsResposne:
+    SnapToRoadsResponse:
       type: object
       title: Snap to Roads Response Body
       properties:

@@ -23063,7 +23063,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/SnapToRoadsResposne"
+                  "$ref": "#/components/schemas/SnapToRoadsResponse"
                 }
               }
             }
@@ -24342,17 +24342,7 @@
           },
           "overview_polyline": {
             "description": "Contains an object that holds an encoded polyline representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.",
-            "type": "object",
-            "title": "Directions Overview Polyline",
-            "required": [
-              "points"
-            ],
-            "properties": {
-              "points": {
-                "description": "An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.",
-                "type": "string"
-              }
-            }
+            "$ref": "#/components/schemas/DirectionsOverviewPolyline"
           },
           "fare": {
             "description": "If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs."
@@ -24393,6 +24383,20 @@
             "items": {
               "type": "string"
             }
+          }
+        }
+      },
+      "DirectionsOverviewPolyline": {
+        "type": "object",
+        "title": "Directions Overview Polyline",
+        "description": "Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).",
+        "required": [
+          "points"
+        ],
+        "properties": {
+          "points": {
+            "description": "An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.",
+            "type": "string"
           }
         }
       },
@@ -24773,7 +24777,7 @@
           }
         }
       },
-      "SnapToRoadsResposne": {
+      "SnapToRoadsResponse": {
         "type": "object",
         "title": "Snap to Roads Response Body",
         "properties": {

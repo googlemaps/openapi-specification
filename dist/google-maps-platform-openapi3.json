@@ -28802,7 +28802,7 @@
       },
       "Place": {
         "type": "object",
-        "title": "Place Details",
+        "title": "Place",
         "properties": {
           "address_components": {
             "description": "An array containing the separate components applicable to this address.",
@@ -28867,7 +28867,7 @@
             "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "photos": {
-            "description": "An array of photo objects, each containing a reference to an image. A Place Details request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.",
+            "description": "An array of photo objects, each containing a reference to an image. A request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PlacePhoto"
@@ -28896,7 +28896,7 @@
             "type": "string"
           },
           "reviews": {
-            "description": "A JSON array of up to five reviews. If a language parameter was specified in the Place Details request, the Places Service will bias the results to prefer reviews written in that language.",
+            "description": "A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PlaceReview"

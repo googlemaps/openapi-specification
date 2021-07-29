@@ -1,4 +1,4 @@
-/dist/**/*.html    linguist-generated
-/dist/snippets/*    linguist-generated
-!/dist/snippets/*.sh    linguist-generated
-/dist/**    -merge
+dist/** linguist-generated=true
+dist/**/*.md linguist-generated=false
+dist/snippets/*.txt linguist-generated=false
+dist/** -merge

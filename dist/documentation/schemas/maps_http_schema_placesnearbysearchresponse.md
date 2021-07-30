@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placesnearbysearchresponse] -->
 <h3 class="schema-object" id="PlacesNearbySearchResponse">Response body</h3>
 
-type: `object`
-
 | Field               | Required     | Type                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | :------------------ | ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `html_attributions` | **required** | Array&lt;string&gt;                          | <div class="nonref-property-description"><p>May contain a set of attributions about this listing which must be displayed to the user (some listings may not have attribution).</p></div>                                                                                                                                                                                                                                       |

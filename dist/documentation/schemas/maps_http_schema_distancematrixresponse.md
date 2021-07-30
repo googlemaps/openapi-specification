@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_distancematrixresponse] -->
 <h3 class="schema-object" id="DistanceMatrixResponse">Response body</h3>
 
-type: `object`
-
 | Field                   | Required     | Type                                                                     | Description                                                                                                                                                                                                                                                         |
 | :---------------------- | ------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `destination_addresses` | **required** | Array&lt;string&gt;                                                      | <div class="nonref-property-description"><p>An array of addresses as returned by the API from your original request. As with origin_addresses, these are localized if appropriate.</p></div>                                                                        |

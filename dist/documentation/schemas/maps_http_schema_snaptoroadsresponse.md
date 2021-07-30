@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_snaptoroadsresponse] -->
 <h3 class="schema-object" id="SnapToRoadsResponse">Response body</h3>
 
-type: `object`
-
 | Field             | Required | Type                                                      | Description                                                                                                                                         |
 | :---------------- | -------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `snappedPoints`   | optional | Array&lt;[SnappedPoint](#SnappedPoint "SnappedPoint")&gt; | <div class="ref-property-description"><p>An array of snapped points.</p><p>See <a href="#SnappedPoint">SnappedPoint</a> for more information.</div> |

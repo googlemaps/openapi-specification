@@ -4,8 +4,6 @@
 
 The request body must be formatted as JSON. The following fields are supported, and all fields are optional.
 
-type: `object`
-
 | Field                   | Required | Type                                                               | Description                                                                                                                                                                                                                          |
 | :---------------------- | -------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `carrier`               | optional | string                                                             | <div class="nonref-property-description"><p>The carrier name.</p></div>                                                                                                                                                              |

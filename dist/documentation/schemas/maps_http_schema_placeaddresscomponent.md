@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placeaddresscomponent] -->
 <h3 class="schema-object" id="PlaceAddressComponent">Place Address Component</h3>
 
-type: `object`
-
 | Field        | Required | Type                | Description                                                                                                                                                                                                                                                                            |
 | :----------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `long_name`  | optional | string              | <div class="nonref-property-description"><p>The full text description or name of the address component as returned by the Geocoder.</p></div>                                                                                                                                          |

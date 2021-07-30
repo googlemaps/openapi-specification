@@ -16,6 +16,4 @@ The `status` field within the Geocoding response object contains the status of t
 - `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.
 - `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.
 
-type: `string`
-
 <!--- [END maps_http_schema_geocodingstatus] -->

@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_directionsstep] -->
 <h3 class="schema-object" id="DirectionsStep">Directions Step</h3>
 
-type: `object`
-
 | Field               | Required | Type                                                  | Description                                                                                                                        |
 | :------------------ | -------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | `distance`          | optional | [TextValueObject](#TextValueObject "TextValueObject") | <div class="ref-property-description"><p>TODO</p><p>See <a href="#TextValueObject">TextValueObject</a> for more information.</div> |

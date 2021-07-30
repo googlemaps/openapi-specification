@@ -4,6 +4,4 @@
 
 TODO
 
-type: `string`
-
 <!--- [END maps_http_schema_directionsstatus] -->

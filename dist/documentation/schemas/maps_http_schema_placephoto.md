@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placephoto] -->
 <h3 class="schema-object" id="PlacePhoto">Place Photo</h3>
 
-type: `object`
-
 | Field               | Required | Type                | Description                                                                                                                 |
 | :------------------ | -------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `height`            | optional | number              | <div class="nonref-property-description"><p>The height of the photo.</p></div>                                              |

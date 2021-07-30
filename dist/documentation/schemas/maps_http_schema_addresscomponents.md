@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_addresscomponents] -->
 <h3 class="schema-object" id="AddressComponents">Address Components</h3>
 
-type: `object`
-
 | Field        | Required | Type                | Description                                                                                                                                                                                                                                                                                                                            |
 | :----------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `long_name`  | optional | string              | <div class="nonref-property-description"><p>The full text description or name of the address component as returned by the Geocoding.</p></div>                                                                                                                                                                                         |

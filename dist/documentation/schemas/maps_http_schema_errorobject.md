@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_errorobject] -->
 <h3 class="schema-object" id="ErrorObject">Error Object</h3>
 
-type: `object`
-
 | Field     | Required     | Type                                                   | Description                                                                                                                                                                                                                             |
 | :-------- | ------------ | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `code`    | **required** | number                                                 | <div class="nonref-property-description"><p>This is the same as the HTTP status of the response.</p></div>                                                                                                                              |

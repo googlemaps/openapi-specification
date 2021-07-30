@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_elevationresponse] -->
 <h3 class="schema-object" id="ElevationResponse">Response body</h3>
 
-type: `object`
-
 | Field           | Required     | Type                                                               | Description                                                                                                                |
 | :-------------- | ------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | `results`       | **required** | Array&lt;[ElevationResult](#ElevationResult "ElevationResult")&gt; | See [ElevationResult](#ElevationResult "ElevationResult") for more information.                                            |

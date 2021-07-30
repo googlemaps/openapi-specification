@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placesfindplacefromtextresponse] -->
 <h3 class="schema-object" id="PlacesFindPlaceFromTextResponse">Response body</h3>
 
-type: `object`
-
 | Field           | Required     | Type                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | :-------------- | ------------ | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `candidates`    | **required** | Array&lt;[Place](#Place "Place")&gt;         | <div class="ref-property-description"><p>Contains an array of Place candidates.</p><div class="caution">Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div><p>See <a href="#Place">Place</a> for more information.</div> |

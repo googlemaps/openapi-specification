@@ -9,4 +9,9 @@
 | `error_message` | optional     | string                                                                                                 | <div class="nonref-property-description"><p>Contains additional information about the request.</p></div>                                                                                                                           |
 | `info_messages` | optional     | Array&lt;string&gt;                                                                                    | <div class="nonref-property-description"><p>Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.</p></div> |
 
+<p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schema" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schema] Bug - PlacesAutocompleteResponse" title="File bug for schema on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
 <!--- [END maps_http_schema_placesautocompleteresponse] -->

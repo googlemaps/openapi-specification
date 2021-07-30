@@ -9,4 +9,9 @@
 | `status`                 | **required** | [DirectionsStatus](#DirectionsStatus "DirectionsStatus")                                            | <div class="ref-property-description"><p>Contains metadata on the request.</p><p>See <a href="#DirectionsStatus">DirectionsStatus</a> for more information.</div>                                                                                                                                                                                                   |
 | `available_travel_modes` | optional     | Array&lt;string&gt;                                                                                 | <div class="nonref-property-description"><p>Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'.</p></div> |
 
+<p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schema" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schema] Bug - DirectionsResponse" title="File bug for schema on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
 <!--- [END maps_http_schema_directionsresponse] -->

@@ -13,4 +13,9 @@
 | `text`                      | optional | string | <div class="nonref-property-description"><p>The user's review. When reviewing a location with Google Places, text reviews are considered optional. Therefore, this field may by empty. Note that this field may include simple HTML markup. For example, the entity reference <code>&#x26;amp;</code> may represent an ampersand character.</p></div> |
 | `time`                      | optional | number | <div class="nonref-property-description"><p>The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.</p></div>                                                                                                                                                                            |
 
+<p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schema" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+ <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schema] Bug - PlaceReview" title="File bug for schema on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
 <!--- [END maps_http_schema_placereview] -->

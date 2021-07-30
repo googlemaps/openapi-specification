@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_geocodingresult] -->
 <h3 class="schema-object" id="GeocodingResult">Geocoding Result</h3>
 
-type: `object`
-
 | Field                | Required | Type                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                    |
 | :------------------- | -------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address_components` | optional | Array&lt;[AddressComponents](#AddressComponents "AddressComponents")&gt; | <div class="ref-property-description"><p>An array containing the separate components applicable to this address.</p><p>See <a href="#AddressComponents">AddressComponents</a> for more information.</div>                                                                                                                                                                                                      |

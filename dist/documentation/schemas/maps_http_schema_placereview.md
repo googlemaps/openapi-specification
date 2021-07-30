@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placereview] -->
 <h3 class="schema-object" id="PlaceReview">Place Review</h3>
 
-type: `object`
-
 | Field                       | Required | Type   | Description                                                                                                                                                                                                                                                                                                                                           |
 | :-------------------------- | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `author_name`               | optional | string | <div class="nonref-property-description"><p>The name of the user who submitted the review. Anonymous reviews are attributed to "A Google user".</p></div>                                                                                                                                                                                             |

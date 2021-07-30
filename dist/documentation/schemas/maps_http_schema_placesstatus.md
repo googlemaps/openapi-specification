@@ -19,6 +19,4 @@ Status codes returned by service.
   - The `key` parameter is invalid.
 - `UNKNOWN_ERROR` indicating an unknown error.
 
-type: `string`
-
 <!--- [END maps_http_schema_placesstatus] -->

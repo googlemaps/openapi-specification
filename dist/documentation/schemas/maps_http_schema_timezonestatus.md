@@ -23,6 +23,4 @@ The `status` field within the Time Zone response object contains the status of t
 
 - `ZERO_RESULTS` indicates that no time zone data could be found for the specified position or time. Confirm that the request is for a location on land, and not over water.
 
-type: `string`
-
 <!--- [END maps_http_schema_timezonestatus] -->

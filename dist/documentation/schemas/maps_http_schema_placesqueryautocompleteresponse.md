@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placesqueryautocompleteresponse] -->
 <h3 class="schema-object" id="PlacesQueryAutocompleteResponse">Response body</h3>
 
-type: `object`
-
 | Field           | Required     | Type                                                                                                   | Description                                                                                                                                                                                                                        |
 | :-------------- | ------------ | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `predictions`   | **required** | Array&lt;[PlaceAutocompletePrediction](#PlaceAutocompletePrediction "PlaceAutocompletePrediction")&gt; | <div class="ref-property-description"><p>Contains an array of predictions.</p><p>See <a href="#PlaceAutocompletePrediction">PlaceAutocompletePrediction</a> for more information.</div>                                            |

@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_errordetail] -->
 <h3 class="schema-object" id="ErrorDetail">Error Detail</h3>
 
-type: `object`
-
 | Field     | Required     | Type   | Description                                                                                                                                                                                                                                                |
 | :-------- | ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `message` | **required** | string | <div class="nonref-property-description"><p>A short description of the error.</p></div>                                                                                                                                                                    |

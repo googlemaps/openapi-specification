@@ -4,8 +4,6 @@
 
 Attributes used to describe a WiFi access point.
 
-type: `object`
-
 | Field                | Required     | Type    | Description                                                                                                                                                                           |
 | :------------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `macAddress`         | **required** | string  | <div class="nonref-property-description"><p>The MAC address of the WiFi node. It's typically called a BSS, BSSID or MAC address. Separators must be <code>:</code> (colon).</p></div> |

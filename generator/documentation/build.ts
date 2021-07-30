@@ -57,7 +57,6 @@ export const build = async (
   if (schema.description) {
     nodes.push(paragraph(fromMarkdown(schema.description)));
   }
-  nodes.push(paragraph([text(`type: `), inlineCode(schema.type!)]));
 
   // if an object, build a table of fields
   if (schema.type === "object") {

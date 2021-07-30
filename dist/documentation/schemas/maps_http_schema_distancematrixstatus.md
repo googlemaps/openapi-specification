@@ -17,6 +17,4 @@ Status codes returned by service.
 - `REQUEST_DENIED` indicates that the service denied use of the Distance Matrix service by your application.
 - `UNKNOWN_ERROR` indicates a Distance Matrix request could not be processed due to a server error. The request may succeed if you try again.
 
-type: `string`
-
 <!--- [END maps_http_schema_distancematrixstatus] -->

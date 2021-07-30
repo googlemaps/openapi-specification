@@ -7,6 +7,4 @@
 - `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).
 - `transit` requests distance calculation via public transit routes (where available).
 
-type: `string`
-
 <!--- [END maps_http_schema_travelmode] -->

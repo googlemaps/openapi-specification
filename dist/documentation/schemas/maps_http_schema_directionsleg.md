@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_directionsleg] -->
 <h3 class="schema-object" id="DirectionsLeg">Directions Leg</h3>
 
-type: `object`
-
 | Field                 | Required | Type                                                                    | Description                                                                                                                                                        |
 | :-------------------- | -------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `distance`            | optional | [TextValueObject](#TextValueObject "TextValueObject")                   | <div class="ref-property-description"><p>Distance of the leg.</p><p>See <a href="#TextValueObject">TextValueObject</a> for more information.</div>                 |

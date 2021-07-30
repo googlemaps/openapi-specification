@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_directionsgeocodedwaypoint] -->
 <h3 class="schema-object" id="DirectionsGeocodedWaypoint">Directions Geocoded Waypoint</h3>
 
-type: `object`
-
 | Field             | Required | Type                | Description                                                |
 | :---------------- | -------- | ------------------- | ---------------------------------------------------------- |
 | `geocoder_status` | optional | string              | <div class="nonref-property-description"><p>TODO</p></div> |

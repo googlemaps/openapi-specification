@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_placegeometry] -->
 <h3 class="schema-object" id="PlaceGeometry">Place Geometry</h3>
 
-type: `object`
-
 | Field      | Required | Type                                            | Description                                                                                                                                                                               |
 | :--------- | -------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `location` | optional | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | <div class="ref-property-description"><p>Contains the geocoded latitude, longitude value for this place.</p><p>See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.</div> |

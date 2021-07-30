@@ -4,8 +4,6 @@
 
 An object describing a specific location with Latitude and Longitude in decimal degrees.
 
-type: `object`
-
 | Field | Required     | Type   | Description                                                                        |
 | :---- | ------------ | ------ | ---------------------------------------------------------------------------------- |
 | `lat` | **required** | number | <div class="nonref-property-description"><p>Latitude in decimal degrees</p></div>  |

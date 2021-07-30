@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_directionsresponse] -->
 <h3 class="schema-object" id="DirectionsResponse">Response body</h3>
 
-type: `object`
-
 | Field                    | Required     | Type                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                         |
 | :----------------------- | ------------ | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `geocoded_waypoints`     | **required** | Array&lt;[DirectionsGeocodedWaypoint](#DirectionsGeocodedWaypoint "DirectionsGeocodedWaypoint")&gt; | <div class="ref-property-description"><p>Contains an array with details about the geocoding of origin, destination and waypoints.</p><p>See <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a> for more information.</div>                                                                                                                        |

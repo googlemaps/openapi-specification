@@ -4,8 +4,6 @@
 
 An object containing a numeric value and its formatted text representation.
 
-type: `object`
-
 | Field   | Required     | Type   | Description                                                          |
 | :------ | ------------ | ------ | -------------------------------------------------------------------- |
 | `text`  | **required** | string | <div class="nonref-property-description"><p>String value.</p></div>  |

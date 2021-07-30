@@ -16,6 +16,4 @@ Status codes returned by service.
 - `REQUEST_DENIED` indicating the API did not complete the request.
 - `UNKNOWN_ERROR` indicating an unknown error.
 
-type: `string`
-
 <!--- [END maps_http_schema_elevationstatus] -->

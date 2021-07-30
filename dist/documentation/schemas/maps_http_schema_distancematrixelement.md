@@ -2,8 +2,6 @@
 <!--- [START maps_http_schema_distancematrixelement] -->
 <h3 class="schema-object" id="DistanceMatrixElement">Distance Matrix Element</h3>
 
-type: `object`
-
 | Field      | Required     | Type                                                                                      | Description                                                                                                                                                                     |
 | :--------- | ------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `status`   | **required** | [DistanceMatrixElementStatus](#DistanceMatrixElementStatus "DistanceMatrixElementStatus") | <div class="ref-property-description"><p>A status for the element.</p><p>See <a href="#DistanceMatrixElementStatus">DistanceMatrixElementStatus</a> for more information.</div> |

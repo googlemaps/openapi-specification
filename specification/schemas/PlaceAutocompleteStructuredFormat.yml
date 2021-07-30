@@ -13,7 +13,11 @@
 # limitations under the License.
 
 type: object
-title: Autocomplete Structured Format
+title: Place Autocomplete Structured Format
+required:
+  - main_text
+  - main_text_matched_substrings
+  - secondary_text
 properties:
   main_text:
     description: Contains the main text of a prediction, usually the name of the place.

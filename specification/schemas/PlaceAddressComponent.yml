@@ -14,6 +14,7 @@
 
 type: object
 title: Place Address Component
+required: [long_name, short_name, types]
 properties:
   long_name:
     description: The full text description or name of the address component as returned by the Geocoder.

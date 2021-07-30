@@ -14,11 +14,24 @@
 
 type: object
 title: Place Photo
+description: |
+  A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:
+
+  ```
+  https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY
+  ```
+
+  See [Place Photo](https://developers.google.com/places/web-service/photos) for more information.
+required:
+  - photo_reference
+  - html_attributions
+  - width
+  - height
 properties:
-  height: 
+  height:
     description: The height of the photo.
     type: number
-  width: 
+  width:
     description: The width of the photo.
     type: number
   html_attributions:

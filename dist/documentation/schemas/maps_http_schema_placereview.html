@@ -1,6 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placereview] -->
 <h3 class="schema-object" id="PlaceReview">Place Review</h3>
+<p>A review of the place submitted by a user.</p>
 <table>
   <thead>
     <tr>
@@ -13,13 +14,68 @@
   <tbody>
     <tr>
       <td align="left"><code>author_name</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
           <p>
             The name of the user who submitted the review. Anonymous reviews are
             attributed to "A Google user".
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>language</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            An IETF language code indicating the language used in the user's
+            review. This field contains the main language tag only, and not the
+            secondary tag indicating country or region. For example, all the
+            English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and
+            so on.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>rating</code></td>
+      <td><strong>required</strong></td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The user's overall rating for this place. This is a whole number,
+            ranging from 1 to 5.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>relative_time_description</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The time that the review was submitted in text, relative to the
+            current time.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>time</code></td>
+      <td><strong>required</strong></td>
+      <td>number</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The time that the review was submitted, measured in the number of
+            seconds since since midnight, January 1, 1970 UTC.
           </p>
         </div>
       </td>
@@ -38,54 +94,12 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>language</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            An IETF language code indicating the language used in the user's
-            review. This field contains the main language tag only, and not the
-            secondary tag indicating country or region. For example, all the
-            English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and
-            so on.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>profile_photo_url</code></td>
       <td>optional</td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
           <p>The URL to the user's profile photo, if available.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>rating</code></td>
-      <td>optional</td>
-      <td>number</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The user's overall rating for this place. This is a whole number,
-            ranging from 1 to 5.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>relative_time_description</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The time that the review was submitted in text, relative to the
-            current time.
-          </p>
         </div>
       </td>
     </tr>
@@ -101,19 +115,6 @@
             empty. Note that this field may include simple HTML markup. For
             example, the entity reference <code>&#x26;amp;</code> may represent
             an ampersand character.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>time</code></td>
-      <td>optional</td>
-      <td>number</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The time that the review was submitted, measured in the number of
-            seconds since since midnight, January 1, 1970 UTC.
           </p>
         </div>
       </td>

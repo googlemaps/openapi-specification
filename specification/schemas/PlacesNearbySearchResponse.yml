@@ -14,7 +14,10 @@
 
 type: object
 title: Response body
-required: [html_attributions, results, status]
+required:
+  - html_attributions
+  - results
+  - status
 properties:
   html_attributions:
     description: May contain a set of attributions about this listing which must be displayed to the user (some listings may not have attribution).

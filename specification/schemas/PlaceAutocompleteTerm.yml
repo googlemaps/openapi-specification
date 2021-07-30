@@ -14,6 +14,9 @@
 
 type: object
 title: Autocomplete Term
+required:
+  - value
+  - offset
 properties:
   value:
     description: The text of the term.

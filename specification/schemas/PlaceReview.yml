@@ -14,6 +14,13 @@
 
 type: object
 title: Place Review
+description: A review of the place submitted by a user.
+required:
+  - author_name
+  - language
+  - rating
+  - relative_time_description
+  - time
 properties:
   author_name:
     description: The name of the user who submitted the review. Anonymous reviews are attributed to "A Google user".
@@ -40,4 +47,3 @@ properties:
   time:
     description: The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.
     type: number
-  

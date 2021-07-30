@@ -27891,6 +27891,10 @@
           "url": "https://plus.codes/",
           "description": "Site describing Plus Codes."
         },
+        "required": [
+          "compound_code",
+          "global_code"
+        ],
         "properties": {
           "compound_code": {
             "description": "The `compound_code` is a 6 character or longer local code with an explicit location (`CWC8+R9, Mountain View, CA, USA`).",
@@ -28803,6 +28807,7 @@
       "Place": {
         "type": "object",
         "title": "Place",
+        "description": "Attributes descring a place. Not all attributes will be available for all place types.",
         "properties": {
           "address_components": {
             "description": "An array containing the separate components applicable to this address.",
@@ -28880,7 +28885,7 @@
           },
           "plus_code": {
             "description": "An encoded location reference, derived from latitude and longitude coordinates, that represents an area: 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [Open Location Code](https://en.wikipedia.org/wiki/Open_Location_Code) and [plus codes](https://plus.codes/).\n",
-            "$ref": "#/components/schemas/PlacePlusCode"
+            "$ref": "#/components/schemas/PlusCode"
           },
           "price_level": {
             "description": "The price level of the place, on a scale of 0 to 4. The exact amount indicated by a specific value will vary from region to region. Price levels are interpreted as follows:\n- 0 Free\n- 1 Inexpensive\n- 2 Moderate\n- 3 Expensive\n- 4 Very Expensive\n",
@@ -28943,6 +28948,11 @@
       "PlaceAddressComponent": {
         "type": "object",
         "title": "Place Address Component",
+        "required": [
+          "long_name",
+          "short_name",
+          "types"
+        ],
         "properties": {
           "long_name": {
             "description": "The full text description or name of the address component as returned by the Geocoder.",
@@ -28970,6 +28980,10 @@
       "PlaceAutocompleteMatchedSubstring": {
         "type": "object",
         "title": "Matched Substring",
+        "required": [
+          "length",
+          "offset"
+        ],
         "properties": {
           "length": {
             "description": "Length of the matched substring in the prediction result text.",
@@ -28984,6 +28998,14 @@
       "PlaceAutocompletePrediction": {
         "type": "object",
         "title": "Place Autocomplete Prediction",
+        "required": [
+          "description",
+          "matched_substrings",
+          "place_id",
+          "structured_formatting",
+          "terms",
+          "types"
+        ],
         "properties": {
           "description": {
             "description": "Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name.",
@@ -29027,7 +29049,12 @@
       },
       "PlaceAutocompleteStructuredFormat": {
         "type": "object",
-        "title": "Autocomplete Structured Format",
+        "title": "Place Autocomplete Structured Format",
+        "required": [
+          "main_text",
+          "main_text_matched_substrings",
+          "secondary_text"
+        ],
         "properties": {
           "main_text": {
             "description": "Contains the main text of a prediction, usually the name of the place.",
@@ -29049,6 +29076,10 @@
       "PlaceAutocompleteTerm": {
         "type": "object",
         "title": "Autocomplete Term",
+        "required": [
+          "value",
+          "offset"
+        ],
         "properties": {
           "value": {
             "description": "The text of the term.",
@@ -29063,6 +29094,13 @@
       "PlacePhoto": {
         "type": "object",
         "title": "Place Photo",
+        "description": "A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:\n\n```\nhttps://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY\n```\n\nSee [Place Photo](https://developers.google.com/places/web-service/photos) for more information.\n",
+        "required": [
+          "photo_reference",
+          "html_attributions",
+          "width",
+          "height"
+        ],
         "properties": {
           "height": {
             "description": "The height of the photo.",
@@ -29089,6 +29127,10 @@
       "PlaceOpeningHours": {
         "type": "object",
         "title": "Place Opening Hours",
+        "description": "An object describing the opening hours of a place.",
+        "required": [
+          "open_now"
+        ],
         "properties": {
           "open_now": {
             "description": "A boolean value indicating if the place is open at the current time.",
@@ -29121,7 +29163,11 @@
       },
       "PlaceOpeningHoursPeriod": {
         "type": "object",
-        "title": "Place Geometry",
+        "title": "Place Opening Hours Period",
+        "required": [
+          "open",
+          "close"
+        ],
         "properties": {
           "open": {
             "description": "Contains a pair of day and time objects describing when the place opens.",
@@ -29135,7 +29181,11 @@
       },
       "PlaceOpeningHoursPeriodDetail": {
         "type": "object",
-        "title": "Place Period Detail",
+        "title": "Place Opening Hours Period Detail",
+        "required": [
+          "day",
+          "time"
+        ],
         "properties": {
           "day": {
             "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
@@ -29151,6 +29201,11 @@
       "PlaceGeometry": {
         "type": "object",
         "title": "Place Geometry",
+        "description": "A place geometry object includes the location and viewport of a place.",
+        "required": [
+          "location",
+          "viewport"
+        ],
         "properties": {
           "location": {
             "description": "Contains the geocoded latitude, longitude value for this place.",
@@ -29162,29 +29217,17 @@
           }
         }
       },
-      "PlacePlusCode": {
-        "type": "object",
-        "title": "Place Plus Code",
-        "required": [
-          "compound_code",
-          "global_code"
-        ],
-        "properties": {
-          "compound_code": {
-            "description": "Todo",
-            "type": "string",
-            "example": "45MW+C8 Pyrmont NSW, Australia"
-          },
-          "global_code": {
-            "description": "Todo",
-            "type": "string",
-            "example": "4RRH45MW+C8"
-          }
-        }
-      },
       "PlaceReview": {
         "type": "object",
         "title": "Place Review",
+        "description": "A review of the place submitted by a user.",
+        "required": [
+          "author_name",
+          "language",
+          "rating",
+          "relative_time_description",
+          "time"
+        ],
         "properties": {
           "author_name": {
             "description": "The name of the user who submitted the review. Anonymous reviews are attributed to \"A Google user\".",

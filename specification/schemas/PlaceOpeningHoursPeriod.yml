@@ -13,7 +13,10 @@
 # limitations under the License.
 
 type: object
-title: Place Geometry
+title: Place Opening Hours Period
+required:
+  - open
+  - close
 properties:
   open:
     description: Contains a pair of day and time objects describing when the place opens.

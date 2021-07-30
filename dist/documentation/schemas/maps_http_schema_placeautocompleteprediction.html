@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td align="left"><code>description</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <td align="left"><code>matched_substrings</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
           href="#PlaceAutocompleteMatchedSubstring"
@@ -56,7 +56,7 @@
     </tr>
     <tr>
       <td align="left"><code>place_id</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -75,18 +75,8 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>reference</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>(Deprecated) See place_id.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>structured_formatting</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         <a
           href="#PlaceAutocompleteStructuredFormat"
@@ -112,7 +102,7 @@
     </tr>
     <tr>
       <td align="left"><code>terms</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
           href="#PlaceAutocompleteTerm"
@@ -139,7 +129,7 @@
     </tr>
     <tr>
       <td align="left"><code>types</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
         <div class="nonref-property-description">
@@ -153,6 +143,16 @@
               >Place types</a
             >.
           </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>reference</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>(Deprecated) See place_id.</p>
         </div>
       </td>
     </tr>

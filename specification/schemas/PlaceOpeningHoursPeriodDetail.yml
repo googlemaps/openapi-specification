@@ -13,12 +13,15 @@
 # limitations under the License.
 
 type: object
-title: Place Period Detail
+title: Place Opening Hours Period Detail
+required:
+  - day
+  - time
 properties:
   day:
     description: A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.
     type: number
   time:
-    description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone. 
+    description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.
     type: string
     example: 1700

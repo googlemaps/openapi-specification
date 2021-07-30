@@ -30,6 +30,7 @@ import {
   listItem,
 } from "mdast-builder";
 import { Parent } from "unist";
+import { feedbackLinks } from "./helpers";
 
 const argv = options({
   output: {
@@ -44,11 +45,7 @@ const argv = options({
 
 const build = (p: OpenAPIV3.ParameterObject): Parent => {
   const nodes: any = [];
-  nodes.push(
-    htmlNode(
-      `<h3 id="${p.name.toLowerCase()}">${p.name}</h3>`
-    )
-  );
+  nodes.push(htmlNode(`<h3 id="${p.name.toLowerCase()}">${p.name}</h3>`));
 
   if (p.description) {
     nodes.push(paragraph(fromMarkdown(p.description)));
@@ -112,6 +109,8 @@ const main = async (argv: any) => {
           nodes.push(htmlNode('<h2 id="parameters">Parameters</h2>'));
         }
         nodes.push(list("unordered", optional.map(build)));
+
+        nodes.push(feedbackLinks(key, "parameters"));
 
         const markdown = mdProcessor.stringify(root(nodes));
         // write markdown file

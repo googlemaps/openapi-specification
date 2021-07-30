@@ -30,6 +30,7 @@ import { Parent, Node } from "unist";
 import { OpenAPIV3 } from "openapi-types";
 import { isRef } from "./helpers";
 import { fromMarkdown, htmlProcessor, mdProcessor } from "./processors";
+import { feedbackLinks } from "./helpers";
 
 export interface PropertyRow {
   field: Parent;
@@ -124,7 +125,10 @@ export const build = async (
         )
       );
     }
+
+    nodes.push(feedbackLinks(key, "schema"));
   }
+
   return root(nodes);
 };
 

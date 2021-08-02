@@ -24350,10 +24350,10 @@
             "example": "40,-110"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/1"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/1"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/2"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/2"
           },
           {
             "name": "name",
@@ -24364,10 +24364,10 @@
             "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/3"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/3"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/4"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/4"
           },
           {
             "name": "rankby",
@@ -24382,10 +24382,10 @@
             "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/6"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/7"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/7"
           },
           {
             "$ref": "#/components/parameters/language"
@@ -25488,28 +25488,86 @@
         "description": "The Google Places API Text Search Service is a web service that returns information about a set of places based on a string — for example \"pizza in New York\" or \"shoe stores near Ottawa\" or \"123 Main Street\". The service responds with a list of places matching the text string and any location bias that has been set.\n\nThe service is especially useful for making [ambiguous address](https://developers.google.com/maps/documentation/geocoding/best-practices) queries in an automated system, and non-address components of the string may match businesses as well as addresses. Examples of ambiguous address queries are incomplete addresses, poorly formatted addresses, or a request that includes non-address components such as business names.\n\nThe search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.\n",
         "parameters": [
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/0"
+            "name": "location",
+            "description": "The point around which to retrieve place information. This must be specified as `latitude,longitude`.\n",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "example": "40,-110"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/1"
+            "name": "maxprice",
+            "description": "Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/2"
+            "name": "minprice",
+            "description": "Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/3"
+            "name": "opennow",
+            "description": "Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.\n",
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/4"
+            "name": "pagetoken",
+            "description": "Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.\n",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/5"
+            "name": "query",
+            "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.\n",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "in": "query",
+            "example": "restaurants in Sydney"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/6"
+            "name": "radius",
+            "description": "Defines the distance (in meters) within which to return place results. \n",
+            "schema": {
+              "type": "number"
+            },
+            "in": "query",
+            "example": 1000
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/7"
+            "name": "type",
+            "description": "Restricts the results to places matching the specified type. Only one type may be specified (if more than one type is provided, all types following the first entry are ignored). See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).\n<div class=\"note\">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>\n",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
           },
           {
             "$ref": "#/components/parameters/language"
@@ -26714,100 +26772,37 @@
         "tags": [
           "Places API"
         ],
-        "description": "The Google Places API Text Search Service is a web service that returns information about a set of places based on a string — for example \"pizza in New York\" or \"shoe stores near Ottawa\" or \"123 Main Street\". The service responds with a list of places matching the text string and any location bias that has been set.\n\nThe service is especially useful for making [ambiguous address](https://developers.google.com/maps/documentation/geocoding/best-practices) queries in an automated system, and non-address components of the string may match businesses as well as addresses. Examples of ambiguous address queries are incomplete addresses, poorly formatted addresses, or a request that includes non-address components such as business names.\n\nThe search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.\n",
+        "description": "The Place Photo service, part of the Places API, is a read- only API that allows you to add high quality photographic content to your application. The Place Photo service gives you access to the millions of photos stored in the Places database. When you get place information using a Place Details request, photo references will be returned for relevant photographic content. Find Place, Nearby Search, and Text Search requests also return a single photo reference per place, when relevant. Using the Photo service you can then access the referenced photos and resize the image to the optimal size for your application.\n\nPhotos returned by the Photo service are sourced from a variety of locations, including business owners and user contributed photos. In most cases, these photos can be used without attribution, or will have the required attribution included as a part of the image. However, if the returned photo element includes a value in the html_attributions field, you will have to include the additional attribution in your application wherever you display the image.\n",
         "parameters": [
           {
-            "name": "location",
-            "description": "The point around which to retrieve place information. This must be specified as `latitude,longitude`.\n",
-            "schema": {
-              "type": "string"
-            },
-            "in": "query",
-            "example": "40,-110"
-          },
-          {
-            "name": "maxprice",
-            "description": "Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.\n",
-            "schema": {
-              "type": "string",
-              "enum": [
-                0,
-                1,
-                2,
-                3,
-                4
-              ]
-            },
-            "in": "query"
-          },
-          {
-            "name": "minprice",
-            "description": "Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.\n",
-            "schema": {
-              "type": "string",
-              "enum": [
-                0,
-                1,
-                2,
-                3,
-                4
-              ]
-            },
-            "in": "query"
-          },
-          {
-            "name": "opennow",
-            "description": "Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.\n",
-            "schema": {
-              "type": "boolean"
-            },
-            "in": "query"
-          },
-          {
-            "name": "pagetoken",
-            "description": "Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.\n",
-            "schema": {
-              "type": "string"
-            },
-            "in": "query"
-          },
-          {
-            "name": "query",
-            "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.\n",
+            "name": "photoreference",
+            "description": "A string identifier that uniquely identifies a photo. Photo references are returned from either a Place Search or Place Details request.\n",
             "schema": {
               "type": "string"
             },
             "required": true,
-            "in": "query",
-            "example": "restaurants in Sydney"
+            "in": "query"
           },
           {
-            "name": "radius",
-            "description": "Defines the distance (in meters) within which to return place results. \n",
+            "name": "maxheight",
+            "description": "Specifies the maximum desired height, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.\n",
             "schema": {
               "type": "number"
-            },
-            "in": "query",
-            "example": 1000
-          },
-          {
-            "name": "type",
-            "description": "Restricts the results to places matching the specified type. Only one type may be specified (if more than one type is provided, all types following the first entry are ignored). See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).\n<div class=\"note\">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>\n",
-            "schema": {
-              "type": "string"
             },
             "in": "query"
           },
           {
-            "$ref": "#/components/parameters/language"
-          },
-          {
-            "$ref": "#/components/parameters/region"
+            "name": "maxwidth",
+            "description": "Specifies the maximum desired width, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.\n",
+            "schema": {
+              "type": "number"
+            },
+            "in": "query"
           }
         ],
         "responses": {
           "200": {
-            "description": "Response for the Places Text Search request.",
+            "description": "Response for the Place Photo request.",
             "content": {
               "image/*": {
                 "schema": {
@@ -26845,10 +26840,10 @@
             "$ref": "#/paths/~1maps~1api~1place~1autocomplete~1json/get/parameters/4"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/0"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/0"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/6"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6"
           },
           {
             "$ref": "#/components/parameters/language"
@@ -27168,10 +27163,10 @@
             "example": "40,-110"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/0"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/0"
           },
           {
-            "$ref": "#/paths/~1maps~1api~1place~1photo/get/parameters/6"
+            "$ref": "#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6"
           },
           {
             "name": "types",

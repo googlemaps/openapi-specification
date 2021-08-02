@@ -1,0 +1,47 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placessearchstatus] -->
+<h3 class="schema-object" id="PlacesSearchStatus">Status codes</h3>
+<p>Status codes returned by service.</p>
+<ul>
+  <li><code>OK</code> indicating the API request was successful.</li>
+  <li>
+    <code>ZERO_RESULTS</code> indicating that the search was successful but
+    returned no results. This may occur if the search was passed a
+    <code>latlng</code> in a remote location.
+  </li>
+  <li>
+    <code>INVALID_REQUEST</code> indicating the API request was malformed,
+    generally due to missing required query parameter (<code>location</code> or
+    <code>radius</code>).
+  </li>
+  <li>
+    <code>OVER_QUERY_LIMIT</code> indicating any of the following:
+    <ul>
+      <li>You have exceeded the QPS limits.</li>
+      <li>Billing has not been enabled on your account.</li>
+      <li>
+        The monthly $200 credit, or a self-imposed usage cap, has been exceeded.
+      </li>
+      <li>
+        The provided method of payment is no longer valid (for example, a credit
+        card has expired).
+      </li>
+    </ul>
+    See the
+    <a href="https://developers.google.com/maps/faq#over-limit-key-error"
+      >Maps FAQ</a
+    >
+    for more information about how to resolve this error.
+  </li>
+  <li>
+    <code>REQUEST_DENIED</code> indicating that your request was denied,
+    generally because:
+    <ul>
+      <li>The request is missing an API key.</li>
+      <li>The <code>key</code> parameter is invalid.</li>
+    </ul>
+  </li>
+  <li><code>UNKNOWN_ERROR</code> indicating an unknown error.</li>
+</ul>
+
+<!--- [END maps_http_schema_placessearchstatus] -->

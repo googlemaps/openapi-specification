@@ -20238,6 +20238,7 @@
                   ],
                   "properties": {
                     "error_message": {
+                      "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
                       "type": "string",
                       "example": "Invalid request. Invalid 'locations' parameter."
                     },
@@ -28316,7 +28317,7 @@
         ],
         "properties": {
           "error_message": {
-            "description": "Detailed information about the reasons behind the given status code.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string",
             "example": "Invalid request. Invalid 'locations' parameter."
           },
@@ -29279,11 +29280,11 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "error_message": {
-            "description": "Contains additional information about the request.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string"
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"
@@ -29316,7 +29317,7 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"
@@ -29344,12 +29345,12 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "error_message": {
-            "description": "Contains additional information about the request.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string",
             "example": "Error while parsing 'fields' parameter: Unsupported field name 'invalid'. "
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"
@@ -29385,11 +29386,11 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "error_message": {
-            "description": "Contains additional information about the request.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string"
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"
@@ -29421,11 +29422,11 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "error_message": {
-            "description": "Contains additional information about the request.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string"
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"
@@ -29475,11 +29476,11 @@
             "$ref": "#/components/schemas/PlacesStatus"
           },
           "error_message": {
-            "description": "Contains additional information about the request.",
+            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string"
           },
           "info_messages": {
-            "description": "Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.",
+            "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
             "type": "array",
             "items": {
               "type": "string"

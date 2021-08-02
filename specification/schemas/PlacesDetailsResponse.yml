@@ -28,7 +28,8 @@ properties:
     description: Contains metadata on the request.
     $ref: "./PlacesStatus.yml"
   info_messages:
-    description: Contains additional information about the request. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+    description: |
+      When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
     type: array
     items:
       type: string

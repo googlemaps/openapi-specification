@@ -1,13 +1,12 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_placesstatus] -->
-<h3 class="schema-object" id="PlacesStatus">Status codes</h3>
+<!--- [START maps_http_schema_placesautocompletestatus] -->
+<h3 class="schema-object" id="PlacesAutocompleteStatus">Status codes</h3>
 
 Status codes returned by service.
 
 - `OK` indicating the API request was successful.
-- `ZERO_RESULTS` indicating that the referenced location, `place_id`, was valid but no longer refers to a valid result. This may occur if the establishment is no longer in business.
-- `NOT_FOUND` indicating that that the referenced location, `place_id`, was not found in the Places database.
-- `INVALID_REQUEST` indicating the API request was malformed.
+- `ZERO_RESULTS` indicating that the search was successful but returned no results. This may occur if the search was passed a bounds in a remote location.
+- `INVALID_REQUEST` indicating the API request was malformed, generally due to the missing `input` parameter.
 - `OVER_QUERY_LIMIT` indicating any of the following:
   - You have exceeded the QPS limits.
   - Billing has not been enabled on your account.
@@ -19,4 +18,4 @@ Status codes returned by service.
   - The `key` parameter is invalid.
 - `UNKNOWN_ERROR` indicating an unknown error.
 
-<!--- [END maps_http_schema_placesstatus] -->
+<!--- [END maps_http_schema_placesautocompletestatus] -->

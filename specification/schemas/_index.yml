@@ -133,15 +133,19 @@ PlaceReview:
   $ref: "./PlaceReview.yml"
 PlacesAutocompleteResponse:
   $ref: "./PlacesAutocompleteResponse.yml"
+PlacesAutocompleteStatus:
+  $ref: "./PlacesAutocompleteStatus.yml"
 PlacesDetailsResponse:
   $ref: "./PlacesDetailsResponse.yml"
+PlacesDetailsStatus:
+  $ref: "./PlacesDetailsStatus.yml"
 PlacesFindPlaceFromTextResponse:
   $ref: "./PlacesFindPlaceFromTextResponse.yml"
 PlacesNearbySearchResponse:
   $ref: "./PlacesNearbySearchResponse.yml"
 PlacesQueryAutocompleteResponse:
   $ref: "./PlacesQueryAutocompleteResponse.yml"
-PlacesStatus:
-  $ref: "./PlacesStatus.yml"
+PlacesSearchStatus:
+  $ref: "./PlacesSearchStatus.yml"
 PlacesTextSearchResponse:
   $ref: "./PlacesTextSearchResponse.yml"

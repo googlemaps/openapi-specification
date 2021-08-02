@@ -1,20 +1,17 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_placesstatus] -->
-<h3 class="schema-object" id="PlacesStatus">Status codes</h3>
+<!--- [START maps_http_schema_placesautocompletestatus] -->
+<h3 class="schema-object" id="PlacesAutocompleteStatus">Status codes</h3>
 <p>Status codes returned by service.</p>
 <ul>
   <li><code>OK</code> indicating the API request was successful.</li>
   <li>
-    <code>ZERO_RESULTS</code> indicating that the referenced location,
-    <code>place_id</code>, was valid but no longer refers to a valid result.
-    This may occur if the establishment is no longer in business.
+    <code>ZERO_RESULTS</code> indicating that the search was successful but
+    returned no results. This may occur if the search was passed a bounds in a
+    remote location.
   </li>
   <li>
-    <code>NOT_FOUND</code> indicating that that the referenced location,
-    <code>place_id</code>, was not found in the Places database.
-  </li>
-  <li>
-    <code>INVALID_REQUEST</code> indicating the API request was malformed.
+    <code>INVALID_REQUEST</code> indicating the API request was malformed,
+    generally due to the missing <code>input</code> parameter.
   </li>
   <li>
     <code>OVER_QUERY_LIMIT</code> indicating any of the following:
@@ -46,4 +43,4 @@
   <li><code>UNKNOWN_ERROR</code> indicating an unknown error.</li>
 </ul>
 
-<!--- [END maps_http_schema_placesstatus] -->
+<!--- [END maps_http_schema_placesautocompletestatus] -->

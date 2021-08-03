@@ -2,9 +2,9 @@
 <!--- [START maps_http_schema_nearestroadsresponse] -->
 <h3 class="schema-object" id="NearestRoadsResponse">Response body</h3>
 
-| Field           | Required | Type                                                      | Description                                                                                                                                         |
-| :-------------- | -------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `snappedPoints` | optional | Array&lt;[SnappedPoint](#SnappedPoint "SnappedPoint")&gt; | <div class="ref-property-description"><p>An array of snapped points.</p><p>See <a href="#SnappedPoint">SnappedPoint</a> for more information.</div> |
+| Field           | Required | Type                                                                                    | Description                                                                                                                                                        |
+| :-------------- | -------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `snappedPoints` | optional | Array&lt;[Snap to Roads Response Body](#SnappedPoint "Snap to Roads Response Body")&gt; | <div class="ref-property-description"><p>An array of snapped points.</p><p>See <a href="#SnappedPoint">Snap to Roads Response Body</a> for more information.</div> |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/NearestRoadsResponse.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

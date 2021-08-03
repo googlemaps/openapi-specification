@@ -2,10 +2,10 @@
 <!--- [START maps_http_schema_viewport] -->
 <h3 class="schema-object" id="Viewport">Viewport</h3>
 
-| Field       | Required     | Type                                            | Description                                                               |
-| :---------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
-| `northeast` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
-| `southwest` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+| Field       | Required     | Type                                              | Description                                                                 |
+| :---------- | ------------ | ------------------------------------------------- | --------------------------------------------------------------------------- |
+| `northeast` | **required** | [LatLng Literal](#LatLngLiteral "LatLng Literal") | See [LatLng Literal](#LatLngLiteral "LatLng Literal") for more information. |
+| `southwest` | **required** | [LatLng Literal](#LatLngLiteral "LatLng Literal") | See [LatLng Literal](#LatLngLiteral "LatLng Literal") for more information. |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/Viewport.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

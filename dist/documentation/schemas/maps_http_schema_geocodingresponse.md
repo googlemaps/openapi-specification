@@ -2,10 +2,10 @@
 <!--- [START maps_http_schema_geocodingresponse] -->
 <h3 class="schema-object" id="GeocodingResponse">Response body</h3>
 
-| Field     | Required     | Type                                                               | Description                                                                     |
-| :-------- | ------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| `results` | **required** | Array&lt;[GeocodingResult](#GeocodingResult "GeocodingResult")&gt; | See [GeocodingResult](#GeocodingResult "GeocodingResult") for more information. |
-| `status`  | **required** | [GeocodingStatus](#GeocodingStatus "GeocodingStatus")              | See [GeocodingStatus](#GeocodingStatus "GeocodingStatus") for more information. |
+| Field     | Required     | Type                                                                 | Description                                                                       |
+| :-------- | ------------ | -------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `results` | **required** | Array&lt;[Geocoding Result](#GeocodingResult "Geocoding Result")&gt; | See [Geocoding Result](#GeocodingResult "Geocoding Result") for more information. |
+| `status`  | **required** | [Status codes](#GeocodingStatus "Status codes")                      | See [Status codes](#GeocodingStatus "Status codes") for more information.         |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/GeocodingResponse.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

@@ -20,8 +20,8 @@ LatLngLiteral:
   $ref: "./LatLngLiteral.yml"
 LatitudeLongitudeLiteral:
   $ref: "./LatitudeLongitudeLiteral.yml"
-AddressComponents:
-  $ref: "./AddressComponents.yml"
+AddressComponent:
+  $ref: "./AddressComponent.yml"
 Viewport:
   $ref: "./Viewport.yml"
 Geometry:
@@ -109,8 +109,6 @@ ErrorDetail:
 # Places
 Place:
   $ref: "./Place.yml"
-PlaceAddressComponent:
-  $ref: "./PlaceAddressComponent.yml"
 PlaceAutocompleteMatchedSubstring:
   $ref: "./PlaceAutocompleteMatchedSubstring.yml"
 PlaceAutocompletePrediction:

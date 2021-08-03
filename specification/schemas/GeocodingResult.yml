@@ -19,7 +19,7 @@ properties:
     description: An array containing the separate components applicable to this address.
     type: array
     items:
-      $ref: './AddressComponents.yml'
+      $ref: './AddressComponent.yml'
   formatted_address:
     description: The human-readable address of this location.
     type: string

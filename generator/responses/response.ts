@@ -16,10 +16,16 @@
 
 import { options } from "yargs";
 import tar from "tar-stream";
-import { createReadStream, writeFileSync } from "fs";
+import {
+  createReadStream,
+  writeFileSync,
+  createWriteStream,
+  unlinkSync,
+} from "fs";
 import { exec } from "child_process";
 import path from "path";
 import prettier from "prettier";
+import axios, { AxiosResponse } from "axios";
 
 const header = `# Copyright 2021 Google LLC
 #
@@ -117,26 +123,75 @@ const main = async (argv: any) => {
     await extractRequests(argv.archive)
   )) {
     if (argv.skip.indexOf(regionTag) != -1) continue;
-
+    regionTag += "_response";
     request = request.replace("YOUR_API_KEY", process.env.GOOGLE_MAPS_API_KEY!);
 
-    const response = await executeRequest(request, /error/i.test(regionTag));
+    if (regionTag.indexOf("binary") === -1) {
+      const response = await executeRequest(request, /error/i.test(regionTag));
 
-    regionTag += "_response";
-    const destination = path.join(argv.output, `${regionTag}.yml`);
+      const destination = path.join(argv.output, `${regionTag}.yml`);
 
-    writeFileSync(
-      destination,
-      prettier.format(
-        `${header}
+      writeFileSync(
+        destination,
+        prettier.format(
+          `${header}
         # [START ${regionTag}]
         ${JSON.stringify(response, null, 2)}
         # [END ${regionTag}]
       `,
-        { parser: "yaml" }
-      )
-    );
+          { parser: "yaml" }
+        )
+      );
+    } else {
+      // extract the url from the curl snippet (YUCK)
+      const match = request.match(/'https(.*)'/g)!;
+      const url = match[0].replace(/'/g, "");
 
+      let response: AxiosResponse;
+      try {
+        // use axios to get the binary data
+        response = await axios.get(url, { responseType: "stream" });
+      } catch (e) {
+        if (e.response.status === 403 && regionTag.indexOf("error") !== -1) {
+          response = e.response;
+        } else {
+          throw e;
+        }
+      }
+
+      // get the extension from the content-type header
+      // ignoring content-disposition since it isn't always available
+      const ext = { "image/png": "png", "image/jpeg": "jpg" }[
+        response.headers["content-type"]
+      ];
+
+      const destination = path.join(argv.output, `${regionTag}.${ext}`);
+
+      // pipe the result stream into a file on disk
+      try {
+        unlinkSync(destination);
+      } catch (e) {}
+      // get redirect url
+      response.data.pipe(createWriteStream(destination));
+
+      // await until download finishes
+      await new Promise((resolve, reject) => {
+        response.data.on("end", () => {
+          resolve(null);
+        });
+
+        response.data.on("error", () => {
+          reject();
+        });
+      });
+
+      if (response.request.res.responseUrl !== url) {
+        writeFileSync(
+          path.join(argv.output, `${regionTag}.txt`),
+          `${header}\n[START ${regionTag}]\n${response.request.res.responseUrl}\n[END ${regionTag}]`
+        );
+      }
+    }
     console.log(`Generated response for: ${regionTag}`);
   }
 };

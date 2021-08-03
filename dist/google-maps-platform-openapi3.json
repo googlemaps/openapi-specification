@@ -28993,7 +28993,7 @@
       },
       "PlaceAutocompletePrediction": {
         "type": "object",
-        "title": "Place Autocomplete Prediction",
+        "title": "Autocomplete Prediction",
         "required": [
           "description",
           "matched_substrings",
@@ -29045,7 +29045,7 @@
       },
       "PlaceAutocompleteStructuredFormat": {
         "type": "object",
-        "title": "Place Autocomplete Structured Format",
+        "title": "Autocomplete Structured Format",
         "required": [
           "main_text",
           "main_text_matched_substrings",

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placeautocompletestructuredformat] -->
-<h3 class="schema-object" id="PlaceAutocompleteStructuredFormat">Place Autocomplete Structured Format</h3>
+<h3 class="schema-object" id="PlaceAutocompleteStructuredFormat">Autocomplete Structured Format</h3>
 
 | Field                          | Required     | Type                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                |
 | :----------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

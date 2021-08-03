@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
-<!--- [START maps_http_schema_addresscomponents] -->
-<h3 class="schema-object" id="AddressComponents">Address Components</h3>
+<!--- [START maps_http_schema_addresscomponent] -->
+<h3 class="schema-object" id="AddressComponent">Address Component</h3>
 <table>
   <thead>
     <tr>
@@ -13,36 +13,35 @@
   <tbody>
     <tr>
       <td align="left"><code>long_name</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
           <p>
             The full text description or name of the address component as
-            returned by the Geocoding.
+            returned by the Geocoder.
           </p>
         </div>
       </td>
     </tr>
     <tr>
       <td align="left"><code>short_name</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
           <p>
             An abbreviated textual name for the address component, if available.
             For example, an address component for the state of Alaska may have a
-            <code>long_name</code> of <code>Alaska</code> and a
-            <code>short_name</code> of <code>AK</code> using the 2-letter postal
-            abbreviation.
+            long_name of "Alaska" and a short_name of "AK" using the 2-letter
+            postal abbreviation.
           </p>
         </div>
       </td>
     </tr>
     <tr>
       <td align="left"><code>types</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
         <div class="nonref-property-description">
@@ -50,7 +49,7 @@
             An array indicating the type of the address component. See the list
             of
             <a
-              href="https://developers.google.com/places/web-service/supported_types"
+              href="https://developers.google.com/maps/documentation/places/web-service/supported_types"
               >supported types</a
             >.
           </p>
@@ -75,7 +74,7 @@
     data-category="GMP"
     data-label="openapi-github"
     style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/AddressComponents.yml"
+    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/AddressComponent.yml"
     title="Edit on GitHub"
     ><span class="material-icons">edit</span> Edit</a
   >
@@ -84,10 +83,10 @@
     data-category="GMP"
     data-label="openapi-github"
     style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - AddressComponents"
+    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - AddressComponent"
     title="File bug for schemas on GitHub"
     ><span class="material-icons">bug_report</span> Report bug</a
   >
 </p>
 
-<!--- [END maps_http_schema_addresscomponents] -->
+<!--- [END maps_http_schema_addresscomponent] -->

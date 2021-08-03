@@ -20,7 +20,7 @@ properties:
     description: An array containing the separate components applicable to this address.
     type: array
     items:
-      $ref: "./PlaceAddressComponent.yml"
+      $ref: "./AddressComponent.yml"
   adr_address:
     description: A representation of the place's address in the [adr microformat](http://microformats.org/wiki/adr).
     type: string

@@ -27826,24 +27826,35 @@
           }
         }
       },
-      "AddressComponents": {
-        "title": "Address Components",
+      "AddressComponent": {
+        "title": "Address Component",
         "type": "object",
+        "required": [
+          "long_name",
+          "short_name",
+          "types"
+        ],
         "properties": {
           "long_name": {
+            "description": "The full text description or name of the address component as returned by the Geocoder.",
             "type": "string",
-            "description": "The full text description or name of the address component as returned by the Geocoding."
+            "example": "Council of the City of Sydney"
           },
           "short_name": {
-            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a `long_name` of `Alaska` and a `short_name` of `AK` using the 2-letter postal abbreviation.",
-            "type": "string"
+            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of \"Alaska\" and a short_name of \"AK\" using the 2-letter postal abbreviation.",
+            "type": "string",
+            "example": "Sydney"
           },
           "types": {
-            "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/places/web-service/supported_types).",
+            "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).",
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "example": [
+              "administrative_area_level_2",
+              "political"
+            ]
           }
         }
       },
@@ -28354,7 +28365,7 @@
             "description": "An array containing the separate components applicable to this address.",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AddressComponents"
+              "$ref": "#/components/schemas/AddressComponent"
             }
           },
           "formatted_address": {
@@ -28809,7 +28820,7 @@
             "description": "An array containing the separate components applicable to this address.",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PlaceAddressComponent"
+              "$ref": "#/components/schemas/AddressComponent"
             }
           },
           "adr_address": {
@@ -28938,38 +28949,6 @@
             "description": "The authoritative website for this place, such as a business' homepage.",
             "type": "string",
             "example": "http://google.com"
-          }
-        }
-      },
-      "PlaceAddressComponent": {
-        "type": "object",
-        "title": "Place Address Component",
-        "required": [
-          "long_name",
-          "short_name",
-          "types"
-        ],
-        "properties": {
-          "long_name": {
-            "description": "The full text description or name of the address component as returned by the Geocoder.",
-            "type": "string",
-            "example": "Council of the City of Sydney"
-          },
-          "short_name": {
-            "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of \"Alaska\" and a short_name of \"AK\" using the 2-letter postal abbreviation.",
-            "type": "string",
-            "example": "Sydney"
-          },
-          "types": {
-            "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "example": [
-              "administrative_area_level_2",
-              "political"
-            ]
           }
         }
       },

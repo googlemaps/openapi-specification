@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=pizza%2520near%2520par&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=pizza%2520near%2520par&language=fr&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {

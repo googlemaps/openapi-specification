@@ -1497,6 +1497,7 @@ export const REQUESTS: SnippetRequest[] = [
             key: "input",
             value: encodeURIComponent("pizza near par"),
           },
+          { key: "language", value: "fr" },
         ],
       }),
     }),

@@ -17,7 +17,7 @@
   "predictions":
     [
       {
-        "description": "PIZZA PARADISO, Mariscal Antonio José de Sucre, Buenos Aires, Argentina",
+        "description": "PIZZA PARADISO, Mariscal Antonio José de Sucre, Ville Autonome de Buenos Aires, Argentine",
         "matched_substrings": [{ "length": 14, "offset": 0 }],
         "place_id": "ChIJZQIEIV61vJURXNINvCJNDgg",
         "reference": "ChIJZQIEIV61vJURXNINvCJNDgg",
@@ -25,19 +25,19 @@
           {
             "main_text": "PIZZA PARADISO",
             "main_text_matched_substrings": [{ "length": 14, "offset": 0 }],
-            "secondary_text": "Mariscal Antonio José de Sucre, Buenos Aires, Argentina",
+            "secondary_text": "Mariscal Antonio José de Sucre, Ville Autonome de Buenos Aires, Argentine",
           },
         "terms":
           [
             { "offset": 0, "value": "PIZZA PARADISO" },
             { "offset": 16, "value": "Mariscal Antonio José de Sucre" },
-            { "offset": 48, "value": "Buenos Aires" },
-            { "offset": 62, "value": "Argentina" },
+            { "offset": 48, "value": "Ville Autonome de Buenos Aires" },
+            { "offset": 80, "value": "Argentine" },
           ],
         "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
       {
-        "description": "Pizza Paradiso Mediterranean Grill, Lower Honoapiilani Road, Lahaina, HI, USA",
+        "description": "Pizza Paradiso Mediterranean Grill, Lower Honoapiilani Road, Lahaina, Hawaï, États-Unis",
         "matched_substrings": [{ "length": 34, "offset": 0 }],
         "place_id": "ChIJffjit6_Vqn4RLxkOpB72o9E",
         "reference": "ChIJffjit6_Vqn4RLxkOpB72o9E",
@@ -45,20 +45,20 @@
           {
             "main_text": "Pizza Paradiso Mediterranean Grill",
             "main_text_matched_substrings": [{ "length": 34, "offset": 0 }],
-            "secondary_text": "Lower Honoapiilani Road, Lahaina, HI, USA",
+            "secondary_text": "Lower Honoapiilani Road, Lahaina, Hawaï, États-Unis",
           },
         "terms":
           [
             { "offset": 0, "value": "Pizza Paradiso Mediterranean Grill" },
             { "offset": 36, "value": "Lower Honoapiilani Road" },
             { "offset": 61, "value": "Lahaina" },
-            { "offset": 70, "value": "HI" },
-            { "offset": 74, "value": "USA" },
+            { "offset": 70, "value": "Hawaï" },
+            { "offset": 77, "value": "États-Unis" },
           ],
         "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
       {
-        "description": "Budapest, Pizza Paradicsom Non-Stop Étterem és Pizzéria, Vörösvári Way, Hungary",
+        "description": "Budapest, Pizza Paradicsom Non-Stop Étterem és Pizzéria, Vörösvári Way, Hongrie",
         "matched_substrings": [{ "length": 45, "offset": 10 }],
         "place_id": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
         "reference": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
@@ -66,7 +66,7 @@
           {
             "main_text": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
             "main_text_matched_substrings": [{ "length": 45, "offset": 0 }],
-            "secondary_text": "Budapest, Vörösvári Way, Hungary",
+            "secondary_text": "Budapest, Vörösvári Way, Hongrie",
           },
         "terms":
           [
@@ -76,7 +76,7 @@
               "value": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
             },
             { "offset": 57, "value": "Vörösvári Way" },
-            { "offset": 72, "value": "Hungary" },
+            { "offset": 72, "value": "Hongrie" },
           ],
         "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
@@ -108,7 +108,7 @@
           ],
       },
       {
-        "description": "Parlor Pizza Bar West Loop, North Green Street, Chicago, IL, USA",
+        "description": "Parlor Pizza Bar West Loop, North Green Street, Chicago, Illinois, États-Unis",
         "matched_substrings": [{ "length": 26, "offset": 0 }],
         "place_id": "ChIJ2Wfqc8rSD4gRMs6hdBZ0Pck",
         "reference": "ChIJ2Wfqc8rSD4gRMs6hdBZ0Pck",
@@ -116,15 +116,15 @@
           {
             "main_text": "Parlor Pizza Bar West Loop",
             "main_text_matched_substrings": [{ "length": 26, "offset": 0 }],
-            "secondary_text": "North Green Street, Chicago, IL, USA",
+            "secondary_text": "North Green Street, Chicago, Illinois, États-Unis",
           },
         "terms":
           [
             { "offset": 0, "value": "Parlor Pizza Bar West Loop" },
             { "offset": 28, "value": "North Green Street" },
             { "offset": 48, "value": "Chicago" },
-            { "offset": 57, "value": "IL" },
-            { "offset": 61, "value": "USA" },
+            { "offset": 57, "value": "Illinois" },
+            { "offset": 67, "value": "États-Unis" },
           ],
         "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },

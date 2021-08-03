@@ -29,7 +29,7 @@ properties:
     items:
       $ref: "./Place.yml"
   status:
-    description: Contains metadata on the request.
+    description: Contains the status of the request, and may contain debugging information to help you track down why the request failed.
     $ref: "./PlacesSearchStatus.yml"
   error_message:
     description: |

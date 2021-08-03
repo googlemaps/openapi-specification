@@ -25,7 +25,7 @@ properties:
     description: Contains the detailed information about the place requested.
     $ref: "./Place.yml"
   status:
-    description: Contains metadata on the request.
+    description: Contains the status of the request, and may contain debugging information to help you track down why the request failed.
     $ref: "./PlacesDetailsStatus.yml"
   info_messages:
     description: |

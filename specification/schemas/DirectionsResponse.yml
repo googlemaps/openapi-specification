@@ -27,7 +27,7 @@ properties:
     items:
       $ref: "./DirectionsRoute.yml"
   status:
-    description: Contains metadata on the request.
+    description: Contains the status of the request, and may contain debugging information to help you track down why the request failed.
     $ref: "./DirectionsStatus.yml"
   available_travel_modes:
     description: Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'.

@@ -27975,7 +27975,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/DistanceMatrixStatus"
           }
         }
@@ -28054,7 +28054,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/DirectionsStatus"
           },
           "available_travel_modes": {
@@ -29276,7 +29276,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesAutocompleteStatus"
           },
           "error_message": {
@@ -29326,7 +29326,7 @@
             "$ref": "#/components/schemas/Place"
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesDetailsStatus"
           },
           "info_messages": {
@@ -29368,7 +29368,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesSearchStatus"
           },
           "error_message": {
@@ -29409,7 +29409,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesSearchStatus"
           },
           "error_message": {
@@ -29445,7 +29445,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesAutocompleteStatus"
           },
           "error_message": {
@@ -29498,7 +29498,7 @@
             }
           },
           "status": {
-            "description": "Contains metadata on the request.",
+            "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
             "$ref": "#/components/schemas/PlacesSearchStatus"
           },
           "error_message": {

@@ -1319,7 +1319,7 @@ export const REQUESTS: SnippetRequest[] = [
           },
           {
             key: "maxwidth",
-            value: "800",
+            value: "400",
           },
         ],
       }),
@@ -1340,7 +1340,7 @@ export const REQUESTS: SnippetRequest[] = [
           },
           {
             key: "maxwidth",
-            value: "800",
+            value: "400",
           },
           {
             key: "key",

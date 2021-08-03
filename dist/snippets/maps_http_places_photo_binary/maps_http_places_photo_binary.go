@@ -1,4 +1,4 @@
-// [START maps_http_places_photo]
+// [START maps_http_places_photo_binary]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/place/photo?photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&maxwidth=400&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/place/photo?photoreference=Aap_uEA7vb0DDYVJWEaX3O-AtYp77AaswQKSGtDaimt3gt7QCNpdjp1BkdM6acJ96xTec3tsV_ZJNL_JP-lqsVxydG3nh739RE_hepOOL05tfJh2_ranjMadb3VoBYFvF0ma6S24qZ6QJUuV6sSRrhCskSBP5C1myCzsebztMfGvm7ij3gZT&maxwidth=800&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END maps_http_places_photo]
+// [END maps_http_places_photo_binary]

@@ -124,9 +124,10 @@ export const build = async (
         )
       );
     }
-
-    nodes.push(feedbackLinks(key, "schema"));
   }
+
+  // add feedback links to documentation
+  nodes.push(feedbackLinks(key, "schema"));
 
   return root(nodes);
 };

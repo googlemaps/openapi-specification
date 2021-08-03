@@ -98,7 +98,11 @@
   <li>
     <h3 id="radius">radius</h3>
     <p>
-      Defines the distance (in meters) within which to return place results.
+      Defines the distance (in meters) within which to return place results. You
+      may bias results to a specified circle by passing a
+      <code>location</code> and a <code>radius</code> parameter. Doing so
+      instructs the Places service to <em>prefer</em> showing results within
+      that circle; results outside of the defined area may still be displayed.
     </p>
   </li>
   <li>

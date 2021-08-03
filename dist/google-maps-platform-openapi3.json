@@ -25555,7 +25555,7 @@
           },
           {
             "name": "radius",
-            "description": "Defines the distance (in meters) within which to return place results. \n",
+            "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n",
             "schema": {
               "type": "number"
             },

@@ -9,8 +9,8 @@
 | `error_message` | optional     | string                                                             | <div class="nonref-property-description"><p>When the service returns a status code other than <code>OK&#x3C;</code>, there may be an additional <code>error_message</code> field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.</p></div> |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schema" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schema] Bug - ElevationResponse" title="File bug for schema on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/ElevationResponse.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - ElevationResponse" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>
 
 <!--- [END maps_http_schema_elevationresponse] -->

@@ -10,8 +10,8 @@ An encoded location reference, derived from latitude and longitude coordinates, 
 | `global_code`   | **required** | string | <div class="nonref-property-description"><p>The <code>global_code</code> is a 4 character area code and 6 character or longer local code (<code>849VCWC8+R9</code>).</p></div>                       |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schema" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schema] Bug - PlusCode" title="File bug for schema on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlusCode.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - PlusCode" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>
 
 <!--- [END maps_http_schema_pluscode] -->

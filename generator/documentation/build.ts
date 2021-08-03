@@ -127,7 +127,7 @@ export const build = async (
   }
 
   // add feedback links to documentation
-  nodes.push(feedbackLinks(key, "schema"));
+  nodes.push(feedbackLinks(key, "schemas"));
 
   return root(nodes);
 };

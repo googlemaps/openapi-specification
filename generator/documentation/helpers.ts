@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { OpenAPIV3 } from "openapi-types";
-import { html as htmlNode } from "mdast-builder";
+import { html as htmlNode, link, text } from "mdast-builder";
 import { Node } from "unist";
 
 export const isRef = (
@@ -30,9 +30,9 @@ export const feedbackLinks = (
   key: string,
   type: "schemas" | "parameters"
 ): Node => {
-  let link = "https://github.com/googlemaps/openapi-specification";  
+  let link = "https://github.com/googlemaps/openapi-specification";
 
-  if (type === "schemas") { 
+  if (type === "schemas") {
     link += `/blob/main/specification/${type}/${key}.yml`;
   } else {
     link += `/tree/main/specification/${type}`;
@@ -45,4 +45,12 @@ export const feedbackLinks = (
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[${type}] Bug - ${key}" title="File bug for ${type} on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>`
   );
+};
+
+export const localRefLink = (
+  name: string,
+  spec: OpenAPIV3.Document
+): Node => {
+  const schema = spec.components!.schemas![name] as OpenAPIV3.SchemaObject;
+  return link(`#${name}`, schema.title || name, [text(schema.title || name)]);
 };

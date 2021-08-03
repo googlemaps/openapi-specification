@@ -30,7 +30,7 @@ import { Parent, Node } from "unist";
 import { OpenAPIV3 } from "openapi-types";
 import { isRef } from "./helpers";
 import { fromMarkdown, htmlProcessor, mdProcessor } from "./processors";
-import { feedbackLinks } from "./helpers";
+import { feedbackLinks, localRefLink } from "./helpers";
 
 export interface PropertyRow {
   field: Parent;
@@ -43,7 +43,8 @@ export const build = async (
     | OpenAPIV3.ReferenceObject
     | OpenAPIV3.ArraySchemaObject
     | OpenAPIV3.NonArraySchemaObject,
-  key: string
+  key: string,
+  spec: OpenAPIV3.Document,
 ): Promise<Parent> => {
   if (isRef(schema)) {
     throw "cannot handle ref here";
@@ -99,7 +100,8 @@ export const build = async (
             const row = await propertyToRow(
               key,
               schema.properties![key],
-              required
+              required,
+              spec
             );
             return row;
           })
@@ -138,7 +140,9 @@ const propertyToRow = async (
     | OpenAPIV3.ReferenceObject
     | OpenAPIV3.ArraySchemaObject
     | OpenAPIV3.NonArraySchemaObject,
-  required: boolean
+  required: boolean,
+  spec:
+    | OpenAPIV3.Document,
 ): Promise<Parent> => {
   const row: any[] = [];
   row.push(tableCell(inlineCode(key)));
@@ -152,7 +156,7 @@ const propertyToRow = async (
 
   if (isRef(property)) {
     const name = refName(property);
-    const refLink = link(`#${name}`, name, [text(name)]);
+    const refLink = localRefLink(name, spec);
     row.push(tableCell(refLink));
     row.push(
       tableCell(await refPropertyDesciption(refLink, property["description"]))
@@ -165,7 +169,7 @@ const propertyToRow = async (
 
       if (isRef(property.items)) {
         const name = refName(property.items);
-        const refLink = link(`#${name}`, name, [text(name)]);
+        const refLink = localRefLink(name, spec);
         row.push(tableCell([text("Array&lt;"), refLink, text("&gt;")]));
         row.push(
           tableCell(await refPropertyDesciption(refLink, property.description))

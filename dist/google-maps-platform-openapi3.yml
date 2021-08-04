@@ -19502,6 +19502,7 @@ components:
     Bounds:
       title: Bounds
       type: object
+      description: A rectangle in geographical coordinates from points at the southwest and northeast corners.
       required:
         - northeast
         - southwest
@@ -19572,17 +19573,6 @@ components:
           example:
             - administrative_area_level_2
             - political
-    Viewport:
-      title: Viewport
-      type: object
-      required:
-        - northeast
-        - southwest
-      properties:
-        northeast:
-          $ref: '#/components/schemas/LatLngLiteral'
-        southwest:
-          $ref: '#/components/schemas/LatLngLiteral'
     Geometry:
       type: object
       title: Geometry
@@ -19594,7 +19584,7 @@ components:
         location:
           $ref: '#/components/schemas/LatLngLiteral'
         viewport:
-          $ref: '#/components/schemas/Viewport'
+          $ref: '#/components/schemas/Bounds'
     PlusCode:
       type: object
       title: PlusCode
@@ -20069,7 +20059,7 @@ components:
         bounds:
           $ref: '#/components/schemas/Bounds'
         viewport:
-          $ref: '#/components/schemas/Viewport'
+          $ref: '#/components/schemas/Bounds'
     GeolocationRequest:
       type: object
       title: GeolocationRequest

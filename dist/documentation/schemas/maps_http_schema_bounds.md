@@ -2,6 +2,8 @@
 <!--- [START maps_http_schema_bounds] -->
 <h3 class="schema-object" id="Bounds">Bounds</h3>
 
+A rectangle in geographical coordinates from points at the southwest and northeast corners.
+
 | Field       | Required     | Type                                            | Description                                                               |
 | :---------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
 | `northeast` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |

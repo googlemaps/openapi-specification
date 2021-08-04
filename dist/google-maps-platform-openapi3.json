@@ -27763,6 +27763,7 @@
       "Bounds": {
         "title": "Bounds",
         "type": "object",
+        "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
         "required": [
           "northeast",
           "southwest"
@@ -27859,22 +27860,6 @@
           }
         }
       },
-      "Viewport": {
-        "title": "Viewport",
-        "type": "object",
-        "required": [
-          "northeast",
-          "southwest"
-        ],
-        "properties": {
-          "northeast": {
-            "$ref": "#/components/schemas/LatLngLiteral"
-          },
-          "southwest": {
-            "$ref": "#/components/schemas/LatLngLiteral"
-          }
-        }
-      },
       "Geometry": {
         "type": "object",
         "title": "Geometry",
@@ -27888,7 +27873,7 @@
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "viewport": {
-            "$ref": "#/components/schemas/Viewport"
+            "$ref": "#/components/schemas/Bounds"
           }
         }
       },
@@ -28453,7 +28438,7 @@
             "$ref": "#/components/schemas/Bounds"
           },
           "viewport": {
-            "$ref": "#/components/schemas/Viewport"
+            "$ref": "#/components/schemas/Bounds"
           }
         }
       },

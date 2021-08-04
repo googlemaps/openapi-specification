@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsgeocodedwaypoint] -->
-<h3 class="schema-object" id="DirectionsGeocodedWaypoint">Directions Geocoded Waypoint</h3>
+<h3 class="schema-object" id="DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</h3>
 
 | Field             | Required | Type                | Description                                                |
 | :---------------- | -------- | ------------------- | ---------------------------------------------------------- |

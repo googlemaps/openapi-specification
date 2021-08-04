@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsoverviewpolyline] -->
-<h3 class="schema-object" id="DirectionsOverviewPolyline">Directions Overview Polyline</h3>
+<h3 class="schema-object" id="DirectionsOverviewPolyline">DirectionsOverviewPolyline</h3>
 
 Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).
 

@@ -84,3 +84,17 @@ nodejs_test(
         "$(rootpath :dist)",        
     ],
 )
+
+
+nodejs_test(
+    name = "schema-title",
+    data = [
+        "//:google-maps-platform-openapi3.json",
+        "//rules:schema-title",
+    ],
+    entry_point = "//rules:schema-title.ts",
+    templated_args = [
+        "--spec",
+        "$(rootpath //:{}.json)".format(BUNDLE_NAME),        
+    ],
+)

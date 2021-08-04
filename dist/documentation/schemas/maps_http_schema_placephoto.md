@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placephoto] -->
-<h3 class="schema-object" id="PlacePhoto">Place Photo</h3>
+<h3 class="schema-object" id="PlacePhoto">PlacePhoto</h3>
 
 A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:
 

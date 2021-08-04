@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Request body
+title: GeolocationRequest
 description: The request body must be formatted as JSON. The following fields are supported, and all fields are optional.
 properties:
   homeMobileCountryCode:
@@ -42,4 +42,4 @@ properties:
     type: array
     description: An array of two or more WiFi access point objects.
     items:
-      $ref: "./WifiAccessPoint.yml"
+      $ref: "./WiFiAccessPoint.yml"

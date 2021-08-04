@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_wifiaccesspoint] -->
-<h3 class="schema-object" id="WifiAccessPoint">WiFi Access Point</h3>
+<h3 class="schema-object" id="WiFiAccessPoint">WiFiAccessPoint</h3>
 
 Attributes used to describe a WiFi access point.
 
@@ -12,7 +12,7 @@ Attributes used to describe a WiFi access point.
 | `signalStrength`     | optional     | integer | <div class="nonref-property-description"><p>The current signal strength measured in dBm.</p></div>                                                                                    |
 | `signalToNoiseRatio` | optional     | integer | <div class="nonref-property-description"><p>The current signal to noise ratio measured in dB.</p></div>                                                                               |
 
-<h4 class="schema-object-example" id="WifiAccessPoint-example">Example</h4>
+<h4 class="schema-object-example" id="WiFiAccessPoint-example">Example</h4>
 
 <pre class="notranslate lang-json prettyprint">{
   "considerIp": "false",
@@ -31,8 +31,8 @@ Attributes used to describe a WiFi access point.
 }</pre>
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/WifiAccessPoint.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
-<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - WifiAccessPoint" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/WiFiAccessPoint.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - WiFiAccessPoint" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
 </p>
 
 <!--- [END maps_http_schema_wifiaccesspoint] -->

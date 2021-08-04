@@ -81,8 +81,8 @@ GeolocationResponse:
   $ref: "./GeolocationResponse.yml"
 CellTower:
   $ref: "./CellTower.yml"
-WifiAccessPoint:
-  $ref: "./WifiAccessPoint.yml"
+WiFiAccessPoint:
+  $ref: "./WiFiAccessPoint.yml"
 # Roads
 NearestRoadsError:
   $ref: "./NearestRoadsError.yml"

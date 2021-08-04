@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placereview] -->
-<h3 class="schema-object" id="PlaceReview">Place Review</h3>
+<h3 class="schema-object" id="PlaceReview">PlaceReview</h3>
 
 A review of the place submitted by a user.
 

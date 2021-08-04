@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Snap to Roads Response Body
+title: SnappedPoint
 required: [location, placeId]
 properties:
   location:

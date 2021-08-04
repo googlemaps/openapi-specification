@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsresponse] -->
-<h3 class="schema-object" id="DirectionsResponse">Response body</h3>
+<h3 class="schema-object" id="DirectionsResponse">DirectionsResponse</h3>
 <table>
   <thead>
     <tr>
@@ -17,8 +17,8 @@
       <td>
         Array&#x3C;<a
           href="#DirectionsGeocodedWaypoint"
-          title="Directions Geocoded Waypoint"
-          >Directions Geocoded Waypoint</a
+          title="DirectionsGeocodedWaypoint"
+          >DirectionsGeocodedWaypoint</a
         >>
       </td>
       <td>
@@ -29,9 +29,7 @@
           </p>
           <p>
             See
-            <a href="#DirectionsGeocodedWaypoint"
-              >Directions Geocoded Waypoint</a
-            >
+            <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a>
             for more information.
           </p>
         </div>
@@ -41,8 +39,8 @@
       <td align="left"><code>routes</code></td>
       <td><strong>required</strong></td>
       <td>
-        Array&#x3C;<a href="#DirectionsRoute" title="Directions Route"
-          >Directions Route</a
+        Array&#x3C;<a href="#DirectionsRoute" title="DirectionsRoute"
+          >DirectionsRoute</a
         >>
       </td>
       <td>
@@ -52,7 +50,7 @@
             Routes below. Routes consist of nested Legs and Steps.
           </p>
           <p>
-            See <a href="#DirectionsRoute">Directions Route</a> for more
+            See <a href="#DirectionsRoute">DirectionsRoute</a> for more
             information.
           </p>
         </div>
@@ -61,7 +59,11 @@
     <tr>
       <td align="left"><code>status</code></td>
       <td><strong>required</strong></td>
-      <td><a href="#DirectionsStatus" title="Status codes">Status codes</a></td>
+      <td>
+        <a href="#DirectionsStatus" title="DirectionsStatus"
+          >DirectionsStatus</a
+        >
+      </td>
       <td>
         <div class="ref-property-description">
           <p>
@@ -69,7 +71,7 @@
             information to help you track down why the request failed.
           </p>
           <p>
-            See <a href="#DirectionsStatus">Status codes</a> for more
+            See <a href="#DirectionsStatus">DirectionsStatus</a> for more
             information.
           </p>
         </div>

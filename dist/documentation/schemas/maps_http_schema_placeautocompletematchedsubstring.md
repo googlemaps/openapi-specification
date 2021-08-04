@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placeautocompletematchedsubstring] -->
-<h3 class="schema-object" id="PlaceAutocompleteMatchedSubstring">Matched Substring</h3>
+<h3 class="schema-object" id="PlaceAutocompleteMatchedSubstring">PlaceAutocompleteMatchedSubstring</h3>
 
 | Field    | Required     | Type   | Description                                                                                                                  |
 | :------- | ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------- |

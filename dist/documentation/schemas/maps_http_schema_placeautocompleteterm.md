@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placeautocompleteterm] -->
-<h3 class="schema-object" id="PlaceAutocompleteTerm">Autocomplete Term</h3>
+<h3 class="schema-object" id="PlaceAutocompleteTerm">PlaceAutocompleteTerm</h3>
 
 | Field    | Required     | Type   | Description                                                                                                                                      |
 | :------- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_celltower] -->
-<h3 class="schema-object" id="CellTower">Cell Tower</h3>
+<h3 class="schema-object" id="CellTower">CellTower</h3>
 
 Attributes used to describe a cell tower. The following optional fields are not currently used, but may be included if values are available: `age`, `signalStrength`, `timingAdvance`.
 

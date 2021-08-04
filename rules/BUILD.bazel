@@ -31,6 +31,18 @@ ts_library(
 )
 
 ts_library(
+    name = "schema-title",
+    srcs = ["schema-title.ts"],
+    deps = [
+        "@npm//@types/node",
+        "@npm//@types/glob",
+        "@npm//@types/yargs",
+        "@npm//yargs",
+        "@npm//openapi-types",
+    ],
+)
+
+ts_library(
     name = "_dereference_lib",
     srcs = ["dereference.ts"],
     deps = [

@@ -183,14 +183,7 @@ const main = async (argv: any) => {
         response.data.on("error", () => {
           reject();
         });
-      });
-
-      if (response.request.res.responseUrl !== url) {
-        writeFileSync(
-          path.join(argv.output, `${regionTag}.txt`),
-          `${header}\n[START ${regionTag}]\n${response.request.res.responseUrl}\n[END ${regionTag}]`
-        );
-      }
+      });      
     }
     console.log(`Generated response for: ${regionTag}`);
   }

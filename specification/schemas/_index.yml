@@ -74,6 +74,8 @@ GeocodingResponse:
   $ref: "./GeocodingResponse.yml"
 GeocodingStatus:
   $ref: "./GeocodingStatus.yml"
+GeocodingGeometry:
+  $ref: "./GeocodingGeometry.yml"
 # Geolocation
 GeolocationRequest:
   $ref: "./GeolocationRequest.yml"
@@ -125,8 +127,6 @@ PlaceOpeningHoursPeriod:
   $ref: "./PlaceOpeningHoursPeriod.yml"
 PlaceOpeningHoursPeriodDetail:
   $ref: "./PlaceOpeningHoursPeriodDetail.yml"
-PlaceGeometry:
-  $ref: "./PlaceGeometry.yml"
 PlaceReview:
   $ref: "./PlaceReview.yml"
 PlacesAutocompleteResponse:

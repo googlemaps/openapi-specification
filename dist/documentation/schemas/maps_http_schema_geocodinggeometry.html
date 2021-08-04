@@ -1,0 +1,114 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_geocodinggeometry] -->
+<h3 class="schema-object" id="GeocodingGeometry">GeocodingGeometry</h3>
+<p>An object describing the location.</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>location</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
+      <td>
+        See <a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a> for
+        more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>location_type</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Stores additional data about the specified location. The following
+            values are currently supported:
+          </p>
+          <ul>
+            <li>
+              "ROOFTOP" indicates that the returned result is a precise geocode
+              for which we have location information accurate down to street
+              address precision.
+            </li>
+            <li>
+              "RANGE_INTERPOLATED" indicates that the returned result reflects
+              an approximation (usually on a road) interpolated between two
+              precise points (such as intersections). Interpolated results are
+              generally returned when rooftop geocodes are unavailable for a
+              street address.
+            </li>
+            <li>
+              "GEOMETRIC_CENTER" indicates that the returned result is the
+              geometric center of a result such as a polyline (for example, a
+              street) or polygon (region).
+            </li>
+            <li>
+              "APPROXIMATE" indicates that the returned result is approximate.
+            </li>
+          </ul>
+          <div class="notranslate">
+            The allowed values include: <code>ROOFTOP</code>,
+            <code>RANGE_INTERPOLATED</code>, <code>GEOMETRIC_CENTER</code>, and
+            <code>APPROXIMATE</code>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>viewport</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#Viewport" title="Viewport">Viewport</a></td>
+      <td>
+        See <a href="#Viewport" title="Viewport">Viewport</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>bounds</code></td>
+      <td>optional</td>
+      <td><a href="#Bounds" title="Bounds">Bounds</a></td>
+      <td>
+        See <a href="#Bounds" title="Bounds">Bounds</a> for more information.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github"
+    href="https://github.com/googlemaps/openapi-specification"
+    title="Google Maps Platform OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github"
+    style="margin-left: 5px"
+    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/GeocodingGeometry.yml"
+    title="Edit on GitHub"
+    ><span class="material-icons">edit</span> Edit</a
+  >
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github"
+    style="margin-left: 5px"
+    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - GeocodingGeometry"
+    title="File bug for schemas on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END maps_http_schema_geocodinggeometry] -->

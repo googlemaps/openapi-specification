@@ -10,7 +10,9 @@
 
 An OpenAPI specification for Google Maps Platform APIs.
 
-> **Note**: This specification is a work in progress and likely missing important components and APIs.
+> **Note**: This specification is a **work in progress** and likely missing important components and APIs.
+> 
+> **Note**: **Breaking changes** are likely when additional APIs are added and shared components are updated.
 
 | API                | Status       |
 | ------------------ | ------------ |

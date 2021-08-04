@@ -7,7 +7,7 @@ An object describing the location.
 | Field      | Required     | Type                                            | Description                                                               |
 | :--------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
 | `location` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
-| `viewport` | **required** | [Viewport](#Viewport "Viewport")                | See [Viewport](#Viewport "Viewport") for more information.                |
+| `viewport` | **required** | [Bounds](#Bounds "Bounds")                      | See [Bounds](#Bounds "Bounds") for more information.                      |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/Geometry.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

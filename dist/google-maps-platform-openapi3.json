@@ -27859,22 +27859,6 @@
           }
         }
       },
-      "Viewport": {
-        "title": "Viewport",
-        "type": "object",
-        "required": [
-          "northeast",
-          "southwest"
-        ],
-        "properties": {
-          "northeast": {
-            "$ref": "#/components/schemas/LatLngLiteral"
-          },
-          "southwest": {
-            "$ref": "#/components/schemas/LatLngLiteral"
-          }
-        }
-      },
       "Geometry": {
         "type": "object",
         "title": "Geometry",
@@ -27888,7 +27872,7 @@
             "$ref": "#/components/schemas/LatLngLiteral"
           },
           "viewport": {
-            "$ref": "#/components/schemas/Viewport"
+            "$ref": "#/components/schemas/Bounds"
           }
         }
       },
@@ -28453,7 +28437,7 @@
             "$ref": "#/components/schemas/Bounds"
           },
           "viewport": {
-            "$ref": "#/components/schemas/Viewport"
+            "$ref": "#/components/schemas/Bounds"
           }
         }
       },

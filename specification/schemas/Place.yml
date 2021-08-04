@@ -51,7 +51,7 @@ properties:
     example: "(02) 9374 4000"
   geometry:
     description: Contains the location and viewport for the location.
-    $ref: "./PlaceGeometry.yml"
+    $ref: "./Geometry.yml"
   icon:
     description: Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.
     type: string

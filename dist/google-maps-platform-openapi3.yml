@@ -19586,18 +19586,13 @@ components:
     Geometry:
       type: object
       title: Geometry
+      description: An object describing the location.
+      required:
+        - location
+        - viewport
       properties:
         location:
           $ref: '#/components/schemas/LatLngLiteral'
-        location_type:
-          description: |
-            Stores additional data about the specified location. The following values are currently supported:
-
-            - "ROOFTOP" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.
-            - "RANGE_INTERPOLATED" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.
-            - "GEOMETRIC_CENTER" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).
-            - "APPROXIMATE" indicates that the returned result is approximate.
-          type: string
         viewport:
           $ref: '#/components/schemas/Viewport'
     PlusCode:
@@ -19997,7 +19992,7 @@ components:
           description: The human-readable address of this location.
           type: string
         geometry:
-          $ref: '#/components/schemas/Geometry'
+          $ref: '#/components/schemas/GeocodingGeometry'
         place_id:
           description: 'A unique identifier that can be used with other Google APIs. For example, you can use the `place_id` in a Places API request to get details of a local business, such as phone number, opening hours, user reviews, and more. See the [place ID overview](https://developers.google.com/places/place-id).'
           type: string
@@ -20046,6 +20041,35 @@ components:
         - REQUEST_DENIED
         - UNKNOWN_ERROR
         - ZERO_RESULTS
+    GeocodingGeometry:
+      type: object
+      title: GeocodingGeometry
+      description: An object describing the location.
+      required:
+        - location
+        - viewport
+        - location_type
+      properties:
+        location:
+          $ref: '#/components/schemas/LatLngLiteral'
+        location_type:
+          description: |
+            Stores additional data about the specified location. The following values are currently supported:
+
+            - "ROOFTOP" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.
+            - "RANGE_INTERPOLATED" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.
+            - "GEOMETRIC_CENTER" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).
+            - "APPROXIMATE" indicates that the returned result is approximate.
+          type: string
+          enum:
+            - ROOFTOP
+            - RANGE_INTERPOLATED
+            - GEOMETRIC_CENTER
+            - APPROXIMATE
+        bounds:
+          $ref: '#/components/schemas/Bounds'
+        viewport:
+          $ref: '#/components/schemas/Viewport'
     GeolocationRequest:
       type: object
       title: GeolocationRequest
@@ -20381,7 +20405,7 @@ components:
           example: (02) 9374 4000
         geometry:
           description: Contains the location and viewport for the location.
-          $ref: '#/components/schemas/PlaceGeometry'
+          $ref: '#/components/schemas/Geometry'
         icon:
           description: Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.
           type: string
@@ -20639,20 +20663,6 @@ components:
           description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.
           type: string
           example: 1700
-    PlaceGeometry:
-      type: object
-      title: PlaceGeometry
-      description: A place geometry object includes the location and viewport of a place.
-      required:
-        - location
-        - viewport
-      properties:
-        location:
-          description: 'Contains the geocoded latitude, longitude value for this place.'
-          $ref: '#/components/schemas/LatLngLiteral'
-        viewport:
-          description: Viewport bounds for this place.
-          $ref: '#/components/schemas/Bounds'
     PlaceReview:
       type: object
       title: PlaceReview

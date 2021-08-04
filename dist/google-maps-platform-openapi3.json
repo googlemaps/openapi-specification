@@ -29102,7 +29102,7 @@
       "PlacePhoto": {
         "type": "object",
         "title": "PlacePhoto",
-        "description": "A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:\n\n```\nhttps://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY\n```\n\nSee [Place Photo](https://developers.google.com/places/web-service/photos) for more information.\n",
+        "description": "A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:\n\n```\nhttps://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY\n```\n\nSee [Place Photos](https://developers.google.com/places/web-service/photos) for more information.\n",
         "required": [
           "photo_reference",
           "html_attributions",

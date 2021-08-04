@@ -8,7 +8,7 @@ A photo of a Place. The photo can be accesed via the [Place Photo](https://devel
 https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY
 ```
 
-See [Place Photo](https://developers.google.com/places/web-service/photos) for more information.
+See [Place Photos](https://developers.google.com/places/web-service/photos) for more information.
 
 | Field               | Required     | Type                | Description                                                                                                                 |
 | :------------------ | ------------ | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |

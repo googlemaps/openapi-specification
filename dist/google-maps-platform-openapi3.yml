@@ -19500,7 +19500,7 @@ components:
           - zw
   schemas:
     Bounds:
-      title: Viewport
+      title: Bounds
       type: object
       required:
         - northeast
@@ -19512,6 +19512,7 @@ components:
           $ref: '#/components/schemas/LatLngLiteral'
     LatLngArrayString:
       description: 'An array of comma separated {latitude,longitude} strings.'
+      title: LatLngArrayString
       example:
         - '35,-100'
         - '40,-110'
@@ -19521,7 +19522,7 @@ components:
         minItems: 2
     LatLngLiteral:
       type: object
-      title: LatLng Literal
+      title: LatLngLiteral
       description: An object describing a specific location with Latitude and Longitude in decimal degrees.
       required:
         - lat
@@ -19535,7 +19536,7 @@ components:
           description: Longitude in decimal degrees
     LatitudeLongitudeLiteral:
       type: object
-      title: Latitidue Longitude Literal
+      title: LatitudeLongitudeLiteral
       description: An object describing a specific location with Latitude and Longitude in decimal degrees.
       required:
         - latitude
@@ -19548,7 +19549,7 @@ components:
           type: number
           description: Longitude in decimal degrees
     AddressComponent:
-      title: Address Component
+      title: AddressComponent
       type: object
       required:
         - long_name
@@ -19601,7 +19602,7 @@ components:
           $ref: '#/components/schemas/Viewport'
     PlusCode:
       type: object
-      title: Plus Code
+      title: PlusCode
       description: 'An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).'
       externalDocs:
         url: 'https://plus.codes/'
@@ -19618,7 +19619,7 @@ components:
           type: string
     TravelMode:
       type: string
-      title: Travel Mode
+      title: TravelMode
       description: |
         - `driving` (default) indicates distance calculation using the road network.
         - `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).
@@ -19631,7 +19632,7 @@ components:
         - TRANSIT
     TextValueObject:
       type: object
-      title: Text Value Object
+      title: TextValueObject
       description: An object containing a numeric value and its formatted text representation.
       required:
         - text
@@ -19645,7 +19646,7 @@ components:
           type: number
     DistanceMatrixElementStatus:
       type: string
-      title: Element status codes
+      title: DistanceMatrixElementStatus
       description: |
         - `OK` indicates the response contains a valid result.
         - `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be geocoded.
@@ -19658,7 +19659,7 @@ components:
         - MAX_ROUTE_LENGTH_EXCEEDED
     DistanceMatrixResponse:
       type: object
-      title: Response body
+      title: DistanceMatrixResponse
       required:
         - origin_addresses
         - destination_addresses
@@ -19685,7 +19686,7 @@ components:
           $ref: '#/components/schemas/DistanceMatrixStatus'
     DistanceMatrixRow:
       type: object
-      title: Distance Matrix Row
+      title: DistanceMatrixRow
       required:
         - elements
       properties:
@@ -19699,7 +19700,7 @@ components:
             $ref: '#/components/schemas/DistanceMatrixElement'
     DistanceMatrixElement:
       type: object
-      title: Distance Matrix Element
+      title: DistanceMatrixElement
       required:
         - status
       properties:
@@ -19712,7 +19713,7 @@ components:
           $ref: '#/components/schemas/DistanceMatrixElementStatus'
     DistanceMatrixStatus:
       type: string
-      title: Status codes
+      title: DistanceMatrixStatus
       description: |
         Status codes returned by service.
         - `OK` indicates the response contains a valid result.
@@ -19738,7 +19739,7 @@ components:
         - UNKNOWN_ERROR
     DirectionsResponse:
       type: object
-      title: Response body
+      title: DirectionsResponse
       required:
         - geocoded_waypoints
         - routes
@@ -19764,7 +19765,7 @@ components:
             type: string
     DirectionsStep:
       type: object
-      title: Directions Step
+      title: DirectionsStep
       properties:
         distance:
           description: TODO
@@ -19793,7 +19794,7 @@ components:
           description: TODO
     DirectionsLeg:
       type: object
-      title: Directions Leg
+      title: DirectionsLeg
       properties:
         distance:
           description: Distance of the leg.
@@ -19833,7 +19834,7 @@ components:
           $ref: '#/components/schemas/DirectionsViaWaypoint'
     DirectionsRoute:
       type: object
-      title: Directions Route
+      title: DirectionsRoute
       description: Routes consist of nested Legs and Steps.
       required:
         - bounds
@@ -19875,7 +19876,7 @@ components:
           description: 'If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.'
     DirectionsStatus:
       type: string
-      title: Status codes
+      title: DirectionsStatus
       description: TODO
       enum:
         - OK
@@ -19889,7 +19890,7 @@ components:
         - UNKNOWN_ERROR
     DirectionsGeocodedWaypoint:
       type: object
-      title: Directions Geocoded Waypoint
+      title: DirectionsGeocodedWaypoint
       properties:
         geocoder_status:
           description: TODO
@@ -19904,7 +19905,7 @@ components:
             type: string
     DirectionsOverviewPolyline:
       type: object
-      title: Directions Overview Polyline
+      title: DirectionsOverviewPolyline
       description: 'Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).'
       required:
         - points
@@ -19914,7 +19915,7 @@ components:
           type: string
     DirectionsViaWaypoint:
       type: object
-      title: Directions Via Waypoint
+      title: DirectionsViaWaypoint
       properties:
         location:
           description: TODO
@@ -19927,7 +19928,7 @@ components:
           type: integer
     ElevationResult:
       type: object
-      title: Elevation Result
+      title: ElevationResult
       required:
         - elevation
         - location
@@ -19943,7 +19944,7 @@ components:
           $ref: '#/components/schemas/LatLngLiteral'
     ElevationResponse:
       type: object
-      title: Response body
+      title: ElevationResponse
       required:
         - status
         - results
@@ -19961,7 +19962,7 @@ components:
             $ref: '#/components/schemas/ElevationResult'
     ElevationStatus:
       type: string
-      title: Status codes
+      title: ElevationStatus
       description: |
         Status codes returned by service.
         - `OK` indicating the API request was successful.
@@ -19985,7 +19986,7 @@ components:
         - UNKNOWN_ERROR
     GeocodingResult:
       type: object
-      title: Geocoding Result
+      title: GeocodingResult
       properties:
         address_components:
           description: An array containing the separate components applicable to this address.
@@ -20009,7 +20010,7 @@ components:
             type: string
     GeocodingResponse:
       type: object
-      title: Response body
+      title: GeocodingResponse
       required:
         - status
         - results
@@ -20022,7 +20023,7 @@ components:
           $ref: '#/components/schemas/GeocodingStatus'
     GeocodingStatus:
       type: string
-      title: Status codes
+      title: GeocodingStatus
       description: |
         The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The "status" field may contain the following values:
 
@@ -20047,7 +20048,7 @@ components:
         - ZERO_RESULTS
     GeolocationRequest:
       type: object
-      title: Request body
+      title: GeolocationRequest
       description: 'The request body must be formatted as JSON. The following fields are supported, and all fields are optional.'
       properties:
         homeMobileCountryCode:
@@ -20074,10 +20075,10 @@ components:
           type: array
           description: An array of two or more WiFi access point objects.
           items:
-            $ref: '#/components/schemas/WifiAccessPoint'
+            $ref: '#/components/schemas/WiFiAccessPoint'
     GeolocationResponse:
       type: object
-      title: Response body
+      title: GeolocationResponse
       description: A successful geolocation request will return a JSON-formatted response defining a location and radius.
       required:
         - location
@@ -20096,7 +20097,7 @@ components:
         accuracy: 30
     CellTower:
       type: object
-      title: Cell Tower
+      title: CellTower
       description: 'Attributes used to describe a cell tower. The following optional fields are not currently used, but may be included if values are available: `age`, `signalStrength`, `timingAdvance`.'
       required:
         - cellId
@@ -20134,9 +20135,9 @@ components:
             age: 0
             signalStrength: -60
             timingAdvance: 15
-    WifiAccessPoint:
+    WiFiAccessPoint:
       type: object
-      title: WiFi Access Point
+      title: WiFiAccessPoint
       description: Attributes used to describe a WiFi access point.
       required:
         - macAddress
@@ -20167,7 +20168,7 @@ components:
             signalToNoiseRatio: 0
     NearestRoadsError:
       type: object
-      title: Nearest Roads Error
+      title: NearestRoadsError
       required:
         - code
         - message
@@ -20184,13 +20185,13 @@ components:
           type: string
     NearestRoadsErrorResponse:
       type: object
-      title: Error response body
+      title: NearestRoadsErrorResponse
       properties:
         error:
           $ref: '#/components/schemas/NearestRoadsError'
     NearestRoadsResponse:
       type: object
-      title: Response body
+      title: NearestRoadsResponse
       properties:
         snappedPoints:
           description: An array of snapped points.
@@ -20199,7 +20200,7 @@ components:
             $ref: '#/components/schemas/SnappedPoint'
     SnappedPoint:
       type: object
-      title: Snap to Roads Response Body
+      title: SnappedPoint
       required:
         - location
         - placeId
@@ -20214,7 +20215,7 @@ components:
           type: string
     SnapToRoadsResponse:
       type: object
-      title: Response body
+      title: SnapToRoadsResponse
       properties:
         snappedPoints:
           description: An array of snapped points.
@@ -20226,7 +20227,7 @@ components:
           type: string
     TimeZoneResponse:
       type: object
-      title: Response body
+      title: TimeZoneResponse
       properties:
         dstOffset:
           description: The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.
@@ -20247,7 +20248,7 @@ components:
           type: string
     TimeZoneStatus:
       type: string
-      title: Status codes
+      title: TimeZoneStatus
       description: |
         The `status` field within the Time Zone response object contains the status of the request. The "status" field may contain the following values:
 
@@ -20273,7 +20274,7 @@ components:
         - ZERO_RESULTS
     ErrorResponse:
       type: object
-      title: Error Response
+      title: ErrorResponse
       description: 'In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.'
       required:
         - error
@@ -20292,7 +20293,7 @@ components:
           status: INVALID_ARGUMENT
     ErrorObject:
       type: object
-      title: Error Object
+      title: ErrorObject
       required:
         - code
         - message
@@ -20311,7 +20312,7 @@ components:
             $ref: '#/components/schemas/ErrorDetail'
     ErrorDetail:
       type: object
-      title: Error Detail
+      title: ErrorDetail
       required:
         - reason
         - message
@@ -20466,7 +20467,7 @@ components:
           example: 'http://google.com'
     PlaceAutocompleteMatchedSubstring:
       type: object
-      title: Matched Substring
+      title: PlaceAutocompleteMatchedSubstring
       required:
         - length
         - offset
@@ -20479,7 +20480,7 @@ components:
           type: number
     PlaceAutocompletePrediction:
       type: object
-      title: Autocomplete Prediction
+      title: PlaceAutocompletePrediction
       required:
         - description
         - matched_substrings
@@ -20519,7 +20520,7 @@ components:
             type: string
     PlaceAutocompleteStructuredFormat:
       type: object
-      title: Autocomplete Structured Format
+      title: PlaceAutocompleteStructuredFormat
       required:
         - main_text
         - main_text_matched_substrings
@@ -20538,7 +20539,7 @@ components:
           type: string
     PlaceAutocompleteTerm:
       type: object
-      title: Autocomplete Term
+      title: PlaceAutocompleteTerm
       required:
         - value
         - offset
@@ -20551,7 +20552,7 @@ components:
           type: number
     PlacePhoto:
       type: object
-      title: Place Photo
+      title: PlacePhoto
       description: |
         A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:
 
@@ -20583,7 +20584,7 @@ components:
           example: Aap_uEDY1GahdnFHaMArH3g6W4bELCIn9yaZ0XGqh1-G2lX3OwzTExM6g-_0U8qedk5o3R1SmtMK-NMt34dDMcCNnc4DWREX0vQEH9DjvfF70ZPHo3IFbT-TU_oCNCCB3kxe36EsdXeoKEtRH74NueUIeslebZuVeteDpKvpwVqxRpZFVSjS
     PlaceOpeningHours:
       type: object
-      title: Place Opening Hours
+      title: PlaceOpeningHours
       description: An object describing the opening hours of a place.
       required:
         - open_now
@@ -20612,7 +20613,7 @@ components:
             - 'Sunday: Closed'
     PlaceOpeningHoursPeriod:
       type: object
-      title: Place Opening Hours Period
+      title: PlaceOpeningHoursPeriod
       required:
         - open
         - close
@@ -20626,7 +20627,7 @@ components:
           $ref: '#/components/schemas/PlaceOpeningHoursPeriodDetail'
     PlaceOpeningHoursPeriodDetail:
       type: object
-      title: Place Opening Hours Period Detail
+      title: PlaceOpeningHoursPeriodDetail
       required:
         - day
         - time
@@ -20640,7 +20641,7 @@ components:
           example: 1700
     PlaceGeometry:
       type: object
-      title: Place Geometry
+      title: PlaceGeometry
       description: A place geometry object includes the location and viewport of a place.
       required:
         - location
@@ -20654,7 +20655,7 @@ components:
           $ref: '#/components/schemas/Bounds'
     PlaceReview:
       type: object
-      title: Place Review
+      title: PlaceReview
       description: A review of the place submitted by a user.
       required:
         - author_name
@@ -20690,7 +20691,7 @@ components:
           type: number
     PlacesAutocompleteResponse:
       type: object
-      title: Response body
+      title: PlacesAutocompleteResponse
       required:
         - predictions
         - status
@@ -20716,7 +20717,7 @@ components:
             type: string
     PlacesAutocompleteStatus:
       type: string
-      title: Status codes
+      title: PlacesAutocompleteStatus
       description: |
         Status codes returned by service.
         - `OK` indicating the API request was successful.
@@ -20741,7 +20742,7 @@ components:
         - UNKNOWN_ERROR
     PlacesDetailsResponse:
       type: object
-      title: Response body
+      title: PlacesDetailsResponse
       required:
         - html_attributions
         - result
@@ -20766,7 +20767,7 @@ components:
             type: string
     PlacesDetailsStatus:
       type: string
-      title: Status codes
+      title: PlacesDetailsStatus
       description: |
         Status codes returned by service.
         - `OK` indicating the API request was successful.
@@ -20793,7 +20794,7 @@ components:
         - UNKNOWN_ERROR
     PlacesFindPlaceFromTextResponse:
       type: object
-      title: Response body
+      title: PlacesFindPlaceFromTextResponse
       required:
         - candidates
         - status
@@ -20821,7 +20822,7 @@ components:
             type: string
     PlacesNearbySearchResponse:
       type: object
-      title: Response body
+      title: PlacesNearbySearchResponse
       required:
         - html_attributions
         - results
@@ -20858,7 +20859,7 @@ components:
           type: string
     PlacesQueryAutocompleteResponse:
       type: object
-      title: Response body
+      title: PlacesQueryAutocompleteResponse
       required:
         - predictions
         - status
@@ -20884,7 +20885,7 @@ components:
             type: string
     PlacesSearchStatus:
       type: string
-      title: Status codes
+      title: PlacesSearchStatus
       description: |
         Status codes returned by service.
         - `OK` indicating the API request was successful.
@@ -20909,7 +20910,7 @@ components:
         - UNKNOWN_ERROR
     PlacesTextSearchResponse:
       type: object
-      title: Response body
+      title: PlacesTextSearchResponse
       required:
         - html_attributions
         - results

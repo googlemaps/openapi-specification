@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Error response body
+title: NearestRoadsErrorResponse
 properties:
   error:
     $ref: "./NearestRoadsError.yml"

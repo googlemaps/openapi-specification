@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Response body
+title: GeocodingResponse
 required: [status, results]
 properties:
   results:

@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placesautocompletestatus] -->
-<h3 class="schema-object" id="PlacesAutocompleteStatus">Status codes</h3>
+<h3 class="schema-object" id="PlacesAutocompleteStatus">PlacesAutocompleteStatus</h3>
 
 Status codes returned by service.
 

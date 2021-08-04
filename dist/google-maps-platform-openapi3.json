@@ -27761,7 +27761,7 @@
     },
     "schemas": {
       "Bounds": {
-        "title": "Viewport",
+        "title": "Bounds",
         "type": "object",
         "required": [
           "northeast",
@@ -27778,6 +27778,7 @@
       },
       "LatLngArrayString": {
         "description": "An array of comma separated {latitude,longitude} strings.",
+        "title": "LatLngArrayString",
         "example": [
           "35,-100",
           "40,-110"
@@ -27790,7 +27791,7 @@
       },
       "LatLngLiteral": {
         "type": "object",
-        "title": "LatLng Literal",
+        "title": "LatLngLiteral",
         "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
         "required": [
           "lat",
@@ -27809,7 +27810,7 @@
       },
       "LatitudeLongitudeLiteral": {
         "type": "object",
-        "title": "Latitidue Longitude Literal",
+        "title": "LatitudeLongitudeLiteral",
         "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
         "required": [
           "latitude",
@@ -27827,7 +27828,7 @@
         }
       },
       "AddressComponent": {
-        "title": "Address Component",
+        "title": "AddressComponent",
         "type": "object",
         "required": [
           "long_name",
@@ -27892,7 +27893,7 @@
       },
       "PlusCode": {
         "type": "object",
-        "title": "Plus Code",
+        "title": "PlusCode",
         "description": "An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).",
         "externalDocs": {
           "url": "https://plus.codes/",
@@ -27915,7 +27916,7 @@
       },
       "TravelMode": {
         "type": "string",
-        "title": "Travel Mode",
+        "title": "TravelMode",
         "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
         "enum": [
           "DRIVING",
@@ -27926,7 +27927,7 @@
       },
       "TextValueObject": {
         "type": "object",
-        "title": "Text Value Object",
+        "title": "TextValueObject",
         "description": "An object containing a numeric value and its formatted text representation.",
         "required": [
           "text",
@@ -27945,7 +27946,7 @@
       },
       "DistanceMatrixElementStatus": {
         "type": "string",
-        "title": "Element status codes",
+        "title": "DistanceMatrixElementStatus",
         "description": "- `OK` indicates the response contains a valid result.\n- `NOT_FOUND` indicates that the origin and/or destination of this pairing could not be geocoded.\n- `ZERO_RESULTS` indicates no route could be found between the origin and destination.\n- `MAX_ROUTE_LENGTH_EXCEEDED` indicates the requested route is too long and cannot be processed.\n",
         "enum": [
           "OK",
@@ -27956,7 +27957,7 @@
       },
       "DistanceMatrixResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "DistanceMatrixResponse",
         "required": [
           "origin_addresses",
           "destination_addresses",
@@ -27993,7 +27994,7 @@
       },
       "DistanceMatrixRow": {
         "type": "object",
-        "title": "Distance Matrix Row",
+        "title": "DistanceMatrixRow",
         "required": [
           "elements"
         ],
@@ -28009,7 +28010,7 @@
       },
       "DistanceMatrixElement": {
         "type": "object",
-        "title": "Distance Matrix Element",
+        "title": "DistanceMatrixElement",
         "required": [
           "status"
         ],
@@ -28028,7 +28029,7 @@
       },
       "DistanceMatrixStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "DistanceMatrixStatus",
         "description": "Status codes returned by service.\n- `OK` indicates the response contains a valid result.\n- `INVALID_REQUEST` indicates that the provided request was invalid.\n- `MAX_ELEMENTS_EXCEEDED` indicates that the product of origins and destinations exceeds the per-query limit.\n- `MAX_DIMENSIONS_EXCEEDED` indicates that the number of origins or destinations exceeds the per-query limit.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates the service has received too many requests from your application within the allowed time period.\n- `REQUEST_DENIED` indicates that the service denied use of the Distance Matrix service by your application.\n- `UNKNOWN_ERROR` indicates a Distance Matrix request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
@@ -28043,7 +28044,7 @@
       },
       "DirectionsResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "DirectionsResponse",
         "required": [
           "geocoded_waypoints",
           "routes",
@@ -28079,7 +28080,7 @@
       },
       "DirectionsStep": {
         "type": "object",
-        "title": "Directions Step",
+        "title": "DirectionsStep",
         "properties": {
           "distance": {
             "description": "TODO",
@@ -28119,7 +28120,7 @@
       },
       "DirectionsLeg": {
         "type": "object",
-        "title": "Directions Leg",
+        "title": "DirectionsLeg",
         "properties": {
           "distance": {
             "description": "Distance of the leg.",
@@ -28174,7 +28175,7 @@
       },
       "DirectionsRoute": {
         "type": "object",
-        "title": "Directions Route",
+        "title": "DirectionsRoute",
         "description": "Routes consist of nested Legs and Steps.",
         "required": [
           "bounds",
@@ -28230,7 +28231,7 @@
       },
       "DirectionsStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "DirectionsStatus",
         "description": "TODO",
         "enum": [
           "OK",
@@ -28246,7 +28247,7 @@
       },
       "DirectionsGeocodedWaypoint": {
         "type": "object",
-        "title": "Directions Geocoded Waypoint",
+        "title": "DirectionsGeocodedWaypoint",
         "properties": {
           "geocoder_status": {
             "description": "TODO",
@@ -28267,7 +28268,7 @@
       },
       "DirectionsOverviewPolyline": {
         "type": "object",
-        "title": "Directions Overview Polyline",
+        "title": "DirectionsOverviewPolyline",
         "description": "Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).",
         "required": [
           "points"
@@ -28281,7 +28282,7 @@
       },
       "DirectionsViaWaypoint": {
         "type": "object",
-        "title": "Directions Via Waypoint",
+        "title": "DirectionsViaWaypoint",
         "properties": {
           "location": {
             "description": "TODO",
@@ -28299,7 +28300,7 @@
       },
       "ElevationResult": {
         "type": "object",
-        "title": "Elevation Result",
+        "title": "ElevationResult",
         "required": [
           "elevation",
           "location"
@@ -28321,7 +28322,7 @@
       },
       "ElevationResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "ElevationResponse",
         "required": [
           "status",
           "results"
@@ -28345,7 +28346,7 @@
       },
       "ElevationStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "ElevationStatus",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `DATA_NOT_AVAILABLE` indicating that there's no available data for the input locations. \n- `INVALID_REQUEST` indicating the API request was malformed.\n- `OVER_DAILY_LIMIT` indicating any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicating the requestor has exceeded quota.\n- `REQUEST_DENIED` indicating the API did not complete the request.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -28359,7 +28360,7 @@
       },
       "GeocodingResult": {
         "type": "object",
-        "title": "Geocoding Result",
+        "title": "GeocodingResult",
         "properties": {
           "address_components": {
             "description": "An array containing the separate components applicable to this address.",
@@ -28393,7 +28394,7 @@
       },
       "GeocodingResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "GeocodingResponse",
         "required": [
           "status",
           "results"
@@ -28412,7 +28413,7 @@
       },
       "GeocodingStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "GeocodingStatus",
         "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
@@ -28426,7 +28427,7 @@
       },
       "GeolocationRequest": {
         "type": "object",
-        "title": "Request body",
+        "title": "GeolocationRequest",
         "description": "The request body must be formatted as JSON. The following fields are supported, and all fields are optional.",
         "properties": {
           "homeMobileCountryCode": {
@@ -28460,14 +28461,14 @@
             "type": "array",
             "description": "An array of two or more WiFi access point objects.",
             "items": {
-              "$ref": "#/components/schemas/WifiAccessPoint"
+              "$ref": "#/components/schemas/WiFiAccessPoint"
             }
           }
         }
       },
       "GeolocationResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "GeolocationResponse",
         "description": "A successful geolocation request will return a JSON-formatted response defining a location and radius.",
         "required": [
           "location",
@@ -28493,7 +28494,7 @@
       },
       "CellTower": {
         "type": "object",
-        "title": "Cell Tower",
+        "title": "CellTower",
         "description": "Attributes used to describe a cell tower. The following optional fields are not currently used, but may be included if values are available: `age`, `signalStrength`, `timingAdvance`.",
         "required": [
           "cellId",
@@ -28545,9 +28546,9 @@
           ]
         }
       },
-      "WifiAccessPoint": {
+      "WiFiAccessPoint": {
         "type": "object",
-        "title": "WiFi Access Point",
+        "title": "WiFiAccessPoint",
         "description": "Attributes used to describe a WiFi access point.",
         "required": [
           "macAddress"
@@ -28592,7 +28593,7 @@
       },
       "NearestRoadsError": {
         "type": "object",
-        "title": "Nearest Roads Error",
+        "title": "NearestRoadsError",
         "required": [
           "code",
           "message",
@@ -28615,7 +28616,7 @@
       },
       "NearestRoadsErrorResponse": {
         "type": "object",
-        "title": "Error response body",
+        "title": "NearestRoadsErrorResponse",
         "properties": {
           "error": {
             "$ref": "#/components/schemas/NearestRoadsError"
@@ -28624,7 +28625,7 @@
       },
       "NearestRoadsResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "NearestRoadsResponse",
         "properties": {
           "snappedPoints": {
             "description": "An array of snapped points.",
@@ -28637,7 +28638,7 @@
       },
       "SnappedPoint": {
         "type": "object",
-        "title": "Snap to Roads Response Body",
+        "title": "SnappedPoint",
         "required": [
           "location",
           "placeId"
@@ -28658,7 +28659,7 @@
       },
       "SnapToRoadsResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "SnapToRoadsResponse",
         "properties": {
           "snappedPoints": {
             "description": "An array of snapped points.",
@@ -28675,7 +28676,7 @@
       },
       "TimeZoneResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "TimeZoneResponse",
         "properties": {
           "dstOffset": {
             "description": "The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.",
@@ -28704,7 +28705,7 @@
       },
       "TimeZoneStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "TimeZoneStatus",
         "description": "The `status` field within the Time Zone response object contains the status of the request. The \"status\" field may contain the following values:\n\n- `OK` indicates that the request was successful.\n- `INVALID_REQUEST` indicates that the request was malformed.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n\n- `OVER_QUERY_LIMIT` indicates the requestor has exceeded quota.\n- `REQUEST_DENIED` indicates that the API did not complete the request. Confirm that the request was sent over HTTPS instead of HTTP.\n- `UNKNOWN_ERROR` indicates an unknown error.\n- `ZERO_RESULTS` indicates that no time zone data could be found for the specified position or time. Confirm that the request is for a location on land, and not over water.\n",
         "enum": [
           "OK",
@@ -28718,7 +28719,7 @@
       },
       "ErrorResponse": {
         "type": "object",
-        "title": "Error Response",
+        "title": "ErrorResponse",
         "description": "In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.",
         "required": [
           "error"
@@ -28746,7 +28747,7 @@
       },
       "ErrorObject": {
         "type": "object",
-        "title": "Error Object",
+        "title": "ErrorObject",
         "required": [
           "code",
           "message",
@@ -28772,7 +28773,7 @@
       },
       "ErrorDetail": {
         "type": "object",
-        "title": "Error Detail",
+        "title": "ErrorDetail",
         "required": [
           "reason",
           "message"
@@ -28954,7 +28955,7 @@
       },
       "PlaceAutocompleteMatchedSubstring": {
         "type": "object",
-        "title": "Matched Substring",
+        "title": "PlaceAutocompleteMatchedSubstring",
         "required": [
           "length",
           "offset"
@@ -28972,7 +28973,7 @@
       },
       "PlaceAutocompletePrediction": {
         "type": "object",
-        "title": "Autocomplete Prediction",
+        "title": "PlaceAutocompletePrediction",
         "required": [
           "description",
           "matched_substrings",
@@ -29024,7 +29025,7 @@
       },
       "PlaceAutocompleteStructuredFormat": {
         "type": "object",
-        "title": "Autocomplete Structured Format",
+        "title": "PlaceAutocompleteStructuredFormat",
         "required": [
           "main_text",
           "main_text_matched_substrings",
@@ -29050,7 +29051,7 @@
       },
       "PlaceAutocompleteTerm": {
         "type": "object",
-        "title": "Autocomplete Term",
+        "title": "PlaceAutocompleteTerm",
         "required": [
           "value",
           "offset"
@@ -29068,7 +29069,7 @@
       },
       "PlacePhoto": {
         "type": "object",
-        "title": "Place Photo",
+        "title": "PlacePhoto",
         "description": "A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:\n\n```\nhttps://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY\n```\n\nSee [Place Photo](https://developers.google.com/places/web-service/photos) for more information.\n",
         "required": [
           "photo_reference",
@@ -29101,7 +29102,7 @@
       },
       "PlaceOpeningHours": {
         "type": "object",
-        "title": "Place Opening Hours",
+        "title": "PlaceOpeningHours",
         "description": "An object describing the opening hours of a place.",
         "required": [
           "open_now"
@@ -29138,7 +29139,7 @@
       },
       "PlaceOpeningHoursPeriod": {
         "type": "object",
-        "title": "Place Opening Hours Period",
+        "title": "PlaceOpeningHoursPeriod",
         "required": [
           "open",
           "close"
@@ -29156,7 +29157,7 @@
       },
       "PlaceOpeningHoursPeriodDetail": {
         "type": "object",
-        "title": "Place Opening Hours Period Detail",
+        "title": "PlaceOpeningHoursPeriodDetail",
         "required": [
           "day",
           "time"
@@ -29175,7 +29176,7 @@
       },
       "PlaceGeometry": {
         "type": "object",
-        "title": "Place Geometry",
+        "title": "PlaceGeometry",
         "description": "A place geometry object includes the location and viewport of a place.",
         "required": [
           "location",
@@ -29194,7 +29195,7 @@
       },
       "PlaceReview": {
         "type": "object",
-        "title": "Place Review",
+        "title": "PlaceReview",
         "description": "A review of the place submitted by a user.",
         "required": [
           "author_name",
@@ -29241,7 +29242,7 @@
       },
       "PlacesAutocompleteResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesAutocompleteResponse",
         "required": [
           "predictions",
           "status"
@@ -29273,7 +29274,7 @@
       },
       "PlacesAutocompleteStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "PlacesAutocompleteStatus",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `ZERO_RESULTS` indicating that the search was successful but returned no results. This may occur if the search was passed a bounds in a remote location.\n- `INVALID_REQUEST` indicating the API request was malformed, generally due to the missing `input` parameter.\n- `OVER_QUERY_LIMIT` indicating any of the following:\n  - You have exceeded the QPS limits.\n  - Billing has not been enabled on your account.\n  - The monthly $200 credit, or a self-imposed usage cap, has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n  See the [Maps FAQ](https://developers.google.com/maps/faq#over-limit-key-error) for more information about how to resolve this error.\n- `REQUEST_DENIED` indicating that your request was denied, generally because:\n  - The request is missing an API key.\n  - The `key` parameter is invalid.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -29286,7 +29287,7 @@
       },
       "PlacesDetailsResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesDetailsResponse",
         "required": [
           "html_attributions",
           "result",
@@ -29319,7 +29320,7 @@
       },
       "PlacesDetailsStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "PlacesDetailsStatus",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `ZERO_RESULTS` indicating that the referenced location, `place_id`, was valid but no longer refers to a valid result. This may occur if the establishment is no longer in business. \n- `NOT_FOUND` indicating that that the referenced location, `place_id`, was not found in the Places database. \n- `INVALID_REQUEST` indicating the API request was malformed.\n- `OVER_QUERY_LIMIT` indicating any of the following:\n  - You have exceeded the QPS limits.\n  - Billing has not been enabled on your account.\n  - The monthly $200 credit, or a self-imposed usage cap, has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n  See the [Maps FAQ](https://developers.google.com/maps/faq#over-limit-key-error) for more information about how to resolve this error.\n- `REQUEST_DENIED` indicating that your request was denied, generally because:\n  - The request is missing an API key.\n  - The `key` parameter is invalid.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -29333,7 +29334,7 @@
       },
       "PlacesFindPlaceFromTextResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesFindPlaceFromTextResponse",
         "required": [
           "candidates",
           "status"
@@ -29366,7 +29367,7 @@
       },
       "PlacesNearbySearchResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesNearbySearchResponse",
         "required": [
           "html_attributions",
           "results",
@@ -29410,7 +29411,7 @@
       },
       "PlacesQueryAutocompleteResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesQueryAutocompleteResponse",
         "required": [
           "predictions",
           "status"
@@ -29442,7 +29443,7 @@
       },
       "PlacesSearchStatus": {
         "type": "string",
-        "title": "Status codes",
+        "title": "PlacesSearchStatus",
         "description": "Status codes returned by service.\n- `OK` indicating the API request was successful.\n- `ZERO_RESULTS` indicating that the search was successful but returned no results. This may occur if the search was passed a `latlng` in a remote location.\n- `INVALID_REQUEST` indicating the API request was malformed, generally due to missing required query parameter (`location` or `radius`).\n- `OVER_QUERY_LIMIT` indicating any of the following:\n  - You have exceeded the QPS limits.\n  - Billing has not been enabled on your account.\n  - The monthly $200 credit, or a self-imposed usage cap, has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n  See the [Maps FAQ](https://developers.google.com/maps/faq#over-limit-key-error) for more information about how to resolve this error.\n- `REQUEST_DENIED` indicating that your request was denied, generally because:\n  - The request is missing an API key.\n  - The `key` parameter is invalid.\n- `UNKNOWN_ERROR` indicating an unknown error.\n",
         "enum": [
           "OK",
@@ -29455,7 +29456,7 @@
       },
       "PlacesTextSearchResponse": {
         "type": "object",
-        "title": "Response body",
+        "title": "PlacesTextSearchResponse",
         "required": [
           "html_attributions",
           "results",

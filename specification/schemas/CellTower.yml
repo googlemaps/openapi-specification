@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Cell Tower
+title: CellTower
 description: "Attributes used to describe a cell tower. The following optional fields are not currently used, but may be included if values are available: `age`, `signalStrength`, `timingAdvance`."
 required:
   - cellId

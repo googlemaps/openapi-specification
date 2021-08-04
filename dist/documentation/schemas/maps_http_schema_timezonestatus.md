@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_timezonestatus] -->
-<h3 class="schema-object" id="TimeZoneStatus">Status codes</h3>
+<h3 class="schema-object" id="TimeZoneStatus">TimeZoneStatus</h3>
 
 The `status` field within the Time Zone response object contains the status of the request. The "status" field may contain the following values:
 

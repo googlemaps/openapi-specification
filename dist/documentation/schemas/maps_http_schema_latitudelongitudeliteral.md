@@ -1,6 +1,6 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_latitudelongitudeliteral] -->
-<h3 class="schema-object" id="LatitudeLongitudeLiteral">Latitidue Longitude Literal</h3>
+<h3 class="schema-object" id="LatitudeLongitudeLiteral">LatitudeLongitudeLiteral</h3>
 
 An object describing a specific location with Latitude and Longitude in decimal degrees.
 

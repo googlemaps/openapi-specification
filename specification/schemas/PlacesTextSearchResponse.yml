@@ -13,7 +13,7 @@
 # limitations under the License.
 
 type: object
-title: Response body
+title: PlacesTextSearchResponse
 required: [html_attributions, results, status]
 properties:
   html_attributions:

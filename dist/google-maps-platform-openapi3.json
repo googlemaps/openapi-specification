@@ -27763,6 +27763,7 @@
       "Bounds": {
         "title": "Bounds",
         "type": "object",
+        "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
         "required": [
           "northeast",
           "southwest"

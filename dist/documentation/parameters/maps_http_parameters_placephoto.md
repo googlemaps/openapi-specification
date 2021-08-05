@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_placephoto] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="photoreference">photoreference</h3>
+-   <h3 id="photo_reference">photo_reference</h3>
 
     A string identifier that uniquely identifies a photo. Photo references are returned from either a Place Search or Place Details request.
 

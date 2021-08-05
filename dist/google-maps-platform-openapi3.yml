@@ -18749,7 +18749,7 @@ paths:
 
         Photos returned by the Photo service are sourced from a variety of locations, including business owners and user contributed photos. In most cases, these photos can be used without attribution, or will have the required attribution included as a part of the image. However, if the returned photo element includes a value in the html_attributions field, you will have to include the additional attribution in your application wherever you display the image.
       parameters:
-        - name: photoreference
+        - name: photo_reference
           description: |
             A string identifier that uniquely identifies a photo. Photo references are returned from either a Place Search or Place Details request.
           schema:
@@ -20571,7 +20571,7 @@ components:
         A photo of a Place. The photo can be accesed via the [Place Photo](https://developers.google.com/places/web-service/photos) API using an url in the following pattern:
 
         ```
-        https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photoreference&key=YOUR_API_KEY
+        https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=photo_reference&key=YOUR_API_KEY
         ```
 
         See [Place Photos](https://developers.google.com/places/web-service/photos) for more information.

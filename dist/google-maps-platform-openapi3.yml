@@ -20242,6 +20242,8 @@ components:
     TimeZoneResponse:
       type: object
       title: TimeZoneResponse
+      required:
+        - status
       properties:
         dstOffset:
           description: The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.

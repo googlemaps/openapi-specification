@@ -117,6 +117,73 @@ const executeRequest = async (
     });
   });
 };
+const response = async (output, regionTag, request) => {
+  if (argv.skip.indexOf(regionTag) != -1) continue;
+    regionTag += "_response";
+    request = request.replace("YOUR_API_KEY", process.env.GOOGLE_MAPS_API_KEY!);
+
+    if (regionTag.indexOf("binary") === -1) {
+      const response = await executeRequest(request, /error/i.test(regionTag));
+
+      const destination = path.join(output, `${regionTag}.yml`);
+
+      writeFileSync(
+        destination,
+        prettier.format(
+          `${header}
+        # [START ${regionTag}]
+        ${JSON.stringify(response, null, 2)}
+        # [END ${regionTag}]
+      `,
+          { parser: "yaml" }
+        )
+      );
+    } else {
+      // extract the url from the curl snippet (YUCK)
+      const match = request.match(/'https(.*)'/g)!;
+      const url = match[0].replace(/'/g, "");
+
+      let response: AxiosResponse;
+      try {
+        // use axios to get the binary data
+        response = await axios.get(url, { responseType: "stream" });
+      } catch (e) {
+        if (e.response.status === 403 && regionTag.indexOf("error") !== -1) {
+          response = e.response;
+        } else {
+          throw e;
+        }
+      }
+
+      // get the extension from the content-type header
+      // ignoring content-disposition since it isn't always available
+      const ext = { "image/png": "png", "image/jpeg": "jpg" }[
+        response.headers["content-type"]
+      ];
+
+      const destination = path.join(output, `${regionTag}.${ext}`);
+
+      // pipe the result stream into a file on disk
+      try {
+        unlinkSync(destination);
+      } catch (e) {}
+      // get redirect url
+      response.data.pipe(createWriteStream(destination));
+
+      // await until download finishes
+      await new Promise((resolve, reject) => {
+        response.data.on("end", () => {
+          resolve(null);
+        });
+
+        response.data.on("error", () => {
+          reject();
+        });
+      });      
+    }
+    console.log(`Generated response for: ${regionTag}`);
+  }
+};
 
 const main = async (argv: any) => {
   for (let [regionTag, request] of Object.entries(

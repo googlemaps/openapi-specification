@@ -45,6 +45,7 @@ export const build = async (
     | OpenAPIV3.NonArraySchemaObject,
   key: string,
   spec: OpenAPIV3.Document,
+  regionTag: string,
 ): Promise<Parent> => {
   if (isRef(schema)) {
     throw "cannot handle ref here";
@@ -129,7 +130,7 @@ export const build = async (
   }
 
   // add feedback links to documentation
-  nodes.push(feedbackLinks(key, "schemas"));
+  nodes.push(feedbackLinks(key, "schemas", regionTag));
 
   return root(nodes);
 };

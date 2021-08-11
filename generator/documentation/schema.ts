@@ -44,7 +44,7 @@ const main = async (argv: any) => {
   for (const key in spec.components!.schemas) {
     const schema = spec.components!.schemas[key];
     const regionTag = `maps_http_schema_${slugify(key).toLowerCase()}`;
-    const markdown = mdProcessor.stringify(await build(schema, key, spec));
+    const markdown = mdProcessor.stringify(await build(schema, key, spec, regionTag));
     // write markdown file
     pack.entry(
       {

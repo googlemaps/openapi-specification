@@ -8,7 +8,7 @@
 
     <div class="note">Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.</div>
 
-<h2 id="optional-parameters">Optional parameters</h2>
+<!---->
 
 
 

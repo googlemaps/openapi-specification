@@ -109,7 +109,7 @@ const main = async (argv: any) => {
         
         nodes.push(list("unordered", optional.map(build)));
 
-        nodes.push(feedbackLinks(key, "parameters"));
+        nodes.push(feedbackLinks(key, "parameters", regionTag));
 
         const markdown = mdProcessor.stringify(root(nodes));
         // write markdown file

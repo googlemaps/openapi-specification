@@ -101,13 +101,12 @@ const main = async (argv: any) => {
         }
         nodes.push(list("unordered", required.map(build)));
 
-        if (required.length) {
+        if (optional.length) {
           nodes.push(
             htmlNode('<h2 id="optional-parameters">Optional parameters</h2>')
           );
-        } else {
-          nodes.push(htmlNode('<h2 id="parameters">Parameters</h2>'));
-        }
+        } 
+        
         nodes.push(list("unordered", optional.map(build)));
 
         nodes.push(feedbackLinks(key, "parameters"));

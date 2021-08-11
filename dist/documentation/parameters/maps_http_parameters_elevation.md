@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_elevation] -->
 
 
-<h2 id="parameters">Parameters</h2>
+<h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 id="locations">locations</h3>
 

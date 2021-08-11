@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_geocode] -->
 
 
-<h2 id="parameters">Parameters</h2>
+<h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 id="address">address</h3>
 

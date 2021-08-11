@@ -21,6 +21,7 @@ import {
   writeFileSync,
   createWriteStream,
   unlinkSync,
+  readFileSync,
 } from "fs";
 import { exec } from "child_process";
 import path from "path";
@@ -118,6 +119,16 @@ const executeJSONRequest = async (
   });
 };
 
+const xmlInsertRegionTags = (destination: string, regionTag: string) => {
+  const contents = readFileSync(destination, "utf8");
+
+  const lines = contents.split("\n").filter(value => value !== "");
+  lines.splice(1, 0, `<!-- [START ${regionTag}] -->`);
+  lines.push(`<!-- [END ${regionTag}] -->`);
+  lines.push('');
+  writeFileSync(destination, lines.join("\n"));
+};
+
 const response = async (output, regionTag, request, xml = false) => {
   regionTag += "_response";
   console.log(`Generating response for: ${regionTag}`);
@@ -164,12 +175,16 @@ const response = async (output, regionTag, request, xml = false) => {
     try {
       unlinkSync(destination);
     } catch (e) {}
-    // get redirect url
-    response.data.pipe(createWriteStream(destination));
+    
+    const writeStream = createWriteStream(destination);
+    response.data.pipe(writeStream);
 
     // await until download finishes
     await new Promise((resolve, reject) => {
-      response.data.on("end", () => {
+      writeStream.on("finish", () => {
+        if (ext === "xml") {
+          xmlInsertRegionTags(destination, regionTag);
+        }
         resolve(null);
       });
 

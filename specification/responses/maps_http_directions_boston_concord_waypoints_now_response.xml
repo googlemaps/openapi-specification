@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_directions_boston_concord_waypoints_now_response] -->
 <DirectionsResponse>
  <status>OK</status>
  <route>
@@ -570,8 +571,8 @@
    <start_address>Boston, MA, USA</start_address>
    <end_address>Concord, MA, USA</end_address>
    <duration_in_traffic>
-    <value>3072</value>
-    <text>51 mins</text>
+    <value>3397</value>
+    <text>57 mins</text>
    </duration_in_traffic>
    <via_waypoint>
     <location>
@@ -630,3 +631,4 @@
   <place_id>ChIJ9SKkJkCa44kRkKR4K5p3zlg</place_id>
  </geocoded_waypoint>
 </DirectionsResponse>
+<!-- [END maps_http_directions_boston_concord_waypoints_now_response] -->

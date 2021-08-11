@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>neighborhood</type>
+  <type>political</type>
+  <formatted_address>Winnetka, Los Angeles, CA, USA</formatted_address>
+  <address_component>
+   <long_name>Winnetka</long_name>
+   <short_name>Winnetka</short_name>
+   <type>neighborhood</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Los Angeles</long_name>
+   <short_name>Los Angeles</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Los Angeles County</long_name>
+   <short_name>Los Angeles County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>California</long_name>
+   <short_name>CA</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>34.2048586</lat>
+    <lng>-118.5739621</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>34.1854649</lat>
+     <lng>-118.5885560</lng>
+    </southwest>
+    <northeast>
+     <lat>34.2355209</lat>
+     <lng>-118.5534191</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>34.1854649</lat>
+     <lng>-118.5885560</lng>
+    </southwest>
+    <northeast>
+     <lat>34.2355209</lat>
+     <lng>-118.5534191</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJ0fd4S_KbwoAR2hRDrsr3HmQ</place_id>
+ </result>
+</GeocodeResponse>

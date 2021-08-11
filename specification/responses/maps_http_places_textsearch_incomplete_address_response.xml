@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlaceSearchResponse>
+ <status>OK</status>
+ <result>
+  <name>123 Main Street Restaurant : Seasonal June 21 -Labor Day</name>
+  <type>bakery</type>
+  <type>cafe</type>
+  <type>restaurant</type>
+  <type>food</type>
+  <type>point_of_interest</type>
+  <type>store</type>
+  <type>establishment</type>
+  <formatted_address>123 Main St, Northeast Harbor, ME 04662, United States</formatted_address>
+  <geometry>
+   <location>
+    <lat>44.2937113</lat>
+    <lng>-68.2892093</lng>
+   </location>
+   <viewport>
+    <southwest>
+     <lat>44.2924135</lat>
+     <lng>-68.2904762</lng>
+    </southwest>
+    <northeast>
+     <lat>44.2951131</lat>
+     <lng>-68.2877766</lng>
+    </northeast>
+   </viewport>
+  </geometry>
+  <rating>4.5</rating>
+  <icon>https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png</icon>
+  <reference>ChIJS10S9VW8rkwRhkCRo51uFnc</reference>
+  <opening_hours>
+   <open_now>false</open_now>
+  </opening_hours>
+  <photo>
+   <photo_reference>Aap_uEAR-Z1G_gJyRBacjuoO_-gBKjwylJbqWQFx6xSGu7jBGvvEauoIZIRzhu_CzxUiLR9Kz7-n3QClHM5W2m67EHjWKjFqZcXJz7whfEEYmC3NB-_kuuHhjW-9QhUbrbZriY3ayPcrKNDnA8WqfD3ZQ6VAmIUGi2xg4LOji0u7zflafzE</photo_reference>
+   <width>1024</width>
+   <height>768</height>
+   <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/102531981953403924466&quot;&gt;A Google User&lt;/a&gt;</html_attribution>
+  </photo>
+  <user_ratings_total>75</user_ratings_total>
+  <place_id>ChIJS10S9VW8rkwRhkCRo51uFnc</place_id>
+  <plus_code>
+   <global_code>87PH7PV6+F8</global_code>
+   <compound_code>7PV6+F8 Northeast Harbor, Mt Desert, ME, United States</compound_code>
+  </plus_code>
+  <icon_background_color>#FF9E67</icon_background_color>
+  <business_status>OPERATIONAL</business_status>
+  <icon_mask_base_uri>https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet</icon_mask_base_uri>
+ </result>
+</PlaceSearchResponse>

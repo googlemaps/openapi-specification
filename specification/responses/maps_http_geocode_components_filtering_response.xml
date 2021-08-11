@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>route</type>
+  <formatted_address>High St, Hastings TN34, UK</formatted_address>
+  <address_component>
+   <long_name>High Street</long_name>
+   <short_name>High St</short_name>
+   <type>route</type>
+  </address_component>
+  <address_component>
+   <long_name>Hastings</long_name>
+   <short_name>Hastings</short_name>
+   <type>postal_town</type>
+  </address_component>
+  <address_component>
+   <long_name>East Sussex</long_name>
+   <short_name>East Sussex</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>England</long_name>
+   <short_name>England</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United Kingdom</long_name>
+   <short_name>GB</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>TN34</long_name>
+   <short_name>TN34</short_name>
+   <type>postal_code</type>
+   <type>postal_code_prefix</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>50.8584228</lat>
+    <lng>0.5926006</lng>
+   </location>
+   <location_type>GEOMETRIC_CENTER</location_type>
+   <viewport>
+    <southwest>
+     <lat>50.8558471</lat>
+     <lng>0.5904904</lng>
+    </southwest>
+    <northeast>
+     <lat>50.8603814</lat>
+     <lng>0.5962060</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>50.8558471</lat>
+     <lng>0.5904904</lng>
+    </southwest>
+    <northeast>
+     <lat>50.8603814</lat>
+     <lng>0.5962060</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJ-Ws929sa30cRKgsMNVkPyws</place_id>
+ </result>
+</GeocodeResponse>

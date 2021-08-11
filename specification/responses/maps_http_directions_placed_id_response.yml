@@ -32,15 +32,15 @@
       {
         "bounds":
           {
-            "northeast": { "lat": 56.39569969999999, "lng": -3.4308177 },
-            "southwest": { "lat": 55.8644561, "lng": -4.2553782 },
+            "northeast": { "lat": 56.3956867, "lng": -3.4308177 },
+            "southwest": { "lat": 55.8644561, "lng": -4.2547399 },
           },
         "copyrights": "Map data ©2021",
         "legs":
           [
             {
-              "distance": { "text": "95.0 km", "value": 95045 },
-              "duration": { "text": "1 hour 8 mins", "value": 4102 },
+              "distance": { "text": "95.0 km", "value": 95010 },
+              "duration": { "text": "1 hour 8 mins", "value": 4079 },
               "end_address": "Perth, UK",
               "end_location": { "lat": 56.3951612, "lng": -3.4308177 },
               "start_address": "Glasgow, UK",
@@ -70,7 +70,7 @@
                   },
                   {
                     "distance": { "text": "45 m", "value": 45 },
-                    "duration": { "text": "1 min", "value": 31 },
+                    "duration": { "text": "1 min", "value": 30 },
                     "end_location": { "lat": 55.8654603, "lng": -4.2537145 },
                     "html_instructions": "Turn <b>right</b> onto <b>W Nile St</b>",
                     "maneuver": "turn-right",
@@ -80,7 +80,7 @@
                   },
                   {
                     "distance": { "text": "0.2 km", "value": 194 },
-                    "duration": { "text": "1 min", "value": 59 },
+                    "duration": { "text": "1 min", "value": 60 },
                     "end_location":
                       { "lat": 55.8671409, "lng": -4.254473000000001 },
                     "html_instructions": "Continue onto <b>Port Dundas Rd</b>",
@@ -92,40 +92,56 @@
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "0.3 km", "value": 319 },
-                    "duration": { "text": "1 min", "value": 86 },
-                    "end_location": { "lat": 55.8699612, "lng": -4.2553782 },
+                    "distance": { "text": "0.1 km", "value": 102 },
+                    "duration": { "text": "1 min", "value": 25 },
+                    "end_location": { "lat": 55.8680424, "lng": -4.2547399 },
                     "html_instructions": "Continue straight to stay on <b>Port Dundas Rd</b>",
                     "maneuver": "straight",
-                    "polyline":
-                      { "points": "sp~sIl}}XSFo@?oBl@kAX_ARu@Pc@JiB`@KDc@J" },
+                    "polyline": { "points": "sp~sIl}}XSFo@?oBl@" },
                     "start_location":
                       { "lat": 55.8671409, "lng": -4.254473000000001 },
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "0.2 km", "value": 240 },
-                    "duration": { "text": "1 min", "value": 57 },
-                    "end_location":
-                      { "lat": 55.86986650000001, "lng": -4.2515561 },
-                    "html_instructions": "Turn <b>right</b> onto <b>Dobbie's Loan</b>/<wbr/><b>A804</b>",
+                    "distance": { "text": "0.3 km", "value": 285 },
+                    "duration": { "text": "1 min", "value": 52 },
+                    "end_location": { "lat": 55.8688385, "lng": -4.2505261 },
+                    "html_instructions": "Turn <b>right</b> onto <b>Milton St</b>",
                     "maneuver": "turn-right",
                     "polyline":
-                      {
-                        "points": "gb_tIbc~XAeBAgB?q@?i@?A?e@@_A?Y@W@q@@m@?[@S@U@E@IBS@O?Q?kA",
-                      },
-                    "start_location": { "lat": 55.8699612, "lng": -4.2553782 },
+                      { "points": "gv~sIb_~X[kGU{EQ}C?GAEAECGgAoCKW" },
+                    "start_location": { "lat": 55.8680424, "lng": -4.2547399 },
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "47 m", "value": 47 },
-                    "duration": { "text": "1 min", "value": 11 },
-                    "end_location": { "lat": 55.870284, "lng": -4.2514099 },
-                    "html_instructions": "Turn <b>left</b> onto <b>Craighall Rd</b>/<wbr/><b>A879</b>",
+                    "distance": { "text": "91 m", "value": 91 },
+                    "duration": { "text": "1 min", "value": 22 },
+                    "end_location": { "lat": 55.8694601, "lng": -4.2514823 },
+                    "html_instructions": "Turn <b>left</b> onto <b>Dobbie's Loan</b>/<wbr/><b>A804</b>",
                     "maneuver": "turn-left",
-                    "polyline": { "points": "ua_tIfk}XKCIEGECAICe@G" },
-                    "start_location":
-                      { "lat": 55.86986650000001, "lng": -4.2515561 },
+                    "polyline":
+                      { "points": "g{~sIxd}XILu@pAKPCDABEFEHEJGLILEF" },
+                    "start_location": { "lat": 55.8688385, "lng": -4.2505261 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "37 m", "value": 37 },
+                    "duration": { "text": "1 min", "value": 30 },
+                    "end_location": { "lat": 55.8697889, "lng": -4.2515561 },
+                    "html_instructions": "Slight <b>right</b> to stay on <b>Dobbie's Loan</b>/<wbr/><b>A804</b>",
+                    "maneuver": "turn-slight-right",
+                    "polyline": { "points": "c__tIvj}XEDGBGBI@A?K?S?" },
+                    "start_location": { "lat": 55.8694601, "lng": -4.2514823 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "56 m", "value": 56 },
+                    "duration": { "text": "1 min", "value": 24 },
+                    "end_location": { "lat": 55.870284, "lng": -4.2514099 },
+                    "html_instructions": "Continue straight onto <b>Craighall Rd</b>/<wbr/><b>A879</b>",
+                    "maneuver": "straight",
+                    "polyline": { "points": "ea_tIfk}XO?KCIEGECAICe@G" },
+                    "start_location": { "lat": 55.8697889, "lng": -4.2515561 },
                     "travel_mode": "DRIVING",
                   },
                   {
@@ -171,7 +187,7 @@
                   },
                   {
                     "distance": { "text": "34.0 km", "value": 33988 },
-                    "duration": { "text": "20 mins", "value": 1215 },
+                    "duration": { "text": "20 mins", "value": 1209 },
                     "end_location": { "lat": 56.0858293, "lng": -3.9425926 },
                     "html_instructions": "Continue onto <b>M80</b>",
                     "polyline":
@@ -183,7 +199,7 @@
                   },
                   {
                     "distance": { "text": "9.8 km", "value": 9817 },
-                    "duration": { "text": "6 mins", "value": 351 },
+                    "duration": { "text": "6 mins", "value": 350 },
                     "end_location": { "lat": 56.1697511, "lng": -3.9708727 },
                     "html_instructions": "Merge onto <b>M9</b>",
                     "maneuver": "merge",
@@ -196,7 +212,7 @@
                   },
                   {
                     "distance": { "text": "42.2 km", "value": 42221 },
-                    "duration": { "text": "26 mins", "value": 1573 },
+                    "duration": { "text": "26 mins", "value": 1563 },
                     "end_location": { "lat": 56.3883659, "lng": -3.4882247 },
                     "html_instructions": "At the roundabout, take the <b>2nd</b> exit onto <b>A9</b> heading to <b>Doune</b>",
                     "maneuver": "roundabout-left",
@@ -222,7 +238,7 @@
                   },
                   {
                     "distance": { "text": "3.2 km", "value": 3232 },
-                    "duration": { "text": "5 mins", "value": 312 },
+                    "duration": { "text": "5 mins", "value": 307 },
                     "end_location":
                       { "lat": 56.39545099999999, "lng": -3.4388888 },
                     "html_instructions": "At the roundabout, take the <b>2nd</b> exit and stay on <b>A93</b>",
@@ -271,7 +287,7 @@
           ],
         "overview_polyline":
           {
-            "points": "{_~sIzm}XmA]K`C_@rGcB_@i@L}CtAgNjD}D~@CiHFuGL{DyAa@KgBPcCvAa]rBoZzAaOjCqJzHgYz@yQK}k@wBsYg@iTeBsSiFq]sHq\\aFaJaFqCmDm@_MgBaLYcG_A{DgE}BwHeAsPcAwKcC}JeDwG}FaG{O}NcM{OsG_MgG{OsF{SsDgTmEah@aD{\\kF__@_Mgi@i\\kjAsX_w@ea@ceAmR}a@uLw^kIcb@{D_l@_E_z@kCeYq@qUv@kYjCuYZsa@qDia@qG{YoHcSmUo^iXua@gP}^yM_d@iIcWuRsf@sNa\\mQi\\g\\qq@uLyWwPq[yZci@aI{SeDiMmQiy@uMe`@mMiYo]yv@uJ}PsGsDiIk@uIPs^jAmEQ{IgD_IqLwIg_@kMeo@}Ik_@oJo\\_DqFeHoE}EOaC`@aE~B{RzNeLbG}NdD_ZzAoSdAwTtCySxCuN~@aJaCeIyGoKkKuPkJgOiC}LJ_LzBwMfG}d@dU_P|CsLLcP}B_ScEeOMoJlAaPzFoMzI{KzLuKlQ_Mf[kLlX_EjHsJnNgNxNqIpGcQvIao@fWyMpImGdGq_@bg@wU`UwRhMwNbGsJjC}X~Cw[w@qTJoXxBkOZiPwAuLeD}KeFaPsJaNkE_MmA_KLaGp@iPtEsRrJaOzD_RpB{AlBkB^kBM{h@`j@k_@h`@sHjHgHvDcJbBkHOaKwCoKkIyFmIaGuNgDwNkCqYaDqW_EyPwIkTuIsQcJu^eEuV_IiVggAmwBe`AkmBka@wx@iT}b@cJ_SiDcLgFyZmB{]iAcYeDwXcKa]aMqg@iIc]{Nqa@{CoU}@aU{AqSwIqb@}Ek[sB{d@a@ge@jAk^Gsd@p@ul@n@ic@c@eXwEe_@yOu}@qIuc@mHeSuGaO}DwNgDyScF{r@gDwg@cC_MsFcMaEkEgDmBqScE_KuC_OaIeM}NiHiR_IsWgUc~@mEiTiNuy@uIcm@_FmUoF}QwKmYeS_f@sQg_@sWcb@s[_`@kK{LaPsUeR_]eM}LcMgNkOgWmJoRuKcYqDsNsGka@yBuM}FoT}Ng\\qI{S_DoLmFu^s@aKi@}Xe@_`@cB_V{Fa\\sHgR}JgMqIqJmGwKaEiKqFmSeQof@eJsQyMcM}KiHgQwMmPiTmFeK_IiS}Lsg@eWg|AgNsz@sFgVcHgMoGaIcH}M_EqMkEkVsCyWuBqc@Q{AoAgBc@kCd@sOQaV@iAdBiNfC_k@f@oVa@kYZ{`@_EwTkFsIaDgC_TqFwE_CkCgEaAsDA{N`@oYhAcaA",
+            "points": "{_~sIzm}XmA]K`C_@rGcB_@i@L}CtAuD|@oBl@[kGg@yJG[sAgD_A~AWb@]p@gAVaB]YuAR{B~@iUbC__@nA}O`DsMxHsXz@{PCel@qBsXo@kUcBoTiF_^eHq[_FsJ{E{CeDo@uLgB}Kc@aHq@}DyDiCaIaAuNaA_M_ByHoDoIoEeFaNeMuP{RgGcLyGqP_FiQqE}ViE_f@sCo[{Fib@{Jcd@y^{pA{Vgs@mb@}gAsQi`@cM{^{Iyb@_Euk@uDyw@qCyZ{@uSj@s[fCkXr@oQG}QcD}_@gGyYiHoSgTm]iYub@mPs^eNud@uIcX{Qge@qNa\\iRy]{Vyg@_Qq_@eOsYa]il@uHuRoDsM{P}w@eNab@}LuXg^_x@{ImPmGoEwH}@eJNk^hAwFKuIwCiIiLoHsZoNas@yIg_@gJi\\qC{FiHsFsEc@eCTgErBkShOeKxFaNpDmZbBeUfAgRbC}SzCaPvA{IgB}IwG{JaKiPwJkOaDkM?gKfBeMnF_f@~U}OlD}KZaPgBaSsEaOa@mJ~@aP`FuLpHcMbMkLrQaLlXmKfXyGbMyIpM_O|OcIjG_QzI_m@~UkPxJoGbG}^lf@uUjUqS~MqZtK_X~CeOCoJk@_U@{XtBwMd@iQgA}L}C{JgE{QyKkMkEaMyAsJ?kHr@uMbDsTtKiMzD}TdCwA`BgBt@oB[ch@fi@a]v]kKlK{GvDaJlBoHE{HeBgLqHiHwJsGkO{C{LwC}Y}CaXqDePiIaT{IcRsJm^kEuW_IyVifA{uBm_AclBec@{{@oSqa@wN_]aG{ZuBc[sAa]wCmYoJu\\{Jw_@}Kue@mN_`@eDgR{AyZkAwQyIed@iFq[uBsd@m@k`@lAcc@f@epAr@me@WqWoD}[}PabAyIwd@cG}PaMm[_FgXeFmr@{C}f@uBaMuG{O}GoGmFiB{JcBqMgDoNgHeLwLeJeT_GsRkV}_AoFkW}M}w@uIqm@cEkSoPoh@id@seAeZgg@m]sb@iJuKoOySiSa_@mMeNmMwMwOmWgIaPyLmZwEiQkGe`@oIaa@uOm^_JiTcDwLoFe^aB}`@]gb@cBkW{EiZyHySaKcNgJcKqFaJgEeK}F{SwQgh@_HoNoO{Ow[sT{RkVsPo_@wLsf@cU}sAkO}~@sFuXcI_PaGoHaHaMeEgM}DmSyDu\\oBs`@WcEcA_Bq@}Bd@}OQoV?gAbBwMpBad@`Ai]]eX\\ua@sB}OkAuDiDeGsEwE}SqF_FwBmC}DiAqDEuOZoWlAecA",
           },
         "summary": "M80 and A9",
         "warnings": [],

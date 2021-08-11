@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>street_address</type>
+  <formatted_address>277 Bedford Ave, Brooklyn, NY 11211, USA</formatted_address>
+  <address_component>
+   <long_name>277</long_name>
+   <short_name>277</short_name>
+   <type>street_number</type>
+  </address_component>
+  <address_component>
+   <long_name>Bedford Avenue</long_name>
+   <short_name>Bedford Ave</short_name>
+   <type>route</type>
+  </address_component>
+  <address_component>
+   <long_name>Williamsburg</long_name>
+   <short_name>Williamsburg</short_name>
+   <type>neighborhood</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Brooklyn</long_name>
+   <short_name>Brooklyn</short_name>
+   <type>political</type>
+   <type>sublocality</type>
+   <type>sublocality_level_1</type>
+  </address_component>
+  <address_component>
+   <long_name>Kings County</long_name>
+   <short_name>Kings County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>NY</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>11211</long_name>
+   <short_name>11211</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>40.7142205</lat>
+    <lng>-73.9612903</lng>
+   </location>
+   <location_type>ROOFTOP</location_type>
+   <viewport>
+    <southwest>
+     <lat>40.7128715</lat>
+     <lng>-73.9626393</lng>
+    </southwest>
+    <northeast>
+     <lat>40.7155695</lat>
+     <lng>-73.9599413</lng>
+    </northeast>
+   </viewport>
+  </geometry>
+  <place_id>ChIJd8BlQ2BZwokRAFUEcm_qrcA</place_id>
+  <plus_code>
+   <global_code>87G8P27Q+MF</global_code>
+   <compound_code>P27Q+MF Brooklyn, NY, USA</compound_code>
+  </plus_code>
+ </result>
+ <plus_code>
+  <global_code>87G8P27Q+MC</global_code>
+  <compound_code>P27Q+MC New York, NY, USA</compound_code>
+ </plus_code>
+</GeocodeResponse>

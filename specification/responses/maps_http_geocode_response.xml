@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>street_address</type>
+  <formatted_address>1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA</formatted_address>
+  <address_component>
+   <long_name>1600</long_name>
+   <short_name>1600</short_name>
+   <type>street_number</type>
+  </address_component>
+  <address_component>
+   <long_name>Amphitheatre Parkway</long_name>
+   <short_name>Amphitheatre Pkwy</short_name>
+   <type>route</type>
+  </address_component>
+  <address_component>
+   <long_name>Mountain View</long_name>
+   <short_name>Mountain View</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Santa Clara County</long_name>
+   <short_name>Santa Clara County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>California</long_name>
+   <short_name>CA</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>94043</long_name>
+   <short_name>94043</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>37.4225470</lat>
+    <lng>-122.0840954</lng>
+   </location>
+   <location_type>ROOFTOP</location_type>
+   <viewport>
+    <southwest>
+     <lat>37.4211980</lat>
+     <lng>-122.0854444</lng>
+    </southwest>
+    <northeast>
+     <lat>37.4238960</lat>
+     <lng>-122.0827464</lng>
+    </northeast>
+   </viewport>
+  </geometry>
+  <place_id>ChIJb3E-eva5j4ARfZQR8h3UgQk</place_id>
+  <plus_code>
+   <global_code>849VCWF8+29</global_code>
+   <compound_code>CWF8+29 Mountain View, CA, USA</compound_code>
+  </plus_code>
+ </result>
+</GeocodeResponse>

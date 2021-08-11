@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>Toledo, OH, USA</formatted_address>
+  <address_component>
+   <long_name>Toledo</long_name>
+   <short_name>Toledo</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Lucas County</long_name>
+   <short_name>Lucas County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Ohio</long_name>
+   <short_name>OH</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>41.6528052</lat>
+    <lng>-83.5378674</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>41.5802660</lat>
+     <lng>-83.6942832</lng>
+    </southwest>
+    <northeast>
+     <lat>41.7328440</lat>
+     <lng>-83.4542290</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>41.5802660</lat>
+     <lng>-83.6942832</lng>
+    </southwest>
+    <northeast>
+     <lat>41.7328440</lat>
+     <lng>-83.4542290</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJeU4e_C2HO4gRRcM6RZ_IPHw</place_id>
+ </result>
+</GeocodeResponse>

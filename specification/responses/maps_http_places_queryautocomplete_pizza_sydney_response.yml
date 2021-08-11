@@ -91,6 +91,27 @@
           ],
       },
       {
+        "description": "Pizza, Darling Street, Rozelle NSW, Australia",
+        "matched_substrings": [{ "length": 5, "offset": 0 }],
+        "place_id": "ChIJ8WR6ec-vEmsR2pT0sQetgrA",
+        "reference": "ChIJ8WR6ec-vEmsR2pT0sQetgrA",
+        "structured_formatting":
+          {
+            "main_text": "Pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "Darling Street, Rozelle NSW, Australia",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Pizza" },
+            { "offset": 7, "value": "Darling Street" },
+            { "offset": 23, "value": "Rozelle" },
+            { "offset": 31, "value": "NSW" },
+            { "offset": 36, "value": "Australia" },
+          ],
+        "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      },
+      {
         "description": "Country Gourmet Pizza, Belmore Road, Sydney NSW, Australia",
         "matched_substrings":
           [{ "length": 5, "offset": 16 }, { "length": 6, "offset": 37 }],
@@ -121,30 +142,6 @@
             "point_of_interest",
             "establishment",
           ],
-      },
-      {
-        "description": "Sindbad's Kebab & Pizza, Market Street, Sydney NSW, Australia",
-        "matched_substrings":
-          [{ "length": 5, "offset": 18 }, { "length": 6, "offset": 40 }],
-        "place_id": "ChIJWY3PWBSvEmsRmSEiLeOxm9I",
-        "reference": "ChIJWY3PWBSvEmsRmSEiLeOxm9I",
-        "structured_formatting":
-          {
-            "main_text": "Sindbad's Kebab & Pizza",
-            "main_text_matched_substrings": [{ "length": 5, "offset": 18 }],
-            "secondary_text": "Market Street, Sydney NSW, Australia",
-            "secondary_text_matched_substrings":
-              [{ "length": 6, "offset": 15 }],
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Sindbad's Kebab & Pizza" },
-            { "offset": 25, "value": "Market Street" },
-            { "offset": 40, "value": "Sydney" },
-            { "offset": 47, "value": "NSW" },
-            { "offset": 52, "value": "Australia" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
     ],
   "status": "OK",

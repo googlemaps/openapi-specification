@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>Seattle, WA, USA</origin_address>
+ <destination_address>Victoria, BC, Canada</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>20038</value>
+    <text>5 hours 34 mins</text>
+   </duration>
+   <distance>
+    <value>340815</value>
+    <text>341 km</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>

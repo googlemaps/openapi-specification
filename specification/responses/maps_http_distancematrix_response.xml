@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>Boston, MA, USA</origin_address>
+ <origin_address>Charlestown, Boston, MA, USA</origin_address>
+ <destination_address>Lexington, MA, USA</destination_address>
+ <destination_address>Concord, MA, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1617</value>
+    <text>27 mins</text>
+   </duration>
+   <distance>
+    <value>33249</value>
+    <text>33.2 km</text>
+   </distance>
+   <duration_in_traffic>
+    <value>1697</value>
+    <text>28 mins</text>
+   </duration_in_traffic>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1966</value>
+    <text>33 mins</text>
+   </duration>
+   <distance>
+    <value>31624</value>
+    <text>31.6 km</text>
+   </distance>
+   <duration_in_traffic>
+    <value>1998</value>
+    <text>33 mins</text>
+   </duration_in_traffic>
+  </element>
+ </row>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1545</value>
+    <text>26 mins</text>
+   </duration>
+   <distance>
+    <value>31219</value>
+    <text>31.2 km</text>
+   </distance>
+   <duration_in_traffic>
+    <value>1616</value>
+    <text>27 mins</text>
+   </duration_in_traffic>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1895</value>
+    <text>32 mins</text>
+   </duration>
+   <distance>
+    <value>29594</value>
+    <text>29.6 km</text>
+   </distance>
+   <duration_in_traffic>
+    <value>1912</value>
+    <text>32 mins</text>
+   </duration_in_traffic>
+  </element>
+ </row>
+</DistanceMatrixResponse>

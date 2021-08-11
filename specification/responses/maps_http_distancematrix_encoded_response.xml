@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_encoded_response] -->
 <DistanceMatrixResponse>
  <status>OK</status>
  <origin_address>P.O. Box 793, Brooklyn, NY 11207, USA</origin_address>
@@ -37,12 +38,12 @@
   <element>
    <status>OK</status>
    <duration>
-    <value>1350</value>
+    <value>1386</value>
     <text>23 mins</text>
    </duration>
    <distance>
-    <value>13589</value>
-    <text>13.6 km</text>
+    <value>13515</value>
+    <text>13.5 km</text>
    </distance>
   </element>
   <element>
@@ -81,12 +82,12 @@
   <element>
    <status>OK</status>
    <duration>
-    <value>1350</value>
+    <value>1386</value>
     <text>23 mins</text>
    </duration>
    <distance>
-    <value>13589</value>
-    <text>13.6 km</text>
+    <value>13515</value>
+    <text>13.5 km</text>
    </distance>
   </element>
   <element>
@@ -113,3 +114,4 @@
   </element>
  </row>
 </DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_encoded_response] -->

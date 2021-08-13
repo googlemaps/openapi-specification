@@ -13,7 +13,7 @@
   <tbody>
     <tr>
       <td align="left"><code>distance</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <td align="left"><code>duration</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
@@ -45,7 +45,7 @@
     </tr>
     <tr>
       <td align="left"><code>end_address</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -55,7 +55,7 @@
     </tr>
     <tr>
       <td align="left"><code>end_location</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
@@ -68,7 +68,7 @@
     </tr>
     <tr>
       <td align="left"><code>html_instructions</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -78,15 +78,23 @@
     </tr>
     <tr>
       <td align="left"><code>polyline</code></td>
-      <td>optional</td>
-      <td></td>
+      <td><strong>required</strong></td>
       <td>
-        <div class="nonref-property-description"><p>TODO</p></div>
+        <a href="#DirectionsPolyline" title="DirectionsPolyline"
+          >DirectionsPolyline</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#DirectionsPolyline" title="DirectionsPolyline"
+          >DirectionsPolyline</a
+        >
+        for more information.
       </td>
     </tr>
     <tr>
       <td align="left"><code>start_address</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -96,7 +104,7 @@
     </tr>
     <tr>
       <td align="left"><code>start_location</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
@@ -109,7 +117,7 @@
     </tr>
     <tr>
       <td align="left"><code>steps</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#DirectionsStep" title="DirectionsStep"
           >DirectionsStep</a
@@ -127,15 +135,30 @@
     </tr>
     <tr>
       <td align="left"><code>traffic_speed_entry</code></td>
-      <td>optional</td>
-      <td></td>
+      <td><strong>required</strong></td>
       <td>
-        <div class="nonref-property-description"><p>TODO</p></div>
+        Array&#x3C;<a
+          href="#DirectionsTrafficSpeedEntry"
+          title="DirectionsTrafficSpeedEntry"
+          >DirectionsTrafficSpeedEntry</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>Information about traffic speed along the leg.</p>
+          <p>
+            See
+            <a href="#DirectionsTrafficSpeedEntry"
+              >DirectionsTrafficSpeedEntry</a
+            >
+            for more information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
       <td align="left"><code>travel_mode</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
       <td>
         <div class="ref-property-description">
@@ -146,18 +169,22 @@
     </tr>
     <tr>
       <td align="left"><code>via_waypoint</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
-        <a href="#DirectionsViaWaypoint" title="DirectionsViaWaypoint"
+        Array&#x3C;<a
+          href="#DirectionsViaWaypoint"
+          title="DirectionsViaWaypoint"
           >DirectionsViaWaypoint</a
-        >
+        >>
       </td>
       <td>
-        See
-        <a href="#DirectionsViaWaypoint" title="DirectionsViaWaypoint"
-          >DirectionsViaWaypoint</a
-        >
-        for more information.
+        <div class="ref-property-description">
+          <p>The locations of via waypoints along this leg.</p>
+          <p>
+            See <a href="#DirectionsViaWaypoint">DirectionsViaWaypoint</a> for
+            more information.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

@@ -14,7 +14,21 @@
 
 type: object
 title: DirectionsLeg
-# required: []
+required:
+  [
+    distance,
+    duration,
+    end_address,
+    end_location,
+    html_instructions,
+    polyline,
+    start_address,
+    start_location,
+    steps,
+    travel_mode,
+    traffic_speed_entry,
+    via_waypoint,
+  ]
 properties:
   distance:
     description: Distance of the leg.
@@ -32,8 +46,7 @@ properties:
     type: string
     description: Formatted instructions for the leg
   polyline:
-    # $ref: "./DirectionsPolyline.yml"
-    description: TODO
+    $ref: "./DirectionsPolyline.yml"
   start_address:
     description: The start address of the leg.
     type: string
@@ -49,8 +62,12 @@ properties:
     items:
       $ref: "./DirectionsStep.yml"
   traffic_speed_entry:
-    description: TODO
-    # type: array
-  via_waypoint:
+    description: Information about traffic speed along the leg.
     type: array
-    $ref: "./DirectionsViaWaypoint.yml"
+    items:
+      $ref: "./DirectionsTrafficSpeedEntry.yml"
+  via_waypoint:
+    description: The locations of via waypoints along this leg.
+    type: array
+    items:
+      $ref: "./DirectionsViaWaypoint.yml"

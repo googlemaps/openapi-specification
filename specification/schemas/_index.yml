@@ -42,6 +42,8 @@ DistanceMatrixElement:
 DistanceMatrixStatus:
   $ref: "./DistanceMatrixStatus.yml"
 # Directions
+DirectionsFare:
+  $ref: "./DirectionsFare.yml"
 DirectionsResponse:
   $ref: "./DirectionsResponse.yml"
 DirectionsStep:
@@ -54,8 +56,10 @@ DirectionsStatus:
   $ref: "./DirectionsStatus.yml"
 DirectionsGeocodedWaypoint:
   $ref: "./DirectionsGeocodedWaypoint.yml"
-DirectionsOverviewPolyline:
-  $ref: "./DirectionsOverviewPolyline.yml"
+DirectionsPolyline:
+  $ref: "./DirectionsPolyline.yml"
+DirectionsTrafficSpeedEntry:
+  $ref: "./DirectionsTrafficSpeedEntry.yml"
 DirectionsViaWaypoint:
   $ref: "./DirectionsViaWaypoint.yml"
 # Elevation

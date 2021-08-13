@@ -14,33 +14,61 @@
 
 type: object
 title: DirectionsStep
-# required: []
-properties: 
+required:
+  [
+    distance,
+    duration,
+    end_location,
+    start_location,
+    html_instructions,
+    maneuver,
+    polyline,
+    travel_mode,
+  ]
+properties:
   distance:
-    description: TODO
+    description: Distance of the step.
     $ref: "./TextValueObject.yml"
   duration:
-    description: TODO
+    description: Duration of the step.
     $ref: "./TextValueObject.yml"
   end_location:
-    description: TODO
+    description: End location of the step.
     $ref: "./LatLngLiteral.yml"
   html_instructions:
     type: string
-    description: TODO
+    description: HTML representation of the step.
   maneuver:
     type: string
-    description: TODO
+    description: Contains the action to take for the current step (turn left, merge, straight, etc.).
+    enum:
+      - turn-slight-left
+      - turn-sharp-left
+      - turn-left
+      - turn-slight-right
+      - turn-sharp-right
+      - uturn-left
+      - uturn-right
+      - turn-right
+      - straight
+      - ramp-left
+      - ramp-right
+      - merge
+      - fork-left
+      - fork-right
+      - ferry
+      - ferry-train
+      - roundabout-left
+      - roundabout-right
   polyline:
-    # $ref: "./DirectionsPolyline.yml"
-    description: TODO
+    $ref: "./DirectionsPolyline.yml"
+    description: Polyline representation of the step.
   start_location:
-    description: TODO
+    description: Start location of the step.
     $ref: "./LatLngLiteral.yml"
   travel_mode:
-    description: TODO
+    description: Travel mode of the step.
     $ref: "./TravelMode.yml"
   steps:
-    description: TODO
-    # $ref: "./DirectionsStep.yml"
-
+    description: Substeps are only available when travel_mode is set to "transit".
+    $ref: "./DirectionsStep.yml"

@@ -28200,7 +28200,7 @@
         "type": "object",
         "title": "DirectionsLeg",
         "required": [
-          "distances",
+          "distance",
           "duration",
           "end_address",
           "end_location",
@@ -28209,7 +28209,9 @@
           "start_address",
           "start_location",
           "steps",
-          "travel_mode"
+          "travel_mode",
+          "traffic_speed_entry",
+          "via_waypoint"
         ],
         "properties": {
           "distance": {
@@ -28264,7 +28266,9 @@
           "via_waypoint": {
             "description": "The locations of via waypoints along this leg.",
             "type": "array",
-            "$ref": "#/components/schemas/DirectionsViaWaypoint"
+            "items": {
+              "$ref": "#/components/schemas/DirectionsViaWaypoint"
+            }
           }
         }
       },

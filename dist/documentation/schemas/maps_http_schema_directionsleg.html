@@ -12,6 +12,22 @@
   </thead>
   <tbody>
     <tr>
+      <td align="left"><code>distance</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>Distance of the leg.</p>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>duration</code></td>
       <td><strong>required</strong></td>
       <td>
@@ -118,35 +134,8 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>travel_mode</code></td>
-      <td><strong>required</strong></td>
-      <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
-      <td>
-        <div class="ref-property-description">
-          <p>The mode of travel for the leg.</p>
-          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>distance</code></td>
-      <td>optional</td>
-      <td>
-        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
-      </td>
-      <td>
-        <div class="ref-property-description">
-          <p>Distance of the leg.</p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>traffic_speed_entry</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
           href="#DirectionsTrafficSpeedEntry"
@@ -168,12 +157,25 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>via_waypoint</code></td>
-      <td>optional</td>
+      <td align="left"><code>travel_mode</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
       <td>
-        <a href="#DirectionsViaWaypoint" title="DirectionsViaWaypoint"
+        <div class="ref-property-description">
+          <p>The mode of travel for the leg.</p>
+          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>via_waypoint</code></td>
+      <td><strong>required</strong></td>
+      <td>
+        Array&#x3C;<a
+          href="#DirectionsViaWaypoint"
+          title="DirectionsViaWaypoint"
           >DirectionsViaWaypoint</a
-        >
+        >>
       </td>
       <td>
         <div class="ref-property-description">

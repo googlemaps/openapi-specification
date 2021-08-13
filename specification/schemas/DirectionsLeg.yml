@@ -16,7 +16,7 @@ type: object
 title: DirectionsLeg
 required:
   [
-    distances,
+    distance,
     duration,
     end_address,
     end_location,
@@ -26,6 +26,8 @@ required:
     start_location,
     steps,
     travel_mode,
+    traffic_speed_entry,
+    via_waypoint,
   ]
 properties:
   distance:
@@ -67,4 +69,5 @@ properties:
   via_waypoint:
     description: The locations of via waypoints along this leg.
     type: array
-    $ref: "./DirectionsViaWaypoint.yml"
+    items:
+      $ref: "./DirectionsViaWaypoint.yml"

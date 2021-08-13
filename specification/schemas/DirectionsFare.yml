@@ -13,16 +13,24 @@
 # limitations under the License.
 
 type: object
-title: DirectionsViaWaypoint
-# required: []
-properties: 
-  location:
-    description: The location of the waypoint.
-    $ref: "./LatLngLiteral.yml"
-  step_index:
-    description: The index of the step containing the waypoint.
-    type: integer
-  step_interpolation:
-    description: The position of the waypoint along the step's polyine, expressed as a ratio from 0 to 1.
-    type: integer
- 
+title: DirectionsFare
+description: The total fare for the route.
+required:
+  [
+    currency,
+    value,
+    text,
+  ]
+properties:
+  currency:
+    type: string
+    description: An [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) indicating the currency that the amount is expressed in.
+    example: USD
+  value:
+    type: number
+    description: The total fare amount, in the currency specified.
+  text:
+    type: string
+    description: The total fare amount, formatted in the requested language.
+    example: $6.00
+    

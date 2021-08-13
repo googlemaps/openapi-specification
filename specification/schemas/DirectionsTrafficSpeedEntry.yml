@@ -13,10 +13,17 @@
 # limitations under the License.
 
 type: object
-title: DirectionsOverviewPolyline
-description: Object that holds an [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).
-required: [points]
+title: DirectionsTrafficSpeedEntry
+required:
+  [
+    speed_category,
+    offset_meters,
+  ]
 properties:
-  points:
-    description: An [encoded polyline](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.
+  speed_category:
     type: string
+    description: The current traffic/speed conditions on this portion of a path.
+  offset_meters:
+    type: number
+    description: The offset along the path (in meters) up to which this speed category is valid.
+    

@@ -52,7 +52,7 @@ properties:
       type: string
   overview_polyline:
     description: Contains an object that holds an encoded polyline representation of the route. This polyline is an approximate (smoothed) path of the resulting directions.
-    $ref: "./DirectionsOverviewPolyline.yml"
+    $ref: "./DirectionsPolyline.yml"
   fare:
     description: If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.
-    # $ref: "./DirectionsFare.yml" TODO(jpoehnelt)
+    $ref: "./DirectionsFare.yml"

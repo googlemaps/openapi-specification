@@ -22,7 +22,7 @@ An OpenAPI specification for Google Maps Platform APIs.
 | Distance           | **Complete** |
 | Roads              | **Complete** |
 | Time Zone          | **Complete** |
-| Directions         | **In Progress** |
+| Directions         | **Complete** |
 | Maps Static        | Not Started  |
 | Places             | **Complete** |
 | Street View Static | Not Started  |

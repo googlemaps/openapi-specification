@@ -4,7 +4,7 @@
 
 -   <h3 id="place_id">place_id</h3>
 
-    A textual identifier that uniquelyidentifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
+    A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
     For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
 
 <h2 id="optional-parameters">Optional parameters</h2>
@@ -17,7 +17,7 @@
 
     **Basic**
 
-    The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `name`, `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
+    The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
 
     **Contact**
 

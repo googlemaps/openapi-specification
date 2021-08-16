@@ -41,7 +41,7 @@ requestBody:
   required: false
 responses:
   "200":
-    description: Ok
+    description: 200 OK
     content:
       application/json:
         schema:
@@ -57,7 +57,7 @@ responses:
             value:
               $ref: ../responses/maps_http_geolocation_ip_response.yml
   "400":
-    description: Bad Request
+    description: 400 BAD REQUEST
     content:
       application/json:
         schema:
@@ -70,7 +70,7 @@ responses:
             value:
               $ref: ../responses/maps_http_geolocation_error_400_invalid_key_response.yml
   "404":
-    description: Not Found
+    description: 404 NOT FOUND
     content:
       application/json:
         schema:

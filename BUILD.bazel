@@ -2,6 +2,7 @@ load("//rules:swagger_cli.bzl", "bundle", "validate")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
 load("@npm//openapi-examples-validator:index.bzl", "openapi_examples_validator_test")
+load("@npm//openapi-to-postmanv2:index.bzl", "openapi2postmanv2")
 
 exports_files(
     ["tsconfig.json"],
@@ -32,6 +33,7 @@ pkg_tar(
     srcs = [
         "//:{}.yml".format(BUNDLE_NAME),
         "//:{}.json".format(BUNDLE_NAME),
+        "//:google-maps-platform-postman.json",
     ],
     strip_prefix = ".",
     deps = [
@@ -64,27 +66,26 @@ nodejs_test(
 )
 
 openapi_examples_validator_test(
-    name="validate_examples",
-    data= ["//:{}.json".format(BUNDLE_NAME)],
+    name = "validate_examples",
+    data = ["//:{}.json".format(BUNDLE_NAME)],
     templated_args = [
-        "$(rootpath //:{}.json)".format(BUNDLE_NAME)
-    ]
+        "$(rootpath //:{}.json)".format(BUNDLE_NAME),
+    ],
 )
 
 nodejs_test(
     name = "schema-in-index",
     data = [
         ":dist",
-        "//specification:openapi3",
         "//rules:schema-in-index",
+        "//specification:openapi3",
     ],
     entry_point = "//rules:schema-in-index.ts",
     templated_args = [
         "--archive",
-        "$(rootpath :dist)",        
+        "$(rootpath :dist)",
     ],
 )
-
 
 nodejs_test(
     name = "schema-title",
@@ -95,6 +96,24 @@ nodejs_test(
     entry_point = "//rules:schema-title.ts",
     templated_args = [
         "--spec",
-        "$(rootpath //:{}.json)".format(BUNDLE_NAME),        
+        "$(rootpath //:{}.json)".format(BUNDLE_NAME),
     ],
+)
+
+openapi2postmanv2(
+    name = "postman",
+    outs = ["google-maps-platform-postman.json"],
+    args = [
+        "--spec",
+        "$(location //:google-maps-platform-openapi3.json)",
+        "--pretty",
+        "--options-config",
+        "$(location //:postman-config.json)",
+        "--output $@",
+    ],
+    data = [
+        "//:google-maps-platform-openapi3.json",
+        "//:postman-config.json",
+    ],
+    visibility = ["//visibility:public"],
 )

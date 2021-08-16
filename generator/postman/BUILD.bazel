@@ -1,0 +1,33 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "_lib",
+    srcs = glob(["*.ts"]),
+    deps = [
+        "@npm//@types/axios",
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//axios",
+        "@npm//tar-stream",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "_postman_bin",
+    data = [
+        ":_lib",
+        "//:google-maps-platform-postman.json",
+    ],
+    entry_point = ":postman.ts",
+    templated_args = [
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+        "--collection",
+        "13440387-fc4788d5-77f9-4639-a4c5-74a2878d7eb5",
+        "--file",
+        "$(location //:google-maps-platform-postman.json)",
+    ],
+)

@@ -33,7 +33,13 @@ plugins:
           ],
       },
     ]
-  - ["@semantic-release/exec", { "prepareCmd": "npm run build" }]
+  - [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "npm run build",
+        "publishCmd": "npm run publish:postman",
+      },
+    ]
   - [
       "@semantic-release/github",
       {
@@ -46,6 +52,10 @@ plugins:
             {
               "path": "dist/google-maps-platform-openapi3.yml",
               "label": "OpenAPI 3 YAML Specification",
+            },
+            {
+              "path": "dist/google-maps-platform-postman.json",
+              "label": "Postman Collection",
             },
           ],
       },

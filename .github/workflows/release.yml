@@ -31,8 +31,10 @@ jobs:
           extra_plugins: |
             "@semantic-release/commit-analyzer"
             "@semantic-release/release-notes-generator"
-            "@semantic-release/git
-            "@semantic-release/github
+            "@semantic-release/git"
+            "@semantic-release/github"
+            "@semantic-release/exec"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: skip # required in verify conditions
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}

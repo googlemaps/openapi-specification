@@ -17,6 +17,7 @@
   "scripts": {
     "build": "bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
     "build:responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses",
+    "publish:postman": "bazel run generator/postman:_postman_bin",
     "test": "bazel test ...",
     "watch": "ibazel build ...",
     "watch:test": "ibazel test ..."
@@ -47,6 +48,7 @@
     "mdast-util-gfm": "^0.1.2",
     "micromark-extension-gfm": "^0.3.3",
     "openapi-examples-validator": "^4.4.0",
+    "openapi-to-postmanv2": "^2.10.0",
     "openapi-types": "^9.1.0",
     "postman-code-generators": "^1.1.5",
     "postman-collection": "^3.6.11",

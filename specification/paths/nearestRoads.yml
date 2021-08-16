@@ -21,13 +21,13 @@ parameters:
   - "$ref": "../parameters/nearestRoads/points.yml"
 responses:
   "200":
-    description: "For each valid request, the Roads API will return a response in the format indicated within the request URL."
+    description: 200 OK
     content:
       application/json:
         schema:
           $ref: "../schemas/NearestRoadsResponse.yml"
   "400":
-    description: "For each valid request, the Roads API will return a response in the format indicated within the request URL."
+    description: 400 BAD REQUEST
     content:
       application/json:
         examples:

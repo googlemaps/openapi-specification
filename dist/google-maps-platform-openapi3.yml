@@ -51,7 +51,7 @@ paths:
         required: false
       responses:
         '200':
-          description: Ok
+          description: 200 OK
           content:
             application/json:
               schema:
@@ -76,7 +76,7 @@ paths:
                       lng: -122.41590829999998
                     accuracy: 926
         '400':
-          description: Bad Request
+          description: 400 BAD REQUEST
           content:
             application/json:
               schema:
@@ -102,7 +102,7 @@ paths:
                           reason: badRequest
                       status: INVALID_ARGUMENT
         '404':
-          description: Not Found
+          description: 404 NOT FOUND
           content:
             application/json:
               schema:
@@ -353,7 +353,7 @@ paths:
         - $ref: '#/components/parameters/region'
       responses:
         '200':
-          description: Response for the Distance Matrix API query.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -14285,7 +14285,7 @@ paths:
           example: 10
       responses:
         '200':
-          description: Elevation Response
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -14434,7 +14434,7 @@ paths:
         - $ref: '#/components/parameters/region'
       responses:
         '200':
-          description: Gecoding Response
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -15708,7 +15708,7 @@ paths:
           example: 1331161200
       responses:
         '200':
-          description: Time Zone Response
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -15769,7 +15769,7 @@ paths:
           example: true
       responses:
         '200':
-          description: 'For each valid request, the Roads API will return a response in the format indicated within the request URL.'
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -16232,13 +16232,13 @@ paths:
             $ref: '#/components/schemas/LatLngArrayString'
       responses:
         '200':
-          description: 'For each valid request, the Roads API will return a response in the format indicated within the request URL.'
+          description: 200 OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NearestRoadsResponse'
         '400':
-          description: 'For each valid request, the Roads API will return a response in the format indicated within the request URL.'
+          description: 400 BAD REQUEST
           content:
             application/json:
               examples:
@@ -16301,7 +16301,7 @@ paths:
         - $ref: '#/components/parameters/mode'
       responses:
         '200':
-          description: Response for the Distance Matrix API query.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -16598,7 +16598,7 @@ paths:
         - $ref: '#/components/parameters/region'
       responses:
         '200':
-          description: Response for the Distance Matrix API query.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -16874,7 +16874,7 @@ paths:
         - $ref: '#/components/parameters/language'
       responses:
         '200':
-          description: Response for the Find Place From Text request.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -17011,7 +17011,7 @@ paths:
         - $ref: '#/components/parameters/language'
       responses:
         '200':
-          description: Response for the Distance Matrix API query.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -17889,7 +17889,7 @@ paths:
         - $ref: '#/components/parameters/region'
       responses:
         '200':
-          description: Response for the Places Text Search request.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -18783,7 +18783,7 @@ paths:
           in: query
       responses:
         '200':
-          description: Response for the Place Photo request.
+          description: 200 OK
           content:
             image/*:
               schema:
@@ -18813,7 +18813,7 @@ paths:
         - $ref: '#/components/parameters/language'
       responses:
         '200':
-          description: Response for the Autocomplete request.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -19041,7 +19041,7 @@ paths:
         - $ref: '#/components/parameters/language'
       responses:
         '200':
-          description: Response for the Autocomplete request.
+          description: 200 OK
           content:
             application/json:
               examples:
@@ -19252,7 +19252,7 @@ paths:
           in: query
       responses:
         '200':
-          description: Response for the Street View Static request.
+          description: 200 OK
           content:
             image/*:
               schema:
@@ -19283,7 +19283,7 @@ paths:
         - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/9'
       responses:
         '200':
-          description: Ok
+          description: 200 OK
           content:
             application/json:
               schema:

@@ -15,46 +15,33 @@
  */
 
 import { options } from "yargs";
-import tar from "tar";
-import tmp from "tmp";
-import { compareSync } from "dir-compare";
+import { readFileSync } from "fs";
+
+import axios from "axios";
+import path from "path";
 
 const argv = options({
-  archive: {
+  collection: {
     type: "string",
     demandOption: true,
   },
-  dist: {
+  file: {
     type: "string",
     demandOption: true,
   },
 }).argv;
 
-const main = (argv) => {
-  const dir = tmp.dirSync();
-
-  tar.x({
-    file: argv.archive,
-    sync: true,
-    C: dir.name,
-  });
-
-  const res = compareSync("dist", dir.name, {
-    compareContent: true,
-    excludeFilter: "**/*-postman.json",
-  });
-  if (!res.same) {
-    throw `
-${JSON.stringify(res, null, 2)}
-
-
-
-
-Please run 'npm run build' to update the dist folder.
-
-
-		`;
-  }
+const main = async (argv: any) => {
+  const data = JSON.parse(
+    readFileSync(path.join(__dirname, "../../../", argv.file), "utf8")
+  ) as any;
+  await axios.put(
+    `https://api.getpostman.com/collections/${argv.collection}`,
+    {
+      collection: data,
+    },
+    { headers: { "X-API-KEY": process.env.POSTMAN_API_KEY } }
+  );
 };
 
 main(argv);

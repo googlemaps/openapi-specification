@@ -30,7 +30,7 @@ parameters:
   - "$ref": "../../parameters/streetview/source.yml"
 responses:
   "200":
-    description: Ok
+    description: 200 OK
     content:
       application/json:
         schema:

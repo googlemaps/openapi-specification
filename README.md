@@ -23,9 +23,9 @@ An OpenAPI specification for Google Maps Platform APIs.
 | Roads              | **Complete** |
 | Time Zone          | **Complete** |
 | Directions         | **Complete** |
-| Maps Static        | Not Started  |
 | Places             | **Complete** |
-| Street View Static | Not Started  |
+| Street View        | **Complete** |
+| Maps Static        | Not Started  |
 
 > **Note**: New APIs will be documented using Google Discovery documents and Protobuf files.
 

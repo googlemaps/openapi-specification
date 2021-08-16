@@ -1,0 +1,39 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+servers:
+  - url: https://maps.googleapis.com
+tags:
+  - Street View API
+description: |
+  The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.
+parameters:
+  - "$ref": "../../parameters/streetview/fov.yml"
+  - "$ref": "../../parameters/streetview/heading.yml"
+  - "$ref": "../../parameters/streetview/location.yml"
+  - "$ref": "../../parameters/streetview/pano.yml"
+  - "$ref": "../../parameters/streetview/pitch.yml"
+  - "$ref": "../../parameters/streetview/radius.yml"
+  - "$ref": "../../parameters/streetview/return_error_code.yml"
+  - "$ref": "../../parameters/streetview/signature.yml"
+  - "$ref": "../../parameters/streetview/size.yml"
+  - "$ref": "../../parameters/streetview/source.yml"
+responses:
+  "200":
+    description: Response for the Street View Static request.
+    content:
+      image/*:
+        schema:
+          type: string
+          format: binary

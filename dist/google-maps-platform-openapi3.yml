@@ -19170,6 +19170,134 @@ paths:
                     status: ZERO_RESULTS
               schema:
                 $ref: '#/components/schemas/PlacesAutocompleteResponse'
+  /maps/api/streetview:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Street View API
+      description: |
+        The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.
+      parameters:
+        - name: fov
+          description: |
+            Determines the horizontal field of view of the image. The field of view is expressed in degrees, with a maximum allowed value of 120. When dealing with a fixed-size viewport, as with a Street View image of a set size, field of view in essence represents zoom, with smaller numbers indicating a higher level of zoom. Default is 90.
+          schema:
+            type: number
+          in: query
+        - name: heading
+          description: |
+            Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.
+          schema:
+            type: number
+          in: query
+        - name: location
+          description: |
+            The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.
+          schema:
+            type: string
+          in: query
+          examples:
+            latlng:
+              value: '40,-110'
+            text:
+              value: 'Chagrin Falls, OH'
+        - name: pano
+          description: |
+            A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.
+          schema:
+            type: string
+          in: query
+        - name: pitch
+          description: |
+            Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.
+          schema:
+            type: number
+          in: query
+        - name: radius
+          description: |
+            Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.
+          schema:
+            type: number
+          in: query
+        - name: return_error_code
+          description: |
+            Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.
+          schema:
+            type: boolean
+          in: query
+        - name: signature
+          description: |
+            A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).
+          schema:
+            type: string
+          in: query
+        - name: size
+          description: |
+            Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
+          schema:
+            type: string
+          in: query
+          required: true
+        - name: source
+          description: |
+            Limits Street View searches to selected sources. Valid values are:
+            * `default` uses the default sources for Street View; searches are not limited to specific sources.
+            * `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.
+          schema:
+            type: string
+            enum:
+              - default
+              - outdoor
+          in: query
+      responses:
+        '200':
+          description: Response for the Street View Static request.
+          content:
+            image/*:
+              schema:
+                type: string
+                format: binary
+  /maps/api/streetview/metadata:
+    get:
+      servers:
+        - url: 'https://maps.googleapis.com'
+      tags:
+        - Street View API
+      description: |
+        The Street View Static API metadata requests provide data about Street View panoramas. Using the metadata, you can find out if a Street View image is available at a given location, as well as getting programmatic access to the latitude and longitude, the panorama ID, the date the photo was taken, and the copyright information for the image. Accessing this metadata allows you to customize error behavior in your application.
+      parameters:
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/1'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/2'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/3'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/4'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/5'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/6'
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/7'
+        - name: size
+          description: |
+            Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
+          schema:
+            type: string
+          in: query
+        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/9'
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StreetViewResponse'
+              examples:
+                default:
+                  value:
+                    copyright: © Google
+                    date: 2014-04
+                    location:
+                      lat: 46.41434210086409
+                      lng: 10.01400595356193
+                    pano_id: vPnURflnc8AZu5NMLYRddw
+                    status: OK
 components:
   parameters:
     language:
@@ -20451,7 +20579,7 @@ components:
       type: string
       title: TimeZoneStatus
       description: |
-        The `status` field within the Time Zone response object contains the status of the request. The "status" field may contain the following values:
+        The `status` field within the Time Zone response object contains the status of the request. The `status` field may contain the following values:
 
         - `OK` indicates that the request was successful.
         - `INVALID_REQUEST` indicates that the request was malformed.
@@ -21132,6 +21260,49 @@ components:
           description: |
             Contains a token that can be used to return up to 20 additional results. A next_page_token will not be returned if there are no additional results to display. The maximum number of results that can be returned is 60. There is a short delay between when a next_page_token is issued, and when it will become valid.
           type: string
+    StreetViewStatus:
+      type: string
+      title: StreetViewStatus
+      description: |
+        The `status` field within the Streetview Metadata response object contains the status of the request. The `status` field may contain the following values:
+
+        - `OK` indicates that no errors occurred; a panorama is found and metadata is returned.
+        - `INVALID_REQUEST` indicates that the request was malformed.
+        - `NOT_FOUND` indicates that the address string provided in the `location` parameter could not be found. This may occur if a non-existent address is given.
+        - `ZERO_RESULTS` indicates that no panorama could be found near the provided location. This may occur if a non-existent or invalid `pano` id is given.
+        - `OVER_QUERY_LIMIT` indicates the requestor has exceeded quota.
+        - `REQUEST_DENIED` indicates that your request was denied. This may occur if you did not [authorize](https://developers.google.com/maps/documentation/streetview/get-api-key) your request, or if the Street View Static API is not activated in the Google Cloud Console project containing your API key.
+        - `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. This is often a temporary status. The request may succeed if you try again
+      enum:
+        - OK
+        - INVALID_REQUEST
+        - NOT_FOUND
+        - ZERO_RESULTS
+        - OVER_QUERY_LIMIT
+        - REQUEST_DENIED
+        - UNKNOWN_ERROR
+    StreetViewResponse:
+      type: object
+      title: StreetViewResponse
+      required:
+        - status
+      properties:
+        copyright:
+          description: An array of snapped points.
+          type: string
+        date:
+          description: A string indicating year and month that the panorama was captured.
+          type: string
+        location:
+          description: The location of the panorama.
+          $ref: '#/components/schemas/LatLngLiteral'
+        pano_id:
+          description: 'A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.'
+          type: string
+          example: tu510ie_z4ptBZYo2BGEJg
+        status:
+          description: The status of the request.
+          $ref: '#/components/schemas/StreetViewStatus'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

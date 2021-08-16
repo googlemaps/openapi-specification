@@ -47,6 +47,10 @@ plugins:
               "path": "dist/google-maps-platform-openapi3.yml",
               "label": "OpenAPI 3 YAML Specification",
             },
+            {
+              "path": "dist/google-maps-platform-postman.json",
+              "label": "Postman Collection",
+            },
           ],
       },
     ]

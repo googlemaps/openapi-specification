@@ -15,7 +15,7 @@
 type: string
 title: TimeZoneStatus
 description: |
-  The `status` field within the Time Zone response object contains the status of the request. The "status" field may contain the following values:
+  The `status` field within the Time Zone response object contains the status of the request. The `status` field may contain the following values:
 
   - `OK` indicates that the request was successful.
   - `INVALID_REQUEST` indicates that the request was malformed.

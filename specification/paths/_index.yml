@@ -57,3 +57,9 @@
 /maps/api/place/autocomplete/json:  
   get:
     $ref: "./places/autocomplete.yml"
+/maps/api/streetview:  
+  get:
+    $ref: "./streetview/static.yml"
+/maps/api/streetview/metadata:  
+  get:
+    $ref: "./streetview/metadata.yml"

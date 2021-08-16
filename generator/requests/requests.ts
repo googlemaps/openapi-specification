@@ -1518,4 +1518,96 @@ export const REQUESTS: SnippetRequest[] = [
       }),
     }),
   },
+  {
+    regionTag: "maps_http_streetview_binary",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/streetview",
+        query: [
+          {
+            key: "heading",
+            value: "151.78",
+          },
+          {
+            key: "pitch",
+            value: "-0.76",
+          },
+          {
+            key: "location",
+            value: "46.414382,10.013988",
+          },
+          {
+            key: "size",
+            value: "600x300",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_streetview_metadata",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/streetview/metadata",
+        query: [
+          {
+            key: "heading",
+            value: "151.78",
+          },
+          {
+            key: "pitch",
+            value: "-0.76",
+          },
+          {
+            key: "location",
+            value: "46.414382,10.013988",
+          },
+          {
+            key: "size",
+            value: "600x300",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_streetview_metadata_error_invalid_pano",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/streetview/metadata",
+        query: [        
+          {
+            key: "pano",
+            value: "invalid",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_streetview_error_invalid_pano_binary",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/streetview",
+        query: [        
+          {
+            key: "pano",
+            value: "invalid",
+          },
+          {
+            key: "size",
+            value: "600x300",
+          },
+        ],
+      }),
+    }),
+  },  
 ];

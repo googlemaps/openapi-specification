@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "7c3330bf-2f9a-4fea-b858-098414b89f6c",
+            "id": "d88afa79-f5f3-47ae-800a-21eb29e106a1",
             "name": "Directions API",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "b6e88af1-697c-4834-af30-6b876c368313",
+                    "id": "f3dca54e-c527-499e-9c81-98c4c33653aa",
                     "name": "/maps/api/directions/json",
                     "request": {
                         "name": "/maps/api/directions/json",
@@ -123,7 +123,7 @@
                     },
                     "response": [
                         {
-                            "id": "c4b6452f-7dba-415e-bef8-4aaa5e7f2003",
+                            "id": "728f63de-dcb6-46e4-b1ce-0ade39179816",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -216,7 +216,112 @@
             "event": []
         },
         {
-            "id": "cb8c2411-3cc5-4542-8d11-d7626f8d00f2",
+            "id": "e2bf9e8c-ae2a-482f-98f5-37b4b67e80de",
+            "name": "Distance Matrix API",
+            "description": {
+                "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
+                "type": "text/plain"
+            },
+            "item": [
+                {
+                    "id": "00429b89-8548-4a85-a9df-c14c01a15204",
+                    "name": "/maps/api/distanceMatrix/json",
+                    "request": {
+                        "name": "/maps/api/distanceMatrix/json",
+                        "description": {
+                            "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "protocol": "https",
+                            "path": [
+                                "maps",
+                                "api",
+                                "distanceMatrix",
+                                "json"
+                            ],
+                            "host": [
+                                "maps",
+                                "googleapis",
+                                "com"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "key": "origins",
+                                    "value": "<string>|<string>",
+                                    "description": "(Required) The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "destinations",
+                                    "value": "<string>|<string>",
+                                    "description": "(Required) One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter."
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "mode",
+                                    "value": "<string>",
+                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "b38810eb-21a5-47d5-90fc-01f82c83476c",
+                            "name": "200 OK",
+                            "originalRequest": {
+                                "url": {
+                                    "host": [
+                                        "undefined"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "origins",
+                                            "value": "Vancouver BC|Seattle"
+                                        },
+                                        {
+                                            "key": "destinations",
+                                            "value": "San Francisco|Victoria BC"
+                                        },
+                                        {
+                                            "key": "mode",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "key",
+                                            "value": "<API Key>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"destination_addresses\": [\n  \"Victoria, BC, Canada\"\n ],\n \"origin_addresses\": [\n  \"Seattle, WA, USA\"\n ],\n \"rows\": [\n  {\n   \"elements\": [\n    {\n     \"distance\": {\n      \"text\": \"341 km\",\n      \"value\": 340815\n     },\n     \"duration\": {\n      \"text\": \"5 hours 34 mins\",\n      \"value\": 20038\n     },\n     \"status\": \"OK\"\n    }\n   ]\n  }\n ],\n \"status\": \"OK\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "5ab7766a-0a45-4524-94d3-2e95eccc038c",
             "name": "Elevation API",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -224,7 +329,7 @@
             },
             "item": [
                 {
-                    "id": "3b4df16b-d6a8-4b12-b7a3-3695bba59a37",
+                    "id": "46a6f192-8fe8-4843-b283-8b6f16557216",
                     "name": "/maps/api/elevation/json",
                     "request": {
                         "name": "/maps/api/elevation/json",
@@ -272,7 +377,7 @@
                     },
                     "response": [
                         {
-                            "id": "7db2ddf2-14fc-456c-bc72-0b6f4561b256",
+                            "id": "690bd713-239d-43bf-b46a-eb41e545c9e3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -321,7 +426,7 @@
             "event": []
         },
         {
-            "id": "95a2d8d3-0097-433e-84f4-f0bd3249b421",
+            "id": "c0fe5778-bd6d-464f-b72f-b427491b92a1",
             "name": "Geocoding API",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -329,7 +434,7 @@
             },
             "item": [
                 {
-                    "id": "b67e54d3-50b9-4d9a-843e-9ac5e4e5e1d9",
+                    "id": "ef29136e-6a40-4328-9fe9-743ef3b21e92",
                     "name": "/maps/api/geocode/json",
                     "request": {
                         "name": "/maps/api/geocode/json",
@@ -401,7 +506,7 @@
                     },
                     "response": [
                         {
-                            "id": "6cd95f0e-6cf6-4e73-b291-4c3f8d128387",
+                            "id": "240b1405-b591-4a5c-904e-76977a169669",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -466,7 +571,7 @@
             "event": []
         },
         {
-            "id": "d6a23687-65a7-4414-ab35-bc0406b2b7fd",
+            "id": "d6e8c478-bedf-4bca-a6b9-fbc341be6403",
             "name": "Geolocation API",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -474,7 +579,7 @@
             },
             "item": [
                 {
-                    "id": "d6a20bd9-560f-4896-97c0-9d44d582fce5",
+                    "id": "db72ea48-59b1-4b1b-ab3a-35282245726c",
                     "name": "/geolocation/v1/geolocate",
                     "request": {
                         "name": "/geolocation/v1/geolocate",
@@ -512,7 +617,7 @@
                     },
                     "response": [
                         {
-                            "id": "1e4f639b-9cf0-4cc7-8de7-f9f99889720c",
+                            "id": "85786c6f-8030-469d-bf22-e1e83df7d6b3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -546,7 +651,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "cb3a6832-da83-4d41-93c8-c425421df0a2",
+                            "id": "d077ed47-5d52-47c9-b5b9-f62f7d27afa4",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -580,7 +685,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e3ef137a-5fa2-4585-90b7-93541b281ddb",
+                            "id": "fbbb643f-83a7-47c4-9e3c-208890e66af1",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -620,7 +725,7 @@
             "event": []
         },
         {
-            "id": "0c64e1b4-56c4-4d07-869f-5ecbd82309da",
+            "id": "3d098da3-288a-4f1d-93f9-30cd348eec5d",
             "name": "Roads API",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -628,7 +733,7 @@
             },
             "item": [
                 {
-                    "id": "87e8c23e-01f7-4cd2-9a79-280cc9d31337",
+                    "id": "f4007a08-1569-4ddf-93ad-3d3ffa653b71",
                     "name": "/v1/snapToRoads",
                     "request": {
                         "name": "/v1/snapToRoads",
@@ -668,7 +773,7 @@
                     },
                     "response": [
                         {
-                            "id": "7ca0821f-c1a8-4c80-9e03-baa777a74560",
+                            "id": "6821bf4f-b30d-4654-bd31-63267b917722",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -710,7 +815,7 @@
                     "event": []
                 },
                 {
-                    "id": "b254116f-531c-4e28-873c-d8b47190a407",
+                    "id": "35b1da83-d507-4fa7-9535-965b8388d292",
                     "name": "/v1/nearestRoads",
                     "request": {
                         "name": "/v1/nearestRoads",
@@ -744,7 +849,7 @@
                     },
                     "response": [
                         {
-                            "id": "c0567dd4-e1cf-4a48-9d91-426f7c9fdb3b",
+                            "id": "cd5b5ceb-2879-44d4-92e4-3eac28ac5dfb",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -774,12 +879,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": -9841359.30030492,\n    \"longitude\": -98244272.58086033\n   },\n   \"placeId\": \"dolore mollit fugiat elit\",\n   \"originalIndex\": 29027727.931493625\n  },\n  {\n   \"location\": {\n    \"latitude\": 33491704.72268428,\n    \"longitude\": -44796036.25751598\n   },\n   \"placeId\": \"dolore\",\n   \"originalIndex\": 71406499.76508114\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 39997323.87185225,\n    \"longitude\": 96235257.53376588\n   },\n   \"placeId\": \"consectetur quis\",\n   \"originalIndex\": -63977049.568878286\n  },\n  {\n   \"location\": {\n    \"latitude\": -32704345.966247678,\n    \"longitude\": 63563498.80664712\n   },\n   \"placeId\": \"dolor nulla sit\",\n   \"originalIndex\": -74386912.05974278\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8a65a561-ad4d-4370-b9c7-7f0c2d33e902",
+                            "id": "bbc0c9e6-654e-4dee-a5d0-c6f60fee73d7",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -820,7 +925,7 @@
             "event": []
         },
         {
-            "id": "08f0de54-2ed7-4788-989a-0f62088d8657",
+            "id": "3e1a7d05-b050-4bbf-b7a0-2799ab915e89",
             "name": "Time Zone API",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -828,7 +933,7 @@
             },
             "item": [
                 {
-                    "id": "18e52660-9966-4cc2-bcc8-7956ec99a5b8",
+                    "id": "0057ed4b-1045-465e-81e1-bf61acdd36eb",
                     "name": "/maps/api/timezone/json",
                     "request": {
                         "name": "/maps/api/timezone/json",
@@ -876,7 +981,7 @@
                     },
                     "response": [
                         {
-                            "id": "bb82a06f-2d22-4493-a73c-7669bd7ad652",
+                            "id": "168d41d2-dd0c-4cbd-8084-e6556468be80",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -925,20 +1030,20 @@
             "event": []
         },
         {
-            "id": "654ba79b-e389-452b-aa7f-ea9ed72bdc60",
-            "name": "Distance Matrix API",
+            "id": "ca8849cc-7085-4869-bbe1-c05ebbed6855",
+            "name": "Street View API",
             "description": {
-                "content": "",
+                "content": "The Street View API provides a simple interface to retrieve Street View images.",
                 "type": "text/plain"
             },
             "item": [
                 {
-                    "id": "607676c7-40aa-4d1d-8919-67cee4dd9d66",
-                    "name": "/maps/api/distanceMatrix/json",
+                    "id": "d967ceb7-4a9f-4e69-bc4a-eeb357c97e66",
+                    "name": "/maps/api/streetview",
                     "request": {
-                        "name": "/maps/api/distanceMatrix/json",
+                        "name": "/maps/api/streetview",
                         "description": {
-                            "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.",
+                            "content": "The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.\n",
                             "type": "text/plain"
                         },
                         "url": {
@@ -946,8 +1051,7 @@
                             "path": [
                                 "maps",
                                 "api",
-                                "distanceMatrix",
-                                "json"
+                                "streetview"
                             ],
                             "host": [
                                 "maps",
@@ -956,22 +1060,64 @@
                             ],
                             "query": [
                                 {
-                                    "disabled": false,
-                                    "key": "origins",
-                                    "value": "<string>|<string>",
-                                    "description": "(Required) The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n"
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "destinations",
-                                    "value": "<string>|<string>",
-                                    "description": "(Required) One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter."
+                                    "disabled": true,
+                                    "key": "fov",
+                                    "value": "<number>",
+                                    "description": "Determines the horizontal field of view of the image. The field of view is expressed in degrees, with a maximum allowed value of 120. When dealing with a fixed-size viewport, as with a Street View image of a set size, field of view in essence represents zoom, with smaller numbers indicating a higher level of zoom. Default is 90.\n"
                                 },
                                 {
                                     "disabled": true,
-                                    "key": "mode",
+                                    "key": "heading",
+                                    "value": "<number>",
+                                    "description": "Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "location",
                                     "value": "<string>",
-                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                    "description": "The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "pano",
+                                    "value": "<string>",
+                                    "description": "A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "pitch",
+                                    "value": "<number>",
+                                    "description": "Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "radius",
+                                    "value": "<number>",
+                                    "description": "Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "return_error_code",
+                                    "value": "<boolean>",
+                                    "description": "Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "signature",
+                                    "value": "<string>",
+                                    "description": "A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).\n"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "size",
+                                    "value": "<string>",
+                                    "description": "(Required) Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "source",
+                                    "value": "<string>",
+                                    "description": "Limits Street View searches to selected sources. Valid values are:\n* `default` uses the default sources for Street View; searches are not limited to specific sources.\n* `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.\n"
                                 }
                             ],
                             "variable": []
@@ -981,7 +1127,7 @@
                     },
                     "response": [
                         {
-                            "id": "45ef328b-3963-42d6-889a-251e4f249961",
+                            "id": "357361a9-3f71-40df-a5ea-8ef9cebb592c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -990,15 +1136,197 @@
                                     ],
                                     "query": [
                                         {
-                                            "key": "origins",
-                                            "value": "Vancouver BC|Seattle"
+                                            "key": "fov",
+                                            "value": "<number>"
                                         },
                                         {
-                                            "key": "destinations",
-                                            "value": "San Francisco|Victoria BC"
+                                            "key": "heading",
+                                            "value": "<number>"
                                         },
                                         {
-                                            "key": "mode",
+                                            "key": "location",
+                                            "value": "40,-110"
+                                        },
+                                        {
+                                            "key": "pano",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "pitch",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "radius",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "return_error_code",
+                                            "value": "<boolean>"
+                                        },
+                                        {
+                                            "key": "signature",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "size",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "source",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "key",
+                                            "value": "<API Key>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "image/*"
+                                }
+                            ],
+                            "body": "dolore sint minim",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "d101c4f3-5ab4-4578-b488-46167c6f2488",
+                    "name": "/maps/api/streetview/metadata",
+                    "request": {
+                        "name": "/maps/api/streetview/metadata",
+                        "description": {
+                            "content": "The Street View Static API metadata requests provide data about Street View panoramas. Using the metadata, you can find out if a Street View image is available at a given location, as well as getting programmatic access to the latitude and longitude, the panorama ID, the date the photo was taken, and the copyright information for the image. Accessing this metadata allows you to customize error behavior in your application.\n",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "protocol": "https",
+                            "path": [
+                                "maps",
+                                "api",
+                                "streetview",
+                                "metadata"
+                            ],
+                            "host": [
+                                "maps",
+                                "googleapis",
+                                "com"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": true,
+                                    "key": "heading",
+                                    "value": "<number>",
+                                    "description": "Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "location",
+                                    "value": "<string>",
+                                    "description": "The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "pano",
+                                    "value": "<string>",
+                                    "description": "A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "pitch",
+                                    "value": "<number>",
+                                    "description": "Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "radius",
+                                    "value": "<number>",
+                                    "description": "Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "return_error_code",
+                                    "value": "<boolean>",
+                                    "description": "Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "signature",
+                                    "value": "<string>",
+                                    "description": "A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "size",
+                                    "value": "<string>",
+                                    "description": "Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "source",
+                                    "value": "<string>",
+                                    "description": "Limits Street View searches to selected sources. Valid values are:\n* `default` uses the default sources for Street View; searches are not limited to specific sources.\n* `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.\n"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "a8544a1a-3340-401a-bd7b-a0d2b4626de0",
+                            "name": "200 OK",
+                            "originalRequest": {
+                                "url": {
+                                    "host": [
+                                        "undefined"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "heading",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "location",
+                                            "value": "40,-110"
+                                        },
+                                        {
+                                            "key": "pano",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "pitch",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "radius",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "return_error_code",
+                                            "value": "<boolean>"
+                                        },
+                                        {
+                                            "key": "signature",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "size",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "source",
                                             "value": "<string>"
                                         },
                                         {
@@ -1019,7 +1347,7 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"destination_addresses\": [\n  \"Victoria, BC, Canada\"\n ],\n \"origin_addresses\": [\n  \"Seattle, WA, USA\"\n ],\n \"rows\": [\n  {\n   \"elements\": [\n    {\n     \"distance\": {\n      \"text\": \"341 km\",\n      \"value\": 340815\n     },\n     \"duration\": {\n      \"text\": \"5 hours 34 mins\",\n      \"value\": 20038\n     },\n     \"status\": \"OK\"\n    }\n   ]\n  }\n ],\n \"status\": \"OK\"\n}",
+                            "body": "{\n \"copyright\": \"© Google\",\n \"date\": \"2014-04\",\n \"location\": {\n  \"lat\": 46.41434210086409,\n  \"lng\": 10.01400595356193\n },\n \"pano_id\": \"vPnURflnc8AZu5NMLYRddw\",\n \"status\": \"OK\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         }
@@ -1030,15 +1358,15 @@
             "event": []
         },
         {
-            "id": "02680d9b-555d-41c2-aa9b-2db2540895ae",
+            "id": "2130eb2a-f94e-4c12-9371-99980170b01a",
             "name": "Places API",
             "description": {
-                "content": "",
+                "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
                 "type": "text/plain"
             },
             "item": [
                 {
-                    "id": "969d2276-fad9-49d3-bc42-c06a94cf178a",
+                    "id": "a859dce3-59fd-40cd-82b2-f91201aad8ac",
                     "name": "/maps/api/place/details/json",
                     "request": {
                         "name": "/maps/api/place/details/json",
@@ -1099,7 +1427,7 @@
                     },
                     "response": [
                         {
-                            "id": "b01672d8-c3e0-4403-8778-3a4186e1f98a",
+                            "id": "0d52ca20-4902-4a09-9374-395b61b211ad",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1153,7 +1481,7 @@
                     "event": []
                 },
                 {
-                    "id": "f969fb06-7ffb-44ca-b13b-58c9cb253e36",
+                    "id": "cb4c2d14-6618-44b0-8d21-eb048d1c47b9",
                     "name": "/maps/api/place/findplacefromtext/json",
                     "request": {
                         "name": "/maps/api/place/findplacefromtext/json",
@@ -1214,7 +1542,7 @@
                     },
                     "response": [
                         {
-                            "id": "ebb74b80-f613-452b-b699-4f47d93c389b",
+                            "id": "9929b25e-3ab3-4d8b-825d-da23046f1fb6",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1268,7 +1596,7 @@
                     "event": []
                 },
                 {
-                    "id": "5836e50a-0529-4de4-9ef5-094001984311",
+                    "id": "6ed34696-eed9-48a0-b9c9-d25988048315",
                     "name": "/maps/api/place/nearbysearch/json",
                     "request": {
                         "name": "/maps/api/place/nearbysearch/json",
@@ -1371,7 +1699,7 @@
                     },
                     "response": [
                         {
-                            "id": "000eafb9-de0c-49a6-ac8f-dcd0830c8ca9",
+                            "id": "46447475-8b88-4da5-a1c8-06604fab8509",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1453,7 +1781,7 @@
                     "event": []
                 },
                 {
-                    "id": "a4adb05b-7072-4ce5-944a-55afc40ade07",
+                    "id": "17d15e6f-d264-4fc3-8ba8-52872c150550",
                     "name": "/maps/api/place/textsearch/json",
                     "request": {
                         "name": "/maps/api/place/textsearch/json",
@@ -1544,7 +1872,7 @@
                     },
                     "response": [
                         {
-                            "id": "5aae149d-230f-47b8-a4b6-c323a20153a6",
+                            "id": "a3fec744-ea8a-467c-b6c1-cecd5f8012d8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1618,7 +1946,7 @@
                     "event": []
                 },
                 {
-                    "id": "f3a775d6-173e-46a0-989d-3b8989efc2d4",
+                    "id": "2538235e-c3a0-4f09-988a-515f53dc3f8b",
                     "name": "/maps/api/place/photo",
                     "request": {
                         "name": "/maps/api/place/photo",
@@ -1666,7 +1994,7 @@
                     },
                     "response": [
                         {
-                            "id": "92859b33-204a-4e1a-8d2f-d149ce8b9786",
+                            "id": "41bda268-3205-417d-87ed-eb8651878e49",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1704,7 +2032,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "rep",
+                            "body": "dolore sint minim",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1712,7 +2040,7 @@
                     "event": []
                 },
                 {
-                    "id": "175693f3-27e7-4184-ae95-508854935bb0",
+                    "id": "eb405572-467e-4c73-8c05-75b1e57da118",
                     "name": "/maps/api/place/queryautocomplete/json",
                     "request": {
                         "name": "/maps/api/place/queryautocomplete/json",
@@ -1773,7 +2101,7 @@
                     },
                     "response": [
                         {
-                            "id": "aeeedd6b-8f5c-4c99-a1e2-f7b6d3e3fd07",
+                            "id": "c04b7968-e83e-41ad-bb8c-a6fe92c28cfb",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1827,7 +2155,7 @@
                     "event": []
                 },
                 {
-                    "id": "71c5e0ba-87f0-4e06-817f-6d3f029eaf9d",
+                    "id": "c11e9218-efde-47d2-b56d-598d37fdd289",
                     "name": "/maps/api/place/autocomplete/json",
                     "request": {
                         "name": "/maps/api/place/autocomplete/json",
@@ -1918,7 +2246,7 @@
                     },
                     "response": [
                         {
-                            "id": "ede5acda-1e29-45f3-b76b-94ccef6b49b6",
+                            "id": "1280fa00-eda1-487f-8441-934d9ae75abb",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1993,334 +2321,6 @@
                 }
             ],
             "event": []
-        },
-        {
-            "id": "8ead3487-4841-4daa-9c9a-d29507f80d52",
-            "name": "Street View API",
-            "description": {
-                "content": "",
-                "type": "text/plain"
-            },
-            "item": [
-                {
-                    "id": "82b612ed-03fe-4c6b-bc63-89e2e951c27a",
-                    "name": "/maps/api/streetview",
-                    "request": {
-                        "name": "/maps/api/streetview",
-                        "description": {
-                            "content": "The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.\n",
-                            "type": "text/plain"
-                        },
-                        "url": {
-                            "protocol": "https",
-                            "path": [
-                                "maps",
-                                "api",
-                                "streetview"
-                            ],
-                            "host": [
-                                "maps",
-                                "googleapis",
-                                "com"
-                            ],
-                            "query": [
-                                {
-                                    "disabled": true,
-                                    "key": "fov",
-                                    "value": "<number>",
-                                    "description": "Determines the horizontal field of view of the image. The field of view is expressed in degrees, with a maximum allowed value of 120. When dealing with a fixed-size viewport, as with a Street View image of a set size, field of view in essence represents zoom, with smaller numbers indicating a higher level of zoom. Default is 90.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "heading",
-                                    "value": "<number>",
-                                    "description": "Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "location",
-                                    "value": "<string>",
-                                    "description": "The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "pano",
-                                    "value": "<string>",
-                                    "description": "A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "pitch",
-                                    "value": "<number>",
-                                    "description": "Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "radius",
-                                    "value": "<number>",
-                                    "description": "Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "return_error_code",
-                                    "value": "<boolean>",
-                                    "description": "Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "signature",
-                                    "value": "<string>",
-                                    "description": "A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).\n"
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "size",
-                                    "value": "<string>",
-                                    "description": "(Required) Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "source",
-                                    "value": "<string>",
-                                    "description": "Limits Street View searches to selected sources. Valid values are:\n* `default` uses the default sources for Street View; searches are not limited to specific sources.\n* `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.\n"
-                                }
-                            ],
-                            "variable": []
-                        },
-                        "method": "GET",
-                        "auth": null
-                    },
-                    "response": [
-                        {
-                            "id": "b4e53f65-5fa2-4553-a79e-9d062ab812a4",
-                            "name": "200 OK",
-                            "originalRequest": {
-                                "url": {
-                                    "host": [
-                                        "undefined"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "fov",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "heading",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "location",
-                                            "value": "40,-110"
-                                        },
-                                        {
-                                            "key": "pano",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "pitch",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "radius",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "return_error_code",
-                                            "value": "<boolean>"
-                                        },
-                                        {
-                                            "key": "signature",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "size",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "source",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "key",
-                                            "value": "<API Key>"
-                                        }
-                                    ],
-                                    "variable": []
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "OK",
-                            "code": 200,
-                            "header": [
-                                {
-                                    "key": "Content-Type",
-                                    "value": "image/*"
-                                }
-                            ],
-                            "body": "rep",
-                            "cookie": [],
-                            "_postman_previewlanguage": "text"
-                        }
-                    ],
-                    "event": []
-                },
-                {
-                    "id": "a545dd3b-e9db-4c2e-8778-601a263ee757",
-                    "name": "/maps/api/streetview/metadata",
-                    "request": {
-                        "name": "/maps/api/streetview/metadata",
-                        "description": {
-                            "content": "The Street View Static API metadata requests provide data about Street View panoramas. Using the metadata, you can find out if a Street View image is available at a given location, as well as getting programmatic access to the latitude and longitude, the panorama ID, the date the photo was taken, and the copyright information for the image. Accessing this metadata allows you to customize error behavior in your application.\n",
-                            "type": "text/plain"
-                        },
-                        "url": {
-                            "protocol": "https",
-                            "path": [
-                                "maps",
-                                "api",
-                                "streetview",
-                                "metadata"
-                            ],
-                            "host": [
-                                "maps",
-                                "googleapis",
-                                "com"
-                            ],
-                            "query": [
-                                {
-                                    "disabled": true,
-                                    "key": "heading",
-                                    "value": "<number>",
-                                    "description": "Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "location",
-                                    "value": "<string>",
-                                    "description": "The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "pano",
-                                    "value": "<string>",
-                                    "description": "A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "pitch",
-                                    "value": "<number>",
-                                    "description": "Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "radius",
-                                    "value": "<number>",
-                                    "description": "Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "return_error_code",
-                                    "value": "<boolean>",
-                                    "description": "Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "signature",
-                                    "value": "<string>",
-                                    "description": "A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "size",
-                                    "value": "<string>",
-                                    "description": "Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "source",
-                                    "value": "<string>",
-                                    "description": "Limits Street View searches to selected sources. Valid values are:\n* `default` uses the default sources for Street View; searches are not limited to specific sources.\n* `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.\n"
-                                }
-                            ],
-                            "variable": []
-                        },
-                        "method": "GET",
-                        "auth": null
-                    },
-                    "response": [
-                        {
-                            "id": "b35a300f-2cb3-4a29-9f42-230a0febee1c",
-                            "name": "200 OK",
-                            "originalRequest": {
-                                "url": {
-                                    "host": [
-                                        "undefined"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "heading",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "location",
-                                            "value": "40,-110"
-                                        },
-                                        {
-                                            "key": "pano",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "pitch",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "radius",
-                                            "value": "<number>"
-                                        },
-                                        {
-                                            "key": "return_error_code",
-                                            "value": "<boolean>"
-                                        },
-                                        {
-                                            "key": "signature",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "size",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "source",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "key",
-                                            "value": "<API Key>"
-                                        }
-                                    ],
-                                    "variable": []
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "OK",
-                            "code": 200,
-                            "header": [
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                }
-                            ],
-                            "body": "{\n \"copyright\": \"© Google\",\n \"date\": \"2014-04\",\n \"location\": {\n  \"lat\": 46.41434210086409,\n  \"lng\": 10.01400595356193\n },\n \"pano_id\": \"vPnURflnc8AZu5NMLYRddw\",\n \"status\": \"OK\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        }
-                    ],
-                    "event": []
-                }
-            ],
-            "event": []
         }
     ],
     "event": [],
@@ -2349,7 +2349,7 @@
         ]
     },
     "info": {
-        "_postman_id": "5d4d29ee-a128-401c-9da9-6f349481d9cb",
+        "_postman_id": "85e1af61-f2a6-49c4-92b4-838c96b95dda",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

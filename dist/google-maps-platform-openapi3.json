@@ -29925,6 +29925,13 @@
       }
     },
     {
+      "name": "Distance Matrix API",
+      "description": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
+      "externalDocs": {
+        "url": "https://developers.google.com/maps/documentation/distance-matrix/overview"
+      }
+    },
+    {
       "name": "Elevation API",
       "description": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
       "externalDocs": {
@@ -29957,6 +29964,20 @@
       "description": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
       "externalDocs": {
         "url": "https://developers.google.com/maps/documentation/timezone/overview"
+      }
+    },
+    {
+      "name": "Street View API",
+      "description": "The Street View API provides a simple interface to retrieve Street View images.",
+      "externalDocs": {
+        "url": "https://developers.google.com/maps/documentation/streetview/overview"
+      }
+    },
+    {
+      "name": "Places API",
+      "description": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
+      "externalDocs": {
+        "url": "https://developers.google.com/maps/documentation/places/web-service/overview"
       }
     }
   ]

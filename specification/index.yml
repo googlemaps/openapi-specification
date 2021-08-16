@@ -18,7 +18,7 @@ info:
   description: API Specification for Google Maps Platform
   version: 1.16.0
 servers:
-  - url: 'https://www.googleapis.com'
+  - url: "https://www.googleapis.com"
 paths:
   $ref: "./paths/_index.yml"
 components:
@@ -30,7 +30,7 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: query
-      name: key  
+      name: key
 security:
   - ApiKeyAuth: []
 tags:
@@ -39,6 +39,11 @@ tags:
       The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.
     externalDocs:
       url: https://developers.google.com/maps/documentation/directions/overview
+  - name: Distance Matrix API
+    description: |-
+      The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.
+    externalDocs:
+      url: https://developers.google.com/maps/documentation/distance-matrix/overview
   - name: Elevation API
     description: |-
       The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.
@@ -58,9 +63,19 @@ tags:
     description: |-
       The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.
     externalDocs:
-      url: https://developers.google.com/maps/documentation/roads/overview      
+      url: https://developers.google.com/maps/documentation/roads/overview
   - name: Time Zone API
     description: |-
       The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.
     externalDocs:
-      url: https://developers.google.com/maps/documentation/timezone/overview      
+      url: https://developers.google.com/maps/documentation/timezone/overview
+  - name: Street View API
+    description: |-
+      The Street View API provides a simple interface to retrieve Street View images.
+    externalDocs:
+      url: https://developers.google.com/maps/documentation/streetview/overview
+  - name: Places API
+    description: |-
+      The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.
+    externalDocs:
+      url: https://developers.google.com/maps/documentation/places/web-service/overview

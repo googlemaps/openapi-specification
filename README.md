@@ -29,6 +29,7 @@ An OpenAPI specification for Google Maps Platform APIs.
 
 > **Note**: New APIs will be documented using Google Discovery documents and Protobuf files.
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/13440387-fc4788d5-77f9-4639-a4c5-74a2878d7eb5?action=collection%2Ffork&collection-url=entityId%3D13440387-fc4788d5-77f9-4639-a4c5-74a2878d7eb5%26entityType%3Dcollection%26workspaceId%3D047c6f75-6b23-42df-b77a-70d716895d9f)
 
 ## Development
 

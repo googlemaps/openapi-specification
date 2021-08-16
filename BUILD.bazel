@@ -115,4 +115,5 @@ openapi2postmanv2(
         "//:google-maps-platform-openapi3.json",
         "//:postman-config.json",
     ],
+    visibility = ["//visibility:public"],
 )

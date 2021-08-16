@@ -33,7 +33,13 @@ plugins:
           ],
       },
     ]
-  - ["@semantic-release/exec", { "prepareCmd": "npm run build" }]
+  - [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "npm run build",
+        "publishCmd": "npm run publish:postman",
+      },
+    ]
   - [
       "@semantic-release/github",
       {

@@ -26,7 +26,7 @@ parameters:
   - "$ref": "../../parameters/places/maxwidth.yml"
 responses:
   "200":
-    description: Response for the Place Photo request.
+    description: 200 OK
     content:
       image/*:
         schema:

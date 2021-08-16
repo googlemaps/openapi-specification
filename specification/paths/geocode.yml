@@ -35,7 +35,7 @@ parameters:
   - "$ref": "../parameters/region.yml"
 responses:
   "200":
-    description: "Gecoding Response"
+    description: 200 OK
     content:
       application/json:
         examples:

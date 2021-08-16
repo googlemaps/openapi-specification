@@ -28,7 +28,7 @@ parameters:
   - "$ref": "../parameters/elevation/samples.yml"
 responses:
   "200":
-    description: "Elevation Response"
+    description: 200 OK
     content:
       application/json:
         examples:        

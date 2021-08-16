@@ -74,7 +74,7 @@
         },
         "responses": {
           "200": {
-            "description": "Ok",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -113,7 +113,7 @@
             }
           },
           "400": {
-            "description": "Bad Request",
+            "description": "400 BAD REQUEST",
             "content": {
               "application/json": {
                 "schema": {
@@ -156,7 +156,7 @@
             }
           },
           "404": {
-            "description": "Not Found",
+            "description": "404 NOT FOUND",
             "content": {
               "application/json": {
                 "schema": {
@@ -365,7 +365,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Distance Matrix API query.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -20165,7 +20165,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Elevation Response",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -20363,7 +20363,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Gecoding Response",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -22341,7 +22341,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Time Zone Response",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -22429,7 +22429,7 @@
         ],
         "responses": {
           "200": {
-            "description": "For each valid request, the Roads API will return a response in the format indicated within the request URL.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -23221,7 +23221,7 @@
         ],
         "responses": {
           "200": {
-            "description": "For each valid request, the Roads API will return a response in the format indicated within the request URL.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23231,7 +23231,7 @@
             }
           },
           "400": {
-            "description": "For each valid request, the Roads API will return a response in the format indicated within the request URL.",
+            "description": "400 BAD REQUEST",
             "content": {
               "application/json": {
                 "examples": {
@@ -23308,7 +23308,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Distance Matrix API query.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -23748,7 +23748,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Distance Matrix API query.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -24142,7 +24142,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Find Place From Text request.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -24416,7 +24416,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Distance Matrix API query.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -25604,7 +25604,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Places Text Search request.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -26825,7 +26825,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Place Photo request.",
+            "description": "200 OK",
             "content": {
               "image/*": {
                 "schema": {
@@ -26874,7 +26874,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Autocomplete request.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -27224,7 +27224,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Autocomplete request.",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "examples": {
@@ -27559,7 +27559,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Response for the Street View Static request.",
+            "description": "200 OK",
             "content": {
               "image/*": {
                 "schema": {
@@ -27619,7 +27619,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Ok",
+            "description": "200 OK",
             "content": {
               "application/json": {
                 "schema": {

@@ -24,7 +24,7 @@ parameters:
   - "$ref": "../parameters/timezone/timestamp.yml"
 responses:
   "200":
-    description: "Time Zone Response"
+    description: 200 OK
     content:
       application/json:
         examples:        

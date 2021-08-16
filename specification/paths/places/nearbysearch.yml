@@ -32,7 +32,7 @@ parameters:
   - "$ref": "../../parameters/language.yml"
 responses:
   "200":
-    description: Response for the Distance Matrix API query.
+    description: 200 OK
     content:
       application/json:
         examples:

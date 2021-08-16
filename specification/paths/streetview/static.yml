@@ -31,7 +31,7 @@ parameters:
   - "$ref": "../../parameters/streetview/source.yml"
 responses:
   "200":
-    description: Response for the Street View Static request.
+    description: 200 OK
     content:
       image/*:
         schema:

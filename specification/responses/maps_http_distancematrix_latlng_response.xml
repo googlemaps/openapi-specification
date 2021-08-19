@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_latlng_response] -->
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>P.O. Box 793, Brooklyn, NY 11207, USA</origin_address>
+ <destination_address>585 Schenectady Ave, Brooklyn, NY 11203, USA</destination_address>
+ <destination_address>102-01 66th Rd, Queens, NY 11375, USA</destination_address>
+ <destination_address>1000 N Village Ave, Rockville Centre, NY 11570, USA</destination_address>
+ <destination_address>327 Beach 19th St, Far Rockaway, NY 11691, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1148</value>
+    <text>19 mins</text>
+   </duration>
+   <distance>
+    <value>4823</value>
+    <text>4.8 km</text>
+   </distance>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1392</value>
+    <text>23 mins</text>
+   </duration>
+   <distance>
+    <value>13515</value>
+    <text>13.5 km</text>
+   </distance>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>1813</value>
+    <text>30 mins</text>
+   </duration>
+   <distance>
+    <value>25551</value>
+    <text>25.6 km</text>
+   </distance>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>2144</value>
+    <text>36 mins</text>
+   </duration>
+   <distance>
+    <value>21308</value>
+    <text>21.3 km</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_latlng_response] -->

@@ -680,6 +680,26 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_distancematrix_latlng",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "40.6655101,-73.89188969999998",
+          },
+          {
+            key: "destinations",
+            value: encodeURIComponent("40.659569,-73.933783|40.729029,-73.851524|40.6860072,-73.6334271|40.598566,-73.7527626"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_distancematrix_encoded",
     request: new Request({
       url: new Url({

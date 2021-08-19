@@ -28088,6 +28088,32 @@
           }
         }
       },
+      "Fare": {
+        "type": "object",
+        "title": "Fare",
+        "description": "The total fare for the route.",
+        "required": [
+          "currency",
+          "value",
+          "text"
+        ],
+        "properties": {
+          "currency": {
+            "type": "string",
+            "description": "An [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) indicating the currency that the amount is expressed in.",
+            "example": "USD"
+          },
+          "value": {
+            "type": "number",
+            "description": "The total fare amount, in the currency specified."
+          },
+          "text": {
+            "type": "string",
+            "description": "The total fare amount, formatted in the requested language.",
+            "example": "$6.00"
+          }
+        }
+      },
       "Geometry": {
         "type": "object",
         "title": "Geometry",
@@ -28214,7 +28240,7 @@
         ],
         "properties": {
           "elements": {
-            "description": "When the Distance Matrix API returns results, it places them within a JSON rows array. Even if no results are returned (such as when the origins and/or destinations don't exist), it still returns an empty array. \nRows are ordered according to the values in the origin parameter of the request. Each row corresponds to an origin, and each element within that row corresponds to a pairing of the origin with a destination value.\nEach row array contains one or more element entries, which in turn contain the information about a single origin-destination pairing.\n",
+            "description": "When the Distance Matrix API returns results, it places them within a JSON rows array. Even if no results are returned (such as when the origins and/or destinations don't exist), it still returns an empty array. \n\nRows are ordered according to the values in the origin parameter of the request. Each row corresponds to an origin, and each element within that row corresponds to a pairing of the origin with a destination value.\n\nEach row array contains one or more element entries, which in turn contain the information about a single origin-destination pairing.\n",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DistanceMatrixElement"
@@ -28229,10 +28255,20 @@
           "status"
         ],
         "properties": {
+          "fare": {
+            "description": "If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for transit providers where fare information is available.",
+            "$ref": "#/components/schemas/Fare"
+          },
           "distance": {
+            "description": "The total distance of this route, expressed in meters (value) and as text. The textual value uses the unit system specified with the unit parameter of the original request, or the origin's region.",
+            "$ref": "#/components/schemas/TextValueObject"
+          },
+          "duration_in_traffic": {
+            "description": "The length of time it takes to travel this route, based on current and historical traffic conditions. See the `traffic_model` request parameter for the options you can use to request that the returned value is optimistic, pessimistic, or a best-guess estimate. The duration is expressed in seconds (the value field) and as text. The textual representation is localized according to the query's language parameter. The duration in traffic is returned only if all of the following are true:\n\n* The request includes a `departure_time` parameter.\n* Traffic conditions are available for the requested route.\n* The mode parameter is set to driving.\n",
             "$ref": "#/components/schemas/TextValueObject"
           },
           "duration": {
+            "description": "The length of time it takes to travel this route, expressed in seconds (the value field) and as text. The textual representation is localized according to the query's language parameter.",
             "$ref": "#/components/schemas/TextValueObject"
           },
           "status": {
@@ -28255,32 +28291,6 @@
           "REQUEST_DENIED",
           "UNKNOWN_ERROR"
         ]
-      },
-      "DirectionsFare": {
-        "type": "object",
-        "title": "DirectionsFare",
-        "description": "The total fare for the route.",
-        "required": [
-          "currency",
-          "value",
-          "text"
-        ],
-        "properties": {
-          "currency": {
-            "type": "string",
-            "description": "An [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) indicating the currency that the amount is expressed in.",
-            "example": "USD"
-          },
-          "value": {
-            "type": "number",
-            "description": "The total fare amount, in the currency specified."
-          },
-          "text": {
-            "type": "string",
-            "description": "The total fare amount, formatted in the requested language.",
-            "example": "$6.00"
-          }
-        }
       },
       "DirectionsResponse": {
         "type": "object",
@@ -28519,7 +28529,7 @@
           },
           "fare": {
             "description": "If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.",
-            "$ref": "#/components/schemas/DirectionsFare"
+            "$ref": "#/components/schemas/Fare"
           }
         }
       },

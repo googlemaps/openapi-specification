@@ -55,4 +55,4 @@ properties:
     $ref: "./DirectionsPolyline.yml"
   fare:
     description: If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.
-    $ref: "./DirectionsFare.yml"
+    $ref: "./Fare.yml"

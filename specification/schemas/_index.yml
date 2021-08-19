@@ -22,6 +22,8 @@ LatitudeLongitudeLiteral:
   $ref: "./LatitudeLongitudeLiteral.yml"
 AddressComponent:
   $ref: "./AddressComponent.yml"
+Fare:
+  $ref: "./Fare.yml"
 Geometry:
   $ref: "./Geometry.yml"
 PlusCode:
@@ -42,8 +44,6 @@ DistanceMatrixElement:
 DistanceMatrixStatus:
   $ref: "./DistanceMatrixStatus.yml"
 # Directions
-DirectionsFare:
-  $ref: "./DirectionsFare.yml"
 DirectionsResponse:
   $ref: "./DirectionsResponse.yml"
 DirectionsStep:

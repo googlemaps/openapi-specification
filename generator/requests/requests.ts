@@ -592,6 +592,66 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_distancematrix_side_of_road",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "37.7680296,-122.4375126",
+          },
+          {
+            key: "destinations",
+            value: "side_of_road:37.7663444,-122.4412006",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_side_of_road_polyline",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: encodeURIComponent("San Francisco City hall"),
+          },
+          {
+            key: "destinations",
+            value: "side_of_road:enc:{oqeF`fejV[nC:",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_distancematrix_heading",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: "heading=90:37.773279,-122.468780",
+          },
+          {
+            key: "destinations",
+            value: "37.773245,-122.469502",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_distancematrix_bicycling",
     request: new Request({
       url: new Url({
@@ -610,6 +670,10 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "mode",
             value: "bicycling",
+          },
+          {
+            key: "language",
+            value: "fr-FR",
           },
         ],
       }),

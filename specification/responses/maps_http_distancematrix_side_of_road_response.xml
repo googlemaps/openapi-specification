@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_side_of_road_response] -->
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>154 Alpine Terrace, San Francisco, CA 94117, USA</origin_address>
+ <destination_address>423 Buena Vista Ave E, San Francisco, CA 94117, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>174</value>
+    <text>3 mins</text>
+   </duration>
+   <distance>
+    <value>999</value>
+    <text>1.0 km</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_side_of_road_response] -->

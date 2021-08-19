@@ -1,4 +1,4 @@
-// [START maps_http_distancematrix_bicycling]
+// [START maps_http_distancematrix_side_of_road]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Vancouver%20BC%7CSeattle&destinations=San%20Francisco%7CVictoria%20BC&mode=bicycling&language=fr-FR&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/distancematrix/json?origins=37.7680296,-122.4375126&destinations=side_of_road:37.7663444,-122.4412006&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END maps_http_distancematrix_bicycling]
+// [END maps_http_distancematrix_side_of_road]

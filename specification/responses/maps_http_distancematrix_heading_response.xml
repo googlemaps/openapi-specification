@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_heading_response] -->
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>3426 Fulton St, San Francisco, CA 94118, USA</origin_address>
+ <destination_address>3520 Fulton St, San Francisco, CA 94118, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>145</value>
+    <text>2 mins</text>
+   </duration>
+   <distance>
+    <value>733</value>
+    <text>0.7 km</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_heading_response] -->

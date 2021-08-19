@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_side_of_road_polyline_response] -->
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>1 Dr Carlton B Goodlett Pl, San Francisco, CA 94102, USA</origin_address>
+ <destination_address>201 US-101, San Francisco, CA 94102, USA</destination_address>
+ <destination_address>249 Grove St, San Francisco, CA 94102, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>328</value>
+    <text>5 mins</text>
+   </duration>
+   <distance>
+    <value>673</value>
+    <text>0.7 km</text>
+   </distance>
+  </element>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>85</value>
+    <text>1 min</text>
+   </duration>
+   <distance>
+    <value>348</value>
+    <text>0.3 km</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_side_of_road_polyline_response] -->

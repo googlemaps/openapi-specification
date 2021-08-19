@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_distancematrix_start_response] -->
+<DistanceMatrixResponse>
+ <status>OK</status>
+ <origin_address>Washington, DC, USA</origin_address>
+ <destination_address>New York, NY, USA</destination_address>
+ <row>
+  <element>
+   <status>OK</status>
+   <duration>
+    <value>14003</value>
+    <text>3 hours 53 mins</text>
+   </duration>
+   <distance>
+    <value>367439</value>
+    <text>228 mi</text>
+   </distance>
+  </element>
+ </row>
+</DistanceMatrixResponse>
+<!-- [END maps_http_distancematrix_start_response] -->

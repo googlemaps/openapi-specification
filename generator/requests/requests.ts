@@ -544,6 +544,30 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_distancematrix_start",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/distancematrix/json",
+        query: [
+          {
+            key: "origins",
+            value: encodeURIComponent("Washington, DC"),
+          },
+          {
+            key: "destinations",
+            value: encodeURIComponent("New York City, NY"),
+          },
+          {
+            key: "units",
+            value: "imperial",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_distancematrix",
     request: new Request({
       url: new Url({

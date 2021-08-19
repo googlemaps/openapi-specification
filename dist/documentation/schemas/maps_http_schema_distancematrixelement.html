@@ -41,9 +41,17 @@
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        See
-        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
-        for more information.
+        <div class="ref-property-description">
+          <p>
+            The total distance of this route, expressed in meters (value) and as
+            text. The textual value uses the unit system specified with the unit
+            parameter of the original request, or the origin's region.
+          </p>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -53,9 +61,65 @@
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        See
+        <div class="ref-property-description">
+          <p>
+            The length of time it takes to travel this route, expressed in
+            seconds (the value field) and as text. The textual representation is
+            localized according to the query's language parameter.
+          </p>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>duration_in_traffic</code></td>
+      <td>optional</td>
+      <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
-        for more information.
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            The length of time it takes to travel this route, based on current
+            and historical traffic conditions. See the
+            <code>traffic_model</code> request parameter for the options you can
+            use to request that the returned value is optimistic, pessimistic,
+            or a best-guess estimate. The duration is expressed in seconds (the
+            value field) and as text. The textual representation is localized
+            according to the query's language parameter. The duration in traffic
+            is returned only if all of the following are true:
+          </p>
+          <ul>
+            <li>
+              The request includes a <code>departure_time</code> parameter.
+            </li>
+            <li>Traffic conditions are available for the requested route.</li>
+            <li>The mode parameter is set to driving.</li>
+          </ul>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>fare</code></td>
+      <td>optional</td>
+      <td><a href="#Fare" title="Fare">Fare</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            If present, contains the total fare (that is, the total ticket
+            costs) on this route. This property is only returned for transit
+            requests and only for transit providers where fare information is
+            available.
+          </p>
+          <p>See <a href="#Fare">Fare</a> for more information.</p>
+        </div>
       </td>
     </tr>
   </tbody>

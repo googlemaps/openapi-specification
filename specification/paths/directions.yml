@@ -61,7 +61,7 @@ responses:
               $ref: "../responses/maps_http_directions_disneyland_response.yml"
           placed_id_response:
             value:
-              $ref: "../responses/maps_http_directions_placed_id_response.yml"
+              $ref: "../responses/maps_http_directions_place_id_response.yml"
           plus_codes_response:
             value:
               $ref: "../responses/maps_http_directions_plus_codes_response.yml"

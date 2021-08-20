@@ -1,4 +1,4 @@
-# [START maps_http_directions_placed_id]
+# [START maps_http_directions_place_id]
 require "uri"
 require "net/http"
 
@@ -12,4 +12,4 @@ request = Net::HTTP::Get.new(url)
 response = https.request(request)
 puts response.read_body
 
-# [END maps_http_directions_placed_id]
+# [END maps_http_directions_place_id]

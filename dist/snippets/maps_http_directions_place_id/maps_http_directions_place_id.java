@@ -1,4 +1,4 @@
-// [START maps_http_directions_placed_id]
+// [START maps_http_directions_place_id]
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
@@ -6,4 +6,4 @@ Request request = new Request.Builder()
   .method("GET", null)
   .build();
 Response response = client.newCall(request).execute();
-// [END maps_http_directions_placed_id]
+// [END maps_http_directions_place_id]

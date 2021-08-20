@@ -1119,6 +1119,26 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_directions_side_of_road",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "37.7680296,-122.4375126",
+          },
+          {
+            key: "destination",
+            value: "side_of_road:37.7663444,-122.4412006",
+          },         
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_directions_sydney_perth_waypoints_polyline",
     request: new Request({
       url: new Url({

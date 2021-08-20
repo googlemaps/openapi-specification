@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_directions_side_of_road_response] -->
+<DirectionsResponse>
+ <status>OK</status>
+ <route>
+  <summary>Roosevelt Way</summary>
+  <leg>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7680369</lat>
+     <lng>-122.4374058</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7672392</lat>
+     <lng>-122.4373261</lng>
+    </end_location>
+    <polyline>
+     <points>gqoeFxphjV`AGb@Cb@ATA</points>
+    </polyline>
+    <duration>
+     <value>27</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Head &lt;b&gt;south&lt;/b&gt; on &lt;b&gt;Alpine Terrace&lt;/b&gt; toward &lt;b&gt;14th St&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>89</value>
+     <text>292 ft</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7672392</lat>
+     <lng>-122.4373261</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7652999</lat>
+     <lng>-122.4420388</lng>
+    </end_location>
+    <polyline>
+     <points>gloeFhphjVb@APAF?HBF@LHFDDHDHBHDP@J?B?D?DAD?DAB?@Kh@CTG`@AFCF?F?H?B@H?JTjBFj@BJBFPRDHPVrAjBNVLVz@lANTZ\CxAAn@@T</points>
+    </polyline>
+    <duration>
+     <value>81</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue onto &lt;b&gt;Roosevelt Way&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>533</value>
+     <text>0.3 mi</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7652999</lat>
+     <lng>-122.4420388</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7653592</lat>
+     <lng>-122.4433149</lng>
+    </end_location>
+    <polyline>
+     <points>c`oeFvmijVCNAJAH?FAJ?X?B?N?L?H?pAAj@</points>
+    </polyline>
+    <duration>
+     <value>20</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Masonic Ave&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>113</value>
+     <text>371 ft</text>
+    </distance>
+    <maneuver>turn-slight-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7653592</lat>
+     <lng>-122.4433149</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7659477</lat>
+     <lng>-122.4426276</lng>
+    </end_location>
+    <polyline>
+     <points>o`oeFtuijV?n@O_@IKCESa@i@cAEICCCEKK</points>
+    </polyline>
+    <duration>
+     <value>26</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Sharp &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Upper Terrace&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>125</value>
+     <text>410 ft</text>
+    </distance>
+    <maneuver>turn-sharp-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7659477</lat>
+     <lng>-122.4426276</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7664411</lat>
+     <lng>-122.4413161</lng>
+    </end_location>
+    <polyline>
+     <points>edoeFlqijVBM@O@C?I@U?G?OAOCK?AEKKOOUOSU_@]g@</points>
+    </polyline>
+    <duration>
+     <value>20</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Buena Vista Ave E&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Destination will be on the right&lt;/div&gt;</html_instructions>
+    <distance>
+     <value>138</value>
+     <text>453 ft</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <duration>
+    <value>174</value>
+    <text>3 mins</text>
+   </duration>
+   <distance>
+    <value>998</value>
+    <text>0.6 mi</text>
+   </distance>
+   <start_location>
+    <lat>37.7680369</lat>
+    <lng>-122.4374058</lng>
+   </start_location>
+   <end_location>
+    <lat>37.7664411</lat>
+    <lng>-122.4413161</lng>
+   </end_location>
+   <start_address>154 Alpine Terrace, San Francisco, CA 94117, USA</start_address>
+   <end_address>423 Buena Vista Ave E, San Francisco, CA 94117, USA</end_address>
+  </leg>
+  <copyrights>Map data ©2021 Google</copyrights>
+  <overview_polyline>
+   <points>gqoeFxphjVhCMrAEPDTNN\Ff@CTWbBE`@VdCJv@TZzBdDhAdBNTZ\CxA?dAGl@Ax@AtC?n@O_@IKaAkBY_@Fk@?}@CMQ[sAqB</points>
+  </overview_polyline>
+  <bounds>
+   <southwest>
+    <lat>37.7652816</lat>
+    <lng>-122.4435532</lng>
+   </southwest>
+   <northeast>
+    <lat>37.7680369</lat>
+    <lng>-122.4373140</lng>
+   </northeast>
+  </bounds>
+ </route>
+ <geocoded_waypoint>
+  <geocoder_status>OK</geocoder_status>
+  <type>street_address</type>
+  <place_id>ChIJ2V82T6iAhYAR29h0Gtu69xY</place_id>
+ </geocoded_waypoint>
+ <geocoded_waypoint>
+  <geocoder_status>OK</geocoder_status>
+  <type>street_address</type>
+  <place_id>ChIJ1_dlHqqAhYARJl3syt8G6UA</place_id>
+ </geocoded_waypoint>
+</DirectionsResponse>
+<!-- [END maps_http_directions_side_of_road_response] -->

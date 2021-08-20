@@ -1,0 +1,127 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_side_of_road_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJ2V82T6iAhYAR29h0Gtu69xY",
+        "types": ["street_address"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJ1_dlHqqAhYARJl3syt8G6UA",
+        "types": ["street_address"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 37.7680369, "lng": -122.437314 },
+            "southwest": { "lat": 37.7652816, "lng": -122.4435532 },
+          },
+        "copyrights": "Map data ©2021 Google",
+        "legs":
+          [
+            {
+              "distance": { "text": "0.6 mi", "value": 998 },
+              "duration": { "text": "3 mins", "value": 174 },
+              "end_address": "423 Buena Vista Ave E, San Francisco, CA 94117, USA",
+              "end_location": { "lat": 37.7664411, "lng": -122.4413161 },
+              "start_address": "154 Alpine Terrace, San Francisco, CA 94117, USA",
+              "start_location": { "lat": 37.7680369, "lng": -122.4374058 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "292 ft", "value": 89 },
+                    "duration": { "text": "1 min", "value": 27 },
+                    "end_location": { "lat": 37.7672392, "lng": -122.4373261 },
+                    "html_instructions": "Head <b>south</b> on <b>Alpine Terrace</b> toward <b>14th St</b>",
+                    "polyline": { "points": "gqoeFxphjV`AGb@Cb@ATA" },
+                    "start_location":
+                      { "lat": 37.7680369, "lng": -122.4374058 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.3 mi", "value": 533 },
+                    "duration": { "text": "1 min", "value": 81 },
+                    "end_location": { "lat": 37.7652999, "lng": -122.4420388 },
+                    "html_instructions": "Continue onto <b>Roosevelt Way</b>",
+                    "polyline":
+                      {
+                        "points": "gloeFhphjVb@APAF?HBF@LHFDDHDHBHDP@J?B?D?DAD?DAB?@Kh@CTG`@AFCF?F?H?B@H?JTjBFj@BJBFPRDHPVrAjBNVLVz@lANTZ\\CxAAn@@T",
+                      },
+                    "start_location":
+                      { "lat": 37.7672392, "lng": -122.4373261 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "371 ft", "value": 113 },
+                    "duration": { "text": "1 min", "value": 20 },
+                    "end_location": { "lat": 37.7653592, "lng": -122.4433149 },
+                    "html_instructions": "Slight <b>right</b> onto <b>Masonic Ave</b>",
+                    "maneuver": "turn-slight-right",
+                    "polyline":
+                      { "points": "c`oeFvmijVCNAJAH?FAJ?X?B?N?L?H?pAAj@" },
+                    "start_location":
+                      { "lat": 37.7652999, "lng": -122.4420388 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "410 ft", "value": 125 },
+                    "duration": { "text": "1 min", "value": 26 },
+                    "end_location": { "lat": 37.7659477, "lng": -122.4426276 },
+                    "html_instructions": "Sharp <b>right</b> onto <b>Upper Terrace</b>",
+                    "maneuver": "turn-sharp-right",
+                    "polyline":
+                      { "points": "o`oeFtuijV?n@O_@IKCESa@i@cAEICCCEKK" },
+                    "start_location":
+                      { "lat": 37.7653592, "lng": -122.4433149 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "453 ft", "value": 138 },
+                    "duration": { "text": "1 min", "value": 20 },
+                    "end_location": { "lat": 37.7664411, "lng": -122.4413161 },
+                    "html_instructions": 'Turn <b>right</b> onto <b>Buena Vista Ave E</b><div style="font-size:0.9em">Destination will be on the right</div>',
+                    "maneuver": "turn-right",
+                    "polyline":
+                      {
+                        "points": "edoeFlqijVBM@O@C?I@U?G?OAOCK?AEKKOOUOSU_@]g@",
+                      },
+                    "start_location":
+                      { "lat": 37.7659477, "lng": -122.4426276 },
+                    "travel_mode": "DRIVING",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint": [],
+            },
+          ],
+        "overview_polyline":
+          {
+            "points": "gqoeFxphjVhCMrAEPDTNN\\Ff@CTWbBE`@VdCJv@TZzBdDhAdBNTZ\\CxA?dAGl@Ax@AtC?n@O_@IKaAkBY_@Fk@?}@CMQ[sAqB",
+          },
+        "summary": "Roosevelt Way",
+        "warnings": [],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_side_of_road_response]

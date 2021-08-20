@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "81027f40-0527-466b-914e-7ba5b8681539",
+            "id": "855f1cc1-33ac-43b0-ae7b-f24fbddc44e3",
             "name": "Directions API",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "6faedb19-a3e0-45ed-849d-ae739bba359f",
+                    "id": "77155b10-3292-4ee0-814a-5cc75e45e294",
                     "name": "/maps/api/directions/json",
                     "request": {
                         "name": "/maps/api/directions/json",
@@ -123,7 +123,7 @@
                     },
                     "response": [
                         {
-                            "id": "241d0d47-0de2-4ad7-acd7-997d95f6e039",
+                            "id": "a137f43c-0060-470a-86c1-32a41f1aa995",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -216,7 +216,7 @@
             "event": []
         },
         {
-            "id": "7131bd6c-9ab1-4b0c-8258-65097b09ea20",
+            "id": "75b3cede-900d-4e01-a264-584e11aa1f2c",
             "name": "Distance Matrix API",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -224,7 +224,7 @@
             },
             "item": [
                 {
-                    "id": "bb4d7ec0-0eec-42e8-b81f-a800f5a33e4a",
+                    "id": "636b1d8f-9ad4-4429-aa70-54a766eaf55a",
                     "name": "/maps/api/distanceMatrix/json",
                     "request": {
                         "name": "/maps/api/distanceMatrix/json",
@@ -326,7 +326,7 @@
                     },
                     "response": [
                         {
-                            "id": "667cafe0-815c-4992-adbb-ba34760ead60",
+                            "id": "9c6e9009-6045-449c-977c-252fda00a92f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -411,7 +411,7 @@
             "event": []
         },
         {
-            "id": "cd403d6a-0404-45a7-9678-cef676e87ff9",
+            "id": "62816ff6-0960-494b-8f23-dbf1afdc5f55",
             "name": "Elevation API",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -419,7 +419,7 @@
             },
             "item": [
                 {
-                    "id": "d7a25746-4977-4304-96fd-73ee1c1c1a00",
+                    "id": "56c5805c-da9c-4c3e-a0d1-8943e55800e4",
                     "name": "/maps/api/elevation/json",
                     "request": {
                         "name": "/maps/api/elevation/json",
@@ -467,7 +467,7 @@
                     },
                     "response": [
                         {
-                            "id": "6bce7c19-7c63-4a63-a8af-1995c7521516",
+                            "id": "c5b399f6-e3f1-4595-8901-4dede6149db2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -516,7 +516,7 @@
             "event": []
         },
         {
-            "id": "1510d4c9-b691-43ec-b58e-e6b6ef5a7e64",
+            "id": "b7aad813-4c3a-4af2-84e8-1b0ea3a96dd5",
             "name": "Geocoding API",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -524,7 +524,7 @@
             },
             "item": [
                 {
-                    "id": "9eddba45-8d32-40ad-9a7b-27676603f49c",
+                    "id": "4d88d4ca-3a9d-4fbd-95c1-b6dc622792e4",
                     "name": "/maps/api/geocode/json",
                     "request": {
                         "name": "/maps/api/geocode/json",
@@ -596,7 +596,7 @@
                     },
                     "response": [
                         {
-                            "id": "44c4e543-3b65-4e8c-9eb0-31e171663a9e",
+                            "id": "09487dd8-dd7c-40d2-afca-a993908a3d47",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -661,7 +661,7 @@
             "event": []
         },
         {
-            "id": "5da43b4e-74a8-415b-9e64-b9d422775dd9",
+            "id": "a5555f88-a364-4a9b-b858-06ecb02d8421",
             "name": "Geolocation API",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -669,7 +669,7 @@
             },
             "item": [
                 {
-                    "id": "b1c58a88-6f22-4ba6-a2b9-026ba84823f6",
+                    "id": "7346f37c-6abc-4745-85ed-0548385b37aa",
                     "name": "/geolocation/v1/geolocate",
                     "request": {
                         "name": "/geolocation/v1/geolocate",
@@ -707,7 +707,7 @@
                     },
                     "response": [
                         {
-                            "id": "e3f4090b-733a-4d1a-a7ea-c120c650826c",
+                            "id": "6d47afcb-e6b1-4d2e-9feb-4f8738ffbc85",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -741,7 +741,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "498fee14-b1fb-4ca2-aba2-f12b6510777e",
+                            "id": "c141d495-3810-454f-94cd-686e6ee1f78f",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -775,7 +775,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b23d2d8b-c6b3-455c-b469-2fd3fbd71860",
+                            "id": "2f08d6a6-a6ec-49ea-9703-7f65817b6ba9",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -815,7 +815,7 @@
             "event": []
         },
         {
-            "id": "91f322d7-dcdf-484b-b7f9-0025bc96747c",
+            "id": "034bb66f-e280-42f0-8490-9a2ffb5f3193",
             "name": "Roads API",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -823,7 +823,7 @@
             },
             "item": [
                 {
-                    "id": "3b145dba-dd9d-4476-827d-2fccf7f1deaf",
+                    "id": "e2f64ca7-3144-456c-a9a3-9002fc94f24e",
                     "name": "/v1/snapToRoads",
                     "request": {
                         "name": "/v1/snapToRoads",
@@ -863,7 +863,7 @@
                     },
                     "response": [
                         {
-                            "id": "9bec3727-cba2-42c8-a1b9-2a918d8f25ad",
+                            "id": "1511c254-483f-4de1-a3cd-917628571f28",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -905,7 +905,7 @@
                     "event": []
                 },
                 {
-                    "id": "537a7e70-fc6c-4b0e-96c7-b662ff7da716",
+                    "id": "0c4f5fde-35e6-4ef5-9c78-7aab42308531",
                     "name": "/v1/nearestRoads",
                     "request": {
                         "name": "/v1/nearestRoads",
@@ -939,7 +939,7 @@
                     },
                     "response": [
                         {
-                            "id": "17fb8e0a-3e92-49ac-ab0e-d46b6d523628",
+                            "id": "13921c98-0bbd-4be5-97ee-22bed5b0c3e1",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -969,12 +969,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 20696393.705413207,\n    \"longitude\": -5486617.43827945\n   },\n   \"placeId\": \"officia irure\",\n   \"originalIndex\": 17276947.03204499\n  },\n  {\n   \"location\": {\n    \"latitude\": -5584276.101844221,\n    \"longitude\": -84390491.2204895\n   },\n   \"placeId\": \"in aute culpa nostrud\",\n   \"originalIndex\": 47217911.96353328\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 64390227.85035783,\n    \"longitude\": -39916160.26948823\n   },\n   \"placeId\": \"ad\",\n   \"originalIndex\": -12522148.765530393\n  },\n  {\n   \"location\": {\n    \"latitude\": -67545304.7362986,\n    \"longitude\": 72044451.36559027\n   },\n   \"placeId\": \"eu aute Lorem\",\n   \"originalIndex\": -68267178.98422681\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1b43cd3e-18aa-4639-8940-869a724664ab",
+                            "id": "e38a047a-00aa-47f2-8fab-919cd6fa1c28",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1015,7 +1015,7 @@
             "event": []
         },
         {
-            "id": "eb5dd740-8a48-43c9-a636-5a624133fb50",
+            "id": "4aaa0825-9b25-41b1-8219-95441248c4c1",
             "name": "Time Zone API",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -1023,7 +1023,7 @@
             },
             "item": [
                 {
-                    "id": "9c40e624-e7ae-401f-8bf0-b357fc2b8612",
+                    "id": "7696253e-e1d9-43f9-9ecf-0b66d0ca5547",
                     "name": "/maps/api/timezone/json",
                     "request": {
                         "name": "/maps/api/timezone/json",
@@ -1071,7 +1071,7 @@
                     },
                     "response": [
                         {
-                            "id": "aca7dd6b-e7a2-4bb7-bdf7-dc23562b0cf8",
+                            "id": "712801e3-d07a-4536-820f-55078f970863",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1120,7 +1120,7 @@
             "event": []
         },
         {
-            "id": "32aded78-476d-4521-811d-f8d6b0acc2ee",
+            "id": "a821091d-fa2e-403a-8af8-7b1d5dc99150",
             "name": "Street View API",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -1128,7 +1128,7 @@
             },
             "item": [
                 {
-                    "id": "a9fe6e38-ace5-436c-8544-93d86bb6e4df",
+                    "id": "cf4d7129-cac1-425d-9dd9-c9ea66f3ee90",
                     "name": "/maps/api/streetview",
                     "request": {
                         "name": "/maps/api/streetview",
@@ -1217,7 +1217,7 @@
                     },
                     "response": [
                         {
-                            "id": "feea8a96-f1ed-45a3-9624-1d6e14f5bc8b",
+                            "id": "07159104-bd6e-4b78-94f2-e71078bae076",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1283,7 +1283,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "aute ea magna incididunt",
+                            "body": "nisi",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1291,7 +1291,7 @@
                     "event": []
                 },
                 {
-                    "id": "2f519358-fc51-49aa-97a8-f4705a9fcda9",
+                    "id": "e09be0f1-ddf9-434b-b140-05be7ff6bcaa",
                     "name": "/maps/api/streetview/metadata",
                     "request": {
                         "name": "/maps/api/streetview/metadata",
@@ -1375,7 +1375,7 @@
                     },
                     "response": [
                         {
-                            "id": "97ea30c3-5f8a-4855-b90e-eaadd85acc96",
+                            "id": "4042993b-6e49-49a6-9ca2-74568f495e02",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1448,7 +1448,7 @@
             "event": []
         },
         {
-            "id": "68d61a47-7125-49de-a90f-91e1f284e177",
+            "id": "9ac5443c-566d-41c0-bf9f-edcafcd203b6",
             "name": "Places API",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -1456,7 +1456,7 @@
             },
             "item": [
                 {
-                    "id": "79c59083-9fea-4ffd-8f45-4fe6605ed02b",
+                    "id": "3c247f59-ced5-478d-83cf-2df9c36b365e",
                     "name": "/maps/api/place/details/json",
                     "request": {
                         "name": "/maps/api/place/details/json",
@@ -1517,7 +1517,7 @@
                     },
                     "response": [
                         {
-                            "id": "ef800a4d-dca5-4799-9ba6-a3a2454718f9",
+                            "id": "69588a5f-fa2e-4471-97cd-68259c82168c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1571,7 +1571,7 @@
                     "event": []
                 },
                 {
-                    "id": "e4b17296-66a1-4fb8-bbd9-55c79097052e",
+                    "id": "7ac45134-7db8-445c-a905-1df81f7492fe",
                     "name": "/maps/api/place/findplacefromtext/json",
                     "request": {
                         "name": "/maps/api/place/findplacefromtext/json",
@@ -1632,7 +1632,7 @@
                     },
                     "response": [
                         {
-                            "id": "f56431ac-a81a-40c3-bc31-a0ae9d5af9b9",
+                            "id": "c1893e1e-a69d-41b8-9642-4e64097d5424",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1686,7 +1686,7 @@
                     "event": []
                 },
                 {
-                    "id": "89c0f075-e26d-432c-9c2f-4baeb9064495",
+                    "id": "897f1d56-b88d-4029-92e1-27d7af1c1c14",
                     "name": "/maps/api/place/nearbysearch/json",
                     "request": {
                         "name": "/maps/api/place/nearbysearch/json",
@@ -1767,7 +1767,7 @@
                                     "disabled": true,
                                     "key": "radius",
                                     "value": "<number>",
-                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n"
+                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * `rankby=prominence` (default): 50,000 meters\n  * `rankby=distance`: A few kilometers depending on density of area\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n"
                                 },
                                 {
                                     "disabled": true,
@@ -1789,7 +1789,7 @@
                     },
                     "response": [
                         {
-                            "id": "a402912f-109e-4db9-95f2-50b5bf48b515",
+                            "id": "a918bbfb-566b-47b7-ab6c-870c73ef2ce2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1871,7 +1871,7 @@
                     "event": []
                 },
                 {
-                    "id": "b30ebdbe-6106-49dc-9f5c-a9d011242f35",
+                    "id": "6c1d1aa5-9c11-48dc-949f-c2018c31b2eb",
                     "name": "/maps/api/place/textsearch/json",
                     "request": {
                         "name": "/maps/api/place/textsearch/json",
@@ -1934,7 +1934,7 @@
                                     "disabled": true,
                                     "key": "radius",
                                     "value": "<number>",
-                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n"
+                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * `rankby=prominence` (default): 50,000 meters\n  * `rankby=distance`: A few kilometers depending on density of area\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n"
                                 },
                                 {
                                     "disabled": true,
@@ -1962,7 +1962,7 @@
                     },
                     "response": [
                         {
-                            "id": "062901bf-61d2-4ae6-bfaf-116b47cb3730",
+                            "id": "41356da6-8b20-4417-9687-8ab44953af40",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2036,7 +2036,7 @@
                     "event": []
                 },
                 {
-                    "id": "950ad834-a1a8-4fc7-8cc4-4239bb2fb121",
+                    "id": "0bdd1c00-d263-4161-86db-45f84028361f",
                     "name": "/maps/api/place/photo",
                     "request": {
                         "name": "/maps/api/place/photo",
@@ -2084,7 +2084,7 @@
                     },
                     "response": [
                         {
-                            "id": "e068221a-797f-436a-a659-464763852c08",
+                            "id": "de0373bd-6d9a-4336-a175-976b27db3ae1",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2122,7 +2122,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "aute ea magna incididunt",
+                            "body": "nisi",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2130,7 +2130,7 @@
                     "event": []
                 },
                 {
-                    "id": "e283fd12-47e6-4981-9301-5726a9144cc5",
+                    "id": "0755e489-60b8-48e4-847e-24304c3b7ce4",
                     "name": "/maps/api/place/queryautocomplete/json",
                     "request": {
                         "name": "/maps/api/place/queryautocomplete/json",
@@ -2175,7 +2175,7 @@
                                     "disabled": true,
                                     "key": "radius",
                                     "value": "<number>",
-                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n"
+                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * `rankby=prominence` (default): 50,000 meters\n  * `rankby=distance`: A few kilometers depending on density of area\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n"
                                 },
                                 {
                                     "disabled": true,
@@ -2191,7 +2191,7 @@
                     },
                     "response": [
                         {
-                            "id": "babd5015-e7c5-4876-a1c0-93540bfa8d81",
+                            "id": "b2a4901c-9243-4e77-93f4-b6b6a0da898c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2245,7 +2245,7 @@
                     "event": []
                 },
                 {
-                    "id": "bd3bfa48-56bb-4124-8bb7-a0cb7aa46ca6",
+                    "id": "5e7fb136-04b6-4678-911b-a4e290e2c286",
                     "name": "/maps/api/place/autocomplete/json",
                     "request": {
                         "name": "/maps/api/place/autocomplete/json",
@@ -2314,7 +2314,7 @@
                                     "disabled": true,
                                     "key": "radius",
                                     "value": "<number>",
-                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n"
+                                    "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * `rankby=prominence` (default): 50,000 meters\n  * `rankby=distance`: A few kilometers depending on density of area\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n"
                                 },
                                 {
                                     "disabled": true,
@@ -2336,7 +2336,7 @@
                     },
                     "response": [
                         {
-                            "id": "e870c53f-e3d7-4f74-b168-057ae211ff9e",
+                            "id": "aa4dfb3f-0187-4d73-a11d-da0ecba059eb",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2439,7 +2439,7 @@
         ]
     },
     "info": {
-        "_postman_id": "0e3c10f0-e815-4a69-b1c0-f78cc99537e7",
+        "_postman_id": "4d6939fc-fd10-4a27-919d-ff63c023598c",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

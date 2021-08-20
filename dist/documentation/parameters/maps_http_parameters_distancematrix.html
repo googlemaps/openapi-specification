@@ -90,6 +90,127 @@
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
+    <h3 id="arrival_time">arrival_time</h3>
+    <p>
+      Specifies the desired time of arrival for transit directions, in seconds
+      since midnight, January 1, 1970 UTC. You can specify either
+      <code>departure_time</code> or <code>arrival_time</code>, but not both.
+      Note that <code>arrival_time</code> must be specified as an integer.
+    </p>
+  </li>
+  <li>
+    <h3 id="avoid">avoid</h3>
+    <p>
+      Distances may be calculated that adhere to certain restrictions.
+      Restrictions are indicated by use of the avoid parameter, and an argument
+      to that parameter indicating the restriction to avoid. The following
+      restrictions are supported:
+    </p>
+    <ul>
+      <li>
+        <code>tolls</code> indicates that the calculated route should avoid toll
+        roads/bridges.
+      </li>
+      <li>
+        <code>highways</code> indicates that the calculated route should avoid
+        highways.
+      </li>
+      <li>
+        <code>ferries</code> indicates that the calculated route should avoid
+        ferries.
+      </li>
+      <li>
+        <code>indoor</code> indicates that the calculated route should avoid
+        indoor steps for walking and transit directions.
+      </li>
+    </ul>
+    <div class="note">
+      Note: The addition of restrictions does not preclude routes that include
+      the restricted feature; it biases the result to more favorable routes.
+    </div>
+  </li>
+  <li>
+    <h3 id="departure_time">departure_time</h3>
+    <p>
+      Specifies the desired time of departure. You can specify the time as an
+      integer in seconds since midnight, January 1, 1970 UTC. If a
+      <code>departure_time</code> later than 9999-12-31T23:59:59.999999999Z is
+      specified, the API will fall back the <code>departure_time</code> to
+      9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of
+      now, which sets the departure time to the current time (correct to the
+      nearest second). The departure time may be specified in two cases:
+    </p>
+    <ul>
+      <li>
+        For requests where the travel mode is transit: You can optionally
+        specify one of <code>departure_time</code> or <code>arrival_time</code>.
+        If neither time is specified, the <code>departure_time</code> defaults
+        to now (that is, the departure time defaults to the current time).
+      </li>
+      <li>
+        For requests where the travel mode is driving: You can specify the
+        <code>departure_time</code> to receive a route and trip duration
+        (response field: duration_in_traffic) that take traffic conditions into
+        account. The <code>departure_time</code> must be set to the current time
+        or some time in the future. It cannot be in the past.
+      </li>
+    </ul>
+    <div class="note">
+      Note: If departure time is not specified, choice of route and duration are
+      based on road network and average time-independent traffic conditions.
+      Results for a given request may vary over time due to changes in the road
+      network, updated average traffic conditions, and the distributed nature of
+      the service. Results may also vary between nearly-equivalent routes at any
+      time or frequency.
+    </div>
+    <div class="note">
+      Note: Distance Matrix requests specifying `departure_time` when
+      `mode=driving` are limited to a maximum of 100 elements per request. The
+      number of origins times the number of destinations defines the number of
+      elements.
+    </div>
+  </li>
+  <li>
+    <h3 id="language">language</h3>
+    <p>The language in which to return results.</p>
+    <ul>
+      <li>
+        See the
+        <a href="https://developers.google.com/maps/faq#languagesupport"
+          >list of supported languages</a
+        >. Google often updates the supported languages, so this list may not be
+        exhaustive.
+      </li>
+      <li>
+        If <code>language</code> is not supplied, the API attempts to use the
+        preferred language as specified in the
+        <code>Accept-Language</code> header, or the native language of the
+        domain from which the request is sent.
+      </li>
+      <li>
+        The API does its best to provide a street address that is readable for
+        both the user and locals. To achieve that goal, it returns street
+        addresses in the local language, transliterated to a script readable by
+        the user if necessary, observing the preferred language. All other
+        addresses are returned in the preferred language. Address components are
+        all returned in the same language, which is chosen from the first
+        component.
+      </li>
+      <li>
+        If a name is not available in the preferred language, the API uses the
+        closest match.
+      </li>
+      <li>
+        The preferred language has a small influence on the set of results that
+        the API chooses to return, and the order in which they are returned. The
+        geocoder interprets abbreviations differently depending on language,
+        such as the abbreviations for street types, or synonyms that may be
+        valid in one language but not in another. For example, <em>utca</em> and
+        <em>tér</em> are synonyms for street in Hungarian.
+      </li>
+    </ul>
+  </li>
+  <li>
     <h3 id="mode">mode</h3>
     <p>
       For the calculation of distances and directions, you may specify the
@@ -125,6 +246,142 @@
       Note: Both walking and bicycling directions may sometimes not include
       clear pedestrian or bicycling paths, so these directions will return
       warnings in the returned result which you must display to the user.
+    </div>
+  </li>
+  <li>
+    <h3 id="region">region</h3>
+    <p>
+      The region code, specified as a
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains"
+        >ccTLD ("top-level domain")</a
+      >
+      two-character value. Most ccTLD codes are identical to ISO 3166-1 codes,
+      with some notable exceptions. For example, the United Kingdom's ccTLD is
+      "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the
+      entity of "The United Kingdom of Great Britain and Northern Ireland").
+    </p>
+  </li>
+  <li>
+    <h3 id="traffic_model">traffic_model</h3>
+    <p>
+      Specifies the assumptions to use when calculating time in traffic. This
+      setting affects the value returned in the duration_in_traffic field in the
+      response, which contains the predicted time in traffic based on historical
+      averages. The <code>traffic_model</code> parameter may only be specified
+      for driving directions where the request includes a
+      <code>departure_time</code>. The available values for this parameter are:
+    </p>
+    <ul>
+      <li>
+        <code>best_guess</code> (default) indicates that the returned
+        duration_in_traffic should be the best estimate of travel time given
+        what is known about both historical traffic conditions and live traffic.
+        Live traffic becomes more important the closer the
+        <code>departure_time</code> is to now.
+      </li>
+      <li>
+        <code>pessimistic</code> indicates that the returned duration_in_traffic
+        should be longer than the actual travel time on most days, though
+        occasional days with particularly bad traffic conditions may exceed this
+        value.
+      </li>
+      <li>
+        <code>optimistic</code> indicates that the returned duration_in_traffic
+        should be shorter than the actual travel time on most days, though
+        occasional days with particularly good traffic conditions may be faster
+        than this value.
+      </li>
+    </ul>
+    <p>
+      The default value of <code>best_guess</code> will give the most useful
+      predictions for the vast majority of use cases. It is possible the
+      <code>best_guess</code> travel time prediction may be shorter than
+      <code>optimistic</code>, or alternatively, longer than
+      <code>pessimistic</code>, due to the way the
+      <code>best_guess</code> prediction model integrates live traffic
+      information.
+    </p>
+  </li>
+  <li>
+    <h3 id="transit_mode">transit_mode</h3>
+    <p>
+      Specifies one or more preferred modes of transit. This parameter may only
+      be specified for transit directions. The parameter supports the following
+      arguments:
+    </p>
+    <ul>
+      <li>
+        <code>bus</code> indicates that the calculated route should prefer
+        travel by bus.
+      </li>
+      <li>
+        <code>subway</code> indicates that the calculated route should prefer
+        travel by subway.
+      </li>
+      <li>
+        <code>train</code> indicates that the calculated route should prefer
+        travel by train.
+      </li>
+      <li>
+        <code>tram</code> indicates that the calculated route should prefer
+        travel by tram and light rail.
+      </li>
+      <li>
+        <code>rail</code> indicates that the calculated route should prefer
+        travel by train, tram, light rail, and subway. This is equivalent to
+        <code>transit_mode=train|tram|subway</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="transit_routing_preference">transit_routing_preference</h3>
+    <p>
+      Specifies preferences for transit routes. Using this parameter, you can
+      bias the options returned, rather than accepting the default best route
+      chosen by the API. This parameter may only be specified for transit
+      directions. The parameter supports the following arguments:
+    </p>
+    <ul>
+      <li>
+        <code>less_walking</code> indicates that the calculated route should
+        prefer limited amounts of walking.
+      </li>
+      <li>
+        <code>fewer_transfers</code> indicates that the calculated route should
+        prefer a limited number of transfers.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="units">units</h3>
+    <p>Specifies the unit system to use when displaying results.</p>
+    <p>
+      Directions results contain text within distance fields that may be
+      displayed to the user to indicate the distance of a particular "step" of
+      the route. By default, this text uses the unit system of the origin's
+      country or region.
+    </p>
+    <p>
+      For example, a route from "Chicago, IL" to "Toronto, ONT" will display
+      results in miles, while the reverse route will display results in
+      kilometers. You may override this unit system by setting one explicitly
+      within the request's units parameter, passing one of the following values:
+    </p>
+    <ul>
+      <li>
+        <code>metric</code> specifies usage of the metric system. Textual
+        distances are returned using kilometers and meters.
+      </li>
+      <li>
+        <code>imperial</code> specifies usage of the Imperial (English) system.
+        Textual distances are returned using miles and feet.
+      </li>
+    </ul>
+    <div class="note">
+      Note: this unit system setting only affects the text displayed within
+      distance fields. The distance fields also contain values which are always
+      expressed in meters.
     </div>
   </li>
 </ul>

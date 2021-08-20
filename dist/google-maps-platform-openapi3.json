@@ -198,6 +198,58 @@
         "description": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
         "parameters": [
           {
+            "name": "arrival_time",
+            "description": "Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.\n",
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "departure_time",
+            "description": "Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:\n* For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).\n* For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.\n\n<div class=\"note\">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>\n<div class=\"note\">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>\n",
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "alternatives",
+            "description": "If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).\n",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "avoid",
+            "description": "Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n\nIt's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: \n\n```\navoid=tolls|highways|ferries.\n```\n",
+            "in": "query",
+            "examples": {
+              "single": {
+                "value": "highways",
+                "summary": "A example using a single restriction."
+              },
+              "multiple": {
+                "value": "tolls|highways|ferries",
+                "summary": "A example using a multiple restrictions."
+              }
+            },
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "destination",
+            "description": "The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.",
+            "required": true,
+            "in": "query",
+            "example": "Victoria, BC",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "origin",
             "description": "The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.\n* Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n  \n  ```\n  origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE\n  ```\n  \n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  \n  ```\n  origin=24+Sussex+Drive+Ottawa+ON\n  ```\n  \n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  \n  ```\n  origin=41.43206,-81.38992\n  ```\n\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`). \n  \n  * **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`). \n  * **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n\n<div class=\"note\">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n",
             "required": true,
@@ -216,19 +268,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "destination",
-            "description": "The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.",
-            "required": true,
-            "in": "query",
-            "example": "Victoria, BC",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "$ref": "#/components/parameters/mode"
           },
           {
             "name": "waypoints",
@@ -265,59 +304,13 @@
             }
           },
           {
-            "name": "alternatives",
-            "description": "If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).\n",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
+            "$ref": "#/components/parameters/language"
           },
           {
-            "name": "avoid",
-            "description": "Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n\nIt's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: \n\n```\navoid=tolls|highways|ferries.\n```\n",
-            "in": "query",
-            "examples": {
-              "single": {
-                "value": "highways",
-                "summary": "A example using a single restriction."
-              },
-              "multiple": {
-                "value": "tolls|highways|ferries",
-                "summary": "A example using a multiple restrictions."
-              }
-            },
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/mode"
           },
           {
-            "name": "units",
-            "description": "Specifies the unit system to use when displaying results.\n\nDirections results contain text within distance fields that may be displayed to the user to indicate the distance of a particular \"step\" of the route. By default, this text uses the unit system of the origin's country or region.\n\nFor example, a route from \"Chicago, IL\" to \"Toronto, ONT\" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:\n\n* `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.\n* `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.\n\n<div class=\"note\">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>\n",
-            "example": "metric",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": [
-                "imperial",
-                "metric"
-              ]
-            }
-          },
-          {
-            "name": "arrival_time",
-            "description": "Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.\n",
-            "in": "query",
-            "schema": {
-              "type": "number"
-            }
-          },
-          {
-            "name": "departure_time",
-            "description": "Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:\n* For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).\n* For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.\n\n<div class=\"note\">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>\n",
-            "in": "query",
-            "schema": {
-              "type": "number"
-            }
+            "$ref": "#/components/parameters/region"
           },
           {
             "name": "traffic_model",
@@ -357,10 +350,17 @@
             }
           },
           {
-            "$ref": "#/components/parameters/language"
-          },
-          {
-            "$ref": "#/components/parameters/region"
+            "name": "units",
+            "description": "Specifies the unit system to use when displaying results.\n\nDirections results contain text within distance fields that may be displayed to the user to indicate the distance of a particular \"step\" of the route. By default, this text uses the unit system of the origin's country or region.\n\nFor example, a route from \"Chicago, IL\" to \"Toronto, ONT\" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:\n\n* `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.\n* `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.\n\n<div class=\"note\">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>\n",
+            "example": "metric",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "imperial",
+                "metric"
+              ]
+            }
           }
         ],
         "responses": {
@@ -23267,21 +23267,18 @@
         "description": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.",
         "parameters": [
           {
-            "name": "origins",
-            "description": "The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n",
-            "required": true,
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/1"
+          },
+          {
+            "name": "avoid",
+            "description": "Distances may be calculated that adhere to certain restrictions. Restrictions are indicated by use of the avoid parameter, and an argument to that parameter indicating the restriction to avoid. The following restrictions are supported:\n\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n\n<div class=\"note\">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>\n",
             "in": "query",
-            "style": "pipeDelimited",
-            "explode": false,
-            "example": [
-              "Vancouver BC",
-              "Seattle"
-            ],
+            "example": "highways",
             "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
+              "type": "string"
             }
           },
           {
@@ -23303,7 +23300,43 @@
             }
           },
           {
+            "name": "origins",
+            "description": "The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n",
+            "required": true,
+            "in": "query",
+            "style": "pipeDelimited",
+            "explode": false,
+            "example": [
+              "Vancouver BC",
+              "Seattle"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "$ref": "#/components/parameters/language"
+          },
+          {
             "$ref": "#/components/parameters/mode"
+          },
+          {
+            "$ref": "#/components/parameters/region"
+          },
+          {
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/10"
+          },
+          {
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/11"
+          },
+          {
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/12"
+          },
+          {
+            "$ref": "#/paths/~1maps~1api~1directions~1json/get/parameters/13"
           }
         ],
         "responses": {

@@ -3,293 +3,669 @@
 <DirectionsResponse>
  <status>OK</status>
  <route>
-  <summary>US-101 S</summary>
+  <summary>Maa Flyover</summary>
   <leg>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.5987303</lat>
-     <lng>-122.3878186</lng>
+     <lat>22.5850655</lat>
+     <lng>88.3468857</lng>
     </start_location>
     <end_location>
-     <lat>37.5984726</lat>
-     <lng>-122.3875805</lng>
+     <lat>22.5856507</lat>
+     <lng>88.3441553</lng>
     </end_location>
     <polyline>
-     <points>aondFzz~iVr@o@</points>
+     <points>uczhCagfzOKv@k@lDIn@Gd@YnBId@EfA?F</points>
     </polyline>
     <duration>
-     <value>6</value>
+     <value>35</value>
      <text>1 min</text>
     </duration>
-    <html_instructions>Head &lt;b&gt;southeast&lt;/b&gt; on &lt;b&gt;El Camino Real&lt;/b&gt; toward &lt;b&gt;E Millbrae Ave&lt;/b&gt;</html_instructions>
+    <html_instructions>Head &lt;b&gt;west&lt;/b&gt; on &lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Rabindra Setu&lt;/b&gt; toward &lt;b&gt;HM Basu Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Maulana Abul Kalam Azad Rd&lt;/b&gt;</html_instructions>
     <distance>
-     <value>36</value>
-     <text>118 ft</text>
+     <value>288</value>
+     <text>0.3 km</text>
     </distance>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.5984726</lat>
-     <lng>-122.3875805</lng>
+     <lat>22.5856507</lat>
+     <lng>88.3441553</lng>
     </start_location>
     <end_location>
-     <lat>37.6010053</lat>
-     <lng>-122.3829414</lng>
+     <lat>22.5849258</lat>
+     <lng>88.3419869</lng>
     </end_location>
     <polyline>
-     <points>mmndFjy~iVVUSe@[q@Sc@Sc@GOKUUc@Wg@m@eAUc@i@iAy@_Bg@eAACe@_AKSc@{@g@eAWe@Q]</points>
+     <points>igzhC_vezONNHHB@FDFB@@V@T?bAE`@BHBBBB@@@@BB@BD@DHT@B?F?HANCNEPELEPGNUt@SbAEj@CVGTCH</points>
     </polyline>
     <duration>
-     <value>72</value>
+     <value>59</value>
      <text>1 min</text>
     </duration>
-    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; at the 1st cross street onto &lt;b&gt;E Millbrae Ave&lt;/b&gt;</html_instructions>
+    <html_instructions>&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Rabindra Setu&lt;/b&gt; turns &lt;b&gt;left&lt;/b&gt; and becomes &lt;b&gt;Howrah Station Rd&lt;/b&gt;</html_instructions>
     <distance>
-     <value>513</value>
-     <text>0.3 mi</text>
+     <value>338</value>
+     <text>0.3 km</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5849258</lat>
+     <lng>88.3419869</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5852717</lat>
+     <lng>88.3411696</lng>
+    </end_location>
+    <polyline>
+     <points>ybzhCmhezOU^M^_@bB</points>
+    </polyline>
+    <duration>
+     <value>24</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;right&lt;/b&gt; to stay on &lt;b&gt;Howrah Station Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>93</value>
+     <text>93 m</text>
+    </distance>
+    <maneuver>turn-slight-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5852717</lat>
+     <lng>88.3411696</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5865951</lat>
+     <lng>88.3417004</lng>
+    </end_location>
+    <polyline>
+     <points>}dzhCicezOoAYAAsAa@KEMEiA_@</points>
+    </polyline>
+    <duration>
+     <value>68</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Mukharam Kanoria Rd.&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>157</value>
+     <text>0.2 km</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5865951</lat>
+     <lng>88.3417004</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5859140</lat>
+     <lng>88.3441885</lng>
+    </end_location>
+    <polyline>
+     <points>gmzhCsfezOR}@DWLgA@_@JoARsAHc@HUBIDOP]HQDK</points>
+    </polyline>
+    <duration>
+     <value>62</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Hari Bose Mohan Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;HM Basu Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Maulana Abul Kalam Azad Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>269</value>
+     <text>0.3 km</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5859140</lat>
+     <lng>88.3441885</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5841119</lat>
+     <lng>88.3496899</lng>
+    </end_location>
+    <polyline>
+     <points>}hzhCevezOHQL]JYFa@Fa@LgAJe@Hc@Hg@`@sCXoBRoARgAXoBHe@XkBDUDSDO?CDELGHIBCFCFADAXC</points>
+    </polyline>
+    <duration>
+     <value>86</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue onto &lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Rabindra Setu&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>618</value>
+     <text>0.6 km</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5841119</lat>
+     <lng>88.3496899</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5839803</lat>
+     <lng>88.3496888</lng>
+    </end_location>
+    <polyline>
+     <points>u}yhCqxfzOT?B?</points>
+    </polyline>
+    <duration>
+     <value>2</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>15</value>
+     <text>15 m</text>
+    </distance>
+    <maneuver>turn-slight-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5839803</lat>
+     <lng>88.3496888</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5805008</lat>
+     <lng>88.3510116</lng>
+    </end_location>
+    <polyline>
+     <points>{|yhCqxfzOj@ARA`AGd@EJAt@?P?J@NBRFRHn@Vr@TXH`@JPB@?F?B?DAFCDCBCDCDK@EHO`@kADMd@sA`@iAJWJO</points>
+    </polyline>
+    <duration>
+     <value>65</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue straight onto &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Brabourne Flyover&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Continue to follow Brabourne Rd/&lt;wbr/&gt;New Howrah Bridge Approach Rd&lt;/div&gt;</html_instructions>
+    <distance>
+     <value>500</value>
+     <text>0.5 km</text>
+    </distance>
+    <maneuver>straight</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5805008</lat>
+     <lng>88.3510116</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5779451</lat>
+     <lng>88.3524616</lng>
+    </end_location>
+    <polyline>
+     <points>cgyhCy`gzOFUNi@Ne@L_@JQHOJIJGDENITIFC`@Qt@UNCHCb@EfBInAGVA</points>
+    </polyline>
+    <duration>
+     <value>69</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Keep &lt;b&gt;left&lt;/b&gt; to stay on &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>350</value>
+     <text>0.4 km</text>
+    </distance>
+    <maneuver>keep-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5779451</lat>
+     <lng>88.3524616</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5773333</lat>
+     <lng>88.3523842</lng>
+    </end_location>
+    <polyline>
+     <points>ewxhC{igzOLAX?P@VDh@H</points>
+    </polyline>
+    <duration>
+     <value>21</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Keep &lt;b&gt;left&lt;/b&gt; to stay on &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>69</value>
+     <text>69 m</text>
+    </distance>
+    <maneuver>keep-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5773333</lat>
+     <lng>88.3523842</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5739140</lat>
+     <lng>88.3511922</lng>
+    </end_location>
+    <polyline>
+     <points>isxhCkigzO\DhAV~@TdB`@^J@?pA\t@PbB^LJFFnAXh@L</points>
+    </polyline>
+    <duration>
+     <value>82</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Keep &lt;b&gt;left&lt;/b&gt; to stay on &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by Tea Board (on the left)&lt;/div&gt;</html_instructions>
+    <distance>
+     <value>401</value>
+     <text>0.4 km</text>
+    </distance>
+    <maneuver>keep-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5739140</lat>
+     <lng>88.3511922</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5707731</lat>
+     <lng>88.3500066</lng>
+    </end_location>
+    <polyline>
+     <points>}}whC}agzO^t@HFHDNF\JtAX^CZE^CDAF?H@XDrDfAxBx@</points>
+    </polyline>
+    <duration>
+     <value>65</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Brabourne Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;New Howrah Bridge Approach Rd&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Old Court House St&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Continue to follow Old Court House St&lt;/div&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by the church (on the left)&lt;/div&gt;</html_instructions>
+    <distance>
+     <value>385</value>
+     <text>0.4 km</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5707731</lat>
+     <lng>88.3500066</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5681323</lat>
+     <lng>88.3491394</lng>
+    </end_location>
+    <polyline>
+     <points>ijwhCqzfzOpAJzHfBXFZHXJVHXP</points>
+    </polyline>
+    <duration>
+     <value>54</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Hemanta Basu Sarani&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Old Court House St&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>308</value>
+     <text>0.3 km</text>
+    </distance>
+    <maneuver>turn-slight-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5681323</lat>
+     <lng>88.3491394</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5645396</lat>
+     <lng>88.3478829</lng>
+    </end_location>
+    <polyline>
+     <points>yyvhCcufzOPF~Bh@\HbATpBf@N@jCp@fCr@bAX</points>
+    </polyline>
+    <duration>
+     <value>71</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue onto &lt;b&gt;Marx Engels Beethi Rd&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by Eastern Railway Office and Reservation Counter (on the left)&lt;/div&gt;</html_instructions>
+    <distance>
+     <value>420</value>
+     <text>0.4 km</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5645396</lat>
+     <lng>88.3478829</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5640879</lat>
+     <lng>88.3476089</lng>
+    </end_location>
+    <polyline>
+     <points>kcvhCgmfzORDbAl@@@</points>
+    </polyline>
+    <duration>
+     <value>10</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue onto &lt;b&gt;Rashmoni Ave&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>58</value>
+     <text>58 m</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5640879</lat>
+     <lng>88.3476089</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5638466</lat>
+     <lng>88.3475026</lng>
+    </end_location>
+    <polyline>
+     <points>q`vhCqkfzOn@T</points>
+    </polyline>
+    <duration>
+     <value>4</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; toward &lt;b&gt;Indira Gandhi Sarani&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>29</value>
+     <text>29 m</text>
+    </distance>
+    <maneuver>turn-slight-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5638466</lat>
+     <lng>88.3475026</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5524186</lat>
+     <lng>88.3432652</lng>
+    </end_location>
+    <polyline>
+     <points>a_vhC{jfzOBA@?nAPPFZH`@HdAXF@D@NBB@NDPD`@L`@J`@L`@J`@L`@J`@J`@L`@J`@L`@J`@J`@LPDND`@LTFpHlB`Dx@lBf@fDz@lARZH`@L`@JJDJBND\H\HB@f@L^HTHhCn@fA\ZLx@`@b@\</points>
+    </polyline>
+    <duration>
+     <value>136</value>
+     <text>2 mins</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Indira Gandhi Sarani&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>1346</value>
+     <text>1.3 km</text>
+    </distance>
+    <maneuver>turn-slight-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5524186</lat>
+     <lng>88.3432652</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5470468</lat>
+     <lng>88.3407931</lng>
+    </end_location>
+    <polyline>
+     <points>swshCmpezOjBl@|EbBrC`AZJbCz@tG|B^L`@R^PB@`@PBBPH</points>
+    </polyline>
+    <duration>
+     <value>62</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Casurina Ave&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Pranabananda Sarani&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>649</value>
+     <text>0.6 km</text>
+    </distance>
+    <maneuver>turn-slight-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5470468</lat>
+     <lng>88.3407931</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5424105</lat>
+     <lng>88.3405455</lng>
+    </end_location>
+    <polyline>
+     <points>avrhC}`ezOZHLBH@J?J@l@?jF@xPZ</points>
+    </polyline>
+    <duration>
+     <value>49</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Continue onto &lt;b&gt;Hospital Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>517</value>
+     <text>0.5 km</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>22.5424105</lat>
+     <lng>88.3405455</lng>
+    </start_location>
+    <end_location>
+     <lat>22.5410812</lat>
+     <lng>88.3414913</lng>
+    </end_location>
+    <polyline>
+     <points>ayqhCm_ezO`@KfDs@PEJGLGFEFILSIaA</points>
+    </polyline>
+    <duration>
+     <value>24</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Acharya Jagadish Chandra Bose Rd&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>203</value>
+     <text>0.2 km</text>
     </distance>
     <maneuver>turn-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.6010053</lat>
-     <lng>-122.3829414</lng>
+     <lat>22.5410812</lat>
+     <lng>88.3414913</lng>
     </start_location>
     <end_location>
-     <lat>37.4115576</lat>
-     <lng>-122.0775552</lng>
+     <lat>22.5415431</lat>
+     <lng>88.3623365</lng>
     </end_location>
     <polyline>
-     <points>i}ndFj|}iVC_@CQC]CY[{GQuDGwA?O?S@E?M@UDSFWHYJS^{@Vm@h@iA\o@FOHMH[BYLWbBwCfAmBdAkBp@oApA}Bt@sAf@}@|@_Br@qAhAoBP[FITa@Ta@j@cAh@_AxB{DFKTa@tL{S|@aB^m@fAkBdAkB`AcB~GwLp@oANUfAoBx@wAVe@p@uAf@mAf@qAd@uAPm@XgARu@T}@Py@Pm@TkAD]F_@Lw@NkAHm@D]Fq@B_@Da@B_@JyABw@Bs@DsA@wAByB@eA?SRmXJsL@m@?k@BsB@wA@_CBeD@}@@aBBqBBgC@gA@sA@aCByB@w@@qCDmD@oA?m@@m@?m@@eA@mA@{@Bs@@g@Bi@Dq@Dg@@OBUD]Hi@N_AHa@F[Jc@Ja@Ni@Ne@N_@Pc@Z{@Tc@R]Va@R[NUXa@^c@`AgAdBoBjBsBbAkAzAcBnAuAvAaB|AcBh@i@f@k@r@y@xBaCbBmBnByBf@g@jAqAjD{DlGcHfBqB|CkDzCiDX]HIbAiAl@q@XYh@o@h@m@X[hBsBbBmBpC{C|CiDPSVWxBcCnAyAj@m@FK|@cAJK`AgAJMNOzCgDdBoB~CmDxBcC|CmDvFkG|CkDvA_B~@cAl@q@pAwA\a@n@o@t@w@|@_Ad@c@VUZ[`A{@fA}@~DiDrCaCh@g@ZYrBkBLKvFcFp@o@dBaBfCeCjAeAjE}Dz@y@nAiAXWdC{BPMl@i@d@a@zAwAtBoBv@s@@AhAeAlAiAv@q@FGjFyEtFeFpKsJLKx@w@JGZYJMNMrAoAdA{@PObB{AbA}@DEn@k@TM`@_@pAmAb@_@`FoE~AyAf@c@fAcAbGoFz@w@bSsQzCqC`B{Ap@m@n@o@\_@dAeA^c@\]V]NQfAsA~@kATWb@g@X]lA{Az@aA~@iAr@y@bAmAzAgB|@gAl@q@rA_Bv@}@~@iAb@g@r@y@h@m@tAcBj@q@NQt@}@dAkAfAsAHIpA{AdAqA`AgAn@w@dAmAhBwBpA{A?Ap@u@`@g@fCyCrA}AdCwC^e@rA}AlAwAV[zAgB`BmBhC{CzAgBh@q@|@cAFGLOrA_BFGl@s@p@w@x@aAjAsAbAmAvCkDf@k@xBkC`AiAhAqA|AiBX[~AmBt@}@XYfBwBp@u@t@}@|@eAZ_@nDiERQzIkKLKt@{@l@s@DEr@y@PSjG{HNSf@m@d@k@nAwApBaCtBeCJK|AmBxAiBHKLQVa@`@m@JODGFK^o@LUXk@Nc@FMz@wBJYVu@J]La@Na@Po@Lc@H_@H[H[HYJg@P}@F[H]Ny@P_APcAZ_BLu@Jg@\gBTmAVsA^oBFYf@mC~AqIReABKLw@Lo@Pw@h@cCDULi@T}@Rw@l@}B`@wAPo@L]BM`@mAZaAl@iBnAoDtCsIb@mAf@}AhAaDjAkD@El@gBVu@Pi@J]Pm@Pk@Ni@XcAXcARw@Lg@DSFSNo@Ps@^gBJc@Hc@Jk@RaANy@Ny@NeAV{AFe@RqATcBReBNyAN{ANaBJkALeBHo@@_@\uFFy@n@kK\qFb@uGLwBNcCXmEXuENwBPqCfBiYZ{EV_ELiBPwBHaAJaAH_ALaAP_BR}AL}@RuA\iCN_ANu@RmAH]BOVqA`@oBXoANq@VcA\uAJa@XcALc@Ru@Xy@La@FQbAsCXu@b@eATk@t@cBBE`@w@FMlAeCRc@nDkHXk@v@aBDIDK~@kBBGBIHM~@oBHQDIFM~@kBVg@Tc@pBeEd@_ATe@j@kAj@iA`BmDp@uAv@_Bb@}@Xk@P_@hCkFN]dCcFpAiCVg@FMtAsCxBoEXg@vD}HVg@dCiFXk@Xi@x@aBP]b@}@f@aAz@eBnAgC~ByEb@}@fAyB|@iBl@oA~@kB`@y@n@qAHSNWNYLOXk@dD{Gn@oAb@aANYh@iAdAuB^u@Te@rAqCt@yAp@uAHUJUv@_B`@u@d@}@Zo@j@mAt@}A|A_DlAcCnByD\w@z@cBz@eBL[b@y@JOd@aAh@gAh@gADIVi@d@cATc@bAmBJSh@gAh@gAl@kAXk@n@oAr@yAHMFOp@sAJUXi@JUpAmC^w@p@sAh@gAlAcCfAyBN]HWR_@lB{Dv@_Bb@y@p@wA~@kBhBwCjAeBTYj@s@b@g@TYXUf@m@VYt@u@NSpD{DbAeAVWzAaBnAqAhAmAx@{@~@eAbAcAjAqAd@g@f@i@\]f@k@t@w@`@c@bBgBdAiAxGgHt@y@Z[|BeC~@_Ar@u@fBoBfAkAn@q@hDsDr@s@X[lOgPZ[Z]`KuKZ[Z]fFqFNQTU\_@r@u@jBoBbAgAb@e@RWrAuAl@q@RUxCcDTUd@g@TUf@i@NOjAoARULMd@e@PSPQFGBGr@u@d@g@|@_AVYvAyAn@s@v@{@lAwAT[RUPUPWd@m@PURYPUPW^k@RYR[bA_Bb@o@dAaBfAaBdA_BPWvCqENW`@k@LSZg@b@q@vEiH`EkGb@m@PYb@m@b@o@rEcHfBoCPWt@kAl@_AXa@t@iAdA_BdAyAdAeBTc@Zi@Vg@NWTg@Xi@`@}@FSjAyC`@iAj@{AZaABIf@aBFQFWxA{E~@yC</points>
+     <points>wpqhCieezOQwAS{AYsBOgACo@Co@Aa@Aa@Ci@Ca@Cg@AGMkB?KEs@Ac@AeAB_ADaBBs@Bs@@g@BmADyA?YHuD@e@?e@@Y?KDsBBw@@k@Bi@@_@?E@WBoB@aA?KBmBBmA@g@BkA@g@?_@@m@Bq@Bs@D{BDiA?C@mA@e@@g@@e@@g@BkA@g@?IBu@?W@g@@m@@O?U@g@@oB@w@?[A_@?OAUC_@Ca@AKESKm@AIKc@Ss@W{@Ka@</points>
     </polyline>
     <duration>
-     <value>1228</value>
-     <text>20 mins</text>
+     <value>181</value>
+     <text>3 mins</text>
     </duration>
-    <html_instructions>Merge onto &lt;b&gt;US-101 S&lt;/b&gt; via the ramp to &lt;b&gt;San Jose&lt;/b&gt;</html_instructions>
+    <html_instructions>Keep &lt;b&gt;right&lt;/b&gt; to continue on &lt;b&gt;Acharya Jagadish Chandra Bose Rd Flyover&lt;/b&gt;</html_instructions>
     <distance>
-     <value>35448</value>
-     <text>22.0 mi</text>
-    </distance>
-    <maneuver>ramp-right</maneuver>
-   </step>
-   <step>
-    <travel_mode>DRIVING</travel_mode>
-    <start_location>
-     <lat>37.4115576</lat>
-     <lng>-122.0775552</lng>
-    </start_location>
-    <end_location>
-     <lat>37.4108967</lat>
-     <lng>-122.0759644</lng>
-    </end_location>
-    <polyline>
-     <points>g}icFvgbhVhAoD@CPk@d@_B</points>
-    </polyline>
-    <duration>
-     <value>6</value>
-     <text>1 min</text>
-    </duration>
-    <html_instructions>Keep &lt;b&gt;right&lt;/b&gt; to stay on &lt;b&gt;US-101 S&lt;/b&gt;</html_instructions>
-    <distance>
-     <value>159</value>
-     <text>0.1 mi</text>
+     <value>2159</value>
+     <text>2.2 km</text>
     </distance>
     <maneuver>keep-right</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.4108967</lat>
-     <lng>-122.0759644</lng>
+     <lat>22.5415431</lat>
+     <lng>88.3623365</lng>
     </start_location>
     <end_location>
-     <lat>37.4049618</lat>
-     <lng>-122.0699600</lng>
+     <lat>22.5404653</lat>
+     <lng>88.3693217</lng>
     </end_location>
     <polyline>
-     <points>cyicFv}ahVRWLUHSXq@JY?Al@aBVu@HUn@gBj@}AfA{Cl@aBPi@N_@HULWJWDGBGHOR[LOJOHKJKNOFGFGHGHGHGLITOPKVKVKPGVGNERCHCTCVCL?NAT?T?x@AxBA|@AT?D?DAHC</points>
+     <points>ssqhCsgizOKKKQKOKWGOOc@GQw@yBa@eAa@eAOa@a@eASi@CEQg@KQACGUCMCGC[CS?c@BW@KFa@h@oAJO\e@PQ@ARUb@[\SZQ@Ab@Qn@ULEZMf@U^[PUJMRa@FQFSNk@@GH[FSBGHK</points>
     </polyline>
     <duration>
-     <value>36</value>
+     <value>79</value>
      <text>1 min</text>
     </duration>
-    <html_instructions>Take exit &lt;b&gt;398B&lt;/b&gt; for &lt;b&gt;CA-85 S&lt;/b&gt; toward &lt;b&gt;Cupertino&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Santa Cruz&lt;/b&gt;</html_instructions>
+    <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Circus Ave&lt;/b&gt;</html_instructions>
     <distance>
-     <value>927</value>
-     <text>0.6 mi</text>
+     <value>904</value>
+     <text>0.9 km</text>
     </distance>
-    <maneuver>ramp-right</maneuver>
+    <maneuver>turn-slight-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.4049618</lat>
-     <lng>-122.0699600</lng>
+     <lat>22.5404653</lat>
+     <lng>88.3693217</lng>
     </start_location>
     <end_location>
-     <lat>37.3871566</lat>
-     <lng>-122.0687584</lng>
+     <lat>22.5426724</lat>
+     <lng>88.3936301</lng>
     </end_location>
     <polyline>
-     <points>_thcFfx`hV`@?vB@b@?T@j@?h@?T?n@?d@?f@@t@?R?r@?TBB?HAJ?x@?X?X?d@?`@?N?N?RAB?^ATCXCb@CTCPCl@Kn@KVETEZIPCNCn@KjCg@rEw@`@I`@GdCc@PEFAd@GXCh@In@GPAh@Gl@C`@CJAn@Cj@AR?N?d@?f@?d@@Z@v@D`ADT@j@DZ@J?F@T@N@P@n@BX@H?^BZ@d@BnAFZ@bCJX@\BX?X@F?|@?`@AP?PARAPAZAXCrAI</points>
+     <points>}lqhCgsjzOh@kBDOFSNm@FYFW@EPaA@EZaB@GVeBZwBFYBUD_@VyFNkBB_@Ac@?EIu@CWCU?OAO@Y@U?MBWHiB@C@a@Be@Bg@?I@oACaA?EG_AIq@E_@G[Mm@Oi@So@[{@[aA[{@Sc@Um@M_@Wi@[eAe@oAM]Qk@Sq@IYKWi@kBYcAI]SgAMq@AII_@Gc@Ea@?CGk@EoA@_@?IBo@De@D_@DWHo@Hm@BMD_@Bi@?CBw@@a@Aq@Ca@?SE}@AOGs@Ik@o@mEs@cFIg@EYAC]_CAGk@sD</points>
     </polyline>
     <duration>
-     <value>69</value>
-     <text>1 min</text>
+     <value>200</value>
+     <text>3 mins</text>
     </duration>
-    <html_instructions>Continue onto &lt;b&gt;CA-85 S&lt;/b&gt;</html_instructions>
+    <html_instructions>Continue straight past Heineken onto &lt;b&gt;Maa Flyover&lt;/b&gt;</html_instructions>
     <distance>
-     <value>1994</value>
-     <text>1.2 mi</text>
+     <value>2597</value>
+     <text>2.6 km</text>
     </distance>
+    <maneuver>straight</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.3871566</lat>
-     <lng>-122.0687584</lng>
+     <lat>22.5426724</lat>
+     <lng>88.3936301</lng>
     </start_location>
     <end_location>
-     <lat>37.3831087</lat>
-     <lng>-122.0705330</lng>
+     <lat>22.5255758</lat>
+     <lng>88.3958716</lng>
     </end_location>
     <polyline>
-     <points>wdecFvp`hVDDBB@@B@@@D?@?J?b@AR?n@?N?X?N?^AX@P@D@F@JDD@D@@?B@DBNFHFFBFFBB^\ZVPPHFBBFDHDBBD@@@LDLDLBj@HfARJBHDJBDBDB@@B@FDFDHHHHJLPVNTBDBB@@B@@@F@</points>
+     <points>uzqhCekozOQc@Oc@Ki@AASwACWE]Ko@Ga@SaBKu@Ak@?s@@U@UFu@J{AFi@HYPc@V[JK\SDCXMLIPENA^EV?ZBXFPB~Dt@p@JfEl@fC\@?VF^FHBDBDDHHp@JnARb@Hn@H~G`AfARD@H@`C`@hBXlATlFx@XDhCb@|@PdBTx@Jn@H`ANfARpAPhAPZDTBX@XB^@XBZBR@X?|@CRAT?TAb@GRC^MZINERId@Qd@UxAo@</points>
     </polyline>
     <duration>
-     <value>28</value>
-     <text>1 min</text>
+     <value>266</value>
+     <text>4 mins</text>
     </duration>
-    <html_instructions>Take exit &lt;b&gt;22A&lt;/b&gt; toward &lt;b&gt;El Camino Real&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Mountain View&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;CA-82 N&lt;/b&gt;</html_instructions>
+    <html_instructions>Take the ramp onto &lt;b&gt;NH12&lt;/b&gt;</html_instructions>
     <distance>
-     <value>495</value>
-     <text>0.3 mi</text>
+     <value>2483</value>
+     <text>2.5 km</text>
     </distance>
-    <maneuver>ramp-right</maneuver>
+    <maneuver>ramp-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.3831087</lat>
-     <lng>-122.0705330</lng>
+     <lat>22.5255758</lat>
+     <lng>88.3958716</lng>
     </start_location>
     <end_location>
-     <lat>37.3804727</lat>
-     <lng>-122.0730393</lng>
+     <lat>22.5245429</lat>
+     <lng>88.4013220</lng>
     </end_location>
     <polyline>
-     <points>mkdcFx{`hVlAjBFJJHLNRR`Ax@bBvA@?z@p@fDjC</points>
+     <points>{onhCeyozOI[EMAE?C?A?E?CHk@RaBDU@KLs@D[BYJ{@J{@Dm@FOHm@Hw@Jy@@E?CJo@?GLs@?GHk@@IDm@BM@m@Lc@ZoA</points>
     </polyline>
     <duration>
-     <value>37</value>
-     <text>1 min</text>
+     <value>150</value>
+     <text>3 mins</text>
     </duration>
-    <html_instructions>Merge onto &lt;b&gt;CA-237 W&lt;/b&gt;</html_instructions>
+    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; at Toyota Driving School Kolkata&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by Durga Tea House (on the left)&lt;/div&gt;</html_instructions>
     <distance>
-     <value>369</value>
-     <text>0.2 mi</text>
+     <value>578</value>
+     <text>0.6 km</text>
     </distance>
-    <maneuver>merge</maneuver>
+    <maneuver>turn-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>37.3804727</lat>
-     <lng>-122.0730393</lng>
+     <lat>22.5245429</lat>
+     <lng>88.4013220</lng>
     </start_location>
     <end_location>
-     <lat>37.3857917</lat>
-     <lng>-122.0838069</lng>
+     <lat>22.5252074</lat>
+     <lng>88.4016411</lng>
     </end_location>
     <polyline>
-     <points>}zccFnkahVOb@Un@Sh@Uj@Sh@a@~@]|@O`@Sf@k@tASh@MZ[x@y@rBc@fAm@|AKPm@|Ak@vAm@~A{AzDWp@o@xAk@xAO`@k@zAaAbCWj@_@bAWl@e@lAQd@</points>
+     <points>kinhCg{pzOWIaBo@KE</points>
     </polyline>
     <duration>
-     <value>118</value>
-     <text>2 mins</text>
-    </duration>
-    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;El Camino Real&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by KFC (on the right in 0.6&amp;nbsp;mi)&lt;/div&gt;</html_instructions>
-    <distance>
-     <value>1120</value>
-     <text>0.7 mi</text>
-    </distance>
-    <maneuver>turn-right</maneuver>
-   </step>
-   <step>
-    <travel_mode>DRIVING</travel_mode>
-    <start_location>
-     <lat>37.3857917</lat>
-     <lng>-122.0838069</lng>
-    </start_location>
-    <end_location>
-     <lat>37.3859960</lat>
-     <lng>-122.0837669</lng>
-    </end_location>
-    <polyline>
-     <points>e|dcFxnchVYAOE</points>
-    </polyline>
-    <duration>
-     <value>6</value>
+     <value>13</value>
      <text>1 min</text>
     </duration>
-    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Castro St&lt;/b&gt;</html_instructions>
+    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; at Mashi Pintu Petrol onto &lt;b&gt;Service Rd&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by Dhalai pool (on the left)&lt;/div&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Destination will be on the right&lt;/div&gt;</html_instructions>
     <distance>
-     <value>23</value>
-     <text>75 ft</text>
+     <value>81</value>
+     <text>81 m</text>
     </distance>
-    <maneuver>turn-right</maneuver>
+    <maneuver>turn-left</maneuver>
    </step>
    <duration>
-    <value>1606</value>
-    <text>27 mins</text>
+    <value>1937</value>
+    <text>32 mins</text>
    </duration>
    <distance>
-    <value>41084</value>
-    <text>25.5 mi</text>
+    <value>15815</value>
+    <text>15.8 km</text>
    </distance>
    <start_location>
-    <lat>37.5987303</lat>
-    <lng>-122.3878186</lng>
+    <lat>22.5850655</lat>
+    <lng>88.3468857</lng>
    </start_location>
    <end_location>
-    <lat>37.3859960</lat>
-    <lng>-122.0837669</lng>
+    <lat>22.5252074</lat>
+    <lng>88.4016411</lng>
    </end_location>
-   <start_address>Millbrae, CA, USA</start_address>
-   <end_address>Mountain View, CA, USA</end_address>
+   <start_address>H8MW+WP Kolkata, West Bengal, India</start_address>
+   <end_address>GCG2+3M Kolkata, West Bengal, India</end_address>
   </leg>
-  <copyrights>Map data ©2021 Google</copyrights>
+  <copyrights>Map data ©2021</copyrights>
   <overview_polyline>
-   <points>aondFzz~iVjAeAo@wA{@mBqBuDkCoFwAsC_AkBQ]C_@Go@_@uHYmG?c@H}@Pq@j@oAfBwDRi@BYLWjDeGvB{DlFoJxGoLxXmf@bLaS`CgEhA{BnA_Dv@cCtAuFf@yBL}@l@oETsCNqCHgCFkH`@{h@Vk[T_ZBoEHeFPsCb@}Ch@cC^oA`@cAp@_Bj@_Ab@q@x@eAvIwJ`J_KfQsR~T}VbG{GtOcQ`IyI`EwEdS{ThZu\hEkE|DkDxKmJjLkKlFgFvGcGjHwG~@w@`CyBxFkFha@{^rIuHhAcAdAy@xJ}Ipk@kh@dEcEdBqBdJ{KjOqQpZe^nf@uk@h]ea@vNwPxAeBbE{ElMgOvIoKlDeEpIaKhCiDz@qAl@eAh@oAfBuEz@qCj@{Bn@{CpCaOtF}YvAcH|@uDnBcHnBgGvNkb@fAkDz@yC`AwDhA_Ft@uDfAuGdAaIz@cJVuC^uGxBm]vFo}@d@iHZyDt@cHrA{J|@aFvAaHpAmFtAwErB}FrB{EjCoFtImQnE_JpMeXxMiX`Ru_@|LqVrJ}R^q@f@{@hGgMdD{GhCkFz@kBjCiFfA}BrC}FvGyMxBkE~B{E|@mBxAqClCoFfCcFnGsMnEcJ\w@dD{GtAqC~@kBhBwC`B_CnA{ATYXU~@gAzHkIvOqPtKiL|~@cbAbOyO`M}MfGqG~EmFfCmCdCsClA_B|AsBxAyBtNuT~PwWbKqOnCeEzBiDdAyAdAeBp@mAf@_An@qAh@qAlBcFfA}Cz@uCdFiPv@kC`@m@n@aBrH{Sr@eBf@{@n@w@h@g@v@i@h@Wh@SdAUjAI~HGHC`@?zC@`C@rD@`BBzEAfAChBOfCa@rAWrRiDxC]jCQzBGbC@fGXfEPtGXjBFxBArAGlBMHHLDnDAx@?VB^JZL\VvAnAXRb@NlCd@`@PTNp@x@X`@DBF@lAjBRT`@b@bFbEfDjCOb@i@xAiBrEcBhE{GvPqEfLiDzIuBjFQd@YAOE</points>
+   <points>uczhCagfzOiAzHc@tCEnAd@`@HDl@@bAE`@BLFJHPd@Ep@Y`AUt@SbAIbAK^U^M^_@bBoAYuAc@YKiA_@R}@R_B@_@JoARsARy@d@iAh@uAh@qDzC}Rj@eD\[XK~AEfCQfA?ZDf@PbBl@z@TRBXEHGJOr@oBfA}CVg@t@eCTa@VQr@]vAg@XGrFYf@Ah@FfANhCl@xEjAxCp@TRxBf@^t@HFXLrBd@`BOP@XDrDfAxBx@pAJtInBt@Tp@ZrFpApBf@N@rGdBvA^dAn@n@TDA`BX|@RbB`@fAZnGdB`FtAhVjGhB\bAXdAXhBb@~Cx@bBj@x@`@b@\hIpChQfG`A`@b@Rd@Tl@Rn@FxG@xPZ`@KxDy@XONOLSIaAe@sDi@{DKcDM{BUoE@eCHuCNcGJ{GRmITeOVeLNgJLaJ?sBIgBUwAcAuDW]Wg@wA_EuBsFu@iBQo@Go@B{@Hm@h@oAJOn@w@TW~AcA|B{@f@U^[\c@Zs@V_AV_AHKh@kBLc@`@eBp@qD~@mG\yGRkCAi@MmACoAZyG@yACgAQqBM{@]wAo@kBw@}Bi@qAgB_F}@uCyAeFm@cDUuBCoBBy@ZmCL{@HiAB{@?sAKcCQ_BcBqLo@eEm@{Da@gAMk@WoBm@qEMaB@iAHkAReCZ}@V[h@_@^Q^On@GV?t@JpEx@xFx@hC\v@NNFNNtEr@~G`AfARNBfPjCbDh@bDf@rFx@lEl@lBJn@DvACh@Ax@I~Aa@xDaBQs@Hw@XwBN_A`@mDDm@FOReBXsBVoBFw@D{@h@sByBy@KE</points>
   </overview_polyline>
   <bounds>
    <southwest>
-    <lat>37.3804727</lat>
-    <lng>-122.3878186</lng>
+    <lat>22.5245429</lat>
+    <lng>88.3405455</lng>
    </southwest>
    <northeast>
-    <lat>37.6013592</lat>
-    <lng>-122.0684804</lng>
+    <lat>22.5865951</lat>
+    <lng>88.4016411</lng>
    </northeast>
   </bounds>
  </route>
  <geocoded_waypoint>
   <geocoder_status>OK</geocoder_status>
-  <type>locality</type>
-  <type>political</type>
-  <partial_match>true</partial_match>
-  <place_id>ChIJB5B2CJAKj4ARa1qX_PThidM</place_id>
+  <type>plus_code</type>
+  <place_id>GhIJwMqhRbaVNkARBFYOLTIWVkA</place_id>
  </geocoded_waypoint>
  <geocoded_waypoint>
   <geocoder_status>OK</geocoder_status>
-  <type>locality</type>
-  <type>political</type>
-  <partial_match>true</partial_match>
-  <place_id>ChIJiQHsW0m3j4ARm69rRkrUF3w</place_id>
+  <type>plus_code</type>
+  <place_id>GhIJm8QgsHKGNkARke18P7UZVkA</place_id>
  </geocoded_waypoint>
 </DirectionsResponse>
 <!-- [END maps_http_directions_plus_codes_response] -->

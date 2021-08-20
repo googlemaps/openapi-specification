@@ -944,11 +944,11 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "origin",
-            value: "JJ88+P9 Millbrae",
+            value: encodeURIComponent("H8MW+WP Kolkata India"),
           },
           {
             key: "destination",
-            value: "CWC8+9R Mountain View, CA, USA",
+            value: encodeURIComponent("GCG2+3M Kolkata India"),
           },
         ],
       }),

@@ -1,4 +1,4 @@
-// [START maps_http_directions_placed_id]
+// [START maps_http_directions_place_id]
 var axios = require('axios');
 
 var config = {
@@ -15,4 +15,4 @@ axios(config)
   console.log(error);
 });
 
-// [END maps_http_directions_placed_id]
+// [END maps_http_directions_place_id]

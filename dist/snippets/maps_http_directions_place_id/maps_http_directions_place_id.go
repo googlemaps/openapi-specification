@@ -1,4 +1,4 @@
-// [START maps_http_directions_placed_id]
+// [START maps_http_directions_place_id]
 package main
 
 import (
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END maps_http_directions_placed_id]
+// [END maps_http_directions_place_id]

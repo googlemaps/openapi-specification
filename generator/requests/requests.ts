@@ -955,7 +955,7 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
-    regionTag: "maps_http_directions_placed_id",
+    regionTag: "maps_http_directions_place_id",
     request: new Request({
       url: new Url({
         protocol: "https",

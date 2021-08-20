@@ -4,6 +4,14 @@
 
 The total fare for the route.
 
+```
+{
+  "currency" : "USD",
+  "value" : 6,
+  "text" : "$6.00"
+}
+```
+
 | Field      | Required     | Type   | Description                                                                                                                                                                                   |
 | :--------- | ------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `currency` | **required** | string | <div class="nonref-property-description"><p>An <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency code</a> indicating the currency that the amount is expressed in.</p></div> |

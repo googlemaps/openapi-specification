@@ -181,6 +181,12 @@
       the service. Results may also vary between nearly-equivalent routes at any
       time or frequency.
     </div>
+    <div class="note">
+      Note: Distance Matrix requests specifying `departure_time` when
+      `mode=driving` are limited to a maximum of 100 elements per request. The
+      number of origins times the number of destinations defines the number of
+      elements.
+    </div>
   </li>
   <li>
     <h3 id="language">language</h3>

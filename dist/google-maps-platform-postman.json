@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "c6f95853-a139-48ac-b83c-84b7520c33a6",
+            "id": "44e7fd76-936a-4977-bcfe-b6f68e0074a0",
             "name": "Directions API",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -9,7 +9,7 @@
             },
             "item": [
                 {
-                    "id": "462376c5-2afb-40f0-b3f8-98922d09e1cb",
+                    "id": "4eb0b47d-99d8-4b23-be81-9748a98c26e8",
                     "name": "/maps/api/directions/json",
                     "request": {
                         "name": "/maps/api/directions/json",
@@ -32,28 +32,16 @@
                             ],
                             "query": [
                                 {
-                                    "disabled": false,
-                                    "key": "origin",
-                                    "value": "<string>",
-                                    "description": "(Required) The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.\n* Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n  \n  ```\n  origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE\n  ```\n  \n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  \n  ```\n  origin=24+Sussex+Drive+Ottawa+ON\n  ```\n  \n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  \n  ```\n  origin=41.43206,-81.38992\n  ```\n\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`). \n  \n  * **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`). \n  * **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n\n<div class=\"note\">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n"
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "destination",
-                                    "value": "<string>",
-                                    "description": "(Required) The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter."
+                                    "disabled": true,
+                                    "key": "arrival_time",
+                                    "value": "<number>",
+                                    "description": "Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.\n"
                                 },
                                 {
                                     "disabled": true,
-                                    "key": "mode",
-                                    "value": "<string>",
-                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "waypoints",
-                                    "value": "<string>",
-                                    "description": "<div class=\"caution\">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>\n\nSpecifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.\n* If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).\n  <div class=\"note\">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n* If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.\n* If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, \"1st Street\" could be a complete value or a partial value for \"1st street NE\" or \"1st St SE\". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.\n* Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.\n  * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.\n  * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`\n\n##### Influence routes with stopover and pass through points\n\nFor each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.\n\nIf you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.\n\nThe following URL modifies the previous request such that the journey is routed through Lexington without stopping:\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Boston,MA&destination=Concord,MA\n&waypoints=Charlestown,MA|via:Lexington,MA  \n```\n\nThe `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.\n\n<div class=\"caution\">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>\n\n\n##### Optimize your waypoints\n\nBy default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.\n\nIf you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.\n\nThe following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Adelaide,SA&destination=Adelaide,SA\n&waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA\n```\n\nInspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:\n\n```\n\"waypoint_order\": [ 3, 2, 0, 1 ]\n```\n\n<div class=\"caution\">Caution: Requests using waypoint optimization are billed at a higher rate. [Learn more about how Google Maps Platform products are billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)</div>\n"
+                                    "key": "departure_time",
+                                    "value": "<number>",
+                                    "description": "Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:\n* For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).\n* For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.\n\n<div class=\"note\">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>\n<div class=\"note\">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>\n"
                                 },
                                 {
                                     "disabled": true,
@@ -68,22 +56,40 @@
                                     "description": "Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n\nIt's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: \n\n```\navoid=tolls|highways|ferries.\n```\n"
                                 },
                                 {
-                                    "disabled": true,
-                                    "key": "units",
+                                    "disabled": false,
+                                    "key": "destination",
                                     "value": "<string>",
-                                    "description": "Specifies the unit system to use when displaying results.\n\nDirections results contain text within distance fields that may be displayed to the user to indicate the distance of a particular \"step\" of the route. By default, this text uses the unit system of the origin's country or region.\n\nFor example, a route from \"Chicago, IL\" to \"Toronto, ONT\" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:\n\n* `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.\n* `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.\n\n<div class=\"note\">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>\n"
+                                    "description": "(Required) The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter."
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "origin",
+                                    "value": "<string>",
+                                    "description": "(Required) The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.\n* Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n  \n  ```\n  origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE\n  ```\n  \n* If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  \n  ```\n  origin=24+Sussex+Drive+Ottawa+ON\n  ```\n  \n  Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.\n* If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n  \n  ```\n  origin=41.43206,-81.38992\n  ```\n\n* Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`). \n  \n  * **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`). \n  * **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n\n<div class=\"note\">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n"
                                 },
                                 {
                                     "disabled": true,
-                                    "key": "arrival_time",
-                                    "value": "<number>",
-                                    "description": "Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.\n"
+                                    "key": "waypoints",
+                                    "value": "<string>",
+                                    "description": "<div class=\"caution\">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>\n\nSpecifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.\n* If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).\n  <div class=\"note\">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n* If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.\n* If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, \"1st Street\" could be a complete value or a partial value for \"1st street NE\" or \"1st St SE\". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.\n* Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.\n  * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.\n  * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`\n\n##### Influence routes with stopover and pass through points\n\nFor each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.\n\nIf you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.\n\nThe following URL modifies the previous request such that the journey is routed through Lexington without stopping:\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Boston,MA&destination=Concord,MA\n&waypoints=Charlestown,MA|via:Lexington,MA  \n```\n\nThe `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.\n\n<div class=\"caution\">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>\n\n\n##### Optimize your waypoints\n\nBy default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.\n\nIf you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.\n\nThe following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Adelaide,SA&destination=Adelaide,SA\n&waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA\n```\n\nInspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:\n\n```\n\"waypoint_order\": [ 3, 2, 0, 1 ]\n```\n\n<div class=\"caution\">Caution: Requests using waypoint optimization are billed at a higher rate. [Learn more about how Google Maps Platform products are billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)</div>\n"
                                 },
                                 {
                                     "disabled": true,
-                                    "key": "departure_time",
-                                    "value": "<number>",
-                                    "description": "Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:\n* For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).\n* For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.\n\n<div class=\"note\">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>\n"
+                                    "key": "language",
+                                    "value": "en",
+                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "mode",
+                                    "value": "<string>",
+                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "region",
+                                    "value": "en",
+                                    "description": "The region code, specified as a [ccTLD (\"top-level domain\")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is \"uk\" (.co.uk) while its ISO 3166-1 code is \"gb\" (technically for the entity of \"The United Kingdom of Great Britain and Northern Ireland\")."
                                 },
                                 {
                                     "disabled": true,
@@ -105,15 +111,9 @@
                                 },
                                 {
                                     "disabled": true,
-                                    "key": "language",
-                                    "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
-                                },
-                                {
-                                    "disabled": true,
-                                    "key": "region",
-                                    "value": "en",
-                                    "description": "The region code, specified as a [ccTLD (\"top-level domain\")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is \"uk\" (.co.uk) while its ISO 3166-1 code is \"gb\" (technically for the entity of \"The United Kingdom of Great Britain and Northern Ireland\")."
+                                    "key": "units",
+                                    "value": "<string>",
+                                    "description": "Specifies the unit system to use when displaying results.\n\nDirections results contain text within distance fields that may be displayed to the user to indicate the distance of a particular \"step\" of the route. By default, this text uses the unit system of the origin's country or region.\n\nFor example, a route from \"Chicago, IL\" to \"Toronto, ONT\" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:\n\n* `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.\n* `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.\n\n<div class=\"note\">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>\n"
                                 }
                             ],
                             "variable": []
@@ -123,7 +123,7 @@
                     },
                     "response": [
                         {
-                            "id": "9f9cb98f-4c32-4fe5-9772-083cb40e9eee",
+                            "id": "f9320e10-fa95-4751-ae7e-cec96e26b3fc",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -132,20 +132,12 @@
                                     ],
                                     "query": [
                                         {
-                                            "key": "origin",
-                                            "value": "Vancouver, BC"
+                                            "key": "arrival_time",
+                                            "value": "<number>"
                                         },
                                         {
-                                            "key": "destination",
-                                            "value": "Victoria, BC"
-                                        },
-                                        {
-                                            "key": "mode",
-                                            "value": "<string>"
-                                        },
-                                        {
-                                            "key": "waypoints",
-                                            "value": "MA|Lexington,MA"
+                                            "key": "departure_time",
+                                            "value": "<number>"
                                         },
                                         {
                                             "key": "alternatives",
@@ -156,16 +148,28 @@
                                             "value": "highways"
                                         },
                                         {
-                                            "key": "units",
-                                            "value": "metric"
+                                            "key": "destination",
+                                            "value": "Victoria, BC"
                                         },
                                         {
-                                            "key": "arrival_time",
-                                            "value": "<number>"
+                                            "key": "origin",
+                                            "value": "Vancouver, BC"
                                         },
                                         {
-                                            "key": "departure_time",
-                                            "value": "<number>"
+                                            "key": "waypoints",
+                                            "value": "MA|Lexington,MA"
+                                        },
+                                        {
+                                            "key": "language",
+                                            "value": "en"
+                                        },
+                                        {
+                                            "key": "mode",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "region",
+                                            "value": "en"
                                         },
                                         {
                                             "key": "traffic_model",
@@ -180,12 +184,8 @@
                                             "value": "less_walking"
                                         },
                                         {
-                                            "key": "language",
-                                            "value": "en"
-                                        },
-                                        {
-                                            "key": "region",
-                                            "value": "en"
+                                            "key": "units",
+                                            "value": "metric"
                                         },
                                         {
                                             "key": "key",
@@ -216,7 +216,7 @@
             "event": []
         },
         {
-            "id": "4120ffaa-e091-4119-90a4-00cd59b954dc",
+            "id": "946ac782-444d-4aae-a6e0-3fd350102820",
             "name": "Distance Matrix API",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -224,7 +224,7 @@
             },
             "item": [
                 {
-                    "id": "b087464b-a863-41d0-a2fd-f3e138b6677b",
+                    "id": "ffb46a1c-3703-490f-92d8-4d06fc35b4af",
                     "name": "/maps/api/distanceMatrix/json",
                     "request": {
                         "name": "/maps/api/distanceMatrix/json",
@@ -247,10 +247,22 @@
                             ],
                             "query": [
                                 {
-                                    "disabled": false,
-                                    "key": "origins",
-                                    "value": "<string>|<string>",
-                                    "description": "(Required) The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n"
+                                    "disabled": true,
+                                    "key": "arrival_time",
+                                    "value": "<number>",
+                                    "description": "Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "departure_time",
+                                    "value": "<number>",
+                                    "description": "Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:\n* For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).\n* For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.\n\n<div class=\"note\">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>\n<div class=\"note\">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "avoid",
+                                    "value": "<string>",
+                                    "description": "Distances may be calculated that adhere to certain restrictions. Restrictions are indicated by use of the avoid parameter, and an argument to that parameter indicating the restriction to avoid. The following restrictions are supported:\n\n* `tolls` indicates that the calculated route should avoid toll roads/bridges.\n* `highways` indicates that the calculated route should avoid highways.\n* `ferries` indicates that the calculated route should avoid ferries.\n* `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.\n\n<div class=\"note\">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>\n"
                                 },
                                 {
                                     "disabled": false,
@@ -259,10 +271,52 @@
                                     "description": "(Required) One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter."
                                 },
                                 {
+                                    "disabled": false,
+                                    "key": "origins",
+                                    "value": "<string>|<string>",
+                                    "description": "(Required) The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:\n- **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.\n- **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.\n  <div class=\"note\">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>\n- **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.\n- **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):\n  - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).\n  - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n- **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.\n  - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`\n  - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: \n    ```\n    origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:\n    ```\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "language",
+                                    "value": "en",
+                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header, or the native language of the domain from which the request is sent.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                },
+                                {
                                     "disabled": true,
                                     "key": "mode",
                                     "value": "<string>",
                                     "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "region",
+                                    "value": "en",
+                                    "description": "The region code, specified as a [ccTLD (\"top-level domain\")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is \"uk\" (.co.uk) while its ISO 3166-1 code is \"gb\" (technically for the entity of \"The United Kingdom of Great Britain and Northern Ireland\")."
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "traffic_model",
+                                    "value": "best_guess",
+                                    "description": "Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The `traffic_model` parameter may only be specified for driving directions where the request includes a `departure_time`. The available values for this parameter are:\n* `best_guess` (default) indicates that the returned duration_in_traffic should be the best estimate of travel time given what is known about both historical traffic conditions and live traffic. Live traffic becomes more important the closer the `departure_time` is to now.\n* `pessimistic` indicates that the returned duration_in_traffic should be longer than the actual travel time on most days, though occasional days with particularly bad traffic conditions may exceed this value.\n* `optimistic` indicates that the returned duration_in_traffic should be shorter than the actual travel time on most days, though occasional days with particularly good traffic conditions may be faster than this value.\nThe default value of `best_guess` will give the most useful predictions for the vast majority of use cases. It is possible the `best_guess` travel time prediction may be shorter than `optimistic`, or alternatively, longer than `pessimistic`, due to the way the `best_guess` prediction model integrates live traffic information.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "transit_mode",
+                                    "value": "<string>",
+                                    "description": "Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:\n* `bus` indicates that the calculated route should prefer travel by bus.\n* `subway` indicates that the calculated route should prefer travel by subway.\n* `train` indicates that the calculated route should prefer travel by train.\n* `tram` indicates that the calculated route should prefer travel by tram and light rail.\n* `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "transit_routing_preference",
+                                    "value": "<string>",
+                                    "description": "Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:\n* `less_walking` indicates that the calculated route should prefer limited amounts of walking.\n* `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.\n"
+                                },
+                                {
+                                    "disabled": true,
+                                    "key": "units",
+                                    "value": "<string>",
+                                    "description": "Specifies the unit system to use when displaying results.\n\nDirections results contain text within distance fields that may be displayed to the user to indicate the distance of a particular \"step\" of the route. By default, this text uses the unit system of the origin's country or region.\n\nFor example, a route from \"Chicago, IL\" to \"Toronto, ONT\" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:\n\n* `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.\n* `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.\n\n<div class=\"note\">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>\n"
                                 }
                             ],
                             "variable": []
@@ -272,7 +326,7 @@
                     },
                     "response": [
                         {
-                            "id": "fa5927a4-e0e6-45dd-ba7c-bd3b41e4b91e",
+                            "id": "1a3955ea-11c1-4b8b-962e-c62f40f44e3e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -281,16 +335,52 @@
                                     ],
                                     "query": [
                                         {
-                                            "key": "origins",
-                                            "value": "Vancouver BC|Seattle"
+                                            "key": "arrival_time",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "departure_time",
+                                            "value": "<number>"
+                                        },
+                                        {
+                                            "key": "avoid",
+                                            "value": "highways"
                                         },
                                         {
                                             "key": "destinations",
                                             "value": "San Francisco|Victoria BC"
                                         },
                                         {
+                                            "key": "origins",
+                                            "value": "Vancouver BC|Seattle"
+                                        },
+                                        {
+                                            "key": "language",
+                                            "value": "en"
+                                        },
+                                        {
                                             "key": "mode",
                                             "value": "<string>"
+                                        },
+                                        {
+                                            "key": "region",
+                                            "value": "en"
+                                        },
+                                        {
+                                            "key": "traffic_model",
+                                            "value": "pessimistic"
+                                        },
+                                        {
+                                            "key": "transit_mode",
+                                            "value": "train|tram|subway"
+                                        },
+                                        {
+                                            "key": "transit_routing_preference",
+                                            "value": "less_walking"
+                                        },
+                                        {
+                                            "key": "units",
+                                            "value": "metric"
                                         },
                                         {
                                             "key": "key",
@@ -321,7 +411,7 @@
             "event": []
         },
         {
-            "id": "8a42e057-bd14-4fb5-a44f-3ff8db2a4b27",
+            "id": "8fa777c6-ad73-47ae-b5c0-6094fed68f97",
             "name": "Elevation API",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -329,7 +419,7 @@
             },
             "item": [
                 {
-                    "id": "8cee6323-d94d-4bef-b8e8-bf0257f88db8",
+                    "id": "cf82e3b6-5a18-425f-bf37-496eb734baf6",
                     "name": "/maps/api/elevation/json",
                     "request": {
                         "name": "/maps/api/elevation/json",
@@ -377,7 +467,7 @@
                     },
                     "response": [
                         {
-                            "id": "122cd47d-03b1-4fc7-8124-3ef0b5f1d0b7",
+                            "id": "1c8554e7-3233-482c-8fd1-8bb835d6de9a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -426,7 +516,7 @@
             "event": []
         },
         {
-            "id": "82049fda-9e40-464c-9981-b17b276c389b",
+            "id": "5d57ab54-b34c-4b98-8905-0c087850affa",
             "name": "Geocoding API",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -434,7 +524,7 @@
             },
             "item": [
                 {
-                    "id": "c795074c-c124-4a97-9c1a-6a81bada93ed",
+                    "id": "faf82ad9-e263-484c-8f73-0d595cbbc2b3",
                     "name": "/maps/api/geocode/json",
                     "request": {
                         "name": "/maps/api/geocode/json",
@@ -506,7 +596,7 @@
                     },
                     "response": [
                         {
-                            "id": "473a583f-c8a5-48a6-87ad-20c48319b152",
+                            "id": "84c07e5b-bcda-4bcc-a746-f648fd9ef8c5",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -571,7 +661,7 @@
             "event": []
         },
         {
-            "id": "5ea95ba0-f5cd-4fe7-8e3c-9e2cb9b4bcd4",
+            "id": "33ae340c-b244-4790-8dc9-1103cd9e0d13",
             "name": "Geolocation API",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -579,7 +669,7 @@
             },
             "item": [
                 {
-                    "id": "2fa11bdb-2c65-46e0-a7c5-92a4caef88e9",
+                    "id": "b1765459-01d5-4539-8b9d-258cd0bde5ed",
                     "name": "/geolocation/v1/geolocate",
                     "request": {
                         "name": "/geolocation/v1/geolocate",
@@ -617,7 +707,7 @@
                     },
                     "response": [
                         {
-                            "id": "ddcd4b3e-d860-467b-9419-bb1a3a6bf4a4",
+                            "id": "90bc6355-f60b-478e-aefe-107a48150386",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -651,7 +741,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7be248e8-bc72-419e-ad7e-59170d10a4f1",
+                            "id": "d4c26ea6-388d-4e06-882b-8258fb8aca43",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -685,7 +775,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "55b36631-ba21-4155-b655-6f2a13df5720",
+                            "id": "a3ca8a63-96f0-4c04-98af-91533f5e8cdf",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -725,7 +815,7 @@
             "event": []
         },
         {
-            "id": "3949764c-bbcf-42e6-a577-be88f882349f",
+            "id": "c15ecb02-4282-49e0-bac2-5e5bb9aadc07",
             "name": "Roads API",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -733,7 +823,7 @@
             },
             "item": [
                 {
-                    "id": "0ac7a606-4045-4c38-a9f4-eabe73d58ded",
+                    "id": "e008fb60-5f6e-4ab5-a2bb-eb1b0be37b78",
                     "name": "/v1/snapToRoads",
                     "request": {
                         "name": "/v1/snapToRoads",
@@ -773,7 +863,7 @@
                     },
                     "response": [
                         {
-                            "id": "009cc516-fb5a-434d-9637-2c8f9246592b",
+                            "id": "c7295ba6-5ee8-41a5-9d53-30ae3ee5c0be",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -815,7 +905,7 @@
                     "event": []
                 },
                 {
-                    "id": "2107b076-cfe9-46d4-8389-310f2ad61a6f",
+                    "id": "8710ae19-e53c-4219-962c-c34553fedafb",
                     "name": "/v1/nearestRoads",
                     "request": {
                         "name": "/v1/nearestRoads",
@@ -849,7 +939,7 @@
                     },
                     "response": [
                         {
-                            "id": "be00473a-25fb-4ea9-b3f3-7cee8244fcc8",
+                            "id": "438a5b4e-427d-41aa-bc2b-8e686da45f5e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -879,12 +969,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 79704378.75863972,\n    \"longitude\": -6085398.367379516\n   },\n   \"placeId\": \"adipisicing officia\",\n   \"originalIndex\": -68984333.1056324\n  },\n  {\n   \"location\": {\n    \"latitude\": 40189294.81029469,\n    \"longitude\": 24423605.80782479\n   },\n   \"placeId\": \"ea id\",\n   \"originalIndex\": -9028528.961804882\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": -14291652.315193474,\n    \"longitude\": -29282387.023319155\n   },\n   \"placeId\": \"sit mollit veniam\",\n   \"originalIndex\": -42719658.636572346\n  },\n  {\n   \"location\": {\n    \"latitude\": -38341318.05423771,\n    \"longitude\": -34091097.36716647\n   },\n   \"placeId\": \"Lorem irure et magna\",\n   \"originalIndex\": 75143664.09739676\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d69fda00-e81e-488c-a135-c910775cf3df",
+                            "id": "e9eb7908-97b8-4160-b7f1-967dcddaffed",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -925,7 +1015,7 @@
             "event": []
         },
         {
-            "id": "e8d7e40c-b439-4a5e-9268-10a6e75e4dfd",
+            "id": "a8c0be3f-6905-42ba-b616-fdca4809acb3",
             "name": "Time Zone API",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -933,7 +1023,7 @@
             },
             "item": [
                 {
-                    "id": "2839819c-716a-4853-9c00-7f02843d1f08",
+                    "id": "bfc5638a-5ffc-4bbf-aeb0-34b5eca7ab6e",
                     "name": "/maps/api/timezone/json",
                     "request": {
                         "name": "/maps/api/timezone/json",
@@ -981,7 +1071,7 @@
                     },
                     "response": [
                         {
-                            "id": "6c5da1bf-50b3-474f-b0fa-0de16018d95e",
+                            "id": "c50d23d2-0d21-470f-b784-a12d4cd7773f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1030,7 +1120,7 @@
             "event": []
         },
         {
-            "id": "3c036930-43fc-4087-abcb-bb2e6a813154",
+            "id": "ac4590c5-bfb6-422a-948f-6c6da08bc294",
             "name": "Street View API",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -1038,7 +1128,7 @@
             },
             "item": [
                 {
-                    "id": "a9010112-18c6-4e12-ba2d-b61f6535f556",
+                    "id": "4a9669b0-84aa-4e0a-b71a-f8c6df548338",
                     "name": "/maps/api/streetview",
                     "request": {
                         "name": "/maps/api/streetview",
@@ -1127,7 +1217,7 @@
                     },
                     "response": [
                         {
-                            "id": "dd793b85-7fcb-43d8-bf14-237c57ba5506",
+                            "id": "019c45db-2d30-46be-a8e5-b51802949bd2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1193,7 +1283,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "reprehenderit voluptate eu",
+                            "body": "ut deserunt ea magna",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1201,7 +1291,7 @@
                     "event": []
                 },
                 {
-                    "id": "88b7f74f-ab84-4b1c-813a-b6f01cd122f3",
+                    "id": "18cb54c6-4769-43bd-b2f0-5b44d83d2dea",
                     "name": "/maps/api/streetview/metadata",
                     "request": {
                         "name": "/maps/api/streetview/metadata",
@@ -1285,7 +1375,7 @@
                     },
                     "response": [
                         {
-                            "id": "c75aae2c-84dc-406e-9e0d-6d67f22c6df1",
+                            "id": "8af575ca-c825-4279-9ea6-2386b290e2aa",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1358,7 +1448,7 @@
             "event": []
         },
         {
-            "id": "7b725a68-c153-47ef-9936-b13382efd9d8",
+            "id": "ae579ca3-05c1-42c9-95f3-f0548bad45a9",
             "name": "Places API",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -1366,7 +1456,7 @@
             },
             "item": [
                 {
-                    "id": "b879c096-abcc-4e7b-8fbf-cad723450ad9",
+                    "id": "37e9291d-a291-45b5-840b-baffdd719a8d",
                     "name": "/maps/api/place/details/json",
                     "request": {
                         "name": "/maps/api/place/details/json",
@@ -1427,7 +1517,7 @@
                     },
                     "response": [
                         {
-                            "id": "cf8b8d02-9528-474d-980c-f2f1ce766dd0",
+                            "id": "6e8da97f-0e5f-4b14-ba32-b927b4cc0937",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1481,7 +1571,7 @@
                     "event": []
                 },
                 {
-                    "id": "adf1ae0f-1293-413e-806a-36f7aaa79093",
+                    "id": "d8ab3a04-3c0f-4033-aa43-f8e83c5cae4c",
                     "name": "/maps/api/place/findplacefromtext/json",
                     "request": {
                         "name": "/maps/api/place/findplacefromtext/json",
@@ -1542,7 +1632,7 @@
                     },
                     "response": [
                         {
-                            "id": "849123f5-756e-4bb3-bf99-0e8b06fbc2e7",
+                            "id": "5f73b229-404a-4eb4-8a93-065b01c53d95",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1596,7 +1686,7 @@
                     "event": []
                 },
                 {
-                    "id": "c5e653bc-ac86-44fa-b9ca-68ce93227e9a",
+                    "id": "5c0f3a95-b7b1-48cf-aa90-a4a2119a7854",
                     "name": "/maps/api/place/nearbysearch/json",
                     "request": {
                         "name": "/maps/api/place/nearbysearch/json",
@@ -1699,7 +1789,7 @@
                     },
                     "response": [
                         {
-                            "id": "0dc676b5-10b2-4016-a242-0c5b8d8b9760",
+                            "id": "f42257c7-61a1-44de-b8e6-ac1aa94deb4c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1781,7 +1871,7 @@
                     "event": []
                 },
                 {
-                    "id": "a7fd59a8-c646-40c5-aea8-8b0795eae7a2",
+                    "id": "95b0e5e5-ccc3-4a7a-896f-9393a45070f7",
                     "name": "/maps/api/place/textsearch/json",
                     "request": {
                         "name": "/maps/api/place/textsearch/json",
@@ -1872,7 +1962,7 @@
                     },
                     "response": [
                         {
-                            "id": "8e098e5c-0930-454c-a202-1a5a9a1e36bc",
+                            "id": "56953b1e-d6a1-4e90-a933-13a76279ec12",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1946,7 +2036,7 @@
                     "event": []
                 },
                 {
-                    "id": "ca66a661-5bd3-41b6-8ac0-843da4d2de0d",
+                    "id": "4ca3dddf-b1e7-4b43-beda-5a33d5414bea",
                     "name": "/maps/api/place/photo",
                     "request": {
                         "name": "/maps/api/place/photo",
@@ -1994,7 +2084,7 @@
                     },
                     "response": [
                         {
-                            "id": "aaf80676-4e11-4fbd-b981-451e35de94fb",
+                            "id": "6e526d81-9871-40a3-bdc6-81cdb1b37b28",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2032,7 +2122,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "reprehenderit voluptate eu",
+                            "body": "ut deserunt ea magna",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2040,7 +2130,7 @@
                     "event": []
                 },
                 {
-                    "id": "ea0ebf18-d997-4ee3-84ef-805edb0c048d",
+                    "id": "d6492daf-1a65-46d9-892c-e0731a252854",
                     "name": "/maps/api/place/queryautocomplete/json",
                     "request": {
                         "name": "/maps/api/place/queryautocomplete/json",
@@ -2101,7 +2191,7 @@
                     },
                     "response": [
                         {
-                            "id": "dede15f3-32de-4228-92f9-e5b06a3bceaf",
+                            "id": "dadf29e1-9861-426d-992e-7399bcc2deb1",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2155,7 +2245,7 @@
                     "event": []
                 },
                 {
-                    "id": "87331e3e-0ca6-4d6e-86fe-2f7823c31d57",
+                    "id": "b8ab1134-654e-4838-a0e9-c47da5362a9d",
                     "name": "/maps/api/place/autocomplete/json",
                     "request": {
                         "name": "/maps/api/place/autocomplete/json",
@@ -2246,7 +2336,7 @@
                     },
                     "response": [
                         {
-                            "id": "8060d2e7-b7dd-4192-b777-d69afc2e47e2",
+                            "id": "2cab633d-9c94-4d85-88b5-92707f341329",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2349,7 +2439,7 @@
         ]
     },
     "info": {
-        "_postman_id": "798614ce-f377-437a-aa50-46047de93eb7",
+        "_postman_id": "76d04317-4cd6-4b29-84b6-22ba8ab30005",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

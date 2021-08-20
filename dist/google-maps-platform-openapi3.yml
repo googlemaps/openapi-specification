@@ -125,6 +125,59 @@ paths:
         - Directions API
       description: 'The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.'
       parameters:
+        - name: arrival_time
+          description: |
+            Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
+          in: query
+          schema:
+            type: number
+        - name: departure_time
+          description: |
+            Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
+            * For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
+            * For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
+
+            <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
+            <div class="note">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>
+          in: query
+          schema:
+            type: number
+        - name: alternatives
+          description: |
+            If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
+          in: query
+          schema:
+            type: boolean
+        - name: avoid
+          description: |
+            Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
+            * `tolls` indicates that the calculated route should avoid toll roads/bridges.
+            * `highways` indicates that the calculated route should avoid highways.
+            * `ferries` indicates that the calculated route should avoid ferries.
+            * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+
+            It's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: 
+
+            ```
+            avoid=tolls|highways|ferries.
+            ```
+          in: query
+          examples:
+            single:
+              value: highways
+              summary: A example using a single restriction.
+            multiple:
+              value: tolls|highways|ferries
+              summary: A example using a multiple restrictions.
+          schema:
+            type: string
+        - name: destination
+          description: 'The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.'
+          required: true
+          in: query
+          example: 'Victoria, BC'
+          schema:
+            type: string
         - name: origin
           description: |
             The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
@@ -164,14 +217,6 @@ paths:
               value: 'heading=90:37.773279,-122.468780'
           schema:
             type: string
-        - name: destination
-          description: 'The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.'
-          required: true
-          in: query
-          example: 'Victoria, BC'
-          schema:
-            type: string
-        - $ref: '#/components/parameters/mode'
         - name: waypoints
           description: |
             <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>
@@ -245,70 +290,9 @@ paths:
               value: 'side_of_road:via:enc:lexeF{~wsZejrPjtye@:'
           schema:
             type: string
-        - name: alternatives
-          description: |
-            If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
-          in: query
-          schema:
-            type: boolean
-        - name: avoid
-          description: |
-            Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
-            * `tolls` indicates that the calculated route should avoid toll roads/bridges.
-            * `highways` indicates that the calculated route should avoid highways.
-            * `ferries` indicates that the calculated route should avoid ferries.
-            * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
-
-            It's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: 
-
-            ```
-            avoid=tolls|highways|ferries.
-            ```
-          in: query
-          examples:
-            single:
-              value: highways
-              summary: A example using a single restriction.
-            multiple:
-              value: tolls|highways|ferries
-              summary: A example using a multiple restrictions.
-          schema:
-            type: string
-        - name: units
-          description: |
-            Specifies the unit system to use when displaying results.
-
-            Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
-
-            For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
-
-            * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
-            * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
-
-            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
-          example: metric
-          in: query
-          schema:
-            type: string
-            enum:
-              - imperial
-              - metric
-        - name: arrival_time
-          description: |
-            Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
-          in: query
-          schema:
-            type: number
-        - name: departure_time
-          description: |
-            Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
-            * For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
-            * For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
-
-            <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
-          in: query
-          schema:
-            type: number
+        - $ref: '#/components/parameters/language'
+        - $ref: '#/components/parameters/mode'
+        - $ref: '#/components/parameters/region'
         - name: traffic_model
           description: |
             Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The `traffic_model` parameter may only be specified for driving directions where the request includes a `departure_time`. The available values for this parameter are:
@@ -349,8 +333,25 @@ paths:
             enum:
               - less_walking
               - fewer_transfers
-        - $ref: '#/components/parameters/language'
-        - $ref: '#/components/parameters/region'
+        - name: units
+          description: |
+            Specifies the unit system to use when displaying results.
+
+            Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
+
+            For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
+
+            * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
+            * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
+
+            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
+          example: metric
+          in: query
+          schema:
+            type: string
+            enum:
+              - imperial
+              - metric
       responses:
         '200':
           description: 200 OK
@@ -16258,6 +16259,35 @@ paths:
         - Distance Matrix API
       description: 'The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.'
       parameters:
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/0'
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/1'
+        - name: avoid
+          description: |
+            Distances may be calculated that adhere to certain restrictions. Restrictions are indicated by use of the avoid parameter, and an argument to that parameter indicating the restriction to avoid. The following restrictions are supported:
+
+            * `tolls` indicates that the calculated route should avoid toll roads/bridges.
+            * `highways` indicates that the calculated route should avoid highways.
+            * `ferries` indicates that the calculated route should avoid ferries.
+            * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+
+            <div class="note">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>
+          in: query
+          example: highways
+          schema:
+            type: string
+        - name: destinations
+          description: One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
+          required: true
+          in: query
+          style: pipeDelimited
+          explode: false
+          example:
+            - San Francisco
+            - Victoria BC
+          schema:
+            type: array
+            items:
+              type: string
         - name: origins
           description: |
             The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:
@@ -16285,20 +16315,13 @@ paths:
             type: array
             items:
               type: string
-        - name: destinations
-          description: One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
-          required: true
-          in: query
-          style: pipeDelimited
-          explode: false
-          example:
-            - San Francisco
-            - Victoria BC
-          schema:
-            type: array
-            items:
-              type: string
+        - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/mode'
+        - $ref: '#/components/parameters/region'
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/10'
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/11'
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/12'
+        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/13'
       responses:
         '200':
           description: 200 OK

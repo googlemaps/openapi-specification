@@ -18,20 +18,20 @@ tags:
   - Directions API
 description: The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.
 parameters:
-  - "$ref": "../parameters/directions/origin.yml"
-  - "$ref": "../parameters/directions/destination.yml"
-  - "$ref": "../parameters/mode.yml"
-  - "$ref": "../parameters/directions/waypoints.yml"
+  - "$ref": "../parameters/arrival_time.yml"
+  - "$ref": "../parameters/departure_time.yml"
   - "$ref": "../parameters/directions/alternatives.yml"
   - "$ref": "../parameters/directions/avoid.yml"
-  - "$ref": "../parameters/directions/units.yml"
-  - "$ref": "../parameters/directions/arrival_time.yml"
-  - "$ref": "../parameters/directions/departure_time.yml"
-  - "$ref": "../parameters/directions/traffic_model.yml"
-  - "$ref": "../parameters/directions/transit_mode.yml"
-  - "$ref": "../parameters/directions/transit_routing_preference.yml"
+  - "$ref": "../parameters/directions/destination.yml"
+  - "$ref": "../parameters/directions/origin.yml"
+  - "$ref": "../parameters/directions/waypoints.yml"
   - "$ref": "../parameters/language.yml"
+  - "$ref": "../parameters/mode.yml"
   - "$ref": "../parameters/region.yml"
+  - "$ref": "../parameters/traffic_model.yml"
+  - "$ref": "../parameters/transit_mode.yml"
+  - "$ref": "../parameters/transit_routing_preference.yml"
+  - "$ref": "../parameters/units.yml"
 responses:
   "200":
     description: 200 OK

@@ -189,7 +189,7 @@
     "waypoint_order": [ 3, 2, 0, 1 ]
     ```
 
-    <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. [Learn more about how Google Maps Platform products are billed.](https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced)</div>
+    <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_directions_heading_response] -->
+<DirectionsResponse>
+ <status>OK</status>
+ <route>
+  <summary>Fulton St</summary>
+  <leg>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7732756</lat>
+     <lng>-122.4687797</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7734882</lat>
+     <lng>-122.4649822</lng>
+    </end_location>
+    <polyline>
+     <points>_rpeFztnjVAm@AoAAS?UAg@E}AAy@?UAs@Ai@ASA{@?QAWCu@AOCm@Em@</points>
+    </polyline>
+    <duration>
+     <value>43</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Head &lt;b&gt;east&lt;/b&gt; on &lt;b&gt;Fulton St&lt;/b&gt; toward &lt;b&gt;10th Ave&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>335</value>
+     <text>0.2 mi</text>
+    </distance>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>37.7734882</lat>
+     <lng>-122.4649822</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7732432</lat>
+     <lng>-122.4695019</lng>
+    </end_location>
+    <polyline>
+     <points>ispeFb}mjVDl@Bl@@NBt@@V?P@z@@R@h@@r@?T@x@D|A@f@?T@R@nADnB@r@@X</points>
+    </polyline>
+    <duration>
+     <value>102</value>
+     <text>2 mins</text>
+    </duration>
+    <html_instructions>Make a &lt;b&gt;U-turn&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>398</value>
+     <text>0.2 mi</text>
+    </distance>
+    <maneuver>uturn-left</maneuver>
+   </step>
+   <duration>
+    <value>145</value>
+    <text>2 mins</text>
+   </duration>
+   <distance>
+    <value>733</value>
+    <text>0.5 mi</text>
+   </distance>
+   <start_location>
+    <lat>37.7732756</lat>
+    <lng>-122.4687797</lng>
+   </start_location>
+   <end_location>
+    <lat>37.7732432</lat>
+    <lng>-122.4695019</lng>
+   </end_location>
+   <start_address>3426 Fulton St, San Francisco, CA 94118, USA</start_address>
+   <end_address>3520 Fulton St, San Francisco, CA 94118, USA</end_address>
+  </leg>
+  <copyrights>Map data ©2021</copyrights>
+  <overview_polyline>
+   <points>_rpeFztnjVO}JGmDGoBI{AHzAFnBPbKLvH</points>
+  </overview_polyline>
+  <bounds>
+   <southwest>
+    <lat>37.7732432</lat>
+    <lng>-122.4695019</lng>
+   </southwest>
+   <northeast>
+    <lat>37.7734882</lat>
+    <lng>-122.4649822</lng>
+   </northeast>
+  </bounds>
+ </route>
+ <geocoded_waypoint>
+  <geocoder_status>OK</geocoder_status>
+  <type>street_address</type>
+  <place_id>ChIJRWyE0kGHhYAROx-xmgEoUSQ</place_id>
+ </geocoded_waypoint>
+ <geocoded_waypoint>
+  <geocoder_status>OK</geocoder_status>
+  <type>premise</type>
+  <place_id>ChIJ_U5fgGqHhYARqCzgWrR3R2w</place_id>
+ </geocoded_waypoint>
+</DirectionsResponse>
+<!-- [END maps_http_directions_heading_response] -->

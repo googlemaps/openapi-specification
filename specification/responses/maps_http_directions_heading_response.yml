@@ -1,0 +1,90 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_directions_heading_response]
+{
+  "geocoded_waypoints":
+    [
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJRWyE0kGHhYAROx-xmgEoUSQ",
+        "types": ["street_address"],
+      },
+      {
+        "geocoder_status": "OK",
+        "place_id": "ChIJ_U5fgGqHhYARqCzgWrR3R2w",
+        "types": ["premise"],
+      },
+    ],
+  "routes":
+    [
+      {
+        "bounds":
+          {
+            "northeast": { "lat": 37.7734882, "lng": -122.4649822 },
+            "southwest": { "lat": 37.7732432, "lng": -122.4695019 },
+          },
+        "copyrights": "Map data ©2021",
+        "legs":
+          [
+            {
+              "distance": { "text": "0.5 mi", "value": 733 },
+              "duration": { "text": "2 mins", "value": 145 },
+              "end_address": "3520 Fulton St, San Francisco, CA 94118, USA",
+              "end_location": { "lat": 37.7732432, "lng": -122.4695019 },
+              "start_address": "3426 Fulton St, San Francisco, CA 94118, USA",
+              "start_location": { "lat": 37.7732756, "lng": -122.4687797 },
+              "steps":
+                [
+                  {
+                    "distance": { "text": "0.2 mi", "value": 335 },
+                    "duration": { "text": "1 min", "value": 43 },
+                    "end_location": { "lat": 37.7734882, "lng": -122.4649822 },
+                    "html_instructions": "Head <b>east</b> on <b>Fulton St</b> toward <b>10th Ave</b>",
+                    "polyline":
+                      {
+                        "points": "_rpeFztnjVAm@AoAAS?UAg@E}AAy@?UAs@Ai@ASA{@?QAWCu@AOCm@Em@",
+                      },
+                    "start_location":
+                      { "lat": 37.7732756, "lng": -122.4687797 },
+                    "travel_mode": "DRIVING",
+                  },
+                  {
+                    "distance": { "text": "0.2 mi", "value": 398 },
+                    "duration": { "text": "2 mins", "value": 102 },
+                    "end_location": { "lat": 37.7732432, "lng": -122.4695019 },
+                    "html_instructions": "Make a <b>U-turn</b>",
+                    "maneuver": "uturn-left",
+                    "polyline":
+                      {
+                        "points": "ispeFb}mjVDl@Bl@@NBt@@V?P@z@@R@h@@r@?T@x@D|A@f@?T@R@nADnB@r@@X",
+                      },
+                    "start_location":
+                      { "lat": 37.7734882, "lng": -122.4649822 },
+                    "travel_mode": "DRIVING",
+                  },
+                ],
+              "traffic_speed_entry": [],
+              "via_waypoint": [],
+            },
+          ],
+        "overview_polyline": { "points": "_rpeFztnjVO}JGmDGoBI{AHzAFnBPbKLvH" },
+        "summary": "Fulton St",
+        "warnings": [],
+        "waypoint_order": [],
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_directions_heading_response]

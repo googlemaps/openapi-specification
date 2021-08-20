@@ -1075,6 +1075,50 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_directions_sydney_perth_waypoints_mixed",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "Sydney, AU",
+          },
+          {
+            key: "destination",
+            value: "Perth, AU",
+          },
+          {
+            key: "waypoints",
+            value: "side_of_road:via:enc:lexeF{~wsZejrPjtye@:",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_heading",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "heading=90:37.773279,-122.468780",
+          },
+          {
+            key: "destination",
+            value: "37.773245,-122.469502",
+          },         
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_directions_sydney_perth_waypoints_polyline",
     request: new Request({
       url: new Url({

@@ -28124,7 +28124,7 @@
       "Fare": {
         "type": "object",
         "title": "Fare",
-        "description": "The total fare for the route.",
+        "description": "The total fare for the route.\n\n```\n{\n  \"currency\" : \"USD\",\n  \"value\" : 6,\n  \"text\" : \"$6.00\"\n}\n```\n",
         "required": [
           "currency",
           "value",

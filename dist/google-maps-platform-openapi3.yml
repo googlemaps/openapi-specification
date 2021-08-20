@@ -19746,7 +19746,16 @@ components:
     Fare:
       type: object
       title: Fare
-      description: The total fare for the route.
+      description: |
+        The total fare for the route.
+
+        ```
+        {
+          "currency" : "USD",
+          "value" : 6,
+          "text" : "$6.00"
+        }
+        ```
       required:
         - currency
         - value

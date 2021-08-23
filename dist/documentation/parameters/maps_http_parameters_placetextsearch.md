@@ -42,6 +42,17 @@
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 
+    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+    -   Autocomplete: 50,000 meters
+    -   Nearby Search:
+        -   with `keyword` or `name`: 50,000 meters
+        -   without `keyword` or `name`
+            -   `rankby=prominence` (default): 50,000 meters
+            -   `rankby=distance`: A few kilometers depending on density of area
+    -   Query Autocomplete: 50,000 meters
+    -   Text Search: 50,000 meters
+
 -   <h3 id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").

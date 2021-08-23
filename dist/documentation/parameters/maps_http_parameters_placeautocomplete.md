@@ -40,6 +40,17 @@
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 
+    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+    -   Autocomplete: 50,000 meters
+    -   Nearby Search:
+        -   with `keyword` or `name`: 50,000 meters
+        -   without `keyword` or `name`
+            -   `rankby=prominence` (default): 50,000 meters
+            -   `rankby=distance`: A few kilometers depending on density of area
+    -   Query Autocomplete: 50,000 meters
+    -   Text Search: 50,000 meters
+
 -   <h3 id="sessiontoken">sessiontoken</h3>
 
     A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.

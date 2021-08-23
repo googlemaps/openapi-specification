@@ -30,6 +30,17 @@
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 
+    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+    -   Autocomplete: 50,000 meters
+    -   Nearby Search:
+        -   with `keyword` or `name`: 50,000 meters
+        -   without `keyword` or `name`
+            -   `rankby=prominence` (default): 50,000 meters
+            -   `rankby=distance`: A few kilometers depending on density of area
+    -   Query Autocomplete: 50,000 meters
+    -   Text Search: 50,000 meters
+
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-parameters-placequeryautocomplete" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

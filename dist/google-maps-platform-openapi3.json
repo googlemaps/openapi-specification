@@ -25989,7 +25989,7 @@
           },
           {
             "name": "radius",
-            "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n",
+            "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * with `keyword` or `name`: 50,000 meters\n  * without `keyword` or `name`\n    * `rankby=prominence` (default): 50,000 meters\n    * `rankby=distance`: A few kilometers depending on density of area\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n",
             "schema": {
               "type": "number"
             },

@@ -104,6 +104,31 @@
       instructs the Places service to <em>prefer</em> showing results within
       that circle; results outside of the defined area may still be displayed.
     </p>
+    <p>
+      The radius will automatically be clamped to a maximum value depending on
+      the type of search and other parameters.
+    </p>
+    <ul>
+      <li>Autocomplete: 50,000 meters</li>
+      <li>
+        Nearby Search:
+        <ul>
+          <li>with <code>keyword</code> or <code>name</code>: 50,000 meters</li>
+          <li>
+            without <code>keyword</code> or <code>name</code>
+            <ul>
+              <li><code>rankby=prominence</code> (default): 50,000 meters</li>
+              <li>
+                <code>rankby=distance</code>: A few kilometers depending on
+                density of area
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Query Autocomplete: 50,000 meters</li>
+      <li>Text Search: 50,000 meters</li>
+    </ul>
   </li>
   <li>
     <h3 id="region">region</h3>

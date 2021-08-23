@@ -18115,7 +18115,9 @@ paths:
       parameters:
         - name: location
           description: |
-            The point around which to retrieve place information. This must be specified as `latitude,longitude`.
+            The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
+
+            <div class="note">The `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`. Using quotes around the query may also influence the weight given to the `location` and `radius`.</div>
           schema:
             type: string
           in: query
@@ -19317,7 +19319,15 @@ paths:
             type: string
           in: query
           example: '40,-110'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/0'
+        - name: location
+          description: |
+            The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
+
+            <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
+          schema:
+            type: string
+          in: query
+          example: '40,-110'
         - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6'
         - name: types
           description: |

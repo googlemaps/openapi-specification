@@ -29,7 +29,7 @@ parameters:
     required: true
     in: query
   - "$ref": "../../parameters/places/offset.yml"
-  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/location-weighted.yml"
   - "$ref": "../../parameters/places/radius.yml"
   - "$ref": "../../parameters/language.yml"
 responses:

@@ -17257,7 +17257,6 @@ paths:
         - Places API
       description: A Nearby Search lets you search for places within a specified area. You can refine your search request by supplying keywords or specifying the type of place you are searching for.
       parameters:
-        - $ref: '#/paths/~1maps~1api~1place~1details~1json/get/parameters/1'
         - name: keyword
           description: |
             A term to be matched against all content that Google has indexed for this place, including but not limited to name, type, and address, as well as customer reviews and other third-party content.

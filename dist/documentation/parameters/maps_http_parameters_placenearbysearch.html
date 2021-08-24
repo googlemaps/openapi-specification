@@ -13,62 +13,6 @@
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 id="fields">fields</h3>
-    <p>
-      Use the fields parameter to specify a comma-separated list of place data
-      types to return. For example:
-      <code>fields=formatted_address,name,geometry</code>. Use a forward slash
-      when specifying compound values. For example:
-      <code>opening_hours/open_now</code>.
-    </p>
-    <p>
-      Fields are divided into three billing categories: Basic, Contact, and
-      Atmosphere. Basic fields are billed at base rate, and incur no additional
-      charges. Contact and Atmosphere fields are billed at a higher rate. See
-      the
-      <a href="https://cloud.google.com/maps-platform/pricing/sheet/"
-        >pricing sheet</a
-      >
-      for more information. Attributions, <code>html_attributions</code>, are
-      always returned with every call, regardless of whether the field has been
-      requested.
-    </p>
-    <p><strong>Basic</strong></p>
-    <p>
-      The Basic category includes the following fields:
-      <code>address_component</code>, <code>adr_address</code>,
-      <code>business_status</code>, <code>formatted_address</code>,
-      <code>geometry</code>, <code>icon</code>, <code>icon_mask_base_uri</code>,
-      <code>icon_background_color</code>, <code>name</code>,
-      <code>permanently_closed</code> (<a
-        href="https://developers.google.com/maps/deprecations"
-        >deprecated</a
-      >), <code>photo</code>, <code>place_id</code>, <code>plus_code</code>,
-      <code>type</code>, <code>url</code>, <code>utc_offset</code>,
-      <code>vicinity</code>.
-    </p>
-    <p><strong>Contact</strong></p>
-    <p>
-      The Contact category includes the following fields:
-      <code>formatted_phone_number</code>,
-      <code>international_phone_number</code>, <code>opening_hours</code>,
-      <code>website</code>
-    </p>
-    <p><strong>Atmosphere</strong></p>
-    <p>
-      The Atmosphere category includes the following fields:
-      <code>price_level</code>, <code>rating</code>, <code>review</code>,
-      <code>user_ratings_total</code>.
-    </p>
-    <div class="caution">
-      Caution: Place Search requests and Place Details requests do not return
-      the same fields. Place Search requests return a subset of the fields that
-      are returned by Place Details requests. If the field you want is not
-      returned by Place Search, you can use Place Search to get a place_id, then
-      use that Place ID to make a Place Details request.
-    </div>
-  </li>
-  <li>
     <h3 id="keyword">keyword</h3>
     <p>
       A term to be matched against all content that Google has indexed for this

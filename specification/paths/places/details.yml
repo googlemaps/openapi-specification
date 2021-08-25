@@ -35,5 +35,8 @@ responses:
           fields:
             value:
               $ref: "../../responses/maps_http_places_details_fields_response.yml"          
+          no_plus_compound_code:
+            value:
+              $ref: "../../responses/maps_http_places_details_no_plus_compound_code_response.yml"          
         schema:
           $ref: "../../schemas/PlacesDetailsResponse.yml"

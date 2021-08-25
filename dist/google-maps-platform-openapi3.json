@@ -24473,6 +24473,17 @@
                       },
                       "status": "OK"
                     }
+                  },
+                  "no_plus_compound_code": {
+                    "value": {
+                      "html_attributions": [],
+                      "result": {
+                        "plus_code": {
+                          "global_code": "5Q7Q8G54+64"
+                        }
+                      },
+                      "status": "OK"
+                    }
                   }
                 },
                 "schema": {
@@ -28546,7 +28557,6 @@
           "description": "Site describing Plus Codes."
         },
         "required": [
-          "compound_code",
           "global_code"
         ],
         "properties": {

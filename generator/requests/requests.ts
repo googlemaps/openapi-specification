@@ -1289,6 +1289,26 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_places_details_no_plus_compound_code",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/details/json",
+        query: [
+          {
+            key: "place_id",
+            value: "GhIJQWDl0CKxOMARUrgehSvwYEA",
+          },
+          {
+            key: "fields",
+            value: "plus_code",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_places_findplacefromtext_mca",
     request: new Request({
       url: new Url({

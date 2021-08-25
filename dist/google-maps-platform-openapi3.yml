@@ -17107,6 +17107,13 @@ paths:
                       name: Google Workplace 6
                       rating: 4.1
                     status: OK
+                no_plus_compound_code:
+                  value:
+                    html_attributions: []
+                    result:
+                      plus_code:
+                        global_code: 5Q7Q8G54+64
+                    status: OK
               schema:
                 $ref: '#/components/schemas/PlacesDetailsResponse'
   /maps/api/place/findplacefromtext/json:
@@ -20066,7 +20073,6 @@ components:
         url: 'https://plus.codes/'
         description: Site describing Plus Codes.
       required:
-        - compound_code
         - global_code
       properties:
         compound_code:

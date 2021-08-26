@@ -11,6 +11,7 @@ ts_library(
         "@npm//@types/node",
         "@npm//@types/yargs",
         "@npm//axios",
+        "@npm//slugify",
         "@npm//tar-stream",
         "@npm//yargs",
     ],
@@ -30,4 +31,16 @@ nodejs_binary(
         "--file",
         "$(location //:google-maps-platform-postman.json)",
     ],
+)
+
+nodejs_binary(
+    name = "_stable_id_bin",
+    data = [
+        ":_lib",
+    ],
+    entry_point = ":stable_id.ts",
+    templated_args = [
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
+    visibility = ["//visibility:public"],
 )

@@ -22,6 +22,8 @@
 
     The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
+    <div class="note">The `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`. Using quotes around the query may also influence the weight given to the `location` and `radius`.</div>
+
 -   <h3 id="maxprice">maxprice</h3>
 
     Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.

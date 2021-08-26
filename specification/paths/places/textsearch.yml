@@ -23,7 +23,7 @@ description: |
 
   The search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.
 parameters:
-  - "$ref": "../../parameters/places/location.yml"
+  - "$ref": "../../parameters/places/location-weighted.yml"
   - "$ref": "../../parameters/places/maxprice.yml"
   - "$ref": "../../parameters/places/minprice.yml"
   - "$ref": "../../parameters/places/opennow.yml"

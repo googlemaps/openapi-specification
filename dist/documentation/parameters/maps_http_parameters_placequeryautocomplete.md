@@ -22,6 +22,8 @@
 
     The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
+    <div class="note">The `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`. Using quotes around the query may also influence the weight given to the `location` and `radius`.</div>
+
 -   <h3 id="offset">offset</h3>
 
     The position, in the input term, of the last character that the service uses to match predictions. For example, if the input is `Google` and the offset is 3, the service will match on `Goo`. The string determined by the offset is matched against the first word in the input term only. For example, if the input term is `Google abc` and the offset is 3, the service will attempt to match against `Goo abc`. If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.

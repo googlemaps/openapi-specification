@@ -1480,6 +1480,30 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_places_textsearch_weighted",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/textsearch/json",
+        query: [
+          {
+            key: "query",
+            value: encodeURIComponent("Market in Barcelona"),
+          },
+          {
+            key: "location",
+            value: "42.3675294,-71.186966",
+          },
+          {
+            key: "radius",
+            value: "10000",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_places_textsearch_pagetoken",
     request: new Request({
       url: new Url({
@@ -1705,6 +1729,30 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "input",
             value: encodeURIComponent("pizza near Sydney"),
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_places_queryautocomplete_location_weighted",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/place/autocomplete/json",
+        query: [
+          {
+            key: "input",
+            value: encodeURIComponent("Market in Barcelona"),
+          },
+          {
+            key: "location",
+            value: "42.3675294,-71.186966",
+          },
+          {
+            key: "radius",
+            value: "10000",
           },
         ],
       }),

@@ -1,0 +1,870 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# [START maps_http_places_textsearch_weighted_response]
+{
+  "html_attributions": [],
+  "next_page_token": "Aap_uECQ-TEIGc8sffYR95D-C-Zwhdnh-fvGV0bKR-HqyxNHjWyGHcxQ0B9vKkAsket4LyNXaI12yg5_JHkOzp5_d4B0jK-Zq2RMbaVOp0vyZjBQmN-P0g24IX4C7NRONRDwBj7tSfCMZvW1a9LGRLRjp2Jw13OKl2XAKF_qw50fpBh6YMUGQMvY1XEn6T8pBDuplfTQ-sMkXhtbNQ4t9ojc-SYmo2nlzP1MqyDiVQhJWgHPfMbrAaJ713TsTnb0Y3nn2t5DFZKWg1f22o5xsWy9vg0z2NBgvPJufX74PcLpWV7nlI79j25SNz3wys0Jmkkqok-X7xLdNUeWLWSmCYlTXh6nz3V0CLS_49Yy9PR1_m8aTc0UrKUeLmya2HVtAeKl_4n5b1uBfAwXEns-dBw21GKrW2xkC0b3R6e8r-h5gQ0f9pgVnyFxlAXDY79YC4b1dbyUYTMT0Q",
+  "results":
+    [
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "La Rambla, 91, 08001 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3817399, "lng": 2.1715853 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38326927989272, "lng": 2.173334729892722 },
+                "southwest":
+                  { "lat": 41.38056962010727, "lng": 2.170635070107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercado de La Boqueria",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2368,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/103681426170230179897">Vanessa Ong</a>',
+                ],
+              "photo_reference": "Aap_uEDSziTCyagbpKgseZNu5NPDK7ExoUqNg2D2O9n9WKBGFc3L2zpPR4h4cocEsu3y-r6-awHjb_BwUFgSem51le3zF_kW4I5HmMx8Bpf5OdBeZHLuE0PnfGwXHpSNM1I3b-yLT1LOjkJXc2Nmt3zO4rxrwck93a1k82Fn_YaP9k1xa-8H",
+              "width": 4208,
+            },
+          ],
+        "place_id": "ChIJAVoetfeipBIR1a1z3FTGCoY",
+        "plus_code":
+          {
+            "compound_code": "95JC+MJ Barcelona, Spain",
+            "global_code": "8FH495JC+MJ",
+          },
+        "rating": 4.5,
+        "reference": "ChIJAVoetfeipBIR1a1z3FTGCoY",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 105800,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Av. de Francesc Cambó, 16, 08003 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.38636109999999, "lng": 2.1781566 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38754192989272, "lng": 2.179971579892722 },
+                "southwest":
+                  { "lat": 41.38484227010728, "lng": 2.177271920107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Santa Caterina Market",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2048,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/114121208897474952777">Scott Rutledge</a>',
+                ],
+              "photo_reference": "Aap_uEDrzhXZjxvdCZGBevhdPVeBphO4_nh62kjjPLs7FuPJpX5SejtbkzQL7Qs5laDhzCP1OXcQQXTlFtLy1xK-AM_JE_e5mfUbcpTLG77cca6T9X_r0p4fsTc6GEeQFOOrbsxsHkjtU5136ti8boYHJPaLCYNNEJwZdPowrJZCw1HoRHTX",
+              "width": 1150,
+            },
+          ],
+        "place_id": "ChIJyTz8wvuipBIRfmWLwQzVTc8",
+        "plus_code":
+          {
+            "compound_code": "95PH+G7 Barcelona, Spain",
+            "global_code": "8FH495PH+G7",
+          },
+        "rating": 4.4,
+        "reference": "ChIJyTz8wvuipBIRfmWLwQzVTc8",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 13222,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer del Comte d'Urgell, 1, 08011 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3786226, "lng": 2.1620469 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.37986982989273, "lng": 2.163616129892722 },
+                "southwest":
+                  { "lat": 41.37717017010728, "lng": 2.160916470107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de Sant Antoni",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2048,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/103720960137999948245">Вова Кузнецов</a>',
+                ],
+              "photo_reference": "Aap_uEDFvs5lBtz-YbtvMYgXPyS2jdzRt3PyGHVUqkEgkERxCGjCaRPR-6lNIDov2tbrGCsU9wG8J_jsOFsysqIC-MjjsA1lKmZcXdqlTqI0Kd-zsFeR795yIwW1VM-7fTezcGzSAqYhBZ7eJBNLLR5Hrcv4bwnDzLC6bIv-POtnNQ0G6sa9",
+              "width": 1536,
+            },
+          ],
+        "place_id": "ChIJVU1DOWCipBIRSA8HlZk90Zk",
+        "plus_code":
+          {
+            "compound_code": "95H6+CR Barcelona, Spain",
+            "global_code": "8FH495H6+CR",
+          },
+        "rating": 4.4,
+        "reference": "ChIJVU1DOWCipBIRSA8HlZk90Zk",
+        "types": ["food", "point_of_interest", "store", "establishment"],
+        "user_ratings_total": 25940,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Pl. del Poeta Boscà, 1, 08003 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3802617, "lng": 2.1890177 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38154242989272, "lng": 2.190370879892722 },
+                "southwest":
+                  { "lat": 41.37884277010728, "lng": 2.187671220107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Barceloneta Market",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2048,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/115450579120355571874">Thorsten Hennig</a>',
+                ],
+              "photo_reference": "Aap_uECFYTAfPkCliVsQiVSdI3e8iE760gqDHLnxvopJmb3DBxVCdaFSP9lfDF8ttzUIW4SPwj3jKhP3NxlrUmgM6hJS-70RHwf_7F5IZU3giwJ3hBP9vT6WYgh3DxxXsQ7eyjMhooYG0UKxTS8FF7Lh0ykjaCWcYUwd8_-quCmTGmvbr_Vp",
+              "width": 1536,
+            },
+          ],
+        "place_id": "ChIJAaUaAKqjpBIRXRe69JoXgUg",
+        "plus_code":
+          {
+            "compound_code": "95JQ+4J Barcelona, Spain",
+            "global_code": "8FH495JQ+4J",
+          },
+        "rating": 4.1,
+        "reference": "ChIJAaUaAKqjpBIRXRe69JoXgUg",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 1543,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de Mallorca, 133, 08036 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3878514, "lng": 2.1543196 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38913977989273, "lng": 2.155846229892722 },
+                "southwest":
+                  { "lat": 41.38644012010728, "lng": 2.153146570107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat del Ninot",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3464,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/108608809554812603139">Itzel Olivares Varela</a>',
+                ],
+              "photo_reference": "Aap_uED1-qKdDSZyE3UhJG8Ov7yEm5tRAFEIS20DnS5eJRjfR1IJCoY3NuWfQTmMfJwW8TOnmp9oFoMcKZSV5s6pY_ByhfkATRxENTmaPiDrBWYGvUa8hm5L-74L_0R9HoYEtws3XPrQBLj2PiTwRkvkRAMybI1ZtpZGm2wjWWATk_1WHSU",
+              "width": 4618,
+            },
+          ],
+        "place_id": "ChIJH8JkmoWipBIRBLR_rpCvNjw",
+        "plus_code":
+          {
+            "compound_code": "95Q3+4P Barcelona, Spain",
+            "global_code": "8FH495Q3+4P",
+          },
+        "rating": 4.4,
+        "reference": "ChIJH8JkmoWipBIRBLR_rpCvNjw",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 8562,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Plaça de la Llibertat, 27, 08012 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3999054, "lng": 2.1533983 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40118292989272, "lng": 2.154647029892722 },
+                "southwest":
+                  { "lat": 41.39848327010728, "lng": 2.151947370107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de la Llibertat",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3968,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106249707798139509909">JOSE Cp</a>',
+                ],
+              "photo_reference": "Aap_uEAEo87LYcMRAlza799a_4AIpC7bmDwsvOLXoJl27skWTUaU9ZF3pdmwxd19TqY36YAhG3HZTH53_ymScB5iABiIDB8ZRgu13t86cv3Neg6kSIc_tKlfROTbPJcQeBMu3MPlBVm9TvnMEVID8UEU9jpC-ewheN3zMrcXwqDOihkmHxaA",
+              "width": 2976,
+            },
+          ],
+        "place_id": "ChIJHUSgFZiipBIRcZHltQEFyuw",
+        "plus_code":
+          {
+            "compound_code": "95X3+X9 Barcelona, Spain",
+            "global_code": "8FH495X3+X9",
+          },
+        "rating": 4.3,
+        "reference": "ChIJHUSgFZiipBIRcZHltQEFyuw",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 1570,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Rambla dels Estudis, 113, 08002 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3839704, "lng": 2.1707507 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38534022989273, "lng": 2.172182229892722 },
+                "southwest":
+                  { "lat": 41.38264057010728, "lng": 2.169482570107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shoppingcart_pinlet",
+        "name": "Carrefour Market",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106121730098637202902">Tanja</a>',
+                ],
+              "photo_reference": "Aap_uEA9-LU97EgqGOPjcD1JKrGKSo8kWnlpDEgerlAUh2KMc6UARCXcc-wPC0ytoCxGeNndX4AEln3V5DiXTSZHYvfAwSbQ7OrYwLtp67kGaMCIHaRk5WU6dux4PwrO5bX3l8qiCdP339lgKlIXgdBC2DVytnpUuw_vGGTVTV2Tf7fNXejP",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJl2lK7faipBIRFTxO401DV08",
+        "plus_code":
+          {
+            "compound_code": "95MC+H8 Barcelona, Spain",
+            "global_code": "8FH495MC+H8",
+          },
+        "rating": 4.1,
+        "reference": "ChIJl2lK7faipBIRFTxO401DV08",
+        "types":
+          [
+            "supermarket",
+            "grocery_or_supermarket",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment",
+          ],
+        "user_ratings_total": 8677,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer dels Pellaires, 30, Nave E01, 08019 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4046317, "lng": 2.2104687 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40602092989272, "lng": 2.211744279892722 },
+                "southwest":
+                  { "lat": 41.40332127010728, "lng": 2.209044620107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "PALO MARKET FEST",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1800,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/100634179909525490613">pablo de la fuente</a>',
+                ],
+              "photo_reference": "Aap_uEB6v83WUy9ag2IaJtlRsoqQV4QWGioAZ4nb1x5PqBDljhuXGum6xaYLWIsKDKDn8zkIid50fKTtnNOfzVypJy34sbXTX11EK_babCvG1xMSrYuRyEhNJ5Yc-i4dKEuJe9TyVmlePb5oa4U-VbN6md_4l0xYBGIqJp_jdETK5JC6GjjQ",
+              "width": 4000,
+            },
+          ],
+        "place_id": "ChIJ4Q30ixCjpBIRcQcA6Er3Wb8",
+        "plus_code":
+          {
+            "compound_code": "C636+V5 Barcelona, Spain",
+            "global_code": "8FH4C636+V5",
+          },
+        "rating": 4.2,
+        "reference": "ChIJ4Q30ixCjpBIRcQcA6Er3Wb8",
+        "types": ["point_of_interest", "store", "establishment"],
+        "user_ratings_total": 369,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Av. de la Catedral, 08002 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3849974, "lng": 2.1758607 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38628062989272, "lng": 2.177480379892722 },
+                "southwest":
+                  { "lat": 41.38358097010727, "lng": 2.174780720107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat Gòtic",
+        "photos":
+          [
+            {
+              "height": 4032,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106426080253169707224">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEDB7z2Fgj0G-xqKL7_pmGXYNBhVsBh0U3O6acRZkF8MHsKdy_6GxPZXNVC0gOk_VUlhyTgrVgMy-h26kboopp1Amg7RS3WA50uCPcVSYEuuKA7ppKZGcF9QcvQ5h-cRqV4uykD_Q89uIISHfGaEB6ssfno37aOj7sTlKm48r83ycLl4",
+              "width": 2268,
+            },
+          ],
+        "place_id": "ChIJQ64IkfmipBIRNYEqBYYtiUY",
+        "plus_code":
+          {
+            "compound_code": "95MG+X8 Barcelona, Spain",
+            "global_code": "8FH495MG+X8",
+          },
+        "rating": 4.4,
+        "reference": "ChIJQ64IkfmipBIRNYEqBYYtiUY",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 399,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de los Castillejos, 158, 08013 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4016927, "lng": 2.1864442 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40309817989272, "lng": 2.187764979892722 },
+                "southwest":
+                  { "lat": 41.40039852010727, "lng": 2.185065320107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Market dels Encants",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2976,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/109066941411872310296">M Pintó</a>',
+                ],
+              "photo_reference": "Aap_uEDF047lumwSMWj92A-pzXgLcQVOMfqHX4GQqVVRDWruJ8OlxaYdIcCgEvsrgMo56pjhzduttZ-beBv4mHo9D3cENew-AJTBWx6111TgoVu122uOy82eF85e2Q6vNsjMKpbngkhfhcrEuE_EEUCFPrGUztCrEX_O0fLu-s0k1QNgDzxV",
+              "width": 3968,
+            },
+          ],
+        "place_id": "ChIJS2cqwCCjpBIR2NFDbUTa19U",
+        "plus_code":
+          {
+            "compound_code": "C52P+MH Barcelona, Spain",
+            "global_code": "8FH4C52P+MH",
+          },
+        "rating": 4.1,
+        "reference": "ChIJS2cqwCCjpBIR2NFDbUTa19U",
+        "types":
+          ["tourist_attraction", "point_of_interest", "store", "establishment"],
+        "user_ratings_total": 15638,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de Sant Jordi, 6, 08028 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3747026, "lng": 2.1333875 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.37601072989272, "lng": 2.134533579892722 },
+                "southwest":
+                  { "lat": 41.37331107010728, "lng": 2.131833920107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de Sants",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1836,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/114161037804514140494">Yvon S</a>',
+                ],
+              "photo_reference": "Aap_uED-kClTAJR3A4lRXq8W5Iw51Th-GKJhqMHg6SMk-W5kdINDTjNylM3USqRcT0GdgoMRPrge-nFmrf5l4Zowur8uwFBcVq0zTjdE9RZxihHo0arkGF9B4Fibc7ngneXmf53YsLRd_C5isz_UuFEy8omyHLRlvrB6JnLkKWTCs9vc8s6m",
+              "width": 3264,
+            },
+          ],
+        "place_id": "ChIJs6E4Eo-YpBIRLUDtfcSKtQM",
+        "plus_code":
+          {
+            "compound_code": "94FM+V9 Barcelona, Spain",
+            "global_code": "8FH494FM+V9",
+          },
+        "rating": 4.4,
+        "reference": "ChIJs6E4Eo-YpBIRLUDtfcSKtQM",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 5715,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de Santaló, 65, 08021 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3966833, "lng": 2.1437231 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.39785127989272, "lng": 2.144805029892722 },
+                "southwest":
+                  { "lat": 41.39515162010728, "lng": 2.142105370107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de Galvany",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1536,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106154028468977447529">Baltasar Vila-Masana Portabella</a>',
+                ],
+              "photo_reference": "Aap_uEBv8ljNmxdsSmRL95MSRL5TF8QYDsOw3VF_sweYGP1IMFDL9dSTyq4lU0GO9TN4nu-g8UnxFEW0Q42DUFL-avRhkLIe2edtP7pva1dTN8CFh7LWCbZ415Ut2Je_eB67ssz3s2ukmq1kIQJFdKkFkbGjCpXCQkvyS162rvKetaOYbfTZ",
+              "width": 2560,
+            },
+          ],
+        "place_id": "ChIJKewH23WYpBIRBBB6Wp4sHTA",
+        "plus_code":
+          {
+            "compound_code": "94WV+MF Barcelona, Spain",
+            "global_code": "8FH494WV+MF",
+          },
+        "rating": 4.3,
+        "reference": "ChIJKewH23WYpBIRBBB6Wp4sHTA",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 1181,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "El Fort Pienc, 08013 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4011659, "lng": 2.186113 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40263047989272, "lng": 2.187309329892722 },
+                "southwest":
+                  { "lat": 41.39993082010727, "lng": 2.184609670107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat Barcelona",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 3024,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/115110725187414789699">Irene Oliva</a>',
+                ],
+              "photo_reference": "Aap_uEC44_cf10s8YgBmSTAjx8gy-GFQd09a8S721CEX9OfwOI8R6p3DdWDdhNk1Wu_H_BfvvuMeX6pwG_ETfQ3yHDcddCo72qcDkH2tLfxFNPXdXaPWF2udjH383uie083oIcAtPJAjFhLOlrMDWe5eVS_Zv1bAPeoTH3KWZNW7GqBIMBwd",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJr5y0OiCjpBIRPj8GbZicG0Y",
+        "plus_code":
+          {
+            "compound_code": "C52P+FC Barcelona, Spain",
+            "global_code": "8FH4C52P+FC",
+          },
+        "rating": 4.2,
+        "reference": "ChIJr5y0OiCjpBIRPj8GbZicG0Y",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 333,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer Ferran Turné, 08027 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4246359, "lng": 2.1928738 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.42604567989272, "lng": 2.194251529892723 },
+                "southwest":
+                  { "lat": 41.42334602010727, "lng": 2.191551870107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Barcelona Vintage Market",
+        "photos":
+          [
+            {
+              "height": 3264,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/100353597154717320268">Angel Randos</a>',
+                ],
+              "photo_reference": "Aap_uEBEayJkObV-vwfJkxQmi7qeCjV0rzOTzcjmLnEhP1icY7Y2JrHaFXtmbTWKpKf-zUO1N83PHKvj6WzI4Jk6bJqKd6tEUz81arDK9kRF2ZsJdG4vDTMQRwzZ_9ChsJVf4qdnhHMRPP6sS6G1Z0oFS9uGdKuwpVm2vC9KbO6B4HvIwac",
+              "width": 2448,
+            },
+          ],
+        "place_id": "ChIJpfthPdK8pBIRR9uykrFGFqI",
+        "plus_code":
+          {
+            "compound_code": "C5FV+V4 Barcelona, Spain",
+            "global_code": "8FH4C5FV+V4",
+          },
+        "rating": 3.4,
+        "reference": "ChIJpfthPdK8pBIRR9uykrFGFqI",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 33,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Pg. de Sant Joan, 168, 08037 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4031061, "lng": 2.1647804 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40450112989272, "lng": 2.166188079892722 },
+                "southwest":
+                  { "lat": 41.40180147010728, "lng": 2.163488420107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de l'Abaceria",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2268,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/117487691159844880005">Ingrid Gonzalez</a>',
+                ],
+              "photo_reference": "Aap_uECr8ZJf3s2F7uf_LnOb3peXB81k_T5Zaa5y7owdWMEtOkiJDSqldpbHo7LnKBaXVLpxCzuV7vIHdhsCUwxigPbNEwSRojXHRklxB3PsE3h4aqE3UgV5nUUaU2JZ0E6Qqe8deJ7Cm7lslSkgdP7KxfVpfDbNWQnom4z7HvFg3oUi4Mmh",
+              "width": 4032,
+            },
+          ],
+        "place_id": "ChIJ3e5s572ipBIRjsSkSClbQVA",
+        "plus_code":
+          {
+            "compound_code": "C537+6W Barcelona, Spain",
+            "global_code": "8FH4C537+6W",
+          },
+        "rating": 4.2,
+        "reference": "ChIJ3e5s572ipBIRjsSkSClbQVA",
+        "types": ["tourist_attraction", "point_of_interest", "establishment"],
+        "user_ratings_total": 2592,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Passeig de la Reina Elisenda de Montcada, 8, 08034 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3999162, "lng": 2.1206655 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40123917989272, "lng": 2.121863779892722 },
+                "southwest":
+                  { "lat": 41.39853952010728, "lng": 2.119164120107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Sarrià Market",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 2560,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/106450293708134799338">Araceli Martinez Prades</a>',
+                ],
+              "photo_reference": "Aap_uEBCBXOrK-YtIPMnxW72tqakFEOrw1ghpM4OT6mceIhKtmSnfYoz-pVmrxS48-U90X_6IZr-xKnLY_rEpJsHo4eMySRj4llqQLxTkO3rqEVkl_JtzUXdodg-VPCnNkUYM_VKSrYdtgspEeC3BYlmNfNQvBh59u2IamD1yPYd9tO09KCm",
+              "width": 1440,
+            },
+          ],
+        "place_id": "ChIJyciZzUCYpBIRg22fNAxJ7TQ",
+        "plus_code":
+          {
+            "compound_code": "94XC+X7 Barcelona, Spain",
+            "global_code": "8FH494XC+X7",
+          },
+        "rating": 4.1,
+        "reference": "ChIJyciZzUCYpBIRg22fNAxJ7TQ",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 531,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de Padilla, 255, 08013 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4056129, "lng": 2.1769755 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.40698677989273, "lng": 2.178458229892722 },
+                "southwest":
+                  { "lat": 41.40428712010728, "lng": 2.175758570107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Mercat de la Sagrada Família",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 4000,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/110068396504595594832">yanet espinosa</a>',
+                ],
+              "photo_reference": "Aap_uEBRrd3nNR7UOowH5Tl5P7IZZXQTTUfAAeRwv-MAUoIorc75Q4CyUKeukuNJoc6ZGjDsa8dSNUQxSbhJ1AVPXRzmlAcySNzEuTDKycwu5ySWNkyADIOOy6TTvfdhJyErX78-Ie7U_vbOZ2iJnJXYro9IqAbcDuSEpZcMSOZhAFtqo719",
+              "width": 3000,
+            },
+          ],
+        "place_id": "ChIJ4bdhf9yipBIRusovmPmeYNg",
+        "plus_code":
+          {
+            "compound_code": "C54G+6Q Barcelona, Spain",
+            "global_code": "8FH4C54G+6Q",
+          },
+        "rating": 4.1,
+        "reference": "ChIJ4bdhf9yipBIRusovmPmeYNg",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 1500,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Plaça de Blanquerna, 08001 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.37527619999999, "lng": 2.1748507 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.37665042989271, "lng": 2.175964729892722 },
+                "southwest":
+                  { "lat": 41.37395077010727, "lng": 2.173265070107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "El Flea",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 1366,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/112776146345854087502">A Google User</a>',
+                ],
+              "photo_reference": "Aap_uEB_5fsRXp-dKgtCvTNSePio-nZumjJm9BKkbJLZ-s0YQ6KEtPW3KZWxOq_YChRqb43oIAaqwUGaFV8EQN_3xPDE5HcSKw1XCxgSgBSvt4QwfjwIahAmUvr6wyS_02vAZAo0gx-l36EpEZYEXVTz725HurEaajhUSofq8cnc3LgqZMvS",
+              "width": 2048,
+            },
+          ],
+        "place_id": "ChIJoXiSjmmjpBIRAZ9MVlGZY5Y",
+        "plus_code":
+          {
+            "compound_code": "95GF+4W Barcelona, Spain",
+            "global_code": "8FH495GF+4W",
+          },
+        "rating": 4.5,
+        "reference": "ChIJoXiSjmmjpBIRAZ9MVlGZY5Y",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 4,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Passeig de Joan de Borbó, 20, 14, 08039 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.3798107, "lng": 2.1877263 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.38118027989272, "lng": 2.189167329892722 },
+                "southwest":
+                  { "lat": 41.37848062010728, "lng": 2.186467670107278 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Sunday Farmers Market",
+        "photos":
+          [
+            {
+              "height": 903,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/102826404734160186072">Marc Peiris</a>',
+                ],
+              "photo_reference": "Aap_uECRff26rT31l67eCF2JbTtBJXrVLXnE-mjxnIdhPyWbSSxxHMwlfcl5WV1d6FnffjwHBSgTJE7TRDvZ9NACaI1EznLYidpOXGdxSq2rYj7k6g3LuANn5gd_-94swyqlcmbFlej4fvRWrJQ0T7-7paTHnZ9HFU1oD3QMBJ_4YmX1si-M",
+              "width": 1600,
+            },
+          ],
+        "place_id": "ChIJpTuGGAqjpBIRBs29X3WOBII",
+        "plus_code":
+          {
+            "compound_code": "95HQ+W3 Barcelona, Spain",
+            "global_code": "8FH495HQ+W3",
+          },
+        "rating": 5,
+        "reference": "ChIJpTuGGAqjpBIRBs29X3WOBII",
+        "types": ["point_of_interest", "establishment"],
+        "user_ratings_total": 3,
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Carrer de Pau Alsina, 70, 08024 Barcelona, Spain",
+        "geometry":
+          {
+            "location": { "lat": 41.4095374, "lng": 2.1631891 },
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 41.41088722989273, "lng": 2.164538929892722 },
+                "southwest":
+                  { "lat": 41.40818757010729, "lng": 2.161839270107277 },
+              },
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+        "icon_background_color": "#4B96F3",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+        "name": "Market",
+        "opening_hours": { "open_now": false },
+        "photos":
+          [
+            {
+              "height": 4000,
+              "html_attributions":
+                [
+                  '<a href="https://maps.google.com/maps/contrib/112917599802813326725">Heok Meng Kok</a>',
+                ],
+              "photo_reference": "Aap_uEAXCX-THQW8p-udJ3xWxDJmYIPddrQgO8CjcwO61o1pfpIB0yQm4ggmRhZpFdOhgvfntAaipRkr5LihYI4j2QUucb3s3A-cDMX2aAzAlXsMyXM5N4diayKHUd7-8gTIMv-tyON6Q-OG_PvOH_syWDx9UZ8B942JPM3PwuG3iCbmcDwc",
+              "width": 6000,
+            },
+          ],
+        "place_id": "ChIJX_IkQbiipBIR-ug12HgRvGY",
+        "plus_code":
+          {
+            "compound_code": "C557+R7 Barcelona, Spain",
+            "global_code": "8FH4C557+R7",
+          },
+        "rating": 1,
+        "reference": "ChIJX_IkQbiipBIR-ug12HgRvGY",
+        "types": ["store", "point_of_interest", "establishment"],
+        "user_ratings_total": 1,
+      },
+    ],
+  "status": "OK",
+}
+# [END maps_http_places_textsearch_weighted_response]

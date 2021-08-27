@@ -102,7 +102,7 @@ nodejs_test(
 
 openapi2postmanv2(
     name = "postman",
-    outs = ["google-maps-platform-postman-raw.json"],
+    outs = ["google-maps-platform-postman.json"],
     args = [
         "--spec",
         "$(location //:google-maps-platform-openapi3.json)",
@@ -115,13 +115,5 @@ openapi2postmanv2(
         "//:google-maps-platform-openapi3.json",
         "//:postman-config.json",
     ],
-)
-
-genrule(
-    name = "postman-stable",
-    srcs = [":google-maps-platform-postman-raw.json"],
-    outs = ["google-maps-platform-postman.json"],
-    cmd = "$(location //generator/postman:_stable_id_bin) --file $(location :google-maps-platform-postman-raw.json) --output $@",
-    tools = ["//generator/postman:_stable_id_bin"],
     visibility = ["//visibility:public"],
 )

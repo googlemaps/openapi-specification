@@ -20690,6 +20690,18 @@
             }
           },
           {
+            "name": "bounds",
+            "description": "The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.",
+            "example": [
+              "35,-100",
+              "40,-110"
+            ],
+            "schema": {
+              "$ref": "#/components/schemas/LatLngArrayString"
+            },
+            "in": "query"
+          },
+          {
             "name": "components",
             "style": "pipeDelimited",
             "explode": false,
@@ -20719,16 +20731,32 @@
             }
           },
           {
-            "name": "bounds",
-            "description": "The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.",
-            "example": [
-              "35,-100",
-              "40,-110"
-            ],
+            "name": "location_type",
+            "description": "A filter of one or more location types, separated by a pipe (`|`). If the parameter contains multiple location types, the API returns all addresses that match any of the types. A note about processing: The `location_type` parameter does not restrict the search to the specified location type(s). Rather, the `location_type` acts as a post-search filter: the API fetches all results for the specified latlng, then discards those results that do not match the specified location type(s). The following values are supported:\n* `APPROXIMATE` returns only the addresses that are characterized as approximate.\n* `GEOMETRIC_CENTER` returns only geometric centers of a location such as a polyline (for example, a street) or polygon (region).\n* `RANGE_INTERPOLATED` returns only the addresses that reflect an approximation (usually on a road) interpolated between two precise points (such as intersections). An interpolated range generally indicates that rooftop geocodes are unavailable for a street address.\n* `ROOFTOP` returns only the addresses for which Google has location information accurate down to street address precision.",
+            "style": "pipeDelimited",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/LatLngArrayString"
+              "items": {
+                "type": "string",
+                "enum": [
+                  "APPROXIMATE",
+                  "GEOMETRIC_CENTER",
+                  "RANGE_INTERPOLATED",
+                  "ROOFTOP"
+                ]
+              },
+              "type": "array"
             },
             "in": "query"
+          },
+          {
+            "name": "place_id",
+            "description": "A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).\nFor more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).\n",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "example": "ChIJN1t_tDeuEmsRUsoyG83frY4"
           },
           {
             "name": "result_type",
@@ -20760,25 +20788,6 @@
                   "street_address",
                   "sublocality",
                   "subpremise"
-                ]
-              },
-              "type": "array"
-            },
-            "in": "query"
-          },
-          {
-            "name": "location_type",
-            "description": "A filter of one or more location types, separated by a pipe (`|`). If the parameter contains multiple location types, the API returns all addresses that match any of the types. A note about processing: The `location_type` parameter does not restrict the search to the specified location type(s). Rather, the `location_type` acts as a post-search filter: the API fetches all results for the specified latlng, then discards those results that do not match the specified location type(s). The following values are supported:\n* `APPROXIMATE` returns only the addresses that are characterized as approximate.\n* `GEOMETRIC_CENTER` returns only geometric centers of a location such as a polyline (for example, a street) or polygon (region).\n* `RANGE_INTERPOLATED` returns only the addresses that reflect an approximation (usually on a road) interpolated between two precise points (such as intersections). An interpolated range generally indicates that rooftop geocodes are unavailable for a street address.\n* `ROOFTOP` returns only the addresses for which Google has location information accurate down to street address precision.",
-            "style": "pipeDelimited",
-            "explode": false,
-            "schema": {
-              "items": {
-                "type": "string",
-                "enum": [
-                  "APPROXIMATE",
-                  "GEOMETRIC_CENTER",
-                  "RANGE_INTERPOLATED",
-                  "ROOFTOP"
                 ]
               },
               "type": "array"

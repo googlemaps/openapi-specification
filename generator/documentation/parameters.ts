@@ -152,7 +152,7 @@ const main = async (argv: any) => {
       const geocode = {
         regionTag: "maps_http_parameters_geocode",
         parameters: parameters.filter(
-          (p) => !["latlng", "result_type", "location_type"].includes(p.name)
+          (p) => !["latlng", "result_type", "location_type", "place_id"].includes(p.name)
         ),
         options: { 
           requiredHeading: "Geocoding required parameters",
@@ -163,7 +163,7 @@ const main = async (argv: any) => {
       const reverseGeocode = {
         regionTag: "maps_http_parameters_geocode_reverse",
         parameters: parameters
-          .filter((p) => !["components", "address", "bounds"].includes(p.name))
+          .filter((p) => !["components", "address", "bounds", "place_id"].includes(p.name))
           .map((p) => {
             if (p.name === "latlng") {
               p.required = true;
@@ -176,7 +176,22 @@ const main = async (argv: any) => {
          },
       };
 
-      [geocode, reverseGeocode].forEach(async ({ regionTag, parameters, options }) => {
+      const placeId = {
+        regionTag: "maps_http_parameters_geocode_place_id",
+        parameters: parameters
+          .filter((p) => ["language", "region", "place_id"].includes(p.name)).map((p) => {
+            if (p.name === "place_id") {
+              p.required = true;
+            }
+            return p;
+          }),
+        options: { 
+          requiredHeading: "Place ID geocoding required parameters",
+          optionalHeading: "Place ID geocoding optional parameters",
+         },
+      };
+
+      [geocode, reverseGeocode, placeId].forEach(async ({ regionTag, parameters, options }) => {
         const nodes = build(key, regionTag, parameters, options);
         await write(nodes, regionTag);
       });

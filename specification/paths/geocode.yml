@@ -27,12 +27,14 @@ description: |-
 
   To see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned `location_type` field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.
 parameters:
+  # See generator/documentation/parameters.ts for handling of geocoding vs reverse geocoding vs place_id
   - "$ref": "../parameters/geocode/address.yml"
+  - "$ref": "../parameters/geocode/bounds.yml"
   - "$ref": "../parameters/geocode/components.yml"
   - "$ref": "../parameters/geocode/latlng.yml"
-  - "$ref": "../parameters/geocode/bounds.yml"
-  - "$ref": "../parameters/geocode/result_type.yml"
   - "$ref": "../parameters/geocode/location_type.yml"
+  - "$ref": "../parameters/geocode/place_id.yml"
+  - "$ref": "../parameters/geocode/result_type.yml"
   - "$ref": "../parameters/language.yml"
   - "$ref": "../parameters/region.yml"
 responses:

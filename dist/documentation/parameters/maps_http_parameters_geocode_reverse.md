@@ -1,12 +1,12 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_geocode_reverse] -->
-<h2 id="reverse-geocoding-required-parameters">Reverse Geocoding required parameters</h2>
+<h2 id="reverse-geocoding-required-parameters">Reverse geocoding required parameters</h2>
 
 -   <h3 id="latlng">latlng</h3>
 
     The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
 
-<h2 id="reverse-geocoding-optional-parameters">Reverse Geocoding optional parameters</h2>
+<h2 id="reverse-geocoding-optional-parameters">Reverse geocoding optional parameters</h2>
 
 -   <h3 id="language">language</h3>
 

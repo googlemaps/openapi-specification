@@ -171,8 +171,8 @@ const main = async (argv: any) => {
             return p;
           }),
         options: { 
-          requiredHeading: "Reverse Geocoding required parameters",
-          optionalHeading: "Reverse Geocoding optional parameters",
+          requiredHeading: "Reverse geocoding required parameters",
+          optionalHeading: "Reverse geocoding optional parameters",
          },
       };
 

@@ -14,8 +14,7 @@
 
 name: bounds
 description: |-
-  The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
-  in: query
+  The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.
 example: 
   - "35,-100"
   - "40,-110"

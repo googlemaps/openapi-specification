@@ -31,6 +31,8 @@ parameters:
   - "$ref": "../parameters/geocode/components.yml"
   - "$ref": "../parameters/geocode/latlng.yml"
   - "$ref": "../parameters/geocode/bounds.yml"
+  - "$ref": "../parameters/geocode/result_type.yml"
+  - "$ref": "../parameters/geocode/location_type.yml"
   - "$ref": "../parameters/language.yml"
   - "$ref": "../parameters/region.yml"
 responses:

@@ -24,6 +24,8 @@ description: |-
   Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
   - global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
   - compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
+
+  <div class="note">Note: One of `address` or `components` is required.</div>
 in: query  
 schema:
   type: string

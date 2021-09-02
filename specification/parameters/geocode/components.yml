@@ -27,6 +27,8 @@ description: |-
   A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
 
   https://developers.google.com/maps/documentation/geocoding/overview#component-filtering
+
+  <div class="note">Note: One of `address` or `components` is required.</div>
 in: query
 schema:
   items:

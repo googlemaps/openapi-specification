@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_geocode] -->
 
 
-<h2 id="optional-parameters">Optional parameters</h2>
+<h2 id="geocoding-optional-parameters">Geocoding optional parameters</h2>
 
 -   <h3 id="address">address</h3>
 
@@ -17,16 +17,19 @@
     -   global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
     -   compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
 
+    <div class="note">Note: One of `address` or `components` is required.</div>
+
 -   <h3 id="bounds">bounds</h3>
 
-    The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.  - name: locations
-    in: query
+    The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.
 
 -   <h3 id="components">components</h3>
 
     A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.
 
 
+
+    <div class="note">Note: One of `address` or `components` is required.</div>
 
 -   <h3 id="language">language</h3>
 
@@ -37,10 +40,6 @@
     -   The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
-
--   <h3 id="latlng">latlng</h3>
-
-    The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
 
 -   <h3 id="region">region</h3>
 

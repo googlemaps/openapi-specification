@@ -64,6 +64,9 @@ responses:
           place_id_response:
             value:
               $ref: ../responses/maps_http_geocode_place_id_response.yml
+          postcode_localities:
+            value:
+              $ref: ../responses/maps_http_geocode_postcode_localities_response.yml
           response:
             value:
               $ref: ../responses/maps_http_geocode_response.yml

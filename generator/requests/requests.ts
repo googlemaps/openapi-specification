@@ -101,6 +101,22 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_geocode_postcode_localities",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/geocode/json",
+        query: [
+          {
+            key: "components",
+            value: "postal_code:94608",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_geocode_reverse",
     request: new Request({
       url: new Url({
@@ -200,7 +216,7 @@ export const REQUESTS: SnippetRequest[] = [
         protocol: "https",
         host: "maps.googleapis.com",
         path: "/maps/api/geocode/json",
-        query: [{ key: "components", value: "locality:santa+cruz|country:ES" }],
+        query: [{ key: "components", value: "locality:santa cruz|country:ES" }],
       }),
     }),
   },

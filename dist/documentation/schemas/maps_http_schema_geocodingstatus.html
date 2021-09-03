@@ -15,7 +15,7 @@
   <li>
     <code>ZERO_RESULTS</code> indicates that the geocode was successful but
     returned no results. This may occur if the geocoder was passed a
-    non-existent address.
+    non-existent address or a <code>latlng</code> in a remote location.
   </li>
   <li>
     <code>OVER_DAILY_LIMIT</code> indicates any of the following:
@@ -33,7 +33,7 @@
   <li><code>REQUEST_DENIED</code> indicates that your request was denied.</li>
   <li>
     <code>INVALID_REQUEST</code> generally indicates that the query (address,
-    components or latlng) is missing.
+    components, or latlng) is missing.
   </li>
   <li>
     <code>UNKNOWN_ERROR</code> indicates that the request could not be processed

@@ -13,7 +13,7 @@
   <tbody>
     <tr>
       <td align="left"><code>address_components</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#AddressComponent" title="AddressComponent"
           >AddressComponent</a
@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <td align="left"><code>formatted_address</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -44,7 +44,7 @@
     </tr>
     <tr>
       <td align="left"><code>geometry</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         <a href="#GeocodingGeometry" title="GeocodingGeometry"
           >GeocodingGeometry</a
@@ -60,7 +60,7 @@
     </tr>
     <tr>
       <td align="left"><code>place_id</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -78,7 +78,7 @@
     </tr>
     <tr>
       <td align="left"><code>plus_code</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td><a href="#PlusCode" title="PlusCode">PlusCode</a></td>
       <td>
         See <a href="#PlusCode" title="PlusCode">PlusCode</a> for more
@@ -87,7 +87,7 @@
     </tr>
     <tr>
       <td align="left"><code>types</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
         <div class="nonref-property-description">
@@ -98,6 +98,41 @@
             of "Chicago" returns "locality" which indicates that "Chicago" is a
             city, and also returns "political" which indicates it is a political
             entity.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>partial_match</code></td>
+      <td>optional</td>
+      <td>boolean</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Indicates that the geocoder did not return an exact match for the
+            original request, though it was able to match part of the requested
+            address. You may wish to examine the original request for
+            misspellings and/or an incomplete address.
+          </p>
+          <p>
+            Partial matches most often occur for street addresses that do not
+            exist within the locality you pass in the request. Partial matches
+            may also be returned when a request matches two or more locations in
+            the same locality.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>postcode_localities</code></td>
+      <td>optional</td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            An array denoting all the localities contained in a postal code.
+            This is only present when the result is a postal code that contains
+            multiple localities.
           </p>
         </div>
       </td>

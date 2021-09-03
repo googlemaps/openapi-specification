@@ -14,6 +14,13 @@
 
 type: object
 title: GeocodingResult
+required:
+  - address_components
+  - formatted_address
+  - geometry
+  - place_id
+  - plus_code
+  - types
 properties:
   address_components:
     description: An array containing the separate components applicable to this address.
@@ -35,3 +42,14 @@ properties:
     type: array
     items:
       type: string
+  postcode_localities:
+    description: An array denoting all the localities contained in a postal code. This is only present when the result is a postal code that contains multiple localities.
+    type: array
+    items:
+      type: string
+  partial_match:
+    description: |
+      Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. You may wish to examine the original request for misspellings and/or an incomplete address.
+
+      Partial matches most often occur for street addresses that do not exist within the locality you pass in the request. Partial matches may also be returned when a request matches two or more locations in the same locality.
+    type: boolean

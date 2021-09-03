@@ -20683,7 +20683,7 @@
           {
             "name": "address",
             "example": "1600 Amphitheatre+Parkway, Mountain View, CA",
-            "description": "The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):\n\n```\naddress=24%20Sussex%20Drive%20Ottawa%20ON\n```\n\nFormat plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):\n- global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).\n- compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n\n<div class=\"note\">Note: One of `address` or `components` is required.</div>",
+            "description": "The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):\n\n```\naddress=24%20Sussex%20Drive%20Ottawa%20ON\n```\n\nFormat plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):\n- global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).\n- compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).\n\n<div class=\"note\">Note: At least one of `address` or `components` is required.</div>",
             "in": "query",
             "schema": {
               "type": "string"
@@ -20712,7 +20712,7 @@
               "administrative_area_level_1:CA",
               "country:US"
             ],
-            "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a component:value pair, and fully restricts the results from the geocoder.\n\nhttps://developers.google.com/maps/documentation/geocoding/overview#component-filtering\n\n<div class=\"note\">Note: One of `address` or `components` is required.</div>",
+            "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.\n\nThe components that can be filtered include:\n\n* `postal_code` matches `postal_code` and `postal_code_prefix`.\n* `country` matches a country name or a two letter ISO 3166-1 country code. The API follows the ISO standard for defining countries, and the filtering works best when using the corresponding ISO code of the country.\n  <aside class=\"note\"><strong>Note</strong>: If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend. You can find code information at Wikipedia: List of ISO 3166 country codes or the ISO Online Browsing Platform.</aside>\n  \nThe following components may be used to influence results, but will not be enforced:\n\n* `route` matches the long or short name of a route.\n* `locality` matches against `locality` and `sublocality` types.\n* `administrative_area` matches all the `administrative_area` levels.\n  \nNotes about component filtering:\n\n* Do not repeat these component filters in requests, or the API will return `INVALID_REQUEST`: \n  * `country`\n  * `postal_code`\n  * `route`\n* If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.\n* Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).\n* For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.\n\n<div class=\"note\">Note: At least one of `address` or `components` is required.</div>",
             "in": "query",
             "schema": {
               "items": {
@@ -21145,6 +21145,92 @@
                           },
                           "types": [
                             "street_address"
+                          ]
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  },
+                  "postcode_localities": {
+                    "value": {
+                      "results": [
+                        {
+                          "address_components": [
+                            {
+                              "long_name": "94608",
+                              "short_name": "94608",
+                              "types": [
+                                "postal_code"
+                              ]
+                            },
+                            {
+                              "long_name": "Oakland",
+                              "short_name": "Oakland",
+                              "types": [
+                                "locality",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "Alameda County",
+                              "short_name": "Alameda County",
+                              "types": [
+                                "administrative_area_level_2",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "California",
+                              "short_name": "CA",
+                              "types": [
+                                "administrative_area_level_1",
+                                "political"
+                              ]
+                            },
+                            {
+                              "long_name": "United States",
+                              "short_name": "US",
+                              "types": [
+                                "country",
+                                "political"
+                              ]
+                            }
+                          ],
+                          "formatted_address": "Oakland, CA 94608, USA",
+                          "geometry": {
+                            "bounds": {
+                              "northeast": {
+                                "lat": 37.850726,
+                                "lng": -122.267169
+                              },
+                              "southwest": {
+                                "lat": 37.81711689999999,
+                                "lng": -122.3202479
+                              }
+                            },
+                            "location": {
+                              "lat": 37.837959,
+                              "lng": -122.2824021
+                            },
+                            "location_type": "APPROXIMATE",
+                            "viewport": {
+                              "northeast": {
+                                "lat": 37.850726,
+                                "lng": -122.267169
+                              },
+                              "southwest": {
+                                "lat": 37.81711689999999,
+                                "lng": -122.3202479
+                              }
+                            }
+                          },
+                          "place_id": "ChIJj4VwQUJ-hYARW-kxrTBdc-g",
+                          "postcode_localities": [
+                            "Emeryville",
+                            "Oakland"
+                          ],
+                          "types": [
+                            "postal_code"
                           ]
                         }
                       ],
@@ -29202,6 +29288,14 @@
       "GeocodingResult": {
         "type": "object",
         "title": "GeocodingResult",
+        "required": [
+          "address_components",
+          "formatted_address",
+          "geometry",
+          "place_id",
+          "plus_code",
+          "types"
+        ],
         "properties": {
           "address_components": {
             "description": "An array containing the separate components applicable to this address.",
@@ -29230,6 +29324,17 @@
             "items": {
               "type": "string"
             }
+          },
+          "postcode_localities": {
+            "description": "An array denoting all the localities contained in a postal code. This is only present when the result is a postal code that contains multiple localities.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "partial_match": {
+            "description": "Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. You may wish to examine the original request for misspellings and/or an incomplete address.\n\nPartial matches most often occur for street addresses that do not exist within the locality you pass in the request. Partial matches may also be returned when a request matches two or more locations in the same locality.\n",
+            "type": "boolean"
           }
         }
       },
@@ -29255,7 +29360,7 @@
       "GeocodingStatus": {
         "type": "string",
         "title": "GeocodingStatus",
-        "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
+        "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address or a `latlng` in a remote location.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components, or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
         "enum": [
           "OK",
           "INVALID_REQUEST",

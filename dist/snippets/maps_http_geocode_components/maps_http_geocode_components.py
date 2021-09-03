@@ -1,7 +1,7 @@
 # [START maps_http_geocode_components]
 import requests
 
-url = "https://maps.googleapis.com/maps/api/geocode/json?components=locality%3Asanta%2Bcruz%7Ccountry%3AES&key=YOUR_API_KEY"
+url = "https://maps.googleapis.com/maps/api/geocode/json?components=locality%3Asanta%20cruz%7Ccountry%3AES&key=YOUR_API_KEY"
 
 payload={}
 headers = {}

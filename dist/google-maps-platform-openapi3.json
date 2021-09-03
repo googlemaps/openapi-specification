@@ -29288,6 +29288,14 @@
       "GeocodingResult": {
         "type": "object",
         "title": "GeocodingResult",
+        "required": [
+          "address_components",
+          "formatted_address",
+          "geometry",
+          "place_id",
+          "plus_code",
+          "types"
+        ],
         "properties": {
           "address_components": {
             "description": "An array containing the separate components applicable to this address.",

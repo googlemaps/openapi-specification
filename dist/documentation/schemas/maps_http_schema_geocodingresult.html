@@ -13,7 +13,7 @@
   <tbody>
     <tr>
       <td align="left"><code>address_components</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#AddressComponent" title="AddressComponent"
           >AddressComponent</a
@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <td align="left"><code>formatted_address</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
@@ -44,7 +44,7 @@
     </tr>
     <tr>
       <td align="left"><code>geometry</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         <a href="#GeocodingGeometry" title="GeocodingGeometry"
           >GeocodingGeometry</a
@@ -56,6 +56,50 @@
           >GeocodingGeometry</a
         >
         for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>place_id</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            A unique identifier that can be used with other Google APIs. For
+            example, you can use the <code>place_id</code> in a Places API
+            request to get details of a local business, such as phone number,
+            opening hours, user reviews, and more. See the
+            <a href="https://developers.google.com/places/place-id"
+              >place ID overview</a
+            >.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>plus_code</code></td>
+      <td><strong>required</strong></td>
+      <td><a href="#PlusCode" title="PlusCode">PlusCode</a></td>
+      <td>
+        See <a href="#PlusCode" title="PlusCode">PlusCode</a> for more
+        information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>types</code></td>
+      <td><strong>required</strong></td>
+      <td>Array&#x3C;string></td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            The <code>types[]</code> array indicates the type of the returned
+            result. This array contains a set of zero or more tags identifying
+            the type of feature returned in the result. For example, a geocode
+            of "Chicago" returns "locality" which indicates that "Chicago" is a
+            city, and also returns "political" which indicates it is a political
+            entity.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
@@ -80,33 +124,6 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>place_id</code></td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            A unique identifier that can be used with other Google APIs. For
-            example, you can use the <code>place_id</code> in a Places API
-            request to get details of a local business, such as phone number,
-            opening hours, user reviews, and more. See the
-            <a href="https://developers.google.com/places/place-id"
-              >place ID overview</a
-            >.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>plus_code</code></td>
-      <td>optional</td>
-      <td><a href="#PlusCode" title="PlusCode">PlusCode</a></td>
-      <td>
-        See <a href="#PlusCode" title="PlusCode">PlusCode</a> for more
-        information.
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>postcode_localities</code></td>
       <td>optional</td>
       <td>Array&#x3C;string></td>
@@ -116,23 +133,6 @@
             An array denoting all the localities contained in a postal code.
             This is only present when the result is a postal code that contains
             multiple localities.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>types</code></td>
-      <td>optional</td>
-      <td>Array&#x3C;string></td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The <code>types[]</code> array indicates the type of the returned
-            result. This array contains a set of zero or more tags identifying
-            the type of feature returned in the result. For example, a geocode
-            of "Chicago" returns "locality" which indicates that "Chicago" is a
-            city, and also returns "political" which indicates it is a political
-            entity.
           </p>
         </div>
       </td>

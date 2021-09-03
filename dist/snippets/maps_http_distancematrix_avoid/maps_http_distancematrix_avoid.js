@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Victoria BC&avoid=tolls&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Victoria%20BC&avoid=tolls&key=YOUR_API_KEY',
   headers: { }
 };
 

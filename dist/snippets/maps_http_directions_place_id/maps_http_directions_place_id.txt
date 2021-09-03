@@ -1,6 +1,6 @@
 [START maps_http_directions_place_id]
 https://maps.googleapis.com/maps/api/directions/json
-  ?origin=place_id:ChIJ685WIFYViEgRHlHvBbiD5nE
-  &destination=place_id:ChIJA01I-8YVhkgRGJb0fW4UX7Y
+  ?destination=place_id%3AChIJA01I-8YVhkgRGJb0fW4UX7Y
+  &origin=place_id%3AChIJ685WIFYViEgRHlHvBbiD5nE
   &key=YOUR_API_KEY
 [END maps_http_directions_place_id]

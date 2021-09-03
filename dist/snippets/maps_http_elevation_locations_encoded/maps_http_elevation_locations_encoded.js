@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/elevation/json?locations=enc:gfo}EtohhU&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/elevation/json?locations=enc%3Agfo%7DEtohhU&key=YOUR_API_KEY',
   headers: { }
 };
 

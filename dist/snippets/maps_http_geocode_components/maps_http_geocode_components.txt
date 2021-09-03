@@ -1,5 +1,5 @@
 [START maps_http_geocode_components]
 https://maps.googleapis.com/maps/api/geocode/json
-  ?components=locality:santa+cruz|country:ES
+  ?components=locality%3Asanta%2Bcruz%7Ccountry%3AES
   &key=YOUR_API_KEY
 [END maps_http_geocode_components]

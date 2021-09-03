@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=0,0&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=0%2C0&key=YOUR_API_KEY',
   headers: { }
 };
 

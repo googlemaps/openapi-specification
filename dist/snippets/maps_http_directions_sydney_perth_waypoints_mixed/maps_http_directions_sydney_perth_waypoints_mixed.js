@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/directions/json?origin=Sydney, AU&destination=Perth, AU&waypoints=side_of_road:via:enc:lexeF{~wsZejrPjtye@:&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/directions/json?origin=Sydney%2C%20AU&destination=Perth%2C%20AU&waypoints=side_of_road%3Avia%3Aenc%3AlexeF%7B~wsZejrPjtye%40%3A&key=YOUR_API_KEY',
   headers: { }
 };
 

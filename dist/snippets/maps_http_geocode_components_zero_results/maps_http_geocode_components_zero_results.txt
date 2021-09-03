@@ -1,5 +1,5 @@
 [START maps_http_geocode_components_zero_results]
 https://maps.googleapis.com/maps/api/geocode/json
-  ?components=administrative_area:TX|country:FR
+  ?components=administrative_area%3ATX%7Ccountry%3AFR
   &key=YOUR_API_KEY
 [END maps_http_geocode_components_zero_results]

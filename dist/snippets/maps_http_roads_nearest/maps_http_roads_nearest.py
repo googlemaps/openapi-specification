@@ -1,7 +1,7 @@
 # [START maps_http_roads_nearest]
 import requests
 
-url = "https://roads.googleapis.com/v1/nearestRoads?points=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796&key=YOUR_API_KEY"
+url = "https://roads.googleapis.com/v1/nearestRoads?points=60.170880%2C24.942795%7C60.170879%2C24.942796%7C60.170877%2C24.942796&key=YOUR_API_KEY"
 
 payload={}
 headers = {}

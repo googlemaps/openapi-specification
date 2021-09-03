@@ -1,8 +1,8 @@
 [START maps_http_directions_brooklyn_queens_transit_departure_time]
 https://maps.googleapis.com/maps/api/directions/json
-  ?origin=Brooklyn
+  ?departure_time=1343641500
   &destination=Queens
   &mode=transit
-  &departure_time=1343641500
+  &origin=Brooklyn
   &key=YOUR_API_KEY
 [END maps_http_directions_brooklyn_queens_transit_departure_time]

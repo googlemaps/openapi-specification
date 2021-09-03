@@ -1,7 +1,7 @@
 # [START maps_http_directions_disneyland]
 import requests
 
-url = "https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal Studios Hollywood&key=YOUR_API_KEY"
+url = "https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal%20Studios%20Hollywood&key=YOUR_API_KEY"
 
 payload={}
 headers = {}

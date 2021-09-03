@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://maps.googleapis.com/maps/api/directions/json?origin=heading=90:37.773279,-122.468780&destination=37.773245,-122.469502&key=YOUR_API_KEY")
+url = URI("https://maps.googleapis.com/maps/api/directions/json?origin=heading%3D90%3A37.773279%2C-122.468780&destination=37.773245%2C-122.469502&key=YOUR_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

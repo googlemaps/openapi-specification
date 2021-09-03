@@ -1,7 +1,7 @@
 [START maps_http_distancematrix]
 https://maps.googleapis.com/maps/api/distancematrix/json
-  ?origins=Boston,MA|Charlestown,MA
-  &destinations=Lexington,MA|Concord,MA
-  &departure_time=now
+  ?departure_time=now
+  &destinations=Lexington%2CMA%7CConcord%2CMA
+  &origins=Boston%2CMA%7CCharlestown%2CMA
   &key=YOUR_API_KEY
 [END maps_http_distancematrix]

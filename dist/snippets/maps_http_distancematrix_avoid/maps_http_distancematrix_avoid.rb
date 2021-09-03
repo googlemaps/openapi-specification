@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Victoria BC&avoid=tolls&key=YOUR_API_KEY")
+url = URI("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Victoria%20BC&avoid=tolls&key=YOUR_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

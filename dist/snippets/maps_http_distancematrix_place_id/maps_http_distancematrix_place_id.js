@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE&destinations=Sydney&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=place_id%3AChIJ3S-JXmauEmsRUcIaWtf4MzE&destinations=Sydney&key=YOUR_API_KEY',
   headers: { }
 };
 

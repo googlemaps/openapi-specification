@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://maps.googleapis.com/maps/api/streetview?heading=151.78&pitch=-0.76&location=46.414382,10.013988&size=600x300&key=YOUR_API_KEY")
+url = URI("https://maps.googleapis.com/maps/api/streetview?heading=151.78&pitch=-0.76&location=46.414382%2C10.013988&size=600x300&key=YOUR_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

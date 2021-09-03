@@ -1,7 +1,7 @@
 [START maps_http_directions_region_toledo_es]
 https://maps.googleapis.com/maps/api/directions/json
-  ?origin=Toledo
-  &destination=Madrid
+  ?destination=Madrid
+  &origin=Toledo
   &region=es
   &key=YOUR_API_KEY
 [END maps_http_directions_region_toledo_es]

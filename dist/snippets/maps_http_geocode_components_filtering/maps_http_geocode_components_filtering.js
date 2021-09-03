@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?address=high st hasting&components=country:GB&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/geocode/json?address=high%20st%20hasting&components=country%3AGB&key=YOUR_API_KEY',
   headers: { }
 };
 

@@ -1,8 +1,8 @@
 [START maps_http_distancematrix_bicycling]
 https://maps.googleapis.com/maps/api/distancematrix/json
-  ?origins=Vancouver BC|Seattle
-  &destinations=San Francisco|Victoria BC
-  &mode=bicycling
+  ?destinations=San%20Francisco%7CVictoria%20BC
   &language=fr-FR
+  &mode=bicycling
+  &origins=Vancouver%20BC%7CSeattle
   &key=YOUR_API_KEY
 [END maps_http_distancematrix_bicycling]

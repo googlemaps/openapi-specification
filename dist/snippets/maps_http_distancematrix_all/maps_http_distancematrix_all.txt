@@ -1,13 +1,13 @@
 [START maps_http_distancematrix_all]
 https://maps.googleapis.com/maps/api/distancematrix/json
-  ?origins=Seattle, WA
-  &destinations=North Fork, WA
+  ?arrival_time=1614709737
   &avoid=highways
-  &units=imperial
-  &arrival_time=1614709737
-  &traffic_model=pessimistic
+  &destinations=North%20Fork%2C%20WA
   &mode=transit
+  &origins=Seattle%2C%20WA
+  &traffic_model=pessimistic
   &transit_mode=bus
   &transit_routing_preference=less_walking
+  &units=imperial
   &key=YOUR_API_KEY
 [END maps_http_distancematrix_all]

@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?components=locality:santa+cruz|country:ES&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/geocode/json?components=locality%3Asanta%2Bcruz%7Ccountry%3AES&key=YOUR_API_KEY',
   headers: { }
 };
 

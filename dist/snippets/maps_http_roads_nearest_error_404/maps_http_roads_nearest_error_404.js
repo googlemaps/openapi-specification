@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://roads.googleapis.com/v1/nearestRoads?points=0,0&key=YOUR_API_KEY',
+  url: 'https://roads.googleapis.com/v1/nearestRoads?points=0%2C0&key=YOUR_API_KEY',
   headers: { }
 };
 

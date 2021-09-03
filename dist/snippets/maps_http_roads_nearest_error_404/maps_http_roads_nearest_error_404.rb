@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://roads.googleapis.com/v1/nearestRoads?points=0,0&key=YOUR_API_KEY")
+url = URI("https://roads.googleapis.com/v1/nearestRoads?points=0%2C0&key=YOUR_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

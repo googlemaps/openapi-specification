@@ -1,7 +1,7 @@
 [START maps_http_directions_chicago_los_angeles]
 https://maps.googleapis.com/maps/api/directions/json
-  ?origin=Chicago, IL
-  &destination=Los Angeles, CA
-  &waypoints=Joplin, MO|Oklahoma City, OK
+  ?destination=Los%20Angeles%2C%20CA
+  &origin=Chicago%2C%20IL
+  &waypoints=Joplin%2C%20MO%7COklahoma%20City%2C%20OK
   &key=YOUR_API_KEY
 [END maps_http_directions_chicago_los_angeles]

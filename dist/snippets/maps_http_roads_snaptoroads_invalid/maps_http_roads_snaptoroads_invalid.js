@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://roads.googleapis.com/v1/snapToRoads?path=0,0|1,1&key=YOUR_API_KEY',
+  url: 'https://roads.googleapis.com/v1/snapToRoads?path=0%2C0%7C1%2C1&key=YOUR_API_KEY',
   headers: { }
 };
 

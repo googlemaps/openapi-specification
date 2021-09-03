@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&location_type=ROOFTOP&result_type=street_address&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224%2C-73.961452&location_type=ROOFTOP&result_type=street_address&key=YOUR_API_KEY',
   headers: { }
 };
 

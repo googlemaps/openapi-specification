@@ -553,11 +553,11 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "origins",
-            value: encodeURIComponent("Washington, DC"),
+            value: "Washington, DC",
           },
           {
             key: "destinations",
-            value: encodeURIComponent("New York City, NY"),
+            value: "New York City, NY",
           },
           {
             key: "units",
@@ -621,7 +621,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "origins",
-            value: encodeURIComponent("San Francisco City hall"),
+            value: "San Francisco City hall",
           },
           {
             key: "destinations",
@@ -693,7 +693,7 @@ export const REQUESTS: SnippetRequest[] = [
           },
           {
             key: "destinations",
-            value: encodeURIComponent("40.659569,-73.933783|40.729029,-73.851524|40.6860072,-73.6334271|40.598566,-73.7527626"),
+            value: "40.659569,-73.933783|40.729029,-73.851524|40.6860072,-73.6334271|40.598566,-73.7527626",
           },
         ],
       }),
@@ -714,7 +714,7 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "destinations",
             value:
-              "enc:_kjwFjtsbMt%60EgnKcqLcaOzkGari%40naPxhVg%7CJjjb%40cqLcaOzkGari%40naPxhV:",
+              "enc:_kjwFjtsbMt`EgnKcqLcaOzkGari@naPxhVg|Jjjb@cqLcaOzkGari@naPxhV:",
           },
         ],
       }),
@@ -944,11 +944,11 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "origin",
-            value: encodeURIComponent("H8MW+WP Kolkata India"),
+            value: "H8MW+WP Kolkata India",
           },
           {
             key: "destination",
-            value: encodeURIComponent("GCG2+3M Kolkata India"),
+            value: "GCG2+3M Kolkata India",
           },
         ],
       }),
@@ -1370,7 +1370,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("+16502530000"),
+            value: "+16502530000",
           },
           {
             key: "inputtype",
@@ -1390,7 +1390,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("+16502530000"),
+            value: "+16502530000",
           },
           {
             key: "inputtype",
@@ -1433,7 +1433,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "query",
-            value: encodeURIComponent("restaurants in Sydney"),
+            value: "restaurants in Sydney",
           },
         ],
       }),
@@ -1449,7 +1449,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "query",
-            value: encodeURIComponent("123 main street"),
+            value: "123 main street",
           },
         ],
       }),
@@ -1465,7 +1465,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "query",
-            value: encodeURIComponent("123 main street"),
+            value: "123 main street",
           },
           {
             key: "location",
@@ -1489,7 +1489,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "query",
-            value: encodeURIComponent("Market in Barcelona"),
+            value: "Market in Barcelona",
           },
           {
             key: "location",
@@ -1695,7 +1695,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("pizza near par"),
+            value: "pizza near par",
           },
         ],
       }),
@@ -1711,7 +1711,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("pizza near par"),
+            value: "pizza near par",
           },
           { key: "language", value: "fr" },
         ],
@@ -1728,7 +1728,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("pizza near Sydney"),
+            value: "pizza near Sydney",
           },
         ],
       }),
@@ -1744,7 +1744,7 @@ export const REQUESTS: SnippetRequest[] = [
         query: [
           {
             key: "input",
-            value: encodeURIComponent("Market in Barcelona"),
+            value: "Market in Barcelona",
           },
           {
             key: "location",

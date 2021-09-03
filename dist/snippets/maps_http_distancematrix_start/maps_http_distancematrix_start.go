@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Washington%252C%2520DC&destinations=New%2520York%2520City%252C%2520NY&units=imperial&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/distancematrix/json?origins=Washington,%20DC&destinations=New%20York%20City,%20NY&units=imperial&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {

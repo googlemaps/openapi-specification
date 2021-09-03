@@ -3,7 +3,7 @@ var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/timezone/json?location=0,0&timestamp=1331161200&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/timezone/json?location=0%2C0&timestamp=1331161200&key=YOUR_API_KEY',
   headers: { }
 };
 

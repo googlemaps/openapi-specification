@@ -2,7 +2,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://maps.googleapis.com/maps/api/geocode/json?address=Winnetka&bounds=34.172684,-118.604794|34.236144,-118.500938&key=YOUR_API_KEY")
+url = URI("https://maps.googleapis.com/maps/api/geocode/json?address=Winnetka&bounds=34.172684%2C-118.604794%7C34.236144%2C-118.500938&key=YOUR_API_KEY")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true

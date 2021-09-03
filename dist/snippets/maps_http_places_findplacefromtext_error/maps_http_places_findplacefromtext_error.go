@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=%252B16502530000&inputtype=textquery&fields=invalid&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=+16502530000&inputtype=textquery&fields=invalid&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {

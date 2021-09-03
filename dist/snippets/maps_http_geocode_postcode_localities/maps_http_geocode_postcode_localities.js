@@ -1,9 +1,9 @@
-// [START maps_http_geocode_components]
+// [START maps_http_geocode_postcode_localities]
 var axios = require('axios');
 
 var config = {
   method: 'get',
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?components=locality%3Asanta%20cruz%7Ccountry%3AES&key=YOUR_API_KEY',
+  url: 'https://maps.googleapis.com/maps/api/geocode/json?components=postal_code%3A94608&key=YOUR_API_KEY',
   headers: { }
 };
 
@@ -15,4 +15,4 @@ axios(config)
   console.log(error);
 });
 
-// [END maps_http_geocode_components]
+// [END maps_http_geocode_postcode_localities]

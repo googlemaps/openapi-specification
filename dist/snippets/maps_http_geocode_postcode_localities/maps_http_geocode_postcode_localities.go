@@ -1,4 +1,4 @@
-// [START maps_http_geocode_components]
+// [START maps_http_geocode_postcode_localities]
 package main
 
 import (
@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-  url := "https://maps.googleapis.com/maps/api/geocode/json?components=locality:santa%20cruz%7Ccountry:ES&key=YOUR_API_KEY"
+  url := "https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:94608&key=YOUR_API_KEY"
   method := "GET"
 
   client := &http.Client {
@@ -34,4 +34,4 @@ func main() {
   }
   fmt.Println(string(body))
 }
-// [END maps_http_geocode_components]
+// [END maps_http_geocode_postcode_localities]

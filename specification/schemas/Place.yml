@@ -14,7 +14,7 @@
 
 type: object
 title: Place
-description: Attributes descring a place. Not all attributes will be available for all place types.
+description: Attributes describing a place. Not all attributes will be available for all place types.
 properties:
   address_components:
     description: An array containing the separate components applicable to this address.

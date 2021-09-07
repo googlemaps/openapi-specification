@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "2d171d75-f44a-4f01-9892-47707b71d59f",
+            "id": "ea57d7c9-18da-4cd2-a905-46e6df5b9f83",
             "name": "Directions API",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -9,10 +9,10 @@
             },
             "item": [
                 {
-                    "id": "a3318a00-78ad-463d-8038-4fa093212970",
-                    "name": "/maps/api/directions/json",
+                    "id": "e973654f-8c59-4fc3-b94c-78c5d613c39a",
+                    "name": "directions",
                     "request": {
-                        "name": "/maps/api/directions/json",
+                        "name": "directions",
                         "description": {
                             "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
                             "type": "text/plain"
@@ -123,7 +123,7 @@
                     },
                     "response": [
                         {
-                            "id": "273c127f-9cf7-4d06-b798-bf81ac63a330",
+                            "id": "45d78be9-612a-42b3-a1e7-86508c486c80",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -216,7 +216,7 @@
             "event": []
         },
         {
-            "id": "8831ea4f-0bc3-424a-8391-9e643de320ec",
+            "id": "f90a3a4c-81c2-4fb4-8bbf-19915b664c1b",
             "name": "Distance Matrix API",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -224,10 +224,10 @@
             },
             "item": [
                 {
-                    "id": "474bf995-171c-4393-9868-16c1cb77ca5b",
-                    "name": "/maps/api/distanceMatrix/json",
+                    "id": "679c93bc-bdd7-40d3-b261-e436767604e1",
+                    "name": "distance Matrix",
                     "request": {
-                        "name": "/maps/api/distanceMatrix/json",
+                        "name": "distance Matrix",
                         "description": {
                             "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.",
                             "type": "text/plain"
@@ -326,7 +326,7 @@
                     },
                     "response": [
                         {
-                            "id": "5c477df2-2659-44ea-902d-f10a07525aec",
+                            "id": "ad1a4039-1184-45b9-9513-6cb2321ec941",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -411,7 +411,7 @@
             "event": []
         },
         {
-            "id": "a8ebff53-1a10-4b90-8924-97ac188d8d3c",
+            "id": "559aa816-1184-472c-889f-8dc69b5f24f5",
             "name": "Elevation API",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -419,10 +419,10 @@
             },
             "item": [
                 {
-                    "id": "a4834513-b9a2-4f7f-8575-c3fbe39f35bf",
-                    "name": "/maps/api/elevation/json",
+                    "id": "f8069f75-f61b-4068-a3cc-cb8eb92057cd",
+                    "name": "elevation",
                     "request": {
-                        "name": "/maps/api/elevation/json",
+                        "name": "elevation",
                         "description": {
                             "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes. With the Elevation API, you can develop hiking and biking applications, positioning applications, or low resolution surveying applications.\n\nElevation data is available for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values). In those cases where Google does not possess exact elevation measurements at the precise location you request, the service interpolates and returns an averaged value using the four nearest locations. Elevation values are expressed relative to local mean sea level (LMSL).\n\nRequests to the Elevation API utilize different parameters based on whether the request is for discrete locations or for an ordered path. For discrete locations, requests for elevation return data on the specific locations passed in the request; for paths, elevation requests are instead sampled along the given path.\n",
                             "type": "text/plain"
@@ -467,7 +467,7 @@
                     },
                     "response": [
                         {
-                            "id": "867a6dd8-ab0d-4b02-a98c-bc6d15ed0f96",
+                            "id": "81fdcd2b-cba5-41e9-9236-d40ddeffc2d6",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -516,7 +516,7 @@
             "event": []
         },
         {
-            "id": "fe19e4ff-cf34-4eec-93e1-07a13aea860d",
+            "id": "88fde6a1-a968-424c-8a5d-cb82f195688f",
             "name": "Geocoding API",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -524,10 +524,10 @@
             },
             "item": [
                 {
-                    "id": "e3e850a7-64fe-4f74-9d09-0f0698b9c3a5",
-                    "name": "/maps/api/geocode/json",
+                    "id": "5e3587e6-f2ac-4efc-b4de-af224af07d05",
+                    "name": "geocode",
                     "request": {
-                        "name": "/maps/api/geocode/json",
+                        "name": "geocode",
                         "description": {
                             "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.\n\n**Geocoding** is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.\n\n**Reverse geocoding** is the process of converting geographic coordinates into a human-readable address.\n\nYou can also use the Geocoding API to find the address for a given place ID.\n\nTo see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned `location_type` field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.",
                             "type": "text/plain"
@@ -614,7 +614,7 @@
                     },
                     "response": [
                         {
-                            "id": "984d075c-9ac3-49b5-a611-da7c584667b4",
+                            "id": "9ea42b95-e771-45de-8d66-dab2945a4538",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -691,7 +691,7 @@
             "event": []
         },
         {
-            "id": "f8cf8270-801f-446e-8128-a19a5dad1981",
+            "id": "9d4a8b2a-811d-45b2-98ee-3fa06003ba72",
             "name": "Geolocation API",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -699,10 +699,10 @@
             },
             "item": [
                 {
-                    "id": "0231cbd5-d2c8-4a04-abb7-635106ef6226",
-                    "name": "/geolocation/v1/geolocate",
+                    "id": "632d81f0-0130-49cd-8562-8022bc48332f",
+                    "name": "geolocate",
                     "request": {
-                        "name": "/geolocation/v1/geolocate",
+                        "name": "geolocate",
                         "description": {
                             "content": "Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect. This document describes the protocol used to send this data to the server and to return a response to the client.\n\nCommunication is done over HTTPS using POST. Both request and response are formatted as JSON, and the content type of both is `application/json`.\n\nYou must specify a key in your request, included as the value of a`key` parameter. A `key` is your application's  API key. This key identifies your application for purposes of quota management. Learn how to [get a key](https://developers.google.com/maps/documentation/geolocation/get-api-key).",
                             "type": "text/plain"
@@ -737,7 +737,7 @@
                     },
                     "response": [
                         {
-                            "id": "e8288288-08b6-43ae-a7b7-f2d597896b48",
+                            "id": "d1360871-9197-4cf2-9c9e-1789803127ee",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -771,7 +771,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "16f2b719-27c3-4c8e-b9f1-753a475bcae5",
+                            "id": "5830f717-0355-45e7-8a91-075612ff7dc5",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -805,7 +805,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a44a4903-70a8-41d6-b185-1fdebc2c79d9",
+                            "id": "95db4766-cd91-4d33-b40a-0077d968d314",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -845,7 +845,7 @@
             "event": []
         },
         {
-            "id": "2e3a5099-3656-4474-9b00-46166a1d068b",
+            "id": "37ccbfce-0951-4d16-9e27-158118a1ee4c",
             "name": "Roads API",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -853,10 +853,10 @@
             },
             "item": [
                 {
-                    "id": "144f0b7f-9f1c-4c63-b58e-536c113567af",
-                    "name": "/v1/snapToRoads",
+                    "id": "c16abdf2-a4cf-4e74-b103-27ae882c66ad",
+                    "name": "snap To Roads",
                     "request": {
-                        "name": "/v1/snapToRoads",
+                        "name": "snap To Roads",
                         "description": {
                             "content": "This service returns the best-fit road geometry for a given set of GPS coordinates. This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along. Optionally, you can request that the points be interpolated, resulting in a path that smoothly follows the geometry of the road.",
                             "type": "text/plain"
@@ -893,7 +893,7 @@
                     },
                     "response": [
                         {
-                            "id": "97ebe745-bd04-47b3-8485-715df763dcd7",
+                            "id": "88488d33-8c51-4073-a83b-fcd550d9f6b8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -935,10 +935,10 @@
                     "event": []
                 },
                 {
-                    "id": "5a4a5d74-b1cb-4719-a782-b35ffb65e323",
-                    "name": "/v1/nearestRoads",
+                    "id": "de57a469-0666-4477-bb1f-c8b55f31fd0c",
+                    "name": "nearest Roads",
                     "request": {
-                        "name": "/v1/nearestRoads",
+                        "name": "nearest Roads",
                         "description": {
                             "content": "This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.",
                             "type": "text/plain"
@@ -969,7 +969,7 @@
                     },
                     "response": [
                         {
-                            "id": "4dec2875-333d-4f10-9d71-32ed5e7a4a5e",
+                            "id": "2e0cecc8-5d58-4b1d-9dde-4b97f9b26cea",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -999,12 +999,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": -94120094.07490802,\n    \"longitude\": 92898955.58170578\n   },\n   \"placeId\": \"id quis tempor sit in\",\n   \"originalIndex\": -55322578.07207879\n  },\n  {\n   \"location\": {\n    \"latitude\": -85525221.08498856,\n    \"longitude\": -87724715.08822282\n   },\n   \"placeId\": \"dolor sunt\",\n   \"originalIndex\": -47872104.35331435\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 49438292.72745618,\n    \"longitude\": -97184366.00523624\n   },\n   \"placeId\": \"do enim ad reprehenderit\",\n   \"originalIndex\": -40320464.00808862\n  },\n  {\n   \"location\": {\n    \"latitude\": 6499981.015949219,\n    \"longitude\": -46743195.01158659\n   },\n   \"placeId\": \"aliqua cupidatat et id\",\n   \"originalIndex\": -54718155.77381358\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d0cc922a-7cf8-471d-8175-f27063372e82",
+                            "id": "157caf71-ae66-4339-aadd-b50ca2b14b15",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1045,7 +1045,7 @@
             "event": []
         },
         {
-            "id": "0ae8b6f7-e22e-4f84-b71f-591d06c0079b",
+            "id": "8c3ea3fd-f8ec-415d-b9e7-ed48bb1f62e5",
             "name": "Time Zone API",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -1053,10 +1053,10 @@
             },
             "item": [
                 {
-                    "id": "612c4049-b5be-421d-9991-d3ce3877b02a",
-                    "name": "/maps/api/timezone/json",
+                    "id": "2b2a7b10-d19d-46e6-9706-250822fe276d",
+                    "name": "timezone",
                     "request": {
-                        "name": "/maps/api/timezone/json",
+                        "name": "timezone",
                         "description": {
                             "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations. You request the time zone information for a specific latitude/longitude pair and date. The API returns the name of that time zone, the time offset from UTC, and the daylight savings offset.\n",
                             "type": "text/plain"
@@ -1101,7 +1101,7 @@
                     },
                     "response": [
                         {
-                            "id": "d6e795e3-e2c1-408e-bf65-10c6ead6bf0b",
+                            "id": "f8d6121a-8f67-4d99-a86c-d1c79394591e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1150,7 +1150,7 @@
             "event": []
         },
         {
-            "id": "c6ff0c30-37f1-400e-a5c9-368cf605b674",
+            "id": "0e87ad8c-24b4-40e2-96b6-c5e9b3e588bc",
             "name": "Street View API",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -1158,10 +1158,10 @@
             },
             "item": [
                 {
-                    "id": "336c934b-95e1-45fa-b314-934acba93434",
-                    "name": "/maps/api/streetview",
+                    "id": "aef04675-afe6-4220-8997-d94afcbe57f0",
+                    "name": "street View",
                     "request": {
-                        "name": "/maps/api/streetview",
+                        "name": "street View",
                         "description": {
                             "content": "The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.\n",
                             "type": "text/plain"
@@ -1247,7 +1247,7 @@
                     },
                     "response": [
                         {
-                            "id": "c62430c1-22f5-49a2-bd46-9095d80410a9",
+                            "id": "8a5cf933-b5d3-47ca-8536-cc7558418e84",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1313,7 +1313,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "elit amet magna",
+                            "body": "culpa",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1321,10 +1321,10 @@
                     "event": []
                 },
                 {
-                    "id": "793613da-a7b0-47a4-97d0-cbeaabf891c2",
-                    "name": "/maps/api/streetview/metadata",
+                    "id": "bb327b8d-d402-439a-848f-85f41a46b39f",
+                    "name": "street View Metadata",
                     "request": {
-                        "name": "/maps/api/streetview/metadata",
+                        "name": "street View Metadata",
                         "description": {
                             "content": "The Street View Static API metadata requests provide data about Street View panoramas. Using the metadata, you can find out if a Street View image is available at a given location, as well as getting programmatic access to the latitude and longitude, the panorama ID, the date the photo was taken, and the copyright information for the image. Accessing this metadata allows you to customize error behavior in your application.\n",
                             "type": "text/plain"
@@ -1405,7 +1405,7 @@
                     },
                     "response": [
                         {
-                            "id": "114fd75d-6d77-41e2-8379-db9ce72a80c7",
+                            "id": "1fc53217-7440-45f0-9b9f-99d4f72a56c3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1478,7 +1478,7 @@
             "event": []
         },
         {
-            "id": "b12716cb-5eef-4f16-8522-a95407dae749",
+            "id": "fa87a271-faa0-4967-aa0b-77c204064c0e",
             "name": "Places API",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -1486,10 +1486,10 @@
             },
             "item": [
                 {
-                    "id": "bb16db3c-f386-4071-bc51-b119d91b468e",
-                    "name": "/maps/api/place/details/json",
+                    "id": "88cb026e-aea9-43b6-ac3b-b8aec425603f",
+                    "name": "place Details",
                     "request": {
-                        "name": "/maps/api/place/details/json",
+                        "name": "place Details",
                         "description": {
                             "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
                             "type": "text/plain"
@@ -1547,7 +1547,7 @@
                     },
                     "response": [
                         {
-                            "id": "de472254-139c-4172-9175-df1c2ad8e96c",
+                            "id": "3861213d-8705-4f7a-9ea3-288609de8d89",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1601,10 +1601,10 @@
                     "event": []
                 },
                 {
-                    "id": "75aeeff5-e5a3-4226-bb81-45a93814e9f3",
-                    "name": "/maps/api/place/findplacefromtext/json",
+                    "id": "a13e7647-ce1c-4eeb-9a3f-a6a79f8ec726",
+                    "name": "find Place From Text",
                     "request": {
-                        "name": "/maps/api/place/findplacefromtext/json",
+                        "name": "find Place From Text",
                         "description": {
                             "content": "A Find Place request takes a text input and returns a place. The input can be any kind of Places text data, such as a name, address, or phone number. The request must be a string. A Find Place request using non-string data such as a lat/lng coordinate or plus code generates an error.\n<div class=\"note\">Note: If you omit the fields parameter from a Find Place request, only the place_id for the result will be returned.</div>\n",
                             "type": "text/plain"
@@ -1662,7 +1662,7 @@
                     },
                     "response": [
                         {
-                            "id": "4da81895-5f15-48db-bf91-f0da38db175e",
+                            "id": "f0d531d0-cdf6-4203-b682-5703a2850066",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1716,10 +1716,10 @@
                     "event": []
                 },
                 {
-                    "id": "fa25bcf3-e8e3-40aa-980a-173ddc1d3fad",
-                    "name": "/maps/api/place/nearbysearch/json",
+                    "id": "564be407-03a9-45bc-b60d-d835f82fb28e",
+                    "name": "nearby Search",
                     "request": {
-                        "name": "/maps/api/place/nearbysearch/json",
+                        "name": "nearby Search",
                         "description": {
                             "content": "A Nearby Search lets you search for places within a specified area. You can refine your search request by supplying keywords or specifying the type of place you are searching for.",
                             "type": "text/plain"
@@ -1813,7 +1813,7 @@
                     },
                     "response": [
                         {
-                            "id": "651afb52-99d4-4f4b-bcb6-2ed7997a5bad",
+                            "id": "30887030-c7ae-4bcc-98cf-ecc697dcb0c5",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1891,10 +1891,10 @@
                     "event": []
                 },
                 {
-                    "id": "c7f348ec-5c20-47b5-b310-186bdb1b4845",
-                    "name": "/maps/api/place/textsearch/json",
+                    "id": "0d46cbaa-586c-4464-9e40-72592ab54f91",
+                    "name": "text Search",
                     "request": {
-                        "name": "/maps/api/place/textsearch/json",
+                        "name": "text Search",
                         "description": {
                             "content": "The Google Places API Text Search Service is a web service that returns information about a set of places based on a string — for example \"pizza in New York\" or \"shoe stores near Ottawa\" or \"123 Main Street\". The service responds with a list of places matching the text string and any location bias that has been set.\n\nThe service is especially useful for making [ambiguous address](https://developers.google.com/maps/documentation/geocoding/best-practices) queries in an automated system, and non-address components of the string may match businesses as well as addresses. Examples of ambiguous address queries are incomplete addresses, poorly formatted addresses, or a request that includes non-address components such as business names.\n\nThe search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.\n",
                             "type": "text/plain"
@@ -1982,7 +1982,7 @@
                     },
                     "response": [
                         {
-                            "id": "1a66c4eb-480e-43eb-ac02-551a701e05b4",
+                            "id": "eec65f49-62d2-43cc-8399-3fb07385c74c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2056,10 +2056,10 @@
                     "event": []
                 },
                 {
-                    "id": "f289f1e4-1164-484c-bb94-620280544e2c",
-                    "name": "/maps/api/place/photo",
+                    "id": "32f9c5ff-a2b9-454a-bb4c-eb57f03038f1",
+                    "name": "place Photo",
                     "request": {
-                        "name": "/maps/api/place/photo",
+                        "name": "place Photo",
                         "description": {
                             "content": "The Place Photo service, part of the Places API, is a read- only API that allows you to add high quality photographic content to your application. The Place Photo service gives you access to the millions of photos stored in the Places database. When you get place information using a Place Details request, photo references will be returned for relevant photographic content. Find Place, Nearby Search, and Text Search requests also return a single photo reference per place, when relevant. Using the Photo service you can then access the referenced photos and resize the image to the optimal size for your application.\n\nPhotos returned by the Photo service are sourced from a variety of locations, including business owners and user contributed photos. In most cases, these photos can be used without attribution, or will have the required attribution included as a part of the image. However, if the returned photo element includes a value in the html_attributions field, you will have to include the additional attribution in your application wherever you display the image.\n",
                             "type": "text/plain"
@@ -2104,7 +2104,7 @@
                     },
                     "response": [
                         {
-                            "id": "ff06b787-3407-4828-bac2-d5f11e770ebe",
+                            "id": "e3d0dc54-5ff6-47a9-b9a5-6b80f389cdba",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2142,7 +2142,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "elit amet magna",
+                            "body": "culpa",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2150,10 +2150,10 @@
                     "event": []
                 },
                 {
-                    "id": "30f8251a-5e40-4d6f-ab2b-0193bbba7613",
-                    "name": "/maps/api/place/queryautocomplete/json",
+                    "id": "72c6e290-ab61-47d7-b782-0a6f3afcf3a4",
+                    "name": "query Autocomplete",
                     "request": {
-                        "name": "/maps/api/place/queryautocomplete/json",
+                        "name": "query Autocomplete",
                         "description": {
                             "content": "The Query Autocomplete service can be used to provide a query prediction for text-based geographic searches, by returning suggested queries as you type.\n\nThe Query Autocomplete service allows you to add on-the-fly geographic query predictions to your application. Instead of searching for a specific location, a user can type in a categorical search, such as \"pizza near New York\" and the service responds with a list of suggested queries matching the string. As the Query Autocomplete service can match on both full words and substrings, applications can send queries as the user types to provide on-the-fly predictions.\n",
                             "type": "text/plain"
@@ -2211,7 +2211,7 @@
                     },
                     "response": [
                         {
-                            "id": "9f011402-ea03-427a-81da-764fe0e1e080",
+                            "id": "c5b5e8c5-1185-49e9-8107-8939bb52ae6a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2265,10 +2265,10 @@
                     "event": []
                 },
                 {
-                    "id": "6796f91f-7cc0-4364-988e-062a861689fa",
-                    "name": "/maps/api/place/autocomplete/json",
+                    "id": "4f841825-d5c9-4b0b-92db-f42e660041a5",
+                    "name": "autocomplete",
                     "request": {
-                        "name": "/maps/api/place/autocomplete/json",
+                        "name": "autocomplete",
                         "description": {
                             "content": "The Place Autocomplete service is a web service that returns place predictions in response to an HTTP request. The request specifies a textual search string and optional geographic bounds. The service can be used to provide autocomplete functionality for text-based geographic searches, by returning places such as businesses, addresses and points of interest as a user types.\n<div class=\"note\">Note: You can use Place Autocomplete even without a map. If you do show a map, it must be a Google map. When you display predictions from the Place Autocomplete service without a map, you must include the ['Powered by Google'](https://developers.google.com/maps/documentation/places/web-service/policies#logo_requirementshttps://developers.google.com/maps/documentation/places/web-service/policies#logo_requirements) logo.</div>\n\nThe Place Autocomplete service can match on full words and substrings, resolving place names, addresses, and plus codes. Applications can therefore send queries as the user types, to provide on-the-fly place predictions.\n\nThe returned predictions are designed to be presented to the user to aid them in selecting the desired place. You can send a [Place Details](https://developers.google.com/maps/documentation/places/web-service/details#PlaceDetailsRequests) request for more information about any of the places which are returned.\n",
                             "type": "text/plain"
@@ -2356,7 +2356,7 @@
                     },
                     "response": [
                         {
-                            "id": "4ec1fcb9-9da9-4198-9f7f-10ff20680c5f",
+                            "id": "cd2a50c0-cc16-4804-b0c8-65c2e6147ad3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2459,7 +2459,7 @@
         ]
     },
     "info": {
-        "_postman_id": "6e8b2981-6c88-42e0-9473-62286a4ec97a",
+        "_postman_id": "ac8891ea-3447-4286-817a-d2e20ee862d8",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

@@ -8,6 +8,7 @@ servers:
 paths:
   /geolocation/v1/geolocate:
     post:
+      operationId: geolocate
       servers:
         - url: 'https://www.googleapis.com'
       tags:
@@ -119,6 +120,7 @@ paths:
                           reason: notFound
   /maps/api/directions/json:
     get:
+      operationId: directions
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -14493,6 +14495,7 @@ paths:
                 $ref: '#/components/schemas/DirectionsResponse'
   /maps/api/elevation/json:
     get:
+      operationId: elevation
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -14631,6 +14634,7 @@ paths:
                           $ref: '#/components/schemas/LatLngLiteral'
   /maps/api/geocode/json:
     get:
+      operationId: geocode
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -16103,6 +16107,7 @@ paths:
                 $ref: '#/components/schemas/GeocodingResponse'
   /maps/api/timezone/json:
     get:
+      operationId: timezone
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -16163,6 +16168,7 @@ paths:
                 $ref: '#/components/schemas/TimeZoneResponse'
   /v1/snapToRoads:
     get:
+      operationId: snapToRoads
       servers:
         - url: 'https://roads.googleapis.com'
       tags:
@@ -16633,6 +16639,7 @@ paths:
                 $ref: '#/components/schemas/SnapToRoadsResponse'
   /v1/nearestRoads:
     get:
+      operationId: nearestRoads
       servers:
         - url: 'https://roads.googleapis.com'
       tags:
@@ -16675,6 +16682,7 @@ paths:
                 $ref: '#/components/schemas/NearestRoadsErrorResponse'
   /maps/api/distanceMatrix/json:
     get:
+      operationId: distanceMatrix
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -16968,6 +16976,7 @@ paths:
                 $ref: '#/components/schemas/DistanceMatrixResponse'
   /maps/api/place/details/json:
     get:
+      operationId: placeDetails
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -17276,6 +17285,7 @@ paths:
                 $ref: '#/components/schemas/PlacesDetailsResponse'
   /maps/api/place/findplacefromtext/json:
     get:
+      operationId: findPlaceFromText
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -17416,6 +17426,7 @@ paths:
                 $ref: '#/components/schemas/PlacesFindPlaceFromTextResponse'
   /maps/api/place/nearbysearch/json:
     get:
+      operationId: nearbySearch
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -18260,6 +18271,7 @@ paths:
                 $ref: '#/components/schemas/PlacesNearbySearchResponse'
   /maps/api/place/textsearch/json:
     get:
+      operationId: textSearch
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -19217,6 +19229,7 @@ paths:
                 $ref: '#/components/schemas/PlacesTextSearchResponse'
   /maps/api/place/photo:
     get:
+      operationId: placePhoto
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -19255,6 +19268,7 @@ paths:
                 format: binary
   /maps/api/place/queryautocomplete/json:
     get:
+      operationId: queryAutocomplete
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -19429,6 +19443,7 @@ paths:
                 $ref: '#/components/schemas/PlacesQueryAutocompleteResponse'
   /maps/api/place/autocomplete/json:
     get:
+      operationId: autocomplete
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -19644,6 +19659,7 @@ paths:
                 $ref: '#/components/schemas/PlacesAutocompleteResponse'
   /maps/api/streetview:
     get:
+      operationId: streetView
       servers:
         - url: 'https://maps.googleapis.com'
       tags:
@@ -19732,6 +19748,7 @@ paths:
                 format: binary
   /maps/api/streetview/metadata:
     get:
+      operationId: streetViewMetadata
       servers:
         - url: 'https://maps.googleapis.com'
       tags:

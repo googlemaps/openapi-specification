@@ -13,6 +13,7 @@
   "paths": {
     "/geolocation/v1/geolocate": {
       "post": {
+        "operationId": "geolocate",
         "servers": [
           {
             "url": "https://www.googleapis.com"
@@ -187,6 +188,7 @@
     },
     "/maps/api/directions/json": {
       "get": {
+        "operationId": "directions",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -20490,6 +20492,7 @@
     },
     "/maps/api/elevation/json": {
       "get": {
+        "operationId": "elevation",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -20670,6 +20673,7 @@
     },
     "/maps/api/geocode/json": {
       "get": {
+        "operationId": "geocode",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -22831,6 +22835,7 @@
     },
     "/maps/api/timezone/json": {
       "get": {
+        "operationId": "timezone",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -22917,6 +22922,7 @@
     },
     "/v1/snapToRoads": {
       "get": {
+        "operationId": "snapToRoads",
         "servers": [
           {
             "url": "https://roads.googleapis.com"
@@ -23718,6 +23724,7 @@
     },
     "/v1/nearestRoads": {
       "get": {
+        "operationId": "nearestRoads",
         "servers": [
           {
             "url": "https://roads.googleapis.com"
@@ -23782,6 +23789,7 @@
     },
     "/maps/api/distanceMatrix/json": {
       "get": {
+        "operationId": "distanceMatrix",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -24233,6 +24241,7 @@
     },
     "/maps/api/place/details/json": {
       "get": {
+        "operationId": "placeDetails",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -24647,6 +24656,7 @@
     },
     "/maps/api/place/findplacefromtext/json": {
       "get": {
+        "operationId": "findPlaceFromText",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -24911,6 +24921,7 @@
     },
     "/maps/api/place/nearbysearch/json": {
       "get": {
+        "operationId": "nearbySearch",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -26070,6 +26081,7 @@
     },
     "/maps/api/place/textsearch/json": {
       "get": {
+        "operationId": "textSearch",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -27354,6 +27366,7 @@
     },
     "/maps/api/place/photo": {
       "get": {
+        "operationId": "placePhoto",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -27407,6 +27420,7 @@
     },
     "/maps/api/place/queryautocomplete/json": {
       "get": {
+        "operationId": "queryAutocomplete",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -27707,6 +27721,7 @@
     },
     "/maps/api/place/autocomplete/json": {
       "get": {
+        "operationId": "autocomplete",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -28026,6 +28041,7 @@
     },
     "/maps/api/streetview": {
       "get": {
+        "operationId": "streetView",
         "servers": [
           {
             "url": "https://maps.googleapis.com"
@@ -28147,6 +28163,7 @@
     },
     "/maps/api/streetview/metadata": {
       "get": {
+        "operationId": "streetViewMetadata",
         "servers": [
           {
             "url": "https://maps.googleapis.com"

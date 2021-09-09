@@ -12,20 +12,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Release"
+name: Release
 on:
   push:
     branches:
       - main
 jobs:
-  build:
+  release:
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_MAPS_JS_SAMPLES_KEY: "${{ secrets.GOOGLE_MAPS_JS_SAMPLES_KEY }}"
     steps:
       - uses: actions/checkout@v2
-      - run: npm i
-      - run: npm run build
-      - run: npm test
-      - name: Release
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+      - name: Setup Bazel Cache
+        run: |
+          BAZEL_CACHE_SERVICE_ACCOUNT_FILE=$(mktemp)
+          echo "${BAZEL_CACHE_SERVICE_ACCOUNT}" > "${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}"
+          echo "build --google_credentials=${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}" >> .bazelrc.user
+          echo "build --remote_http_cache=https://storage.googleapis.com/${BAZEL_CACHE_BUCKET}" >> .bazelrc
+        env:
+          BAZEL_CACHE_BUCKET: ${{secrets.SYNCED_BAZEL_CACHE_BUCKET}}
+          BAZEL_CACHE_SERVICE_ACCOUNT: ${{secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT}}
+      - run: bazel build --jobs 8 //...
+      - run: bazel test --jobs 8 //...
+      - name: Update dist
+        run: |
+          npm run build
+          git config --global user.name 'googlemaps-bot'
+          git config --global user.email 'googlemaps-bot@google.com'
+          git add dist
+          # do not commit changes if only postman nondeterministic ids
+          [[ $(git diff --name-only | grep -v  "dist/google-maps-platform-postman.json" | wc -l) -eq 0 ]] || git commit -m "chore: update dist folder [skip ci]" || true
+          git push origin
+      - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           extra_plugins: |

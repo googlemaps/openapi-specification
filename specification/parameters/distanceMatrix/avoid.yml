@@ -21,7 +21,7 @@ description: |
   * `ferries` indicates that the calculated route should avoid ferries.
   * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
 
-  <div class="note">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>
+  <div class="note">Note: The addition of restrictions does not preclude routes that include the restricted feature; it only biases the result to more favorable routes.</div>
 in: query
 example: highways
 schema:

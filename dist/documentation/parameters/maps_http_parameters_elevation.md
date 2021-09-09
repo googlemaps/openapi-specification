@@ -26,7 +26,7 @@
 
 -   <h3 id="path">path</h3>
 
-    An array of comma separated {latitude,longitude} strings.
+    An array of comma separated `latitude,longitude` strings.
 
 -   <h3 id="samples">samples</h3>
 

@@ -15,7 +15,7 @@
 name: Update dist
 on:
   repository_dispatch:
-    types: [update-dist]
+    types: [update-dist-command]
 jobs:
   update-dist:
     runs-on: ubuntu-latest

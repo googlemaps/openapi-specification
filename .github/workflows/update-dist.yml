@@ -12,21 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Release
+name: Update dist
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [update-dist]
 jobs:
-  release:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+  update-dist:
     runs-on: ubuntu-latest
-    env:
-      GOOGLE_MAPS_JS_SAMPLES_KEY: "${{ secrets.GOOGLE_MAPS_JS_SAMPLES_KEY }}"
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
       - name: Setup Bazel Cache
         run: |
           BAZEL_CACHE_SERVICE_ACCOUNT_FILE=$(mktemp)
@@ -37,17 +35,18 @@ jobs:
           BAZEL_CACHE_BUCKET: ${{secrets.SYNCED_BAZEL_CACHE_BUCKET}}
           BAZEL_CACHE_SERVICE_ACCOUNT: ${{secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT}}
       - run: bazel build --jobs 8 //...
-      - run: bazel test --jobs 8 //...
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
+      - name: Update dist
+        run: |
+          npm run build
+          git config --global user.name 'googlemaps-bot'
+          git config --global user.email 'googlemaps-bot@google.com'
+          git add dist
+          git commit -m "chore: update dist folder [skip ci]" || true
+          git push origin
+      - name: Add reaction
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
-          extra_plugins: |
-            "@semantic-release/commit-analyzer"
-            "@semantic-release/release-notes-generator"
-            "@semantic-release/git"
-            "@semantic-release/github"
-            "@semantic-release/exec"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: skip # required in verify conditions
-          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: rocket

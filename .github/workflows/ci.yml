@@ -13,12 +13,33 @@
 # limitations under the License.
 
 name: Build
-on: [push, pull_request]
+on:
+  - push
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm i
-      - run: bazel build ... # do not update dist in ci
-      - run: npm test
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }} # required otherwise GitHub blocks infinite loops in pushes originating in an action
+        if: github.actor != 'dependabot[bot]'
+      - uses: actions/checkout@v2
+        if: github.actor == 'dependabot[bot]'
+      - name: Setup Bazel Cache
+        run: |
+          BAZEL_CACHE_SERVICE_ACCOUNT_FILE=$(mktemp)
+          echo "${BAZEL_CACHE_SERVICE_ACCOUNT}" > "${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}"
+          echo "build --google_credentials=${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}" >> .bazelrc.user
+          echo "build --remote_http_cache=https://storage.googleapis.com/${BAZEL_CACHE_BUCKET}" >> .bazelrc.user
+        env:
+          BAZEL_CACHE_BUCKET: ${{secrets.SYNCED_BAZEL_CACHE_BUCKET}}
+          BAZEL_CACHE_SERVICE_ACCOUNT: ${{secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT}}
+        if: github.actor != 'dependabot[bot]'
+      - run: bazel build --profile /tmp/bazel-profile-build.gz --jobs 8 //...
+      - run: bazel test --jobs 8 //...
+      - name: Upload Bazel profiles
+        uses: actions/upload-artifact@v2
+        with:
+          name: bazel profiles
+          path: |
+            /tmp/bazel-profile-*.gz

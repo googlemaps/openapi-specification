@@ -2,3 +2,4 @@ dist/** linguist-generated=true
 dist/**/*.md linguist-generated=false
 dist/snippets/*.txt linguist-generated=false
 dist/** -merge
+dist/google-maps-platform-postman.json -diff -merge

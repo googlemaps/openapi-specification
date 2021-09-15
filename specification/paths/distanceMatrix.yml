@@ -23,13 +23,13 @@ parameters:
   - "$ref": "../parameters/distanceMatrix/avoid.yml"
   - "$ref": "../parameters/distanceMatrix/destinations.yml"
   - "$ref": "../parameters/distanceMatrix/origins.yml"
+  - "$ref": "../parameters/distanceMatrix/units.yml"
   - "$ref": "../parameters/language.yml"
   - "$ref": "../parameters/mode.yml"
   - "$ref": "../parameters/region.yml"
   - "$ref": "../parameters/traffic_model.yml"
   - "$ref": "../parameters/transit_mode.yml"
   - "$ref": "../parameters/transit_routing_preference.yml"
-  - "$ref": "../parameters/units.yml"
 responses:
   "200":
     description: 200 OK

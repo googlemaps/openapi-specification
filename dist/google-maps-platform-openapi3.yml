@@ -219,6 +219,25 @@ paths:
               value: 'heading=90:37.773279,-122.468780'
           schema:
             type: string
+        - name: units
+          description: |
+            Specifies the unit system to use when displaying results.
+
+            Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
+
+            For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
+
+            * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
+            * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
+
+            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
+          example: metric
+          in: query
+          schema:
+            type: string
+            enum:
+              - imperial
+              - metric
         - name: waypoints
           description: |
             <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>
@@ -335,25 +354,6 @@ paths:
             enum:
               - less_walking
               - fewer_transfers
-        - name: units
-          description: |
-            Specifies the unit system to use when displaying results.
-
-            Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
-
-            For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
-
-            * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
-            * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
-
-            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
-          example: metric
-          in: query
-          schema:
-            type: string
-            enum:
-              - imperial
-              - metric
       responses:
         '200':
           description: 200 OK
@@ -16745,10 +16745,21 @@ paths:
             type: array
             items:
               type: string
+        - name: units
+          description: |
+            Specifies the unit system to use when displaying results.
+
+            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
+          example: metric
+          in: query
+          schema:
+            type: string
+            enum:
+              - imperial
+              - metric
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/mode'
         - $ref: '#/components/parameters/region'
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/10'
         - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/11'
         - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/12'
         - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/13'

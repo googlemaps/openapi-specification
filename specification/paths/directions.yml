@@ -24,6 +24,7 @@ parameters:
   - "$ref": "../parameters/directions/avoid.yml"
   - "$ref": "../parameters/directions/destination.yml"
   - "$ref": "../parameters/directions/origin.yml"
+  - "$ref": "../parameters/directions/units.yml"
   - "$ref": "../parameters/directions/waypoints.yml"
   - "$ref": "../parameters/language.yml"
   - "$ref": "../parameters/mode.yml"
@@ -31,7 +32,6 @@ parameters:
   - "$ref": "../parameters/traffic_model.yml"
   - "$ref": "../parameters/transit_mode.yml"
   - "$ref": "../parameters/transit_routing_preference.yml"
-  - "$ref": "../parameters/units.yml"
 responses:
   "200":
     description: 200 OK

@@ -56,6 +56,9 @@ responses:
           chicago_los_angeles_response:
             value:
               $ref: "../responses/maps_http_directions_chicago_los_angeles_response.yml"
+          invalid_response:
+            value:
+              $ref: "../responses/maps_http_directions_invalid_response.yml"
           disneyland_response:
             value:
               $ref: "../responses/maps_http_directions_disneyland_response.yml"

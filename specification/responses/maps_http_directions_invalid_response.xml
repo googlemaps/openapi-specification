@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_directions_invalid_response] -->
+<DirectionsResponse>
+ <status>INVALID_REQUEST</status>
+ <error_message>Invalid request. Missing the 'origin' parameter.</error_message>
+</DirectionsResponse>
+<!-- [END maps_http_directions_invalid_response] -->

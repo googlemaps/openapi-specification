@@ -3551,6 +3551,11 @@ paths:
                           - 0
                           - 1
                     status: OK
+                invalid_response:
+                  value:
+                    error_message: Invalid request. Missing the 'origin' parameter.
+                    routes: []
+                    status: INVALID_REQUEST
                 disneyland_response:
                   value:
                     geocoded_waypoints:
@@ -20447,6 +20452,10 @@ components:
           type: array
           items:
             type: string
+        error_message:
+          description: |
+            When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.
+          type: string
     DirectionsStep:
       type: object
       title: DirectionsStep
@@ -20778,7 +20787,7 @@ components:
       properties:
         error_message:
           description: |
-            When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.
+            When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.
           type: string
           example: Invalid request. Invalid 'locations' parameter.
         status:

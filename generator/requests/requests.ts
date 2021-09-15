@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import { SnippetRequest, PostJsonRequest, Request } from "./types";
-import { Url } from "postman-collection";
+import { PostJsonRequest, Request, SnippetRequest } from "./types";
 
-import { readFileSync } from "fs";
+import { Url } from "postman-collection";
 import path from "path";
+import { readFileSync } from "fs";
 import yaml from "js-yaml";
 
 function parseRequestBody(filename) {
@@ -1265,6 +1265,37 @@ export const REQUESTS: SnippetRequest[] = [
           },
           { key: "waypoints", value: "Joplin, MO|Oklahoma City, OK" },
         ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_zero_results",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "0,0",
+          },
+          {
+            key: "destination",
+            value: "45,45",
+          },
+        ],
+      }),
+    }),
+  },
+  {
+    regionTag: "maps_http_directions_invalid",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [],
       }),
     }),
   },

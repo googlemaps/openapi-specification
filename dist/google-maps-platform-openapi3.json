@@ -4928,6 +4928,13 @@
                       "status": "OK"
                     }
                   },
+                  "invalid_response": {
+                    "value": {
+                      "error_message": "Invalid request. Missing the 'origin' parameter.",
+                      "routes": [],
+                      "status": "INVALID_REQUEST"
+                    }
+                  },
                   "disneyland_response": {
                     "value": {
                       "geocoded_waypoints": [
@@ -28925,6 +28932,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "error_message": {
+            "description": "When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
+            "type": "string"
           }
         }
       },
@@ -29284,7 +29295,7 @@
         ],
         "properties": {
           "error_message": {
-            "description": "When the service returns a status code other than `OK<`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
+            "description": "When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
             "type": "string",
             "example": "Invalid request. Invalid 'locations' parameter."
           },

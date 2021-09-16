@@ -29961,7 +29961,7 @@
             "example": 600
           },
           "vicinity": {
-            "description": "A simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country. For example, Google's Sydney, Australia office has a vicinity value of `48 Pirrama Road, Pyrmont`.",
+            "description": "A simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country. For example, Google's Sydney, Australia office has a vicinity value of `48 Pirrama Road, Pyrmont`. This content is meant to be read as-is. Do not programmatically parse the formatted address.",
             "type": "string",
             "example": "48 Pirrama Road, Pyrmont"
           },

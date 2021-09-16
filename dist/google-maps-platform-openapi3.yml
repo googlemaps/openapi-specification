@@ -21375,7 +21375,7 @@ components:
         - types
       properties:
         description:
-          description: 'Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name.'
+          description: 'Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name. This content is meant to be read as-is. Do not programmatically parse the formatted address.'
           type: string
           example: 'Paris, France'
         matched_substrings:
@@ -21390,7 +21390,7 @@ components:
           description: (Deprecated) See place_id.
           type: string
         structured_formatting:
-          description: Provides pre-formatted text that can be shown in your autocomplete results.
+          description: Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be read as-is. Do not programmatically parse the formatted address.
           $ref: '#/components/schemas/PlaceAutocompleteStructuredFormat'
         terms:
           description: 'Contains an array of terms identifying each section of the returned description (a section of the description is generally terminated with a comma). Each entry in the array has a `value` field, containing the text of the term, and an `offset` field, defining the start position of this term in the description, measured in Unicode characters.'

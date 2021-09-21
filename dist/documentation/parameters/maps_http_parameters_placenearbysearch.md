@@ -10,7 +10,7 @@
 
 -   <h3 id="keyword">keyword</h3>
 
-    A term to be matched against all content that Google has indexed for this place, including but not limited to name, type, and address, as well as customer reviews and other third-party content.
+    A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content. Note that explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
 
 -   <h3 id="language">language</h3>
 

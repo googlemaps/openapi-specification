@@ -29,7 +29,7 @@ An OpenAPI specification for Google Maps Platform APIs.
 
 ## Development
 
-The repository makes use of [Bazel](bazel.build) to generate outputs from the specification and sample requests.
+The repository makes use of [Bazel](https://bazel.build/) to generate outputs from the specification and sample requests.
 
 ### Build and test
 

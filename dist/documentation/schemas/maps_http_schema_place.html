@@ -396,12 +396,20 @@
       <td>
         <div class="nonref-property-description">
           <p>
-            A simplified address for the place, including the street name,
-            street number, and locality, but not the province/state, postal
-            code, or country. For example, Google's Sydney, Australia office has
-            a vicinity value of <code>48 Pirrama Road, Pyrmont</code>. This
-            content is meant to be read as-is. Do not programmatically parse the
-            formatted address.
+            For establishment (<code>types:["establishment", ...])</code>
+            results only, the <code>vicinity</code> field contains a simplified
+            address for the place, including the street name, street number, and
+            locality, but not the province/state, postal code, or country.
+          </p>
+          <p>
+            For all other results, the <code>vicinity</code> field contains the
+            name of the narrowest political (<code
+              >types:["political", ...]</code
+            >) feature that is present in the address of the result.
+          </p>
+          <p>
+            This content is meant to be read as-is. Do not programmatically
+            parse the formatted address.
           </p>
         </div>
       </td>

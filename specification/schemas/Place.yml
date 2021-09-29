@@ -126,7 +126,12 @@ properties:
     type: number
     example: 600
   vicinity:
-    description: A simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country. For example, Google's Sydney, Australia office has a vicinity value of `48 Pirrama Road, Pyrmont`. This content is meant to be read as-is. Do not programmatically parse the formatted address.
+    description: |    
+      For establishment (`types:["establishment", ...])` results only, the `vicinity` field contains a simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country.
+
+      For all other results, the `vicinity` field contains the name of the narrowest political (`types:["political", ...]`) feature that is present in the address of the result.
+
+      This content is meant to be read as-is. Do not programmatically parse the formatted address.
     type: string
     example: "48 Pirrama Road, Pyrmont"
   website:

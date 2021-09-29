@@ -117,3 +117,15 @@ openapi2postmanv2(
     ],
     visibility = ["//visibility:public"],
 )
+
+genrule(
+    name = "parameters",
+    srcs = [
+        "//specification:openapi3",
+        "@npm//glob",
+        "@npm//yargs",
+    ],
+    outs = ["parameters.yml"],
+    tools = ["//rules:parameters"],
+    cmd = "$(location //rules:parameters) --output $@ $(locations //specification:openapi3)"  
+)

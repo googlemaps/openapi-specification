@@ -54,12 +54,36 @@ ts_library(
     ],
 )
 
+ts_library(
+    name = "_parameters_lib",
+    srcs = ["parameters.ts"],
+    deps = [
+        "@npm//@types/node",
+        "@npm//@types/glob",
+        "@npm//@types/yargs",
+        "@npm//glob",
+        "@npm//yargs",
+    ],
+)
+
 nodejs_binary(
     name = "dereference",
     data = [
         ":_dereference_lib",
     ],
     entry_point = ":dereference.ts",
+    templated_args = [
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
+)
+
+nodejs_binary(
+    name = "parameters",
+    data = [
+        ":_parameters_lib",
+    ],
+    entry_point = ":parameters.ts",
     templated_args = [
         "--nobazel_node_patches",
         "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388

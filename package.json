@@ -15,8 +15,9 @@
     "dist/*.json"
   ],
   "scripts": {
-    "build": "bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
+    "build": "npm run build:parameters && bazel build ... && rm -rf dist/* && tar xf bazel-bin/dist.tar -C dist",
     "build:responses": "bazel run generator/responses:_responses_bin -- --output `pwd`/specification/responses",
+    "build:parameters": "bazel build :parameters.yml && cp bazel-bin/parameters.yml specification/parameters/_index.yml",
     "publish:postman": "bazel run generator/postman:_postman_bin",
     "test": "bazel test ...",
     "watch": "ibazel build ...",

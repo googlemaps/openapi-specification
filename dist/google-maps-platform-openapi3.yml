@@ -127,233 +127,20 @@ paths:
         - Directions API
       description: 'The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.'
       parameters:
-        - name: arrival_time
-          description: |
-            Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
-          in: query
-          schema:
-            type: number
-        - name: departure_time
-          description: |
-            Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
-            * For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
-            * For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
-
-            <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
-            <div class="note">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>
-          in: query
-          schema:
-            type: number
-        - name: alternatives
-          description: |
-            If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
-          in: query
-          schema:
-            type: boolean
-        - name: avoid
-          description: |
-            Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
-            * `tolls` indicates that the calculated route should avoid toll roads/bridges.
-            * `highways` indicates that the calculated route should avoid highways.
-            * `ferries` indicates that the calculated route should avoid ferries.
-            * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
-
-            It's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: 
-
-            ```
-            avoid=tolls|highways|ferries.
-            ```
-          in: query
-          examples:
-            single:
-              value: highways
-              summary: A example using a single restriction.
-            multiple:
-              value: tolls|highways|ferries
-              summary: A example using a multiple restrictions.
-          schema:
-            type: string
-        - name: destination
-          description: 'The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.'
-          required: true
-          in: query
-          example: 'Victoria, BC'
-          schema:
-            type: string
-        - name: origin
-          description: |
-            The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
-            * Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
-              
-              ```
-              origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE
-              ```
-              
-            * If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.
-              
-              ```
-              origin=24+Sussex+Drive+Ottawa+ON
-              ```
-              
-              Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.
-            * If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.
-              
-              ```
-              origin=41.43206,-81.38992
-              ```
-
-            * Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`). 
-              
-              * **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`). 
-              * **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
-
-            <div class="note">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
-          required: true
-          in: query
-          examples:
-            simple:
-              value: 'Vancouver, BC'
-            modifier_side_of_road:
-              value: 'side_of_road:37.7663444,-122.4412006'
-            modifier_heading:
-              value: 'heading=90:37.773279,-122.468780'
-          schema:
-            type: string
-        - name: units
-          description: |
-            Specifies the unit system to use when displaying results.
-
-            Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
-
-            For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
-
-            * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
-            * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
-
-            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
-          example: metric
-          in: query
-          schema:
-            type: string
-            enum:
-              - imperial
-              - metric
-        - name: waypoints
-          description: |
-            <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>
-
-            Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.
-            * If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).
-              <div class="note">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
-            * If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.
-            * If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, "1st Street" could be a complete value or a partial value for "1st street NE" or "1st St SE". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.
-            * Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.
-              * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.
-              * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`
-
-            ##### Influence routes with stopover and pass through points
-
-            For each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.
-
-            If you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.
-
-            The following URL modifies the previous request such that the journey is routed through Lexington without stopping:
-
-            ```
-            https://maps.googleapis.com/maps/api/directions/json?
-            origin=Boston,MA&destination=Concord,MA
-            &waypoints=Charlestown,MA|via:Lexington,MA  
-            ```
-
-            The `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.
-
-            <div class="caution">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>
-
-
-            ##### Optimize your waypoints
-
-            By default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.
-
-            If you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.
-
-            The following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.
-
-            ```
-            https://maps.googleapis.com/maps/api/directions/json?
-            origin=Adelaide,SA&destination=Adelaide,SA
-            &waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA
-            ```
-
-            Inspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:
-
-            ```
-            "waypoint_order": [ 3, 2, 0, 1 ]
-            ```
-
-            <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
-          in: query
-          examples:
-            multiple:
-              value: 'MA|Lexington,MA'
-            via:
-              value: 'Charlestown,MA|via:Lexington,MA'
-            optimize:
-              value: 'optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA'
-            place:
-              value: ChIJGwVKWe5w44kRcr4b9E25-Go
-            location:
-              value: '-34.92788%2C138.60008'
-            encoded:
-              value: 'enc:lexeF{~wsZejrPjtye@:'
-            via_encoded:
-              value: 'via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:'
-            modifier:
-              value: 'side_of_road:via:enc:lexeF{~wsZejrPjtye@:'
-          schema:
-            type: string
+        - $ref: '#/components/parameters/arrival_time'
+        - $ref: '#/components/parameters/departure_time'
+        - $ref: '#/components/parameters/directions_alternatives'
+        - $ref: '#/components/parameters/directions_avoid'
+        - $ref: '#/components/parameters/directions_destination'
+        - $ref: '#/components/parameters/directions_origin'
+        - $ref: '#/components/parameters/directions_units'
+        - $ref: '#/components/parameters/directions_waypoints'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/mode'
         - $ref: '#/components/parameters/region'
-        - name: traffic_model
-          description: |
-            Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The `traffic_model` parameter may only be specified for driving directions where the request includes a `departure_time`. The available values for this parameter are:
-            * `best_guess` (default) indicates that the returned duration_in_traffic should be the best estimate of travel time given what is known about both historical traffic conditions and live traffic. Live traffic becomes more important the closer the `departure_time` is to now.
-            * `pessimistic` indicates that the returned duration_in_traffic should be longer than the actual travel time on most days, though occasional days with particularly bad traffic conditions may exceed this value.
-            * `optimistic` indicates that the returned duration_in_traffic should be shorter than the actual travel time on most days, though occasional days with particularly good traffic conditions may be faster than this value.
-            The default value of `best_guess` will give the most useful predictions for the vast majority of use cases. It is possible the `best_guess` travel time prediction may be shorter than `optimistic`, or alternatively, longer than `pessimistic`, due to the way the `best_guess` prediction model integrates live traffic information.
-          in: query
-          example: pessimistic
-          schema:
-            type: string
-            default: best_guess
-            enum:
-              - best_guess
-              - pessimistic
-              - optimistic
-        - name: transit_mode
-          description: |
-            Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:
-            * `bus` indicates that the calculated route should prefer travel by bus.
-            * `subway` indicates that the calculated route should prefer travel by subway.
-            * `train` indicates that the calculated route should prefer travel by train.
-            * `tram` indicates that the calculated route should prefer travel by tram and light rail.
-            * `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.
-          in: query
-          example: train|tram|subway
-          schema:
-            type: string
-        - name: transit_routing_preference
-          description: |
-            Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:
-            * `less_walking` indicates that the calculated route should prefer limited amounts of walking.
-            * `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.
-          in: query
-          example: less_walking
-          schema:
-            type: string
-            enum:
-              - less_walking
-              - fewer_transfers
+        - $ref: '#/components/parameters/traffic_model'
+        - $ref: '#/components/parameters/transit_mode'
+        - $ref: '#/components/parameters/transit_routing_preference'
       responses:
         '200':
           description: 200 OK
@@ -14512,50 +14299,9 @@ paths:
 
         Requests to the Elevation API utilize different parameters based on whether the request is for discrete locations or for an ordered path. For discrete locations, requests for elevation return data on the specific locations passed in the request; for paths, elevation requests are instead sampled along the given path.
       parameters:
-        - name: locations
-          in: query
-          style: pipeDelimited
-          explode: false
-          description: |
-            Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
-
-            The locations parameter may take the following arguments:
-
-            - A single coordinate: `locations=40.714728,-73.998672`
-            - An array of coordinates separated using the pipe ('|') character: 
-              ```
-              locations=40.714728,-73.998672|-34.397,150.644
-              ```
-            - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): 
-              ```
-              locations=enc:gfo}EtohhU
-              ```
-
-            Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
-
-            You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
-          example:
-            - '35,-100'
-            - '40,-110'
-          schema:
-            $ref: '#/components/schemas/LatLngArrayString'
-        - name: path
-          in: query
-          style: pipeDelimited
-          explode: false
-          description: 'An array of comma separated `latitude,longitude` strings.'
-          example:
-            - '35,-110'
-            - '33,-110'
-            - '31,-110'
-          schema:
-            $ref: '#/components/schemas/LatLngArrayString'
-        - name: samples
-          in: query
-          description: Required if path parameter is set.
-          schema:
-            type: number
-          example: 10
+        - $ref: '#/components/parameters/elevation_locations'
+        - $ref: '#/components/parameters/elevation_path'
+        - $ref: '#/components/parameters/elevation_samples'
       responses:
         '200':
           description: 200 OK
@@ -14655,158 +14401,13 @@ paths:
 
         To see countries currently supported by the Google Maps Platform Geocoding API, please consult the [Google Maps coverage data](https://developers.google.com/maps/coverage). The accuracy of geocoded locations may vary per country, so you should consider using the returned `location_type` field to determine if a good enough match has been found for the purposes of your application. Please note that the availability of geocoding data depends on our contracts with data providers, so it is subject to change.
       parameters:
-        - name: address
-          example: '1600 Amphitheatre+Parkway, Mountain View, CA'
-          description: |-
-            The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
-
-            ```
-            address=24%20Sussex%20Drive%20Ottawa%20ON
-            ```
-
-            Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
-            - global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
-            - compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
-
-            <div class="note">Note: At least one of `address` or `components` is required.</div>
-          in: query
-          schema:
-            type: string
-        - name: bounds
-          description: 'The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.'
-          example:
-            - '35,-100'
-            - '40,-110'
-          schema:
-            $ref: '#/components/schemas/LatLngArrayString'
-          in: query
-        - name: components
-          style: pipeDelimited
-          explode: false
-          example:
-            - 'street_number:1600'
-            - 'route:Amphitheatre+Parkway'
-            - 'locality:Mountain+View'
-            - 'administrative_area_level_1:CA'
-            - 'country:US'
-          description: |-
-            A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.
-
-            The components that can be filtered include:
-
-            * `postal_code` matches `postal_code` and `postal_code_prefix`.
-            * `country` matches a country name or a two letter ISO 3166-1 country code. The API follows the ISO standard for defining countries, and the filtering works best when using the corresponding ISO code of the country.
-              <aside class="note"><strong>Note</strong>: If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend. You can find code information at Wikipedia: List of ISO 3166 country codes or the ISO Online Browsing Platform.</aside>
-              
-            The following components may be used to influence results, but will not be enforced:
-
-            * `route` matches the long or short name of a route.
-            * `locality` matches against `locality` and `sublocality` types.
-            * `administrative_area` matches all the `administrative_area` levels.
-              
-            Notes about component filtering:
-
-            * Do not repeat these component filters in requests, or the API will return `INVALID_REQUEST`: 
-              * `country`
-              * `postal_code`
-              * `route`
-            * If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.
-            * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
-            * For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.
-
-            <div class="note">Note: At least one of `address` or `components` is required.</div>
-          in: query
-          schema:
-            items:
-              type: string
-            type: array
-        - name: latlng
-          example: '40,-110'
-          description: 'The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.'
-          in: query
-          schema:
-            type: string
-        - name: location_type
-          description: |-
-            A filter of one or more location types, separated by a pipe (`|`). If the parameter contains multiple location types, the API returns all addresses that match any of the types. A note about processing: The `location_type` parameter does not restrict the search to the specified location type(s). Rather, the `location_type` acts as a post-search filter: the API fetches all results for the specified latlng, then discards those results that do not match the specified location type(s). The following values are supported:
-            * `APPROXIMATE` returns only the addresses that are characterized as approximate.
-            * `GEOMETRIC_CENTER` returns only geometric centers of a location such as a polyline (for example, a street) or polygon (region).
-            * `RANGE_INTERPOLATED` returns only the addresses that reflect an approximation (usually on a road) interpolated between two precise points (such as intersections). An interpolated range generally indicates that rooftop geocodes are unavailable for a street address.
-            * `ROOFTOP` returns only the addresses for which Google has location information accurate down to street address precision.
-          style: pipeDelimited
-          explode: false
-          schema:
-            items:
-              type: string
-              enum:
-                - APPROXIMATE
-                - GEOMETRIC_CENTER
-                - RANGE_INTERPOLATED
-                - ROOFTOP
-            type: array
-          in: query
-        - name: place_id
-          description: |
-            A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
-            For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
-          schema:
-            type: string
-          in: query
-          example: ChIJN1t_tDeuEmsRUsoyG83frY4
-        - name: result_type
-          description: |-
-            A filter of one or more address types, separated by a pipe (|). If the parameter contains multiple address types, the API returns all addresses that match any of the types. A note about processing: The `result_type` parameter does not restrict the search to the specified address type(s). Rather, the `result_type` acts as a post-search filter: the API fetches all results for the specified `latlng`, then discards those results that do not match the specified address type(s).The following values are supported:
-            * `administrative_area_level_1` indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states. Not all nations exhibit these administrative levels. In most cases, administrative_area_level_1   * `short` names will closely match ISO 3166-2 subdivisions and other widely circulated lists; however this is not guaranteed as our geocoding results are based on a variety of signals and location data.
-            * `administrative_area_level_2` indicates a second-order civil entity below the country level. Within the United States, these administrative levels are counties. Not all nations exhibit these administrative levels.
-            * `administrative_area_level_3` indicates a third-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
-            * `administrative_area_level_4` indicates a fourth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
-            * `administrative_area_level_5` indicates a fifth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
-            * `airport` indicates an airport.
-            * `colloquial_area` indicates a commonly-used alternative name for the entity.
-            * `country` indicates the national political entity, and is typically the highest order type returned by the Geocoder.
-            * `intersection` indicates a major intersection, usually of two major roads.
-            * `locality` indicates an incorporated city or town political entity.
-            * `natural_feature` indicates a prominent natural feature.
-            * `neighborhood` indicates a named neighborhood
-            * `park` indicates a named park.
-            * `plus_code` indicates an encoded location reference, derived from latitude and longitude. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [https://plus.codes/](https://plus.codes/) for details.
-            * `point_of_interest` indicates a named point of interest. Typically, these "POI"s are prominent local entities that don't easily fit in another category, such as "Empire State Building" or "Eiffel Tower".
-            * `political` indicates a political entity. Usually, this type indicates a polygon of some civil administration.
-            * `postal_code` indicates a postal code as used to address postal mail within the country.
-            * `premise` indicates a named location, usually a building or collection of buildings with a common name
-            * `route` indicates a named route (such as "US 101").
-            * `street_address` indicates a precise street address.
-            * `sublocality` indicates a first-order civil entity below a locality. For some locations may receive one of the additional types: `sublocality_level_1` to `sublocality_level_5`. Each sublocality level is a civil entity. Larger numbers indicate a smaller geographic area.
-            * `subpremise` indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name
-          style: pipeDelimited
-          explode: false
-          schema:
-            items:
-              type: string
-              enum:
-                - administrative_area_level_1
-                - administrative_area_level_2
-                - administrative_area_level_3
-                - administrative_area_level_4
-                - administrative_area_level_5
-                - airport
-                - colloquial_area
-                - country
-                - intersection
-                - locality
-                - natural_feature
-                - neighborhood
-                - park
-                - plus_code
-                - political
-                - postal_code
-                - premise
-                - route
-                - street_address
-                - sublocality
-                - subpremise
-            type: array
-          in: query
+        - $ref: '#/components/parameters/geocode_address'
+        - $ref: '#/components/parameters/geocode_bounds'
+        - $ref: '#/components/parameters/geocode_components'
+        - $ref: '#/components/parameters/geocode_latlng'
+        - $ref: '#/components/parameters/geocode_location_type'
+        - $ref: '#/components/parameters/geocode_place_id'
+        - $ref: '#/components/parameters/geocode_result_type'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/region'
       responses:
@@ -16121,24 +15722,8 @@ paths:
         The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations. You request the time zone information for a specific latitude/longitude pair and date. The API returns the name of that time zone, the time offset from UTC, and the daylight savings offset.
       parameters:
         - $ref: '#/components/parameters/language'
-        - name: location
-          description: |
-            A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
-          schema:
-            type: string
-          required: true
-          in: query
-          example: '39.6034810,-119.6822510'
-        - name: timestamp
-          in: query
-          description: |
-            The desired time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the `timestamp` to determine whether or not Daylight Savings should be applied, based on the time zone of the `location`. 
-
-            Note that the API does not take historical time zones into account. That is, if you specify a past timestamp, the API does not take into account the possibility that the location was previously in a different time zone.
-          schema:
-            type: number
-          required: true
-          example: 1331161200
+        - $ref: '#/components/parameters/timezone_location'
+        - $ref: '#/components/parameters/timezone_timestamp'
       responses:
         '200':
           description: 200 OK
@@ -16180,27 +15765,8 @@ paths:
         - Roads API
       description: 'This service returns the best-fit road geometry for a given set of GPS coordinates. This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along. Optionally, you can request that the points be interpolated, resulting in a path that smoothly follows the geometry of the road.'
       parameters:
-        - name: path
-          description: |
-            The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
-            <div class="note">Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.</div>
-          required: true
-          in: query
-          style: pipeDelimited
-          explode: false
-          example:
-            - '60.170880,24.942795'
-            - '60.170879,24.942796'
-            - '60.170877,24.942796'
-          schema:
-            $ref: '#/components/schemas/LatLngArrayString'
-        - name: interpolate
-          in: query
-          description: |
-            Whether to interpolate a path to include all points forming the full road-geometry. When true, additional interpolated points will also be returned, resulting in a path that smoothly follows the geometry of the road, even around corners and through tunnels. Interpolated paths will most likely contain more points than the original path. Defaults to `false`.
-          schema:
-            type: boolean
-          example: true
+        - $ref: '#/components/parameters/snaptoroads_path'
+        - $ref: '#/components/parameters/snaptoroads_interpolate'
       responses:
         '200':
           description: 200 OK
@@ -16651,20 +16217,7 @@ paths:
         - Roads API
       description: This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.
       parameters:
-        - name: points
-          description: |
-            The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
-            <div class="note">Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.</div>
-          required: true
-          in: query
-          style: pipeDelimited
-          explode: false
-          example:
-            - '60.170880,24.942795'
-            - '60.170879,24.942796'
-            - '60.170877,24.942796'
-          schema:
-            $ref: '#/components/schemas/LatLngArrayString'
+        - $ref: '#/components/parameters/nearestroads_points'
       responses:
         '200':
           description: 200 OK
@@ -16694,80 +16247,18 @@ paths:
         - Distance Matrix API
       description: 'The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.'
       parameters:
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/0'
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/1'
-        - name: avoid
-          description: |
-            Distances may be calculated that adhere to certain restrictions. Restrictions are indicated by use of the avoid parameter, and an argument to that parameter indicating the restriction to avoid. The following restrictions are supported:
-
-            * `tolls` indicates that the calculated route should avoid toll roads/bridges.
-            * `highways` indicates that the calculated route should avoid highways.
-            * `ferries` indicates that the calculated route should avoid ferries.
-            * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
-
-            <div class="note">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>
-          in: query
-          example: highways
-          schema:
-            type: string
-        - name: destinations
-          description: One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
-          required: true
-          in: query
-          style: pipeDelimited
-          explode: false
-          example:
-            - San Francisco
-            - Victoria BC
-          schema:
-            type: array
-            items:
-              type: string
-        - name: origins
-          description: |
-            The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:
-            - **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.
-            - **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.
-              <div class="note">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>
-            - **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.
-            - **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):
-              - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).
-              - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
-            - **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.
-              - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`
-              - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: 
-                ```
-                origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:
-                ```
-          required: true
-          in: query
-          style: pipeDelimited
-          explode: false
-          example:
-            - Vancouver BC
-            - Seattle
-          schema:
-            type: array
-            items:
-              type: string
-        - name: units
-          description: |
-            Specifies the unit system to use when displaying results.
-
-            <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
-          example: metric
-          in: query
-          schema:
-            type: string
-            enum:
-              - imperial
-              - metric
+        - $ref: '#/components/parameters/arrival_time'
+        - $ref: '#/components/parameters/departure_time'
+        - $ref: '#/components/parameters/distancematrix_avoid'
+        - $ref: '#/components/parameters/distancematrix_destinations'
+        - $ref: '#/components/parameters/distancematrix_origins'
+        - $ref: '#/components/parameters/distancematrix_units'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/mode'
         - $ref: '#/components/parameters/region'
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/11'
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/12'
-        - $ref: '#/paths/~1maps~1api~1directions~1json/get/parameters/13'
+        - $ref: '#/components/parameters/traffic_model'
+        - $ref: '#/components/parameters/transit_mode'
+        - $ref: '#/components/parameters/transit_routing_preference'
       responses:
         '200':
           description: 200 OK
@@ -16999,71 +16490,9 @@ paths:
         - Places API
       description: 'The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.'
       parameters:
-        - name: place_id
-          description: |
-            A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
-            For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
-          schema:
-            type: string
-          required: true
-          in: query
-          example: ChIJN1t_tDeuEmsRUsoyG83frY4
-        - name: fields
-          description: |
-            Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.
-
-            Fields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.
-
-            **Basic**
-
-            The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
-
-            **Contact**
-
-            The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
-
-            **Atmosphere**
-
-            The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
-
-            <div class="caution">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
-          schema:
-            type: array
-            items:
-              type: string
-            minItems: 1
-          explode: false
-          in: query
-          examples:
-            basic:
-              value:
-                - formatted_address
-            multiple:
-              value:
-                - formatted_address
-                - name
-                - geometry
-            compound:
-              value:
-                - opening_hours/open_now
-            all:
-              value:
-                - '*'
-        - name: sessiontoken
-          description: |
-            A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.
-
-            The session begins when the user starts typing a query, and concludes when they select a place and a call to Place Details is made. Each session can have multiple queries, followed by one place selection. The API key(s) used for each request within a session must belong to the same Google Cloud Console project. Once a session has concluded, the token is no longer valid; your app must generate a fresh token for each session. If the `sessiontoken` parameter is omitted, or if you reuse a session token, the session is charged as if no session token was provided (each request is billed separately).
-
-            We recommend the following guidelines:
-
-            - Use session tokens for all autocomplete sessions.
-            - Generate a fresh token for each session. Using a version 4 UUID is recommended.
-            - Ensure that the API key(s) used for all Place Autocomplete and Place Details requests within a session belong to the same Cloud Console project.
-            - Be sure to pass a unique session token for each new session. Using the same token for more than one session will result in each request being billed individually.
-          schema:
-            type: string
-          in: query
+        - $ref: '#/components/parameters/places_place_id'
+        - $ref: '#/components/parameters/places_fields'
+        - $ref: '#/components/parameters/places_sessiontoken'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/region'
       responses:
@@ -17310,7 +16739,7 @@ paths:
         A Find Place request takes a text input and returns a place. The input can be any kind of Places text data, such as a name, address, or phone number. The request must be a string. A Find Place request using non-string data such as a lat/lng coordinate or plus code generates an error.
         <div class="note">Note: If you omit the fields parameter from a Find Place request, only the place_id for the result will be returned.</div>
       parameters:
-        - $ref: '#/paths/~1maps~1api~1place~1details~1json/get/parameters/1'
+        - $ref: '#/components/parameters/places_fields'
         - name: input
           description: |
             Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.
@@ -17319,36 +16748,8 @@ paths:
           required: true
           in: query
           example: Museum of Contemporary Art Australia
-        - name: inputtype
-          description: |
-            The type of input. This can be one of either `textquery` or `phonenumber`. Phone numbers must be in international format (prefixed by a plus sign ("+"), followed by the country code, then the phone number itself). See [E.164 ITU recommendation](https://en.wikipedia.org/wiki/E.164) for more information.
-          schema:
-            type: string
-            enum:
-              - textquery
-              - phonenumber
-          required: true
-          in: query
-          example: textquery
-        - name: locationbias
-          description: |
-            Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
-            - IP bias: Instructs the API to use IP address biasing. Pass the string `ipbias` (this option has no additional parameters).
-            - Point: A single lat/lng coordinate. Use the following format: `point:lat,lng`.
-            - Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
-            - Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
-          schema:
-            type: string
-          in: query
-          examples:
-            ipbias:
-              value: ipbias
-            point:
-              value: 'point:37.781157,-122.398720'
-            circular:
-              value: 'circle:1000@37.781157,-122.398720'
-            rectangular:
-              value: 'rectangle:37.7,-122.4|37.8,-122.3'
+        - $ref: '#/components/parameters/places_inputtype'
+        - $ref: '#/components/parameters/places_locationbias'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -17449,43 +16850,16 @@ paths:
         - Places API
       description: A Nearby Search lets you search for places within a specified area. You can refine your search request by supplying keywords or specifying the type of place you are searching for.
       parameters:
-        - name: keyword
-          description: |
-            A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content. Note that explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
-          schema:
-            type: string
-          in: query
-        - name: location
-          description: |
-            The point around which to retrieve place information. This must be specified as `latitude,longitude`.
-          required: true
-          schema:
-            type: string
-          in: query
-          example: '40,-110'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/1'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/2'
-        - name: name
-          description: |
-            *Not Recommended* A term to be matched against all content that Google has indexed for this place. Equivalent to `keyword`. The `name` field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the `keyword` parameter for all search terms.
-          schema:
-            type: string
-          in: query
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/3'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/4'
-        - name: rankby
-          description: |
-            Specifies the order in which results are listed. Possible values are:
-            - `prominence` (default). This option sorts results based on their importance. Ranking will favor prominent places within the set radius over nearby places that match but that are less prominent. Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. When prominence is specified, the `radius` parameter is required.
-            - `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required.
-          schema:
-            type: string
-            enum:
-              - prominence
-              - distance
-          in: query
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/7'
+        - $ref: '#/components/parameters/places_keyword'
+        - $ref: '#/components/parameters/places_location-required'
+        - $ref: '#/components/parameters/places_maxprice'
+        - $ref: '#/components/parameters/places_minprice'
+        - $ref: '#/components/parameters/places_name'
+        - $ref: '#/components/parameters/places_opennow'
+        - $ref: '#/components/parameters/places_pagetoken'
+        - $ref: '#/components/parameters/places_rankby'
+        - $ref: '#/components/parameters/places_radius'
+        - $ref: '#/components/parameters/places_type'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -18299,89 +17673,14 @@ paths:
 
         The search response will include a list of places. You can send a Place Details request for more information about any of the places in the response.
       parameters:
-        - name: location
-          description: |
-            The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
-
-            <div class="note">The <code>location</code> parameter may be overriden if the <code>query</code> contains an explicit location such as <code>Market in Barcelona</code>. Using quotes around the query may also influence the weight given to the <code>location</code> and <code>radius</code>.</div>
-          schema:
-            type: string
-          in: query
-          example: '40,-110'
-        - name: maxprice
-          description: |
-            Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
-          schema:
-            type: string
-            enum:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-          in: query
-        - name: minprice
-          description: |
-            Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
-          schema:
-            type: string
-            enum:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-          in: query
-        - name: opennow
-          description: |
-            Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
-          schema:
-            type: boolean
-          in: query
-        - name: pagetoken
-          description: |
-            Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
-          schema:
-            type: string
-          in: query
-        - name: query
-          description: |
-            The text string on which to search, for example: "restaurant" or "123 Main Street". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
-          schema:
-            type: string
-          required: true
-          in: query
-          example: restaurants in Sydney
-        - name: radius
-          description: |
-            Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.
-
-            The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
-
-            * Autocomplete: 50,000 meters
-            * Nearby Search: 
-              * with `keyword` or `name`: 50,000 meters
-              * without `keyword` or `name`
-                * `rankby=prominence` (default): 50,000 meters
-                * `rankby=distance`: A few kilometers depending on density of area
-            * Query Autocomplete: 50,000 meters
-            * Text Search: 50,000 meters
-          schema:
-            type: number
-          in: query
-          example: 1000
-        - name: type
-          description: |
-            Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
-
-            * `type=hospital|pharmacy|doctor` becomes `type=hospital`
-            * `type=hospital,pharmacy,doctor` is ignored entirely
-
-            See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
-            <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
-          schema:
-            type: string
-          in: query
+        - $ref: '#/components/parameters/places_location-weighted'
+        - $ref: '#/components/parameters/places_maxprice'
+        - $ref: '#/components/parameters/places_minprice'
+        - $ref: '#/components/parameters/places_opennow'
+        - $ref: '#/components/parameters/places_pagetoken'
+        - $ref: '#/components/parameters/places_query'
+        - $ref: '#/components/parameters/places_radius'
+        - $ref: '#/components/parameters/places_type'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/region'
       responses:
@@ -19260,25 +18559,9 @@ paths:
 
         Photos returned by the Photo service are sourced from a variety of locations, including business owners and user contributed photos. In most cases, these photos can be used without attribution, or will have the required attribution included as a part of the image. However, if the returned photo element includes a value in the html_attributions field, you will have to include the additional attribution in your application wherever you display the image.
       parameters:
-        - name: photo_reference
-          description: |
-            A string identifier that uniquely identifies a photo. Photo references are returned from either a Place Search or Place Details request.
-          schema:
-            type: string
-          required: true
-          in: query
-        - name: maxheight
-          description: |
-            Specifies the maximum desired height, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.
-          schema:
-            type: number
-          in: query
-        - name: maxwidth
-          description: |
-            Specifies the maximum desired width, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.
-          schema:
-            type: number
-          in: query
+        - $ref: '#/components/parameters/places_photo_reference'
+        - $ref: '#/components/parameters/places_maxheight'
+        - $ref: '#/components/parameters/places_maxwidth'
       responses:
         '200':
           description: 200 OK
@@ -19306,9 +18589,9 @@ paths:
             type: string
           required: true
           in: query
-        - $ref: '#/paths/~1maps~1api~1place~1autocomplete~1json/get/parameters/4'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/0'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6'
+        - $ref: '#/components/parameters/places_offset'
+        - $ref: '#/components/parameters/places_location-weighted'
+        - $ref: '#/components/parameters/places_radius'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -19470,68 +18753,14 @@ paths:
             type: string
           required: true
           in: query
-        - $ref: '#/paths/~1maps~1api~1place~1details~1json/get/parameters/2'
-        - name: components
-          description: |
-            A grouping of places to which you would like to restrict your results. Currently, you can use components to filter by up to 5 countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character `|` as a separator. For example: `components=country:us|country:pr|country:vi|country:gu|country:mp` would restrict your results to places within the United States and its unincorporated organized territories.
-            <div class="note"><strong>Note:</strong> If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend.  You can find code information at <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="blank" class="external">Wikipedia: List of ISO 3166 country codes</a> or the <a href="https://www.iso.org/obp/ui/#search" target="blank" class="external">ISO Online Browsing Platform</a>.</div>
-          schema:
-            type: string
-          example: 'country:us|country:pr'
-          in: query
-        - name: strictbounds
-          description: |
-            Returns only those places that are strictly within the region defined by `location` and `radius`. This is a restriction, rather than a bias, meaning that results outside this region will not be returned even if they match the user input.
-          schema:
-            type: boolean
-          in: query
-        - name: offset
-          description: |
-            The position, in the input term, of the last character that the service uses to match predictions. For example, if the input is `Google` and the offset is 3, the service will match on `Goo`. The string determined by the offset is matched against the first word in the input term only. For example, if the input term is `Google abc` and the offset is 3, the service will attempt to match against `Goo abc`. If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.
-          schema:
-            type: number
-          in: query
-          example: 3
-        - name: origin
-          description: |
-            The origin point from which to calculate straight-line distance to the destination (returned as `distance_meters`). If this value is omitted, straight-line distance will not be returned. Must be specified as `latitude,longitude`.
-          schema:
-            type: string
-          in: query
-          example: '40,-110'
-        - name: location
-          description: |
-            The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
-
-            <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
-          schema:
-            type: string
-          in: query
-          example: '40,-110'
-        - $ref: '#/paths/~1maps~1api~1place~1textsearch~1json/get/parameters/6'
-        - name: types
-          description: |
-            You may restrict results from a Place Autocomplete request to be of a certain type by passing a types parameter. The parameter specifies a type or a type collection, as listed in the supported types below. If nothing is specified, all types are returned. In general only a single type is allowed. The exception is that you can safely mix the geocode and establishment types, but note that this will have the same effect as specifying no types. The supported types are:
-            - `geocode` instructs the Place Autocomplete service to return only geocoding results, rather than business results. Generally, you use this request to disambiguate results where the location specified may be indeterminate.
-            - `address` instructs the Place Autocomplete service to return only geocoding results with a precise address. Generally, you use this request when you know the user will be looking for a fully specified address.
-            - `establishment` instructs the Place Autocomplete service to return only business results.
-            - `(regions)` type collection instructs the Places service to return any result matching the following types:
-              - `locality`
-              - `sublocality`
-              - `postal_code`
-              - `country`
-              - `administrative_area_level_1`
-              - `administrative_area_level_2`
-            - `(cities)` type collection instructs the Places service to return results that match `locality` or `administrative_area_level_3`.
-          schema:
-            type: string
-            enum:
-              - geocode
-              - address
-              - establishment
-              - (regions)
-              - (cities)
-          in: query
+        - $ref: '#/components/parameters/places_sessiontoken'
+        - $ref: '#/components/parameters/places_components'
+        - $ref: '#/components/parameters/places_strictbounds'
+        - $ref: '#/components/parameters/places_offset'
+        - $ref: '#/components/parameters/places_origin'
+        - $ref: '#/components/parameters/places_location'
+        - $ref: '#/components/parameters/places_radius'
+        - $ref: '#/components/parameters/places_types'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -19674,77 +18903,16 @@ paths:
       description: |
         The Street View Static API lets you embed a static (non-interactive) Street View panorama or thumbnail into your web page, without the use of JavaScript. The viewport is defined with URL parameters sent through a standard HTTP request, and is returned as a static image.
       parameters:
-        - name: fov
-          description: |
-            Determines the horizontal field of view of the image. The field of view is expressed in degrees, with a maximum allowed value of 120. When dealing with a fixed-size viewport, as with a Street View image of a set size, field of view in essence represents zoom, with smaller numbers indicating a higher level of zoom. Default is 90.
-          schema:
-            type: number
-          in: query
-        - name: heading
-          description: |
-            Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.
-          schema:
-            type: number
-          in: query
-        - name: location
-          description: |
-            The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.
-          schema:
-            type: string
-          in: query
-          examples:
-            latlng:
-              value: '40,-110'
-            text:
-              value: 'Chagrin Falls, OH'
-        - name: pano
-          description: |
-            A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.
-          schema:
-            type: string
-          in: query
-        - name: pitch
-          description: |
-            Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.
-          schema:
-            type: number
-          in: query
-        - name: radius
-          description: |
-            Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.
-          schema:
-            type: number
-          in: query
-        - name: return_error_code
-          description: |
-            Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.
-          schema:
-            type: boolean
-          in: query
-        - name: signature
-          description: |
-            A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).
-          schema:
-            type: string
-          in: query
-        - name: size
-          description: |
-            Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
-          schema:
-            type: string
-          in: query
-          required: true
-        - name: source
-          description: |
-            Limits Street View searches to selected sources. Valid values are:
-            * `default` uses the default sources for Street View; searches are not limited to specific sources.
-            * `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.
-          schema:
-            type: string
-            enum:
-              - default
-              - outdoor
-          in: query
+        - $ref: '#/components/parameters/streetview_fov'
+        - $ref: '#/components/parameters/streetview_heading'
+        - $ref: '#/components/parameters/streetview_location'
+        - $ref: '#/components/parameters/streetview_pano'
+        - $ref: '#/components/parameters/streetview_pitch'
+        - $ref: '#/components/parameters/streetview_radius'
+        - $ref: '#/components/parameters/streetview_return_error_code'
+        - $ref: '#/components/parameters/streetview_signature'
+        - $ref: '#/components/parameters/streetview_size'
+        - $ref: '#/components/parameters/streetview_source'
       responses:
         '200':
           description: 200 OK
@@ -19763,20 +18931,15 @@ paths:
       description: |
         The Street View Static API metadata requests provide data about Street View panoramas. Using the metadata, you can find out if a Street View image is available at a given location, as well as getting programmatic access to the latitude and longitude, the panorama ID, the date the photo was taken, and the copyright information for the image. Accessing this metadata allows you to customize error behavior in your application.
       parameters:
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/1'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/2'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/3'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/4'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/5'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/6'
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/7'
-        - name: size
-          description: |
-            Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
-          schema:
-            type: string
-          in: query
-        - $ref: '#/paths/~1maps~1api~1streetview/get/parameters/9'
+        - $ref: '#/components/parameters/streetview_heading'
+        - $ref: '#/components/parameters/streetview_location'
+        - $ref: '#/components/parameters/streetview_pano'
+        - $ref: '#/components/parameters/streetview_pitch'
+        - $ref: '#/components/parameters/streetview_radius'
+        - $ref: '#/components/parameters/streetview_return_error_code'
+        - $ref: '#/components/parameters/streetview_signature'
+        - $ref: '#/components/parameters/streetview_size_optional'
+        - $ref: '#/components/parameters/streetview_source'
       responses:
         '200':
           description: 200 OK
@@ -19796,6 +18959,485 @@ paths:
                     status: OK
 components:
   parameters:
+    arrival_time:
+      name: arrival_time
+      description: |
+        Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. You can specify either `departure_time` or `arrival_time`, but not both. Note that `arrival_time` must be specified as an integer.
+      in: query
+      schema:
+        type: number
+    departure_time:
+      name: departure_time
+      description: |
+        Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
+        * For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
+        * For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
+
+        <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
+        <div class="note">Note: Distance Matrix requests specifying `departure_time` when `mode=driving` are limited to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.</div>
+      in: query
+      schema:
+        type: number
+    directions_alternatives:
+      name: alternatives
+      description: |
+        If set to `true`, specifies that the Directions service may provide more than one route alternative in the response. Note that providing route alternatives may increase the response time from the server. This is only available for requests without intermediate waypoints. For more information, see the [guide to waypoints](https://developers.google.com/maps/documentation/directions/get-directions#Waypoints).
+      in: query
+      schema:
+        type: boolean
+    directions_avoid:
+      name: avoid
+      description: |
+        Indicates that the calculated route(s) should avoid the indicated features. This parameter supports the following arguments:
+        * `tolls` indicates that the calculated route should avoid toll roads/bridges.
+        * `highways` indicates that the calculated route should avoid highways.
+        * `ferries` indicates that the calculated route should avoid ferries.
+        * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+
+        It's possible to request a route that avoids any combination of tolls, highways and ferries by passing multiple restrictions to the avoid parameter. For example: 
+
+        ```
+        avoid=tolls|highways|ferries.
+        ```
+      in: query
+      examples:
+        single:
+          value: highways
+          summary: A example using a single restriction.
+        multiple:
+          value: tolls|highways|ferries
+          summary: A example using a multiple restrictions.
+      schema:
+        type: string
+    directions_departure_time:
+      name: departure_time
+      description: |
+        Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. If a `departure_time` later than 9999-12-31T23:59:59.999999999Z is specified, the API will fall back the `departure_time` to 9999-12-31T23:59:59.999999999Z. Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second). The departure time may be specified in two cases:
+        * For requests where the travel mode is transit: You can optionally specify one of `departure_time` or `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time).
+        * For requests where the travel mode is driving: You can specify the `departure_time` to receive a route and trip duration (response field: duration_in_traffic) that take traffic conditions into account. The `departure_time` must be set to the current time or some time in the future. It cannot be in the past.
+
+        <div class="note">Note: If departure time is not specified, choice of route and duration are based on road network and average time-independent traffic conditions. Results for a given request may vary over time due to changes in the road network, updated average traffic conditions, and the distributed nature of the service. Results may also vary between nearly-equivalent routes at any time or frequency.</div>
+      in: query
+      schema:
+        type: number
+    directions_destination:
+      name: destination
+      description: 'The place ID, address, or textual latitude/longitude value to which you wish to calculate directions. The options for the destination parameter are the same as for the origin parameter.'
+      required: true
+      in: query
+      example: 'Victoria, BC'
+      schema:
+        type: string
+    directions_origin:
+      name: origin
+      description: |
+        The place ID, address, or textual latitude/longitude value from which you wish to calculate directions.
+        * Place IDs must be prefixed with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+          
+          ```
+          origin=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE
+          ```
+          
+        * If you pass an address, the Directions service geocodes the string and converts it to a latitude/longitude coordinate to calculate directions. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.
+          
+          ```
+          origin=24+Sussex+Drive+Ottawa+ON
+          ```
+          
+          Using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.
+        * If you pass coordinates, the point will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.
+          
+          ```
+          origin=41.43206,-81.38992
+          ```
+
+        * Plus codes must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`). 
+          
+          * **Global code** is a 4 character area code and 6 character or longer local code (849VCWC8+R9 is `849VCWC8%2BR9`). 
+          * **Compound code** is a 6 character or longer local code with an explicit location (CWC8+R9 Mountain View, CA, USA is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
+
+        <div class="note">Note: For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
+      required: true
+      in: query
+      examples:
+        simple:
+          value: 'Vancouver, BC'
+        modifier_side_of_road:
+          value: 'side_of_road:37.7663444,-122.4412006'
+        modifier_heading:
+          value: 'heading=90:37.773279,-122.468780'
+      schema:
+        type: string
+    directions_units:
+      name: units
+      description: |
+        Specifies the unit system to use when displaying results.
+
+        Directions results contain text within distance fields that may be displayed to the user to indicate the distance of a particular "step" of the route. By default, this text uses the unit system of the origin's country or region.
+
+        For example, a route from "Chicago, IL" to "Toronto, ONT" will display results in miles, while the reverse route will display results in kilometers. You may override this unit system by setting one explicitly within the request's units parameter, passing one of the following values:
+
+        * `metric` specifies usage of the metric system. Textual distances are returned using kilometers and meters.
+        * `imperial` specifies usage of the Imperial (English) system. Textual distances are returned using miles and feet.
+
+        <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
+      example: metric
+      in: query
+      schema:
+        type: string
+        enum:
+          - imperial
+          - metric
+    directions_waypoints:
+      name: waypoints
+      description: |
+        <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. Learn more about billing for Google Maps Platform products.</div>
+
+        Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.
+        * If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).
+          <div class="note">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>
+        * If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.
+        * If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, "1st Street" could be a complete value or a partial value for "1st street NE" or "1st St SE". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.
+        * Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.
+          * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.
+          * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`
+
+        ##### Influence routes with stopover and pass through points
+
+        For each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.
+
+        If you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.
+
+        The following URL modifies the previous request such that the journey is routed through Lexington without stopping:
+
+        ```
+        https://maps.googleapis.com/maps/api/directions/json?
+        origin=Boston,MA&destination=Concord,MA
+        &waypoints=Charlestown,MA|via:Lexington,MA  
+        ```
+
+        The `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.
+
+        <div class="caution">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>
+
+
+        ##### Optimize your waypoints
+
+        By default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.
+
+        If you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.
+
+        The following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.
+
+        ```
+        https://maps.googleapis.com/maps/api/directions/json?
+        origin=Adelaide,SA&destination=Adelaide,SA
+        &waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA
+        ```
+
+        Inspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:
+
+        ```
+        "waypoint_order": [ 3, 2, 0, 1 ]
+        ```
+
+        <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
+      in: query
+      examples:
+        multiple:
+          value: 'MA|Lexington,MA'
+        via:
+          value: 'Charlestown,MA|via:Lexington,MA'
+        optimize:
+          value: 'optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA'
+        place:
+          value: ChIJGwVKWe5w44kRcr4b9E25-Go
+        location:
+          value: '-34.92788%2C138.60008'
+        encoded:
+          value: 'enc:lexeF{~wsZejrPjtye@:'
+        via_encoded:
+          value: 'via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:'
+        modifier:
+          value: 'side_of_road:via:enc:lexeF{~wsZejrPjtye@:'
+      schema:
+        type: string
+    distancematrix_avoid:
+      name: avoid
+      description: |
+        Distances may be calculated that adhere to certain restrictions. Restrictions are indicated by use of the avoid parameter, and an argument to that parameter indicating the restriction to avoid. The following restrictions are supported:
+
+        * `tolls` indicates that the calculated route should avoid toll roads/bridges.
+        * `highways` indicates that the calculated route should avoid highways.
+        * `ferries` indicates that the calculated route should avoid ferries.
+        * `indoor` indicates that the calculated route should avoid indoor steps for walking and transit directions.
+
+        <div class="note">Note: The addition of restrictions does not preclude routes that include the restricted feature; it biases the result to more favorable routes.</div>
+      in: query
+      example: highways
+      schema:
+        type: string
+    distancematrix_destinations:
+      name: destinations
+      description: One or more locations to use as the finishing point for calculating travel distance and time. The options for the destinations parameter are the same as for the origins parameter.
+      required: true
+      in: query
+      style: pipeDelimited
+      explode: false
+      example:
+        - San Francisco
+        - Victoria BC
+      schema:
+        type: array
+        items:
+          type: string
+    distancematrix_origins:
+      name: origins
+      description: |
+        The starting point for calculating travel distance and time. You can supply one or more locations separated by the pipe character (|), in the form of a place ID, an address, or latitude/longitude coordinates:
+        - **Place ID**: If you supply a place ID, you must prefix it with `place_id:`.
+        - **Address**: If you pass an address, the service geocodes the string and converts it to a latitude/longitude coordinate to calculate distance. This coordinate may be different from that returned by the Geocoding API, for example a building entrance rather than its center.
+          <div class="note">Note: using place IDs is preferred over using addresses or latitude/longitude coordinates. Using coordinates will always result in the point being snapped to the road nearest to those coordinates - which may not be an access point to the property, or even a road that will quickly or safely lead to the destination.</div>
+        - **Coordinates**: If you pass latitude/longitude coordinates, they they will snap to the nearest road. Passing a place ID is preferred. If you do pass coordinates, ensure that no space exists between the latitude and longitude values.
+        - **Plus codes** must be formatted as a global code or a compound code. Format plus codes as shown here (plus signs are url-escaped to %2B and spaces are url-escaped to %20):
+          - **global code** is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is encoded to `849VCWC8%2BR9`).
+          - **compound code** is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is encoded to `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
+        - **Encoded Polyline** Alternatively, you can supply an encoded set of coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). This is particularly useful if you have a large number of origin points, because the URL is significantly shorter when using an encoded polyline.
+          - Encoded polylines must be prefixed with `enc:` and followed by a colon `:`. For example: `origins=enc:gfo}EtohhU:`
+          - You can also include multiple encoded polylines, separated by the pipe character `|`. For example: 
+            ```
+            origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:
+            ```
+      required: true
+      in: query
+      style: pipeDelimited
+      explode: false
+      example:
+        - Vancouver BC
+        - Seattle
+      schema:
+        type: array
+        items:
+          type: string
+    distancematrix_units:
+      name: units
+      description: |
+        Specifies the unit system to use when displaying results.
+
+        <div class="note">Note: this unit system setting only affects the text displayed within distance fields. The distance fields also contain values which are always expressed in meters.</div>
+      example: metric
+      in: query
+      schema:
+        type: string
+        enum:
+          - imperial
+          - metric
+    elevation_locations:
+      name: locations
+      in: query
+      style: pipeDelimited
+      explode: false
+      description: |
+        Positional requests are indicated through use of the locations parameter, indicating elevation requests for the specific locations passed as latitude/longitude values.
+
+        The locations parameter may take the following arguments:
+
+        - A single coordinate: `locations=40.714728,-73.998672`
+        - An array of coordinates separated using the pipe ('|') character: 
+          ```
+          locations=40.714728,-73.998672|-34.397,150.644
+          ```
+        - A set of encoded coordinates using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm): 
+          ```
+          locations=enc:gfo}EtohhU
+          ```
+
+        Latitude and longitude coordinate strings are defined using numerals within a comma-separated text string. For example, "40.714728,-73.998672" is a valid locations value. Latitude and longitude values must correspond to a valid location on the face of the earth. Latitudes can take any value between -90 and 90 while longitude values can take any value between -180 and 180. If you specify an invalid latitude or longitude value, your request will be rejected as a bad request.
+
+        You may pass any number of multiple coordinates within an array or encoded polyline, while still constructing a valid URL. Note that when passing multiple coordinates, the accuracy of any returned data may be of lower resolution than when requesting data for a single coordinate.
+      example:
+        - '35,-100'
+        - '40,-110'
+      schema:
+        $ref: '#/components/schemas/LatLngArrayString'
+    elevation_path:
+      name: path
+      in: query
+      style: pipeDelimited
+      explode: false
+      description: 'An array of comma separated `latitude,longitude` strings.'
+      example:
+        - '35,-110'
+        - '33,-110'
+        - '31,-110'
+      schema:
+        $ref: '#/components/schemas/LatLngArrayString'
+    elevation_samples:
+      name: samples
+      in: query
+      description: Required if path parameter is set.
+      schema:
+        type: number
+      example: 10
+    geocode_address:
+      name: address
+      example: '1600 Amphitheatre+Parkway, Mountain View, CA'
+      description: |-
+        The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
+
+        ```
+        address=24%20Sussex%20Drive%20Ottawa%20ON
+        ```
+
+        Format plus codes as shown here (plus signs are url-escaped to `%2B` and spaces are url-escaped to `%20`):
+        - global code is a 4 character area code and 6 character or longer local code (`849VCWC8+R9` is `849VCWC8%2BR9`).
+        - compound code is a 6 character or longer local code with an explicit location (`CWC8+R9 Mountain View, CA, USA` is `CWC8%2BR9%20Mountain%20View%20CA%20USA`).
+
+        <div class="note">Note: At least one of `address` or `components` is required.</div>
+      in: query
+      schema:
+        type: string
+    geocode_bounds:
+      name: bounds
+      description: 'The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.'
+      example:
+        - '35,-100'
+        - '40,-110'
+      schema:
+        $ref: '#/components/schemas/LatLngArrayString'
+      in: query
+    geocode_components:
+      name: components
+      style: pipeDelimited
+      explode: false
+      example:
+        - 'street_number:1600'
+        - 'route:Amphitheatre+Parkway'
+        - 'locality:Mountain+View'
+        - 'administrative_area_level_1:CA'
+        - 'country:US'
+      description: |-
+        A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.
+
+        The components that can be filtered include:
+
+        * `postal_code` matches `postal_code` and `postal_code_prefix`.
+        * `country` matches a country name or a two letter ISO 3166-1 country code. The API follows the ISO standard for defining countries, and the filtering works best when using the corresponding ISO code of the country.
+          <aside class="note"><strong>Note</strong>: If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend. You can find code information at Wikipedia: List of ISO 3166 country codes or the ISO Online Browsing Platform.</aside>
+          
+        The following components may be used to influence results, but will not be enforced:
+
+        * `route` matches the long or short name of a route.
+        * `locality` matches against `locality` and `sublocality` types.
+        * `administrative_area` matches all the `administrative_area` levels.
+          
+        Notes about component filtering:
+
+        * Do not repeat these component filters in requests, or the API will return `INVALID_REQUEST`: 
+          * `country`
+          * `postal_code`
+          * `route`
+        * If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.
+        * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
+        * For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.
+
+        <div class="note">Note: At least one of `address` or `components` is required.</div>
+      in: query
+      schema:
+        items:
+          type: string
+        type: array
+    geocode_latlng:
+      name: latlng
+      example: '40,-110'
+      description: 'The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.'
+      in: query
+      schema:
+        type: string
+    geocode_location_type:
+      name: location_type
+      description: |-
+        A filter of one or more location types, separated by a pipe (`|`). If the parameter contains multiple location types, the API returns all addresses that match any of the types. A note about processing: The `location_type` parameter does not restrict the search to the specified location type(s). Rather, the `location_type` acts as a post-search filter: the API fetches all results for the specified latlng, then discards those results that do not match the specified location type(s). The following values are supported:
+        * `APPROXIMATE` returns only the addresses that are characterized as approximate.
+        * `GEOMETRIC_CENTER` returns only geometric centers of a location such as a polyline (for example, a street) or polygon (region).
+        * `RANGE_INTERPOLATED` returns only the addresses that reflect an approximation (usually on a road) interpolated between two precise points (such as intersections). An interpolated range generally indicates that rooftop geocodes are unavailable for a street address.
+        * `ROOFTOP` returns only the addresses for which Google has location information accurate down to street address precision.
+      style: pipeDelimited
+      explode: false
+      schema:
+        items:
+          type: string
+          enum:
+            - APPROXIMATE
+            - GEOMETRIC_CENTER
+            - RANGE_INTERPOLATED
+            - ROOFTOP
+        type: array
+      in: query
+    geocode_place_id:
+      name: place_id
+      description: |
+        A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
+        For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+      schema:
+        type: string
+      in: query
+      example: ChIJN1t_tDeuEmsRUsoyG83frY4
+    geocode_result_type:
+      name: result_type
+      description: |-
+        A filter of one or more address types, separated by a pipe (|). If the parameter contains multiple address types, the API returns all addresses that match any of the types. A note about processing: The `result_type` parameter does not restrict the search to the specified address type(s). Rather, the `result_type` acts as a post-search filter: the API fetches all results for the specified `latlng`, then discards those results that do not match the specified address type(s).The following values are supported:
+        * `administrative_area_level_1` indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states. Not all nations exhibit these administrative levels. In most cases, administrative_area_level_1   * `short` names will closely match ISO 3166-2 subdivisions and other widely circulated lists; however this is not guaranteed as our geocoding results are based on a variety of signals and location data.
+        * `administrative_area_level_2` indicates a second-order civil entity below the country level. Within the United States, these administrative levels are counties. Not all nations exhibit these administrative levels.
+        * `administrative_area_level_3` indicates a third-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+        * `administrative_area_level_4` indicates a fourth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+        * `administrative_area_level_5` indicates a fifth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+        * `airport` indicates an airport.
+        * `colloquial_area` indicates a commonly-used alternative name for the entity.
+        * `country` indicates the national political entity, and is typically the highest order type returned by the Geocoder.
+        * `intersection` indicates a major intersection, usually of two major roads.
+        * `locality` indicates an incorporated city or town political entity.
+        * `natural_feature` indicates a prominent natural feature.
+        * `neighborhood` indicates a named neighborhood
+        * `park` indicates a named park.
+        * `plus_code` indicates an encoded location reference, derived from latitude and longitude. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [https://plus.codes/](https://plus.codes/) for details.
+        * `point_of_interest` indicates a named point of interest. Typically, these "POI"s are prominent local entities that don't easily fit in another category, such as "Empire State Building" or "Eiffel Tower".
+        * `political` indicates a political entity. Usually, this type indicates a polygon of some civil administration.
+        * `postal_code` indicates a postal code as used to address postal mail within the country.
+        * `premise` indicates a named location, usually a building or collection of buildings with a common name
+        * `route` indicates a named route (such as "US 101").
+        * `street_address` indicates a precise street address.
+        * `sublocality` indicates a first-order civil entity below a locality. For some locations may receive one of the additional types: `sublocality_level_1` to `sublocality_level_5`. Each sublocality level is a civil entity. Larger numbers indicate a smaller geographic area.
+        * `subpremise` indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name
+      style: pipeDelimited
+      explode: false
+      schema:
+        items:
+          type: string
+          enum:
+            - administrative_area_level_1
+            - administrative_area_level_2
+            - administrative_area_level_3
+            - administrative_area_level_4
+            - administrative_area_level_5
+            - airport
+            - colloquial_area
+            - country
+            - intersection
+            - locality
+            - natural_feature
+            - neighborhood
+            - park
+            - plus_code
+            - political
+            - postal_code
+            - premise
+            - route
+            - street_address
+            - sublocality
+            - subpremise
+        type: array
+      in: query
     language:
       name: language
       in: query
@@ -19878,6 +19520,335 @@ components:
       in: query
       schema:
         $ref: '#/components/schemas/TravelMode'
+    nearestroads_points:
+      name: points
+      description: |
+        The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
+        <div class="note">Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.</div>
+      required: true
+      in: query
+      style: pipeDelimited
+      explode: false
+      example:
+        - '60.170880,24.942795'
+        - '60.170879,24.942796'
+        - '60.170877,24.942796'
+      schema:
+        $ref: '#/components/schemas/LatLngArrayString'
+    places_components:
+      name: components
+      description: |
+        A grouping of places to which you would like to restrict your results. Currently, you can use components to filter by up to 5 countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character `|` as a separator. For example: `components=country:us|country:pr|country:vi|country:gu|country:mp` would restrict your results to places within the United States and its unincorporated organized territories.
+        <div class="note"><strong>Note:</strong> If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend.  You can find code information at <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="blank" class="external">Wikipedia: List of ISO 3166 country codes</a> or the <a href="https://www.iso.org/obp/ui/#search" target="blank" class="external">ISO Online Browsing Platform</a>.</div>
+      schema:
+        type: string
+      example: 'country:us|country:pr'
+      in: query
+    places_fields:
+      name: fields
+      description: |
+        Use the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.
+
+        Fields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.
+
+        **Basic**
+
+        The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
+
+        **Contact**
+
+        The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+
+        **Atmosphere**
+
+        The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+
+        <div class="caution">Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a place_id, then use that Place ID to make a Place Details request.</div>
+      schema:
+        type: array
+        items:
+          type: string
+        minItems: 1
+      explode: false
+      in: query
+      examples:
+        basic:
+          value:
+            - formatted_address
+        multiple:
+          value:
+            - formatted_address
+            - name
+            - geometry
+        compound:
+          value:
+            - opening_hours/open_now
+        all:
+          value:
+            - '*'
+    places_inputtype:
+      name: inputtype
+      description: |
+        The type of input. This can be one of either `textquery` or `phonenumber`. Phone numbers must be in international format (prefixed by a plus sign ("+"), followed by the country code, then the phone number itself). See [E.164 ITU recommendation](https://en.wikipedia.org/wiki/E.164) for more information.
+      schema:
+        type: string
+        enum:
+          - textquery
+          - phonenumber
+      required: true
+      in: query
+      example: textquery
+    places_keyword:
+      name: keyword
+      description: |
+        A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content. Note that explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
+      schema:
+        type: string
+      in: query
+    places_location-required:
+      name: location
+      description: |
+        The point around which to retrieve place information. This must be specified as `latitude,longitude`.
+      required: true
+      schema:
+        type: string
+      in: query
+      example: '40,-110'
+    places_location-weighted:
+      name: location
+      description: |
+        The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
+
+        <div class="note">The <code>location</code> parameter may be overriden if the <code>query</code> contains an explicit location such as <code>Market in Barcelona</code>. Using quotes around the query may also influence the weight given to the <code>location</code> and <code>radius</code>.</div>
+      schema:
+        type: string
+      in: query
+      example: '40,-110'
+    places_location:
+      name: location
+      description: |
+        The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
+
+        <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
+      schema:
+        type: string
+      in: query
+      example: '40,-110'
+    places_locationbias:
+      name: locationbias
+      description: |
+        Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
+        - IP bias: Instructs the API to use IP address biasing. Pass the string `ipbias` (this option has no additional parameters).
+        - Point: A single lat/lng coordinate. Use the following format: `point:lat,lng`.
+        - Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
+        - Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
+      schema:
+        type: string
+      in: query
+      examples:
+        ipbias:
+          value: ipbias
+        point:
+          value: 'point:37.781157,-122.398720'
+        circular:
+          value: 'circle:1000@37.781157,-122.398720'
+        rectangular:
+          value: 'rectangle:37.7,-122.4|37.8,-122.3'
+    places_maxheight:
+      name: maxheight
+      description: |
+        Specifies the maximum desired height, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.
+      schema:
+        type: number
+      in: query
+    places_maxprice:
+      name: maxprice
+      description: |
+        Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+      schema:
+        type: string
+        enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+      in: query
+    places_maxwidth:
+      name: maxwidth
+      description: |
+        Specifies the maximum desired width, in pixels, of the image. If the image is smaller than the values specified, the original image will be returned. If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. Both the `maxheight` and `maxwidth` properties accept an integer between `1` and `1600`.
+      schema:
+        type: number
+      in: query
+    places_minprice:
+      name: minprice
+      description: |
+        Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
+      schema:
+        type: string
+        enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+      in: query
+    places_name:
+      name: name
+      description: |
+        *Not Recommended* A term to be matched against all content that Google has indexed for this place. Equivalent to `keyword`. The `name` field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the `keyword` parameter for all search terms.
+      schema:
+        type: string
+      in: query
+    places_offset:
+      name: offset
+      description: |
+        The position, in the input term, of the last character that the service uses to match predictions. For example, if the input is `Google` and the offset is 3, the service will match on `Goo`. The string determined by the offset is matched against the first word in the input term only. For example, if the input term is `Google abc` and the offset is 3, the service will attempt to match against `Goo abc`. If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.
+      schema:
+        type: number
+      in: query
+      example: 3
+    places_opennow:
+      name: opennow
+      description: |
+        Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
+      schema:
+        type: boolean
+      in: query
+    places_origin:
+      name: origin
+      description: |
+        The origin point from which to calculate straight-line distance to the destination (returned as `distance_meters`). If this value is omitted, straight-line distance will not be returned. Must be specified as `latitude,longitude`.
+      schema:
+        type: string
+      in: query
+      example: '40,-110'
+    places_pagetoken:
+      name: pagetoken
+      description: |
+        Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
+      schema:
+        type: string
+      in: query
+    places_photo_reference:
+      name: photo_reference
+      description: |
+        A string identifier that uniquely identifies a photo. Photo references are returned from either a Place Search or Place Details request.
+      schema:
+        type: string
+      required: true
+      in: query
+    places_place_id:
+      name: place_id
+      description: |
+        A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
+        For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
+      schema:
+        type: string
+      required: true
+      in: query
+      example: ChIJN1t_tDeuEmsRUsoyG83frY4
+    places_query:
+      name: query
+      description: |
+        The text string on which to search, for example: "restaurant" or "123 Main Street". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
+      schema:
+        type: string
+      required: true
+      in: query
+      example: restaurants in Sydney
+    places_radius:
+      name: radius
+      description: |
+        Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.
+
+        The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+        * Autocomplete: 50,000 meters
+        * Nearby Search: 
+          * with `keyword` or `name`: 50,000 meters
+          * without `keyword` or `name`
+            * `rankby=prominence` (default): 50,000 meters
+            * `rankby=distance`: A few kilometers depending on density of area
+        * Query Autocomplete: 50,000 meters
+        * Text Search: 50,000 meters
+      schema:
+        type: number
+      in: query
+      example: 1000
+    places_rankby:
+      name: rankby
+      description: |
+        Specifies the order in which results are listed. Possible values are:
+        - `prominence` (default). This option sorts results based on their importance. Ranking will favor prominent places within the set radius over nearby places that match but that are less prominent. Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. When prominence is specified, the `radius` parameter is required.
+        - `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required.
+      schema:
+        type: string
+        enum:
+          - prominence
+          - distance
+      in: query
+    places_sessiontoken:
+      name: sessiontoken
+      description: |
+        A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.
+
+        The session begins when the user starts typing a query, and concludes when they select a place and a call to Place Details is made. Each session can have multiple queries, followed by one place selection. The API key(s) used for each request within a session must belong to the same Google Cloud Console project. Once a session has concluded, the token is no longer valid; your app must generate a fresh token for each session. If the `sessiontoken` parameter is omitted, or if you reuse a session token, the session is charged as if no session token was provided (each request is billed separately).
+
+        We recommend the following guidelines:
+
+        - Use session tokens for all autocomplete sessions.
+        - Generate a fresh token for each session. Using a version 4 UUID is recommended.
+        - Ensure that the API key(s) used for all Place Autocomplete and Place Details requests within a session belong to the same Cloud Console project.
+        - Be sure to pass a unique session token for each new session. Using the same token for more than one session will result in each request being billed individually.
+      schema:
+        type: string
+      in: query
+    places_strictbounds:
+      name: strictbounds
+      description: |
+        Returns only those places that are strictly within the region defined by `location` and `radius`. This is a restriction, rather than a bias, meaning that results outside this region will not be returned even if they match the user input.
+      schema:
+        type: boolean
+      in: query
+    places_type:
+      name: type
+      description: |
+        Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
+
+        * `type=hospital|pharmacy|doctor` becomes `type=hospital`
+        * `type=hospital,pharmacy,doctor` is ignored entirely
+
+        See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
+        <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
+      schema:
+        type: string
+      in: query
+    places_types:
+      name: types
+      description: |
+        You may restrict results from a Place Autocomplete request to be of a certain type by passing a types parameter. The parameter specifies a type or a type collection, as listed in the supported types below. If nothing is specified, all types are returned. In general only a single type is allowed. The exception is that you can safely mix the geocode and establishment types, but note that this will have the same effect as specifying no types. The supported types are:
+        - `geocode` instructs the Place Autocomplete service to return only geocoding results, rather than business results. Generally, you use this request to disambiguate results where the location specified may be indeterminate.
+        - `address` instructs the Place Autocomplete service to return only geocoding results with a precise address. Generally, you use this request when you know the user will be looking for a fully specified address.
+        - `establishment` instructs the Place Autocomplete service to return only business results.
+        - `(regions)` type collection instructs the Places service to return any result matching the following types:
+          - `locality`
+          - `sublocality`
+          - `postal_code`
+          - `country`
+          - `administrative_area_level_1`
+          - `administrative_area_level_2`
+        - `(cities)` type collection instructs the Places service to return results that match `locality` or `administrative_area_level_3`.
+      schema:
+        type: string
+        enum:
+          - geocode
+          - address
+          - establishment
+          - (regions)
+          - (cities)
+      in: query
     region:
       name: region
       in: query
@@ -20142,6 +20113,180 @@ components:
           - za
           - zm
           - zw
+    snaptoroads_interpolate:
+      name: interpolate
+      in: query
+      description: |
+        Whether to interpolate a path to include all points forming the full road-geometry. When true, additional interpolated points will also be returned, resulting in a path that smoothly follows the geometry of the road, even around corners and through tunnels. Interpolated paths will most likely contain more points than the original path. Defaults to `false`.
+      schema:
+        type: boolean
+      example: true
+    snaptoroads_path:
+      name: path
+      description: |
+        The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
+        <div class="note">Note: The snapping algorithm works best for points that are not too far apart. If you observe odd snapping behavior, try creating paths that have points closer together. To ensure the best snap-to-road quality, you should aim to provide paths on which consecutive pairs of points are within 300m of each other. This will also help in handling any isolated, long jumps between consecutive points caused by GPS signal loss, or noise.</div>
+      required: true
+      in: query
+      style: pipeDelimited
+      explode: false
+      example:
+        - '60.170880,24.942795'
+        - '60.170879,24.942796'
+        - '60.170877,24.942796'
+      schema:
+        $ref: '#/components/schemas/LatLngArrayString'
+    streetview_fov:
+      name: fov
+      description: |
+        Determines the horizontal field of view of the image. The field of view is expressed in degrees, with a maximum allowed value of 120. When dealing with a fixed-size viewport, as with a Street View image of a set size, field of view in essence represents zoom, with smaller numbers indicating a higher level of zoom. Default is 90.
+      schema:
+        type: number
+      in: query
+    streetview_heading:
+      name: heading
+      description: |
+        Indicates the compass heading of the camera. Accepted values are from 0 to 360 (both values indicating North, with 90 indicating East, and 180 South). If no heading is specified, a value will be calculated that directs the camera towards the specified location, from the point at which the closest photograph was taken.
+      schema:
+        type: number
+      in: query
+    streetview_location:
+      name: location
+      description: |
+        The point around which to retrieve place information. The Street View Static API will snap to the panorama photographed closest to this location. When an address text string is provided, the API may use a different camera location to better display the specified location. When a lat/lng is provided, the API searches a 50 meter radius for a photograph closest to this location. Because Street View imagery is periodically refreshed, and photographs may be taken from slightly different positions each time, it's possible that your `location` may snap to a different panorama when imagery is updated.
+      schema:
+        type: string
+      in: query
+      examples:
+        latlng:
+          value: '40,-110'
+        text:
+          value: 'Chagrin Falls, OH'
+    streetview_pano:
+      name: pano
+      description: |
+        A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.
+      schema:
+        type: string
+      in: query
+    streetview_pitch:
+      name: pitch
+      description: |
+        Specifies the up or down angle of the camera relative to the Street View vehicle. This is often, but not always, flat horizontal. Positive values angle the camera up (with 90 degrees indicating straight up); negative values angle the camera down (with -90 indicating straight down). Default is 0.
+      schema:
+        type: number
+      in: query
+    streetview_radius:
+      name: radius
+      description: |
+        Sets a radius, specified in meters, in which to search for a panorama, centered on the given latitude and longitude. Valid values are non-negative integers. Default is 50 meters.
+      schema:
+        type: number
+      in: query
+    streetview_return_error_code:
+      name: return_error_code
+      description: |
+        Indicates whether the API should return a non `200 Ok` HTTP status when no image is found (`404 NOT FOUND`), or in response to an invalid request (400 BAD REQUEST). Valid values are `true` and `false`. If set to `true`, an error message is returned in place of the generic gray image. This eliminates the need to make a separate call to check for image availability.
+      schema:
+        type: boolean
+      in: query
+    streetview_signature:
+      name: signature
+      description: |
+        A digital signature used to verify that any site generating requests using your API key is authorized to do so. Requests that do not include a digital signature might fail. For more information, see [Get a Key and Signature](https://developers.google.com/maps/documentation/streetview/get-api-key).
+      schema:
+        type: string
+      in: query
+    streetview_size_optional:
+      name: size
+      description: |
+        Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
+      schema:
+        type: string
+      in: query
+    streetview_size:
+      name: size
+      description: |
+        Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
+      schema:
+        type: string
+      in: query
+      required: true
+    streetview_source:
+      name: source
+      description: |
+        Limits Street View searches to selected sources. Valid values are:
+        * `default` uses the default sources for Street View; searches are not limited to specific sources.
+        * `outdoor` limits searches to outdoor collections. Indoor collections are not included in search results. Note that outdoor panoramas may not exist for the specified location. Also note that the search only returns panoramas where it's possible to determine whether they're indoors or outdoors. For example, PhotoSpheres are not returned because it's unknown whether they are indoors or outdoors.
+      schema:
+        type: string
+        enum:
+          - default
+          - outdoor
+      in: query
+    timezone_location:
+      name: location
+      description: |
+        A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
+      schema:
+        type: string
+      required: true
+      in: query
+      example: '39.6034810,-119.6822510'
+    timezone_timestamp:
+      name: timestamp
+      in: query
+      description: |
+        The desired time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the `timestamp` to determine whether or not Daylight Savings should be applied, based on the time zone of the `location`. 
+
+        Note that the API does not take historical time zones into account. That is, if you specify a past timestamp, the API does not take into account the possibility that the location was previously in a different time zone.
+      schema:
+        type: number
+      required: true
+      example: 1331161200
+    traffic_model:
+      name: traffic_model
+      description: |
+        Specifies the assumptions to use when calculating time in traffic. This setting affects the value returned in the duration_in_traffic field in the response, which contains the predicted time in traffic based on historical averages. The `traffic_model` parameter may only be specified for driving directions where the request includes a `departure_time`. The available values for this parameter are:
+        * `best_guess` (default) indicates that the returned duration_in_traffic should be the best estimate of travel time given what is known about both historical traffic conditions and live traffic. Live traffic becomes more important the closer the `departure_time` is to now.
+        * `pessimistic` indicates that the returned duration_in_traffic should be longer than the actual travel time on most days, though occasional days with particularly bad traffic conditions may exceed this value.
+        * `optimistic` indicates that the returned duration_in_traffic should be shorter than the actual travel time on most days, though occasional days with particularly good traffic conditions may be faster than this value.
+        The default value of `best_guess` will give the most useful predictions for the vast majority of use cases. It is possible the `best_guess` travel time prediction may be shorter than `optimistic`, or alternatively, longer than `pessimistic`, due to the way the `best_guess` prediction model integrates live traffic information.
+      in: query
+      example: pessimistic
+      schema:
+        type: string
+        default: best_guess
+        enum:
+          - best_guess
+          - pessimistic
+          - optimistic
+    transit_mode:
+      name: transit_mode
+      description: |
+        Specifies one or more preferred modes of transit. This parameter may only be specified for transit directions. The parameter supports the following arguments:
+        * `bus` indicates that the calculated route should prefer travel by bus.
+        * `subway` indicates that the calculated route should prefer travel by subway.
+        * `train` indicates that the calculated route should prefer travel by train.
+        * `tram` indicates that the calculated route should prefer travel by tram and light rail.
+        * `rail` indicates that the calculated route should prefer travel by train, tram, light rail, and subway. This is equivalent to `transit_mode=train|tram|subway`.
+      in: query
+      example: train|tram|subway
+      schema:
+        type: string
+    transit_routing_preference:
+      name: transit_routing_preference
+      description: |
+        Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. This parameter may only be specified for transit directions. The parameter supports the following arguments:
+        * `less_walking` indicates that the calculated route should prefer limited amounts of walking.
+        * `fewer_transfers` indicates that the calculated route should prefer a limited number of transfers.
+      in: query
+      example: less_walking
+      schema:
+        type: string
+        enum:
+          - less_walking
+          - fewer_transfers
   schemas:
     Bounds:
       title: Bounds

@@ -17,123 +17,106 @@
   "predictions":
     [
       {
-        "description": "PIZZA PARADISO, Mariscal Antonio José de Sucre, Ville Autonome de Buenos Aires, Argentine",
-        "matched_substrings": [{ "length": 14, "offset": 0 }],
-        "place_id": "ChIJZQIEIV61vJURXNINvCJNDgg",
-        "reference": "ChIJZQIEIV61vJURXNINvCJNDgg",
+        "description": "pizza à proximité de Paris, France",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
         "structured_formatting":
           {
-            "main_text": "PIZZA PARADISO",
-            "main_text_matched_substrings": [{ "length": 14, "offset": 0 }],
-            "secondary_text": "Mariscal Antonio José de Sucre, Ville Autonome de Buenos Aires, Argentine",
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "à proximité de Paris, France",
+            "secondary_text_matched_substrings":
+              [{ "length": 3, "offset": 15 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "PIZZA PARADISO" },
-            { "offset": 16, "value": "Mariscal Antonio José de Sucre" },
-            { "offset": 48, "value": "Ville Autonome de Buenos Aires" },
-            { "offset": 80, "value": "Argentine" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      },
-      {
-        "description": "Pizza Paradiso Mediterranean Grill, Lower Honoapiilani Road, Lahaina, Hawaï, États-Unis",
-        "matched_substrings": [{ "length": 34, "offset": 0 }],
-        "place_id": "ChIJffjit6_Vqn4RLxkOpB72o9E",
-        "reference": "ChIJffjit6_Vqn4RLxkOpB72o9E",
-        "structured_formatting":
-          {
-            "main_text": "Pizza Paradiso Mediterranean Grill",
-            "main_text_matched_substrings": [{ "length": 34, "offset": 0 }],
-            "secondary_text": "Lower Honoapiilani Road, Lahaina, Hawaï, États-Unis",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Pizza Paradiso Mediterranean Grill" },
-            { "offset": 36, "value": "Lower Honoapiilani Road" },
-            { "offset": 61, "value": "Lahaina" },
-            { "offset": 70, "value": "Hawaï" },
-            { "offset": 77, "value": "États-Unis" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      },
-      {
-        "description": "Budapest, Pizza Paradicsom Non-Stop Étterem és Pizzéria, Vörösvári Way, Hongrie",
-        "matched_substrings": [{ "length": 45, "offset": 10 }],
-        "place_id": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
-        "reference": "ChIJb3yUcmjZQUcRwynNrWff8Ys",
-        "structured_formatting":
-          {
-            "main_text": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
-            "main_text_matched_substrings": [{ "length": 45, "offset": 0 }],
-            "secondary_text": "Budapest, Vörösvári Way, Hongrie",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Budapest" },
-            {
-              "offset": 10,
-              "value": "Pizza Paradicsom Non-Stop Étterem és Pizzéria",
-            },
-            { "offset": 57, "value": "Vörösvári Way" },
-            { "offset": 72, "value": "Hongrie" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      },
-      {
-        "description": "Pizza Park, 1st Avenue, New York, État de New York, États-Unis",
-        "matched_substrings": [{ "length": 10, "offset": 0 }],
-        "place_id": "ChIJYceQZMJYwokR5WkZsPbm5dQ",
-        "reference": "ChIJYceQZMJYwokR5WkZsPbm5dQ",
-        "structured_formatting":
-          {
-            "main_text": "Pizza Park",
-            "main_text_matched_substrings": [{ "length": 10, "offset": 0 }],
-            "secondary_text": "1st Avenue, New York, État de New York, États-Unis",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Pizza Park" },
-            { "offset": 12, "value": "1st Avenue" },
-            { "offset": 24, "value": "New York" },
-            { "offset": 34, "value": "État de New York" },
-            { "offset": 52, "value": "États-Unis" },
-          ],
-        "types":
-          [
-            "meal_delivery",
-            "restaurant",
-            "food",
-            "point_of_interest",
-            "establishment",
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "à proximité de" },
+            { "offset": 21, "value": "Paris" },
+            { "offset": 28, "value": "France" },
           ],
       },
       {
-        "description": "Pizza Paradise, East Baltimore Avenue, East Lansdowne, Pennsylvanie, États-Unis",
-        "matched_substrings": [{ "length": 14, "offset": 0 }],
-        "place_id": "ChIJ034n_OHDxokRtkt2VhMO3oQ",
-        "reference": "ChIJ034n_OHDxokRtkt2VhMO3oQ",
+        "description": "pizza à proximité de Parma, Parme, Italie",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
         "structured_formatting":
           {
-            "main_text": "Pizza Paradise",
-            "main_text_matched_substrings": [{ "length": 14, "offset": 0 }],
-            "secondary_text": "East Baltimore Avenue, East Lansdowne, Pennsylvanie, États-Unis",
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "à proximité de Parma, Parme, Italie",
+            "secondary_text_matched_substrings":
+              [{ "length": 3, "offset": 15 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Pizza Paradise" },
-            { "offset": 16, "value": "East Baltimore Avenue" },
-            { "offset": 39, "value": "East Lansdowne" },
-            { "offset": 55, "value": "Pennsylvanie" },
-            { "offset": 69, "value": "États-Unis" },
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "à proximité de" },
+            { "offset": 21, "value": "Parma" },
+            { "offset": 28, "value": "Parme" },
+            { "offset": 35, "value": "Italie" },
           ],
-        "types":
+      },
+      {
+        "description": "pizza à proximité de Park City, Utah, États-Unis",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "à proximité de Park City, Utah, États-Unis",
+            "secondary_text_matched_substrings":
+              [{ "length": 3, "offset": 15 }],
+          },
+        "terms":
           [
-            "meal_delivery",
-            "restaurant",
-            "food",
-            "point_of_interest",
-            "establishment",
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "à proximité de" },
+            { "offset": 21, "value": "Park City" },
+            { "offset": 32, "value": "Utah" },
+            { "offset": 38, "value": "États-Unis" },
+          ],
+      },
+      {
+        "description": "pizza à proximité de Parga, Grèce",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "à proximité de Parga, Grèce",
+            "secondary_text_matched_substrings":
+              [{ "length": 3, "offset": 15 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "à proximité de" },
+            { "offset": 21, "value": "Parga" },
+            { "offset": 28, "value": "Grèce" },
+          ],
+      },
+      {
+        "description": "pizza à proximité de Paraná, Province d'Entre Ríos, Argentine",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "à proximité de Paraná, Province d'Entre Ríos, Argentine",
+            "secondary_text_matched_substrings":
+              [{ "length": 3, "offset": 15 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "à proximité de" },
+            { "offset": 21, "value": "Paraná" },
+            { "offset": 29, "value": "Province d'Entre Ríos" },
+            { "offset": 52, "value": "Argentine" },
           ],
       },
     ],

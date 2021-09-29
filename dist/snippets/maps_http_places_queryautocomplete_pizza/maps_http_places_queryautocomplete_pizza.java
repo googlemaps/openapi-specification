@@ -2,7 +2,7 @@
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://maps.googleapis.com/maps/api/place/autocomplete/json?input=pizza%20near%20par&key=YOUR_API_KEY")
+  .url("https://maps.googleapis.com/maps/api/place/queryautocomplete/json?input=pizza%20near%20par&key=YOUR_API_KEY")
   .method("GET", null)
   .build();
 Response response = client.newCall(request).execute();

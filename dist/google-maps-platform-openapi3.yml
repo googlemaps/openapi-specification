@@ -19319,146 +19319,132 @@ paths:
                 pizza:
                   value:
                     predictions:
-                      - description: 'PIZZA PARADISO, Mariscal Antonio José de Sucre, Buenos Aires, Argentina'
+                      - description: 'pizza near Paris, France'
                         matched_substrings:
-                          - length: 14
+                          - length: 5
                             offset: 0
-                        place_id: ChIJZQIEIV61vJURXNINvCJNDgg
-                        reference: ChIJZQIEIV61vJURXNINvCJNDgg
+                          - length: 3
+                            offset: 11
                         structured_formatting:
-                          main_text: PIZZA PARADISO
+                          main_text: pizza
                           main_text_matched_substrings:
-                            - length: 14
+                            - length: 5
                               offset: 0
-                          secondary_text: 'Mariscal Antonio José de Sucre, Buenos Aires, Argentina'
+                          secondary_text: 'near Paris, France'
+                          secondary_text_matched_substrings:
+                            - length: 3
+                              offset: 5
                         terms:
                           - offset: 0
-                            value: PIZZA PARADISO
-                          - offset: 16
-                            value: Mariscal Antonio José de Sucre
-                          - offset: 48
-                            value: Buenos Aires
-                          - offset: 62
-                            value: Argentina
-                        types:
-                          - restaurant
-                          - food
-                          - point_of_interest
-                          - establishment
-                      - description: 'Pizza Paradiso Mediterranean Grill, Lower Honoapiilani Road, Lahaina, HI, USA'
+                            value: pizza
+                          - offset: 6
+                            value: near
+                          - offset: 11
+                            value: Paris
+                          - offset: 18
+                            value: France
+                      - description: 'pizza near Parma, Province of Parma, Italy'
                         matched_substrings:
-                          - length: 34
+                          - length: 5
                             offset: 0
-                        place_id: ChIJffjit6_Vqn4RLxkOpB72o9E
-                        reference: ChIJffjit6_Vqn4RLxkOpB72o9E
+                          - length: 3
+                            offset: 11
                         structured_formatting:
-                          main_text: Pizza Paradiso Mediterranean Grill
+                          main_text: pizza
                           main_text_matched_substrings:
-                            - length: 34
+                            - length: 5
                               offset: 0
-                          secondary_text: 'Lower Honoapiilani Road, Lahaina, HI, USA'
+                          secondary_text: 'near Parma, Province of Parma, Italy'
+                          secondary_text_matched_substrings:
+                            - length: 3
+                              offset: 5
                         terms:
                           - offset: 0
-                            value: Pizza Paradiso Mediterranean Grill
-                          - offset: 36
-                            value: Lower Honoapiilani Road
-                          - offset: 61
-                            value: Lahaina
-                          - offset: 70
-                            value: HI
-                          - offset: 74
+                            value: pizza
+                          - offset: 6
+                            value: near
+                          - offset: 11
+                            value: Parma
+                          - offset: 18
+                            value: Province of Parma
+                          - offset: 37
+                            value: Italy
+                      - description: 'pizza near Park City, UT, USA'
+                        matched_substrings:
+                          - length: 5
+                            offset: 0
+                          - length: 3
+                            offset: 11
+                        structured_formatting:
+                          main_text: pizza
+                          main_text_matched_substrings:
+                            - length: 5
+                              offset: 0
+                          secondary_text: 'near Park City, UT, USA'
+                          secondary_text_matched_substrings:
+                            - length: 3
+                              offset: 5
+                        terms:
+                          - offset: 0
+                            value: pizza
+                          - offset: 6
+                            value: near
+                          - offset: 11
+                            value: Park City
+                          - offset: 22
+                            value: UT
+                          - offset: 26
                             value: USA
-                        types:
-                          - restaurant
-                          - food
-                          - point_of_interest
-                          - establishment
-                      - description: 'Pizza Park, 1st Avenue, New York, NY, USA'
+                      - description: 'pizza near Parga, Greece'
                         matched_substrings:
-                          - length: 10
+                          - length: 5
                             offset: 0
-                        place_id: ChIJYceQZMJYwokR5WkZsPbm5dQ
-                        reference: ChIJYceQZMJYwokR5WkZsPbm5dQ
+                          - length: 3
+                            offset: 11
                         structured_formatting:
-                          main_text: Pizza Park
+                          main_text: pizza
                           main_text_matched_substrings:
-                            - length: 10
+                            - length: 5
                               offset: 0
-                          secondary_text: '1st Avenue, New York, NY, USA'
+                          secondary_text: 'near Parga, Greece'
+                          secondary_text_matched_substrings:
+                            - length: 3
+                              offset: 5
                         terms:
                           - offset: 0
-                            value: Pizza Park
-                          - offset: 12
-                            value: 1st Avenue
-                          - offset: 24
-                            value: New York
-                          - offset: 34
-                            value: NY
-                          - offset: 38
-                            value: USA
-                        types:
-                          - meal_delivery
-                          - restaurant
-                          - food
-                          - point_of_interest
-                          - establishment
-                      - description: 'Pizza Paradise, East Baltimore Avenue, East Lansdowne, PA, USA'
+                            value: pizza
+                          - offset: 6
+                            value: near
+                          - offset: 11
+                            value: Parga
+                          - offset: 18
+                            value: Greece
+                      - description: 'pizza near Paraty, State of Rio de Janeiro, Brazil'
                         matched_substrings:
-                          - length: 14
+                          - length: 5
                             offset: 0
-                        place_id: ChIJ034n_OHDxokRtkt2VhMO3oQ
-                        reference: ChIJ034n_OHDxokRtkt2VhMO3oQ
+                          - length: 3
+                            offset: 11
                         structured_formatting:
-                          main_text: Pizza Paradise
+                          main_text: pizza
                           main_text_matched_substrings:
-                            - length: 14
+                            - length: 5
                               offset: 0
-                          secondary_text: 'East Baltimore Avenue, East Lansdowne, PA, USA'
+                          secondary_text: 'near Paraty, State of Rio de Janeiro, Brazil'
+                          secondary_text_matched_substrings:
+                            - length: 3
+                              offset: 5
                         terms:
                           - offset: 0
-                            value: Pizza Paradise
-                          - offset: 16
-                            value: East Baltimore Avenue
-                          - offset: 39
-                            value: East Lansdowne
-                          - offset: 55
-                            value: PA
-                          - offset: 59
-                            value: USA
-                        types:
-                          - meal_delivery
-                          - restaurant
-                          - food
-                          - point_of_interest
-                          - establishment
-                      - description: 'Pizza Party, North Saint Mary''s Street, San Antonio, TX, USA'
-                        matched_substrings:
-                          - length: 11
-                            offset: 0
-                        place_id: ChIJjfKnIo5fXIYR69-raO761_g
-                        reference: ChIJjfKnIo5fXIYR69-raO761_g
-                        structured_formatting:
-                          main_text: Pizza Party
-                          main_text_matched_substrings:
-                            - length: 11
-                              offset: 0
-                          secondary_text: 'North Saint Mary''s Street, San Antonio, TX, USA'
-                        terms:
-                          - offset: 0
-                            value: Pizza Party
-                          - offset: 13
-                            value: North Saint Mary's Street
-                          - offset: 40
-                            value: San Antonio
-                          - offset: 53
-                            value: TX
-                          - offset: 57
-                            value: USA
-                        types:
-                          - restaurant
-                          - food
-                          - point_of_interest
-                          - establishment
+                            value: pizza
+                          - offset: 6
+                            value: near
+                          - offset: 11
+                            value: Paraty
+                          - offset: 19
+                            value: State of Rio de Janeiro
+                          - offset: 44
+                            value: Brazil
                     status: OK
               schema:
                 $ref: '#/components/schemas/PlacesQueryAutocompleteResponse'

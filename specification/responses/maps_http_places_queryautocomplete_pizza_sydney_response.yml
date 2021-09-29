@@ -17,130 +17,103 @@
   "predictions":
     [
       {
-        "description": "West Sydney Pizza & Pasta, Minchin Drive, Minchinbury NSW, Australia",
-        "matched_substrings": [{ "length": 25, "offset": 0 }],
-        "place_id": "ChIJs0qD-XOaEmsRiGFC9mSxp5E",
-        "reference": "ChIJs0qD-XOaEmsRiGFC9mSxp5E",
+        "description": "pizza near Sydney NSW, Australia",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
         "structured_formatting":
           {
-            "main_text": "West Sydney Pizza & Pasta",
-            "main_text_matched_substrings": [{ "length": 25, "offset": 0 }],
-            "secondary_text": "Minchin Drive, Minchinbury NSW, Australia",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "West Sydney Pizza & Pasta" },
-            { "offset": 27, "value": "Minchin Drive" },
-            { "offset": 42, "value": "Minchinbury" },
-            { "offset": 54, "value": "NSW" },
-            { "offset": 59, "value": "Australia" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      },
-      {
-        "description": "Casa Incontro Pizza & Pasta Family Restaurant, Hume Highway, Campbellfield VIC, Australia",
-        "matched_substrings": [{ "length": 45, "offset": 0 }],
-        "place_id": "ChIJ6SSOYANQ1moR9reZqqvtkCM",
-        "reference": "ChIJ6SSOYANQ1moR9reZqqvtkCM",
-        "structured_formatting":
-          {
-            "main_text": "Casa Incontro Pizza & Pasta Family Restaurant",
-            "main_text_matched_substrings": [{ "length": 45, "offset": 0 }],
-            "secondary_text": "Hume Highway, Campbellfield VIC, Australia",
-          },
-        "terms":
-          [
-            {
-              "offset": 0,
-              "value": "Casa Incontro Pizza & Pasta Family Restaurant",
-            },
-            { "offset": 47, "value": "Hume Highway" },
-            { "offset": 61, "value": "Campbellfield" },
-            { "offset": 75, "value": "VIC" },
-            { "offset": 80, "value": "Australia" },
-          ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      },
-      {
-        "description": "Alexandra's Pizza Sydney, Charlotte Street, Sydney, NS, Canada",
-        "matched_substrings": [{ "length": 24, "offset": 0 }],
-        "place_id": "ChIJOwKCOS77Z0sR6kjvyajTllk",
-        "reference": "ChIJOwKCOS77Z0sR6kjvyajTllk",
-        "structured_formatting":
-          {
-            "main_text": "Alexandra's Pizza Sydney",
-            "main_text_matched_substrings": [{ "length": 24, "offset": 0 }],
-            "secondary_text": "Charlotte Street, Sydney, NS, Canada",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Alexandra's Pizza Sydney" },
-            { "offset": 26, "value": "Charlotte Street" },
-            { "offset": 44, "value": "Sydney" },
-            { "offset": 52, "value": "NS" },
-            { "offset": 56, "value": "Canada" },
-          ],
-        "types":
-          [
-            "meal_delivery",
-            "meal_takeaway",
-            "restaurant",
-            "food",
-            "point_of_interest",
-            "establishment",
-          ],
-      },
-      {
-        "description": "Pizza, Darling Street, Rozelle NSW, Australia",
-        "matched_substrings": [{ "length": 5, "offset": 0 }],
-        "place_id": "ChIJ8WR6ec-vEmsR2pT0sQetgrA",
-        "reference": "ChIJ8WR6ec-vEmsR2pT0sQetgrA",
-        "structured_formatting":
-          {
-            "main_text": "Pizza",
+            "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "Darling Street, Rozelle NSW, Australia",
+            "secondary_text": "near Sydney NSW, Australia",
+            "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Pizza" },
-            { "offset": 7, "value": "Darling Street" },
-            { "offset": 23, "value": "Rozelle" },
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "near" },
+            { "offset": 11, "value": "Sydney" },
+            { "offset": 18, "value": "NSW" },
+            { "offset": 23, "value": "Australia" },
+          ],
+      },
+      {
+        "description": "pizza near Sydney Olympic Park NSW, Australia",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "near Sydney Olympic Park NSW, Australia",
+            "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "near" },
+            { "offset": 11, "value": "Sydney Olympic Park" },
             { "offset": 31, "value": "NSW" },
             { "offset": 36, "value": "Australia" },
           ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
       {
-        "description": "Country Gourmet Pizza, Belmore Road, Sydney NSW, Australia",
+        "description": "pizza near Sydney, NS, Canada",
         "matched_substrings":
-          [{ "length": 5, "offset": 16 }, { "length": 6, "offset": 37 }],
-        "place_id": "ChIJpeUfwhiyEmsRWK8F-No562c",
-        "reference": "ChIJpeUfwhiyEmsRWK8F-No562c",
+          [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
         "structured_formatting":
           {
-            "main_text": "Country Gourmet Pizza",
-            "main_text_matched_substrings": [{ "length": 5, "offset": 16 }],
-            "secondary_text": "Belmore Road, Sydney NSW, Australia",
-            "secondary_text_matched_substrings":
-              [{ "length": 6, "offset": 14 }],
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "near Sydney, NS, Canada",
+            "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Country Gourmet Pizza" },
-            { "offset": 23, "value": "Belmore Road" },
-            { "offset": 37, "value": "Sydney" },
-            { "offset": 44, "value": "NSW" },
-            { "offset": 49, "value": "Australia" },
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "near" },
+            { "offset": 11, "value": "Sydney" },
+            { "offset": 19, "value": "NS" },
+            { "offset": 23, "value": "Canada" },
           ],
-        "types":
+      },
+      {
+        "description": "pizza near Sydney CBD, NSW, Australia",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "near Sydney CBD, NSW, Australia",
+            "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
+          },
+        "terms":
           [
-            "meal_takeaway",
-            "cafe",
-            "restaurant",
-            "food",
-            "point_of_interest",
-            "establishment",
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "near" },
+            { "offset": 11, "value": "Sydney CBD" },
+            { "offset": 23, "value": "NSW" },
+            { "offset": 28, "value": "Australia" },
+          ],
+      },
+      {
+        "description": "pizza near Sydney Mines, NS, Canada",
+        "matched_substrings":
+          [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
+        "structured_formatting":
+          {
+            "main_text": "pizza",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "near Sydney Mines, NS, Canada",
+            "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "pizza" },
+            { "offset": 6, "value": "near" },
+            { "offset": 11, "value": "Sydney Mines" },
+            { "offset": 25, "value": "NS" },
+            { "offset": 29, "value": "Canada" },
           ],
       },
     ],

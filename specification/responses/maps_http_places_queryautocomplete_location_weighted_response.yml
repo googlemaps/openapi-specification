@@ -17,126 +17,107 @@
   "predictions":
     [
       {
-        "description": "Hotel Market Barcelona, Carrer del Comte Borrell, Barcelona, Spain",
-        "matched_substrings": [{ "length": 22, "offset": 0 }],
-        "place_id": "ChIJG3aNkGGipBIR2Mdwj1bM6y4",
-        "reference": "ChIJG3aNkGGipBIR2Mdwj1bM6y4",
-        "structured_formatting":
-          {
-            "main_text": "Hotel Market Barcelona",
-            "main_text_matched_substrings": [{ "length": 22, "offset": 0 }],
-            "secondary_text": "Carrer del Comte Borrell, Barcelona, Spain",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Hotel Market Barcelona" },
-            { "offset": 24, "value": "Carrer del Comte Borrell" },
-            { "offset": 50, "value": "Barcelona" },
-            { "offset": 61, "value": "Spain" },
-          ],
-        "types":
-          [
-            "lodging",
-            "restaurant",
-            "food",
-            "point_of_interest",
-            "establishment",
-          ],
-      },
-      {
-        "description": "Market In 2008 S.L., Carrer de Provença, Barcelona, Spain",
+        "description": "market near Barcelona, Spain",
         "matched_substrings":
-          [{ "length": 9, "offset": 0 }, { "length": 9, "offset": 41 }],
-        "place_id": "ChIJF_l5YpOipBIRHoLSNV7CfJs",
-        "reference": "ChIJF_l5YpOipBIRHoLSNV7CfJs",
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
-            "main_text": "Market In 2008 S.L.",
-            "main_text_matched_substrings": [{ "length": 9, "offset": 0 }],
-            "secondary_text": "Carrer de Provença, Barcelona, Spain",
-            "secondary_text_matched_substrings":
-              [{ "length": 9, "offset": 20 }],
+            "main_text": "market",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "near Barcelona, Spain",
+            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Market In 2008 S.L." },
-            { "offset": 21, "value": "Carrer de Provença" },
-            { "offset": 41, "value": "Barcelona" },
-            { "offset": 52, "value": "Spain" },
+            { "offset": 0, "value": "market" },
+            { "offset": 7, "value": "near" },
+            { "offset": 12, "value": "Barcelona" },
+            { "offset": 23, "value": "Spain" },
           ],
-        "types": ["point_of_interest", "establishment"],
       },
       {
-        "description": "Barceloneta Apartments Market, Carrer dels Safareigs, Barcelona, Spain",
+        "description": "market near Barcelona Harbor Beach, 1st Street, Westfield, NY, USA",
         "matched_substrings":
-          [{ "length": 6, "offset": 23 }, { "length": 9, "offset": 54 }],
-        "place_id": "ChIJNwzusgCjpBIRP8B4NjK0pZ4",
-        "reference": "ChIJNwzusgCjpBIRP8B4NjK0pZ4",
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
-            "main_text": "Barceloneta Apartments Market",
-            "main_text_matched_substrings": [{ "length": 6, "offset": 23 }],
-            "secondary_text": "Carrer dels Safareigs, Barcelona, Spain",
-            "secondary_text_matched_substrings":
-              [{ "length": 9, "offset": 23 }],
+            "main_text": "market",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "near Barcelona Harbor Beach, 1st Street, Westfield, NY, USA",
+            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Barceloneta Apartments Market" },
-            { "offset": 31, "value": "Carrer dels Safareigs" },
-            { "offset": 54, "value": "Barcelona" },
-            { "offset": 65, "value": "Spain" },
+            { "offset": 0, "value": "market" },
+            { "offset": 7, "value": "near" },
+            { "offset": 12, "value": "Barcelona Harbor Beach" },
+            { "offset": 36, "value": "1st Street" },
+            { "offset": 48, "value": "Westfield" },
+            { "offset": 59, "value": "NY" },
+            { "offset": 63, "value": "USA" },
           ],
-        "types": ["lodging", "point_of_interest", "establishment"],
       },
       {
-        "description": "Restaurante MARKET, Carrer del Comte Borrell, Barcelona, Spain",
+        "description": "market near Barcelona Avenue, Salem, MA, USA",
         "matched_substrings":
-          [{ "length": 6, "offset": 12 }, { "length": 9, "offset": 46 }],
-        "place_id": "ChIJRycvt2CipBIRGMnSZHivRy4",
-        "reference": "ChIJRycvt2CipBIRGMnSZHivRy4",
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
-            "main_text": "Restaurante MARKET",
-            "main_text_matched_substrings": [{ "length": 6, "offset": 12 }],
-            "secondary_text": "Carrer del Comte Borrell, Barcelona, Spain",
-            "secondary_text_matched_substrings":
-              [{ "length": 9, "offset": 26 }],
+            "main_text": "market",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "near Barcelona Avenue, Salem, MA, USA",
+            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Restaurante MARKET" },
-            { "offset": 20, "value": "Carrer del Comte Borrell" },
-            { "offset": 46, "value": "Barcelona" },
-            { "offset": 57, "value": "Spain" },
+            { "offset": 0, "value": "market" },
+            { "offset": 7, "value": "near" },
+            { "offset": 12, "value": "Barcelona Avenue" },
+            { "offset": 30, "value": "Salem" },
+            { "offset": 37, "value": "MA" },
+            { "offset": 41, "value": "USA" },
           ],
-        "types": ["restaurant", "food", "point_of_interest", "establishment"],
       },
       {
-        "description": "Mini market Barcelona, Calle Primera, Babahoyo, Ecuador",
-        "matched_substrings": [{ "length": 21, "offset": 0 }],
-        "place_id": "ChIJXUehhXPXLJARVaKyHjS9CdM",
-        "reference": "ChIJXUehhXPXLJARVaKyHjS9CdM",
+        "description": "market near Barcelona Point, Northwest Harbor, NY, USA",
+        "matched_substrings":
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
-            "main_text": "Mini market Barcelona",
-            "main_text_matched_substrings": [{ "length": 21, "offset": 0 }],
-            "secondary_text": "Calle Primera, Babahoyo, Ecuador",
+            "main_text": "market",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "near Barcelona Point, Northwest Harbor, NY, USA",
+            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
-            { "offset": 0, "value": "Mini market Barcelona" },
-            { "offset": 23, "value": "Calle Primera" },
-            { "offset": 38, "value": "Babahoyo" },
-            { "offset": 48, "value": "Ecuador" },
+            { "offset": 0, "value": "market" },
+            { "offset": 7, "value": "near" },
+            { "offset": 12, "value": "Barcelona Point" },
+            { "offset": 29, "value": "Northwest Harbor" },
+            { "offset": 47, "value": "NY" },
+            { "offset": 51, "value": "USA" },
           ],
-        "types":
+      },
+      {
+        "description": "market near Barcelona, Westfield, NY, USA",
+        "matched_substrings":
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
+        "structured_formatting":
+          {
+            "main_text": "market",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "near Barcelona, Westfield, NY, USA",
+            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
+          },
+        "terms":
           [
-            "grocery_or_supermarket",
-            "food",
-            "point_of_interest",
-            "store",
-            "establishment",
+            { "offset": 0, "value": "market" },
+            { "offset": 7, "value": "near" },
+            { "offset": 12, "value": "Barcelona" },
+            { "offset": 23, "value": "Westfield" },
+            { "offset": 34, "value": "NY" },
+            { "offset": 38, "value": "USA" },
           ],
       },
     ],

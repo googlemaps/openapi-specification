@@ -1738,7 +1738,7 @@ export const REQUESTS: SnippetRequest[] = [
       url: new Url({
         protocol: "https",
         host: "maps.googleapis.com",
-        path: "/maps/api/place/autocomplete/json",
+        path: "/maps/api/place/queryautocomplete/json",
         query: [
           {
             key: "input",
@@ -1754,7 +1754,7 @@ export const REQUESTS: SnippetRequest[] = [
       url: new Url({
         protocol: "https",
         host: "maps.googleapis.com",
-        path: "/maps/api/place/autocomplete/json",
+        path: "/maps/api/place/queryautocomplete/json",
         query: [
           {
             key: "input",
@@ -1771,7 +1771,7 @@ export const REQUESTS: SnippetRequest[] = [
       url: new Url({
         protocol: "https",
         host: "maps.googleapis.com",
-        path: "/maps/api/place/autocomplete/json",
+        path: "/maps/api/place/queryautocomplete/json",
         query: [
           {
             key: "input",
@@ -1787,7 +1787,7 @@ export const REQUESTS: SnippetRequest[] = [
       url: new Url({
         protocol: "https",
         host: "maps.googleapis.com",
-        path: "/maps/api/place/autocomplete/json",
+        path: "/maps/api/place/queryautocomplete/json",
         query: [
           {
             key: "input",

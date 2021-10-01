@@ -17,10 +17,8 @@ title: PlaceAutocompletePrediction
 required:
  - description
  - matched_substrings
- - place_id
  - structured_formatting
  - terms
- - types
 properties:
   description:
     description: Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name. This content is meant to be read as-is. Do not programmatically parse the formatted address.

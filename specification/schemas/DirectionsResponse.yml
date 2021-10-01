@@ -14,7 +14,7 @@
 
 type: object
 title: DirectionsResponse
-required: [geocoded_waypoints, routes, status]
+required: [routes, status]
 properties:
   geocoded_waypoints:
     description: |

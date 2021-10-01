@@ -21,7 +21,6 @@ required:
     end_location,
     start_location,
     html_instructions,
-    maneuver,
     polyline,
     travel_mode,
   ]
@@ -47,6 +46,8 @@ properties:
       - turn-left
       - turn-slight-right
       - turn-sharp-right
+      - keep-right
+      - keep-left
       - uturn-left
       - uturn-right
       - turn-right

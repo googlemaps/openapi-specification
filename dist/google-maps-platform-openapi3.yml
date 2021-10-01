@@ -20558,7 +20558,6 @@ components:
       type: object
       title: DirectionsResponse
       required:
-        - geocoded_waypoints
         - routes
         - status
       properties:
@@ -20596,7 +20595,6 @@ components:
         - end_location
         - start_location
         - html_instructions
-        - maneuver
         - polyline
         - travel_mode
       properties:
@@ -20621,6 +20619,8 @@ components:
             - turn-left
             - turn-slight-right
             - turn-sharp-right
+            - keep-right
+            - keep-left
             - uturn-left
             - uturn-right
             - turn-right
@@ -20645,7 +20645,6 @@ components:
           $ref: '#/components/schemas/TravelMode'
         steps:
           description: Substeps are only available when travel_mode is set to "transit".
-          $ref: '#/components/schemas/DirectionsStep'
     DirectionsLeg:
       type: object
       title: DirectionsLeg
@@ -20654,12 +20653,9 @@ components:
         - duration
         - end_address
         - end_location
-        - html_instructions
-        - polyline
         - start_address
         - start_location
         - steps
-        - travel_mode
         - traffic_speed_entry
         - via_waypoint
       properties:
@@ -20727,7 +20723,7 @@ components:
           $ref: '#/components/schemas/Bounds'
         copyrights:
           type: string
-          description: Ccontains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
+          description: Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
         summary:
           type: string
           description: 'Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives.'
@@ -20801,56 +20797,62 @@ components:
           description: |
             Indicates the address type of the geocoding result used for calculating directions.
 
-            * `street_address` indicates a precise street address.
-            * `route` indicates a named route (such as "US 101").
-            * `intersection` indicates a major intersection, usually of two major roads.
-            * `political` indicates a political entity. Usually, this type indicates a polygon of some civil administration.
-            * `country` indicates the national political entity, and is typically the highest order type returned by the Geocoder.
             * `administrative_area_level_1` indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states. Not all nations exhibit these administrative levels. In most cases, administrative_area_level_1 short names will closely match ISO 3166-2 subdivisions and other widely circulated lists; however this is not guaranteed as our geocoding results are based on a variety of signals and location data.
             * `administrative_area_level_2` indicates a second-order civil entity below the country level. Within the United States, these administrative levels are counties. Not all nations exhibit these administrative levels.
             * `administrative_area_level_3` indicates a third-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
             * `administrative_area_level_4` indicates a fourth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
             * `administrative_area_level_5` indicates a fifth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.
-            * `colloquial_area` indicates a commonly-used alternative name for the entity.
-            * `locality` indicates an incorporated city or town political entity.
-            * `sublocality` indicates a first-order civil entity below a locality. For some locations may receive one of the additional types: sublocality_level_1 to sublocality_level_5. Each sublocality level is a civil entity. Larger numbers indicate a smaller geographic area.
-            * `neighborhood` indicates a named neighborhood
-            * `premise` indicates a named location, usually a building or collection of buildings with a common name
-            * `subpremise` indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name
-            * `plus_code` indicates an encoded location reference, derived from latitude and longitude. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [https://plus.codes](https://plus.codes/) for details.
-            * `postal_code` indicates a postal code as used to address postal mail within the country.
-            * `natural_feature` indicates a prominent natural feature.
             * `airport` indicates an airport.
+            * `colloquial_area` indicates a commonly-used alternative name for the entity.
+            * `country` indicates the national political entity, and is typically the highest order type returned by the Geocoder.
+            * `intersection` indicates a major intersection, usually of two major roads.
+            * `locality` indicates an incorporated city or town political entity.
+            * `natural_feature` indicates a prominent natural feature.
+            * `neighborhood` indicates a named neighborhood
             * `park` indicates a named park.
+            * `plus_code` indicates an encoded location reference, derived from latitude and longitude. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [https://plus.codes](https://plus.codes/) for details.
             * `point_of_interest` indicates a named point of interest. Typically, these "POI"s are prominent local entities that don't easily fit in another category, such as "Empire State Building" or "Eiffel Tower".
+            * `political` indicates a political entity. Usually, this type indicates a polygon of some civil administration.
+            * `postal_code` indicates a postal code as used to address postal mail within the country.
+            * `premise` indicates a named location, usually a building or collection of buildings with a common name
+            * `route` indicates a named route (such as "US 101").
+            * `street_address` indicates a precise street address.
+            * `sublocality` indicates a first-order civil entity below a locality. For some locations may receive one of the additional types: sublocality_level_1 to sublocality_level_5. Each sublocality level is a civil entity. Larger numbers indicate a smaller geographic area.
+            * `subpremise` indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name
+            * `transit_station` indicates a transit station.
 
             An empty list of types indicates there are no known types for the particular address component, for example, Lieu-dit in France.
           type: array
           items:
             type: string
             enum:
-              - street_address
-              - route
-              - intersection
-              - political
-              - country
               - administrative_area_level_1
               - administrative_area_level_2
               - administrative_area_level_3
               - administrative_area_level_4
               - administrative_area_level_5
-              - colloquial_area
-              - locality
-              - sublocality
-              - neighborhood
-              - premise
-              - subpremise
-              - plus_code
-              - postal_code
-              - natural_feature
+              - amusement_park
               - airport
+              - colloquial_area
+              - country
+              - establishment
+              - intersection
+              - locality
+              - natural_feature
+              - neighborhood
               - park
+              - plus_code
               - point_of_interest
+              - political
+              - postal_code
+              - premise
+              - route
+              - street_address
+              - sublocality
+              - sublocality_level_1
+              - subpremise
+              - transit_station
+              - tourist_attraction
     DirectionsPolyline:
       type: object
       title: DirectionsPolyline
@@ -20891,8 +20893,8 @@ components:
           description: The index of the step containing the waypoint.
           type: integer
         step_interpolation:
-          description: 'The position of the waypoint along the step''s polyine, expressed as a ratio from 0 to 1.'
-          type: integer
+          description: 'The position of the waypoint along the step''s polyline, expressed as a ratio from 0 to 1.'
+          type: number
     ElevationResult:
       type: object
       title: ElevationResult
@@ -20959,7 +20961,6 @@ components:
         - formatted_address
         - geometry
         - place_id
-        - plus_code
         - types
       properties:
         address_components:
@@ -21505,10 +21506,8 @@ components:
       required:
         - description
         - matched_substrings
-        - place_id
         - structured_formatting
         - terms
-        - types
       properties:
         description:
           description: 'Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name. This content is meant to be read as-is. Do not programmatically parse the formatted address.'

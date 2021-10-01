@@ -12,40 +12,6 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"><code>geocoded_waypoints</code></td>
-      <td><strong>required</strong></td>
-      <td>
-        Array&#x3C;<a
-          href="#DirectionsGeocodedWaypoint"
-          title="DirectionsGeocodedWaypoint"
-          >DirectionsGeocodedWaypoint</a
-        >>
-      </td>
-      <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an array with details about the geocoding of origin,
-            destination and waypoints. Elements in the geocoded_waypoints array
-            correspond, by their zero-based position, to the origin, the
-            waypoints in the order they are specified, and the destination.
-          </p>
-          <p>
-            These details will not be present for waypoints specified as textual
-            latitude/longitude values if the service returns no results. This is
-            because such waypoints are only reverse geocoded to obtain their
-            representative address after a route has been found. An empty JSON
-            object will occupy the corresponding places in the
-            geocoded_waypoints array.
-          </p>
-          <p>
-            See
-            <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a>
-            for more information.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>routes</code></td>
       <td><strong>required</strong></td>
       <td>
@@ -115,6 +81,40 @@
             the response object. This field contains more detailed information
             about thereasons behind the given status code. This field is not
             always returned, and its content is subject to change.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>geocoded_waypoints</code></td>
+      <td>optional</td>
+      <td>
+        Array&#x3C;<a
+          href="#DirectionsGeocodedWaypoint"
+          title="DirectionsGeocodedWaypoint"
+          >DirectionsGeocodedWaypoint</a
+        >>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains an array with details about the geocoding of origin,
+            destination and waypoints. Elements in the geocoded_waypoints array
+            correspond, by their zero-based position, to the origin, the
+            waypoints in the order they are specified, and the destination.
+          </p>
+          <p>
+            These details will not be present for waypoints specified as textual
+            latitude/longitude values if the service returns no results. This is
+            because such waypoints are only reverse geocoded to obtain their
+            representative address after a route has been found. An empty JSON
+            object will occupy the corresponding places in the
+            geocoded_waypoints array.
+          </p>
+          <p>
+            See
+            <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a>
+            for more information.
           </p>
         </div>
       </td>

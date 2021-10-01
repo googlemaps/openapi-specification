@@ -67,32 +67,6 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>html_instructions</code></td>
-      <td><strong>required</strong></td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>Formatted instructions for the leg</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left"><code>polyline</code></td>
-      <td><strong>required</strong></td>
-      <td>
-        <a href="#DirectionsPolyline" title="DirectionsPolyline"
-          >DirectionsPolyline</a
-        >
-      </td>
-      <td>
-        See
-        <a href="#DirectionsPolyline" title="DirectionsPolyline"
-          >DirectionsPolyline</a
-        >
-        for more information.
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>start_address</code></td>
       <td><strong>required</strong></td>
       <td>string</td>
@@ -157,17 +131,6 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>travel_mode</code></td>
-      <td><strong>required</strong></td>
-      <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
-      <td>
-        <div class="ref-property-description">
-          <p>The mode of travel for the leg.</p>
-          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>via_waypoint</code></td>
       <td><strong>required</strong></td>
       <td>
@@ -184,6 +147,43 @@
             See <a href="#DirectionsViaWaypoint">DirectionsViaWaypoint</a> for
             more information.
           </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>html_instructions</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Formatted instructions for the leg</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>polyline</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#DirectionsPolyline" title="DirectionsPolyline"
+          >DirectionsPolyline</a
+        >
+      </td>
+      <td>
+        See
+        <a href="#DirectionsPolyline" title="DirectionsPolyline"
+          >DirectionsPolyline</a
+        >
+        for more information.
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>travel_mode</code></td>
+      <td>optional</td>
+      <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
+      <td>
+        <div class="ref-property-description">
+          <p>The mode of travel for the leg.</p>
+          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
         </div>
       </td>
     </tr>

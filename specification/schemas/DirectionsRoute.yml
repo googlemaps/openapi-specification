@@ -36,7 +36,7 @@ properties:
     $ref: "./Bounds.yml"
   copyrights:
     type: string
-    description: Ccontains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
+    description: Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
   summary:
     type: string
     description: Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives.

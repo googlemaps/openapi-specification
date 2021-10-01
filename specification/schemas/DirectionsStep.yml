@@ -70,5 +70,5 @@ properties:
     description: Travel mode of the step.
     $ref: "./TravelMode.yml"
   steps:
+    # TODO: Support for circular references?
     description: Substeps are only available when travel_mode is set to "transit".
-    $ref: "./DirectionsStep.yml"

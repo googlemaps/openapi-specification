@@ -67,30 +67,6 @@
       </td>
     </tr>
     <tr>
-      <td align="left"><code>maneuver</code></td>
-      <td><strong>required</strong></td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the action to take for the current step (turn left, merge,
-            straight, etc.).
-          </p>
-          <div class="notranslate">
-            The allowed values include: <code>turn-slight-left</code>,
-            <code>turn-sharp-left</code>, <code>turn-left</code>,
-            <code>turn-slight-right</code>, <code>turn-sharp-right</code>,
-            <code>uturn-left</code>, <code>uturn-right</code>,
-            <code>turn-right</code>, <code>straight</code>,
-            <code>ramp-left</code>, <code>ramp-right</code>, <code>merge</code>,
-            <code>fork-left</code>, <code>fork-right</code>, <code>ferry</code>,
-            <code>ferry-train</code>, <code>roundabout-left</code>, and
-            <code>roundabout-right</code>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>polyline</code></td>
       <td><strong>required</strong></td>
       <td>
@@ -133,19 +109,38 @@
       </td>
     </tr>
     <tr>
+      <td align="left"><code>maneuver</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains the action to take for the current step (turn left, merge,
+            straight, etc.).
+          </p>
+          <div class="notranslate">
+            The allowed values include: <code>turn-slight-left</code>,
+            <code>turn-sharp-left</code>, <code>turn-left</code>,
+            <code>turn-slight-right</code>, <code>turn-sharp-right</code>,
+            <code>keep-right</code>, <code>keep-left</code>,
+            <code>uturn-left</code>, <code>uturn-right</code>,
+            <code>turn-right</code>, <code>straight</code>,
+            <code>ramp-left</code>, <code>ramp-right</code>, <code>merge</code>,
+            <code>fork-left</code>, <code>fork-right</code>, <code>ferry</code>,
+            <code>ferry-train</code>, <code>roundabout-left</code>, and
+            <code>roundabout-right</code>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>steps</code></td>
       <td>optional</td>
+      <td></td>
       <td>
-        <a href="#DirectionsStep" title="DirectionsStep">DirectionsStep</a>
-      </td>
-      <td>
-        <div class="ref-property-description">
+        <div class="nonref-property-description">
           <p>
             Substeps are only available when travel_mode is set to "transit".
-          </p>
-          <p>
-            See <a href="#DirectionsStep">DirectionsStep</a> for more
-            information.
           </p>
         </div>
       </td>

@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "title": "ErrorResponse",
+  "description": "In the case of an error, a standard format error response body will be returned and the HTTP status code will be set to an error status. The response contains an object with a single error object.",
+  "required": ["error"],
+  "properties": {
+    "error": {
+      "description": "An error return by the server.",
+      "type": "object",
+      "title": "ErrorObject",
+      "required": ["code", "message", "errors"],
+      "properties": {
+        "code": {
+          "description": "This is the same as the HTTP status of the response.",
+          "type": "number"
+        },
+        "message": {
+          "description": "A short description of the error.",
+          "type": "string"
+        },
+        "errors": {
+          "description": "A list of errors which occurred. Each error contains an identifier for the type of error and a short description.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "title": "ErrorDetail",
+            "required": ["reason", "message"],
+            "properties": {
+              "message": {
+                "description": "A short description of the error.",
+                "type": "string"
+              },
+              "reason": {
+                "type": "string",
+                "description": "A reason for the error.",
+                "enum": [
+                  "badRequest",
+                  "dailyLimitExceeded",
+                  "invalid",
+                  "keyInvalid",
+                  "notFound",
+                  "parseError",
+                  "userRateLimitExceeded"
+                ]
+              },
+              "domain": {
+                "type": "string",
+                "description": "The domain in which the error occurred.",
+                "enum": ["global", "geolocation", "usageLimits"]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

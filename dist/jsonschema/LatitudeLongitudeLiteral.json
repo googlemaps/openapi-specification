@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "title": "LatitudeLongitudeLiteral",
+  "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+  "required": ["latitude", "longitude"],
+  "properties": {
+    "latitude": {
+      "type": "number",
+      "description": "Latitude in decimal degrees"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude in decimal degrees"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

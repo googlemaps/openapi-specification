@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "title": "PlaceOpeningHours",
+  "description": "An object describing the opening hours of a place.",
+  "required": ["open_now"],
+  "properties": {
+    "open_now": {
+      "description": "A boolean value indicating if the place is open at the current time.",
+      "type": "boolean"
+    },
+    "periods": {
+      "description": "An array of opening periods covering seven days, starting from Sunday, in chronological order.\n",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "PlaceOpeningHoursPeriod",
+        "required": ["open", "close"],
+        "properties": {
+          "open": {
+            "description": "Contains a pair of day and time objects describing when the place opens.",
+            "type": "object",
+            "title": "PlaceOpeningHoursPeriodDetail",
+            "required": ["day", "time"],
+            "properties": {
+              "day": {
+                "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
+                "type": "number"
+              },
+              "time": {
+                "description": "May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.",
+                "type": "string"
+              }
+            }
+          },
+          "close": {
+            "description": "May contain a pair of day and time objects describing when the place closes. If a place is always open, the close section will be missing from the response. Clients can rely on always-open being represented as an open period containing day with value `0` and time with value `0000`, and no `close`.\n",
+            "type": "object",
+            "title": "PlaceOpeningHoursPeriodDetail",
+            "required": ["day", "time"],
+            "properties": {
+              "day": {
+                "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
+                "type": "number"
+              },
+              "time": {
+                "description": "May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "weekday_text": {
+      "description": "A boolean value indicating if the place is open at the current time.",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

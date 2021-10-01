@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "title": "StreetViewResponse",
+  "required": ["status"],
+  "properties": {
+    "copyright": {
+      "description": "An array of snapped points.",
+      "type": "string"
+    },
+    "date": {
+      "description": "A string indicating year and month that the panorama was captured.",
+      "type": "string"
+    },
+    "location": {
+      "type": "object",
+      "title": "LatLngLiteral",
+      "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    },
+    "pano_id": {
+      "description": "A specific panorama ID. These are generally stable, though panoramas may change ID over time as imagery is refreshed.",
+      "type": "string"
+    },
+    "status": {
+      "description": "The status of the request.",
+      "type": "string",
+      "title": "StreetViewStatus",
+      "enum": [
+        "OK",
+        "INVALID_REQUEST",
+        "NOT_FOUND",
+        "ZERO_RESULTS",
+        "OVER_QUERY_LIMIT",
+        "REQUEST_DENIED",
+        "UNKNOWN_ERROR"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

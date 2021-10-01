@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "title": "NearestRoadsError",
+  "required": ["code", "message", "status"],
+  "properties": {
+    "code": {
+      "description": "This is the same as the HTTP status of the response.",
+      "type": "number"
+    },
+    "message": {
+      "description": "A short description of the error.",
+      "type": "string"
+    },
+    "status": {
+      "description": "An error such as `INVALID_ARGUMENT`.",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

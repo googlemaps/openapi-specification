@@ -1,0 +1,215 @@
+{
+  "type": "object",
+  "title": "GeocodingResponse",
+  "required": ["status", "results"],
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "GeocodingResult",
+        "required": [
+          "address_components",
+          "formatted_address",
+          "geometry",
+          "place_id",
+          "plus_code",
+          "types"
+        ],
+        "properties": {
+          "address_components": {
+            "description": "An array containing the separate components applicable to this address.",
+            "type": "array",
+            "items": {
+              "title": "AddressComponent",
+              "type": "object",
+              "required": ["long_name", "short_name", "types"],
+              "properties": {
+                "long_name": {
+                  "description": "The full text description or name of the address component as returned by the Geocoder.",
+                  "type": "string"
+                },
+                "short_name": {
+                  "description": "An abbreviated textual name for the address component, if available. For example, an address component for the state of Alaska may have a long_name of \"Alaska\" and a short_name of \"AK\" using the 2-letter postal abbreviation.",
+                  "type": "string"
+                },
+                "types": {
+                  "description": "An array indicating the type of the address component. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).",
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "formatted_address": {
+            "description": "The human-readable address of this location.",
+            "type": "string"
+          },
+          "geometry": {
+            "type": "object",
+            "title": "GeocodingGeometry",
+            "description": "An object describing the location.",
+            "required": ["location", "viewport", "location_type"],
+            "properties": {
+              "location": {
+                "type": "object",
+                "title": "LatLngLiteral",
+                "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                "required": ["lat", "lng"],
+                "properties": {
+                  "lat": {
+                    "type": "number",
+                    "description": "Latitude in decimal degrees"
+                  },
+                  "lng": {
+                    "type": "number",
+                    "description": "Longitude in decimal degrees"
+                  }
+                }
+              },
+              "location_type": {
+                "description": "Stores additional data about the specified location. The following values are currently supported:\n\n- \"ROOFTOP\" indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.\n- \"RANGE_INTERPOLATED\" indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections). Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.\n- \"GEOMETRIC_CENTER\" indicates that the returned result is the geometric center of a result such as a polyline (for example, a street) or polygon (region).\n- \"APPROXIMATE\" indicates that the returned result is approximate.\n",
+                "type": "string",
+                "enum": [
+                  "ROOFTOP",
+                  "RANGE_INTERPOLATED",
+                  "GEOMETRIC_CENTER",
+                  "APPROXIMATE"
+                ]
+              },
+              "bounds": {
+                "title": "Bounds",
+                "type": "object",
+                "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
+                "required": ["northeast", "southwest"],
+                "properties": {
+                  "northeast": {
+                    "type": "object",
+                    "title": "LatLngLiteral",
+                    "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                    "required": ["lat", "lng"],
+                    "properties": {
+                      "lat": {
+                        "type": "number",
+                        "description": "Latitude in decimal degrees"
+                      },
+                      "lng": {
+                        "type": "number",
+                        "description": "Longitude in decimal degrees"
+                      }
+                    }
+                  },
+                  "southwest": {
+                    "type": "object",
+                    "title": "LatLngLiteral",
+                    "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                    "required": ["lat", "lng"],
+                    "properties": {
+                      "lat": {
+                        "type": "number",
+                        "description": "Latitude in decimal degrees"
+                      },
+                      "lng": {
+                        "type": "number",
+                        "description": "Longitude in decimal degrees"
+                      }
+                    }
+                  }
+                }
+              },
+              "viewport": {
+                "title": "Bounds",
+                "type": "object",
+                "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
+                "required": ["northeast", "southwest"],
+                "properties": {
+                  "northeast": {
+                    "type": "object",
+                    "title": "LatLngLiteral",
+                    "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                    "required": ["lat", "lng"],
+                    "properties": {
+                      "lat": {
+                        "type": "number",
+                        "description": "Latitude in decimal degrees"
+                      },
+                      "lng": {
+                        "type": "number",
+                        "description": "Longitude in decimal degrees"
+                      }
+                    }
+                  },
+                  "southwest": {
+                    "type": "object",
+                    "title": "LatLngLiteral",
+                    "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                    "required": ["lat", "lng"],
+                    "properties": {
+                      "lat": {
+                        "type": "number",
+                        "description": "Latitude in decimal degrees"
+                      },
+                      "lng": {
+                        "type": "number",
+                        "description": "Longitude in decimal degrees"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "place_id": {
+            "description": "A unique identifier that can be used with other Google APIs. For example, you can use the `place_id` in a Places API request to get details of a local business, such as phone number, opening hours, user reviews, and more. See the [place ID overview](https://developers.google.com/places/place-id).",
+            "type": "string"
+          },
+          "plus_code": {
+            "type": "object",
+            "title": "PlusCode",
+            "description": "An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named).",
+            "required": ["global_code"],
+            "properties": {
+              "compound_code": {
+                "description": "The `compound_code` is a 6 character or longer local code with an explicit location (`CWC8+R9, Mountain View, CA, USA`). Some APIs may return an empty string if the `compound_code` is not available.",
+                "type": "string"
+              },
+              "global_code": {
+                "description": "The `global_code` is a 4 character area code and 6 character or longer local code (`849VCWC8+R9`).",
+                "type": "string"
+              }
+            }
+          },
+          "types": {
+            "description": "The `types[]` array indicates the type of the returned result. This array contains a set of zero or more tags identifying the type of feature returned in the result. For example, a geocode of \"Chicago\" returns \"locality\" which indicates that \"Chicago\" is a city, and also returns \"political\" which indicates it is a political entity.",
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "postcode_localities": {
+            "description": "An array denoting all the localities contained in a postal code. This is only present when the result is a postal code that contains multiple localities.",
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "partial_match": {
+            "description": "Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. You may wish to examine the original request for misspellings and/or an incomplete address.\n\nPartial matches most often occur for street addresses that do not exist within the locality you pass in the request. Partial matches may also be returned when a request matches two or more locations in the same locality.\n",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "title": "GeocodingStatus",
+      "description": "The `status` field within the Geocoding response object contains the status of the request, and may contain debugging information to help you track down why geocoding is not working. The \"status\" field may contain the following values:\n\n- `OK` indicates that no errors occurred; the address was successfully parsed and at least one geocode was returned.\n- `ZERO_RESULTS` indicates that the geocode was successful but returned no results. This may occur if the geocoder was passed a non-existent address or a `latlng` in a remote location.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n- `OVER_QUERY_LIMIT` indicates that you are over your quota.\n- `REQUEST_DENIED` indicates that your request was denied.\n- `INVALID_REQUEST` generally indicates that the query (address, components, or latlng) is missing.\n- `UNKNOWN_ERROR` indicates that the request could not be processed due to a server error. The request may succeed if you try again.\n",
+      "enum": [
+        "OK",
+        "INVALID_REQUEST",
+        "OVER_DAILY_LIMIT",
+        "OVER_QUERY_LIMIT",
+        "REQUEST_DENIED",
+        "UNKNOWN_ERROR",
+        "ZERO_RESULTS"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,142 @@
+{
+  "type": "object",
+  "title": "PlacesQueryAutocompleteResponse",
+  "required": ["predictions", "status"],
+  "properties": {
+    "predictions": {
+      "description": "Contains an array of predictions.\n",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "PlaceAutocompletePrediction",
+        "required": [
+          "description",
+          "matched_substrings",
+          "place_id",
+          "structured_formatting",
+          "terms",
+          "types"
+        ],
+        "properties": {
+          "description": {
+            "description": "Contains the human-readable name for the returned result. For `establishment` results, this is usually the business name. This content is meant to be read as-is. Do not programmatically parse the formatted address.",
+            "type": "string"
+          },
+          "matched_substrings": {
+            "description": "A list of substrings that describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "title": "PlaceAutocompleteMatchedSubstring",
+              "required": ["length", "offset"],
+              "properties": {
+                "length": {
+                  "description": "Length of the matched substring in the prediction result text.",
+                  "type": "number"
+                },
+                "offset": {
+                  "description": "Start location of the matched substring in the prediction result text.",
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "place_id": {
+            "description": "A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the placeId field of a Places API request. For more information about place IDs, see the [Place IDs](https://developers.google.com/maps/documentation/places/web-service/place-id) overview.",
+            "type": "string"
+          },
+          "reference": {
+            "description": "(Deprecated) See place_id.",
+            "type": "string"
+          },
+          "structured_formatting": {
+            "description": "Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be read as-is. Do not programmatically parse the formatted address.",
+            "type": "object",
+            "title": "PlaceAutocompleteStructuredFormat",
+            "required": [
+              "main_text",
+              "main_text_matched_substrings",
+              "secondary_text"
+            ],
+            "properties": {
+              "main_text": {
+                "description": "Contains the main text of a prediction, usually the name of the place.",
+                "type": "string"
+              },
+              "main_text_matched_substrings": {
+                "description": "Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "title": "PlaceAutocompleteMatchedSubstring",
+                  "required": ["length", "offset"],
+                  "properties": {
+                    "length": {
+                      "description": "Length of the matched substring in the prediction result text.",
+                      "type": "number"
+                    },
+                    "offset": {
+                      "description": "Start location of the matched substring in the prediction result text.",
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "secondary_text": {
+                "description": "Contains the secondary text of a prediction, usually the location of the place.",
+                "type": "string"
+              }
+            }
+          },
+          "terms": {
+            "description": "Contains an array of terms identifying each section of the returned description (a section of the description is generally terminated with a comma). Each entry in the array has a `value` field, containing the text of the term, and an `offset` field, defining the start position of this term in the description, measured in Unicode characters.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "title": "PlaceAutocompleteTerm",
+              "required": ["value", "offset"],
+              "properties": {
+                "value": {
+                  "description": "The text of the term.",
+                  "type": "string"
+                },
+                "offset": {
+                  "description": "Defines the start position of this term in the description, measured in Unicode characters",
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "types": {
+            "description": "Contains an array of types that apply to this place. For example: `[ \"political\", \"locality\" ]` or `[ \"establishment\", \"geocode\", \"beauty_salon\" ]`. The array can contain multiple values. Learn more about [Place types](https://developers.google.com/maps/documentation/places/web-service/supported_types).\n",
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "status": {
+      "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
+      "type": "string",
+      "title": "PlacesAutocompleteStatus",
+      "enum": [
+        "OK",
+        "ZERO_RESULTS",
+        "INVALID_REQUEST",
+        "OVER_QUERY_LIMIT",
+        "REQUEST_DENIED",
+        "UNKNOWN_ERROR"
+      ]
+    },
+    "error_message": {
+      "description": "When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
+      "type": "string"
+    },
+    "info_messages": {
+      "description": "When the service returns additional information about the request specification, there may be an additional `info_messages` field within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.\n",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

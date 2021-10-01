@@ -1,0 +1,7 @@
+{
+  "description": "An array of comma separated {latitude,longitude} strings.",
+  "title": "LatLngArrayString",
+  "type": "array",
+  "items": { "type": "string", "minItems": 2 },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

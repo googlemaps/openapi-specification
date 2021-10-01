@@ -1,0 +1,277 @@
+{
+  "type": "object",
+  "title": "DirectionsLeg",
+  "required": [
+    "distance",
+    "duration",
+    "end_address",
+    "end_location",
+    "html_instructions",
+    "polyline",
+    "start_address",
+    "start_location",
+    "steps",
+    "travel_mode",
+    "traffic_speed_entry",
+    "via_waypoint"
+  ],
+  "properties": {
+    "distance": {
+      "description": "Distance of the leg.",
+      "type": "object",
+      "title": "TextValueObject",
+      "required": ["text", "value"],
+      "properties": {
+        "text": { "description": "String value.", "type": "string" },
+        "value": { "description": "Numeric value.", "type": "number" }
+      }
+    },
+    "duration": {
+      "description": "Duration of the leg.",
+      "type": "object",
+      "title": "TextValueObject",
+      "required": ["text", "value"],
+      "properties": {
+        "text": { "description": "String value.", "type": "string" },
+        "value": { "description": "Numeric value.", "type": "number" }
+      }
+    },
+    "end_address": {
+      "description": "The end address of the leg.",
+      "type": "string"
+    },
+    "end_location": {
+      "description": "The end location of the leg.",
+      "type": "object",
+      "title": "LatLngLiteral",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    },
+    "html_instructions": {
+      "type": "string",
+      "description": "Formatted instructions for the leg"
+    },
+    "polyline": {
+      "type": "object",
+      "title": "DirectionsPolyline",
+      "description": "[Polyline encoding](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive polyline encoding utility.\n\nThe encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.\n\nAdditionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.\n",
+      "required": ["points"],
+      "properties": {
+        "points": {
+          "type": "string",
+          "description": "A single string representation of the polyline."
+        }
+      }
+    },
+    "start_address": {
+      "description": "The start address of the leg.",
+      "type": "string"
+    },
+    "start_location": {
+      "description": "The start location of the leg.",
+      "type": "object",
+      "title": "LatLngLiteral",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    },
+    "travel_mode": {
+      "type": "string",
+      "title": "TravelMode",
+      "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+      "enum": ["DRIVING", "WALKING", "BICYCLING", "TRANSIT"]
+    },
+    "steps": {
+      "description": "Individual steps that make up the leg.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "DirectionsStep",
+        "required": [
+          "distance",
+          "duration",
+          "end_location",
+          "start_location",
+          "html_instructions",
+          "maneuver",
+          "polyline",
+          "travel_mode"
+        ],
+        "properties": {
+          "distance": {
+            "description": "Distance of the step.",
+            "type": "object",
+            "title": "TextValueObject",
+            "required": ["text", "value"],
+            "properties": {
+              "text": { "description": "String value.", "type": "string" },
+              "value": { "description": "Numeric value.", "type": "number" }
+            }
+          },
+          "duration": {
+            "description": "Duration of the step.",
+            "type": "object",
+            "title": "TextValueObject",
+            "required": ["text", "value"],
+            "properties": {
+              "text": { "description": "String value.", "type": "string" },
+              "value": { "description": "Numeric value.", "type": "number" }
+            }
+          },
+          "end_location": {
+            "description": "End location of the step.",
+            "type": "object",
+            "title": "LatLngLiteral",
+            "required": ["lat", "lng"],
+            "properties": {
+              "lat": {
+                "type": "number",
+                "description": "Latitude in decimal degrees"
+              },
+              "lng": {
+                "type": "number",
+                "description": "Longitude in decimal degrees"
+              }
+            }
+          },
+          "html_instructions": {
+            "type": "string",
+            "description": "HTML representation of the step."
+          },
+          "maneuver": {
+            "type": "string",
+            "description": "Contains the action to take for the current step (turn left, merge, straight, etc.).",
+            "enum": [
+              "turn-slight-left",
+              "turn-sharp-left",
+              "turn-left",
+              "turn-slight-right",
+              "turn-sharp-right",
+              "uturn-left",
+              "uturn-right",
+              "turn-right",
+              "straight",
+              "ramp-left",
+              "ramp-right",
+              "merge",
+              "fork-left",
+              "fork-right",
+              "ferry",
+              "ferry-train",
+              "roundabout-left",
+              "roundabout-right"
+            ]
+          },
+          "polyline": {
+            "type": "object",
+            "title": "DirectionsPolyline",
+            "description": "[Polyline encoding](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive polyline encoding utility.\n\nThe encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.\n\nAdditionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.\n",
+            "required": ["points"],
+            "properties": {
+              "points": {
+                "type": "string",
+                "description": "A single string representation of the polyline."
+              }
+            }
+          },
+          "start_location": {
+            "description": "Start location of the step.",
+            "type": "object",
+            "title": "LatLngLiteral",
+            "required": ["lat", "lng"],
+            "properties": {
+              "lat": {
+                "type": "number",
+                "description": "Latitude in decimal degrees"
+              },
+              "lng": {
+                "type": "number",
+                "description": "Longitude in decimal degrees"
+              }
+            }
+          },
+          "travel_mode": {
+            "type": "string",
+            "title": "TravelMode",
+            "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+            "enum": ["DRIVING", "WALKING", "BICYCLING", "TRANSIT"]
+          },
+          "steps": {
+            "description": "Substeps are only available when travel_mode is set to \"transit\"."
+          }
+        }
+      }
+    },
+    "traffic_speed_entry": {
+      "description": "Information about traffic speed along the leg.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "DirectionsTrafficSpeedEntry",
+        "required": ["speed_category", "offset_meters"],
+        "properties": {
+          "speed_category": {
+            "type": "string",
+            "description": "The current traffic/speed conditions on this portion of a path."
+          },
+          "offset_meters": {
+            "type": "number",
+            "description": "The offset along the path (in meters) up to which this speed category is valid."
+          }
+        }
+      }
+    },
+    "via_waypoint": {
+      "description": "The locations of via waypoints along this leg.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "DirectionsViaWaypoint",
+        "properties": {
+          "location": {
+            "description": "The location of the waypoint.",
+            "type": "object",
+            "title": "LatLngLiteral",
+            "required": ["lat", "lng"],
+            "properties": {
+              "lat": {
+                "type": "number",
+                "description": "Latitude in decimal degrees"
+              },
+              "lng": {
+                "type": "number",
+                "description": "Longitude in decimal degrees"
+              }
+            }
+          },
+          "step_index": {
+            "description": "The index of the step containing the waypoint.",
+            "type": "integer"
+          },
+          "step_interpolation": {
+            "description": "The position of the waypoint along the step's polyline, expressed as a ratio from 0 to 1.",
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

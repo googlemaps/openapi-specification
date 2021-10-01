@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "title": "ElevationResult",
+  "required": ["elevation", "location"],
+  "properties": {
+    "elevation": {
+      "description": "The elevation of the location in meters.",
+      "type": "number"
+    },
+    "resolution": {
+      "description": "The value indicating the maximum distance between data points from which the elevation was interpolated, in meters. This property will be missing if the resolution is not known. Note that elevation data becomes more coarse (larger resolution values) when multiple points are passed. To obtain the most accurate elevation value for a point, it should be queried independently.",
+      "type": "number"
+    },
+    "location": {
+      "type": "object",
+      "title": "LatLngLiteral",
+      "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "title": "DirectionsTrafficSpeedEntry",
+  "required": ["speed_category", "offset_meters"],
+  "properties": {
+    "speed_category": {
+      "type": "string",
+      "description": "The current traffic/speed conditions on this portion of a path."
+    },
+    "offset_meters": {
+      "type": "number",
+      "description": "The offset along the path (in meters) up to which this speed category is valid."
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

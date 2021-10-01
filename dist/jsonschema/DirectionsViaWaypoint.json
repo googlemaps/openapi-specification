@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "title": "DirectionsViaWaypoint",
+  "properties": {
+    "location": {
+      "description": "The location of the waypoint.",
+      "type": "object",
+      "title": "LatLngLiteral",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    },
+    "step_index": {
+      "description": "The index of the step containing the waypoint.",
+      "type": "integer"
+    },
+    "step_interpolation": {
+      "description": "The position of the waypoint along the step's polyline, expressed as a ratio from 0 to 1.",
+      "type": "integer"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

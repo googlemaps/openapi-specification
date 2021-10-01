@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "title": "PlaceAutocompleteTerm",
+  "required": ["value", "offset"],
+  "properties": {
+    "value": { "description": "The text of the term.", "type": "string" },
+    "offset": {
+      "description": "Defines the start position of this term in the description, measured in Unicode characters",
+      "type": "number"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

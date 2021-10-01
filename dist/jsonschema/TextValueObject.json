@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "title": "TextValueObject",
+  "description": "An object containing a numeric value and its formatted text representation.",
+  "required": ["text", "value"],
+  "properties": {
+    "text": { "description": "String value.", "type": "string" },
+    "value": { "description": "Numeric value.", "type": "number" }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

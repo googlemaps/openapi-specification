@@ -1,0 +1,48 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "_lib",
+    srcs = glob(["*.ts"]),
+    deps = [
+        "@npm//@apidevtools/json-schema-ref-parser",
+        "@npm//@openapi-contrib/openapi-schema-to-json-schema",
+        "@npm//@types/json-schema",
+        "@npm//@types/node",
+        "@npm//@types/yargs",
+        "@npm//@types/tar-stream",
+        "@npm//openapi-types",
+        "@npm//prettier",
+        "@npm//slugify",
+        "@npm//tar-stream",
+        "@npm//yargs",
+    ],
+)
+
+nodejs_binary(
+    name = "_jsonschema_bin",
+    data = [
+        ":_lib",
+        "//specification:openapi3",
+    ],
+    entry_point = ":jsonschema.ts",
+    templated_args = [
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
+)
+
+genrule(
+    name = "jsonschema",
+    srcs = ["//:google-maps-platform-openapi3.json"],
+    outs = ["jsonschema.tar"],
+    cmd = "$(location :_jsonschema_bin) " +
+          "--spec $(location //:google-maps-platform-openapi3.json) " +
+          "--output $@",
+    tools = [
+        ":_lib",
+        ":_jsonschema_bin",
+    ],
+)

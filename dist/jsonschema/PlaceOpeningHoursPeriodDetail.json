@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "title": "PlaceOpeningHoursPeriodDetail",
+  "required": ["day", "time"],
+  "properties": {
+    "day": {
+      "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
+      "type": "number"
+    },
+    "time": {
+      "description": "May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "title": "ErrorDetail",
+  "required": ["reason", "message"],
+  "properties": {
+    "message": {
+      "description": "A short description of the error.",
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "description": "A reason for the error.",
+      "enum": [
+        "badRequest",
+        "dailyLimitExceeded",
+        "invalid",
+        "keyInvalid",
+        "notFound",
+        "parseError",
+        "userRateLimitExceeded"
+      ]
+    },
+    "domain": {
+      "type": "string",
+      "description": "The domain in which the error occurred.",
+      "enum": ["global", "geolocation", "usageLimits"]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

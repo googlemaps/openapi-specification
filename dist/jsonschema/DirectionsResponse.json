@@ -1,0 +1,501 @@
+{
+  "type": "object",
+  "title": "DirectionsResponse",
+  "required": ["geocoded_waypoints", "routes", "status"],
+  "properties": {
+    "geocoded_waypoints": {
+      "description": "Contains an array with details about the geocoding of origin, destination and waypoints. Elements in the geocoded_waypoints array correspond, by their zero-based position, to the origin, the waypoints in the order they are specified, and the destination.\n\nThese details will not be present for waypoints specified as textual latitude/longitude values if the service returns no results. This is because such waypoints are only reverse geocoded to obtain their representative address after a route has been found. An empty JSON object will occupy the corresponding places in the geocoded_waypoints array.\n",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "DirectionsGeocodedWaypoint",
+        "properties": {
+          "geocoder_status": {
+            "description": "Indicates the status code resulting from the geocoding operation. This field may contain the following values.",
+            "type": "string",
+            "enum": ["OK", "ZERO_RESULTS"]
+          },
+          "partial_match": {
+            "description": "Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. You may wish to examine the original request for misspellings and/or an incomplete address.\n\nPartial matches most often occur for street addresses that do not exist within the locality you pass in the request. Partial matches may also be returned when a request matches two or more locations in the same locality. For example, \"21 Henr St, Bristol, UK\" will return a partial match for both Henry Street and Henrietta Street. Note that if a request includes a misspelled address component, the geocoding service may suggest an alternative address. Suggestions triggered in this way will also be marked as a partial match.\n"
+          },
+          "place_id": {
+            "description": "A unique identifier that can be used with other Google APIs. See the [Place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).",
+            "type": "string"
+          },
+          "types": {
+            "description": "Indicates the address type of the geocoding result used for calculating directions.\n\n* `street_address` indicates a precise street address.\n* `route` indicates a named route (such as \"US 101\").\n* `intersection` indicates a major intersection, usually of two major roads.\n* `political` indicates a political entity. Usually, this type indicates a polygon of some civil administration.\n* `country` indicates the national political entity, and is typically the highest order type returned by the Geocoder.\n* `administrative_area_level_1` indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states. Not all nations exhibit these administrative levels. In most cases, administrative_area_level_1 short names will closely match ISO 3166-2 subdivisions and other widely circulated lists; however this is not guaranteed as our geocoding results are based on a variety of signals and location data.\n* `administrative_area_level_2` indicates a second-order civil entity below the country level. Within the United States, these administrative levels are counties. Not all nations exhibit these administrative levels.\n* `administrative_area_level_3` indicates a third-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.\n* `administrative_area_level_4` indicates a fourth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.\n* `administrative_area_level_5` indicates a fifth-order civil entity below the country level. This type indicates a minor civil division. Not all nations exhibit these administrative levels.\n* `colloquial_area` indicates a commonly-used alternative name for the entity.\n* `locality` indicates an incorporated city or town political entity.\n* `sublocality` indicates a first-order civil entity below a locality. For some locations may receive one of the additional types: sublocality_level_1 to sublocality_level_5. Each sublocality level is a civil entity. Larger numbers indicate a smaller geographic area.\n* `neighborhood` indicates a named neighborhood\n* `premise` indicates a named location, usually a building or collection of buildings with a common name\n* `subpremise` indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name\n* `plus_code` indicates an encoded location reference, derived from latitude and longitude. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [https://plus.codes](https://plus.codes/) for details.\n* `postal_code` indicates a postal code as used to address postal mail within the country.\n* `natural_feature` indicates a prominent natural feature.\n* `airport` indicates an airport.\n* `park` indicates a named park.\n* `point_of_interest` indicates a named point of interest. Typically, these \"POI\"s are prominent local entities that don't easily fit in another category, such as \"Empire State Building\" or \"Eiffel Tower\".\n\nAn empty list of types indicates there are no known types for the particular address component, for example, Lieu-dit in France.\n",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "street_address",
+                "route",
+                "intersection",
+                "political",
+                "country",
+                "administrative_area_level_1",
+                "administrative_area_level_2",
+                "administrative_area_level_3",
+                "administrative_area_level_4",
+                "administrative_area_level_5",
+                "colloquial_area",
+                "locality",
+                "sublocality",
+                "neighborhood",
+                "premise",
+                "subpremise",
+                "plus_code",
+                "postal_code",
+                "natural_feature",
+                "airport",
+                "park",
+                "point_of_interest"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "routes": {
+      "description": "Contains an array of routes from the origin to the destination. See Routes below. Routes consist of nested Legs and Steps.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "DirectionsRoute",
+        "description": "Routes consist of nested Legs and Steps.",
+        "required": [
+          "bounds",
+          "copyrights",
+          "legs",
+          "overview_polyline",
+          "summary",
+          "warnings",
+          "waypoint_order"
+        ],
+        "properties": {
+          "legs": {
+            "description": "an array which contains information about a leg of the route, between two locations within the given route. A separate leg will be present for each waypoint or destination specified. (A route with no waypoints will contain exactly one leg within the legs array.) Each leg consists of a series of steps.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "title": "DirectionsLeg",
+              "required": [
+                "distance",
+                "duration",
+                "end_address",
+                "end_location",
+                "html_instructions",
+                "polyline",
+                "start_address",
+                "start_location",
+                "steps",
+                "travel_mode",
+                "traffic_speed_entry",
+                "via_waypoint"
+              ],
+              "properties": {
+                "distance": {
+                  "description": "Distance of the leg.",
+                  "type": "object",
+                  "title": "TextValueObject",
+                  "required": ["text", "value"],
+                  "properties": {
+                    "text": {
+                      "description": "String value.",
+                      "type": "string"
+                    },
+                    "value": {
+                      "description": "Numeric value.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "duration": {
+                  "description": "Duration of the leg.",
+                  "type": "object",
+                  "title": "TextValueObject",
+                  "required": ["text", "value"],
+                  "properties": {
+                    "text": {
+                      "description": "String value.",
+                      "type": "string"
+                    },
+                    "value": {
+                      "description": "Numeric value.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "end_address": {
+                  "description": "The end address of the leg.",
+                  "type": "string"
+                },
+                "end_location": {
+                  "description": "The end location of the leg.",
+                  "type": "object",
+                  "title": "LatLngLiteral",
+                  "required": ["lat", "lng"],
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "description": "Latitude in decimal degrees"
+                    },
+                    "lng": {
+                      "type": "number",
+                      "description": "Longitude in decimal degrees"
+                    }
+                  }
+                },
+                "html_instructions": {
+                  "type": "string",
+                  "description": "Formatted instructions for the leg"
+                },
+                "polyline": {
+                  "type": "object",
+                  "title": "DirectionsPolyline",
+                  "description": "[Polyline encoding](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive polyline encoding utility.\n\nThe encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.\n\nAdditionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.\n",
+                  "required": ["points"],
+                  "properties": {
+                    "points": {
+                      "type": "string",
+                      "description": "A single string representation of the polyline."
+                    }
+                  }
+                },
+                "start_address": {
+                  "description": "The start address of the leg.",
+                  "type": "string"
+                },
+                "start_location": {
+                  "description": "The start location of the leg.",
+                  "type": "object",
+                  "title": "LatLngLiteral",
+                  "required": ["lat", "lng"],
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "description": "Latitude in decimal degrees"
+                    },
+                    "lng": {
+                      "type": "number",
+                      "description": "Longitude in decimal degrees"
+                    }
+                  }
+                },
+                "travel_mode": {
+                  "type": "string",
+                  "title": "TravelMode",
+                  "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+                  "enum": ["DRIVING", "WALKING", "BICYCLING", "TRANSIT"]
+                },
+                "steps": {
+                  "description": "Individual steps that make up the leg.",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "title": "DirectionsStep",
+                    "required": [
+                      "distance",
+                      "duration",
+                      "end_location",
+                      "start_location",
+                      "html_instructions",
+                      "maneuver",
+                      "polyline",
+                      "travel_mode"
+                    ],
+                    "properties": {
+                      "distance": {
+                        "description": "Distance of the step.",
+                        "type": "object",
+                        "title": "TextValueObject",
+                        "required": ["text", "value"],
+                        "properties": {
+                          "text": {
+                            "description": "String value.",
+                            "type": "string"
+                          },
+                          "value": {
+                            "description": "Numeric value.",
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "duration": {
+                        "description": "Duration of the step.",
+                        "type": "object",
+                        "title": "TextValueObject",
+                        "required": ["text", "value"],
+                        "properties": {
+                          "text": {
+                            "description": "String value.",
+                            "type": "string"
+                          },
+                          "value": {
+                            "description": "Numeric value.",
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "end_location": {
+                        "description": "End location of the step.",
+                        "type": "object",
+                        "title": "LatLngLiteral",
+                        "required": ["lat", "lng"],
+                        "properties": {
+                          "lat": {
+                            "type": "number",
+                            "description": "Latitude in decimal degrees"
+                          },
+                          "lng": {
+                            "type": "number",
+                            "description": "Longitude in decimal degrees"
+                          }
+                        }
+                      },
+                      "html_instructions": {
+                        "type": "string",
+                        "description": "HTML representation of the step."
+                      },
+                      "maneuver": {
+                        "type": "string",
+                        "description": "Contains the action to take for the current step (turn left, merge, straight, etc.).",
+                        "enum": [
+                          "turn-slight-left",
+                          "turn-sharp-left",
+                          "turn-left",
+                          "turn-slight-right",
+                          "turn-sharp-right",
+                          "uturn-left",
+                          "uturn-right",
+                          "turn-right",
+                          "straight",
+                          "ramp-left",
+                          "ramp-right",
+                          "merge",
+                          "fork-left",
+                          "fork-right",
+                          "ferry",
+                          "ferry-train",
+                          "roundabout-left",
+                          "roundabout-right"
+                        ]
+                      },
+                      "polyline": {
+                        "type": "object",
+                        "title": "DirectionsPolyline",
+                        "description": "[Polyline encoding](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive polyline encoding utility.\n\nThe encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.\n\nAdditionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.\n",
+                        "required": ["points"],
+                        "properties": {
+                          "points": {
+                            "type": "string",
+                            "description": "A single string representation of the polyline."
+                          }
+                        }
+                      },
+                      "start_location": {
+                        "description": "Start location of the step.",
+                        "type": "object",
+                        "title": "LatLngLiteral",
+                        "required": ["lat", "lng"],
+                        "properties": {
+                          "lat": {
+                            "type": "number",
+                            "description": "Latitude in decimal degrees"
+                          },
+                          "lng": {
+                            "type": "number",
+                            "description": "Longitude in decimal degrees"
+                          }
+                        }
+                      },
+                      "travel_mode": {
+                        "type": "string",
+                        "title": "TravelMode",
+                        "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+                        "enum": ["DRIVING", "WALKING", "BICYCLING", "TRANSIT"]
+                      },
+                      "steps": {
+                        "description": "Substeps are only available when travel_mode is set to \"transit\"."
+                      }
+                    }
+                  }
+                },
+                "traffic_speed_entry": {
+                  "description": "Information about traffic speed along the leg.",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "title": "DirectionsTrafficSpeedEntry",
+                    "required": ["speed_category", "offset_meters"],
+                    "properties": {
+                      "speed_category": {
+                        "type": "string",
+                        "description": "The current traffic/speed conditions on this portion of a path."
+                      },
+                      "offset_meters": {
+                        "type": "number",
+                        "description": "The offset along the path (in meters) up to which this speed category is valid."
+                      }
+                    }
+                  }
+                },
+                "via_waypoint": {
+                  "description": "The locations of via waypoints along this leg.",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "title": "DirectionsViaWaypoint",
+                    "properties": {
+                      "location": {
+                        "description": "The location of the waypoint.",
+                        "type": "object",
+                        "title": "LatLngLiteral",
+                        "required": ["lat", "lng"],
+                        "properties": {
+                          "lat": {
+                            "type": "number",
+                            "description": "Latitude in decimal degrees"
+                          },
+                          "lng": {
+                            "type": "number",
+                            "description": "Longitude in decimal degrees"
+                          }
+                        }
+                      },
+                      "step_index": {
+                        "description": "The index of the step containing the waypoint.",
+                        "type": "integer"
+                      },
+                      "step_interpolation": {
+                        "description": "The position of the waypoint along the step's polyline, expressed as a ratio from 0 to 1.",
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "bounds": {
+            "description": "Contains the viewport bounding box of the `overview_polyline`.",
+            "title": "Bounds",
+            "type": "object",
+            "required": ["northeast", "southwest"],
+            "properties": {
+              "northeast": {
+                "type": "object",
+                "title": "LatLngLiteral",
+                "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                "required": ["lat", "lng"],
+                "properties": {
+                  "lat": {
+                    "type": "number",
+                    "description": "Latitude in decimal degrees"
+                  },
+                  "lng": {
+                    "type": "number",
+                    "description": "Longitude in decimal degrees"
+                  }
+                }
+              },
+              "southwest": {
+                "type": "object",
+                "title": "LatLngLiteral",
+                "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+                "required": ["lat", "lng"],
+                "properties": {
+                  "lat": {
+                    "type": "number",
+                    "description": "Latitude in decimal degrees"
+                  },
+                  "lng": {
+                    "type": "number",
+                    "description": "Longitude in decimal degrees"
+                  }
+                }
+              }
+            }
+          },
+          "copyrights": {
+            "type": "string",
+            "description": "Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself."
+          },
+          "summary": {
+            "type": "string",
+            "description": "Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives."
+          },
+          "waypoint_order": {
+            "type": "array",
+            "description": "An array indicating the order of any waypoints in the calculated route. This waypoints may be reordered if the request was passed optimize:true within its waypoints parameter.",
+            "items": { "type": "integer" }
+          },
+          "warnings": {
+            "type": "array",
+            "description": "Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.",
+            "items": { "type": "string" }
+          },
+          "overview_polyline": {
+            "type": "object",
+            "title": "DirectionsPolyline",
+            "description": "[Polyline encoding](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive polyline encoding utility.\n\nThe encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.\n\nAdditionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.\n",
+            "required": ["points"],
+            "properties": {
+              "points": {
+                "type": "string",
+                "description": "A single string representation of the polyline."
+              }
+            }
+          },
+          "fare": {
+            "description": "If present, contains the total fare (that is, the total ticket costs) on this route. This property is only returned for transit requests and only for routes where fare information is available for all transit legs.",
+            "type": "object",
+            "title": "Fare",
+            "required": ["currency", "value", "text"],
+            "properties": {
+              "currency": {
+                "type": "string",
+                "description": "An [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) indicating the currency that the amount is expressed in."
+              },
+              "value": {
+                "type": "number",
+                "description": "The total fare amount, in the currency specified."
+              },
+              "text": {
+                "type": "string",
+                "description": "The total fare amount, formatted in the requested language."
+              }
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "description": "Contains the status of the request, and may contain debugging information to help you track down why the request failed.",
+      "type": "string",
+      "title": "DirectionsStatus",
+      "enum": [
+        "OK",
+        "NOT_FOUND",
+        "ZERO_RESULTS",
+        "MAX_WAYPOINTS_EXCEEDED",
+        "MAX_ROUTE_LENGTH_EXCEEDED",
+        "INVALID_REQUEST",
+        "OVER_DAILY_LIMIT",
+        "OVER_QUERY_LIMIT",
+        "REQUEST_DENIED",
+        "UNKNOWN_ERROR"
+      ]
+    },
+    "available_travel_modes": {
+      "description": "Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "error_message": {
+      "description": "When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.\n",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "string",
+  "title": "TravelMode",
+  "description": "- `driving` (default) indicates distance calculation using the road network.\n- `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).\n- `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).\n- `transit` requests distance calculation via public transit routes (where available). \n",
+  "enum": ["DRIVING", "WALKING", "BICYCLING", "TRANSIT"],
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

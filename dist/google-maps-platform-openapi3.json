@@ -29219,8 +29219,7 @@
             "$ref": "#/components/schemas/TravelMode"
           },
           "steps": {
-            "description": "Substeps are only available when travel_mode is set to \"transit\".",
-            "$ref": "#/components/schemas/DirectionsStep"
+            "description": "Substeps are only available when travel_mode is set to \"transit\"."
           }
         }
       },
@@ -29327,7 +29326,7 @@
           },
           "copyrights": {
             "type": "string",
-            "description": "Ccontains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself."
+            "description": "Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself."
           },
           "summary": {
             "type": "string",
@@ -29472,7 +29471,7 @@
             "type": "integer"
           },
           "step_interpolation": {
-            "description": "The position of the waypoint along the step's polyine, expressed as a ratio from 0 to 1.",
+            "description": "The position of the waypoint along the step's polyline, expressed as a ratio from 0 to 1.",
             "type": "integer"
           }
         }

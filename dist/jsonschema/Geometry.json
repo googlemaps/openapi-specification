@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "title": "Geometry",
+  "description": "An object describing the location.",
+  "required": ["location", "viewport"],
+  "properties": {
+    "location": {
+      "type": "object",
+      "title": "LatLngLiteral",
+      "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "description": "Longitude in decimal degrees"
+        }
+      }
+    },
+    "viewport": {
+      "title": "Bounds",
+      "type": "object",
+      "description": "A rectangle in geographical coordinates from points at the southwest and northeast corners.",
+      "required": ["northeast", "southwest"],
+      "properties": {
+        "northeast": {
+          "type": "object",
+          "title": "LatLngLiteral",
+          "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+          "required": ["lat", "lng"],
+          "properties": {
+            "lat": {
+              "type": "number",
+              "description": "Latitude in decimal degrees"
+            },
+            "lng": {
+              "type": "number",
+              "description": "Longitude in decimal degrees"
+            }
+          }
+        },
+        "southwest": {
+          "type": "object",
+          "title": "LatLngLiteral",
+          "description": "An object describing a specific location with Latitude and Longitude in decimal degrees.",
+          "required": ["lat", "lng"],
+          "properties": {
+            "lat": {
+              "type": "number",
+              "description": "Latitude in decimal degrees"
+            },
+            "lng": {
+              "type": "number",
+              "description": "Longitude in decimal degrees"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

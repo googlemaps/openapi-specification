@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "title": "TimeZoneResponse",
+  "required": ["status"],
+  "properties": {
+    "dstOffset": {
+      "description": "The offset for daylight-savings time in seconds. This will be zero if the time zone is not in Daylight Savings Time during the specified `timestamp`.",
+      "type": "number"
+    },
+    "rawOffset": {
+      "description": "The offset from UTC (in seconds) for the given location. This does not take into effect daylight savings.",
+      "type": "number"
+    },
+    "timeZoneId": {
+      "description": "a string containing the ID of the time zone, such as \"America/Los_Angeles\" or \"Australia/Sydney\". These IDs are defined by [Unicode Common Locale Data Repository (CLDR) project](http://cldr.unicode.org/), and currently available in file timezone.xml. When a timezone has several IDs, the canonical one is returned. In xml responses, this is the first alias of each timezone. For example, \"Asia/Calcutta\" is returned, not \"Asia/Kolkata\".",
+      "type": "string"
+    },
+    "timeZoneName": {
+      "description": "The long form name of the time zone. This field will be localized if the language parameter is set. eg. `Pacific Daylight Time` or `Australian Eastern Daylight Time`.",
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "title": "TimeZoneStatus",
+      "description": "The `status` field within the Time Zone response object contains the status of the request. The `status` field may contain the following values:\n\n- `OK` indicates that the request was successful.\n- `INVALID_REQUEST` indicates that the request was malformed.\n- `OVER_DAILY_LIMIT` indicates any of the following:\n  - The API key is missing or invalid.\n  - Billing has not been enabled on your account.\n  - A self-imposed usage cap has been exceeded.\n  - The provided method of payment is no longer valid (for example, a credit card has expired).\n\n- `OVER_QUERY_LIMIT` indicates the requestor has exceeded quota.\n- `REQUEST_DENIED` indicates that the API did not complete the request. Confirm that the request was sent over HTTPS instead of HTTP.\n- `UNKNOWN_ERROR` indicates an unknown error.\n- `ZERO_RESULTS` indicates that no time zone data could be found for the specified position or time. Confirm that the request is for a location on land, and not over water.\n",
+      "enum": [
+        "OK",
+        "INVALID_REQUEST",
+        "OVER_DAILY_LIMIT",
+        "OVER_QUERY_LIMIT",
+        "REQUEST_DENIED",
+        "UNKNOWN_ERROR",
+        "ZERO_RESULTS"
+      ]
+    },
+    "errorMessage": {
+      "description": "Detailed information about the reasons behind the given status code. Included if status other than `Ok`.",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

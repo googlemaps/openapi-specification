@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "title": "PlaceAutocompleteMatchedSubstring",
+  "required": ["length", "offset"],
+  "properties": {
+    "length": {
+      "description": "Length of the matched substring in the prediction result text.",
+      "type": "number"
+    },
+    "offset": {
+      "description": "Start location of the matched substring in the prediction result text.",
+      "type": "number"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

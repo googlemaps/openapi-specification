@@ -20,6 +20,6 @@ properties:
     type: array
     items:      
       $ref: './SnappedPoint.yml'
-  warning_message:
+  warningMessage:
     description: A string containing a user-visible warning.
     type: string

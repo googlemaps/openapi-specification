@@ -1,0 +1,21 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_directionstransitdetails] -->
+<h3 class="schema-object" id="DirectionsTransitDetails">DirectionsTransitDetails</h3>
+
+| Field             | Required | Type                                                                          | Description                                                                                                                                                                   |
+| :---------------- | -------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arrival_stop`    | optional | [DirectionsTransitStop](#DirectionsTransitStop "DirectionsTransitStop")       | <div class="ref-property-description"><p>The arrival transit stop.</p><p>See <a href="#DirectionsTransitStop">DirectionsTransitStop</a> for more information.</div>           |
+| `arrival_time`    | optional | [TimeZoneTextValueObject](#TimeZoneTextValueObject "TimeZoneTextValueObject") | See [TimeZoneTextValueObject](#TimeZoneTextValueObject "TimeZoneTextValueObject") for more information.                                                                       |
+| `departure_stop`  | optional | [DirectionsTransitStop](#DirectionsTransitStop "DirectionsTransitStop")       | <div class="ref-property-description"><p>The departure transit stop.</p><p>See <a href="#DirectionsTransitStop">DirectionsTransitStop</a> for more information.</div>         |
+| `departure_time`  | optional | [TimeZoneTextValueObject](#TimeZoneTextValueObject "TimeZoneTextValueObject") | See [TimeZoneTextValueObject](#TimeZoneTextValueObject "TimeZoneTextValueObject") for more information.                                                                       |
+| `headsign`        | optional | string                                                                        | <div class="nonref-property-description"><p>Text that appears on the vehicle or signage that identifies a specific line variant to riders.</p></div>                          |
+| `line`            | optional | [DirectionsTransitLine](#DirectionsTransitLine "DirectionsTransitLine")       | <div class="ref-property-description"><p>The transit line travelled.</p><p>See <a href="#DirectionsTransitLine">DirectionsTransitLine</a> for more information.</div>         |
+| `num_stops`       | optional | integer                                                                       | <div class="nonref-property-description"><p>The number of stops from the departure to the arrival stop. This includes the arrival stop, but not the departure stop.</p></div> |
+| `trip_short_name` | optional | string                                                                        | <div class="nonref-property-description"><p>The text that appears in schedules and sign boards to identify a transit trip to passengers.</p></div>                            |
+
+<p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-directionstransitdetails" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsTransitDetails.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>
+<a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-directionstransitdetails" data-action="bug" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsTransitDetails" title="File bug for schemas on GitHub"><span class="material-icons">bug_report</span> Report bug</a>
+</p>
+
+<!--- [END maps_http_schema_directionstransitdetails] -->

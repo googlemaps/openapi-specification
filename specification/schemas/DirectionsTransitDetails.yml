@@ -1,0 +1,40 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type: object
+title: DirectionsTransitDetails
+properties:
+  arrival_stop:
+    description: The arrival transit stop.
+    $ref: "./DirectionsTransitStop.yml"
+  arrival_time:
+    $ref: "./TimeZoneTextValueObject.yml"
+  departure_stop:
+    description: The departure transit stop.
+    $ref: "./DirectionsTransitStop.yml"
+  departure_time:
+    $ref: "./TimeZoneTextValueObject.yml"
+  headsign:
+    description: Text that appears on the vehicle or signage that identifies a specific line variant to riders.
+    type: string
+  line:
+    description: The transit line travelled.
+    $ref: "./DirectionsTransitLine.yml"
+  num_stops:
+    description: The number of stops from the departure to the arrival stop. This includes the arrival stop, but not the departure stop.
+    type: integer
+  trip_short_name:
+    description: The text that appears in schedules and sign boards to identify a transit trip to passengers.
+    type: string
+    example: "538"

@@ -67,6 +67,9 @@ properties:
   start_location:
     description: Start location of the step.
     $ref: "./LatLngLiteral.yml"
+  transit_details:
+    description: Details pertaining to this step if the travel mode is `TRANSIT`
+    $ref: "./DirectionsTransitDetails.yml"
   travel_mode:
     description: Travel mode of the step.
     $ref: "./TravelMode.yml"

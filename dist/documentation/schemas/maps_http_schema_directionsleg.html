@@ -151,6 +151,89 @@
       </td>
     </tr>
     <tr>
+      <td align="left"><code>arrival_time</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
+          >TimeZoneTextValueObject</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains the estimated time of arrival for this leg. This property
+            is only returned for transit directions.
+          </p>
+          <p>
+            See
+            <a href="#TimeZoneTextValueObject">TimeZoneTextValueObject</a> for
+            more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>departure_time</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
+          >TimeZoneTextValueObject</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains the estimated time of departure for this leg, specified as
+            a Time object. The <code>departure_time</code> is only available for
+            transit directions.
+          </p>
+          <p>
+            See
+            <a href="#TimeZoneTextValueObject">TimeZoneTextValueObject</a> for
+            more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>duration_in_traffic</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Indicates the total duration of this leg. This value is an estimate
+            of the time in traffic based on current and historical traffic
+            conditions. See the <code>traffic_model</code> request parameter for
+            the options you can use to request that the returned value is
+            optimistic, pessimistic, or a best-guess estimate. The duration in
+            traffic is returned only if all of the following are true:
+          </p>
+          <ul>
+            <li>
+              The request does not include stopover waypoints. If the request
+              includes waypoints, they must be prefixed with
+              <code>via:</code> to avoid stopovers.
+            </li>
+            <li>
+              The request is specifically for driving directions—the mode
+              parameter is set to <code>driving</code>.
+            </li>
+            <li>
+              The request includes a <code>departure_time</code> parameter.
+            </li>
+            <li>Traffic conditions are available for the requested route.</li>
+          </ul>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>html_instructions</code></td>
       <td>optional</td>
       <td>string</td>

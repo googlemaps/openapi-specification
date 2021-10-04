@@ -32,6 +32,8 @@ TravelMode:
   $ref: "./TravelMode.yml"
 TextValueObject:
   $ref: "./TextValueObject.yml"
+TimeZoneTextValueObject:
+  $ref: "./TimeZoneTextValueObject.yml"
 # Distance Matrix
 DistanceMatrixElementStatus:
   $ref: "./DistanceMatrixElementStatus.yml"
@@ -60,6 +62,16 @@ DirectionsPolyline:
   $ref: "./DirectionsPolyline.yml"
 DirectionsTrafficSpeedEntry:
   $ref: "./DirectionsTrafficSpeedEntry.yml"
+DirectionsTransitAgency:
+  $ref: "./DirectionsTransitAgency.yml"
+DirectionsTransitDetails:
+  $ref: "./DirectionsTransitDetails.yml"
+DirectionsTransitLine:
+  $ref: "./DirectionsTransitLine.yml"
+DirectionsTransitStop:
+  $ref: "./DirectionsTransitStop.yml"
+DirectionsTransitVehicle:
+  $ref: "./DirectionsTransitVehicle.yml"
 DirectionsViaWaypoint:
   $ref: "./DirectionsViaWaypoint.yml"
 # Elevation

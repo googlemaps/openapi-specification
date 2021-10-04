@@ -13,21 +13,15 @@
 # limitations under the License.
 
 type: object
-title: ErrorObject
-required: [code, message, errors]
+title: DirectionsTransitAgency
 properties:
-  code:
-    description: This is the same as the HTTP status of the response.
-    type: number
-  message:
-    description: A short description of the error.
+  name:
+    description: The name of this transit agency.
     type: string
-  errors:
-    description: A list of errors which occurred. Each error contains an identifier for the type of error and a short description.
-    type: array
-    items:
-      $ref: "./ErrorDetail.yml"
-  status:
-    description: A status code that indicates the error type.
+  phone:
+    description: The transit agency's URL.
     type: string
-    
+  url:
+    description: The transit agency's phone number.
+    type: string
+  

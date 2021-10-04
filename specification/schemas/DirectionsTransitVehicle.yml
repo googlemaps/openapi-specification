@@ -13,21 +13,35 @@
 # limitations under the License.
 
 type: object
-title: ErrorObject
-required: [code, message, errors]
+title: DirectionsTransitVehicle
+required: [type, name]
 properties:
-  code:
-    description: This is the same as the HTTP status of the response.
-    type: number
-  message:
-    description: A short description of the error.
+  icon:
+    description: The icon associated with this vehicle type.
     type: string
-  errors:
-    description: A list of errors which occurred. Each error contains an identifier for the type of error and a short description.
-    type: array
-    items:
-      $ref: "./ErrorDetail.yml"
-  status:
-    description: A status code that indicates the error type.
+  name:
+    description: The name of this vehicle, capitalized.
     type: string
-    
+    example: Train
+  type:
+    description: The type of vehicle used, e.g. train or bus.
+    type: string
+    enum: 
+      - RAIL
+      - METRO_RAIL
+      - SUBWAY
+      - TRAM
+      - MONORAIL
+      - HEAVY_RAIL
+      - COMMUTER_TRAIN
+      - HIGH_SPEED_TRAIN
+      - LONG_DISTANCE_TRAIN
+      - BUS
+      - INTERCITY_BUS
+      - TROLLEYBUS
+      - SHARE_TAXI
+      - FERRY
+      - CABLE_CAR
+      - GONDOLA_LIFT
+      - FUNICULAR
+      - OTHER

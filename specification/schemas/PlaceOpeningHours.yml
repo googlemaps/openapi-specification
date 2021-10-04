@@ -15,8 +15,6 @@
 type: object
 title: PlaceOpeningHours
 description: An object describing the opening hours of a place.
-required:
-  - open_now
 properties:
   open_now:
     description: A boolean value indicating if the place is open at the current time.

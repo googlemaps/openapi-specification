@@ -13,21 +13,12 @@
 # limitations under the License.
 
 type: object
-title: ErrorObject
-required: [code, message, errors]
+title: DirectionsTransitStop
+required: [location, name]
 properties:
-  code:
-    description: This is the same as the HTTP status of the response.
-    type: number
-  message:
-    description: A short description of the error.
+  location:
+    description: The location of the stop.
+    $ref: "./LatLngLiteral.yml"
+  name:
+    description: The name of the transit stop.
     type: string
-  errors:
-    description: A list of errors which occurred. Each error contains an identifier for the type of error and a short description.
-    type: array
-    items:
-      $ref: "./ErrorDetail.yml"
-  status:
-    description: A status code that indicates the error type.
-    type: string
-    

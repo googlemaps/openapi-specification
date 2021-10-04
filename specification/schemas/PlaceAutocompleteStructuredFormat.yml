@@ -30,3 +30,8 @@ properties:
   secondary_text:
     description: Contains the secondary text of a prediction, usually the location of the place.
     type: string
+  secondary_text_matched_substrings:
+    description: Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.
+    type: array
+    items:
+      $ref: "./PlaceAutocompleteMatchedSubstring.yml"

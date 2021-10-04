@@ -24,14 +24,12 @@ description: |
   See [Place Photos](https://developers.google.com/places/web-service/photos) for more information.
 required:
   - photo_reference
-  - html_attributions
-  - width
-  - height
+  - maxwidth
 properties:
   height:
     description: The height of the photo.
     type: number
-  width:
+  maxwidth:
     description: The width of the photo.
     type: number
   html_attributions:

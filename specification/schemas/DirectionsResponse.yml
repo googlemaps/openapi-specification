@@ -25,7 +25,7 @@ properties:
     items:
       $ref: "./DirectionsGeocodedWaypoint.yml"
   routes:
-    description: Contains an array of routes from the origin to the destination. See Routes below. Routes consist of nested Legs and Steps.
+    description: Contains an array of routes from the origin to the destination. Routes consist of nested Legs and Steps.
     type: array
     items:
       $ref: "./DirectionsRoute.yml"

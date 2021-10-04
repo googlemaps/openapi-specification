@@ -14,7 +14,7 @@
 
 type: object
 title: DirectionsRoute
-description: Routes consist of nested Legs and Steps.
+description: Routes consist of nested `Legs` and `Steps`.
 required:
   [
     bounds,
@@ -27,7 +27,7 @@ required:
   ]
 properties:
   legs:
-    description: an array which contains information about a leg of the route, between two locations within the given route. A separate leg will be present for each waypoint or destination specified. (A route with no waypoints will contain exactly one leg within the legs array.) Each leg consists of a series of steps.
+    description: An array which contains information about a leg of the route, between two locations within the given route. A separate leg will be present for each waypoint or destination specified. (A route with no waypoints will contain exactly one leg within the legs array.) Each leg consists of a series of steps.
     type: array
     items:
       $ref: "./DirectionsLeg.yml"

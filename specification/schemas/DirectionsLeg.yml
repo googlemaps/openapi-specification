@@ -34,10 +34,10 @@ properties:
     description: Contains the estimated time of departure for this leg, specified as a Time object. The `departure_time` is only available for transit directions.
     $ref: "./TimeZoneTextValueObject.yml"
   distance:
-    description: Distance of the leg.
+    description: The total distance covered by this leg.
     $ref: "./TextValueObject.yml"
   duration:
-    description: Duration of the leg.
+    description: The total duration of this leg.
     $ref: "./TextValueObject.yml"
   duration_in_traffic:
     description: |
@@ -49,10 +49,10 @@ properties:
       * Traffic conditions are available for the requested route.
     $ref: "./TextValueObject.yml"
   end_address:
-    description: The end address of the leg.
+    description: Contains the human-readable address (typically a street address) from reverse geocoding the `end_location` of this leg. This content is meant to be read as-is. Do not programmatically parse the formatted address.
     type: string
   end_location:
-    description: The end location of the leg.
+    description: The latitude/longitude coordinates of the given destination of this leg. Because the Directions API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.
     $ref: "./LatLngLiteral.yml"
   html_instructions:
     type: string
@@ -60,16 +60,16 @@ properties:
   polyline:
     $ref: "./DirectionsPolyline.yml"
   start_address:
-    description: The start address of the leg.
+    description: Contains the human-readable address (typically a street address) resulting from reverse geocoding the `start_location` of this leg. This content is meant to be read as-is. Do not programmatically parse the formatted address.
     type: string
   start_location:
-    description: The start location of the leg.
+    description: The latitude/longitude coordinates of the origin of this leg. Because the Directions API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.
     $ref: "./LatLngLiteral.yml"
   travel_mode:
     description: The mode of travel for the leg.
     $ref: "./TravelMode.yml"
   steps:
-    description: Individual steps that make up the leg.
+    description: An array of steps denoting information about each separate step of the leg of the journey.
     type: array
     items:
       $ref: "./DirectionsStep.yml"

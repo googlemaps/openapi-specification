@@ -20446,6 +20446,24 @@ components:
         value:
           description: Numeric value.
           type: number
+    TimeZoneTextValueObject:
+      type: object
+      title: TimeZoneTextValueObject
+      description: 'An object containing Unix time, a time zone, and its formatted text representation.'
+      required:
+        - text
+        - time_zone
+        - value
+      properties:
+        text:
+          description: The time specified as a string. The time is displayed in the time zone of the transit stop.
+          type: string
+        value:
+          description: 'The time specified as Unix time, or seconds since midnight, January 1, 1970 UTC.'
+          type: number
+        time_zone:
+          description: 'Contains the time zone of this station. The value is the name of the time zone as defined in the [IANA Time Zone Database](http://www.iana.org/time-zones), e.g. "America/New_York".'
+          type: string
     DistanceMatrixElementStatus:
       type: string
       title: DistanceMatrixElementStatus
@@ -20640,6 +20658,9 @@ components:
         start_location:
           description: Start location of the step.
           $ref: '#/components/schemas/LatLngLiteral'
+        transit_details:
+          description: Details pertaining to this step if the travel mode is `TRANSIT`
+          $ref: '#/components/schemas/DirectionsTransitDetails'
         travel_mode:
           description: Travel mode of the step.
           $ref: '#/components/schemas/TravelMode'
@@ -20659,11 +20680,26 @@ components:
         - traffic_speed_entry
         - via_waypoint
       properties:
+        arrival_time:
+          description: Contains the estimated time of arrival for this leg. This property is only returned for transit directions.
+          $ref: '#/components/schemas/TimeZoneTextValueObject'
+        departure_time:
+          description: 'Contains the estimated time of departure for this leg, specified as a Time object. The `departure_time` is only available for transit directions.'
+          $ref: '#/components/schemas/TimeZoneTextValueObject'
         distance:
           description: Distance of the leg.
           $ref: '#/components/schemas/TextValueObject'
         duration:
           description: Duration of the leg.
+          $ref: '#/components/schemas/TextValueObject'
+        duration_in_traffic:
+          description: |
+            Indicates the total duration of this leg. This value is an estimate of the time in traffic based on current and historical traffic conditions. See the `traffic_model` request parameter for the options you can use to request that the returned value is optimistic, pessimistic, or a best-guess estimate. The duration in traffic is returned only if all of the following are true:
+
+            * The request does not include stopover waypoints. If the request includes waypoints, they must be prefixed with `via:` to avoid stopovers.
+            * The request is specifically for driving directions—the mode parameter is set to `driving`.
+            * The request includes a `departure_time` parameter.
+            * Traffic conditions are available for the requested route.
           $ref: '#/components/schemas/TextValueObject'
         end_address:
           description: The end address of the leg.
@@ -20882,6 +20918,123 @@ components:
         offset_meters:
           type: number
           description: The offset along the path (in meters) up to which this speed category is valid.
+    DirectionsTransitAgency:
+      type: object
+      title: DirectionsTransitAgency
+      properties:
+        name:
+          description: The name of this transit agency.
+          type: string
+        phone:
+          description: The transit agency's URL.
+          type: string
+        url:
+          description: The transit agency's phone number.
+          type: string
+    DirectionsTransitDetails:
+      type: object
+      title: DirectionsTransitDetails
+      properties:
+        arrival_stop:
+          description: The arrival transit stop.
+          $ref: '#/components/schemas/DirectionsTransitStop'
+        arrival_time:
+          $ref: '#/components/schemas/TimeZoneTextValueObject'
+        departure_stop:
+          description: The departure transit stop.
+          $ref: '#/components/schemas/DirectionsTransitStop'
+        departure_time:
+          $ref: '#/components/schemas/TimeZoneTextValueObject'
+        headsign:
+          description: Text that appears on the vehicle or signage that identifies a specific line variant to riders.
+          type: string
+        line:
+          description: The transit line travelled.
+          $ref: '#/components/schemas/DirectionsTransitLine'
+        num_stops:
+          description: 'The number of stops from the departure to the arrival stop. This includes the arrival stop, but not the departure stop.'
+          type: integer
+        trip_short_name:
+          description: The text that appears in schedules and sign boards to identify a transit trip to passengers.
+          type: string
+          example: '538'
+    DirectionsTransitLine:
+      type: object
+      title: DirectionsTransitLine
+      required:
+        - name
+      properties:
+        agencies:
+          description: The transit agency (or agencies) that operates this transit line.
+          type: array
+          items:
+            $ref: '#/components/schemas/DirectionsTransitAgency'
+        color:
+          description: The color commonly used in signage for this line.
+          type: string
+          example: '#ce8e00'
+        name:
+          description: 'The full name of this transit line, e.g. "8 Avenue Local".'
+          type: string
+        short_name:
+          description: 'The short name of this transit line, e.g. "E".'
+          type: string
+        text_color:
+          description: The color commonly used in signage for this line.
+          type: string
+          example: '#121212'
+        vehicle:
+          description: The type of vehicle that operates on this transit line.
+          $ref: '#/components/schemas/DirectionsTransitVehicle'
+    DirectionsTransitStop:
+      type: object
+      title: DirectionsTransitStop
+      required:
+        - location
+        - name
+      properties:
+        location:
+          description: The location of the stop.
+          $ref: '#/components/schemas/LatLngLiteral'
+        name:
+          description: The name of the transit stop.
+          type: string
+    DirectionsTransitVehicle:
+      type: object
+      title: DirectionsTransitVehicle
+      required:
+        - type
+        - name
+      properties:
+        icon:
+          description: The icon associated with this vehicle type.
+          type: string
+        name:
+          description: 'The name of this vehicle, capitalized.'
+          type: string
+          example: Train
+        type:
+          description: 'The type of vehicle used, e.g. train or bus.'
+          type: string
+          enum:
+            - RAIL
+            - METRO_RAIL
+            - SUBWAY
+            - TRAM
+            - MONORAIL
+            - HEAVY_RAIL
+            - COMMUTER_TRAIN
+            - HIGH_SPEED_TRAIN
+            - LONG_DISTANCE_TRAIN
+            - BUS
+            - INTERCITY_BUS
+            - TROLLEYBUS
+            - SHARE_TAXI
+            - FERRY
+            - CABLE_CAR
+            - GONDOLA_LIFT
+            - FUNICULAR
+            - OTHER
     DirectionsViaWaypoint:
       type: object
       title: DirectionsViaWaypoint
@@ -21001,12 +21154,20 @@ components:
         - status
         - results
       properties:
+        plus_code:
+          description: |
+            An encoded location reference, derived from latitude and longitude coordinates, that represents an area: 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement for street addresses in places where they do not exist (where buildings are not numbered or streets are not named). See [Open Location Code](https://en.wikipedia.org/wiki/Open_Location_Code) and [plus codes](https://plus.codes/).
+          $ref: '#/components/schemas/PlusCode'
         results:
           type: array
           items:
             $ref: '#/components/schemas/GeocodingResult'
         status:
           $ref: '#/components/schemas/GeocodingStatus'
+        error_message:
+          description: A short description of the error.
+          type: string
+          example: 'Invalid request. Missing the `address`, `components`, `latlng` or `place_id` parameter.'
     GeocodingStatus:
       type: string
       title: GeocodingStatus
@@ -21237,7 +21398,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SnappedPoint'
-        warning_message:
+        warningMessage:
           description: A string containing a user-visible warning.
           type: string
     TimeZoneResponse:
@@ -21327,6 +21488,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ErrorDetail'
+        status:
+          description: A status code that indicates the error type.
+          type: string
     ErrorDetail:
       type: object
       title: ErrorDetail
@@ -21420,6 +21584,9 @@ components:
         opening_hours:
           description: Contains hours of operation.
           $ref: '#/components/schemas/PlaceOpeningHours'
+        permanently_closed:
+          description: 'Deprecated. The field `permanently_closed` is deprecated, and should not be used. Instead, use `business_status` to get the operational status of businesses.'
+          type: boolean
         photos:
           description: 'An array of photo objects, each containing a reference to an image. A request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.'
           type: array
@@ -21454,6 +21621,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PlaceReview'
+        scope:
+          description: Deprecated.
+          type: string
         types:
           description: 'Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).'
           type: array
@@ -21557,6 +21727,11 @@ components:
         secondary_text:
           description: 'Contains the secondary text of a prediction, usually the location of the place.'
           type: string
+        secondary_text_matched_substrings:
+          description: 'Contains an array with `offset` value and `length`. These describe the location of the entered term in the prediction result text, so that the term can be highlighted if desired.'
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceAutocompleteMatchedSubstring'
     PlaceAutocompleteTerm:
       type: object
       title: PlaceAutocompleteTerm
@@ -21606,8 +21781,6 @@ components:
       type: object
       title: PlaceOpeningHours
       description: An object describing the opening hours of a place.
-      required:
-        - open_now
       properties:
         open_now:
           description: A boolean value indicating if the place is open at the current time.

@@ -38,6 +38,9 @@ responses:
     content:
       application/json:
         examples:
+          available_travel_modes_response:
+            value:
+              $ref: "../responses/maps_http_directions_available_travel_modes_response.yml"
           boston_concord_waypoints_now_response:
             value:
               $ref: "../responses/maps_http_directions_boston_concord_waypoints_now_response.yml"

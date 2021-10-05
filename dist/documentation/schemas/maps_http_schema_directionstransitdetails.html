@@ -3,6 +3,9 @@
 <h3 class="schema-object" id="DirectionsTransitDetails">
   DirectionsTransitDetails
 </h3>
+<p>
+  Additional information that is not relevant for other modes of transportation.
+</p>
 <table>
   <thead>
     <tr>
@@ -88,8 +91,24 @@
       <td>
         <div class="nonref-property-description">
           <p>
-            Text that appears on the vehicle or signage that identifies a
-            specific line variant to riders.
+            Specifies the direction in which to travel on this line, as it is
+            marked on the vehicle or at the departure stop. This will often be
+            the terminus station.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>headway</code></td>
+      <td>optional</td>
+      <td>integer</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Specifies the expected number of seconds between departures from the
+            same stop at this time. For example, with a
+            <code>headway</code> value of 600, you would expect a ten minute
+            wait if you should miss your bus.
           </p>
         </div>
       </td>
@@ -104,7 +123,7 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>The transit line travelled.</p>
+          <p>Contains information about the transit line used in this step.</p>
           <p>
             See <a href="#DirectionsTransitLine">DirectionsTransitLine</a> for
             more information.
@@ -120,7 +139,10 @@
         <div class="nonref-property-description">
           <p>
             The number of stops from the departure to the arrival stop. This
-            includes the arrival stop, but not the departure stop.
+            includes the arrival stop, but not the departure stop. For example,
+            if your directions involve leaving from Stop A, passing through
+            stops B and C, and arriving at stop D, <code>num_stops</code> will
+            return 3.
           </p>
         </div>
       </td>
@@ -133,7 +155,10 @@
         <div class="nonref-property-description">
           <p>
             The text that appears in schedules and sign boards to identify a
-            transit trip to passengers.
+            transit trip to passengers. The text should uniquely identify a trip
+            within a service day. For example, "538" is the
+            <code>trip_short_name</code> of the Amtrak train that leaves San
+            Jose, CA at 15:10 on weekdays to Sacramento, CA.
           </p>
         </div>
       </td>

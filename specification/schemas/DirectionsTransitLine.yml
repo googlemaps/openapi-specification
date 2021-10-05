@@ -14,7 +14,7 @@
 
 type: object
 title: DirectionsTransitLine
-required: [name]
+required: [agencies, name]
 properties:
   agencies:
     description: The transit agency (or agencies) that operates this transit line.
@@ -29,12 +29,18 @@ properties:
     description: The full name of this transit line, e.g. "8 Avenue Local".
     type: string
   short_name:
-    description: The short name of this transit line, e.g. "E".
+    description: The short name of this transit line. This will normally be a line number, such as "M7" or "355".
     type: string
   text_color:
     description: The color commonly used in signage for this line.
     type: string
     example: "#121212"
+  url:
+    description: Contains the URL for this transit line as provided by the transit agency.
+    type: string
+  icon:
+    description: Contains the URL for the icon associated with this line.
+    type: string
   vehicle:
     description: The type of vehicle that operates on this transit line.
     $ref: "./DirectionsTransitVehicle.yml"

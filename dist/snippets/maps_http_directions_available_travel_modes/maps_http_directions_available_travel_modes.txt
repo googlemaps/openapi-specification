@@ -1,0 +1,6 @@
+[START maps_http_directions_available_travel_modes]
+https://maps.googleapis.com/maps/api/directions/json
+  ?destination=la%20restinga%20el%20hierro
+  &origin=frontera%20el%20hierro
+  &key=YOUR_API_KEY
+[END maps_http_directions_available_travel_modes]

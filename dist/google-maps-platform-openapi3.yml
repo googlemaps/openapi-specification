@@ -147,6 +147,355 @@ paths:
           content:
             application/json:
               examples:
+                available_travel_modes_response:
+                  value:
+                    geocoded_waypoints:
+                      - geocoder_status: OK
+                        place_id: ChIJwZNMti1fawwRO2aVVVX2yKg
+                        types:
+                          - locality
+                          - political
+                      - geocoder_status: OK
+                        place_id: ChIJ3aPgQGtXawwRLYeiBMUi7bM
+                        types:
+                          - locality
+                          - political
+                    routes:
+                      - bounds:
+                          northeast:
+                            lat: 27.7564327
+                            lng: -17.9710269
+                          southwest:
+                            lat: 27.6410709
+                            lng: -18.0480846
+                        copyrights: Map data ©2021 Inst. Geogr. Nacional
+                        legs:
+                          - distance:
+                              text: 38.5 km
+                              value: 38482
+                            duration:
+                              text: 55 mins
+                              value: 3316
+                            end_address: '38917 La Restinga, Santa Cruz de Tenerife, Spain'
+                            end_location:
+                              lat: 27.6412095
+                              lng: -17.9818845
+                            start_address: '38911 La Frontera, Santa Cruz de Tenerife, Santa Cruz de Tenerife, Spain'
+                            start_location:
+                              lat: 27.7548015
+                              lng: -18.0095701
+                            steps:
+                              - distance:
+                                  text: 64 m
+                                  value: 64
+                                duration:
+                                  text: 1 min
+                                  value: 7
+                                end_location:
+                                  lat: 27.7550564
+                                  lng: -18.0089896
+                                html_instructions: Head <b>northeast</b> on <b>C. el Rumbaso</b> toward <b>C. Cruz Alta</b>/<wbr/><b>C. Frontera Dos</b>
+                                polyline:
+                                  points: 'ozkhDxn|lBIWi@{A'
+                                start_location:
+                                  lat: 27.7548015
+                                  lng: -18.0095701
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.3 km
+                                  value: 302
+                                duration:
+                                  text: 1 min
+                                  value: 58
+                                end_location:
+                                  lat: 27.7531414
+                                  lng: -18.0093196
+                                html_instructions: 'Turn <b>right</b> onto <b>C. Cruz Alta</b>/<wbr/><b>C. Frontera Dos</b><div style="font-size:0.9em">Continue to follow C. Frontera Dos</div>'
+                                maneuver: turn-right
+                                polyline:
+                                  points: 'c|khDdk|lBJE^Q`Bs@z@]BA\OZO^QLd@V|@Rp@\hA'
+                                start_location:
+                                  lat: 27.7550564
+                                  lng: -18.0089896
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 50 m
+                                  value: 50
+                                duration:
+                                  text: 1 min
+                                  value: 15
+                                end_location:
+                                  lat: 27.7530963
+                                  lng: -18.0088163
+                                html_instructions: Sharp <b>left</b> onto <b>C. Amador</b>
+                                maneuver: turn-sharp-left
+                                polyline:
+                                  points: cpkhDfm|lBBE?C?C@E@g@?g@
+                                start_location:
+                                  lat: 27.7531414
+                                  lng: -18.0093196
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 61 m
+                                  value: 61
+                                duration:
+                                  text: 1 min
+                                  value: 12
+                                end_location:
+                                  lat: 27.7525596
+                                  lng: -18.0089335
+                                html_instructions: Turn <b>right</b> onto <b>C. Constitución</b>/<wbr/><b>Tr.ª Amador</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: '{okhDbj|lBfALb@F'
+                                start_location:
+                                  lat: 27.7530963
+                                  lng: -18.0088163
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 16.7 km
+                                  value: 16666
+                                duration:
+                                  text: 23 mins
+                                  value: 1374
+                                end_location:
+                                  lat: 27.7372254
+                                  lng: -17.9937641
+                                html_instructions: 'Turn <b>left</b> onto <b>C. el Congreso</b>/<wbr/><b>HI-1</b><div style="font-size:0.9em">Continue to follow HI-1</div>'
+                                maneuver: turn-left
+                                polyline:
+                                  points: 'olkhDxj|lBCu@QkC?AGo@?AE[Ie@CIACKa@IUEMOe@Mc@Oc@Oc@Mc@Oe@}@qCEMYy@Uq@IOEIMUOOSMICKCWCMAo@KSEQGMIMMCCKKMQW]KO}BkDKOOSGKGOEMCMCM?K?IBKDOFKJONKLIVK`@O@?RGDABAB?FAFAL?@?D@H@H@HB^NLVDFPXh@fAPZRb@BBHLJHJJh@d@NLf@d@@@XTZXXT|@nAnAhBX^TVTNNJDBvC|AtAr@ZNv@b@PJHFLJJLHJV^@@Zd@NTHJJTFNXt@@D\`ANd@Nb@Nb@n@jB\bAb@lARn@Vt@Ph@@@P`@Pb@N^Pd@DHLVLVFHDFPPf@d@NRDHHNFPDRFx@?@Df@Bn@F^F`@BDLb@FTPj@FLDJLRHJTNTLRJJFd@RXRLNFHJPDL@BJTDLNb@HVJVP`@PTFJNPV\RXBBV\BBNTHLFNDVBT@VARABKh@ENALAR?P?T?T@J@V?BFf@LrADb@BNBVHdARxA@NBTFf@?BHv@@R@H?R?XCTKv@[tACNWfAABG^CTAR@TF|@@@Df@NpAJlABT@PBV?R?JCRARE`@Ef@OzAWhCGd@Ef@Gf@ANCVGd@Ef@Gf@CZAJGf@Ef@Eb@AB?NAT?@?N@R@BBRDR?@Jb@Ld@Ld@Jd@H\BFJd@Rt@f@tBHZDX@PPlD@JBf@?FB^Bj@FlAHbBNlC?FB^@VFv@ThE@f@Bj@BZ@T?RAPCRCLCPENYz@Of@CHKXAFA@?F?H?L@J@FBFDBBBD?F?F?DADCBA@A@ABIBK@UBg@@]@KBOBM@EDKHM@AHMJQJOFQF]FWb@kC@KRqAJq@@M?E@M?}@@oA?[@K?k@@a@BsB?S@M@KBQDULi@Lm@b@gBBGLi@T_ANq@F]D]DW@U?A@[?Y?Y?M@Y?CBUBQF[Lg@\kAd@sALY`@aAL]FOBEDGDEDC?AFENGRGPEHCJGFCBE@?LQFK@Cp@uADMDKBS@E?I?MAKCQCOMg@EWAIAG?C?M?O@M@UBSBODQDY\mBJq@Ha@DSHUFODMHSVk@DIRe@P]FOFKBEFGTOJIFGDIBKFYJe@R{@R_ATaA@I^cBDYBO?C?K?GACAICICGs@sAa@u@CKAECI?I?G@C@CBGDCBEBAD?BAD?D@FBDBDBFFNVR`@Zp@HNBFTf@FTDRBRBNBZ@\?VAXCRCREPCPEV?NAB?R@Z?T?Z@\?TARAZCRCPETERIZYpAKb@ADERGV?H?F@NDZRnBBf@BP?D?F?FCJAFCFGJQZORGFCDCFADABAFAFAL@J@FBFBFDFDFPNf@f@XVZXHHDFBDBDBJ@F@H?R@V?XGtFA^?HAJAB?@A@ADA@CDGBEDE@C@M?I@WAcAEQAGA[AK?O?E@A?I@EBIDEDEDGHINWl@ADCDAHAHAFAB?D?D?F@L@R@L@Z?J?L?DAJAHCLALA@Y~AShAG^AJAFAF?J?L@P@T@RBXBTBL@JDPBLFRDJDJFHNXLPRTNLVTd@`@NLJJDDJPPXJPDJDP?@@L@V?VAPANAVC`@Ef@ADANKh@K^Kn@Gh@CNAFEZ?BCRAR?HA\?FA^?JAZAVEj@Ch@?JEv@AZ?PAL@D?HBXD`@BFBNFT@DDLBBBDDDHFh@`@BBd@`@LFXNZLLFDDDD@F@F?H?@?FCJINIVADADABAH?F@H@D@FBDDFDDJNLXBJDT?@?H?PCXAJEJCNKTM^ABGRM^GTCHALCL?BCT?LANCPCTCNEJGRKVELAHAB?H?DBP?@BP?H@J?@?N?X?H@HBHFLFHHJ@BTX@DDH@H@L?JCPGJGFMPGNCLCJ?L?JAPAPERAFEHEHILGHGHEJCHGb@CLOx@In@In@G^Gp@?@ANETAFGPAHEHGLGNEH?DAB?D?FFLHDF@HC@ADEBIDQ?AHg@@c@@C@WBO@GBMBO@EDSDKBGN[FOLSLUDENQFIHKLIDCDCDCHEFEHIHKDKLUBGBILWL[FMDOFMDIDIDM?ADW@M?S?S?]AWAOC]AUAECa@?CAa@AO?O?Q@M@OBKBIBKBG@CFQDKDILW?AFKFKBIBEBEFEDCBC^QB?\ONGNGf@SXMPINIHGHIFC?AVQZYJKHMDGDGBKDQ@IG[GMGMAKCIAU@C?CDKFIDC@C@C@E@GAM?U?QASEe@AY?ACe@Ec@AQEOCUKy@AIGc@AAKi@AMAU?ACOCSAQAQ?O?O@Q@S@M@C@GBQBUH[L[DGFMNM@Ar@[j@WLINKVSBAFGHGDODSDQ@ADSBMDSFKDIFGJKTOJIx@m@@?ZW\UDERUHINQV]DGRUX[f@s@DGFKFS@CLa@@CDWBM@KBUJi@?AD]@IFUFMFQDSFQDSBMBWBW@O@K?Q?c@AQAWAMCQCOESCKCI?ACOAW?IAY?SAY?Y?M?AAa@?U?Y@_@@Q@S@EHWFMH]@E@MDW@AHk@Fc@H_@D[@O?A?M?O?I?E?OAOAM?O@E?E?E@G@GBK@C@CFMJO@CNW@CLQHMHKJOFGBGBIBI?CLa@Lc@Nc@Le@Ne@LYPe@BELYDM?E?EAGACAGCGGKCEEGCECGCGCGAE?A?C?G?K?GBE@EDIFGDEDEHEJILOJMDQDU?MA[?C?QCYCYAEE[GYG[GUCIA?AEAGAEAGAG?A?G?E@I@G@IDIHWBKBO@G@KAK?K?W?M?A@G@M@EBEDKDEHK@CFMHUHUFKJSFM@GDM@M@S?U?AAg@AIA]AYCMAIG]?EGa@Mu@CWMs@CICGUg@KYEIi@aAQ]AAU]IQIQGOCQACAKCU?EGm@Gk@E]?KUyBKy@G]AKACCIGOEGEGKQcB_CEGYe@i@u@_@i@MSGKEKACAGCKCMCSCQA[E[E}@ASAS?GAGCMGOAGQYGKKSGMIMCMCMESEQCQAAEKMOOQGGIGEIEGCKEQCK?EE_@AKCKGOSYEGUWCCKQ[_@IMGIEGCGEKCIEOAAISEOACKYGSCIAK?A?G@I@IBK@GBQDUDS@IBGFU@EFO`@eAFYJa@BKDS?G?E?SAQGi@Kw@Ii@EMIa@ACCGCKIK?AEIMMKIIGIEIEMGGCEEEIAEAG?I?C?K?Q?G?O?W?SAS?AEe@Cc@Gk@AMGU?CCGCGEIEEEGEIEIAECMCYCU?QASAS?U@S@k@@Y@]@_@A}@?sBAqA?MEoBCm@?CAQEYCSCOKi@Ma@?AGOGQGOESMe@U}@c@sBKe@CKg@aCCIwAuFSu@?A[kA'
+                                start_location:
+                                  lat: 27.7525596
+                                  lng: -18.0089335
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 4.1 km
+                                  value: 4058
+                                duration:
+                                  text: 6 mins
+                                  value: 358
+                                end_location:
+                                  lat: 27.7196513
+                                  lng: -17.9933045
+                                html_instructions: Turn <b>right</b> onto <b>HI-40</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: 'ulhhD~kylB\EFAXEPCPAFAD?D?D?F@B?B@DBFDHF@@\P^RJDHBD@D@D?Z?X?Z@P@B?NDLB@@LDF@HD?@JFLHBBFHJJDDDDDJBDDHBNBJ?L@L?F?H?BAHCLAFAF?F@D@F@BBBBDDFDBJHHDJBJBDAD?JALC@?`@M@?JKJK@APWDEDEPGF?B?h@Bn@?LATAL?^ARCXEZKZMBADAH?H?D@B@D@B@PRRR~@v@RNBDB@B@D@D@D?DADCBCDILc@FWHe@?ADU@M@Q@O?G?C@a@B[?M?GASASCOI[GOAIAC?C?QAKAAAQCKESUs@CG?A?G?M@Q?ADe@@AFo@B]@K?U@E?GAM?IAECOEMCGGOCGAE?I?C@E@EBEBEDCDCDAHCJC@?LAP?@?NBNDLFNH`@X`@ZDBHDD@F?B@BCDABE@I?A?C@MAKAMCYEo@M_AAECGCECECCOOQQGG[Wq@o@ECAACCACCCAEGKCIIWQe@Uk@Se@Yk@Ym@uAuCKSGQCIAI?E?G@G?G@EBIFGBG^i@FILUT_@HMn@cAj@_ATc@FIDGBC@CBA@ADADAHAF?D@HBHDHHFFFFVTLLDDDHHRBFDLRb@BFBFHFLJb@Z^R`@RDBZJHDF@NDZHj@Jf@BZ@F@R?fCJJ@\DD?TBTDJDB?@@@@@@@@BDBJDR@@FXBD@@B@@@B@B?D?BABCFELONQFKDE@C@AJGFCHANAP@@?`@?@?d@D^DfAJ`@D@?^BPBD@D@FBBBDDHJHJFLNVNRLPHJHHh@b@`@XZXDDRVNNHLJFRDLQBI?K@C?U?WA]C}@AOAGACCECEAC?EAE?A?E?I@G@EDCFCFAJ@D@B?FBB@NLRPV^BHHPDN?@FP?F@DAD?JAV?B?B@DBDBDBBB@D@D@XHL@D@B@FF?@FFNT@BZp@Th@Vv@Xv@BBR`@R`@@@Tf@BLDN@Z@JBf@Df@@FD^D^@FBLDNBDBJBFFFDB\TDDTPVRBDDBDHDLBL@PBPBV@HBH@HBD@B\b@'
+                                start_location:
+                                  lat: 27.7372254
+                                  lng: -17.9937641
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 1.3 km
+                                  value: 1327
+                                duration:
+                                  text: 2 mins
+                                  value: 129
+                                end_location:
+                                  lat: 27.7192528
+                                  lng: -17.9809011
+                                html_instructions: Turn <b>left</b> to stay on <b>HI-40</b>
+                                maneuver: turn-left
+                                polyline:
+                                  points: 'y~dhDbiylBh@_@BC?A@E@C?A?C@E?A?CO_@EOCGAC?AAC?C?EEaA?GEqA?u@AOAIEQYs@GOGQEKAEAE?GAE?I?IBW@K?MAKAIAGCGGUCKEQESAI?I?C@MBQFYDQDKBEFK@?NQVWlAuAFK@CDGTq@BIDODYFm@Ba@?]?ICg@AMCYEc@Gk@[qCEa@AM?EAG?C@C?C@GNq@@E?C@E?G?EAIW}@S{@Mq@EQy@}DCKAMA]?Q@]Di@Fu@HaA@OBQBQ@CDKHOBEDGRSXa@'
+                                start_location:
+                                  lat: 27.7196513
+                                  lng: -17.9933045
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 2.4 km
+                                  value: 2418
+                                duration:
+                                  text: 3 mins
+                                  value: 208
+                                end_location:
+                                  lat: 27.7098322
+                                  lng: -17.977762
+                                html_instructions: Turn <b>right</b> onto <b>HI-4</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: 'i|dhDr{vlBNZLVJZDRb@xBDNFTH\FLFNDFFFPHFBJDNBJ?J?JGJGl@o@HKFGDCBA@ALGNIrAs@^QHAJ?J@HFj@ZHDrAv@HBFBLDL@P?VCXGHARELAJ@H@JDFBHFb@XbBhAZRVHPBN@N?VE`@IfB]b@ITEj@KVEF?J?H@B?\Jb@J`@J@?^JRFLB^H@?b@J`@Hb@HD@ZF`@Hb@J`@H`@Hb@HL@H?FCFCBCDEDQBO?E?ECGEOQUGIEIGOEGAEEOCYI{@Gq@AIEeAEoAAa@CKCGEIIICE{AaBQUKQM]EWKm@CKE_@ESK_@KSGKSSSQa@_@W[WY[_@MIMIi@YSK_B}@KIKOA?EMCI?K@E@GBEDEFEHEFAN?nAZTRNHH@J@^E\CJAB?L?P?JBr@PxA^hCl@'
+                                start_location:
+                                  lat: 27.7192528
+                                  lng: -17.9809011
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.9 km
+                                  value: 890
+                                duration:
+                                  text: 2 mins
+                                  value: 109
+                                end_location:
+                                  lat: 27.7035054
+                                  lng: -17.9812712
+                                html_instructions: Turn <b>left</b> onto <b>C. Tr.ª del Pino</b>/<wbr/><b>HI-4</b>
+                                maneuver: turn-left
+                                polyline:
+                                  points: machD~gvlB\_@z@cAd@i@RUHGJEH?J?VFf@T`A`@`Bp@`@Pp@XTJHFHFPRT^lA|ANHLF\JFBJFDD~@t@z@p@NNBB`@l@JPHJPVLLRPRLTRDBVRdAt@TRZXBBZ^TZNT
+                                start_location:
+                                  lat: 27.7098322
+                                  lng: -17.977762
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.2 km
+                                  value: 232
+                                duration:
+                                  text: 1 min
+                                  value: 47
+                                end_location:
+                                  lat: 27.7022429
+                                  lng: -17.9794795
+                                html_instructions: Turn <b>left</b> onto <b>C. el Chamorro</b>
+                                maneuver: turn-left
+                                polyline:
+                                  points: '}yahD|}vlBVQDELMJK@?BCDCTGDCBCBEFQNc@Pc@@E@CD[@GFSDGR_@@AHOFKPU@CTY'
+                                start_location:
+                                  lat: 27.7035054
+                                  lng: -17.9812712
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 7 m
+                                  value: 7
+                                duration:
+                                  text: 1 min
+                                  value: 2
+                                end_location:
+                                  lat: 27.7021815
+                                  lng: -17.9794959
+                                html_instructions: Turn <b>right</b> onto <b>C. San Antón</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: _rahDvrvlBJB
+                                start_location:
+                                  lat: 27.7022429
+                                  lng: -17.9794795
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.1 km
+                                  value: 137
+                                duration:
+                                  text: 1 min
+                                  value: 27
+                                end_location:
+                                  lat: 27.7011231
+                                  lng: -17.9790166
+                                html_instructions: Turn <b>left</b> onto <b>C. D. Eloy Quintero</b>
+                                maneuver: turn-left
+                                polyline:
+                                  points: sqahDzrvlBTUFEDCLAD@\@B?DADABABGDKFKFKDC@AHALAZCRA
+                                start_location:
+                                  lat: 27.7021815
+                                  lng: -17.9794959
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 1.3 km
+                                  value: 1312
+                                duration:
+                                  text: 3 mins
+                                  value: 150
+                                end_location:
+                                  lat: 27.6926438
+                                  lng: -17.9724029
+                                html_instructions: Continue onto <b>C. la Goronita</b>
+                                polyline:
+                                  points: _kahDzovlBRGJGPKb@WFCDCFENMBCHIBGDG@CHQDKRa@@?HKFGHEj@Y~Aq@JCHAb@Cz@An@ETALCHAHCBCDC?A@CTi@DIFI@AZYd@a@n@g@VSDCZUROBCb@WNKHKHMHMPUDGTY@CDIJUFKJYFIDEFCDAx@Gl@IFAFCBCBGDGBCFODMDKFGDEBALGXMZKTMFEZYd@_@FGDG@C@G@G@I?KCi@Cc@Ae@?GAg@AACKCEECIGEGAGBGBCBA?AD?D?F?FBF@HBBBFDFDJHJBJBP?tA@h@@F?HAHELMJMFILQVU
+                                start_location:
+                                  lat: 27.7011231
+                                  lng: -17.9790166
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 10.6 km
+                                  value: 10604
+                                duration:
+                                  text: 12 mins
+                                  value: 744
+                                end_location:
+                                  lat: 27.6422902
+                                  lng: -17.9796272
+                                html_instructions: Continue onto <b>HI-4</b>
+                                polyline:
+                                  points: '_v_hDnfulB?KDMFIFGFEF?F?HBFDPLLLXVZZDDPXZd@h@r@d@n@p@bAFD@@HDFBF@D?@AHAHEDE@CBCBE@I?I?GAIEKEMEIU_@Ye@a@q@EGMWAEO_@EUCUCOCOAIO]o@gAMUEIEKEK?A?E?EBGBIBCDCBAD?B?FBFB\RBB~@r@f@^HDl@Xd@RXHf@Nl@XRJJFjAl@HFHFHJHPNXDHDFFDJFRHLDLDh@PHBNFNJHD\Tf@\b@VDB^RVRBBDDRV@B^p@FJFJDLDLHZLd@Rn@P`@PZLP^b@JLJJBDJPFNDFHLJHPLRLZPrAp@B@VNRNNJBBTVHH`@d@^f@TVPRVTNLHHNL^TVJVHNBB?NBRBB?T?TARCPEREHCJG\OXMLEJ?F?F?H@HBHBJFNNPJJDJBL?H?JALC\K\MLELGRIFELEHCF?D?H@HFFDTXRZVh@JTHTJZHZ?@Jb@BHLj@JRDHLR@@LJLJPHVHLDj@Hj@HvATl@J@?^BZBV?XAZCREPARCR@H?LBL@NFVHTHTFJBRFr@HJ@\@X?V?L?J?TAZ?Z@ZBPBXFRHRH`@Tb@TFD`@TZTTJXJHBJBJ@J?\?B?l@CP?RBNBLDJFPNRR@@LJHDLDVFd@LJDFFDDDH@D@F@F?FAD?DKXGPCF?HAH?F@F?FBHBHLPHJ\d@h@p@f@p@DBDFFDLJFBFBZJ^XDFDDh@|@R^v@rALTLPHHNLFD@@JDLDx@NNDFBJHDBBB@@HLj@`AV`@LVFNBJ@H@JFt@Bj@D|@@N?J?PALAJCLCLIREHYd@CHAFCN?J?N@N@HBHDJVz@p@nBp@xBL`@h@|An@nBNb@Tp@HVn@bBr@rB^fALXHTFLx@|AFLh@`A?@tAhCrAdCb@z@BDNXb@z@LX~@lCHR^lADNBPBL@R?LALALABKp@YrBG\G`@ADCR?H?H@@BJDJFFDBFDD@J@JAFAFCDC@ADGDGFSDSFOBIFMBG@AFKHK~@aARS^_@X[RY\e@NUP[P[LSPQTSNIr@]\Sn@c@RSTWPW?ALSJSHSHODODQDUBI@GDW@G@IBS@GBIBQBK@EBQBM@ADMDM@EDGHMFIHIHKDCDEJILGNGJCBADAJEJEJENILGHELMNMFKHILSLUFK@CHSFQDUFWP}@Je@F[@KLs@N{@Jg@Hg@@AH]@EDQLa@Rm@r@{BHUDMPi@Nc@J_@F_@@GBO@Y@[?WA_@CWE_@Ig@Io@YiBYqBO_AGe@Ik@G[AO?M?KBMBIDGBEHIJIJCHAJ?F?B?HBHBFDJHFDLHZVJFRPRLVPXLb@NXHTBNBH@@?J@\@F?P?P?FA\CTCTGTGRGZMPMJGRMPOFGRSRWDE\g@Xa@n@{@PUBAHIFEHE@ADCHC@?HAPEF?J?J?L?J@NDJBHDHDJDDD@?FHBDDBDFDDNNNNPHNJLDDBF@HBH@@?F@ZBH?H@@?F@F@F@NDFDFBHFFBHHHJJNJVJTN^HZF`@@@Fh@BRDd@Jv@VfAVv@Xv@@@HRP\\h@f@p@^b@DHDDJRJXHXHVHXLb@FPRZd@p@f@l@HL@@FHDFJPHLFLDNBLDNBRFTDL@H@@HRh@`Af@x@|@xAn@dAPZFFFFB@FBDBBBLBH@D?D?N?LCLELGLIDGBCDGDKDIBK@IBIBI@IBKBG@KBEDQFMHOLOLKBCNMVYLOJKHQHSFODUBQBU@Q@SDu@?E@QDg@HsAF_A@KB[@KBUD_@F]D[Lo@J_@Rw@Ng@Vo@JYTi@Vi@Te@Ve@LWDGJQDMDK?A@K?E@A?M?G?E?MCICQGa@Ie@Kk@AGGQAAOc@KWCO?I?I?G?E@I@ODQFYDa@B[@[?W?[E]Ii@ESCOCGKk@Km@Ie@ACE]?ECSEo@@[?Y@UBWBWHa@J]r@}A~@oB`@y@NYLS@ADEVWHIDEDCBAFC@AB?B?DAB?D@D@D@B@DBDB'
+                                start_location:
+                                  lat: 27.6926438
+                                  lng: -17.9724029
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.1 km
+                                  value: 118
+                                duration:
+                                  text: 1 min
+                                  value: 20
+                                end_location:
+                                  lat: 27.642195
+                                  lng: -17.9808183
+                                html_instructions: Turn <b>right</b> onto <b>C. las Calmas</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: 'i{ugDtsvlB@J@`@@^D|@?NFpA'
+                                start_location:
+                                  lat: 27.6422902
+                                  lng: -17.9796272
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.1 km
+                                  value: 106
+                                duration:
+                                  text: 1 min
+                                  value: 30
+                                end_location:
+                                  lat: 27.6412427
+                                  lng: -17.9807285
+                                html_instructions: Turn <b>left</b> onto <b>C. Juan Gutiérrez Monteverde</b>
+                                maneuver: turn-left
+                                polyline:
+                                  points: 'uzugDb{vlBRA`@Ct@CD?\CJ?`@C'
+                                start_location:
+                                  lat: 27.642195
+                                  lng: -17.9808183
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 0.1 km
+                                  value: 115
+                                duration:
+                                  text: 1 min
+                                  value: 17
+                                end_location:
+                                  lat: 27.6410709
+                                  lng: -17.9818738
+                                html_instructions: Turn <b>right</b> onto <b>C. el Carmen</b>
+                                maneuver: turn-right
+                                polyline:
+                                  points: wtugDpzvlBDl@?T?L@FDj@Jr@BT?DBL
+                                start_location:
+                                  lat: 27.6412427
+                                  lng: -17.9807285
+                                travel_mode: DRIVING
+                              - distance:
+                                  text: 15 m
+                                  value: 15
+                                duration:
+                                  text: 1 min
+                                  value: 9
+                                end_location:
+                                  lat: 27.6412095
+                                  lng: -17.9818845
+                                html_instructions: 'Turn <b>right</b> onto <b>C. el Rancho</b><div style="font-size:0.9em">Destination will be on the left</div>'
+                                maneuver: turn-right
+                                polyline:
+                                  points: 'usugDtawlB[@'
+                                start_location:
+                                  lat: 27.6410709
+                                  lng: -17.9818738
+                                travel_mode: DRIVING
+                            traffic_speed_entry: []
+                            via_waypoint: []
+                        overview_polyline:
+                          points: 'ozkhDxn|lBs@sBj@W~DcBz@a@d@bBt@pBBq@?g@fAL^m@Y_EUoAgB{FsCkI}CmAwBeB_EwGh@gBnDk@xCtE~CtCxG|HpJhFrG`OhGlO|AtDdAdGfFfFtEhIAfIpAjPsArHr@dI_BzRW`I`BvGpAfLvAxZgApGn@?TaCzCsMh@yObC}O|DsL~Aq@zAeDWwFvDcNfAqAxBeKGgA}A{Db@YdAnAtA~DMvDe@|Is@hE\fFaAdDhCjCV|AOlIm@ZwDKu@b@g@hEgArIvAfGnClCl@hCoAhK[~J`@fCxBfBrAjA]lAr@`EuAhGe@vEbA~DiAnEmBdKg@vAj@VhAeGpC_DfB}EQoHpAmDrFkCxAcBW_CPaEaAmIAkCp@aCjDoBj@{AvFyF`C_Dh@eCnAoHe@cHj@wHb@qG`BiDtCqIm@mBzAaDw@yF\uDpAmDPeC[_DoA_FsBeE}AsLoG_L}AwHeBgEuCuFe@aE`B}Hw@sEgAcAe@w@AwBkAgGG_SsCmNcEwPvBUtCjAlE~@n@nAEpAJj@dA`@xAm@n@k@dBBvDi@p@BdCxBt@s@Z}G_AcFF}FE}@z@YtCpAn@@IaCaA_C{DmGcDoHr@aBvEyGtCfDjCjBhEt@~G~@^|@~@y@hAYvE\xAd@|BpCpC|BLuDQw@Xi@|AhAZrAJ`A`ATrEfK\fE`AxAlAzAVbBfABBEBOYiAM_F{@sC_@gEVoBlCaDv@}Ds@yIJkD_CuK\qGlAuBjB`HrAdAtBwAlD}A~DpBhCQbFtClGw@fDF|K`CzAWe@}AwAeLgCgD[qBgCuDyF{DOgAVQ|Bl@`C@jDt@fDL`BmBr@c@lC~@fGlDbFbEzJfJdAtAv@q@n@]tCuGdBYn@u@zBg@zAiA~@_BjG}ApB[xCgDdFiF`@u@tBWn@{@nEoDK{DWy@zBf@tD_@jAcBvBxA~DtFz@CB_AsBuDcB{E[mAj@KvMdHvA`BvCpAfDbCtAjD`CbEpBnBbJzHfCv@~B]tB]fBp@dCw@hA?zD~IbHzApDExH`AlDFpDbBjHxAdChAVz@W|AnCbElBjAfDpFdCz@rB|Cb@`F[pB_@|BlFjPjE|L`IhOtDtJGrCm@bF|@j@|CoErD}EzEmDzBeGhAcDnDoBpAqBjA_GtEaQA}DqBaNXyAlAGxB~A~CbA|BAbDmArFgGbDd@lDdBdARpAbB`AzFlDfIlFxJbFpKfB~B|AKfAmC~AwBbAoCpAcO|EcMkAyGHmIw@mE@eEjEwJ`Ay@f@D^tFpBIh@Cf@h@FvAR|A[@'
+                        summary: HI-1 and HI-4
+                        warnings: []
+                        waypoint_order: []
+                    status: OK
                 boston_concord_waypoints_now_response:
                   value:
                     geocoded_waypoints:
@@ -20423,15 +20772,15 @@ components:
       type: string
       title: TravelMode
       description: |
-        - `driving` (default) indicates distance calculation using the road network.
-        - `walking` requests distance calculation for walking via pedestrian paths & sidewalks (where available).
-        - `bicycling` requests distance calculation for bicycling via bicycle paths & preferred streets (where available).
-        - `transit` requests distance calculation via public transit routes (where available). 
+        - `DRIVING` (default) indicates calculation using the road network.
+        - `BICYCLING` requests calculation for bicycling via bicycle paths & preferred streets (where available).
+        - `TRANSIT` requests calculation via public transit routes (where available). 
+        - `WALKING` requests calculation for walking via pedestrian paths & sidewalks (where available).
       enum:
         - DRIVING
-        - WALKING
         - BICYCLING
         - TRANSIT
+        - WALKING
     TextValueObject:
       type: object
       title: TextValueObject
@@ -20456,13 +20805,13 @@ components:
         - value
       properties:
         text:
-          description: The time specified as a string. The time is displayed in the time zone of the transit stop.
+          description: The time specified as a string in the time zone.
           type: string
         value:
           description: 'The time specified as Unix time, or seconds since midnight, January 1, 1970 UTC.'
           type: number
         time_zone:
-          description: 'Contains the time zone of this station. The value is the name of the time zone as defined in the [IANA Time Zone Database](http://www.iana.org/time-zones), e.g. "America/New_York".'
+          description: 'Contains the time zone. The value is the name of the time zone as defined in the [IANA Time Zone Database](http://www.iana.org/time-zones), e.g. "America/New_York".'
           type: string
     DistanceMatrixElementStatus:
       type: string
@@ -20599,7 +20948,7 @@ components:
           description: Contains an array of available travel modes. This field is returned when a request specifies a travel mode and gets no results. The array contains the available travel modes in the countries of the given set of waypoints. This field is not returned if one or more of the waypoints are 'via waypoints'.
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/TravelMode'
         error_message:
           description: |
             When the service returns a status code other than `OK`, there may be an additional `error_message` field within the response object. This field contains more detailed information about thereasons behind the given status code. This field is not always returned, and its content is subject to change.
@@ -20612,7 +20961,6 @@ components:
 
         When using the Directions API to search for transit directions, the steps array will include additional transit details in the form of a transit_details array. If the directions include multiple modes of transportation, detailed directions will be provided for walking or driving steps in an inner steps array. For example, a walking step will include directions from the start and end locations: "Walk to Innes Ave & Fitch St". That step will include detailed walking directions for that route in the inner steps array, such as: "Head north-west", "Turn left onto Arelious Walker", and "Turn left onto Innes Ave".
       required:
-        - distance
         - duration
         - end_location
         - start_location
@@ -20621,20 +20969,20 @@ components:
         - travel_mode
       properties:
         distance:
-          description: Distance of the step.
+          description: Contains the distance covered by this step until the next step. This field may be undefined if the distance is unknown.
           $ref: '#/components/schemas/TextValueObject'
         duration:
-          description: Duration of the step.
+          description: 'Contains the typical time required to perform the step, until the next step. This field may be undefined if the duration is unknown.'
           $ref: '#/components/schemas/TextValueObject'
         end_location:
-          description: End location of the step.
+          description: Contains the location of the last point of this step.
           $ref: '#/components/schemas/LatLngLiteral'
         html_instructions:
           type: string
-          description: HTML representation of the step.
+          description: 'Contains formatted instructions for this step, presented as an HTML text string. This content is meant to be read as-is. Do not programmatically parse this display-only content.'
         maneuver:
           type: string
-          description: 'Contains the action to take for the current step (turn left, merge, straight, etc.).'
+          description: 'Contains the action to take for the current step (turn left, merge, straight, etc.). Values are subject to change, and new values may be introduced without prior notice.'
           enum:
             - turn-slight-left
             - turn-sharp-left
@@ -20658,24 +21006,22 @@ components:
             - roundabout-right
         polyline:
           $ref: '#/components/schemas/DirectionsPolyline'
-          description: Polyline representation of the step.
+          description: 'Contains a single points object that holds an [encoded polyline](https://developers.devsite.corp.google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.'
         start_location:
-          description: Start location of the step.
+          description: Contains the location of the starting point of this step.
           $ref: '#/components/schemas/LatLngLiteral'
         transit_details:
-          description: Details pertaining to this step if the travel mode is `TRANSIT`
+          description: Details pertaining to this step if the travel mode is `TRANSIT`.
           $ref: '#/components/schemas/DirectionsTransitDetails'
         travel_mode:
-          description: Travel mode of the step.
+          description: Contains the type of travel mode used.
           $ref: '#/components/schemas/TravelMode'
         steps:
-          description: Substeps are only available when travel_mode is set to "transit".
+          description: Contains detailed directions for walking or driving steps in transit directions. Substeps are only available when travel_mode is set to "transit". The inner steps array is of the same type as steps.
     DirectionsLeg:
       type: object
       title: DirectionsLeg
       required:
-        - distance
-        - duration
         - end_address
         - end_location
         - start_address
@@ -20711,20 +21057,12 @@ components:
         end_location:
           description: 'The latitude/longitude coordinates of the given destination of this leg. Because the Directions API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `end_location` may be different than the provided destination of this leg if, for example, a road is not near the destination.'
           $ref: '#/components/schemas/LatLngLiteral'
-        html_instructions:
-          type: string
-          description: Formatted instructions for the leg
-        polyline:
-          $ref: '#/components/schemas/DirectionsPolyline'
         start_address:
           description: Contains the human-readable address (typically a street address) resulting from reverse geocoding the `start_location` of this leg. This content is meant to be read as-is. Do not programmatically parse the formatted address.
           type: string
         start_location:
           description: 'The latitude/longitude coordinates of the origin of this leg. Because the Directions API calculates directions between locations by using the nearest transportation option (usually a road) at the start and end points, `start_location` may be different than the provided origin of this leg if, for example, a road is not near the origin.'
           $ref: '#/components/schemas/LatLngLiteral'
-        travel_mode:
-          description: The mode of travel for the leg.
-          $ref: '#/components/schemas/TravelMode'
         steps:
           description: An array of steps denoting information about each separate step of the leg of the journey.
           type: array
@@ -20938,6 +21276,7 @@ components:
     DirectionsTransitDetails:
       type: object
       title: DirectionsTransitDetails
+      description: Additional information that is not relevant for other modes of transportation.
       properties:
         arrival_stop:
           description: The arrival transit stop.
@@ -20950,22 +21289,26 @@ components:
         departure_time:
           $ref: '#/components/schemas/TimeZoneTextValueObject'
         headsign:
-          description: Text that appears on the vehicle or signage that identifies a specific line variant to riders.
+          description: 'Specifies the direction in which to travel on this line, as it is marked on the vehicle or at the departure stop. This will often be the terminus station.'
           type: string
+        headway:
+          description: 'Specifies the expected number of seconds between departures from the same stop at this time. For example, with a `headway` value of 600, you would expect a ten minute wait if you should miss your bus.'
+          type: integer
         line:
-          description: The transit line travelled.
+          description: Contains information about the transit line used in this step.
           $ref: '#/components/schemas/DirectionsTransitLine'
         num_stops:
-          description: 'The number of stops from the departure to the arrival stop. This includes the arrival stop, but not the departure stop.'
+          description: 'The number of stops from the departure to the arrival stop. This includes the arrival stop, but not the departure stop. For example, if your directions involve leaving from Stop A, passing through stops B and C, and arriving at stop D, `num_stops` will return 3.'
           type: integer
         trip_short_name:
-          description: The text that appears in schedules and sign boards to identify a transit trip to passengers.
+          description: 'The text that appears in schedules and sign boards to identify a transit trip to passengers. The text should uniquely identify a trip within a service day. For example, "538" is the `trip_short_name` of the Amtrak train that leaves San Jose, CA at 15:10 on weekdays to Sacramento, CA.'
           type: string
           example: '538'
     DirectionsTransitLine:
       type: object
       title: DirectionsTransitLine
       required:
+        - agencies
         - name
       properties:
         agencies:
@@ -20981,12 +21324,18 @@ components:
           description: 'The full name of this transit line, e.g. "8 Avenue Local".'
           type: string
         short_name:
-          description: 'The short name of this transit line, e.g. "E".'
+          description: 'The short name of this transit line. This will normally be a line number, such as "M7" or "355".'
           type: string
         text_color:
           description: The color commonly used in signage for this line.
           type: string
           example: '#121212'
+        url:
+          description: Contains the URL for this transit line as provided by the transit agency.
+          type: string
+        icon:
+          description: Contains the URL for the icon associated with this line.
+          type: string
         vehicle:
           description: The type of vehicle that operates on this transit line.
           $ref: '#/components/schemas/DirectionsTransitVehicle'
@@ -21011,34 +21360,37 @@ components:
         - name
       properties:
         icon:
-          description: The icon associated with this vehicle type.
+          description: Contains the URL for an icon associated with this vehicle type.
+          type: string
+        local_icon:
+          description: 'Contains the URL for the icon associated with this vehicle type, based on the local transport signage.'
           type: string
         name:
           description: 'The name of this vehicle, capitalized.'
           type: string
           example: Train
         type:
-          description: 'The type of vehicle used, e.g. train or bus.'
+          description: "The type of vehicle used.\n\n* `BUS` -\tBus.\n* `CABLE_CAR` -\tA vehicle that operates on a cable, usually on the ground. Aerial cable cars may be of the type GONDOLA_LIFT.\n* `COMMUTER_TRAIN` -\tCommuter rail.\n* `FERRY` -\tFerry.\n* `FUNICULAR` -\tA vehicle that is pulled up a steep incline by a cable. A Funicular typically consists of two cars, with each car acting as a counterweight for the other.\n* `GONDOLA_LIFT` -\tAn aerial cable car.\n* `HEAVY_RAIL` -\tHeavy rail.\n* `HIGH_SPEED_TRAIN` -\tHigh speed train.\n* `INTERCITY_BUS` -\tIntercity bus.\n* `LONG_DISTANCE_TRAIN` -\tLong distance train.\n* `METRO_RAIL` -\tLight rail transit.\n* `MONORAIL` -\tMonorail.\n* `OTHER` -\tAll other vehicles will return this type.\n* `RAIL` -\tRail.\n* `SHARE_TAXI` -\tShare taxi is a kind of bus with the ability to drop off and pick up passengers anywhere on its route.\n* `SUBWAY` -\tUnderground light rail.\n* `TRAM` -\tAbove ground light rail.\n* `TROLLEYBUS` -\tTrolleybus.\n"
           type: string
           enum:
-            - RAIL
+            - BUS
+            - CABLE_CAR
+            - COMMUTER_TRAIN
+            - FERRY
+            - FUNICULAR
+            - GONDOLA_LIFT
+            - HEAVY_RAIL
+            - HIGH_SPEED_TRAIN
+            - INTERCITY_BUS
+            - LONG_DISTANCE_TRAIN
             - METRO_RAIL
+            - MONORAIL
+            - OTHER
+            - RAIL
+            - SHARE_TAXI
             - SUBWAY
             - TRAM
-            - MONORAIL
-            - HEAVY_RAIL
-            - COMMUTER_TRAIN
-            - HIGH_SPEED_TRAIN
-            - LONG_DISTANCE_TRAIN
-            - BUS
-            - INTERCITY_BUS
             - TROLLEYBUS
-            - SHARE_TAXI
-            - FERRY
-            - CABLE_CAR
-            - GONDOLA_LIFT
-            - FUNICULAR
-            - OTHER
     DirectionsViaWaypoint:
       type: object
       title: DirectionsViaWaypoint

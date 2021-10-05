@@ -12,18 +12,8 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"><code>name</code></td>
-      <td><strong>required</strong></td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>The full name of this transit line, e.g. "8 Avenue Local".</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>agencies</code></td>
-      <td>optional</td>
+      <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
           href="#DirectionsTransitAgency"
@@ -45,6 +35,16 @@
       </td>
     </tr>
     <tr>
+      <td align="left"><code>name</code></td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>The full name of this transit line, e.g. "8 Avenue Local".</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>color</code></td>
       <td>optional</td>
       <td>string</td>
@@ -55,12 +55,25 @@
       </td>
     </tr>
     <tr>
+      <td align="left"><code>icon</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>Contains the URL for the icon associated with this line.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td align="left"><code>short_name</code></td>
       <td>optional</td>
       <td>string</td>
       <td>
         <div class="nonref-property-description">
-          <p>The short name of this transit line, e.g. "E".</p>
+          <p>
+            The short name of this transit line. This will normally be a line
+            number, such as "M7" or "355".
+          </p>
         </div>
       </td>
     </tr>
@@ -71,6 +84,19 @@
       <td>
         <div class="nonref-property-description">
           <p>The color commonly used in signage for this line.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>url</code></td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            Contains the URL for this transit line as provided by the transit
+            agency.
+          </p>
         </div>
       </td>
     </tr>

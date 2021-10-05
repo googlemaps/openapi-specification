@@ -18,11 +18,11 @@ description: An object containing Unix time, a time zone, and its formatted text
 required: [text, time_zone, value]
 properties:
   text:
-    description: The time specified as a string. The time is displayed in the time zone of the transit stop.
+    description: The time specified as a string in the time zone.
     type: string
   value:
     description: The time specified as Unix time, or seconds since midnight, January 1, 1970 UTC.
     type: number
   time_zone:
-    description: Contains the time zone of this station. The value is the name of the time zone as defined in the [IANA Time Zone Database](http://www.iana.org/time-zones), e.g. "America/New_York".
+    description: Contains the time zone. The value is the name of the time zone as defined in the [IANA Time Zone Database](http://www.iana.org/time-zones), e.g. "America/New_York".
     type: string

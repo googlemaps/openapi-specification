@@ -20,7 +20,6 @@ description: |
   When using the Directions API to search for transit directions, the steps array will include additional transit details in the form of a transit_details array. If the directions include multiple modes of transportation, detailed directions will be provided for walking or driving steps in an inner steps array. For example, a walking step will include directions from the start and end locations: "Walk to Innes Ave & Fitch St". That step will include detailed walking directions for that route in the inner steps array, such as: "Head north-west", "Turn left onto Arelious Walker", and "Turn left onto Innes Ave".
 required:
   [
-    distance,
     duration,
     end_location,
     start_location,
@@ -30,20 +29,20 @@ required:
   ]
 properties:
   distance:
-    description: Distance of the step.
+    description: Contains the distance covered by this step until the next step. This field may be undefined if the distance is unknown.
     $ref: "./TextValueObject.yml"
   duration:
-    description: Duration of the step.
+    description: Contains the typical time required to perform the step, until the next step. This field may be undefined if the duration is unknown.
     $ref: "./TextValueObject.yml"
   end_location:
-    description: End location of the step.
+    description: Contains the location of the last point of this step.
     $ref: "./LatLngLiteral.yml"
   html_instructions:
     type: string
-    description: HTML representation of the step.
+    description: Contains formatted instructions for this step, presented as an HTML text string. This content is meant to be read as-is. Do not programmatically parse this display-only content.
   maneuver:
     type: string
-    description: Contains the action to take for the current step (turn left, merge, straight, etc.).
+    description: Contains the action to take for the current step (turn left, merge, straight, etc.). Values are subject to change, and new values may be introduced without prior notice.
     enum:
       - turn-slight-left
       - turn-sharp-left
@@ -67,16 +66,16 @@ properties:
       - roundabout-right
   polyline:
     $ref: "./DirectionsPolyline.yml"
-    description: Polyline representation of the step.
+    description: Contains a single points object that holds an [encoded polyline](https://developers.devsite.corp.google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.
   start_location:
-    description: Start location of the step.
+    description: Contains the location of the starting point of this step.
     $ref: "./LatLngLiteral.yml"
   transit_details:
-    description: Details pertaining to this step if the travel mode is `TRANSIT`
+    description: Details pertaining to this step if the travel mode is `TRANSIT`.
     $ref: "./DirectionsTransitDetails.yml"
   travel_mode:
-    description: Travel mode of the step.
+    description: Contains the type of travel mode used.
     $ref: "./TravelMode.yml"
   steps:
     # TODO: Support for circular references?
-    description: Substeps are only available when travel_mode is set to "transit".
+    description: Contains detailed directions for walking or driving steps in transit directions. Substeps are only available when travel_mode is set to "transit". The inner steps array is of the same type as steps.

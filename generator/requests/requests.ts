@@ -1289,6 +1289,26 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_directions_available_travel_modes",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "frontera el hierro",
+          },
+          {
+            key: "destination",
+            value: "la restinga el hierro",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_directions_invalid",
     request: new Request({
       url: new Url({

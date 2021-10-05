@@ -33,22 +33,6 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left"><code>distance</code></td>
-      <td><strong>required</strong></td>
-      <td>
-        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
-      </td>
-      <td>
-        <div class="ref-property-description">
-          <p>Distance of the step.</p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td align="left"><code>duration</code></td>
       <td><strong>required</strong></td>
       <td>
@@ -56,7 +40,10 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Duration of the step.</p>
+          <p>
+            Contains the typical time required to perform the step, until the
+            next step. This field may be undefined if the duration is unknown.
+          </p>
           <p>
             See <a href="#TextValueObject">TextValueObject</a> for more
             information.
@@ -70,7 +57,7 @@
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
-          <p>End location of the step.</p>
+          <p>Contains the location of the last point of this step.</p>
           <p>
             See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
           </p>
@@ -83,7 +70,11 @@
       <td>string</td>
       <td>
         <div class="nonref-property-description">
-          <p>HTML representation of the step.</p>
+          <p>
+            Contains formatted instructions for this step, presented as an HTML
+            text string. This content is meant to be read as-is. Do not
+            programmatically parse this display-only content.
+          </p>
         </div>
       </td>
     </tr>
@@ -97,7 +88,15 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Polyline representation of the step.</p>
+          <p>
+            Contains a single points object that holds an
+            <a
+              href="https://developers.devsite.corp.google.com/maps/documentation/utilities/polylinealgorithm"
+              >encoded polyline</a
+            >
+            representation of the step. This polyline is an approximate
+            (smoothed) path of the step.
+          </p>
           <p>
             See <a href="#DirectionsPolyline">DirectionsPolyline</a> for more
             information.
@@ -111,7 +110,7 @@
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
-          <p>Start location of the step.</p>
+          <p>Contains the location of the starting point of this step.</p>
           <p>
             See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
           </p>
@@ -124,8 +123,27 @@
       <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
       <td>
         <div class="ref-property-description">
-          <p>Travel mode of the step.</p>
+          <p>Contains the type of travel mode used.</p>
           <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left"><code>distance</code></td>
+      <td>optional</td>
+      <td>
+        <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains the distance covered by this step until the next step. This
+            field may be undefined if the distance is unknown.
+          </p>
+          <p>
+            See <a href="#TextValueObject">TextValueObject</a> for more
+            information.
+          </p>
         </div>
       </td>
     </tr>
@@ -137,7 +155,8 @@
         <div class="nonref-property-description">
           <p>
             Contains the action to take for the current step (turn left, merge,
-            straight, etc.).
+            straight, etc.). Values are subject to change, and new values may be
+            introduced without prior notice.
           </p>
           <div class="notranslate">
             The allowed values include: <code>turn-slight-left</code>,
@@ -161,7 +180,9 @@
       <td>
         <div class="nonref-property-description">
           <p>
-            Substeps are only available when travel_mode is set to "transit".
+            Contains detailed directions for walking or driving steps in transit
+            directions. Substeps are only available when travel_mode is set to
+            "transit". The inner steps array is of the same type as steps.
           </p>
         </div>
       </td>
@@ -178,7 +199,7 @@
         <div class="ref-property-description">
           <p>
             Details pertaining to this step if the travel mode is
-            <code>TRANSIT</code>
+            <code>TRANSIT</code>.
           </p>
           <p>
             See

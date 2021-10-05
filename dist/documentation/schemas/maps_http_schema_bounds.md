@@ -4,10 +4,10 @@
 
 A rectangle in geographical coordinates from points at the southwest and northeast corners.
 
-| Field       | Required     | Type                                            | Description                                                               |
-| :---------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
-| `northeast` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
-| `southwest` | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+| Field                                                                                             | Required     | Type                                            | Description                                                               |
+| :------------------------------------------------------------------------------------------------ | ------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
+| <h4 id="Bounds-northeast" class="add-link schema-object-property-key"><code>northeast</code></h4> | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
+| <h4 id="Bounds-southwest" class="add-link schema-object-property-key"><code>southwest</code></h4> | **required** | [LatLngLiteral](#LatLngLiteral "LatLngLiteral") | See [LatLngLiteral](#LatLngLiteral "LatLngLiteral") for more information. |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-bounds" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/Bounds.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

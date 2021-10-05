@@ -10,12 +10,12 @@ https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=ph
 
 See [Place Photos](https://developers.google.com/places/web-service/photos) for more information.
 
-| Field               | Required     | Type                | Description                                                                                                                 |
-| :------------------ | ------------ | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `height`            | **required** | number              | <div class="nonref-property-description"><p>The height of the photo.</p></div>                                              |
-| `html_attributions` | **required** | Array&lt;string&gt; | <div class="nonref-property-description"><p>The HTML attributions for the photo.</p></div>                                  |
-| `photo_reference`   | **required** | string              | <div class="nonref-property-description"><p>A string used to identify the photo when you perform a Photo request.</p></div> |
-| `width`             | **required** | number              | <div class="nonref-property-description"><p>The width of the photo.</p></div>                                               |
+| Field                                                                                                                 | Required     | Type                | Description                                                                                                                 |
+| :-------------------------------------------------------------------------------------------------------------------- | ------------ | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="PlacePhoto-height" class="add-link schema-object-property-key"><code>height</code></h4>                       | **required** | number              | <div class="nonref-property-description"><p>The height of the photo.</p></div>                                              |
+| <h4 id="PlacePhoto-html_attributions" class="add-link schema-object-property-key"><code>html_attributions</code></h4> | **required** | Array&lt;string&gt; | <div class="nonref-property-description"><p>The HTML attributions for the photo.</p></div>                                  |
+| <h4 id="PlacePhoto-photo_reference" class="add-link schema-object-property-key"><code>photo_reference</code></h4>     | **required** | string              | <div class="nonref-property-description"><p>A string used to identify the photo when you perform a Photo request.</p></div> |
+| <h4 id="PlacePhoto-width" class="add-link schema-object-property-key"><code>width</code></h4>                         | **required** | number              | <div class="nonref-property-description"><p>The width of the photo.</p></div>                                               |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-placephoto" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlacePhoto.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

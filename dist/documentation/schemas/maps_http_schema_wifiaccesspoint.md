@@ -4,13 +4,13 @@
 
 Attributes used to describe a WiFi access point.
 
-| Field                | Required     | Type    | Description                                                                                                                                                                           |
-| :------------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `macAddress`         | **required** | string  | <div class="nonref-property-description"><p>The MAC address of the WiFi node. It's typically called a BSS, BSSID or MAC address. Separators must be <code>:</code> (colon).</p></div> |
-| `age`                | optional     | integer | <div class="nonref-property-description"><p>The number of milliseconds since this access point was detected.</p></div>                                                                |
-| `channel`            | optional     | integer | <div class="nonref-property-description"><p>The channel over which the client is communication with the access point.</p></div>                                                       |
-| `signalStrength`     | optional     | integer | <div class="nonref-property-description"><p>The current signal strength measured in dBm.</p></div>                                                                                    |
-| `signalToNoiseRatio` | optional     | integer | <div class="nonref-property-description"><p>The current signal to noise ratio measured in dB.</p></div>                                                                               |
+| Field                                                                                                                        | Required     | Type    | Description                                                                                                                                                                           |
+| :--------------------------------------------------------------------------------------------------------------------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4 id="WiFiAccessPoint-macAddress" class="add-link schema-object-property-key"><code>macAddress</code></h4>                 | **required** | string  | <div class="nonref-property-description"><p>The MAC address of the WiFi node. It's typically called a BSS, BSSID or MAC address. Separators must be <code>:</code> (colon).</p></div> |
+| <h4 id="WiFiAccessPoint-age" class="add-link schema-object-property-key"><code>age</code></h4>                               | optional     | integer | <div class="nonref-property-description"><p>The number of milliseconds since this access point was detected.</p></div>                                                                |
+| <h4 id="WiFiAccessPoint-channel" class="add-link schema-object-property-key"><code>channel</code></h4>                       | optional     | integer | <div class="nonref-property-description"><p>The channel over which the client is communication with the access point.</p></div>                                                       |
+| <h4 id="WiFiAccessPoint-signalStrength" class="add-link schema-object-property-key"><code>signalStrength</code></h4>         | optional     | integer | <div class="nonref-property-description"><p>The current signal strength measured in dBm.</p></div>                                                                                    |
+| <h4 id="WiFiAccessPoint-signalToNoiseRatio" class="add-link schema-object-property-key"><code>signalToNoiseRatio</code></h4> | optional     | integer | <div class="nonref-property-description"><p>The current signal to noise ratio measured in dB.</p></div>                                                                               |
 
 <h4 class="schema-object-example" id="WiFiAccessPoint-example">Example</h4>
 

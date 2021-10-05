@@ -19,7 +19,7 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Distance of the leg.</p>
+          <p>The total distance covered by this leg.</p>
           <p>
             See <a href="#TextValueObject">TextValueObject</a> for more
             information.
@@ -35,7 +35,7 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Duration of the leg.</p>
+          <p>The total duration of this leg.</p>
           <p>
             See <a href="#TextValueObject">TextValueObject</a> for more
             information.
@@ -49,7 +49,12 @@
       <td>string</td>
       <td>
         <div class="nonref-property-description">
-          <p>The end address of the leg.</p>
+          <p>
+            Contains the human-readable address (typically a street address)
+            from reverse geocoding the <code>end_location</code> of this leg.
+            This content is meant to be read as-is. Do not programmatically
+            parse the formatted address.
+          </p>
         </div>
       </td>
     </tr>
@@ -59,7 +64,14 @@
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
-          <p>The end location of the leg.</p>
+          <p>
+            The latitude/longitude coordinates of the given destination of this
+            leg. Because the Directions API calculates directions between
+            locations by using the nearest transportation option (usually a
+            road) at the start and end points, <code>end_location</code> may be
+            different than the provided destination of this leg if, for example,
+            a road is not near the destination.
+          </p>
           <p>
             See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
           </p>
@@ -72,7 +84,12 @@
       <td>string</td>
       <td>
         <div class="nonref-property-description">
-          <p>The start address of the leg.</p>
+          <p>
+            Contains the human-readable address (typically a street address)
+            resulting from reverse geocoding the <code>start_location</code> of
+            this leg. This content is meant to be read as-is. Do not
+            programmatically parse the formatted address.
+          </p>
         </div>
       </td>
     </tr>
@@ -82,7 +99,14 @@
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
         <div class="ref-property-description">
-          <p>The start location of the leg.</p>
+          <p>
+            The latitude/longitude coordinates of the origin of this leg.
+            Because the Directions API calculates directions between locations
+            by using the nearest transportation option (usually a road) at the
+            start and end points, <code>start_location</code> may be different
+            than the provided origin of this leg if, for example, a road is not
+            near the origin.
+          </p>
           <p>
             See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
           </p>
@@ -99,7 +123,10 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Individual steps that make up the leg.</p>
+          <p>
+            An array of steps denoting information about each separate step of
+            the leg of the journey.
+          </p>
           <p>
             See <a href="#DirectionsStep">DirectionsStep</a> for more
             information.

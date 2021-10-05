@@ -20743,7 +20743,7 @@ components:
     DirectionsRoute:
       type: object
       title: DirectionsRoute
-      description: Routes consist of nested `Legs` and `Steps`.
+      description: Routes consist of nested `legs` and `steps`.
       required:
         - bounds
         - copyrights

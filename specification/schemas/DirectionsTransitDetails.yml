@@ -30,7 +30,7 @@ properties:
     description: Specifies the direction in which to travel on this line, as it is marked on the vehicle or at the departure stop. This will often be the terminus station.
     type: string
   headway:
-    description: Specifies the expected number of seconds between departures from the same stop at this time. For example, with a `headway> value of 600, you would expect a ten minute wait if you should miss your bus.
+    description: Specifies the expected number of seconds between departures from the same stop at this time. For example, with a `headway` value of 600, you would expect a ten minute wait if you should miss your bus.
     type: integer
   line:
     description: Contains information about the transit line used in this step.

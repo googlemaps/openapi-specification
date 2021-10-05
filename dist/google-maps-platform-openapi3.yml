@@ -21292,7 +21292,7 @@ components:
           description: 'Specifies the direction in which to travel on this line, as it is marked on the vehicle or at the departure stop. This will often be the terminus station.'
           type: string
         headway:
-          description: 'Specifies the expected number of seconds between departures from the same stop at this time. For example, with a `headway> value of 600, you would expect a ten minute wait if you should miss your bus.'
+          description: 'Specifies the expected number of seconds between departures from the same stop at this time. For example, with a `headway` value of 600, you would expect a ten minute wait if you should miss your bus.'
           type: integer
         line:
           description: Contains information about the transit line used in this step.
@@ -21370,7 +21370,7 @@ components:
           type: string
           example: Train
         type:
-          description: "The type of vehicle used, e.g. train or bus.\n\n* `BUS` -\tBus.\n* `CABLE_CAR` -\tA vehicle that operates on a cable, usually on the ground. Aerial cable cars may be of the type GONDOLA_LIFT.\n* `COMMUTER_TRAIN` -\tCommuter rail.\n* `FERRY` -\tFerry.\n* `FUNICULAR` -\tA vehicle that is pulled up a steep incline by a cable. A Funicular typically consists of two cars, with each car acting as a counterweight for the other.\n* `GONDOLA_LIFT` -\tAn aerial cable car.\n* `HEAVY_RAIL` -\tHeavy rail.\n* `HIGH_SPEED_TRAIN` -\tHigh speed train.\n* `INTERCITY_BUS` -\tIntercity bus.\n* `LONG_DISTANCE_TRAIN` -\tLong distance train.\n* `METRO_RAIL` -\tLight rail transit.\n* `MONORAIL` -\tMonorail.\n* `OTHER` -\tAll other vehicles will return this type.\n* `RAIL` -\tRail.\n* `SHARE_TAXI` -\tShare taxi is a kind of bus with the ability to drop off and pick up passengers anywhere on its route.\n* `SUBWAY` -\tUnderground light rail.\n* `TRAM` -\tAbove ground light rail.\n* `TROLLEYBUS` -\tTrolleybus.\n"
+          description: "The type of vehicle used.\n\n* `BUS` -\tBus.\n* `CABLE_CAR` -\tA vehicle that operates on a cable, usually on the ground. Aerial cable cars may be of the type GONDOLA_LIFT.\n* `COMMUTER_TRAIN` -\tCommuter rail.\n* `FERRY` -\tFerry.\n* `FUNICULAR` -\tA vehicle that is pulled up a steep incline by a cable. A Funicular typically consists of two cars, with each car acting as a counterweight for the other.\n* `GONDOLA_LIFT` -\tAn aerial cable car.\n* `HEAVY_RAIL` -\tHeavy rail.\n* `HIGH_SPEED_TRAIN` -\tHigh speed train.\n* `INTERCITY_BUS` -\tIntercity bus.\n* `LONG_DISTANCE_TRAIN` -\tLong distance train.\n* `METRO_RAIL` -\tLight rail transit.\n* `MONORAIL` -\tMonorail.\n* `OTHER` -\tAll other vehicles will return this type.\n* `RAIL` -\tRail.\n* `SHARE_TAXI` -\tShare taxi is a kind of bus with the ability to drop off and pick up passengers anywhere on its route.\n* `SUBWAY` -\tUnderground light rail.\n* `TRAM` -\tAbove ground light rail.\n* `TROLLEYBUS` -\tTrolleybus.\n"
           type: string
           enum:
             - BUS

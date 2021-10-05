@@ -28,7 +28,7 @@ properties:
     example: Train
   type:
     description: | 
-      The type of vehicle used, e.g. train or bus.
+      The type of vehicle used.
 
       * `BUS` -	Bus.
       * `CABLE_CAR` -	A vehicle that operates on a cable, usually on the ground. Aerial cable cars may be of the type GONDOLA_LIFT.

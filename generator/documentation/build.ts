@@ -14,23 +14,24 @@
  * limitations under the License.
  */
 
+import { Node, Parent } from "unist";
+import { feedbackLinks, localRefLink } from "./helpers";
+import { fromMarkdown, htmlProcessor, mdProcessor } from "./processors";
 import {
-  root,
-  paragraph,
-  text,
-  strong,
-  inlineCode,
   html as htmlNode,
-  table,
-  tableRow,
-  tableCell,
+  inlineCode,
   link,
+  paragraph,
+  root,
+  strong,
+  table,
+  tableCell,
+  tableRow,
+  text,
 } from "mdast-builder";
-import { Parent, Node } from "unist";
+
 import { OpenAPIV3 } from "openapi-types";
 import { isRef } from "./helpers";
-import { fromMarkdown, htmlProcessor, mdProcessor } from "./processors";
-import { feedbackLinks, localRefLink } from "./helpers";
 
 export interface PropertyRow {
   field: Parent;
@@ -45,7 +46,7 @@ export const build = async (
     | OpenAPIV3.NonArraySchemaObject,
   key: string,
   spec: OpenAPIV3.Document,
-  regionTag: string,
+  regionTag: string
 ): Promise<Parent> => {
   if (isRef(schema)) {
     throw "cannot handle ref here";
@@ -102,7 +103,8 @@ export const build = async (
               key,
               schema.properties![key],
               required,
-              spec
+              spec,
+              title
             );
             return row;
           })
@@ -142,11 +144,19 @@ const propertyToRow = async (
     | OpenAPIV3.ArraySchemaObject
     | OpenAPIV3.NonArraySchemaObject,
   required: boolean,
-  spec:
-    | OpenAPIV3.Document,
+  spec: OpenAPIV3.Document,
+  title: string
 ): Promise<Parent> => {
   const row: any[] = [];
-  row.push(tableCell(inlineCode(key)));
+  row.push(
+    tableCell(
+      htmlNode(
+        // class="add-link" forces the link anchor button on hover
+        // need to override styling to provide room for button on hover
+        `<h4 id="${title}-${key}" class="add-link schema-object-property-key"><code>${key}</code></h4>`
+      )
+    )
+  );
 
   // bold if required
   if (required) {
@@ -160,7 +170,7 @@ const propertyToRow = async (
     const refLink = localRefLink(name, spec);
     row.push(tableCell(refLink));
     row.push(
-      tableCell(await refPropertyDesciption(refLink, property["description"]))
+      tableCell(await refPropertyDescription(refLink, property["description"]))
     );
   } else {
     if (property.type === "array") {
@@ -173,7 +183,7 @@ const propertyToRow = async (
         const refLink = localRefLink(name, spec);
         row.push(tableCell([text("Array&lt;"), refLink, text("&gt;")]));
         row.push(
-          tableCell(await refPropertyDesciption(refLink, property.description))
+          tableCell(await refPropertyDescription(refLink, property.description))
         );
       } else if (property.items.type === "object") {
         throw `Error: extract object to ref from array items for better documentation. ${JSON.stringify(
@@ -195,7 +205,7 @@ const propertyToRow = async (
   return tableRow(row);
 };
 
-const refPropertyDesciption = async (refLink: any, description?: string) => {
+const refPropertyDescription = async (refLink: any, description?: string) => {
   if (description) {
     let html = (await htmlProcessor.process(description))
       .toString()

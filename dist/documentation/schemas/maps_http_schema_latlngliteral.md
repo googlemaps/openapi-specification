@@ -4,10 +4,10 @@
 
 An object describing a specific location with Latitude and Longitude in decimal degrees.
 
-| Field | Required     | Type   | Description                                                                        |
-| :---- | ------------ | ------ | ---------------------------------------------------------------------------------- |
-| `lat` | **required** | number | <div class="nonref-property-description"><p>Latitude in decimal degrees</p></div>  |
-| `lng` | **required** | number | <div class="nonref-property-description"><p>Longitude in decimal degrees</p></div> |
+| Field                                                                                        | Required     | Type   | Description                                                                        |
+| :------------------------------------------------------------------------------------------- | ------------ | ------ | ---------------------------------------------------------------------------------- |
+| <h4 id="LatLngLiteral-lat" class="add-link schema-object-property-key"><code>lat</code></h4> | **required** | number | <div class="nonref-property-description"><p>Latitude in decimal degrees</p></div>  |
+| <h4 id="LatLngLiteral-lng" class="add-link schema-object-property-key"><code>lng</code></h4> | **required** | number | <div class="nonref-property-description"><p>Longitude in decimal degrees</p></div> |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-latlngliteral" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/LatLngLiteral.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

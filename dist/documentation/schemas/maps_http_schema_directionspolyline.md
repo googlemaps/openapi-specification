@@ -8,9 +8,9 @@ The encoding process converts a binary value into a series of character codes fo
 
 Additionally, to conserve space, points only include the offset from the previous point (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.
 
-| Field    | Required     | Type   | Description                                                                                           |
-| :------- | ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
-| `points` | **required** | string | <div class="nonref-property-description"><p>A single string representation of the polyline.</p></div> |
+| Field                                                                                                   | Required     | Type   | Description                                                                                           |
+| :------------------------------------------------------------------------------------------------------ | ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
+| <h4 id="DirectionsPolyline-points" class="add-link schema-object-property-key"><code>points</code></h4> | **required** | string | <div class="nonref-property-description"><p>A single string representation of the polyline.</p></div> |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-directionspolyline" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsPolyline.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

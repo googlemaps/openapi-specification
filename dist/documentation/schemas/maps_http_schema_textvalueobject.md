@@ -4,10 +4,10 @@
 
 An object containing a numeric value and its formatted text representation.
 
-| Field   | Required     | Type   | Description                                                          |
-| :------ | ------------ | ------ | -------------------------------------------------------------------- |
-| `text`  | **required** | string | <div class="nonref-property-description"><p>String value.</p></div>  |
-| `value` | **required** | number | <div class="nonref-property-description"><p>Numeric value.</p></div> |
+| Field                                                                                              | Required     | Type   | Description                                                          |
+| :------------------------------------------------------------------------------------------------- | ------------ | ------ | -------------------------------------------------------------------- |
+| <h4 id="TextValueObject-text" class="add-link schema-object-property-key"><code>text</code></h4>   | **required** | string | <div class="nonref-property-description"><p>String value.</p></div>  |
+| <h4 id="TextValueObject-value" class="add-link schema-object-property-key"><code>value</code></h4> | **required** | number | <div class="nonref-property-description"><p>Numeric value.</p></div> |
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.
 <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github-maps-http-schema-textvalueobject" data-action="edit" style="margin-left: 5px;" href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/TextValueObject.yml" title="Edit on GitHub"><span class="material-icons">edit</span> Edit</a>

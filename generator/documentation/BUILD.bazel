@@ -80,3 +80,17 @@ genrule(
         ":_parameters_bin",
     ],
 )
+
+nodejs_binary(
+    name = "schema-dependencies-helper",
+    data = [
+        ":_lib",
+        "//:google-maps-platform-openapi3.json"
+    ],
+    entry_point = ":schema-dependencies-helper.ts",
+    templated_args = [
+        "--spec $(rootpath //:google-maps-platform-openapi3.json)",
+        "--nobazel_node_patches",
+        "--bazel_patch_module_resolver",  # https://github.com/bazelbuild/rules_nodejs/issues/2388
+    ],
+)

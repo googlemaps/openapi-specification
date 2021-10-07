@@ -15,12 +15,10 @@
  */
 
 import { Node, Parent } from "unist";
-import { feedbackLinks, localRefLink } from "./helpers";
-import { fromMarkdown, htmlProcessor, mdProcessor } from "./processors";
+import { feedbackLinks, localRefLink, sortSchemaProperties } from "./helpers";
+import { fromMarkdown, htmlProcessor } from "./processors";
 import {
   html as htmlNode,
-  inlineCode,
-  link,
   paragraph,
   root,
   strong,
@@ -80,21 +78,7 @@ export const build = async (
     (
       await Promise.all(
         Object.keys(schema.properties!)
-          .sort((a: string, b: string) => {
-            if (schema.required) {
-              if (
-                schema.required.indexOf(a) !== -1 &&
-                schema.required.indexOf(b) !== -1
-              ) {
-                return a < b ? -1 : 1;
-              } else if (schema.required.indexOf(a) !== -1) {
-                return -1;
-              } else if (schema.required.indexOf(b) !== -1) {
-                return 1;
-              }
-            }
-            return a < b ? -1 : 1;
-          })
+          .sort(sortSchemaProperties(schema))
           .map(async (key) => {
             const required = Boolean(
               schema.required && schema.required.indexOf(key) !== -1

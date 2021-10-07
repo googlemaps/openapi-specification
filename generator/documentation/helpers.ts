@@ -1,3 +1,6 @@
+import { html as htmlNode, link, text } from "mdast-builder";
+
+import { Node } from "unist";
 /**
  * Copyright 2020 Google LLC
  *
@@ -14,8 +17,6 @@
  * limitations under the License.
  */
 import { OpenAPIV3 } from "openapi-types";
-import { html as htmlNode, link, text } from "mdast-builder";
-import { Node } from "unist";
 
 export const isRef = (
   obj:
@@ -24,6 +25,15 @@ export const isRef = (
     | OpenAPIV3.NonArraySchemaObject
 ): obj is OpenAPIV3.ReferenceObject => {
   return (obj as OpenAPIV3.ReferenceObject).$ref !== undefined;
+};
+
+export const isArray = (
+  obj:
+    | OpenAPIV3.ReferenceObject
+    | OpenAPIV3.ArraySchemaObject
+    | OpenAPIV3.NonArraySchemaObject
+): obj is OpenAPIV3.ArraySchemaObject => {
+  return (obj as OpenAPIV3.SchemaObject).type === "array";
 };
 
 export const feedbackLinks = (
@@ -50,10 +60,25 @@ export const feedbackLinks = (
   );
 };
 
-export const localRefLink = (
-  name: string,
-  spec: OpenAPIV3.Document
-): Node => {
+export const localRefLink = (name: string, spec: OpenAPIV3.Document): Node => {
   const schema = spec.components!.schemas![name] as OpenAPIV3.SchemaObject;
   return link(`#${name}`, schema.title || name, [text(schema.title || name)]);
+};
+
+export const sortSchemaProperties = (schema: OpenAPIV3.SchemaObject) => {
+  return (a: string, b: string) => {
+    if (schema.required) {
+      if (
+        schema.required.indexOf(a) !== -1 &&
+        schema.required.indexOf(b) !== -1
+      ) {
+        return a < b ? -1 : 1;
+      } else if (schema.required.indexOf(a) !== -1) {
+        return -1;
+      } else if (schema.required.indexOf(b) !== -1) {
+        return 1;
+      }
+    }
+    return a < b ? -1 : 1;
+  };
 };

@@ -31073,7 +31073,7 @@
             }
           },
           "weekday_text": {
-            "description": "A boolean value indicating if the place is open at the current time.",
+            "description": "An array of strings describing in human-readable text the hours of the place.",
             "type": "array",
             "items": {
               "type": "string"

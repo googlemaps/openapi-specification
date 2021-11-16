@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "80c00dea-ff87-4c45-8a1b-d0c9aaa4963d",
+            "id": "45d620d1-52d3-455c-a2a8-826d4fde9f0d",
             "name": "Directions",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -11,7 +11,7 @@
             "event": []
         },
         {
-            "id": "52cd5373-0ddd-4e64-9eca-b13e194cd144",
+            "id": "81048f06-76f5-4520-a12f-8a5143318156",
             "name": "Distance Matrix",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -21,7 +21,7 @@
             "event": []
         },
         {
-            "id": "2a752780-ac08-4094-a716-9d231957e8dd",
+            "id": "993791e4-f8ea-4c82-9423-331ee5b06009",
             "name": "Elevation",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -31,7 +31,7 @@
             "event": []
         },
         {
-            "id": "a24a0e37-e092-45a4-aedb-b7ec0efc9883",
+            "id": "4224ff96-368f-4038-bdd1-e30f80c4bf2a",
             "name": "Geocoding",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -41,7 +41,7 @@
             "event": []
         },
         {
-            "id": "82158f43-1857-499b-9668-b8dfecc8dc06",
+            "id": "0a862563-0e95-4c73-889f-c9979d23bd6e",
             "name": "Geolocation",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -51,7 +51,7 @@
             "event": []
         },
         {
-            "id": "be5db2f6-cbbc-4d78-9c8d-c70a189814da",
+            "id": "ba99dd98-19ad-40dd-8f40-0441558e5023",
             "name": "Roads",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -61,7 +61,7 @@
             "event": []
         },
         {
-            "id": "2f6321e3-c03b-4b6c-bb9d-a6d4ed99cd73",
+            "id": "97a5b222-cc20-4f53-b91b-ce5660b82422",
             "name": "Time Zone",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -71,7 +71,7 @@
             "event": []
         },
         {
-            "id": "81211a13-5e9b-456d-919a-c62444d8a8de",
+            "id": "9bc9020a-27c1-4009-9651-c1392f13c0e2",
             "name": "Street View",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -81,7 +81,7 @@
             "event": []
         },
         {
-            "id": "821828cf-fca5-4a22-8ead-4c4701eebf0c",
+            "id": "005bd6af-a9a2-49d0-bfa7-324d71ea1ed6",
             "name": "Places",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -91,7 +91,7 @@
             "event": []
         },
         {
-            "id": "354142d3-126f-4021-989a-b16f6c496661",
+            "id": "9d67fb45-a330-4eb3-8c08-48dcd2f21a06",
             "name": "Geolocation API",
             "description": {
                 "content": "",
@@ -99,7 +99,7 @@
             },
             "item": [
                 {
-                    "id": "1f7852b5-9b2f-442a-8661-792952676df4",
+                    "id": "3e6cab6f-2ee6-462f-a218-f01f531110a1",
                     "name": "geolocate",
                     "request": {
                         "name": "geolocate",
@@ -137,7 +137,7 @@
                     },
                     "response": [
                         {
-                            "id": "e9639185-4513-491e-86b2-393c6180ae19",
+                            "id": "840c23d7-aa75-404b-91db-0230d080efff",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -171,7 +171,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5583aebd-f218-4ec0-bb80-1d8a56b0ca26",
+                            "id": "aee6db0f-3d55-47ac-bfa7-535f0d61756d",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -205,7 +205,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c26d1a39-23ef-4469-8150-ad6ecf494669",
+                            "id": "9ae03482-6ab4-4d05-b216-2ab59f679438",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -245,7 +245,7 @@
             "event": []
         },
         {
-            "id": "99d13abd-3d8d-4a87-adc1-075a4bdbcbc0",
+            "id": "15df7f22-4c80-43b0-8383-68635b945390",
             "name": "Directions API",
             "description": {
                 "content": "",
@@ -253,7 +253,7 @@
             },
             "item": [
                 {
-                    "id": "0c078f51-20f2-48a6-8456-d95dcd99a38f",
+                    "id": "cc0387ea-5c5e-4e7d-aef0-d9e2afe39c11",
                     "name": "directions",
                     "request": {
                         "name": "directions",
@@ -333,7 +333,7 @@
                                     "disabled": true,
                                     "key": "mode",
                                     "value": "<string>",
-                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `driving` (default) indicates standard driving directions or distance using the road network.\n* `walking` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `bicycling` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `transit` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
                                 },
                                 {
                                     "disabled": true,
@@ -367,7 +367,7 @@
                     },
                     "response": [
                         {
-                            "id": "101309e9-544a-4ba7-a978-63bf46a02d29",
+                            "id": "d700cfa7-a8f2-4bce-a836-631d009aadd4",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -460,7 +460,7 @@
             "event": []
         },
         {
-            "id": "cebde317-9a2c-450f-9202-b3394b32346c",
+            "id": "66641136-e066-449c-a94b-8889f50a9ed1",
             "name": "Elevation API",
             "description": {
                 "content": "",
@@ -468,7 +468,7 @@
             },
             "item": [
                 {
-                    "id": "66911e04-f6b7-4145-ad3d-dc77a2600eda",
+                    "id": "f33ed701-4349-448d-b4ae-f343ecad7c24",
                     "name": "elevation",
                     "request": {
                         "name": "elevation",
@@ -516,7 +516,7 @@
                     },
                     "response": [
                         {
-                            "id": "1c4536d5-941a-4535-b3eb-972a0a6bcf4f",
+                            "id": "4a69b4b8-f9c1-489f-9356-b384e68c9e1a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -565,7 +565,7 @@
             "event": []
         },
         {
-            "id": "f6aefb17-4325-475f-90eb-c5225f6406da",
+            "id": "55224ea1-1ddb-40a3-a4ab-ef5485c98e5c",
             "name": "Geocoding API",
             "description": {
                 "content": "",
@@ -573,7 +573,7 @@
             },
             "item": [
                 {
-                    "id": "2deac17a-70de-4034-bdb1-3ae9dc37c94a",
+                    "id": "16e519c4-0367-4aaf-8ed7-1c1c5039fdc4",
                     "name": "geocode",
                     "request": {
                         "name": "geocode",
@@ -663,7 +663,7 @@
                     },
                     "response": [
                         {
-                            "id": "67c97b4b-4c3a-4b8f-84dc-53838b0429b1",
+                            "id": "d67d2d71-b269-4238-9b90-1cf8a856938d",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -740,7 +740,7 @@
             "event": []
         },
         {
-            "id": "86273484-2933-4d44-9fd2-e9a0e6a491be",
+            "id": "3eff3452-553f-4541-bf09-d111f6bfa15e",
             "name": "Time Zone API",
             "description": {
                 "content": "",
@@ -748,7 +748,7 @@
             },
             "item": [
                 {
-                    "id": "ff149d7c-9a82-4242-a5a1-e174e12e6adf",
+                    "id": "7465a487-a857-4b01-ab44-bbefdcf38d08",
                     "name": "timezone",
                     "request": {
                         "name": "timezone",
@@ -796,7 +796,7 @@
                     },
                     "response": [
                         {
-                            "id": "69bbbc5a-80af-4aa1-8b95-5bfe2ad4cfbe",
+                            "id": "79b91d65-d9fd-445b-b504-68efea59aeb9",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -845,7 +845,7 @@
             "event": []
         },
         {
-            "id": "ddb1964d-69e3-4d49-bbda-003b0e9f5d22",
+            "id": "f409fb99-17fb-4b56-a862-04e2e6646980",
             "name": "Roads API",
             "description": {
                 "content": "",
@@ -853,7 +853,7 @@
             },
             "item": [
                 {
-                    "id": "a679512f-4be7-4c51-a81a-bea5a748dac4",
+                    "id": "c2fd9d8d-2e67-41c9-bf55-2c4da14752c8",
                     "name": "snap To Roads",
                     "request": {
                         "name": "snap To Roads",
@@ -893,7 +893,7 @@
                     },
                     "response": [
                         {
-                            "id": "a1d55fe5-70ea-48f1-aee3-de18722ca46f",
+                            "id": "d4794b30-860e-447f-aa72-29ea18444e32",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -935,7 +935,7 @@
                     "event": []
                 },
                 {
-                    "id": "f8ab9e2b-7a5c-4cfc-9350-de93f8e1060f",
+                    "id": "ea5bf36b-923c-4dc7-add1-c76c71331309",
                     "name": "nearest Roads",
                     "request": {
                         "name": "nearest Roads",
@@ -969,7 +969,7 @@
                     },
                     "response": [
                         {
-                            "id": "c95e926c-888e-4d06-b549-796fa573412f",
+                            "id": "ea816d5d-e625-4230-9e42-2b0ab4c8589d",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -999,12 +999,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": -65879162.058062635,\n    \"longitude\": 96248664.56293967\n   },\n   \"placeId\": \"cillum commodo\",\n   \"originalIndex\": -72633261.55795707\n  },\n  {\n   \"location\": {\n    \"latitude\": -90912450.73798779,\n    \"longitude\": 21455870.2734105\n   },\n   \"placeId\": \"exercitation incididunt cupidat\",\n   \"originalIndex\": 19407306.281444475\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": -44300144.96395964,\n    \"longitude\": 9533066.752103984\n   },\n   \"placeId\": \"Ut est\",\n   \"originalIndex\": 38221426.71101326\n  },\n  {\n   \"location\": {\n    \"latitude\": 69995371.3707278,\n    \"longitude\": -56601105.45575629\n   },\n   \"placeId\": \"elit aliquip eu dolore velit\",\n   \"originalIndex\": -9692311.679965332\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8cca6ae1-54f8-402a-a223-c3bdb49a3fdf",
+                            "id": "19c157fe-dd74-4d1c-a7d7-aac01328b174",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1045,7 +1045,7 @@
             "event": []
         },
         {
-            "id": "fb3d2d2d-a34a-499f-9a03-5b9155322416",
+            "id": "a40fe4dd-2302-4876-9ebb-3e52d403e96a",
             "name": "Distance Matrix API",
             "description": {
                 "content": "",
@@ -1053,7 +1053,7 @@
             },
             "item": [
                 {
-                    "id": "0227c033-ce08-4786-9dcf-a0eb411c2623",
+                    "id": "2fb95200-b367-4e76-9825-452ad722fe04",
                     "name": "distance Matrix",
                     "request": {
                         "name": "distance Matrix",
@@ -1121,7 +1121,7 @@
                                     "disabled": true,
                                     "key": "mode",
                                     "value": "<string>",
-                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
+                                    "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `driving` (default) indicates standard driving directions or distance using the road network.\n* `walking` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `bicycling` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `transit` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n"
                                 },
                                 {
                                     "disabled": true,
@@ -1155,7 +1155,7 @@
                     },
                     "response": [
                         {
-                            "id": "47ddf49e-b987-4c9a-9bee-db40574ec0c5",
+                            "id": "e08e0f09-f948-46f1-808b-a51a74a1f977",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1240,7 +1240,7 @@
             "event": []
         },
         {
-            "id": "7a2bf291-597f-4433-8435-7ccb40ed86da",
+            "id": "64771771-835d-4d7f-8f2e-9721acca8ba1",
             "name": "Places API",
             "description": {
                 "content": "",
@@ -1248,7 +1248,7 @@
             },
             "item": [
                 {
-                    "id": "ad276be0-3b89-4406-9ead-44e379d8a710",
+                    "id": "309e32c4-d0ac-4dee-bc6c-010a862e0513",
                     "name": "place Details",
                     "request": {
                         "name": "place Details",
@@ -1309,7 +1309,7 @@
                     },
                     "response": [
                         {
-                            "id": "edadf431-83df-41d3-ab73-5117d150bb62",
+                            "id": "9abc271c-fb8b-4f58-84e1-00cc2c04153a",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1363,7 +1363,7 @@
                     "event": []
                 },
                 {
-                    "id": "94042b1c-f8f8-4d5f-917d-8a3c4354d5e6",
+                    "id": "709842eb-768d-4a14-977f-3f4ee384722f",
                     "name": "find Place From Text",
                     "request": {
                         "name": "find Place From Text",
@@ -1424,7 +1424,7 @@
                     },
                     "response": [
                         {
-                            "id": "2dc02a58-069a-4166-8386-f56e64007b7f",
+                            "id": "fd989af9-8b06-4f65-8cc8-e48586c72ade",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1478,7 +1478,7 @@
                     "event": []
                 },
                 {
-                    "id": "8899ff06-4140-4bf3-a947-026a3bc5e749",
+                    "id": "520449ac-ec01-46c5-bfb5-02d22feb283d",
                     "name": "nearby Search",
                     "request": {
                         "name": "nearby Search",
@@ -1575,7 +1575,7 @@
                     },
                     "response": [
                         {
-                            "id": "a1072dba-243a-487c-82e9-4b918c2d8294",
+                            "id": "67f5e88e-8436-45bc-ab75-05ccdaae5939",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1653,7 +1653,7 @@
                     "event": []
                 },
                 {
-                    "id": "611cee71-a359-44be-9226-607254319311",
+                    "id": "3b94b693-b388-4aa4-b95d-09597d6647b5",
                     "name": "text Search",
                     "request": {
                         "name": "text Search",
@@ -1744,7 +1744,7 @@
                     },
                     "response": [
                         {
-                            "id": "be8710ee-434f-44b9-9897-00c108bbe829",
+                            "id": "96ffcb81-7bb8-4756-8a99-b670b6ae50aa",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1818,7 +1818,7 @@
                     "event": []
                 },
                 {
-                    "id": "dd12e9ea-7f67-4799-b212-6bac7a57fcbb",
+                    "id": "72b17844-581f-4cd1-a73f-861bc1334053",
                     "name": "place Photo",
                     "request": {
                         "name": "place Photo",
@@ -1866,7 +1866,7 @@
                     },
                     "response": [
                         {
-                            "id": "63aed4bb-b709-43b9-9b41-44009717524a",
+                            "id": "4562671d-b9e3-4fa0-9013-a1d37583fe38",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1904,7 +1904,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "tempor qui",
+                            "body": "tempor Duis nu",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1912,7 +1912,7 @@
                     "event": []
                 },
                 {
-                    "id": "606fb67d-4d61-4a4f-890b-cf185ee1f794",
+                    "id": "aceb06a1-2f77-414e-bf6f-91791e79259b",
                     "name": "query Autocomplete",
                     "request": {
                         "name": "query Autocomplete",
@@ -1973,7 +1973,7 @@
                     },
                     "response": [
                         {
-                            "id": "36cfcf84-ea45-4754-bd05-a528ddfe02df",
+                            "id": "713a8183-bc3c-4558-a6a9-f5fe4672e0a3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2027,7 +2027,7 @@
                     "event": []
                 },
                 {
-                    "id": "bd6d4224-e2ea-485f-9157-dbf4f75efc20",
+                    "id": "20e67e90-202a-42ec-9e0a-9e84485436ca",
                     "name": "autocomplete",
                     "request": {
                         "name": "autocomplete",
@@ -2118,7 +2118,7 @@
                     },
                     "response": [
                         {
-                            "id": "5cb80ddb-d111-4425-9e23-ce10ceb2440f",
+                            "id": "58a6aadf-8bdc-4c67-bc90-b1f4eb1d2446",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2195,7 +2195,7 @@
             "event": []
         },
         {
-            "id": "7941e41a-3c26-406d-bebe-db4f8d7c0143",
+            "id": "df751278-404d-478c-89f1-cd29e6ead070",
             "name": "Street View API",
             "description": {
                 "content": "",
@@ -2203,7 +2203,7 @@
             },
             "item": [
                 {
-                    "id": "8752dbaa-1689-440f-a39a-0d88bd5d093b",
+                    "id": "40210bfc-99f0-4107-a772-cbf5475db885",
                     "name": "street View",
                     "request": {
                         "name": "street View",
@@ -2292,7 +2292,7 @@
                     },
                     "response": [
                         {
-                            "id": "0a8db352-c7fc-4e46-a1f2-9d8e4a98c8cf",
+                            "id": "e7afecf3-e64d-43a8-91a0-21f4dd4c3ebc",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2358,7 +2358,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "tempor qui",
+                            "body": "tempor Duis nu",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2366,7 +2366,7 @@
                     "event": []
                 },
                 {
-                    "id": "7775cb9b-cd56-4ccf-8598-67d13c3b53c9",
+                    "id": "dc79cbcd-4878-479c-9bc1-0830292843fb",
                     "name": "street View Metadata",
                     "request": {
                         "name": "street View Metadata",
@@ -2450,7 +2450,7 @@
                     },
                     "response": [
                         {
-                            "id": "6296abca-f15a-41c0-874a-8bda18a9d3dc",
+                            "id": "43f62a72-1d6e-4404-9bee-f7d6838dd6c8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2549,7 +2549,7 @@
         ]
     },
     "info": {
-        "_postman_id": "4dd9c41f-4c5e-4214-96df-1a8ee52a1030",
+        "_postman_id": "c6bd7f1f-2de9-42e6-a69c-6debdd569e9f",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

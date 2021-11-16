@@ -28539,10 +28539,16 @@
       },
       "mode": {
         "name": "mode",
-        "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `DRIVING` (default) indicates standard driving directions or distance using the road network.\n* `WALKING` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `BICYCLING` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `TRANSIT` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n",
+        "description": "For the calculation of distances and directions, you may specify the transportation mode to use. By default, `DRIVING` mode is used. By default, directions are calculated as driving directions. The following travel modes are supported:\n\n* `driving` (default) indicates standard driving directions or distance using the road network.\n* `walking` requests walking directions or distance via pedestrian paths & sidewalks (where available).\n* `bicycling` requests bicycling directions or distance via bicycle paths & preferred streets (where available).\n* `transit` requests directions or distance via public transit routes (where available). If you set the mode to transit, you can optionally specify either a `departure_time` or an `arrival_time`. If neither time is specified, the `departure_time` defaults to now (that is, the departure time defaults to the current time). You can also optionally include a `transit_mode` and/or a `transit_routing_preference`.\n\n<div class=\"note\">Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.</div>\n",
         "in": "query",
         "schema": {
-          "$ref": "#/components/schemas/TravelMode"
+          "type": "string",
+          "enum": [
+            "driving",
+            "bicycling",
+            "transit",
+            "walking"
+          ]
         }
       },
       "nearestroads_points": {

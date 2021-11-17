@@ -42,6 +42,8 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
     - Structure Markdown documents for specification objects
     - Code snippets in multiple languages for sample requests
 
+    > **Note**: There is a bot that can be triggered in a pull request with a comment containing `/update-dist`. See the workflow at https://github.com/googlemaps/openapi-specification/blob/main/.github/workflows/command.yml.
+
     > **Note**: The `dist/` folder is included in this repo and should be updated with all changes.
 
     > **Note**: If a documentation item is not generated, be sure it is included

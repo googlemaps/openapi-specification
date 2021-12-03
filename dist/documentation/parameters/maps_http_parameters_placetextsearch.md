@@ -51,7 +51,7 @@
         -   with `keyword` or `name`: 50,000 meters
         -   without `keyword` or `name`
             -   `rankby=prominence` (default): 50,000 meters
-            -   `rankby=distance`: A few kilometers depending on density of area
+            -   `rankby=distance`: A few kilometers depending on density of area. `radius` will not be accepted, and will result in an INVALID_REQUEST.
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 

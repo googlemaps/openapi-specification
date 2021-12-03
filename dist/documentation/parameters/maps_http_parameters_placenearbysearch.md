@@ -53,7 +53,7 @@
         -   with `keyword` or `name`: 50,000 meters
         -   without `keyword` or `name`
             -   `rankby=prominence` (default): 50,000 meters
-            -   `rankby=distance`: A few kilometers depending on density of area
+            -   `rankby=distance`: A few kilometers depending on density of area. `radius` will not be accepted, and will result in an INVALID_REQUEST.
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 
@@ -62,7 +62,7 @@
     Specifies the order in which results are listed. Possible values are:
 
     -   `prominence` (default). This option sorts results based on their importance. Ranking will favor prominent places within the set radius over nearby places that match but that are less prominent. Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. When prominence is specified, the `radius` parameter is required.
-    -   `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required.
+    -   `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required and `radius` is disallowed.
 
 -   <h3 id="type">type</h3>
 

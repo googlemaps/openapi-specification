@@ -16105,7 +16105,7 @@ paths:
                     status: REQUEST_DENIED
               schema:
                 $ref: '#/components/schemas/TimeZoneResponse'
-  /v1/snapToRoads:
+  /v1/snaptoroads:
     get:
       operationId: snapToRoads
       servers:
@@ -16587,7 +16587,7 @@ paths:
                       status: INVALID_ARGUMENT
               schema:
                 $ref: '#/components/schemas/NearestRoadsErrorResponse'
-  /maps/api/distanceMatrix/json:
+  /maps/api/distancematrix/json:
     get:
       operationId: distanceMatrix
       servers:

@@ -32,7 +32,7 @@
   get:
     operationId: timezone
     $ref: "./timezone.yml"
-/v1/snapToRoads:
+/v1/snaptoroads:
   get:
     operationId: snapToRoads
     $ref: "./snapToRoads.yml"
@@ -40,7 +40,7 @@
   get:
     operationId: nearestRoads
     $ref: "./nearestRoads.yml"
-/maps/api/distanceMatrix/json:
+/maps/api/distancematrix/json:
   get:
     operationId: distanceMatrix
     $ref: "./distanceMatrix.yml"

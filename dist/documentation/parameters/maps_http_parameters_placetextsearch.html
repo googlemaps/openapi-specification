@@ -123,11 +123,14 @@
           <li>
             without <code>keyword</code> or <code>name</code>
             <ul>
-              <li><code>rankby=prominence</code> (default): 50,000 meters</li>
               <li>
-                <code>rankby=distance</code>: A few kilometers depending on
-                density of area. <code>radius</code> will not be accepted, and
-                will result in an INVALID_REQUEST.
+                Up to 50,000 meters, adjusted dynamically based on area density,
+                indepdendent of rankby parameter.
+              </li>
+              <li>
+                When using <code>rankby=distance</code>, the radius parameter
+                will not be accepted, and will result in an
+                <code>INVALID_REQUEST</code>.
               </li>
             </ul>
           </li>

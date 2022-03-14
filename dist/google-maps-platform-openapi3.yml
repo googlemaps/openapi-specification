@@ -19111,6 +19111,7 @@ paths:
         - $ref: '#/components/parameters/places_radius'
         - $ref: '#/components/parameters/places_types'
         - $ref: '#/components/parameters/language'
+        - $ref: '#/components/parameters/region'
       responses:
         '200':
           description: 200 OK

@@ -12,6 +12,8 @@
 
     A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content.
 
+    This must a place name, address, or category of establishments. Any other types of input can generate errors and are not guaranteed to return valid results.
+
     Explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
 
     If this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.

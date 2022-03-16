@@ -4,7 +4,7 @@
 
 -   <h3 id="input">input</h3>
 
-    Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.
+    Text input that identifies the search target. The input must a place name, address, or phone number. Lat/lng coordinates and plus codes will generate an error. Any other types of input can generate errors and are not guaranteed to return valid results.
 
 -   <h3 id="inputtype">inputtype</h3>
 

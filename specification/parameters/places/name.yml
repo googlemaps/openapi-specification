@@ -14,7 +14,7 @@
 
 name: name
 description: |
-  *Not Recommended* A term to be matched against all content that Google has indexed for this place. Equivalent to `keyword`. The `name` field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the `keyword` parameter for all search terms.
+  Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
 schema:
   type: string
 in: query

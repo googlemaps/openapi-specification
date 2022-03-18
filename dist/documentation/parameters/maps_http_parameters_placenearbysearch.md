@@ -10,7 +10,9 @@
 
 -   <h3 id="keyword">keyword</h3>
 
-    A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content.
+    The text string on which to search, for example: "restaurant" or "123 Main Street". This must a place name, address, or category of establishments.
+    Any other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches
+    based on this string and order the results based on their perceived relevance.
 
     Explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
 
@@ -36,7 +38,7 @@
 
 -   <h3 id="name">name</h3>
 
-    *Not Recommended* A term to be matched against all content that Google has indexed for this place. Equivalent to `keyword`. The `name` field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the `keyword` parameter for all search terms.
+    Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
 
 -   <h3 id="opennow">opennow</h3>
 

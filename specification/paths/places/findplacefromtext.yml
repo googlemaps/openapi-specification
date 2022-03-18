@@ -23,7 +23,8 @@ parameters:
   - "$ref": "../../parameters/places/fields.yml"
   - name: input    
     description: |
-      Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.
+      The text string on which to search, for example: "restaurant" or "123 Main Street". This must be a place name, address, or category of establishments. Any other types of input can generate errors
+      and are not guaranteed to return valid results. The Places API will return candidate matches based on this string and order the results based on their perceived relevance.
     schema:
       type: string
     required: true

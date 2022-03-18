@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import $RefParser from "@apidevtools/json-schema-ref-parser";
+import clsx from "clsx";
 
 import { createWriteStream, readFileSync } from "fs";
 import { options } from "yargs";
@@ -30,7 +31,7 @@ import {
   listItem,
 } from "mdast-builder";
 import { Node, Parent } from "unist";
-import { feedbackLinks } from "./helpers";
+import { feedbackLinks, deprecatedAsideNode } from "./helpers";
 
 const argv = options({
   output: {
@@ -45,7 +46,18 @@ const argv = options({
 
 const buildParameterListItem = (p: OpenAPIV3.ParameterObject): Parent => {
   const nodes: any = [];
-  nodes.push(htmlNode(`<h3 id="${p.name.toLowerCase()}">${p.name}</h3>`));
+  nodes.push(
+    htmlNode(
+      `<h3 class="${clsx("parameter-name", {
+        "deprecated-item": p.deprecated,
+        "hide-from-toc": p.deprecated,
+      })}" id="${p.name.toLowerCase()}">${p.name}</h3>`
+    )
+  );
+
+  if (p.deprecated) {
+    nodes.push(deprecatedAsideNode(p.name));
+  }
 
   if (p.description) {
     nodes.push(paragraph(fromMarkdown(p.description)));
@@ -152,49 +164,58 @@ const main = async (argv: any) => {
       const geocode = {
         regionTag: "maps_http_parameters_geocode",
         parameters: parameters.filter(
-          (p) => !["latlng", "result_type", "location_type", "place_id"].includes(p.name)
+          (p) =>
+            !["latlng", "result_type", "location_type", "place_id"].includes(
+              p.name
+            )
         ),
-        options: { 
+        options: {
           requiredHeading: "Geocoding required parameters",
           optionalHeading: "Geocoding optional parameters",
-         },
+        },
       };
 
       const reverseGeocode = {
         regionTag: "maps_http_parameters_geocode_reverse",
         parameters: parameters
-          .filter((p) => !["components", "address", "bounds", "place_id"].includes(p.name))
+          .filter(
+            (p) =>
+              !["components", "address", "bounds", "place_id"].includes(p.name)
+          )
           .map((p) => {
             if (p.name === "latlng") {
               p.required = true;
             }
             return p;
           }),
-        options: { 
+        options: {
           requiredHeading: "Reverse geocoding required parameters",
           optionalHeading: "Reverse geocoding optional parameters",
-         },
+        },
       };
 
       const placeId = {
         regionTag: "maps_http_parameters_geocode_place_id",
         parameters: parameters
-          .filter((p) => ["language", "region", "place_id"].includes(p.name)).map((p) => {
+          .filter((p) => ["language", "region", "place_id"].includes(p.name))
+          .map((p) => {
             if (p.name === "place_id") {
               p.required = true;
             }
             return p;
           }),
-        options: { 
+        options: {
           requiredHeading: "Place ID geocoding required parameters",
           optionalHeading: "Place ID geocoding optional parameters",
-         },
+        },
       };
 
-      [geocode, reverseGeocode, placeId].forEach(async ({ regionTag, parameters, options }) => {
-        const nodes = build(key, regionTag, parameters, options);
-        await write(nodes, regionTag);
-      });
+      [geocode, reverseGeocode, placeId].forEach(
+        async ({ regionTag, parameters, options }) => {
+          const nodes = build(key, regionTag, parameters, options);
+          await write(nodes, regionTag);
+        }
+      );
     } else {
       const path = spec.paths![key];
       for (const method in path) {

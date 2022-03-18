@@ -2,11 +2,11 @@
 <!--- [START maps_http_parameters_timezone] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="location">location</h3>
+-   <h3 class="parameter-name" id="location">location</h3>
 
     A comma-separated latitude,longitude tuple, `location=39.6034810,-119.6822510`, representing the location to look up.
 
--   <h3 id="timestamp">timestamp</h3>
+-   <h3 class="parameter-name" id="timestamp">timestamp</h3>
 
     The desired time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the `timestamp` to determine whether or not Daylight Savings should be applied, based on the time zone of the `location`.
 
@@ -14,7 +14,7 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 

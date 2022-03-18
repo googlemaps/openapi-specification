@@ -2,18 +2,18 @@
 <!--- [START maps_http_parameters_placefindplacefromtext] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="input">input</h3>
+-   <h3 class="parameter-name" id="input">input</h3>
 
     The text string on which to search, for example: "restaurant" or "123 Main Street". This must be a place name, address, or category of establishments. Any other types of input can generate errors
     and are not guaranteed to return valid results. The Places API will return candidate matches based on this string and order the results based on their perceived relevance.
 
--   <h3 id="inputtype">inputtype</h3>
+-   <h3 class="parameter-name" id="inputtype">inputtype</h3>
 
     The type of input. This can be one of either `textquery` or `phonenumber`. Phone numbers must be in international format (prefixed by a plus sign ("+"), followed by the country code, then the phone number itself). See [E.164 ITU recommendation](https://en.wikipedia.org/wiki/E.164) for more information.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="fields">fields</h3>
+-   <h3 class="parameter-name" id="fields">fields</h3>
 
     <div class="caution"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href="https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support">Places API fields support</a>.</div>
 
@@ -33,7 +33,7 @@
 
     The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -43,7 +43,7 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="locationbias">locationbias</h3>
+-   <h3 class="parameter-name" id="locationbias">locationbias</h3>
 
     Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
 

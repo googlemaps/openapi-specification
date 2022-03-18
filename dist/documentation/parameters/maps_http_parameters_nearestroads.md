@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_nearestroads] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="points">points</h3>
+-   <h3 class="parameter-name" id="points">points</h3>
 
     The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
 

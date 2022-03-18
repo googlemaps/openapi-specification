@@ -2,19 +2,19 @@
 <!--- [START maps_http_parameters_placeautocomplete] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="input">input</h3>
+-   <h3 class="parameter-name" id="input">input</h3>
 
     The text string on which to search. The Place Autocomplete service will return candidate matches based on this string and order results based on their perceived relevance.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="components">components</h3>
+-   <h3 class="parameter-name" id="components">components</h3>
 
     A grouping of places to which you would like to restrict your results. Currently, you can use components to filter by up to 5 countries. Countries must be passed as a two character, ISO 3166-1 Alpha-2 compatible country code. For example: `components=country:fr` would restrict your results to places within France. Multiple countries must be passed as multiple `country:XX` filters, with the pipe character `|` as a separator. For example: `components=country:us|country:pr|country:vi|country:gu|country:mp` would restrict your results to places within the United States and its unincorporated organized territories.
 
     <div class="note"><strong>Note:</strong> If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend.  You can find code information at <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="blank" class="external">Wikipedia: List of ISO 3166 country codes</a> or the <a href="https://www.iso.org/obp/ui/#search" target="blank" class="external">ISO Online Browsing Platform</a>.</div>
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -24,21 +24,21 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="location">location</h3>
+-   <h3 class="parameter-name" id="location">location</h3>
 
     The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
     <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
 
--   <h3 id="offset">offset</h3>
+-   <h3 class="parameter-name" id="offset">offset</h3>
 
     The position, in the input term, of the last character that the service uses to match predictions. For example, if the input is `Google` and the offset is 3, the service will match on `Goo`. The string determined by the offset is matched against the first word in the input term only. For example, if the input term is `Google abc` and the offset is 3, the service will attempt to match against `Goo abc`. If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.
 
--   <h3 id="origin">origin</h3>
+-   <h3 class="parameter-name" id="origin">origin</h3>
 
     The origin point from which to calculate straight-line distance to the destination (returned as `distance_meters`). If this value is omitted, straight-line distance will not be returned. Must be specified as `latitude,longitude`.
 
--   <h3 id="radius">radius</h3>
+-   <h3 class="parameter-name" id="radius">radius</h3>
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 
@@ -53,11 +53,11 @@
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 
--   <h3 id="region">region</h3>
+-   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <h3 id="sessiontoken">sessiontoken</h3>
+-   <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
 
     A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.
 
@@ -70,11 +70,11 @@
     -   Ensure that the API key(s) used for all Place Autocomplete and Place Details requests within a session belong to the same Cloud Console project.
     -   Be sure to pass a unique session token for each new session. Using the same token for more than one session will result in each request being billed individually.
 
--   <h3 id="strictbounds">strictbounds</h3>
+-   <h3 class="parameter-name" id="strictbounds">strictbounds</h3>
 
     Returns only those places that are strictly within the region defined by `location` and `radius`. This is a restriction, rather than a bias, meaning that results outside this region will not be returned even if they match the user input.
 
--   <h3 id="types">types</h3>
+-   <h3 class="parameter-name" id="types">types</h3>
 
     You may restrict results from a Place Autocomplete request to be of a certain type by passing a types parameter. The parameter specifies a type or a type collection, as listed in the supported types below. If nothing is specified, all types are returned. In general only a single type is allowed. The exception is that you can safely mix the geocode and establishment types, but note that this will have the same effect as specifying no types. The supported types are:
 

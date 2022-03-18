@@ -33,7 +33,8 @@ properties:
     description: A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier in the placeId field of a Places API request. For more information about place IDs, see the [Place IDs](https://developers.google.com/maps/documentation/places/web-service/place-id) overview.
     type: string
   reference:
-    description: (Deprecated) See place_id.
+    deprecated: true
+    description: See place_id.
     type: string
   structured_formatting:
     description: Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be read as-is. Do not programmatically parse the formatted address.

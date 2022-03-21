@@ -13,6 +13,7 @@
 # limitations under the License.
 
 name: name
+deprecated: true
 description: |
   Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
 schema:

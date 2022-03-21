@@ -38,7 +38,7 @@
 
 -   <h3 class="parameter-name deprecated-item hide-from-toc" id="name">name</h3>
 
-    <aside class="deprecated"><strong>Deprecated:</strong>&nbsp;<code>name</code> is deprecated.</aside>
+    <aside class="deprecated"><code>name</code> is deprecated.</aside>
 
     Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
 

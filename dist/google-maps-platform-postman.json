@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "6443d5fe-dd9c-479c-a6dc-cd871de469d6",
+            "id": "eca3ebea-c080-4a59-8653-c53af31663a5",
             "name": "Directions",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -11,7 +11,7 @@
             "event": []
         },
         {
-            "id": "5fab8c07-553c-4ac7-a557-6e7b438a5ad9",
+            "id": "ef5e922b-c819-430f-af91-9e5ea100eaea",
             "name": "Distance Matrix",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -21,7 +21,7 @@
             "event": []
         },
         {
-            "id": "43753ea6-4e2a-448f-8b3e-6a7cf9d36a97",
+            "id": "2ad27daf-914e-4cc1-a858-0456c84166b1",
             "name": "Elevation",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -31,7 +31,7 @@
             "event": []
         },
         {
-            "id": "7b798984-0f9e-4849-966f-0530792ef1e5",
+            "id": "e8b713a4-d1d9-4d16-8d72-b1ec2657541c",
             "name": "Geocoding",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -41,7 +41,7 @@
             "event": []
         },
         {
-            "id": "e1daca4a-844d-4f14-aadd-e78f9fe71561",
+            "id": "57631bd7-2972-4e2c-901c-3d387b52f2f6",
             "name": "Geolocation",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -51,7 +51,7 @@
             "event": []
         },
         {
-            "id": "34a40e0b-1bcb-4fb0-b414-42f7937bf5c8",
+            "id": "fe5120ae-245a-4dd4-afcf-4e136ccd34f5",
             "name": "Roads",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -61,7 +61,7 @@
             "event": []
         },
         {
-            "id": "7ae71287-e685-4701-8266-4dd3df2aa2cc",
+            "id": "dbb85307-2561-450b-9320-38860b425b79",
             "name": "Time Zone",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -71,7 +71,7 @@
             "event": []
         },
         {
-            "id": "d0170ed9-9cd0-4611-8989-187c07da0fc0",
+            "id": "45adfcdf-961d-427a-830d-a9acde45b9ce",
             "name": "Street View",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -81,7 +81,7 @@
             "event": []
         },
         {
-            "id": "5132df92-e3a1-46db-835b-502a8a49430e",
+            "id": "3b6d8257-c324-4ed6-9f87-c4fe91621c32",
             "name": "Places",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -91,7 +91,7 @@
             "event": []
         },
         {
-            "id": "62258284-6cd4-4214-ba24-3f8ce0cf37a7",
+            "id": "6b9ae543-0a23-4b5a-8cd0-0731faf4b517",
             "name": "Geolocation API",
             "description": {
                 "content": "",
@@ -99,7 +99,7 @@
             },
             "item": [
                 {
-                    "id": "bbad66ce-15a8-4831-9591-7cb2d7e5e900",
+                    "id": "8580cc2b-1179-4d0c-af62-ae638d285df4",
                     "name": "geolocate",
                     "request": {
                         "name": "geolocate",
@@ -137,7 +137,7 @@
                     },
                     "response": [
                         {
-                            "id": "caa962c0-961c-4719-b742-adc9309848dc",
+                            "id": "4baed4d4-5923-42e3-97e6-8854a6388078",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -171,7 +171,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "dbeed8fd-d068-47ee-a939-2919ad3b62bb",
+                            "id": "7de9747d-f915-4977-96ab-e003cdcee770",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -205,7 +205,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6f2d86bd-7d4d-4416-981a-52b3bfd38c44",
+                            "id": "412c1cd2-0c09-4b93-bb3e-788a6b6e8be3",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -245,7 +245,7 @@
             "event": []
         },
         {
-            "id": "91c2990b-522d-4db7-96a2-cb3d4d6c4492",
+            "id": "04471cc8-a7dc-47d6-ad2c-87edc03a27f6",
             "name": "Directions API",
             "description": {
                 "content": "",
@@ -253,7 +253,7 @@
             },
             "item": [
                 {
-                    "id": "e1a2eb95-e70d-498e-8ef0-9b86dc42bb24",
+                    "id": "197d10f8-87f6-453e-98b3-08f7e73619d0",
                     "name": "directions",
                     "request": {
                         "name": "directions",
@@ -367,7 +367,7 @@
                     },
                     "response": [
                         {
-                            "id": "3d0269cd-a147-4b04-b1f8-f43d940ad71e",
+                            "id": "fb6a35cf-f19a-4dcd-b3c6-94c607d63935",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -460,7 +460,7 @@
             "event": []
         },
         {
-            "id": "cb784459-8c63-48c4-9043-23a775253ad0",
+            "id": "264eedfb-6052-4fd4-a57d-27bc164d424c",
             "name": "Elevation API",
             "description": {
                 "content": "",
@@ -468,7 +468,7 @@
             },
             "item": [
                 {
-                    "id": "4e04027d-6cb6-4bec-a3f5-9816dd120f89",
+                    "id": "859962db-5f93-4056-9a67-c0256bfa6cdb",
                     "name": "elevation",
                     "request": {
                         "name": "elevation",
@@ -516,7 +516,7 @@
                     },
                     "response": [
                         {
-                            "id": "cb3a2a3e-bc46-492c-bf2b-59175baa13e4",
+                            "id": "4dc31f39-df6e-4568-b5f5-7a03a330fae0",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -565,7 +565,7 @@
             "event": []
         },
         {
-            "id": "b279eced-4531-4e0f-a7a8-6e4d0b69c0ab",
+            "id": "c318aa24-3a7b-4a06-8b2e-b58d7bfbc965",
             "name": "Geocoding API",
             "description": {
                 "content": "",
@@ -573,7 +573,7 @@
             },
             "item": [
                 {
-                    "id": "0d6c8989-3cdf-433e-853d-238eb0730418",
+                    "id": "c479a1f7-a5b2-434c-9dfb-c4fc66287b7a",
                     "name": "geocode",
                     "request": {
                         "name": "geocode",
@@ -663,7 +663,7 @@
                     },
                     "response": [
                         {
-                            "id": "c92770c0-3f1c-4c4f-ad15-db932052c7dd",
+                            "id": "a019f45f-b898-484d-b745-1e5df694591b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -740,7 +740,7 @@
             "event": []
         },
         {
-            "id": "76301daa-9028-4475-854a-65b428511f36",
+            "id": "8e0b469e-01ac-4e74-be0e-7354dfd4bf06",
             "name": "Time Zone API",
             "description": {
                 "content": "",
@@ -748,7 +748,7 @@
             },
             "item": [
                 {
-                    "id": "6c9e69e6-9c25-42a6-94bf-a878f784e937",
+                    "id": "8b690598-e7ce-408d-9a34-88396139f35e",
                     "name": "timezone",
                     "request": {
                         "name": "timezone",
@@ -796,7 +796,7 @@
                     },
                     "response": [
                         {
-                            "id": "84fe18d2-31f2-46f6-9041-495951912585",
+                            "id": "11b232ad-220d-47cc-be74-73f1a39e8647",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -845,7 +845,7 @@
             "event": []
         },
         {
-            "id": "041c06c4-8344-473a-964d-0cfb38576fa7",
+            "id": "3ea0e459-7e2a-4ae2-b2fa-517758637b84",
             "name": "Roads API",
             "description": {
                 "content": "",
@@ -853,7 +853,7 @@
             },
             "item": [
                 {
-                    "id": "0fe5a4e5-4fc9-4cc2-a3e8-7ef126e7788e",
+                    "id": "95da0021-d05d-40f5-bb7c-d4ae3bd9d456",
                     "name": "snap To Roads",
                     "request": {
                         "name": "snap To Roads",
@@ -893,7 +893,7 @@
                     },
                     "response": [
                         {
-                            "id": "f09bc6b9-3eb4-4f79-9e5f-b07295299bbf",
+                            "id": "2a29306d-5a54-4820-9d23-e9e5c728a728",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -935,7 +935,7 @@
                     "event": []
                 },
                 {
-                    "id": "7973868e-bce3-4492-98e4-22a128907489",
+                    "id": "95601579-e8a3-4350-a7de-c01ce037880f",
                     "name": "nearest Roads",
                     "request": {
                         "name": "nearest Roads",
@@ -969,7 +969,7 @@
                     },
                     "response": [
                         {
-                            "id": "82fbae6f-90e9-4f2b-a4bc-61b5b3cc45f1",
+                            "id": "d299c570-0b68-4f65-bcd3-8b948ea8e080",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -999,12 +999,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 27063580.27921559,\n    \"longitude\": -18366769.84263596\n   },\n   \"placeId\": \"ad sit anim consequat voluptate\",\n   \"originalIndex\": -74936387.66297446\n  },\n  {\n   \"location\": {\n    \"latitude\": -91010675.86269335,\n    \"longitude\": -57284548.01822402\n   },\n   \"placeId\": \"cillum voluptate Ut consectetur\",\n   \"originalIndex\": 86936356.67892289\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 23108328.429329544,\n    \"longitude\": -87702920.40040246\n   },\n   \"placeId\": \"reprehenderit\",\n   \"originalIndex\": 88540170.21110222\n  },\n  {\n   \"location\": {\n    \"latitude\": 31920308.883608952,\n    \"longitude\": 46068341.63865304\n   },\n   \"placeId\": \"laborum esse\",\n   \"originalIndex\": 47815039.15030131\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e447e1a0-1012-4f44-a540-2c3e1474327e",
+                            "id": "9e09fe6f-3518-4591-acbc-bfba37553b2e",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1045,7 +1045,7 @@
             "event": []
         },
         {
-            "id": "58a47182-1815-4882-a826-5ce380c3d444",
+            "id": "cfbc12ac-68cb-41e3-8992-17eb70bc86f7",
             "name": "Distance Matrix API",
             "description": {
                 "content": "",
@@ -1053,7 +1053,7 @@
             },
             "item": [
                 {
-                    "id": "88fa3eee-9af5-48f6-a839-a279c0abd0e3",
+                    "id": "57a3efb0-0e84-4ac4-b966-5a53d90d96f3",
                     "name": "distance Matrix",
                     "request": {
                         "name": "distance Matrix",
@@ -1155,7 +1155,7 @@
                     },
                     "response": [
                         {
-                            "id": "813e9b9b-68cc-425a-bbad-ffca64880d7e",
+                            "id": "8b01eefe-c66a-48d4-bbab-692de93d16bd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1240,7 +1240,7 @@
             "event": []
         },
         {
-            "id": "529f56fe-8cb6-427a-9708-46ce40dcdb85",
+            "id": "81412386-aad8-4369-92f0-3b8b9854d10d",
             "name": "Places API",
             "description": {
                 "content": "",
@@ -1248,7 +1248,7 @@
             },
             "item": [
                 {
-                    "id": "c2ebeda9-b6e5-4a7a-a934-77637f3e6ed6",
+                    "id": "c0aa5fef-fb62-4884-b41d-2ff62cbb9b4b",
                     "name": "place Details",
                     "request": {
                         "name": "place Details",
@@ -1309,7 +1309,7 @@
                     },
                     "response": [
                         {
-                            "id": "86546e80-13db-4419-ac0e-e7d9fd54ca74",
+                            "id": "7f64a8fd-423c-4ee8-b520-38046e9338a0",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1363,7 +1363,7 @@
                     "event": []
                 },
                 {
-                    "id": "b1160078-7dd7-4c9c-8721-5bea12c1beae",
+                    "id": "6eaa1a8a-52d5-4b61-b9bc-87c0db18cd7d",
                     "name": "find Place From Text",
                     "request": {
                         "name": "find Place From Text",
@@ -1424,7 +1424,7 @@
                     },
                     "response": [
                         {
-                            "id": "b89396c3-a964-4e29-ba5e-fddea7fa2c54",
+                            "id": "e177ef1c-f6df-453e-aac2-f111d7e5809f",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1478,7 +1478,7 @@
                     "event": []
                 },
                 {
-                    "id": "9fb96560-7d19-486f-8543-b4ef91c78456",
+                    "id": "a6fb502d-f2af-43d3-9cd3-ced4b23fd1ab",
                     "name": "nearby Search",
                     "request": {
                         "name": "nearby Search",
@@ -1575,7 +1575,7 @@
                     },
                     "response": [
                         {
-                            "id": "fb527243-7d68-452a-8efc-2fa6c1ee24bf",
+                            "id": "0e5b7b79-7377-4ae3-9806-53cad39c6dbd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1653,7 +1653,7 @@
                     "event": []
                 },
                 {
-                    "id": "001e38a4-54d7-4a0b-82cf-804b2e8012c4",
+                    "id": "8582f28f-efab-4d2d-b5aa-f1f5a6b73b21",
                     "name": "text Search",
                     "request": {
                         "name": "text Search",
@@ -1744,7 +1744,7 @@
                     },
                     "response": [
                         {
-                            "id": "db775ff6-53ea-4927-9912-a3193fda6299",
+                            "id": "043a8e41-ea8f-49c2-a647-205f70de2d28",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1818,7 +1818,7 @@
                     "event": []
                 },
                 {
-                    "id": "b988e84c-4e48-4c30-9000-275151c70c37",
+                    "id": "69cafe0a-d0ce-4e20-bd29-40ea9a75a006",
                     "name": "place Photo",
                     "request": {
                         "name": "place Photo",
@@ -1866,7 +1866,7 @@
                     },
                     "response": [
                         {
-                            "id": "49dcf1ab-af44-4ef3-b239-daf1b57af8ba",
+                            "id": "b32263c6-bb25-4fc9-9c63-75436a013497",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1904,7 +1904,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "nulla",
+                            "body": "aute",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1912,7 +1912,7 @@
                     "event": []
                 },
                 {
-                    "id": "8777c9d8-04cd-4f32-8845-d1b2f4d8a31c",
+                    "id": "61bd6363-c70b-438c-9ab7-082c038c2f50",
                     "name": "query Autocomplete",
                     "request": {
                         "name": "query Autocomplete",
@@ -1973,7 +1973,7 @@
                     },
                     "response": [
                         {
-                            "id": "776d72ab-95e8-4b72-95a8-ed67a501b215",
+                            "id": "28233c04-6f70-45f3-adcc-19da5a302125",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2027,7 +2027,7 @@
                     "event": []
                 },
                 {
-                    "id": "b1123a84-0c02-4588-a710-b7a3bdda2017",
+                    "id": "eec6fe95-6284-4037-9fd2-c802e408560f",
                     "name": "autocomplete",
                     "request": {
                         "name": "autocomplete",
@@ -2124,7 +2124,7 @@
                     },
                     "response": [
                         {
-                            "id": "1feacf8f-6f85-4733-aa3b-21cc5683ee61",
+                            "id": "4b0a64ce-5661-4ce0-a66f-d8b80ee623a3",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2205,7 +2205,7 @@
             "event": []
         },
         {
-            "id": "727d3aea-d256-4c46-810e-4a0de8e11b9f",
+            "id": "24fdc842-6495-41e4-a95c-2a1b5ceb32e0",
             "name": "Street View API",
             "description": {
                 "content": "",
@@ -2213,7 +2213,7 @@
             },
             "item": [
                 {
-                    "id": "40ecc0f4-8a94-4588-be20-2bcf1431d93b",
+                    "id": "1388c2e7-2d29-483f-a167-bcda404f912d",
                     "name": "street View",
                     "request": {
                         "name": "street View",
@@ -2302,7 +2302,7 @@
                     },
                     "response": [
                         {
-                            "id": "405764bf-9dc0-4045-8522-df7a0c1ab25e",
+                            "id": "ebee971f-31bd-4314-9af8-0fc4b273de83",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2368,7 +2368,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "nulla",
+                            "body": "aute",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2376,7 +2376,7 @@
                     "event": []
                 },
                 {
-                    "id": "32be06f4-c6bb-4aa3-9465-c7d2a4a3278f",
+                    "id": "55827d23-e096-4ffb-9434-a43308f0b264",
                     "name": "street View Metadata",
                     "request": {
                         "name": "street View Metadata",
@@ -2460,7 +2460,7 @@
                     },
                     "response": [
                         {
-                            "id": "c6f1f7c0-8546-42e4-a3f1-f89442e4dbba",
+                            "id": "154d0c55-4386-4f1e-a884-861ed2f5a991",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2559,7 +2559,7 @@
         ]
     },
     "info": {
-        "_postman_id": "2a633056-120f-4c42-953f-92dc5af4ef7b",
+        "_postman_id": "a9548da1-6793-4b4c-98c4-348004d7bb87",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

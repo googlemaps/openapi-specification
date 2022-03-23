@@ -709,7 +709,8 @@ export const REQUESTS: SnippetRequest[] = [
           },
           {
             key: "destinations",
-            value: "40.659569,-73.933783|40.729029,-73.851524|40.6860072,-73.6334271|40.598566,-73.7527626",
+            value:
+              "40.659569,-73.933783|40.729029,-73.851524|40.6860072,-73.6334271|40.598566,-73.7527626",
           },
         ],
       }),
@@ -1115,6 +1116,34 @@ export const REQUESTS: SnippetRequest[] = [
     }),
   },
   {
+    regionTag: "maps_http_directions_transit_rail",
+    request: new Request({
+      url: new Url({
+        protocol: "https",
+        host: "maps.googleapis.com",
+        path: "/maps/api/directions/json",
+        query: [
+          {
+            key: "origin",
+            value: "place_id:ChIJO_mLi3UmwkcRqh4KYzJsypE",
+          },
+          {
+            key: "destination",
+            value: "place_id:ChIJiQ-s2miw6kcR5dHaFfFdV9A",
+          },
+          {
+            key: "transit_mode",
+            value: "rail",
+          },
+          {
+            key: "alternatives",
+            value: "true",
+          },
+        ],
+      }),
+    }),
+  },
+  {
     regionTag: "maps_http_directions_heading",
     request: new Request({
       url: new Url({
@@ -1129,7 +1158,7 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "destination",
             value: "37.773245,-122.469502",
-          },         
+          },
         ],
       }),
     }),
@@ -1149,7 +1178,7 @@ export const REQUESTS: SnippetRequest[] = [
           {
             key: "destination",
             value: "side_of_road:37.7663444,-122.4412006",
-          },         
+          },
         ],
       }),
     }),
@@ -1888,7 +1917,7 @@ export const REQUESTS: SnippetRequest[] = [
         protocol: "https",
         host: "maps.googleapis.com",
         path: "/maps/api/streetview/metadata",
-        query: [        
+        query: [
           {
             key: "pano",
             value: "invalid",
@@ -1904,7 +1933,7 @@ export const REQUESTS: SnippetRequest[] = [
         protocol: "https",
         host: "maps.googleapis.com",
         path: "/maps/api/streetview",
-        query: [        
+        query: [
           {
             key: "pano",
             value: "invalid",
@@ -1916,5 +1945,5 @@ export const REQUESTS: SnippetRequest[] = [
         ],
       }),
     }),
-  },  
+  },
 ];

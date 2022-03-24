@@ -26496,7 +26496,7 @@
           },
           {
             "name": "input",
-            "description": "Text input that identifies the search target, such as a name, address, or phone number. The input must be a string. Non-string input such as a lat/lng coordinate or plus code generates an error.\n",
+            "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must be a place name, address, or category of establishments. Any other types of input can generate errors\nand are not guaranteed to return valid results. The Places API will return candidate matches based on this string and order the results based on their perceived relevance.\n",
             "schema": {
               "type": "string"
             },
@@ -30323,7 +30323,7 @@
       },
       "places_keyword": {
         "name": "keyword",
-        "description": "A term to be matched against all content that Google has indexed for this place, including but not limited to name and type, as well as customer reviews and other third-party content.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
+        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must a place name, address, or category of establishments.\nAny other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches\nbased on this string and order the results based on their perceived relevance.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
         "schema": {
           "type": "string"
         },
@@ -30427,7 +30427,8 @@
       },
       "places_name": {
         "name": "name",
-        "description": "*Not Recommended* A term to be matched against all content that Google has indexed for this place. Equivalent to `keyword`. The `name` field is no longer restricted to place names. Values in this field are combined with values in the keyword field and passed as part of the same search string. We recommend using only the `keyword` parameter for all search terms.\n",
+        "deprecated": true,
+        "description": "Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.\n",
         "schema": {
           "type": "string"
         },
@@ -30488,7 +30489,7 @@
       },
       "places_query": {
         "name": "query",
-        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.\n",
+        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must a place name, address, or category of establishments. Any other types\nof input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches based on this string and order\nthe results based on their perceived relevance.\n",
         "schema": {
           "type": "string"
         },

@@ -30323,7 +30323,7 @@
       },
       "places_keyword": {
         "name": "keyword",
-        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must a place name, address, or category of establishments.\nAny other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches\nbased on this string and order the results based on their perceived relevance.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
+        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must be a place name, address, or category of establishments.\nAny other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches\nbased on this string and order the results based on their perceived relevance.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
         "schema": {
           "type": "string"
         },

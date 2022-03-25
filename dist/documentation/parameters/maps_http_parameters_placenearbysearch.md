@@ -2,13 +2,13 @@
 <!--- [START maps_http_parameters_placenearbysearch] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="location">location</h3>
+-   <h3 class="parameter-name" id="location">location</h3>
 
     The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="keyword">keyword</h3>
+-   <h3 class="parameter-name" id="keyword">keyword</h3>
 
     The text string on which to search, for example: "restaurant" or "123 Main Street". This must be a place name, address, or category of establishments.
     Any other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches
@@ -18,7 +18,7 @@
 
     If this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -28,27 +28,29 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="maxprice">maxprice</h3>
+-   <h3 class="parameter-name" id="maxprice">maxprice</h3>
 
     Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
 
--   <h3 id="minprice">minprice</h3>
+-   <h3 class="parameter-name" id="minprice">minprice</h3>
 
     Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
 
--   <h3 id="name">name</h3>
+-   <h3 class="parameter-name deprecated-item hide-from-toc" id="name">name</h3>
 
-    Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
+    <aside class="deprecated"><code>name</code> is deprecated.</aside>
 
--   <h3 id="opennow">opennow</h3>
+    Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.
+
+-   <h3 class="parameter-name" id="opennow">opennow</h3>
 
     Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
 
--   <h3 id="pagetoken">pagetoken</h3>
+-   <h3 class="parameter-name" id="pagetoken">pagetoken</h3>
 
     Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
 
--   <h3 id="radius">radius</h3>
+-   <h3 class="parameter-name" id="radius">radius</h3>
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 
@@ -63,14 +65,14 @@
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 
--   <h3 id="rankby">rankby</h3>
+-   <h3 class="parameter-name" id="rankby">rankby</h3>
 
     Specifies the order in which results are listed. Possible values are:
 
     -   `prominence` (default). This option sorts results based on their importance. Ranking will favor prominent places within the set radius over nearby places that match but that are less prominent. Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. When prominence is specified, the `radius` parameter is required.
     -   `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required and `radius` is disallowed.
 
--   <h3 id="type">type</h3>
+-   <h3 class="parameter-name" id="type">type</h3>
 
     Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
 

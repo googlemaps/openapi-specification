@@ -2,13 +2,13 @@
 <!--- [START maps_http_parameters_placequeryautocomplete] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="input">input</h3>
+-   <h3 class="parameter-name" id="input">input</h3>
 
     The text string on which to search. The Place Autocomplete service will return candidate matches based on this string and order results based on their perceived relevance.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -18,17 +18,17 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="location">location</h3>
+-   <h3 class="parameter-name" id="location">location</h3>
 
     The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
     <div class="note">The <code>location</code> parameter may be overriden if the <code>query</code> contains an explicit location such as <code>Market in Barcelona</code>. Using quotes around the query may also influence the weight given to the <code>location</code> and <code>radius</code>.</div>
 
--   <h3 id="offset">offset</h3>
+-   <h3 class="parameter-name" id="offset">offset</h3>
 
     The position, in the input term, of the last character that the service uses to match predictions. For example, if the input is `Google` and the offset is 3, the service will match on `Goo`. The string determined by the offset is matched against the first word in the input term only. For example, if the input term is `Google abc` and the offset is 3, the service will attempt to match against `Goo abc`. If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.
 
--   <h3 id="radius">radius</h3>
+-   <h3 class="parameter-name" id="radius">radius</h3>
 
     Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
 

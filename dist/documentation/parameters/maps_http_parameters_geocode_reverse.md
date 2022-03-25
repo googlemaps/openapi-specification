@@ -2,13 +2,13 @@
 <!--- [START maps_http_parameters_geocode_reverse] -->
 <h2 id="reverse-geocoding-required-parameters">Reverse geocoding required parameters</h2>
 
--   <h3 id="latlng">latlng</h3>
+-   <h3 class="parameter-name" id="latlng">latlng</h3>
 
     The street address that you want to geocode, in the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided.
 
 <h2 id="reverse-geocoding-optional-parameters">Reverse geocoding optional parameters</h2>
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -18,7 +18,7 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="location_type">location_type</h3>
+-   <h3 class="parameter-name" id="location_type">location_type</h3>
 
     A filter of one or more location types, separated by a pipe (`|`). If the parameter contains multiple location types, the API returns all addresses that match any of the types. A note about processing: The `location_type` parameter does not restrict the search to the specified location type(s). Rather, the `location_type` acts as a post-search filter: the API fetches all results for the specified latlng, then discards those results that do not match the specified location type(s). The following values are supported:
 
@@ -27,11 +27,11 @@
     -   `RANGE_INTERPOLATED` returns only the addresses that reflect an approximation (usually on a road) interpolated between two precise points (such as intersections). An interpolated range generally indicates that rooftop geocodes are unavailable for a street address.
     -   `ROOFTOP` returns only the addresses for which Google has location information accurate down to street address precision.
 
--   <h3 id="region">region</h3>
+-   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <h3 id="result_type">result_type</h3>
+-   <h3 class="parameter-name" id="result_type">result_type</h3>
 
     A filter of one or more address types, separated by a pipe (|). If the parameter contains multiple address types, the API returns all addresses that match any of the types. A note about processing: The `result_type` parameter does not restrict the search to the specified address type(s). Rather, the `result_type` acts as a post-search filter: the API fetches all results for the specified `latlng`, then discards those results that do not match the specified address type(s).The following values are supported:
 

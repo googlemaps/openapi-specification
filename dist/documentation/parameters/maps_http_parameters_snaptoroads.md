@@ -2,7 +2,7 @@
 <!--- [START maps_http_parameters_snaptoroads] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="path">path</h3>
+-   <h3 class="parameter-name" id="path">path</h3>
 
     The path to be snapped. The path parameter accepts a list of latitude/longitude pairs. Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: "|". For example: `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
 
@@ -10,7 +10,7 @@
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="interpolate">interpolate</h3>
+-   <h3 class="parameter-name" id="interpolate">interpolate</h3>
 
     Whether to interpolate a path to include all points forming the full road-geometry. When true, additional interpolated points will also be returned, resulting in a path that smoothly follows the geometry of the road, even around corners and through tunnels. Interpolated paths will most likely contain more points than the original path. Defaults to `false`.
 

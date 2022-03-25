@@ -30428,7 +30428,7 @@
       "places_name": {
         "name": "name",
         "deprecated": true,
-        "description": "Deprecated. Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.\n",
+        "description": "Equivalent to `keyword`. Values in this field are combined with values in the `keyword` field and passed as part of the same search string.\n",
         "schema": {
           "type": "string"
         },
@@ -32525,7 +32525,8 @@
             "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "permanently_closed": {
-            "description": "Deprecated. The field `permanently_closed` is deprecated, and should not be used. Instead, use `business_status` to get the operational status of businesses.",
+            "deprecated": true,
+            "description": "Use `business_status` to get the operational status of businesses.",
             "type": "boolean"
           },
           "photos": {
@@ -32554,7 +32555,7 @@
             "example": 4.1
           },
           "reference": {
-            "description": "Deprecated",
+            "deprecated": true,
             "type": "string"
           },
           "reviews": {
@@ -32565,7 +32566,7 @@
             }
           },
           "scope": {
-            "description": "Deprecated.",
+            "deprecated": true,
             "type": "string"
           },
           "types": {
@@ -32651,7 +32652,8 @@
             "type": "string"
           },
           "reference": {
-            "description": "(Deprecated) See place_id.",
+            "deprecated": true,
+            "description": "See place_id.",
             "type": "string"
           },
           "structured_formatting": {

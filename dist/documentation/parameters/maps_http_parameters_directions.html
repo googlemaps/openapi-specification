@@ -3,7 +3,7 @@
 <h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 id="destination">destination</h3>
+    <h3 class="parameter-name" id="destination">destination</h3>
     <p>
       The place ID, address, or textual latitude/longitude value to which you
       wish to calculate directions. The options for the destination parameter
@@ -11,7 +11,7 @@
     </p>
   </li>
   <li>
-    <h3 id="origin">origin</h3>
+    <h3 class="parameter-name" id="origin">origin</h3>
     <p>
       The place ID, address, or textual latitude/longitude value from which you
       wish to calculate directions.
@@ -93,7 +93,7 @@
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 id="alternatives">alternatives</h3>
+    <h3 class="parameter-name" id="alternatives">alternatives</h3>
     <p>
       If set to <code>true</code>, specifies that the Directions service may
       provide more than one route alternative in the response. Note that
@@ -107,7 +107,7 @@
     </p>
   </li>
   <li>
-    <h3 id="arrival_time">arrival_time</h3>
+    <h3 class="parameter-name" id="arrival_time">arrival_time</h3>
     <p>
       Specifies the desired time of arrival for transit directions, in seconds
       since midnight, January 1, 1970 UTC. You can specify either
@@ -116,7 +116,7 @@
     </p>
   </li>
   <li>
-    <h3 id="avoid">avoid</h3>
+    <h3 class="parameter-name" id="avoid">avoid</h3>
     <p>
       Indicates that the calculated route(s) should avoid the indicated
       features. This parameter supports the following arguments:
@@ -148,7 +148,7 @@
 </code></pre>
   </li>
   <li>
-    <h3 id="departure_time">departure_time</h3>
+    <h3 class="parameter-name" id="departure_time">departure_time</h3>
     <p>
       Specifies the desired time of departure. You can specify the time as an
       integer in seconds since midnight, January 1, 1970 UTC. If a
@@ -189,7 +189,7 @@
     </div>
   </li>
   <li>
-    <h3 id="language">language</h3>
+    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -228,7 +228,7 @@
     </ul>
   </li>
   <li>
-    <h3 id="mode">mode</h3>
+    <h3 class="parameter-name" id="mode">mode</h3>
     <p>
       For the calculation of distances and directions, you may specify the
       transportation mode to use. By default, <code>DRIVING</code> mode is used.
@@ -266,7 +266,7 @@
     </div>
   </li>
   <li>
-    <h3 id="region">region</h3>
+    <h3 class="parameter-name" id="region">region</h3>
     <p>
       The region code, specified as a
       <a
@@ -280,7 +280,7 @@
     </p>
   </li>
   <li>
-    <h3 id="traffic_model">traffic_model</h3>
+    <h3 class="parameter-name" id="traffic_model">traffic_model</h3>
     <p>
       Specifies the assumptions to use when calculating time in traffic. This
       setting affects the value returned in the duration_in_traffic field in the
@@ -321,7 +321,7 @@
     </p>
   </li>
   <li>
-    <h3 id="transit_mode">transit_mode</h3>
+    <h3 class="parameter-name" id="transit_mode">transit_mode</h3>
     <p>
       Specifies one or more preferred modes of transit. This parameter may only
       be specified for transit directions. The parameter supports the following
@@ -352,7 +352,9 @@
     </ul>
   </li>
   <li>
-    <h3 id="transit_routing_preference">transit_routing_preference</h3>
+    <h3 class="parameter-name" id="transit_routing_preference">
+      transit_routing_preference
+    </h3>
     <p>
       Specifies preferences for transit routes. Using this parameter, you can
       bias the options returned, rather than accepting the default best route
@@ -371,7 +373,7 @@
     </ul>
   </li>
   <li>
-    <h3 id="units">units</h3>
+    <h3 class="parameter-name" id="units">units</h3>
     <p>Specifies the unit system to use when displaying results.</p>
     <p>
       Directions results contain text within distance fields that may be
@@ -402,7 +404,7 @@
     </div>
   </li>
   <li>
-    <h3 id="waypoints">waypoints</h3>
+    <h3 class="parameter-name" id="waypoints">waypoints</h3>
     <div class="caution">
       Caution: Requests using more than 10 waypoints (between 11 and 25), or
       waypoint optimization, are billed at a higher rate.

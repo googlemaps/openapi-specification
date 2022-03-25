@@ -74,7 +74,8 @@ properties:
     description: Contains hours of operation.
     $ref: "./PlaceOpeningHours.yml"
   permanently_closed:
-    description: Deprecated. The field `permanently_closed` is deprecated, and should not be used. Instead, use `business_status` to get the operational status of businesses.
+    deprecated: true
+    description: Use `business_status` to get the operational status of businesses.
     type: boolean
   photos:
     description: An array of photo objects, each containing a reference to an image. A request may return up to ten photos. More information about place photos and how you can use the images in your application can be found in the [Place Photos](https://developers.google.com/maps/documentation/places/web-service/photos) documentation.
@@ -103,7 +104,7 @@ properties:
     type: number
     example: 4.1
   reference:
-    description: Deprecated
+    deprecated: true
     type: string
   reviews:
     description: A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.
@@ -111,7 +112,7 @@ properties:
     items:
       $ref: "./PlaceReview.yml"
   scope:
-    description: Deprecated.
+    deprecated: true
     type: string
   types:
     description: Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).

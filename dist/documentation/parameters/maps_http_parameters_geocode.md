@@ -4,7 +4,7 @@
 
 <h2 id="geocoding-optional-parameters">Geocoding optional parameters</h2>
 
--   <h3 id="address">address</h3>
+-   <h3 class="parameter-name" id="address">address</h3>
 
     The street address or plus code that you want to geocode. Specify addresses in accordance with the format used by the national postal service of the country concerned. Additional address elements such as business names and unit, suite or floor numbers should be avoided. Street address elements should be delimited by spaces (shown here as url-escaped to `%20`):
 
@@ -19,11 +19,11 @@
 
     <div class="note">Note: At least one of `address` or `components` is required.</div>
 
--   <h3 id="bounds">bounds</h3>
+-   <h3 class="parameter-name" id="bounds">bounds</h3>
 
     The bounding box of the viewport within which to bias geocode results more prominently. This parameter will only influence, not fully restrict, results from the geocoder.
 
--   <h3 id="components">components</h3>
+-   <h3 class="parameter-name" id="components">components</h3>
 
     A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.
 
@@ -51,7 +51,7 @@
 
     <div class="note">Note: At least one of `address` or `components` is required.</div>
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -61,7 +61,7 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="region">region</h3>
+-   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 

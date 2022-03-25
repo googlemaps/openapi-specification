@@ -2,14 +2,14 @@
 <!--- [START maps_http_parameters_placedetails] -->
 <h2 id="required-parameters">Required parameters</h2>
 
--   <h3 id="place_id">place_id</h3>
+-   <h3 class="parameter-name" id="place_id">place_id</h3>
 
     A textual identifier that uniquely identifies a place, returned from a [Place Search](https://developers.google.com/maps/documentation/places/web-service/search).
     For more information about place IDs, see the [place ID overview](https://developers.google.com/maps/documentation/places/web-service/place-id).
 
 <h2 id="optional-parameters">Optional parameters</h2>
 
--   <h3 id="fields">fields</h3>
+-   <h3 class="parameter-name" id="fields">fields</h3>
 
     <div class="caution"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href="https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support">Places API fields support</a>.</div>
 
@@ -29,7 +29,7 @@
 
     The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
 
--   <h3 id="language">language</h3>
+-   <h3 class="parameter-name" id="language">language</h3>
 
     The language in which to return results.
 
@@ -39,11 +39,11 @@
     -   If a name is not available in the preferred language, the API uses the closest match.
     -   The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, *utca* and *tér* are synonyms for street in Hungarian.
 
--   <h3 id="region">region</h3>
+-   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
--   <h3 id="sessiontoken">sessiontoken</h3>
+-   <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
 
     A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.
 

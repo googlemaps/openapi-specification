@@ -76,19 +76,21 @@
 
 -   <h3 class="parameter-name" id="types">types</h3>
 
-    You may restrict results from a Place Autocomplete request to be of a certain type by passing a types parameter. The parameter specifies a type or a type collection, as listed in the supported types below. If nothing is specified, all types are returned. In general only a single type is allowed. The exception is that you can safely mix the geocode and establishment types, but note that this will have the same effect as specifying no types. The supported types are:
+    You can restrict results from a Place Autocomplete request to be of a certain type by passing the `types` parameter. This parameter specifies a type or a type collection, as listed in [Place Types](/maps/documentation/places/web-service/supported_types). If nothing is specified, all types are returned.
 
-    -   `geocode` instructs the Place Autocomplete service to return only geocoding results, rather than business results. Generally, you use this request to disambiguate results where the location specified may be indeterminate.
-    -   `address` instructs the Place Autocomplete service to return only geocoding results with a precise address. Generally, you use this request when you know the user will be looking for a fully specified address.
-    -   `establishment` instructs the Place Autocomplete service to return only business results.
-    -   `(regions)` type collection instructs the Places service to return any result matching the following types:
-        -   `locality`
-        -   `sublocality`
-        -   `postal_code`
-        -   `country`
-        -   `administrative_area_level_1`
-        -   `administrative_area_level_2`
-    -   `(cities)` type collection instructs the Places service to return results that match `locality` or `administrative_area_level_3`.
+    For the value of the `types` parameter you can specify either:
+
+    -   Up to five values from [Table 1](/maps/documentation/places/web-service/supported_types#table1) or [Table 2](/maps/documentation/places/web-service/supported_types#table2). For multiple values, separate each value with a `|` (vertical bar). For example:
+
+        `types=book_store|cafe`
+
+    -   Any supported filter in [Table 3](/maps/documentation/places/web-service/supported_types#table3). You can safely mix the `geocode` and `establishment` types. You cannot mix type collections (`address`, `(cities)` or `(regions)`) with any other type, or an error occurs.
+
+    The request will be rejected with an `INVALID_REQUEST` error if:
+
+    -   More than five types are specified.
+    -   Any unrecognized types are present.
+    -   Any types from in [Table 1](/maps/documentation/places/web-service/supported_types#table1) or [Table 2](/maps/documentation/places/web-service/supported_types#table2) are mixed with any of the filters in [Table 3](/maps/documentation/places/web-service/supported_types#table3).
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.

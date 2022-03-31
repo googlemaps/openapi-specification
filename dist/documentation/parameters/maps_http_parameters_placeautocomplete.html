@@ -228,47 +228,66 @@
   <li>
     <h3 class="parameter-name" id="types">types</h3>
     <p>
-      You may restrict results from a Place Autocomplete request to be of a
-      certain type by passing a types parameter. The parameter specifies a type
-      or a type collection, as listed in the supported types below. If nothing
-      is specified, all types are returned. In general only a single type is
-      allowed. The exception is that you can safely mix the geocode and
-      establishment types, but note that this will have the same effect as
-      specifying no types. The supported types are:
+      You can restrict results from a Place Autocomplete request to be of a
+      certain type by passing the <code>types</code> parameter. This parameter
+      specifies a type or a type collection, as listed in
+      <a href="/maps/documentation/places/web-service/supported_types"
+        >Place Types</a
+      >. If nothing is specified, all types are returned.
+    </p>
+    <p>
+      For the value of the <code>types</code> parameter you can specify either:
     </p>
     <ul>
       <li>
-        <code>geocode</code> instructs the Place Autocomplete service to return
-        only geocoding results, rather than business results. Generally, you use
-        this request to disambiguate results where the location specified may be
-        indeterminate.
+        <p>
+          Up to five values from
+          <a
+            href="/maps/documentation/places/web-service/supported_types#table1"
+            >Table 1</a
+          >
+          or
+          <a
+            href="/maps/documentation/places/web-service/supported_types#table2"
+            >Table 2</a
+          >. For multiple values, separate each value with a
+          <code>|</code> (vertical bar). For example:
+        </p>
+        <p><code>types=book_store|cafe</code></p>
       </li>
       <li>
-        <code>address</code> instructs the Place Autocomplete service to return
-        only geocoding results with a precise address. Generally, you use this
-        request when you know the user will be looking for a fully specified
-        address.
+        <p>
+          Any supported filter in
+          <a
+            href="/maps/documentation/places/web-service/supported_types#table3"
+            >Table 3</a
+          >. You can safely mix the <code>geocode</code> and
+          <code>establishment</code> types. You cannot mix type collections
+          (<code>address</code>, <code>(cities)</code> or
+          <code>(regions)</code>) with any other type, or an error occurs.
+        </p>
       </li>
+    </ul>
+    <p>
+      The request will be rejected with an <code>INVALID_REQUEST</code> error
+      if:
+    </p>
+    <ul>
+      <li>More than five types are specified.</li>
+      <li>Any unrecognized types are present.</li>
       <li>
-        <code>establishment</code> instructs the Place Autocomplete service to
-        return only business results.
-      </li>
-      <li>
-        <code>(regions)</code> type collection instructs the Places service to
-        return any result matching the following types:
-        <ul>
-          <li><code>locality</code></li>
-          <li><code>sublocality</code></li>
-          <li><code>postal_code</code></li>
-          <li><code>country</code></li>
-          <li><code>administrative_area_level_1</code></li>
-          <li><code>administrative_area_level_2</code></li>
-        </ul>
-      </li>
-      <li>
-        <code>(cities)</code> type collection instructs the Places service to
-        return results that match <code>locality</code> or
-        <code>administrative_area_level_3</code>.
+        Any types from in
+        <a href="/maps/documentation/places/web-service/supported_types#table1"
+          >Table 1</a
+        >
+        or
+        <a href="/maps/documentation/places/web-service/supported_types#table2"
+          >Table 2</a
+        >
+        are mixed with any of the filters in
+        <a href="/maps/documentation/places/web-service/supported_types#table3"
+          >Table 3</a
+        >.
       </li>
     </ul>
   </li>

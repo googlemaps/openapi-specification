@@ -45,7 +45,7 @@ description: |-
     * `postal_code`
     * `route`
   * If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.
-  * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
+  * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers..google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
   * For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.
 
   <div class="note">Note: At least one of `address` or `components` is required.</div>

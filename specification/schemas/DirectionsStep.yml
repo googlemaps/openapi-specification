@@ -66,7 +66,7 @@ properties:
       - roundabout-right
   polyline:
     $ref: "./DirectionsPolyline.yml"
-    description: Contains a single points object that holds an [encoded polyline](https://developers.devsite.corp.google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.
+    description: Contains a single points object that holds an [encoded polyline](https://developers..google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.
   start_location:
     description: Contains the location of the starting point of this step.
     $ref: "./LatLngLiteral.yml"

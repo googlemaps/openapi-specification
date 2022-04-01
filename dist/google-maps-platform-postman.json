@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "24fd39cf-5437-4b51-9a14-f8c6dcb8ba1b",
+            "id": "34a3c694-232f-4a45-8640-93e749379953",
             "name": "Directions",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -11,7 +11,7 @@
             "event": []
         },
         {
-            "id": "d18632a4-23e6-4277-9c66-fdf70c4eead8",
+            "id": "53d001cf-8749-4f05-ac7e-9c27f8b8ccc1",
             "name": "Distance Matrix",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -21,7 +21,7 @@
             "event": []
         },
         {
-            "id": "f6f15338-a2d4-41e3-8209-e8127bce9a81",
+            "id": "fbc41cff-5849-4060-9782-c747698d1051",
             "name": "Elevation",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -31,7 +31,7 @@
             "event": []
         },
         {
-            "id": "16f879f3-134b-49cc-a76a-08f314703231",
+            "id": "e109d0ab-d541-4e91-ae33-c098e08962e4",
             "name": "Geocoding",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -41,7 +41,7 @@
             "event": []
         },
         {
-            "id": "43627bd2-78ce-431b-b3a8-050bca3daf85",
+            "id": "9bef4526-4545-458a-8be5-576b5ff8d59c",
             "name": "Geolocation",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -51,7 +51,7 @@
             "event": []
         },
         {
-            "id": "0eb6ae99-7db8-4ad5-9416-b2e4ce57c4a8",
+            "id": "b2af59e4-1366-4d62-b07d-b58815d0a124",
             "name": "Roads",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -61,7 +61,7 @@
             "event": []
         },
         {
-            "id": "f43c4c4f-39b7-40cb-8206-b6798bcd5242",
+            "id": "d97f764f-e4e5-4824-8f5c-8e4460242d2b",
             "name": "Time Zone",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -71,7 +71,7 @@
             "event": []
         },
         {
-            "id": "3d8be1ec-b7e9-4a12-8a12-31b715fb2920",
+            "id": "7abf22cf-fa4f-4115-8ac7-4f96ea4a4ad1",
             "name": "Street View",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -81,7 +81,7 @@
             "event": []
         },
         {
-            "id": "cec578c2-c74d-460f-81cc-876c36a0de90",
+            "id": "d5ce4837-9cc4-4977-aeca-f2aca9a2a532",
             "name": "Places",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -91,7 +91,7 @@
             "event": []
         },
         {
-            "id": "520eacb2-9497-4cb8-a7a2-bfe5da9e83e8",
+            "id": "dfb60ec3-93ed-4458-98b0-99c984bd64a6",
             "name": "Geolocation API",
             "description": {
                 "content": "",
@@ -99,7 +99,7 @@
             },
             "item": [
                 {
-                    "id": "914e4db0-0967-4266-90ad-1bfd23f1910a",
+                    "id": "d8733a89-ebcf-4a51-8ca8-70c31b7606c3",
                     "name": "geolocate",
                     "request": {
                         "name": "geolocate",
@@ -137,7 +137,7 @@
                     },
                     "response": [
                         {
-                            "id": "0ed22764-665b-42e6-9fcb-96c7eb6d439e",
+                            "id": "4925cd37-c3eb-487a-ade0-67277fee64b7",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -171,7 +171,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ddf19df0-1c44-41ef-bb79-279b06219dfc",
+                            "id": "e553f482-526e-4207-89eb-4a49453c12fb",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -205,7 +205,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "60b10ebd-f0f4-4909-82c1-d86fe7f98995",
+                            "id": "1dd05c0a-c34e-4513-8b35-ab6150d532ed",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -245,7 +245,7 @@
             "event": []
         },
         {
-            "id": "b92840ce-1f61-414d-8d08-7a7d15709ac7",
+            "id": "b8412061-5940-420f-9767-8a8aa6aeeef2",
             "name": "Directions API",
             "description": {
                 "content": "",
@@ -253,7 +253,7 @@
             },
             "item": [
                 {
-                    "id": "05c21e12-ce07-444f-8dcd-91ba709c8b63",
+                    "id": "0cd69e39-14e6-47c5-91b2-e74f949e56cc",
                     "name": "directions",
                     "request": {
                         "name": "directions",
@@ -321,7 +321,7 @@
                                     "disabled": true,
                                     "key": "waypoints",
                                     "value": "<string>",
-                                    "description": "<div class=\"caution\">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. <a href=\"https://developers.google.com/maps/billing/gmp-billing#directions-advanced\">Learn more about billing</a> for Google Maps Platform products.</div>\n\nSpecifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.\n* If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).\n  <div class=\"note\">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n* If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.\n* If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, \"1st Street\" could be a complete value or a partial value for \"1st street NE\" or \"1st St SE\". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.\n* Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.\n  * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.\n  * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`\n\n##### Influence routes with stopover and pass through points\n\nFor each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.\n\nIf you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.\n\nThe following URL modifies the previous request such that the journey is routed through Lexington without stopping:\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Boston,MA&destination=Concord,MA\n&waypoints=Charlestown,MA|via:Lexington,MA  \n```\n\nThe `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.\n\n<div class=\"caution\">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>\n\n\n##### Optimize your waypoints\n\nBy default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.\n\nIf you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.\n\nThe following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Adelaide,SA&destination=Adelaide,SA\n&waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA\n```\n\nInspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:\n\n```\n\"waypoint_order\": [ 3, 2, 0, 1 ]\n```\n\n<div class=\"caution\">Caution: Requests using waypoint optimization are billed at a higher rate. <a href=\"https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced\">Learn more about how Google Maps Platform products are billed.</a></div>\n"
+                                    "description": "<div class=\"caution\">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. <a href=\"https://developers.google.com/maps/billing/gmp-billing#directions-advanced\">Learn more about billing</a> for Google Maps Platform products.</div>\n\nSpecifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.\n* If you pass a place ID, you must prefix it with `place_id:`. You can retrieve place IDs from the Geocoding API and the Places API (including Place Autocomplete). For an example using place IDs from Place Autocomplete, see [Place Autocomplete and Directions](/maps/documentation/javascript/examples/places-autocomplete-directions). For more about place IDs, see the [Place ID overview](/maps/documentation/places/web-service/place-id).\n  <div class=\"note\">For efficiency and accuracy, use place ID's when possible. These ID's are uniquely explicit like a lat/lng value pair and provide geocoding benefits for routing such as access points and traffic variables. Unlike an address, ID's do not require the service to perform a search or an intermediate request for place details; therefore, performance is better.</div>\n* If you pass latitude/longitude coordinates, the values go directly to the front-end server to calculate directions without geocoding. The points are snapped to roads and might not provide the accuracy your app needs. Use coordinates when you are confident the values truly specify the points your app needs for routing without regard to possible access points or additional geocoding details. Ensure that a comma (`%2C`) and not a space (`%20`) separates the latitude and longitude values.\n* If you pass an address, the Directions service will geocode the string and convert it into latitude/longitude coordinates to calculate directions. If the address value is ambiguous, the value might evoke a search to disambiguate from similar addresses. For example, \"1st Street\" could be a complete value or a partial value for \"1st street NE\" or \"1st St SE\". This result may be different from that returned by the Geocoding API. You can avoid possible misinterpretations using place IDs.\n* Alternatively, you can supply an encoded set of points using the [Encoded Polyline Algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). You will find an encoded set is useful for a large number of waypoints, because the URL is significantly shorter. All web services have a URL limit of 8192 characters.\n  * Encoded polylines must be prefixed with `enc:` and followed by a colon (`:`). For example: `waypoints=enc:gfo}EtohhU:`.\n  * You can also include multiple encoded polylines, separated by the pipe character (`|`). For example, `waypoints=via:enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:| via:enc:udymA{~bxM:`\n\n##### Influence routes with stopover and pass through points\n\nFor each waypoint in the request, the directions response appends an entry to the `legs` array to provide the details for stopovers on that leg of the journey.\n\nIf you'd like to influence the route using waypoints without adding a stopover, add the prefix `via:` to the waypoint. Waypoints prefixed with `via:` will not add an entry to the `legs` array, but will route the journey through the waypoint.\n\nThe following URL modifies the previous request such that the journey is routed through Lexington without stopping:\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Boston,MA&destination=Concord,MA\n&waypoints=Charlestown,MA|via:Lexington,MA  \n```\n\nThe `via:` prefix is most effective when creating routes in response to the user dragging the waypoints on the map. Doing so allows the user to see how the final route may look in real-time and helps ensure that waypoints are placed in locations that are accessible to the Directions API.\n\n<div class=\"caution\">Caution: Using the `via:` prefix to avoid stopovers results in directions that are strict in their interpretation of the waypoint. This interpretation may result in severe detours on the route or `ZERO_RESULTS` in the response status code if the Directions API is unable to create directions through that point.</div>\n\n\n##### Optimize your waypoints\n\nBy default, the Directions service calculates a route through the provided waypoints in their given order. Optionally, you may pass `optimize:true` as the first argument within the waypoints parameter to allow the Directions service to optimize the provided route by rearranging the waypoints in a more efficient order. (This optimization is an application of the traveling salesperson problem.) Travel time is the primary factor which is optimized, but other factors such as distance, number of turns and many more may be taken into account when deciding which route is the most efficient. All waypoints must be stopovers for the Directions service to optimize their route.\n\nIf you instruct the Directions service to optimize the order of its waypoints, their order will be returned in the `waypoint_order` field within the routes object. The `waypoint_order` field returns values which are zero-based.\n\nThe following example calculates a road journey from Adelaide, South Australia to each of South Australia's main wine regions using route optimization.\n\n```\nhttps://maps.googleapis.com/maps/api/directions/json?\norigin=Adelaide,SA&destination=Adelaide,SA\n&waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA\n```\n\nInspection of the calculated route will indicate that calculation uses waypoints in the following waypoint order:\n\n```\n\"waypoint_order\": [ 3, 2, 0, 1 ]\n```\n\n<div class=\"caution\">Caution: Requests using waypoint optimization are billed at a higher rate. <a href=\"https://developers..google.com/maps/billing/gmp-billing#directions-advanced\">Learn more about how Google Maps Platform products are billed.</a></div>\n"
                                 },
                                 {
                                     "disabled": true,
@@ -367,7 +367,7 @@
                     },
                     "response": [
                         {
-                            "id": "efa05585-92d9-47a8-8ef6-c02ab468805b",
+                            "id": "02e33c3b-ea6f-4a8b-9ac8-6a5d6df0805e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -460,7 +460,7 @@
             "event": []
         },
         {
-            "id": "7d01a9d4-4748-45ef-9872-d6a7806385f5",
+            "id": "be150b76-59d9-4a34-a830-002065e8c52a",
             "name": "Elevation API",
             "description": {
                 "content": "",
@@ -468,7 +468,7 @@
             },
             "item": [
                 {
-                    "id": "d71a7749-95dc-4612-8919-5f37169fe0c0",
+                    "id": "a11d6b28-0dfe-4c82-bf7c-f56e80a706b9",
                     "name": "elevation",
                     "request": {
                         "name": "elevation",
@@ -516,7 +516,7 @@
                     },
                     "response": [
                         {
-                            "id": "eff45762-a712-4587-8348-95e09ed92e49",
+                            "id": "eaedfc25-49ca-4e87-b3de-68e9c6664762",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -565,7 +565,7 @@
             "event": []
         },
         {
-            "id": "e7b3d6ba-39ce-4027-a2cc-fe59b7f01251",
+            "id": "2700de2b-2762-4cb6-a175-d1f332bfd076",
             "name": "Geocoding API",
             "description": {
                 "content": "",
@@ -573,7 +573,7 @@
             },
             "item": [
                 {
-                    "id": "59f905dd-0ba3-44c9-93c0-270102197e5a",
+                    "id": "7fee2637-91f5-4c17-9cc8-bda7b2e86240",
                     "name": "geocode",
                     "request": {
                         "name": "geocode",
@@ -617,7 +617,7 @@
                                     "disabled": true,
                                     "key": "components",
                                     "value": "<string>|<string>",
-                                    "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.\n\nThe components that can be filtered include:\n\n* `postal_code` matches `postal_code` and `postal_code_prefix`.\n* `country` matches a country name or a two letter ISO 3166-1 country code. The API follows the ISO standard for defining countries, and the filtering works best when using the corresponding ISO code of the country.\n  <aside class=\"note\"><strong>Note</strong>: If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend. You can find code information at Wikipedia: List of ISO 3166 country codes or the ISO Online Browsing Platform.</aside>\n  \nThe following components may be used to influence results, but will not be enforced:\n\n* `route` matches the long or short name of a route.\n* `locality` matches against `locality` and `sublocality` types.\n* `administrative_area` matches all the `administrative_area` levels.\n  \nNotes about component filtering:\n\n* Do not repeat these component filters in requests, or the API will return `INVALID_REQUEST`: \n  * `country`\n  * `postal_code`\n  * `route`\n* If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.\n* Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).\n* For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.\n\n<div class=\"note\">Note: At least one of `address` or `components` is required.</div>"
+                                    "description": "A components filter with elements separated by a pipe (|). The components filter is also accepted as an optional parameter if an address is provided. Each element in the components filter consists of a `component:value` pair, and fully restricts the results from the geocoder.\n\nThe components that can be filtered include:\n\n* `postal_code` matches `postal_code` and `postal_code_prefix`.\n* `country` matches a country name or a two letter ISO 3166-1 country code. The API follows the ISO standard for defining countries, and the filtering works best when using the corresponding ISO code of the country.\n  <aside class=\"note\"><strong>Note</strong>: If you receive unexpected results with a country code, verify that you are using a code which includes the countries, dependent territories, and special areas of geographical interest you intend. You can find code information at Wikipedia: List of ISO 3166 country codes or the ISO Online Browsing Platform.</aside>\n  \nThe following components may be used to influence results, but will not be enforced:\n\n* `route` matches the long or short name of a route.\n* `locality` matches against `locality` and `sublocality` types.\n* `administrative_area` matches all the `administrative_area` levels.\n  \nNotes about component filtering:\n\n* Do not repeat these component filters in requests, or the API will return `INVALID_REQUEST`: \n  * `country`\n  * `postal_code`\n  * `route`\n* If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.\n* Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers..google.com/maps/documentation/geocoding/faq#trbl_component_filtering).\n* For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.\n\n<div class=\"note\">Note: At least one of `address` or `components` is required.</div>"
                                 },
                                 {
                                     "disabled": true,
@@ -663,7 +663,7 @@
                     },
                     "response": [
                         {
-                            "id": "95101f46-9088-4648-8b95-9c8f36bb1fc4",
+                            "id": "b0526298-7788-4bb8-b45b-2f4444ee6931",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -740,7 +740,7 @@
             "event": []
         },
         {
-            "id": "2692694f-3d3f-439b-b8e3-b24b4a9099ac",
+            "id": "562bb5c8-72f8-4b81-9ca7-79efa238fcb4",
             "name": "Time Zone API",
             "description": {
                 "content": "",
@@ -748,7 +748,7 @@
             },
             "item": [
                 {
-                    "id": "39efcc69-7d1b-435a-824d-21923ec0224c",
+                    "id": "0b4bbe7f-3ae3-4642-b17e-fba7153d3607",
                     "name": "timezone",
                     "request": {
                         "name": "timezone",
@@ -796,7 +796,7 @@
                     },
                     "response": [
                         {
-                            "id": "d6de62dc-7b43-4d4e-aa77-2b9041e4511e",
+                            "id": "b37d3a5b-7ed9-4ec9-bebf-9d6d373c86e6",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -845,7 +845,7 @@
             "event": []
         },
         {
-            "id": "bd66aab0-7a18-433c-8808-e0af47fec157",
+            "id": "d6d41c8c-9786-491f-82f7-2118bb0cdf9f",
             "name": "Roads API",
             "description": {
                 "content": "",
@@ -853,7 +853,7 @@
             },
             "item": [
                 {
-                    "id": "dba72d06-7328-4431-b05c-a62a5cc7467b",
+                    "id": "2f2f5d0e-a14c-4b2e-bc03-005a1c4676d9",
                     "name": "snap To Roads",
                     "request": {
                         "name": "snap To Roads",
@@ -893,7 +893,7 @@
                     },
                     "response": [
                         {
-                            "id": "8c1c1e56-b9d8-4ca1-b828-e5ce4cbbbb54",
+                            "id": "85367b8a-4156-4ba0-930e-205aa733cf41",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -935,7 +935,7 @@
                     "event": []
                 },
                 {
-                    "id": "a852c8dd-2b09-4aa6-ab16-be06a7e56b89",
+                    "id": "e9d87910-0f1b-4f9c-bf55-66bd33e82381",
                     "name": "nearest Roads",
                     "request": {
                         "name": "nearest Roads",
@@ -969,7 +969,7 @@
                     },
                     "response": [
                         {
-                            "id": "395009b1-ac8f-483d-880b-bd3de5311568",
+                            "id": "73d78b02-1ccf-4b29-9479-1f7c53cb68c6",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -999,12 +999,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 82723204.7320436,\n    \"longitude\": 64351827.6831367\n   },\n   \"placeId\": \"minim sit esse culpa\",\n   \"originalIndex\": 70661811.46569565\n  },\n  {\n   \"location\": {\n    \"latitude\": -99000165.86803026,\n    \"longitude\": 63231478.05760661\n   },\n   \"placeId\": \"sunt a\",\n   \"originalIndex\": 27259605.28381042\n  }\n ]\n}",
+                            "body": "{\n \"snappedPoints\": [\n  {\n   \"location\": {\n    \"latitude\": 30646702.917893216,\n    \"longitude\": 55161444.98249084\n   },\n   \"placeId\": \"cupidatat mollit irure\",\n   \"originalIndex\": -54819213.84766278\n  },\n  {\n   \"location\": {\n    \"latitude\": -73231435.5064645,\n    \"longitude\": -20758438.46892491\n   },\n   \"placeId\": \"pariatur eiusmod Excepteur quis non\",\n   \"originalIndex\": -41670.21115359664\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "37d48cea-e29a-4dcc-8dfd-12c6dfe29f69",
+                            "id": "f1abb4be-0a8d-4162-b57b-230b8f241b42",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1045,7 +1045,7 @@
             "event": []
         },
         {
-            "id": "c70cb892-1bd1-48a5-a18a-4d2f645da34a",
+            "id": "e3d7ca34-34a7-48ed-8cc4-8af1ce760f22",
             "name": "Distance Matrix API",
             "description": {
                 "content": "",
@@ -1053,7 +1053,7 @@
             },
             "item": [
                 {
-                    "id": "8dc51747-ac3c-4729-89b1-bc8b6a4ed28a",
+                    "id": "2a175279-ea1e-43e4-9a06-ff38b4b08bc8",
                     "name": "distance Matrix",
                     "request": {
                         "name": "distance Matrix",
@@ -1155,7 +1155,7 @@
                     },
                     "response": [
                         {
-                            "id": "9b77d2d9-8089-425d-a5b0-0376b99371d6",
+                            "id": "3d0bfb8e-ea04-4360-8c2b-c39a062aef11",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1240,7 +1240,7 @@
             "event": []
         },
         {
-            "id": "68f0188b-71c6-4424-9787-9ed23a9167c3",
+            "id": "b7fa70b6-d8ff-4645-89a1-4aa15ca1d07a",
             "name": "Places API",
             "description": {
                 "content": "",
@@ -1248,7 +1248,7 @@
             },
             "item": [
                 {
-                    "id": "ed2cd538-017d-4d06-a02e-1a61553abf78",
+                    "id": "9fffba8c-a7c4-4791-955e-bec56cb40917",
                     "name": "place Details",
                     "request": {
                         "name": "place Details",
@@ -1309,7 +1309,7 @@
                     },
                     "response": [
                         {
-                            "id": "38dd5a04-4f7d-4b08-89b0-3a0cc95bfab1",
+                            "id": "6281e02f-7286-42b2-bd31-2dbd49d3999b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1363,7 +1363,7 @@
                     "event": []
                 },
                 {
-                    "id": "d3d0d471-4439-481a-bc18-653e6bb2c70f",
+                    "id": "7979ff45-7198-446c-95ca-a6dff6a9b407",
                     "name": "find Place From Text",
                     "request": {
                         "name": "find Place From Text",
@@ -1424,7 +1424,7 @@
                     },
                     "response": [
                         {
-                            "id": "cb668caa-2d97-4522-83a0-b450f88e5e72",
+                            "id": "0d710a71-b167-4fb9-9fb1-dac4886aa882",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1478,7 +1478,7 @@
                     "event": []
                 },
                 {
-                    "id": "4af13b8b-be4d-4fa1-a8a8-28b36c861110",
+                    "id": "793610ff-04b0-460e-a689-2cb6fd005d3d",
                     "name": "nearby Search",
                     "request": {
                         "name": "nearby Search",
@@ -1575,7 +1575,7 @@
                     },
                     "response": [
                         {
-                            "id": "528c2d0c-adc8-4102-82fa-6c2fc181d70a",
+                            "id": "f474e8f1-3c4a-4b43-9178-898aebd0bd8e",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1653,7 +1653,7 @@
                     "event": []
                 },
                 {
-                    "id": "86590e18-be1a-4a8a-94ca-3b756cc79bba",
+                    "id": "3f30ce9d-c880-4370-8232-2d1b945572bb",
                     "name": "text Search",
                     "request": {
                         "name": "text Search",
@@ -1744,7 +1744,7 @@
                     },
                     "response": [
                         {
-                            "id": "089b225a-82cf-4089-b8fe-ae2efa2e9813",
+                            "id": "3c1e9bde-4a3f-48b1-9fe9-4bf8983ae66c",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1818,7 +1818,7 @@
                     "event": []
                 },
                 {
-                    "id": "68ae3f6d-282c-40b5-b9b4-358fb4f01934",
+                    "id": "c6ebb448-2cde-4973-8119-9876a059918c",
                     "name": "place Photo",
                     "request": {
                         "name": "place Photo",
@@ -1866,7 +1866,7 @@
                     },
                     "response": [
                         {
-                            "id": "20dcb3ca-4ce6-44f8-8aec-0baa51046a76",
+                            "id": "e9be1993-0dfc-4a6e-bb18-b043afd412de",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1904,7 +1904,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "veniam ad minim",
+                            "body": "consectetur",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -1912,7 +1912,7 @@
                     "event": []
                 },
                 {
-                    "id": "56cb0490-ab91-434b-8e65-fa2fefcf8b8a",
+                    "id": "be069343-9743-4d2e-8ae5-b28bf38cd54c",
                     "name": "query Autocomplete",
                     "request": {
                         "name": "query Autocomplete",
@@ -1973,7 +1973,7 @@
                     },
                     "response": [
                         {
-                            "id": "e3cde7ba-f47a-49d3-8f86-ff135e5fbb51",
+                            "id": "4f716f99-05b6-45b7-9da6-1d25be45e340",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2027,7 +2027,7 @@
                     "event": []
                 },
                 {
-                    "id": "883f0b4f-7de2-4ce1-a033-28aae65fedda",
+                    "id": "c8b52554-c2c6-454a-8b45-04cf02f83b98",
                     "name": "autocomplete",
                     "request": {
                         "name": "autocomplete",
@@ -2124,7 +2124,7 @@
                     },
                     "response": [
                         {
-                            "id": "7e291273-65be-4b7e-872f-80b92a8fd4a8",
+                            "id": "c316ca46-661c-4794-85f3-cfe7bca8cd22",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2205,7 +2205,7 @@
             "event": []
         },
         {
-            "id": "f3383e67-aea2-4efa-9914-5d6d8e3614c7",
+            "id": "f09012d8-8e36-40ac-a42c-34db11aabe61",
             "name": "Street View API",
             "description": {
                 "content": "",
@@ -2213,7 +2213,7 @@
             },
             "item": [
                 {
-                    "id": "35cb20da-00af-4e44-a66a-818744e4fac7",
+                    "id": "d46476f8-a7d7-461a-ac32-e0da697818fc",
                     "name": "street View",
                     "request": {
                         "name": "street View",
@@ -2302,7 +2302,7 @@
                     },
                     "response": [
                         {
-                            "id": "93d26b64-ec39-426c-b4f2-bb5b0207d969",
+                            "id": "6e846dcb-273b-4100-9b2e-2d8bbd23fdf2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2368,7 +2368,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "veniam ad minim",
+                            "body": "consectetur",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2376,7 +2376,7 @@
                     "event": []
                 },
                 {
-                    "id": "7a857c09-9833-4eec-b826-d15e0b3fab04",
+                    "id": "39fd7459-d101-4ae9-aaf3-f35efedee2bf",
                     "name": "street View Metadata",
                     "request": {
                         "name": "street View Metadata",
@@ -2460,7 +2460,7 @@
                     },
                     "response": [
                         {
-                            "id": "f98c4862-8db8-45e9-99e7-33d7b4090eb3",
+                            "id": "6d097447-d1cf-443b-9804-0200bad610a2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2559,7 +2559,7 @@
         ]
     },
     "info": {
-        "_postman_id": "a936f19c-e291-42a5-8059-5db169daf0e3",
+        "_postman_id": "9e3b06a6-026e-4be7-970c-2ee151d72e4a",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

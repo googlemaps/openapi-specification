@@ -22475,10 +22475,10 @@ components:
           description: The name of this transit agency.
           type: string
         phone:
-          description: The transit agency's URL.
+          description: The transit agency's phone number.
           type: string
         url:
-          description: The transit agency's phone number.
+          description: The transit agency's URL.
           type: string
     DirectionsTransitDetails:
       type: object

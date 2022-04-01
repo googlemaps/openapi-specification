@@ -20683,7 +20683,7 @@ components:
         "waypoint_order": [ 3, 2, 0, 1 ]
         ```
 
-        <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers.devsite.corp.google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
+        <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers..google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
       in: query
       examples:
         multiple:
@@ -20880,7 +20880,7 @@ components:
           * `postal_code`
           * `route`
         * If the request contains repeated component filters, the API evaluates those filters as an AND, not an OR.
-        * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers.devsite.corp.google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
+        * Results are consistent with Google Maps, which occasionally yields unexpected `ZERO_RESULTS` responses. Using Place Autocomplete may provide better results in some use cases. To learn more, see [this FAQ](https://developers..google.com/maps/documentation/geocoding/faq#trbl_component_filtering).
         * For each address component, either specify it in the address parameter or in a components filter, but not both. Specifying the same values in both may result in `ZERO_RESULTS`.
 
         <div class="note">Note: At least one of `address` or `components` is required.</div>
@@ -22210,7 +22210,7 @@ components:
             - roundabout-right
         polyline:
           $ref: '#/components/schemas/DirectionsPolyline'
-          description: 'Contains a single points object that holds an [encoded polyline](https://developers.devsite.corp.google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.'
+          description: 'Contains a single points object that holds an [encoded polyline](https://developers..google.com/maps/documentation/utilities/polylinealgorithm) representation of the step. This polyline is an approximate (smoothed) path of the step.'
         start_location:
           description: Contains the location of the starting point of this step.
           $ref: '#/components/schemas/LatLngLiteral'

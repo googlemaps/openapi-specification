@@ -1,0 +1,6 @@
+[START maps_http_places_details_always_open]
+https://maps.googleapis.com/maps/api/place/details/json
+  ?fields=opening_hours
+  &place_id=ChIJmVwCfxJJE4cRr3OoygeU0gc
+  &key=YOUR_API_KEY
+[END maps_http_places_details_always_open]

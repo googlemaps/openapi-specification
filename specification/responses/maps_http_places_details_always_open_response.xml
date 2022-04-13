@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [START maps_http_places_details_always_open_response] -->
+<PlaceDetailsResponse>
+ <status>OK</status>
+ <result>
+  <opening_hours>
+   <open_now>true</open_now>
+   <period>
+    <open>
+     <day>0</day>
+     <time>0000</time>
+    </open>
+   </period>
+   <weekday_text>Monday: Open 24 hours</weekday_text>
+   <weekday_text>Tuesday: Open 24 hours</weekday_text>
+   <weekday_text>Wednesday: Open 24 hours</weekday_text>
+   <weekday_text>Thursday: Open 24 hours</weekday_text>
+   <weekday_text>Friday: Open 24 hours</weekday_text>
+   <weekday_text>Saturday: Open 24 hours</weekday_text>
+   <weekday_text>Sunday: Open 24 hours</weekday_text>
+  </opening_hours>
+ </result>
+</PlaceDetailsResponse>
+<!-- [END maps_http_places_details_always_open_response] -->

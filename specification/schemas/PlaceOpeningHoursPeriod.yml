@@ -16,7 +16,6 @@ type: object
 title: PlaceOpeningHoursPeriod
 required:
   - open
-  - close
 properties:
   open:
     description: Contains a pair of day and time objects describing when the place opens.

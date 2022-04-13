@@ -16,42 +16,6 @@
     <tr>
       <td align="left">
         <h4
-          id="PlaceOpeningHoursPeriod-close"
-          class="add-link schema-object-property-key"
-        >
-          <code>close</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
-      <td>
-        <a
-          href="#PlaceOpeningHoursPeriodDetail"
-          title="PlaceOpeningHoursPeriodDetail"
-          >PlaceOpeningHoursPeriodDetail</a
-        >
-      </td>
-      <td>
-        <div class="ref-property-description">
-          <p>
-            May contain a pair of day and time objects describing when the place
-            closes. If a place is always open, the close section will be missing
-            from the response. Clients can rely on always-open being represented
-            as an open period containing day with value <code>0</code> and time
-            with value <code>0000</code>, and no <code>close</code>.
-          </p>
-          <p>
-            See
-            <a href="#PlaceOpeningHoursPeriodDetail"
-              >PlaceOpeningHoursPeriodDetail</a
-            >
-            for more information.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
           id="PlaceOpeningHoursPeriod-open"
           class="add-link schema-object-property-key"
         >
@@ -71,6 +35,42 @@
           <p>
             Contains a pair of day and time objects describing when the place
             opens.
+          </p>
+          <p>
+            See
+            <a href="#PlaceOpeningHoursPeriodDetail"
+              >PlaceOpeningHoursPeriodDetail</a
+            >
+            for more information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="PlaceOpeningHoursPeriod-close"
+          class="add-link schema-object-property-key"
+        >
+          <code>close</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a
+          href="#PlaceOpeningHoursPeriodDetail"
+          title="PlaceOpeningHoursPeriodDetail"
+          >PlaceOpeningHoursPeriodDetail</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            May contain a pair of day and time objects describing when the place
+            closes. If a place is always open, the close section will be missing
+            from the response. Clients can rely on always-open being represented
+            as an open period containing day with value <code>0</code> and time
+            with value <code>0000</code>, and no <code>close</code>.
           </p>
           <p>
             See

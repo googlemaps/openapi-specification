@@ -18266,6 +18266,25 @@ paths:
                       plus_code:
                         global_code: 5Q7Q8G54+64
                     status: OK
+                always_open:
+                  value:
+                    html_attributions: []
+                    result:
+                      opening_hours:
+                        open_now: true
+                        periods:
+                          - open:
+                              day: 0
+                              time: '0000'
+                        weekday_text:
+                          - 'Monday: Open 24 hours'
+                          - 'Tuesday: Open 24 hours'
+                          - 'Wednesday: Open 24 hours'
+                          - 'Thursday: Open 24 hours'
+                          - 'Friday: Open 24 hours'
+                          - 'Saturday: Open 24 hours'
+                          - 'Sunday: Open 24 hours'
+                    status: OK
               schema:
                 $ref: '#/components/schemas/PlacesDetailsResponse'
   /maps/api/place/findplacefromtext/json:
@@ -23374,7 +23393,6 @@ components:
       title: PlaceOpeningHoursPeriod
       required:
         - open
-        - close
       properties:
         open:
           description: Contains a pair of day and time objects describing when the place opens.

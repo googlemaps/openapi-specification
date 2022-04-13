@@ -38,5 +38,8 @@ responses:
           no_plus_compound_code:
             value:
               $ref: "../../responses/maps_http_places_details_no_plus_compound_code_response.yml"          
+          always_open:
+            value:
+              $ref: "../../responses/maps_http_places_details_always_open_response.yml"          
         schema:
           $ref: "../../schemas/PlacesDetailsResponse.yml"

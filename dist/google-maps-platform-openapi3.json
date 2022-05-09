@@ -26776,7 +26776,7 @@
             "$ref": "#/components/parameters/places_pagetoken"
           },
           {
-            "$ref": "#/components/parameters/places_rankby"
+            "$ref": "#/components/parameters/places_rank_by"
           },
           {
             "$ref": "#/components/parameters/places_radius"
@@ -30351,7 +30351,7 @@
       },
       "places_keyword": {
         "name": "keyword",
-        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must be a place name, address, or category of establishments.\nAny other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches\nbased on this string and order the results based on their perceived relevance.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
+        "description": "The text string on which to search, for example: \"restaurant\" or \"123 Main Street\". This must be a place name, address, or category of establishments.\nAny other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches\nbased on this string and order the results based on their perceived relevance.\n\nExplicitly including location information using this parameter may conflict with the location, radius, and rank_by parameters, causing unexpected results.\n\nIf this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.\n",
         "schema": {
           "type": "string"
         },
@@ -30527,15 +30527,15 @@
       },
       "places_radius": {
         "name": "radius",
-        "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * with `keyword` or `name`: 50,000 meters\n  * without `keyword` or `name`\n    * Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.\n    * When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n",
+        "description": "Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.\n\nThe radius will automatically be clamped to a maximum value depending on the type of search and other parameters.\n\n* Autocomplete: 50,000 meters\n* Nearby Search: \n  * with `keyword` or `name`: 50,000 meters\n  * without `keyword` or `name`\n    * Up to 50,000 meters, adjusted dynamically based on area density, independent of `rank_by` parameter.\n    * When using `rank_by=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.\n* Query Autocomplete: 50,000 meters\n* Text Search: 50,000 meters\n",
         "schema": {
           "type": "number"
         },
         "in": "query",
         "example": 1000
       },
-      "places_rankby": {
-        "name": "rankby",
+      "places_rank_by": {
+        "name": "rank_by",
         "description": "Specifies the order in which results are listed. Possible values are:\n- `prominence` (default). This option sorts results based on their importance. Ranking will favor prominent places within the set radius over nearby places that match but that are less prominent. Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. When prominence is specified, the `radius` parameter is required.\n- `distance`. This option biases search results in ascending order by their distance from the specified location. When `distance` is specified, one or more of `keyword`, `name`, or `type` is required and `radius` is disallowed.\n",
         "schema": {
           "type": "string",

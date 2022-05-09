@@ -48,8 +48,8 @@
     -   Nearby Search:
         -   with `keyword` or `name`: 50,000 meters
         -   without `keyword` or `name`
-            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
-            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
+            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rank_by` parameter.
+            -   When using `rank_by=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 

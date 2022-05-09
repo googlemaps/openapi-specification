@@ -14,7 +14,7 @@
     Any other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches
     based on this string and order the results based on their perceived relevance.
 
-    Explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
+    Explicitly including location information using this parameter may conflict with the location, radius, and rank_by parameters, causing unexpected results.
 
     If this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.
 
@@ -60,12 +60,12 @@
     -   Nearby Search:
         -   with `keyword` or `name`: 50,000 meters
         -   without `keyword` or `name`
-            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
-            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
+            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rank_by` parameter.
+            -   When using `rank_by=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
     -   Query Autocomplete: 50,000 meters
     -   Text Search: 50,000 meters
 
--   <h3 class="parameter-name" id="rankby">rankby</h3>
+-   <h3 class="parameter-name" id="rank_by">rank_by</h3>
 
     Specifies the order in which results are listed. Possible values are:
 

@@ -139,7 +139,7 @@
 
 -   <h3 class="parameter-name" id="waypoints">waypoints</h3>
 
-    <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. <a href="https://developers.google.com/maps/billing/gmp-billing#directions-advanced">Learn more about billing</a> for Google Maps Platform products.</div>
+    <div class="caution">Caution: Requests using more than 10 waypoints (between 11 and 25), or waypoint optimization, are billed at a higher rate. <a href="https://developers.google.com/maps/billing-and-pricing/pricing#directions-advanced">Learn more about billing</a> for Google Maps Platform products.</div>
 
     Specifies an array of intermediate locations to include along the route between the origin and destination points as pass through or stopover locations. Waypoints alter a route by directing it through the specified location(s). The API supports waypoints for these travel modes: driving, walking and bicycling; not transit.   You can supply one or more locations separated by the pipe character (`|` or `%7C`), in the form of a place ID, an address, or latitude/longitude coordinates. By default, the Directions service calculates a route using the waypoints in the order they are given. The precedence for parsing the value of the waypoint is place ID, latitude/longitude coordinates, then address.
 
@@ -189,7 +189,7 @@
     "waypoint_order": [ 3, 2, 0, 1 ]
     ```
 
-    <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers..google.com/maps/billing/gmp-billing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
+    <div class="caution">Caution: Requests using waypoint optimization are billed at a higher rate. <a href="https://developers.google.com/maps/billing-and-pricing/pricing#directions-advanced">Learn more about how Google Maps Platform products are billed.</a></div>
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.

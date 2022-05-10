@@ -1,6 +1,6 @@
 # Google Maps Platform OpenAPI3 Specification
 
-![Build](https://github.com/googlemaps/openapi-specification/workflows/Build/badge.svg)
+![Build](https://github.com/googlemaps/openapi-specification/workflows/Test/badge.svg)
 ![Release](https://github.com/googlemaps/openapi-specification/workflows/Release/badge.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/googlemaps/openapi-specification?color=green)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)

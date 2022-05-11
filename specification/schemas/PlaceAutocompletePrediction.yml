@@ -50,3 +50,6 @@ properties:
     type: array
     items:
       type: string
+  distance_meters:
+    description: The straight-line distance in meters from the origin. This field is only returned for requests made with an `origin`.
+    type: integer

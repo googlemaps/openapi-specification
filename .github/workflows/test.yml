@@ -25,18 +25,9 @@ jobs:
         if: github.actor != 'dependabot[bot]'
       - uses: actions/checkout@v2
         if: github.actor == 'dependabot[bot]'
-      - name: Setup Bazel Cache
-        run: |
-          BAZEL_CACHE_SERVICE_ACCOUNT_FILE=$(mktemp)
-          echo "${BAZEL_CACHE_SERVICE_ACCOUNT}" > "${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}"
-          echo "build --google_credentials=${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}" >> .bazelrc.user
-          echo "build --remote_http_cache=https://storage.googleapis.com/${BAZEL_CACHE_BUCKET}" >> .bazelrc.user
-        env:
-          BAZEL_CACHE_BUCKET: ${{secrets.SYNCED_BAZEL_CACHE_BUCKET}}
-          BAZEL_CACHE_SERVICE_ACCOUNT: ${{secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT}}
-        if: github.actor != 'dependabot[bot]'
-      - run: bazel build --profile /tmp/bazel-profile-build.gz --jobs 8 //...
-      - run: bazel test --jobs 8 //...
+      - run: npm ci
+      - run: npm run build -- --profile /tmp/bazel-profile-build.gz --jobs 8
+      - run: npm test -- --jobs 8
       - name: Upload Bazel profiles
         uses: actions/upload-artifact@v2
         with:

@@ -32,6 +32,7 @@ An OpenAPI specification for Google Maps Platform APIs.
 The repository makes use of [Bazel](https://bazel.build/) to generate outputs from the specification and sample requests.
 
 ### Build and test
+1. `npm i`
 
 1. `npm run build`
 
@@ -51,7 +52,7 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
 
 1. `npm run build:responses` (optional)
 
-    > **Note**: This is an optional step requiring an API key. Set the `GOOGLE_MAPS_API_KEY` environmental variable before running. **Hint**: Use a `.bazelrc.user` file at the root of this project.
+    > **Note**: This is an optional step requiring an API key. Set the `GOOGLE_MAPS_API_KEY` environmental variable before running.
 
     > **Note**: This step only needs to run when the generation code or sample requests have been updated.
 

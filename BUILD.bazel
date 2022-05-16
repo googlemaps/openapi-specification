@@ -43,6 +43,14 @@ pkg_tar(
     ],
 )
 
+filegroup(
+    name = "outputs",
+    srcs = [
+        ":dist",
+        ":parameters",
+    ],
+)
+
 # test diff
 filegroup(
     name = "dist_files",
@@ -127,6 +135,6 @@ genrule(
         "@npm//yargs",
     ],
     outs = ["parameters.yml"],
+    cmd = "$(location //rules:parameters) --output $@ $(locations //specification:openapi3)",
     tools = ["//rules:parameters"],
-    cmd = "$(location //rules:parameters) --output $@ $(locations //specification:openapi3)"  
 )

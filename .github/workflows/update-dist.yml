@@ -25,16 +25,7 @@ jobs:
           token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
           repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
-      - name: Setup Bazel Cache
-        run: |
-          BAZEL_CACHE_SERVICE_ACCOUNT_FILE=$(mktemp)
-          echo "${BAZEL_CACHE_SERVICE_ACCOUNT}" > "${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}"
-          echo "build --google_credentials=${BAZEL_CACHE_SERVICE_ACCOUNT_FILE}" >> .bazelrc.user
-          echo "build --remote_http_cache=https://storage.googleapis.com/${BAZEL_CACHE_BUCKET}" >> .bazelrc
-        env:
-          BAZEL_CACHE_BUCKET: ${{secrets.SYNCED_BAZEL_CACHE_BUCKET}}
-          BAZEL_CACHE_SERVICE_ACCOUNT: ${{secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT}}
-      - run: bazel build --jobs 8 //...
+      - run: npm ci
       - name: Update dist
         run: |
           npm run build

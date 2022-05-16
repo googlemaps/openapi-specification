@@ -25,6 +25,7 @@ jobs:
           token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
           repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
+      - run: npm ci
       - name: Update dist
         run: |
           npm run build

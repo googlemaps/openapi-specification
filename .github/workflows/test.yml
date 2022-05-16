@@ -25,7 +25,7 @@ jobs:
         if: github.actor != 'dependabot[bot]'
       - uses: actions/checkout@v2
         if: github.actor == 'dependabot[bot]'
-     
+      - run: npm ci
       - run: npm run build -- --profile /tmp/bazel-profile-build.gz --jobs 8
       - run: npm test -- --jobs 8
       - name: Upload Bazel profiles

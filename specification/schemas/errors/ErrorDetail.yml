@@ -14,29 +14,28 @@
 
 type: object
 title: ErrorDetail
-required: [reason, message]
 properties:
+  "@type":
+    description: The type of error.
+    type: string
+    example: type.googleapis.com/google.rpc.ErrorInfo
   message:
     description: A short description of the error.
     type: string
   reason:
     type: string
     description: A reason for the error.
-    enum:
-      - badRequest
-      - dailyLimitExceeded
-      - invalid
-      - keyInvalid
-      - notFound
-      - parseError
-      - userRateLimitExceeded
   domain:
     type: string
     description: The domain in which the error occurred.
-    enum:
-      - global
-      - geolocation
-      - usageLimits
+  metadata:
+    type: object
+    description: Additional metadata about the error.
+  fieldViolations:
+    description: A list of field violations.
+    type: array
+    items:
+      $ref: "./FieldViolation.yml"
 example:
   message: API key not valid. Please pass a valid API key.
   domain: global

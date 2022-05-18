@@ -63,6 +63,38 @@
   </structured_formatting>
  </prediction>
  <prediction>
+  <description>Paris, TN, USA</description>
+  <type>locality</type>
+  <type>political</type>
+  <type>geocode</type>
+  <reference>ChIJ4zHP-Sije4gRBDEsVxunOWg</reference>
+  <term>
+   <value>Paris</value>
+   <offset>0</offset>
+  </term>
+  <term>
+   <value>TN</value>
+   <offset>7</offset>
+  </term>
+  <term>
+   <value>USA</value>
+   <offset>11</offset>
+  </term>
+  <matched_substring>
+   <offset>0</offset>
+   <length>5</length>
+  </matched_substring>
+  <place_id>ChIJ4zHP-Sije4gRBDEsVxunOWg</place_id>
+  <structured_formatting>
+   <description>Paris</description>
+   <subdescription>TN, USA</subdescription>
+   <description_matched_substring>
+    <offset>0</offset>
+    <length>5</length>
+   </description_matched_substring>
+  </structured_formatting>
+ </prediction>
+ <prediction>
   <description>Paris, Brant, ON, Canada</description>
   <type>neighborhood</type>
   <type>political</type>
@@ -99,17 +131,17 @@
   </structured_formatting>
  </prediction>
  <prediction>
-  <description>Paris, TN, USA</description>
+  <description>Paris, KY, USA</description>
   <type>locality</type>
   <type>political</type>
   <type>geocode</type>
-  <reference>ChIJ4zHP-Sije4gRBDEsVxunOWg</reference>
+  <reference>ChIJsU7_xMfKQ4gReI89RJn0-RQ</reference>
   <term>
    <value>Paris</value>
    <offset>0</offset>
   </term>
   <term>
-   <value>TN</value>
+   <value>KY</value>
    <offset>7</offset>
   </term>
   <term>
@@ -120,42 +152,10 @@
    <offset>0</offset>
    <length>5</length>
   </matched_substring>
-  <place_id>ChIJ4zHP-Sije4gRBDEsVxunOWg</place_id>
+  <place_id>ChIJsU7_xMfKQ4gReI89RJn0-RQ</place_id>
   <structured_formatting>
    <description>Paris</description>
-   <subdescription>TN, USA</subdescription>
-   <description_matched_substring>
-    <offset>0</offset>
-    <length>5</length>
-   </description_matched_substring>
-  </structured_formatting>
- </prediction>
- <prediction>
-  <description>Paris, AR, USA</description>
-  <type>locality</type>
-  <type>political</type>
-  <type>geocode</type>
-  <reference>ChIJFRt9mkF5zIcRdsZ3XM8ZyHE</reference>
-  <term>
-   <value>Paris</value>
-   <offset>0</offset>
-  </term>
-  <term>
-   <value>AR</value>
-   <offset>7</offset>
-  </term>
-  <term>
-   <value>USA</value>
-   <offset>11</offset>
-  </term>
-  <matched_substring>
-   <offset>0</offset>
-   <length>5</length>
-  </matched_substring>
-  <place_id>ChIJFRt9mkF5zIcRdsZ3XM8ZyHE</place_id>
-  <structured_formatting>
-   <description>Paris</description>
-   <subdescription>AR, USA</subdescription>
+   <subdescription>KY, USA</subdescription>
    <description_matched_substring>
     <offset>0</offset>
     <length>5</length>

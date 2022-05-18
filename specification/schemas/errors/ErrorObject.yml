@@ -30,4 +30,9 @@ properties:
   status:
     description: A status code that indicates the error type.
     type: string
+  details:
+    description: Additional details about the error.
+    type: array
+    items:
+      $ref: "./ErrorDetail.yml"
     

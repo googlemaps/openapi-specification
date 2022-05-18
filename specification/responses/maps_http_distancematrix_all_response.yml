@@ -14,7 +14,8 @@
 
 # [START maps_http_distancematrix_all_response]
 {
-  "destination_addresses": ["North Bend, WA 98045, USA"],
+  "destination_addresses":
+    ["North Fork Campground, 233 Co Hwy 685, Randle, WA 98377, USA"],
   "origin_addresses": ["Seattle, WA, USA"],
   "rows": [{ "elements": [{ "status": "ZERO_RESULTS" }] }],
   "status": "OK",

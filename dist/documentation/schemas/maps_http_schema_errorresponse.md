@@ -21,7 +21,17 @@ In the case of an error, a standard format error response body will be returned 
         "reason": "badRequest"
       }
     ],
-    "status": "INVALID_ARGUMENT"
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "geolocation.googleapis.com"
+        }
+      }
+    ]
   }
 }</pre>
 

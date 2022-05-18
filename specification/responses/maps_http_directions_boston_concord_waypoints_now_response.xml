@@ -3,7 +3,7 @@
 <DirectionsResponse>
  <status>OK</status>
  <route>
-  <summary>MA-2 W</summary>
+  <summary>I-93 N and I-95 S</summary>
   <leg>
    <step>
     <travel_mode>DRIVING</travel_mode>
@@ -19,7 +19,7 @@
      <points>ukpaG`{upLKDSHCBULSNUTKHMJKJIJGFIJIJGHCDMZIR[v@</points>
     </polyline>
     <duration>
-     <value>37</value>
+     <value>41</value>
      <text>1 min</text>
     </duration>
     <html_instructions>Head &lt;b&gt;north&lt;/b&gt; on &lt;b&gt;Cambridge St&lt;/b&gt; toward &lt;b&gt;Sudbury St&lt;/b&gt;</html_instructions>
@@ -39,10 +39,10 @@
      <lng>-71.0569388</lng>
     </end_location>
     <polyline>
-     <points>espaGncvpLUSECAAEEEICCCEIMCIEI[{@Ys@M[_@_Ac@mAk@yAUk@GQEMI_@I[Om@Mk@Mk@CKCGCMEIAECECGACCGEECIIIGGEAAAQI</points>
+     <points>espaGncvpLQKIKMQCCCEIMCIEI[{@Ys@M[_@_Ac@mAk@yAUk@GQEMI_@I[Om@Mk@Mk@CKCGCMEIAECECGACCGEECIIIGGEAAAQI</points>
     </polyline>
     <duration>
-     <value>132</value>
+     <value>147</value>
      <text>2 mins</text>
     </duration>
     <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Sudbury St&lt;/b&gt;</html_instructions>
@@ -59,46 +59,70 @@
      <lng>-71.0569388</lng>
     </start_location>
     <end_location>
-     <lat>42.3643627</lat>
-     <lng>-71.0582002</lng>
+     <lat>42.3633932</lat>
+     <lng>-71.0572281</lng>
     </end_location>
     <polyline>
-     <points>{`qaGzhupLC??@A?ABOXEFEHEFMNMNKLML[ZMLOLMJMHGDKJIHABC@QT</points>
+     <points>{`qaGzhupLC??@A?ABOXEFEHEF</points>
     </polyline>
     <duration>
-     <value>59</value>
+     <value>10</value>
      <text>1 min</text>
     </duration>
     <html_instructions>Slight &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Cross St&lt;/b&gt;</html_instructions>
     <distance>
-     <value>169</value>
-     <text>0.1 mi</text>
+     <value>35</value>
+     <text>115 ft</text>
     </distance>
     <maneuver>turn-slight-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>42.3643627</lat>
-     <lng>-71.0582002</lng>
+     <lat>42.3633932</lat>
+     <lng>-71.0572281</lng>
+    </start_location>
+    <end_location>
+     <lat>42.3668926</lat>
+     <lng>-71.0585022</lng>
+    </end_location>
+    <polyline>
+     <points>ebqaGtjupLGAIAI?K@o@BwBLk@BI@gAFo@Dc@Bc@B]@IDC@ONq@h@]VeA|@UPGFCDAF?N</points>
+    </polyline>
+    <duration>
+     <value>171</value>
+     <text>3 mins</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Endicott St&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>421</value>
+     <text>0.3 mi</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>42.3668926</lat>
+     <lng>-71.0585022</lng>
     </start_location>
     <end_location>
      <lat>42.3708118</lat>
      <lng>-71.0614952</lng>
     </end_location>
     <polyline>
-     <points>ghqaGvpupLQLg@@GDKDGFcA@M?_@A]@qBHaBH_A@KFm@ZIFEBABCDEHCDCDEDA?EDEDe@XSLIHKNELGL?@ELCNGLGNEJGDGFC@OHk@\}@h@QJGD_@Ra@R_@Rq@^OHYPEBYLIBMBK@M?K@MBIFKFIFGFGJOFMJ</points>
+     <points>axqaGrrupLKFMFi@ZCBCBCBKRABCBEB_@Vc@ZIFKNCDCHIZM`@EHIJYZMFe@Vs@b@WJa@VqBdAm@\_@ROFMBK@K?I@A?E@C?GBIBEDIFGFIJA@OHOJ</points>
     </polyline>
     <duration>
-     <value>155</value>
-     <text>3 mins</text>
+     <value>124</value>
+     <text>2 mins</text>
     </duration>
-    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;N Washington St&lt;/b&gt;</html_instructions>
+    <html_instructions>Slight &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;N Washington St&lt;/b&gt;</html_instructions>
     <distance>
-     <value>797</value>
-     <text>0.5 mi</text>
+     <value>512</value>
+     <text>0.3 mi</text>
     </distance>
-    <maneuver>turn-right</maneuver>
+    <maneuver>turn-slight-right</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
@@ -111,10 +135,10 @@
      <lng>-71.0552091</lng>
     </end_location>
     <polyline>
-     <points>qpraGjevpLGAE@GBGBGBIDI@IBC?C?E?MACCc@s@KQKO[g@?Aa@q@Yc@MQa@s@c@s@KOk@{@S[GIw@gA]g@W]UOSWAAIOMM[_@]_@u@_AACW[OUa@e@CEQWMSKOa@s@Q]Uc@GMEG[a@QUW[KKsAyA</points>
+     <points>qpraGjevpLGAE@GBGBGBIDI@IBC?C?E?MACC[g@GKKQKO[g@?Aa@q@Yc@MQa@s@c@s@KOk@{@S[GIw@gA]g@W]UOQSAAMQ]c@SUSUu@_AACW[OUa@e@CEQWMSKOa@s@Q]Uc@GMEG[a@QUW[KK[]w@{@</points>
     </polyline>
     <duration>
-     <value>116</value>
+     <value>123</value>
      <text>2 mins</text>
     </duration>
     <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Chelsea St&lt;/b&gt;</html_instructions>
@@ -162,7 +186,7 @@
      <points>uwsaGriupLI\Mf@IZgAlEI^YjAYjAYfAK`@Mj@YhAKZKh@Sx@W`AMf@]vA[nAW~@Ob@CJGPc@dAk@xAi@pASf@g@nAYp@s@fBm@zA]z@m@zAIPO`@g@pACFg@nAO\Sf@GPaAbCw@pBEJGNSf@Sf@KXQb@CFQd@[v@O\GNSp@</points>
     </polyline>
     <duration>
-     <value>166</value>
+     <value>175</value>
      <text>3 mins</text>
     </duration>
     <html_instructions>Continue onto &lt;b&gt;Bunker Hill St&lt;/b&gt;</html_instructions>
@@ -182,7 +206,7 @@
      <lng>-71.0728220</lng>
     </end_location>
     <polyline>
-     <points>o_uaGbexpLQj@O\O\ILQBSNQJWPEFMJGDEDA@_@T</points>
+     <points>o_uaGbexpLQj@O\O\ILQB}@l@cAv@</points>
     </polyline>
     <duration>
      <value>25</value>
@@ -190,7 +214,7 @@
     </duration>
     <html_instructions>Continue onto &lt;b&gt;Main St&lt;/b&gt;</html_instructions>
     <distance>
-     <value>154</value>
+     <value>153</value>
      <text>0.1 mi</text>
     </distance>
    </step>
@@ -208,7 +232,7 @@
      <points>_fuaGblxpLIAoAOMFGDGDGFGFEHCFA?AF?@CN?@AJ?F?H@F?F@F@B?@Xl@D@t@XF@HTBN@L?HAHCPEL[|@GJQb@ITGPENUn@GROb@ELCBCFCDCDEFOPUX</points>
     </polyline>
     <duration>
-     <value>57</value>
+     <value>60</value>
      <text>1 min</text>
     </duration>
     <html_instructions>At the traffic circle, take the &lt;b&gt;3rd&lt;/b&gt; exit and stay on &lt;b&gt;Main St&lt;/b&gt;</html_instructions>
@@ -232,7 +256,7 @@
      <points>qmuaGz`ypLe@f@s@z@MNMPU^KNk@t@ED]^GFIJGFMNy@jAq@`A_C~CkAdBSZ]h@o@`AMNuAjBc@l@Yb@[b@U`@QXW\g@r@EDIJ</points>
     </polyline>
     <duration>
-     <value>83</value>
+     <value>85</value>
      <text>1 min</text>
     </duration>
     <html_instructions>Continue onto &lt;b&gt;Mystic Ave&lt;/b&gt;</html_instructions>
@@ -272,115 +296,91 @@
      <lng>-71.0826483</lng>
     </start_location>
     <end_location>
-     <lat>42.4080669</lat>
-     <lng>-71.1011125</lng>
+     <lat>42.5027155</lat>
+     <lng>-71.1188770</lng>
     </end_location>
     <polyline>
-     <points>cnvaGpizpLCP?@[Z]\a@ZEBYTUPC@CBEDWR]ZIFq@l@aAt@}@v@e@j@GFSTc@n@_@h@SZGJKRQVYd@INEHGHILCBOVi@z@OV?@E^KLg@r@]f@OVGLMRo@`Ai@v@k@|@A?]f@Y`@yClEY`@Y`@}@rACBEFGHy@lAOPwC`E[`@i@p@_@`@m@v@MLuAzAwAtACB}@x@_Av@MJu@p@C@cA~@}BnBcBxA}ArAg@b@o@l@i@`@MHURmB`BSNCB}CnCwBhBA@yBlBOLwBnB_@\gA~@</points>
+     <points>cnvaGpizpLCP?@[Z]\a@ZEBSPEBUPC@CBEDSPC@]ZIFq@l@aAt@}@v@e@j@GFSTc@n@_@h@SZGJKRQVYd@INEHGHILCBOVi@z@OV?@E^KLc@l@CD]f@OVGLMRo@`Ai@v@k@|@A?]f@W^A@yB`D_@j@Y`@Y`@q@bAKNCBEFCDCBy@lAOPgAzAoAdB[`@i@p@_@`@m@v@MLuAzAwAtACB}@x@_Av@MJu@p@C@cA~@gCxBkB~AeBzAED[XuAjAaCnBSNCB}CnCwBhBA@yBlBOLwBnB_@\eAx@s@l@{@t@sAhAkA~@{@n@[RC@A?w@d@y@`@GDGBA?q@XG@uBp@e@JC?e@HeAL{ALi@@aAB_A@yIPyBFK?K?_@@q@Bq@BO?a@A?@E?c@?}@@eFF_@?C?C?[Aw@CUAiBMWA[Cs@GoDUoAISCUAa@Em@EiBMMAIAA?MAs@Eg@Ck@Em@EcAGsAGm@Ec@Cg@As@Ao@AYA[?I?I?Y?m@CsA?W@Y?wAGW?i@AmGG{AEYAK?q@I{Cc@eAQGAi@MeAQo@IkEc@IAq@CY?c@?G?[@_BFO@m@FYB]Di@F_@HkB^MD}Bf@_@HmCl@]HaATYFQDc@HQDMDUDwAZi@LYFQDu@PI@uAZi@Ja@JiAVkBb@iB`@aARwAVwARQ@k@F_AHc@Bs@DiABI?eA?m@?Q?O?SAK?qAEo@GA?a@CQAGAIAc@Gm@I}@Mu@Mo@MMCCAUEmAWqRwDc@Ia@IaJiB}AYwGiAkBi@}Cc@gBQk@Ck@CgBEq@A}@?C?]@_@@kBLcAJsANc@HI@_ANG@w@Po@Ny@Ri@P}@V_A\{@\i@TMDm@Xy@`@{@f@cBbAmBhAk@^sBnAy@f@a@VIDu@d@aAl@ID_@Vk@\mAr@IFwA|@i@\]RcAl@[RA?YRuChB_@VYPwBrAg@ZYPcC|AwA~@gBjAk@\iBhAC@_@VQJi@\uHzEy@f@eBdA[RC@YPyDbCSN[Tm@^aAl@IFiEnCOJWNA?YPA?a@X]RmC|Aa@RMFaAf@g@R}Al@y@Z{@XqA`@y@TQDC?qAZQDE?]HmAT[Dw@LkALm@F}ALK@k@B}AFuABa@@]@E?]?G?yFJe@?aFH[@}FH_ABc@@}PVqJNaCBg@@kBB_ADE?gAFI@mAHmBPaANg@FaCb@w@Nw@PE@YHC@GBQD}@V</points>
     </polyline>
     <duration>
-     <value>98</value>
-     <text>2 mins</text>
+     <value>488</value>
+     <text>8 mins</text>
     </duration>
     <html_instructions>Merge onto &lt;b&gt;I-93 N&lt;/b&gt; via the ramp on the &lt;b&gt;left&lt;/b&gt; to &lt;b&gt;Lawrence&lt;/b&gt;</html_instructions>
     <distance>
-     <value>2453</value>
-     <text>1.5 mi</text>
+     <value>13377</value>
+     <text>8.3 mi</text>
     </distance>
     <maneuver>ramp-left</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>42.4080669</lat>
-     <lng>-71.1011125</lng>
+     <lat>42.5027155</lat>
+     <lng>-71.1188770</lng>
     </start_location>
     <end_location>
-     <lat>42.4147393</lat>
-     <lng>-71.1313878</lng>
+     <lat>42.4913886</lat>
+     <lng>-71.1882777</lng>
     </end_location>
     <polyline>
-     <points>myyaG||}pLWCIDEBKFyAn@o@PMDA@u@Lg@DM?[?w@Cy@Ig@CMA[Ic@?wBMk@Ca@@UDc@JC@k@ROHYRIFONOLGDOTOTQ\MZMZM`@?@aA`FYxAWpAGTMj@K\Ob@Qb@KTW`@]j@KPo@`AKRCBU`@Yd@_AzAINw@lAKPq@dAWb@S\CFGL[z@Md@Mj@CFUfAYpACPCHGXI`@GRABGTELGNEJMTGNGJMPKPEDILMRCHQZGTCNMl@Mj@I^?@CHCNAJANQf@GNQb@MVCFU`@GJGNIRIREPENG`@EP?BAFCZABAZATAb@Cp@@BAV?PCbBCx@?r@GhDAf@GpDEdDA\CtBEtD?RAr@AZ?f@Bh@@n@BP@\B^@h@?d@Cl@An@?n@?P?T?L@V@VB\B\D^Db@Fj@Jh@BJLd@FVLZHPNXR\TX\ZFBH@JBJBB@PFFLBDBHDLF`@FZH^H\DJBJDJBHJVJVBDJTXj@JPVb@PXV`@PVPXNTd@j@XZp@l@p@j@t@r@|@|@\\NNDPVb@DF@@FD</points>
+     <points>_ilbG~kaqLQOC?A?I@M@SDI?IAGAEAEAEACACAEEAAIEEGCEGIEICICICKCKAMAO?O?O?A@O@SBSBSBUDSDQFUFSDOFOFOFKJQHOHKLQJKFGHG@?DCDADCF?DAV?RFPJNLJPFJFPD^@V?NAN?XA`@AVC`@QdCAPA\Ah@?DYnCUbC[nC?@CVIr@Gt@ADG~@G`AEv@ALQvDEpD?x@@vA?\F~C?F@JDfAF~CH|CHpCFpBHjCJnC?FFhEJjC?J@?@X?FHvBNlFBt@NfCDz@Dh@FfABPDn@Dv@LdBJxAThDHdALhBHrAXjE@NHhADj@Dj@?FDn@Dn@PhCFt@LxBFz@L`BDn@@NVxDDn@LnBBRDl@Bd@Fx@Dx@BZDn@Dn@?@NnBFl@?BHjAJvADv@T`DZ~FDj@Fp@B`@BZH~@B\NpB?DTpDJ~ADl@?@Dn@?@J|ADn@Dp@Dl@HjA@TN`CNfBJ|AFr@V|CD`@BZt@jHh@`F?@V`CDd@@H@JZ|CD^`@zDj@zFT~BHt@BPB^D\BP@FHz@BVDZD^BZBPDf@DXB\DXHx@D\BXBXBL@PD\Hv@LjA\fDLhADd@p@tGPfBHl@Hz@NtAN~AFl@DXFl@Fj@DZPxAPrAVjB@F@D\tBP~@Hn@b@dBTdARx@Rv@DLXz@l@pBTp@p@vBh@tA@BDJTl@FNl@rAVl@DFDF@@Tf@JN@?P`@DH@@?@LPR`@LPHJDF@@R^`@j@DDZf@j@v@DDX`@X^NPd@n@</points>
     </polyline>
     <duration>
-     <value>329</value>
-     <text>5 mins</text>
-    </duration>
-    <html_instructions>Take exit &lt;b&gt;22&lt;/b&gt; to merge onto &lt;b&gt;MA-16 W&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Mystic Valley Pkwy&lt;/b&gt; toward &lt;b&gt;Arlington&lt;/b&gt;</html_instructions>
-    <distance>
-     <value>3401</value>
-     <text>2.1 mi</text>
-    </distance>
-    <maneuver>ramp-right</maneuver>
-   </step>
-   <step>
-    <travel_mode>DRIVING</travel_mode>
-    <start_location>
-     <lat>42.4147393</lat>
-     <lng>-71.1313878</lng>
-    </start_location>
-    <end_location>
-     <lat>42.3982572</lat>
-     <lng>-71.1416168</lng>
-    </end_location>
-    <polyline>
-     <points>cc{aGdzcqLBFBDDBD@B?DA@A@ADE?A@EXO`@OR?\@`@@v@@L?J?DAXCPCLCJCXITITENELCTEFC`AEbA@t@Dr@@l@A@AXCPC\Ed@M`@KfB_@N?D?RAV@L@B@D?LDLD\RJHHDVTFFFDLPFH@BPVFHHJLXBH\`Ab@bAP\BDR`@\l@@@LPFLTX@BJJFFFFPPDDDDVRz@r@RPPLPHPJHDB@FBJDNDRFTDTDNBN@N@L?R?j@ApBCH?`BC`A?v@AR?N?P@H@XDFBJBPHJDLHLJLJJJRRLPVXLNHH`@^JHFBl@h@PNFDHFf@b@LLLNfAlALLLLTXNZN\J\HVBNDPDRBPBPBZBX@^Bb@Bl@@f@@Z@X@PDf@Df@BJBNF^JZNh@P^P\RZr@|@JNXTHFJHVNNLHHPRJT</points>
-    </polyline>
-    <duration>
-     <value>266</value>
+     <value>260</value>
      <text>4 mins</text>
     </duration>
-    <html_instructions>At the traffic circle, take the &lt;b&gt;2nd&lt;/b&gt; exit onto &lt;b&gt;MA-16 W&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Alewife Brook Pkwy&lt;/b&gt;</html_instructions>
+    <html_instructions>Take exit &lt;b&gt;28B&lt;/b&gt; to merge onto &lt;b&gt;I-95 S&lt;/b&gt; toward &lt;b&gt;Waltham&lt;/b&gt;</html_instructions>
     <distance>
-     <value>2288</value>
-     <text>1.4 mi</text>
-    </distance>
-    <maneuver>roundabout-right</maneuver>
-   </step>
-   <step>
-    <travel_mode>DRIVING</travel_mode>
-    <start_location>
-     <lat>42.3982572</lat>
-     <lng>-71.1416168</lng>
-    </start_location>
-    <end_location>
-     <lat>42.4216420</lat>
-     <lng>-71.2272487</lng>
-    </end_location>
-    <polyline>
-     <points>c|waGbzeqLTn@V|@DPBP?V@P?TKXi@`COr@?BERCJEVENALABCLQbAKf@ADMj@Qz@[rA?BYpAKl@GTi@dCAFKb@EXENCHuBfKADUfAm@xCaAzEQv@Ib@Kd@IXENERK^Oh@ITsA|DmA|CQf@g@pAKRa@bAABIRCFKVSb@Wh@Qb@[l@w@|A}AzCW^o@lAUf@KXWp@a@vAERGRI^UjAc@~Be@dCKf@CNI`@SfAShAA?EZA@CPI\G\CPWvAWlA]nBGXYnAk@`CuAdFqA`Fe@dBCF{@bDy@tC_@xAsApF_AdEw@~DaAtFEP_AhGa@jDOzAGl@a@hEUbCa@dEKbAM~@AFGd@Kn@M|@]tBABc@xBk@dC]tAMf@ADYhAQp@EPKb@i@vBeA`Em@bCGTSp@_AzC{@lCCJK\u@|BITGRWx@KXSl@Od@Oh@?@]jASt@[hAg@vBE\I`@[~Ag@bCy@nEEVGf@W`B_@pBSnAI`@ENCRSnAi@nDE\Gb@YlCEXI~@Ix@QbCEr@Cd@Cd@Ep@Ez@E`ACp@G~BA`@?BChCAd@A\GpCIvFGnF?FGdD?RA`@Ax@AV?JCr@EhAEt@Cf@I`AEl@MrAGf@Eh@QfBOrAMjAIp@?@ALGf@AFe@dDIh@QdAY`Ba@rBa@dBEPGXU`AmAdEaA`DENOd@ITCHYr@KXSn@AB_@jAMd@Sp@Or@YvASrAQhAKbAEn@Gp@E|@Cd@Cx@An@Ah@CxACfB?b@?^</points>
-    </polyline>
-    <duration>
-     <value>298</value>
-     <text>5 mins</text>
-    </duration>
-    <html_instructions>Merge onto &lt;b&gt;MA-2 W&lt;/b&gt; via the ramp to &lt;b&gt;Concord&lt;/b&gt;</html_instructions>
-    <distance>
-     <value>7607</value>
-     <text>4.7 mi</text>
+     <value>6520</value>
+     <text>4.1 mi</text>
     </distance>
     <maneuver>ramp-right</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>42.4216420</lat>
-     <lng>-71.2272487</lng>
+     <lat>42.4913886</lat>
+     <lng>-71.1882777</lng>
+    </start_location>
+    <end_location>
+     <lat>42.4697998</lat>
+     <lng>-71.2460579</lng>
+    </end_location>
+    <polyline>
+     <points>ebjbGv}nqLPTLRHJBDT\v@fAh@p@^h@RV\f@~@pALNX^b@l@PV`ArALPNRNRZ`@fAxArAfBNTtAnBLRBBn@~@T^DFV`@NT@@V`@V`@Vb@d@t@R^d@z@nA~BPZR\DH|@dBBDr@tAJT?@^t@`@|@f@jA@@\t@`@|@@@N\j@tA@D\x@LZ?@jB|Ed@vA^fA`@pA`@pA@Br@`Ch@|Bx@dDv@fDzChMh@|Bh@tB^|ALr@VrA@BZxADRf@fCPx@TlAjBdJLl@t@vDh@fCXzALj@\hBp@dDLl@n@dDh@fCx@dE\bBf@dCVrAFXNx@TzABJVdBXhB?BRtAHv@NpATpBBX?DDp@Hx@PnBNlB^hE\|Dz@|JXzC`@`Fp@tIn@nHv@bJTrBTlBTtAd@zBz@zCz@lCJ\Zv@@BVn@d@fAb@`AP\LTZj@R`@b@v@BDJPVb@@DbAhBr@pA</points>
+    </polyline>
+    <duration>
+     <value>191</value>
+     <text>3 mins</text>
+    </duration>
+    <html_instructions>Keep &lt;b&gt;left&lt;/b&gt; to stay on &lt;b&gt;I-95 S&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>5425</value>
+     <text>3.4 mi</text>
+    </distance>
+    <maneuver>keep-left</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>42.4697998</lat>
+     <lng>-71.2460579</lng>
     </start_location>
     <end_location>
      <lat>42.4473497</lat>
      <lng>-71.2271531</lng>
     </end_location>
     <polyline>
-     <points>gn|aGhqvqLGVCPATAr@At@Ch@AN?@Eb@WlEM`BSzCARCNCLCJEHCDADGHEDEDGDC@MHs@La@E]GQ@SFs@Ik@GC?e@ESAkAKOAaBO]CE?{@GWAkAKA?[CaAGKASAo@Gi@ESAa@E[Ak@E[@M?I@YBGBG@I@C@YHc@NC@s@TOFoAb@UJA?WL[PKFSJUNe@Xc@Xy@d@uBnA]Rc@VMHULk@\C@c@VQJ[RSJQFKDGDYJa@LWFYHWDOBeARgARQDo@LC@_@FA@}@NGBu@NIBG@QDUD_@FSDWBWBS@OBQ@s@Fm@DO@{@Fe@DY@S@E?IAE?EAMAEAGCMEGEKEIIYWCCMMWY}@_AMOQOa@_@USQKMIQIAAOGYIg@MWISGEC}@g@QOo@c@YW]c@k@u@a@m@o@}@q@{@_@c@ACYYUY_A_A[[GEUSc@_@k@e@]YcAw@c@][WQKCC_@Qa@MeAYiAW_@IMCUGEAKEQGQKKEKIUQQOk@i@aA{@CCu@q@CC]Y][</points>
+     <points>g{ebGzfzqLFj@PbA@D?N?H?N?LAHA@ALCJGLCFEFGJGFABMFGBKDI@G@G?GAE?EACAGCECEAQMOOMOMSKOGIIMEGCICGCECMCGAEAIAEAE?GAGAK?G?O?Q@Q@I@GBOFQDMXq@nBoANK^U^U\WxBwAz@k@lBsAh@]VSBAJMl@_@ZWl@e@h@c@\YJIDCVOTMh@W`@QZOfAe@`@SLGLGd@Y\WXOVMNIXIRI\KtAc@`A[h@SPGHEPIPKNGPKXQdAm@LIp@_@TOf@YPKl@]hAq@`@SVOVMj@UXKnB{@bAa@^O^SPKJGJIPMROf@e@z@u@XW~BuBzDmDpCsCvB{B`@a@PQDENM`@]\YZSpA_ALIZWt@i@hAs@r@g@l@a@VS`As@?A^UXSDCh@a@ROr@g@p@e@\Uf@_@FEJGPIXORI\KDAb@MPEf@Ol@QTGNEHEFCJGLIFEFGRYPa@@A\s@Vm@FO@CDKPa@Xs@d@cAt@gBFKf@oA</points>
     </polyline>
     <duration>
-     <value>316</value>
+     <value>314</value>
      <text>5 mins</text>
     </duration>
-    <html_instructions>Take exit &lt;b&gt;129B&lt;/b&gt; to merge onto &lt;b&gt;Waltham St&lt;/b&gt; toward &lt;b&gt;Lexington&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Pass by The UPS Store (on the left in 1.2&amp;nbsp;mi)&lt;/div&gt;</html_instructions>
+    <html_instructions>Take exit &lt;b&gt;49A&lt;/b&gt; to merge onto &lt;b&gt;MA-225 E&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;MA-4 S&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Bedford St&lt;/b&gt; toward &lt;b&gt;Lexington&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Continue to follow MA-225 E/&lt;wbr/&gt;MA-4 S&lt;/div&gt;</html_instructions>
     <distance>
-     <value>3392</value>
+     <value>3428</value>
      <text>2.1 mi</text>
     </distance>
     <maneuver>ramp-right</maneuver>
@@ -392,44 +392,68 @@
      <lng>-71.2271531</lng>
     </start_location>
     <end_location>
-     <lat>42.4488223</lat>
-     <lng>-71.2298603</lng>
+     <lat>42.4452640</lat>
+     <lng>-71.2287220</lng>
     </end_location>
     <polyline>
-     <points>}nabGtpvqLg@nAGJu@fBe@bAYr@Q`@EJABGNWl@]r@A@Q`@SX</points>
+     <points>}nabGtpvqL\Z\XBBt@p@BB`Az@j@h@PNTPJHJDPJPFJDD@TFLB^H</points>
     </polyline>
     <duration>
-     <value>49</value>
+     <value>38</value>
      <text>1 min</text>
     </duration>
-    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Massachusetts Ave&lt;/b&gt;</html_instructions>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Waltham St&lt;/b&gt;</html_instructions>
     <distance>
-     <value>276</value>
+     <value>268</value>
      <text>0.2 mi</text>
     </distance>
-    <maneuver>turn-left</maneuver>
+    <maneuver>turn-right</maneuver>
    </step>
    <step>
     <travel_mode>DRIVING</travel_mode>
     <start_location>
-     <lat>42.4488223</lat>
-     <lng>-71.2298603</lng>
+     <lat>42.4452640</lat>
+     <lng>-71.2287220</lng>
+    </start_location>
+    <end_location>
+     <lat>42.4494635</lat>
+     <lng>-71.2340479</lng>
+    </end_location>
+    <polyline>
+     <points>{aabGnzvqLMl@AF[xAKd@Kl@Ml@S~@ITM`@Wd@e@r@MVWb@CDo@~@EFc@j@[ZSRUR[ZMLON[ZQPKJGNOh@MVIRA@ILMRe@\}@\C@s@DgBH</points>
+    </polyline>
+    <duration>
+     <value>86</value>
+     <text>1 min</text>
+    </duration>
+    <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Forest St&lt;/b&gt;</html_instructions>
+    <distance>
+     <value>681</value>
+     <text>0.4 mi</text>
+    </distance>
+    <maneuver>turn-right</maneuver>
+   </step>
+   <step>
+    <travel_mode>DRIVING</travel_mode>
+    <start_location>
+     <lat>42.4494635</lat>
+     <lng>-71.2340479</lng>
     </start_location>
     <end_location>
      <lat>42.4456767</lat>
      <lng>-71.2629326</lng>
     </end_location>
     <polyline>
-     <points>cxabGrawqL?L?L?H?HAFEXGR]lAQj@_@vAMl@I^CLE\APCPANAXAj@?\?LLlF@VBdA?j@BzB?d@@\@X@NBLHp@H`@Fb@D^Ht@DZ^tC@HNrAP|AL`ALjAHt@NzAHv@Fh@?BHl@@HHb@F\ZbBNn@Ln@Ln@Hd@Hf@B^@^?v@?v@A~@?r@?b@Bf@Df@BZHh@DX@DHf@f@fCP|@F\D\BTBZ?T?J?HCj@E~@?T?J?P@Z@\Hz@Dt@Dh@@P?F@p@?f@@DE|BA\?Z?B@T?ZPtCBh@@TDdA?^@NAf@Cd@Ed@Eh@APEh@Eh@Gx@AT?N?@?Z?\@TB`@B^H~@Dt@BVDb@Fv@F^FX@FDNFRJ^BJd@pADJL\Pf@Rh@?@DNFV@@DPBT@DBP@R@H@P@\?@?j@?`@AP?BEj@?L]jG?DAN?R?P@\@\DZHZ@FDHL\DFJRJN@@\h@</points>
+     <points>c|abGx{wqL@VBdA?j@BzB?d@@\@X@NBLHp@H`@Fb@D^Ht@DZ^tC@HNrAP|AL`ALjAHt@NzAHv@Fh@?BHl@@HHb@F\ZbBNn@Ln@Ln@Hd@Hf@B^@^?v@?v@A~@?r@?b@Bf@Df@BZHh@DX@DHf@f@fCP|@F\D\BTBZ?T?J?HCj@E~@?T?J?P@Z@\Hz@Dt@@JB\@P?F@h@?F?f@@DE|BA\?Z?B@T?ZPtCBh@@TDdA?^@NAf@Cd@Ed@ALCZAPEh@Eh@Gx@AT?N?@?Z?\@TB`@B^H~@Dt@BVDb@Fv@F^FX@FDNFRJ^BJRf@Ph@DJL\Pf@Rh@?@DNFV@@DPBT@DBP@R@H@P@\?@?j@?`@AP?BEj@?L]jG?DAN?R?P@\@\DZHZ@FDHL\DFJRJN@@\h@</points>
     </polyline>
     <duration>
-     <value>251</value>
-     <text>4 mins</text>
+     <value>209</value>
+     <text>3 mins</text>
     </duration>
-    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; to stay on &lt;b&gt;Massachusetts Ave&lt;/b&gt;</html_instructions>
+    <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Massachusetts Ave&lt;/b&gt;</html_instructions>
     <distance>
-     <value>2822</value>
-     <text>1.8 mi</text>
+     <value>2462</value>
+     <text>1.5 mi</text>
     </distance>
     <maneuver>turn-left</maneuver>
    </step>
@@ -444,10 +468,10 @@
      <lng>-71.3097617</lng>
     </end_location>
     <polyline>
-     <points>odabGhp}qLwAtBa@l@SVmC|Da@f@AD_@z@GRKd@Ib@Il@UnB]`DCTGr@KvAAJGt@MrBQxBEj@[|DEd@O~A?HI~@OfBKpAErAEzACrAErBGzAA`@C|@ErAE~AG~BAhA?f@B^Bb@H|@Df@Jx@H|@Df@Dh@@T@Z@T?N?hC@hC@jA?`C?dB?J?n@?lBBtDBxA?T?nA@N?P?TAVCTCTGd@Or@AB]vAGXUv@ABSh@AFMXUl@Wj@e@z@u@rAWj@c@~@Sj@A@Sf@ABY~@Wz@Ux@IZADMd@?@Ib@Gj@Gx@A@GbAEd@Gt@AHIfACVEj@IjA[hEKbBOvBAHYzDMbBEn@Ej@s@~JQhCGn@GfAIfA_@zEEv@C\APCZ?FCf@ARGrAE|@?JAVEz@KdCKnCG~A?@[pIA^APEzACr@?T</points>
+     <points>odabGhp}qLwAtBa@l@SVmC|Da@f@AD_@z@GRKd@Ib@Il@UnB]`DCTGr@KvAAJGt@MrBQxBEj@[|DEd@O~A?HI~@OfBKpAErAEzACrAErBGzAA`@C|@ErAE~AG~BAhA?f@B^Bb@H|@Df@Jx@H|@Df@Dh@@T@Z@T?N?hC@hC@jA?`C?dB?J?n@?lBBtDBxA?T?nA@N?P?TAVCTCTGd@Or@AB]vAGXUv@ABSh@AFMXUl@Wj@e@z@u@rAWj@c@~@Sj@A@Sf@ABY~@Wz@Ux@IZADMd@?@Ib@Gj@Gx@A@GbAEd@Gt@AHIfACVEj@IjA[hEKbBKpACd@AHYzDMbBEn@Ej@s@~JQhCGn@GfAIfA_@zEEv@C\APCZ?FCf@ARGrAE|@?JAVEz@KdCKnCG~A?@[pIA^APEzACr@?T</points>
     </polyline>
     <duration>
-     <value>236</value>
+     <value>234</value>
      <text>4 mins</text>
     </duration>
     <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;MA-2A W&lt;/b&gt;/&lt;wbr/&gt;&lt;b&gt;Marrett Rd&lt;/b&gt;&lt;div style=&quot;font-size:0.9em&quot;&gt;Continue to follow MA-2A W&lt;/div&gt;</html_instructions>
@@ -468,10 +492,10 @@
      <lng>-71.3485140</lng>
     </end_location>
     <polyline>
-     <points>gsbbG~tfrLKRELMf@S`AW`AIRGPKVWh@uAtCsAlC[t@Qn@_@hAk@jBO`@Qb@ILa@t@wAjCo@fAo@hAi@z@Wf@Ub@EJIPMZOh@Sl@K^K^Mp@CJANEVCZA\EpACh@CZA\EZCPIh@I`@GVWdAMb@GRo@`CQh@e@bB}@xCMb@Uz@ADOx@QnAEl@AZAn@HhAHfADj@?@@R?T?D?RA\CnAAPC|@Cx@An@Cr@?d@AX?V?f@?^@l@Bv@BhADpADhAFp@JjALdBPrBFh@LtAH|@FxA@LB\?D@`@Bp@?r@@|@Bl@@^D^BXJf@DZXpAHd@BRF`@B^@RBx@BjAFtBBdAFzAXhFLnBBp@?N?J?d@?FC`AM|CMrBIt@OlAI`ACXOhAETStAO~@O`@GNQZc@l@i@|@[f@q@fAMVKXa@nAc@hAO^KXMRIN</points>
+     <points>gsbbG~tfrLKRELMf@S`AW`AIRGPKVWh@uAtCsAlC[t@Qn@_@hAk@jBGLGRQb@IL[l@EFQ\eAlBWd@W`@?@o@fAi@z@Wf@EHOXEJIPMZOh@Sl@K^K^Mp@CJANEVCZA\EpACh@CZA\EZCPIh@I`@GVWdACJIVGROj@_@tAQh@e@bB}@xCMb@Uz@ADOx@QnAEl@AZAn@HhAHfADj@?@@R?T?D?RA\CnAAPC|@Cx@An@Cr@?b@?@AX?V?f@?^@T?VBv@BhADpADhAFp@JjALdBPrBFh@LtAH|@FxA@LB\?D@`@Bp@?r@@|@Bl@@^D^BXJf@DZXpAHd@BRF`@B^@RBx@BjAFtBBdAFzAXhFLnBBp@?N?J?d@?FC`AM|CMrBIt@OlAI`ACXOhAETStAO~@O`@GNQZc@l@i@|@[f@q@fAMVKXa@nAc@hAO^KXMRIN</points>
     </polyline>
     <duration>
-     <value>240</value>
+     <value>236</value>
      <text>4 mins</text>
     </duration>
     <html_instructions>Slight &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Lexington Rd&lt;/b&gt;</html_instructions>
@@ -542,7 +566,7 @@
      <points>}fdbGrlnrLTx@~AcAJIf@[PQRW</points>
     </polyline>
     <duration>
-     <value>24</value>
+     <value>23</value>
      <text>1 min</text>
     </duration>
     <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;MA-62 W&lt;/b&gt;</html_instructions>
@@ -553,12 +577,12 @@
     <maneuver>turn-left</maneuver>
    </step>
    <duration>
-    <value>2987</value>
-    <text>50 mins</text>
+    <value>3090</value>
+    <text>52 mins</text>
    </duration>
    <distance>
-    <value>35386</value>
-    <text>22.0 mi</text>
+    <value>45309</value>
+    <text>28.2 mi</text>
    </distance>
    <start_location>
     <lat>42.3597872</lat>
@@ -571,16 +595,16 @@
    <start_address>Boston, MA, USA</start_address>
    <end_address>Concord, MA, USA</end_address>
    <duration_in_traffic>
-    <value>3397</value>
-    <text>57 mins</text>
+    <value>3171</value>
+    <text>53 mins</text>
    </duration_in_traffic>
    <via_waypoint>
     <location>
-     <lat>42.3781732</lat>
-     <lng>-71.0602489</lng>
+     <lat>42.3786389</lat>
+     <lng>-71.0615862</lng>
     </location>
-    <step_index>6</step_index>
-    <step_interpolation>0.2067887</step_interpolation>
+    <step_index>7</step_index>
+    <step_interpolation>0.2936008</step_interpolation>
    </via_waypoint>
    <via_waypoint>
     <location>
@@ -591,9 +615,9 @@
     <step_interpolation>1.0000000</step_interpolation>
    </via_waypoint>
   </leg>
-  <copyrights>Map data ©2021</copyrights>
+  <copyrights>Map data ©2022 Google</copyrights>
   <overview_polyline>
-   <points>ukpaG`{upL}B|AkAbBe@jA[WQU{BsFmBeFi@wBm@cCUe@[]WKs@hA}BxB_@^UVy@NSJkAH}DHaDJy@b@UTgA`Ao@t@Ql@]n@[RwGtDiAl@q@Ho@Ti@b@gA^WBQEo@eAiAkBmB}CsAqBuAoBm@m@m@w@qBcC{CmEu@wAqA_BsAyAKX]r@yA|Cc@dCiBnHwCrLgDxMoMb\cJjU}@jCYj@e@R}@p@o@b@yAQUL]^Mv@B`@`@t@|@ZLd@Cr@iBbFs@dBoJtLkStY{@t@CR{AtAyBfB{DbDeBxBcC|D_BhCQl@eAzAuAzBcInLkIlLsClD_EbEgK`JuM`LqPzNgB|AWCuB`A_AXgCRkKo@_BT_Bx@w@x@}@jBcDpOeA~BeBrCsF|Iw@vA{@tCqAdG{@tBi@v@k@nAs@pDm@jBo@lAu@pCOrDq@zf@JhC@|CDbFVlCd@rBz@dBr@t@PDZHXTFN^jBRt@vA~CrAvB`BvBvEjEl@l@\t@RVRJj@c@t@O~@BvA?jCi@z@SdCChBFzAKlE_AfBH`Ah@t@t@b@n@x@pBbCxEpAvAjDdCbCh@|JGlB?j@Jv@\z@v@|@dAbBvA|DzDbA`B^vA^~EZzEt@dCdBfCfAv@v@`Ar@~BDpA{AzGiExSmG~ZyAhGuGfQkDpH{DpHkAvDkC~MgA|FqAfHcDpMwDrNmFfT_EpU{A~NuBhRoBxJgAlE}ElRkFtPmCdJsAvGoBrK}ChRyAzOg@nMa@rYWvLgAzMyAvLwAdIeArEyEjOcAdDqApGk@nFOlEInGM~AIbDk@tI]lEO`@[ZQJuAFo@EgAAiBOaKw@mF_@eCKy@H{C~@_C|@qAt@_JlFsDpB{Af@gCf@uFfA{Dr@{Fb@}BBc@Qs@k@mEgE_DgAeC_BeC_DcCaDkCoCoGgFwAo@}D_Ay@W_Am@yFeF_ElJ_ArBe@z@?ZGt@wAdFa@xBIlATjQDlB^dCfBdOdAzJlBbKFnJXfCdArFTlBCvAErBRjDHtBEhE^lJC|BSjCMzEp@jIrAnEhAlDP|Be@nL?rAR|Ad@bALP\h@wAtBu@dAoDdFu@zBaBpO_B|Sk@lIW~JQrGEpGv@hJFhSHnPEtA]rB}@lDy@xBkCfFmAtCcBbGs@tHyE|p@aAvNg@rL}@dW}AhGmEdJyBzGk@rAyErI}ArC{@dCi@|BM`BOtD]xB{E~Pu@~C[hEZbGU`KLzJnA`P\pILjDn@nDXzBPnGr@zNBrB_@zIg@~Ey@tFmAzBeCdEaBrEYl@k@ZwC~Bi@`@Tx@jBmAlAeA</points>
+   <points>ukpaG`{upL}B|AkAbBe@jA[W_@i@}DgKm@kBu@aDQk@c@y@g@S]n@a@BeKj@oALeDnCc@f@KVw@b@W^k@b@y@r@_@lAw@x@sC~AoE~Bo@Fm@Vc@^e@N{@RQEc@s@s@kA{EwHuBwCw@w@gEkFaCeEkDaEkCzFe@rCiBpHyC|L_DzLkGtOoLbZ{BxFeAxC}CvByAQUL]^Mv@B`@`@t@|@ZLd@Cr@iBbFs@dBoJtLkStY{@t@CR{AtAcAv@wG~FyCjEyBnDUx@qAhBkDpFgGzIyChE}EtGqDbEaHjGwSpQqPzNuEzDwFlE{DlBgD~@kBVeCNuQ^iBDqLLsGW{Kw@{Gc@_Li@eZ_@_H_AgDk@aHi@gDHuBRcEv@{MvCgXbGmFt@aFVqGGiEc@k[eGeOwCcKsBeGu@qFO_CBcGh@uB\kEfAcFhBqDhBqJ|FsHtEa[tR_c@lX{KfHmGpDuEpBaGlBgGlAqDb@sFZ{LRup@bAuINeDRyIlAoCl@{Ab@a@Mu@DYGk@i@Qi@Gy@TgC~@iCfAmAXGj@F`@X`@nA?pA_@`IcBlPWfEWhJ@pCHpE`@vOr@vVz@jTzCld@jC`a@|Fv|@|AhThC~V~Dp`@vB|SjClW~AvMr@bEvAtGrErNvB~E~@hBnGfJzLtPvHfKzEfHxFzJlD|G|DtIxApDpD~JxBhHvHt[|DjQ`R`_AbDdRlAfL`Fzk@nD|a@j@bE`BvGdBfFrBvEjC|EvBzDXnB@n@[pA_@^e@Ls@O}@aAc@o@YcAC}ANs@^_A~B{AvE{CjFqDzEuDdGuCzDsB`HaChFyCnH}DvHkDhCyBfNoMpDuDjByAtJ}GrF}DjEmCtEqAj@[t@iArByEjCgGtBjBbCxB~@l@x@Vl@LOt@aAzE]tAe@fAoAtBuBnC}CzCo@dB_A`AaA^{CNHdGDlBV`B`BfNpArLdBdJN~CAnEVtCx@nEb@nCBfAIlCLfCNrEE|DRjEJdDIbC]nFXhGXrCVdAnBxF^jBDnDe@dKRrBZv@v@nA{GxJc@l@g@nAu@fF_BrR}ArRi@fSOpIVhDf@`HJvd@_@dC}@lDe@nAiChFqAxCgAfDo@`CYjCm@vH}AvToDlh@u@fR_@dKInCKh@_AxDu@fBiDbHm@dB{AvEmDxGeD~FeBbG]vG]xBm@`CqE|Oi@|DCjARpCFvAEfCQlHN`JnA`P\pILjDn@nDXzBPnGr@zNBrB_@zIg@~Ey@tFmAzBeCdEaBrEYl@k@ZwC~Bi@`@Tx@jBmAlAeA</points>
   </overview_polyline>
   <bounds>
    <southwest>
@@ -601,7 +625,7 @@
     <lng>-71.3496743</lng>
    </southwest>
    <northeast>
-    <lat>42.4614275</lat>
+    <lat>42.5036404</lat>
     <lng>-71.0552091</lng>
    </northeast>
   </bounds>

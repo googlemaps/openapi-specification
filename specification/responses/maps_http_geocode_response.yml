@@ -20,6 +20,11 @@
         "address_components":
           [
             {
+              "long_name": "Google Building 40",
+              "short_name": "Google Building 40",
+              "types": ["premise"],
+            },
+            {
               "long_name": "1600",
               "short_name": "1600",
               "types": ["street_number"],
@@ -55,26 +60,26 @@
               "types": ["postal_code"],
             },
           ],
-        "formatted_address": "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+        "formatted_address": "Google Building 40, 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
         "geometry":
           {
-            "location": { "lat": 37.422547, "lng": -122.0840954 },
+            "bounds":
+              {
+                "northeast": { "lat": 37.4226621, "lng": -122.0829306 },
+                "southwest": { "lat": 37.4220703, "lng": -122.0849584 },
+              },
+            "location": { "lat": 37.422388, "lng": -122.0841883 },
             "location_type": "ROOFTOP",
             "viewport":
               {
                 "northeast":
-                  { "lat": 37.4238959802915, "lng": -122.0827464197085 },
+                  { "lat": 37.4237728802915, "lng": -122.0825955197085 },
                 "southwest":
-                  { "lat": 37.42119801970851, "lng": -122.0854443802915 },
+                  { "lat": 37.4210749197085, "lng": -122.0852934802915 },
               },
           },
-        "place_id": "ChIJb3E-eva5j4ARfZQR8h3UgQk",
-        "plus_code":
-          {
-            "compound_code": "CWF8+29 Mountain View, CA, USA",
-            "global_code": "849VCWF8+29",
-          },
-        "types": ["street_address"],
+        "place_id": "ChIJj38IfwK6j4ARNcyPDnEGa9g",
+        "types": ["premise"],
       },
     ],
   "status": "OK",

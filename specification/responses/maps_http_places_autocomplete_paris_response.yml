@@ -54,6 +54,25 @@
         "types": ["locality", "political", "geocode"],
       },
       {
+        "description": "Paris, TN, USA",
+        "matched_substrings": [{ "length": 5, "offset": 0 }],
+        "place_id": "ChIJ4zHP-Sije4gRBDEsVxunOWg",
+        "reference": "ChIJ4zHP-Sije4gRBDEsVxunOWg",
+        "structured_formatting":
+          {
+            "main_text": "Paris",
+            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
+            "secondary_text": "TN, USA",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Paris" },
+            { "offset": 7, "value": "TN" },
+            { "offset": 11, "value": "USA" },
+          ],
+        "types": ["locality", "political", "geocode"],
+      },
+      {
         "description": "Paris, Brant, ON, Canada",
         "matched_substrings": [{ "length": 5, "offset": 0 }],
         "place_id": "ChIJsamfQbVtLIgR-X18G75Hyi0",
@@ -74,39 +93,20 @@
         "types": ["neighborhood", "political", "geocode"],
       },
       {
-        "description": "Paris, TN, USA",
+        "description": "Paris, KY, USA",
         "matched_substrings": [{ "length": 5, "offset": 0 }],
-        "place_id": "ChIJ4zHP-Sije4gRBDEsVxunOWg",
-        "reference": "ChIJ4zHP-Sije4gRBDEsVxunOWg",
+        "place_id": "ChIJsU7_xMfKQ4gReI89RJn0-RQ",
+        "reference": "ChIJsU7_xMfKQ4gReI89RJn0-RQ",
         "structured_formatting":
           {
             "main_text": "Paris",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "TN, USA",
+            "secondary_text": "KY, USA",
           },
         "terms":
           [
             { "offset": 0, "value": "Paris" },
-            { "offset": 7, "value": "TN" },
-            { "offset": 11, "value": "USA" },
-          ],
-        "types": ["locality", "political", "geocode"],
-      },
-      {
-        "description": "Paris, AR, USA",
-        "matched_substrings": [{ "length": 5, "offset": 0 }],
-        "place_id": "ChIJFRt9mkF5zIcRdsZ3XM8ZyHE",
-        "reference": "ChIJFRt9mkF5zIcRdsZ3XM8ZyHE",
-        "structured_formatting":
-          {
-            "main_text": "Paris",
-            "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "AR, USA",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Paris" },
-            { "offset": 7, "value": "AR" },
+            { "offset": 7, "value": "KY" },
             { "offset": 11, "value": "USA" },
           ],
         "types": ["locality", "political", "geocode"],

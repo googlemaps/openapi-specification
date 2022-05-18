@@ -12,23 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START maps_http_distancematrix_avoid_response]
-{
-  "destination_addresses": ["Victoria, BC, Canada"],
-  "origin_addresses": ["Seattle, WA, USA"],
-  "rows":
-    [
-      {
-        "elements":
-          [
-            {
-              "distance": { "text": "341 km", "value": 341123 },
-              "duration": { "text": "5 hours 36 mins", "value": 20168 },
-              "status": "OK",
-            },
-          ],
-      },
-    ],
-  "status": "OK",
-}
-# [END maps_http_distancematrix_avoid_response]
+type: object
+title: FieldViolation
+required: [field, description]
+properties:
+  field:
+    description: The name of the invalid field.
+    type: string
+  description:
+    description: A short description of the error.
+    type: string
+    

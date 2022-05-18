@@ -93,21 +93,20 @@
         "types": ["locality", "political", "geocode"],
       },
       {
-        "description": "Victor, ID, EUA",
+        "description": "Victoria Falls, Zimbábue",
         "matched_substrings": [{ "length": 4, "offset": 0 }],
-        "place_id": "ChIJlVxRrqoKU1MRqnR-P5qmm24",
-        "reference": "ChIJlVxRrqoKU1MRqnR-P5qmm24",
+        "place_id": "ChIJS5aXDT_lTxkRF7NqQVlDBrU",
+        "reference": "ChIJS5aXDT_lTxkRF7NqQVlDBrU",
         "structured_formatting":
           {
-            "main_text": "Victor",
+            "main_text": "Victoria Falls",
             "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
-            "secondary_text": "ID, EUA",
+            "secondary_text": "Zimbábue",
           },
         "terms":
           [
-            { "offset": 0, "value": "Victor" },
-            { "offset": 8, "value": "ID" },
-            { "offset": 12, "value": "EUA" },
+            { "offset": 0, "value": "Victoria Falls" },
+            { "offset": 16, "value": "Zimbábue" },
           ],
         "types": ["locality", "political", "geocode"],
       },

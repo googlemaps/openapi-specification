@@ -65,5 +65,68 @@
   </geometry>
   <place_id>ChIJ0fd4S_KbwoAR2hRDrsr3HmQ</place_id>
  </result>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>Winnetka, IL, USA</formatted_address>
+  <address_component>
+   <long_name>Winnetka</long_name>
+   <short_name>Winnetka</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>New Trier Township</long_name>
+   <short_name>New Trier Township</short_name>
+   <type>administrative_area_level_3</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Cook County</long_name>
+   <short_name>Cook County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Illinois</long_name>
+   <short_name>IL</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>42.1080834</lat>
+    <lng>-87.7358950</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>42.0886089</lat>
+     <lng>-87.7708629</lng>
+    </southwest>
+    <northeast>
+     <lat>42.1282269</lat>
+     <lng>-87.7108098</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>42.0886089</lat>
+     <lng>-87.7708629</lng>
+    </southwest>
+    <northeast>
+     <lat>42.1282269</lat>
+     <lng>-87.7108098</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJW8Va5TnED4gRY91Ng47qy3Q</place_id>
+ </result>
 </GeocodeResponse>
 <!-- [END maps_http_geocode_winnetka_bounds_response] -->

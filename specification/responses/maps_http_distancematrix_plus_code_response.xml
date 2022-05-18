@@ -2,11 +2,19 @@
 <!-- [START maps_http_distancematrix_plus_code_response] -->
 <DistanceMatrixResponse>
  <status>OK</status>
- <origin_address></origin_address>
+ <origin_address>CWC8+R9 Mountain View, CA, USA</origin_address>
  <destination_address>San Francisco, CA, USA</destination_address>
  <row>
   <element>
-   <status>NOT_FOUND</status>
+   <status>OK</status>
+   <duration>
+    <value>2449</value>
+    <text>41 mins</text>
+   </duration>
+   <distance>
+    <value>56830</value>
+    <text>56.8 km</text>
+   </distance>
   </element>
  </row>
 </DistanceMatrixResponse>

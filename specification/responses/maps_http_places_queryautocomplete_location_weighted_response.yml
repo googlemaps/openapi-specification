@@ -36,88 +36,86 @@
           ],
       },
       {
-        "description": "market near Barcelona Harbor Beach, 1st Street, Westfield, NY, USA",
+        "description": "market near Barcelona–El Prat Airport (BCN), El Prat de Llobregat, Spain",
         "matched_substrings":
           [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
             "main_text": "market",
             "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
-            "secondary_text": "near Barcelona Harbor Beach, 1st Street, Westfield, NY, USA",
+            "secondary_text": "near Barcelona–El Prat Airport (BCN), El Prat de Llobregat, Spain",
             "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
             { "offset": 0, "value": "market" },
             { "offset": 7, "value": "near" },
-            { "offset": 12, "value": "Barcelona Harbor Beach" },
-            { "offset": 36, "value": "1st Street" },
-            { "offset": 48, "value": "Westfield" },
-            { "offset": 59, "value": "NY" },
-            { "offset": 63, "value": "USA" },
+            { "offset": 12, "value": "Barcelona–El Prat Airport (BCN)" },
+            { "offset": 45, "value": "El Prat de Llobregat" },
+            { "offset": 67, "value": "Spain" },
           ],
       },
       {
-        "description": "market near Barcelona Avenue, Salem, MA, USA",
+        "description": "market near Port of Barcelona, Spain",
         "matched_substrings":
-          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 20 }],
         "structured_formatting":
           {
             "main_text": "market",
             "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
-            "secondary_text": "near Barcelona Avenue, Salem, MA, USA",
-            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
+            "secondary_text": "near Port of Barcelona, Spain",
+            "secondary_text_matched_substrings":
+              [{ "length": 9, "offset": 13 }],
           },
         "terms":
           [
             { "offset": 0, "value": "market" },
             { "offset": 7, "value": "near" },
-            { "offset": 12, "value": "Barcelona Avenue" },
-            { "offset": 30, "value": "Salem" },
-            { "offset": 37, "value": "MA" },
-            { "offset": 41, "value": "USA" },
+            { "offset": 12, "value": "Port of Barcelona" },
+            { "offset": 31, "value": "Spain" },
           ],
       },
       {
-        "description": "market near Barcelona Point, Northwest Harbor, NY, USA",
+        "description": "market near Dolce Sitges Barcelona, Avinguda Camí de Miralpeix, Sitges, Spain",
         "matched_substrings":
-          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
+          [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 25 }],
         "structured_formatting":
           {
             "main_text": "market",
             "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
-            "secondary_text": "near Barcelona Point, Northwest Harbor, NY, USA",
-            "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
+            "secondary_text": "near Dolce Sitges Barcelona, Avinguda Camí de Miralpeix, Sitges, Spain",
+            "secondary_text_matched_substrings":
+              [{ "length": 9, "offset": 18 }],
           },
         "terms":
           [
             { "offset": 0, "value": "market" },
             { "offset": 7, "value": "near" },
-            { "offset": 12, "value": "Barcelona Point" },
-            { "offset": 29, "value": "Northwest Harbor" },
-            { "offset": 47, "value": "NY" },
-            { "offset": 51, "value": "USA" },
+            { "offset": 12, "value": "Dolce Sitges Barcelona" },
+            { "offset": 36, "value": "Avinguda Camí de Miralpeix" },
+            { "offset": 64, "value": "Sitges" },
+            { "offset": 72, "value": "Spain" },
           ],
       },
       {
-        "description": "market near Barcelona, Westfield, NY, USA",
+        "description": "market near Barcelona Airport (BCN), Carrer de la Farina, Viladecans, Spain",
         "matched_substrings":
           [{ "length": 6, "offset": 0 }, { "length": 9, "offset": 12 }],
         "structured_formatting":
           {
             "main_text": "market",
             "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
-            "secondary_text": "near Barcelona, Westfield, NY, USA",
+            "secondary_text": "near Barcelona Airport (BCN), Carrer de la Farina, Viladecans, Spain",
             "secondary_text_matched_substrings": [{ "length": 9, "offset": 5 }],
           },
         "terms":
           [
             { "offset": 0, "value": "market" },
             { "offset": 7, "value": "near" },
-            { "offset": 12, "value": "Barcelona" },
-            { "offset": 23, "value": "Westfield" },
-            { "offset": 34, "value": "NY" },
-            { "offset": 38, "value": "USA" },
+            { "offset": 12, "value": "Barcelona Airport (BCN)" },
+            { "offset": 37, "value": "Carrer de la Farina" },
+            { "offset": 58, "value": "Viladecans" },
+            { "offset": 70, "value": "Spain" },
           ],
       },
     ],

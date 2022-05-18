@@ -59,6 +59,49 @@
         "place_id": "ChIJeU4e_C2HO4gRRcM6RZ_IPHw",
         "types": ["locality", "political"],
       },
+      {
+        "address_components":
+          [
+            {
+              "long_name": "Toledo",
+              "short_name": "Toledo",
+              "types": ["locality", "political"],
+            },
+            {
+              "long_name": "Toledo",
+              "short_name": "TO",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
+              "long_name": "Castile-La Mancha",
+              "short_name": "CM",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "Spain",
+              "short_name": "ES",
+              "types": ["country", "political"],
+            },
+          ],
+        "formatted_address": "Toledo, Spain",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 39.88605099999999, "lng": -3.9192423 },
+                "southwest": { "lat": 39.8383676, "lng": -4.0796176 },
+              },
+            "location": { "lat": 39.8628316, "lng": -4.027323099999999 },
+            "location_type": "APPROXIMATE",
+            "viewport":
+              {
+                "northeast": { "lat": 39.88605099999999, "lng": -3.9192423 },
+                "southwest": { "lat": 39.8383676, "lng": -4.0796176 },
+              },
+          },
+        "place_id": "ChIJ8f21C60Lag0R_q11auhbf8Y",
+        "types": ["locality", "political"],
+      },
     ],
   "status": "OK",
 }

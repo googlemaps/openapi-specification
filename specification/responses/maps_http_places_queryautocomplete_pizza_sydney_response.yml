@@ -37,23 +37,23 @@
           ],
       },
       {
-        "description": "pizza near Sydney Olympic Park NSW, Australia",
+        "description": "pizza near Sydney CBD, NSW, Australia",
         "matched_substrings":
           [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "near Sydney Olympic Park NSW, Australia",
+            "secondary_text": "near Sydney CBD, NSW, Australia",
             "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "near" },
-            { "offset": 11, "value": "Sydney Olympic Park" },
-            { "offset": 31, "value": "NSW" },
-            { "offset": 36, "value": "Australia" },
+            { "offset": 11, "value": "Sydney CBD" },
+            { "offset": 23, "value": "NSW" },
+            { "offset": 28, "value": "Australia" },
           ],
       },
       {
@@ -77,43 +77,45 @@
           ],
       },
       {
-        "description": "pizza near Sydney CBD, NSW, Australia",
+        "description": "pizza near Sydney Road, Campbellfield VIC, Australia",
         "matched_substrings":
           [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "near Sydney CBD, NSW, Australia",
+            "secondary_text": "near Sydney Road, Campbellfield VIC, Australia",
             "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "near" },
-            { "offset": 11, "value": "Sydney CBD" },
-            { "offset": 23, "value": "NSW" },
-            { "offset": 28, "value": "Australia" },
+            { "offset": 11, "value": "Sydney Road" },
+            { "offset": 24, "value": "Campbellfield" },
+            { "offset": 38, "value": "VIC" },
+            { "offset": 43, "value": "Australia" },
           ],
       },
       {
-        "description": "pizza near Sydney Mines, NS, Canada",
+        "description": "pizza near Sydney Opera House, Sydney NSW, Australia",
         "matched_substrings":
           [{ "length": 5, "offset": 0 }, { "length": 6, "offset": 11 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "near Sydney Mines, NS, Canada",
+            "secondary_text": "near Sydney Opera House, Sydney NSW, Australia",
             "secondary_text_matched_substrings": [{ "length": 6, "offset": 5 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "near" },
-            { "offset": 11, "value": "Sydney Mines" },
-            { "offset": 25, "value": "NS" },
-            { "offset": 29, "value": "Canada" },
+            { "offset": 11, "value": "Sydney Opera House" },
+            { "offset": 31, "value": "Sydney" },
+            { "offset": 38, "value": "NSW" },
+            { "offset": 43, "value": "Australia" },
           ],
       },
     ],

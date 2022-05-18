@@ -109,15 +109,15 @@
      <lng>-73.8085299</lng>
     </end_location>
     <polyline>
-     <points>q~gwFd_jbMMA@s@BeA@o@@i@DgBDkCD}A@s@B{@@c@@k@@g@@u@@_@BmC@a@H{C@o@Bw@@o@?A@q@Bo@@m@@o@Bm@@o@@o@@c@@I@o@BcA@m@?M@a@@Y@Y?UBm@B_B@m@Bo@@m@@m@?ABq@@o@@O?]@_@Bo@@M@a@HaE@i@@o@@m@?OBo@?E@g@?OBk@@q@B}ABo@B}A@o@@E@i@?O@m@@S@[?e@Bm@@o@@W@W@m@D}A@o@@o@@o@?CBo@?G@g@@OB_BD}A@c@@y@Bo@@o@Bm@?[@I@e@@i@@o@?EBi@@m@@o@DmA?OD}A@o@Bo@?K?ABm@@m@Bw@FeCDiBLuDBsCViLBo@FiDTkKDwARaKV_L@w@VyKLuH@QDmBF{ABa@?MBc@Ba@D_@Be@Dg@JkAN{B@_@Bo@Bw@?uB?WCmFIsEKkG[}Ha@{GOcBSsCo@{Gi@{EYeCIm@WoBo@qEk@wDsAqHGY}AiIu@_E{AcIQ{@Kk@WqAs@wDk@_DkBoJyBiLeBqJ_C_MeCwM_CcM}CkPmAoGmAoGyAyHwCqO_BwIaDqPa@uBgA}FKk@UoA}@wE[kB_BiIEUKk@e@eCMk@G[kB{JuCsOwAqHu@aEoBcKqAaH_DuPeCoMY}AiAkG}@{Es@qDeBaJiAaG[cBi@wCqEaVk@_CMk@Oi@_@{AEOU}@Oi@Mi@?AQg@GQWkAIa@CIMk@Kk@Iu@]sCIk@WyBGm@Gk@ESAAKi@Km@Kk@Kk@Mk@e@eCEYFC</points>
+     <points>q~gwFd_jbMMA@s@BeA@o@@i@DgBDkCD}A@s@B{@@c@@k@@g@@u@@_@BmC@a@H{C@o@Bw@@o@?A@q@Bo@@m@@o@Bm@@o@@o@@c@@I@o@BcA@m@?M@a@@Y@Y?UBm@B_B@m@Bo@@m@@m@?ABq@@o@@O?]@_@Bo@@M@a@HaE@i@@o@@m@?OBo@?E@g@?OBk@@q@B}ABo@B}A@o@@E@i@?O@m@@S@[?e@Bm@@o@@W@W@m@D}A@o@@o@@o@?CBo@?G@g@@OB_BD}A@c@@y@Bo@@o@Bm@?[@I@e@@i@@o@?EBi@@m@@o@DmA?OD}A@o@Bo@?K?ABm@@m@Bw@FeCDiBLuDBsCViLBo@FiDTkKDwARaKV_L@w@VyKLuH@QDmBF{ABa@?MBc@Ba@D_@Be@Dg@JkAN{B@_@Bo@Bw@?uB?WCmFIsEKkG[}Ha@{GOcBSsCo@{Gi@{EYeCIm@WoBo@qEk@wDsAqHGY}AiIu@_E{AcIQ{@Kk@WqAs@wDk@_DkBoJyBiLeBqJ_C_MeCwM_CcM}CkPmAoGmAoGyAyHwCqO_BwIaDqPa@uBgA}FKk@UoA}@wE[kB_BiIEUKk@e@eCMk@G[kB{JuCsOwAqHu@aEoBcKqAaH_DuPeCoMY}AiAkG}@{Es@qDeBaJiAaG[cBi@wCqEaVk@_CMk@Oi@_@{AEOU}@Oi@Mi@?AQg@GQWkAIa@CIMk@Kk@Iu@]sCIk@WyBWyAEUw@gEq@qDLE</points>
     </polyline>
     <duration>
      <value>840</value>
      <text>14 mins</text>
     </duration>
-    <html_instructions>Train towards Hempstead</html_instructions>
+    <html_instructions>Train towards West Hempstead</html_instructions>
     <distance>
-     <value>12272</value>
+     <value>12275</value>
      <text>7.6 mi</text>
     </distance>
     <transit_details>
@@ -136,7 +136,8 @@
       </location>
      </arrival_stop>
      <line>
-      <name>Hempstead</name>
+      <name>West Hempstead Branch</name>
+      <short_name>West Hempstead</short_name>
       <vehicle>
        <name>Train</name>
        <type>HEAVY_RAIL</type>
@@ -145,24 +146,24 @@
       <agency>
        <name>Long Island Rail Road</name>
        <url>http://www.mta.info/lirr</url>
-       <phone>1 (718) 558-7400</phone>
+       <phone>1 (718) 217-5477</phone>
       </agency>
-      <color>#ce8e00</color>
+      <color>#00a1de</color>
       <text_color>#121212</text_color>
      </line>
      <num_stops>2</num_stops>
-     <headsign>Hempstead</headsign>
+     <headsign>West Hempstead</headsign>
      <departure_time>
-      <value>1628705520</value>
-      <text>2:12pm</text>
+      <value>1652912460</value>
+      <text>6:21pm</text>
       <time_zone>America/New_York</time_zone>
      </departure_time>
      <arrival_time>
-      <value>1628706480</value>
-      <text>2:28pm</text>
+      <value>1652913600</value>
+      <text>6:40pm</text>
       <time_zone>America/New_York</time_zone>
      </arrival_time>
-     <trip_short_name>752</trip_short_name>
+     <trip_short_name>962</trip_short_name>
     </transit_details>
    </step>
    <step>
@@ -172,20 +173,20 @@
      <lng>-73.8085299</lng>
     </start_location>
     <end_location>
-     <lat>40.7004832</lat>
-     <lng>-73.8078264</lng>
+     <lat>40.7004619</lat>
+     <lng>-73.8079009</lng>
     </end_location>
     <polyline>
-     <points>qclwFhvnaMqCmAIBQaA</points>
+     <points>qclwFhvnaMqCmAIBMs@</points>
     </polyline>
     <duration>
-     <value>111</value>
+     <value>106</value>
      <text>2 mins</text>
     </duration>
     <html_instructions>Walk to Archer Av/Sutphin Blvd</html_instructions>
     <distance>
-     <value>118</value>
-     <text>387 ft</text>
+     <value>112</value>
+     <text>367 ft</text>
     </distance>
     <step>
      <travel_mode>WALKING</travel_mode>
@@ -217,51 +218,51 @@
       <lng>-73.8081580</lng>
      </start_location>
      <end_location>
-      <lat>40.7004832</lat>
-      <lng>-73.8078264</lng>
+      <lat>40.7004619</lat>
+      <lng>-73.8079009</lng>
      </end_location>
      <polyline>
-      <points>mhlwF~snaMQaA</points>
+      <points>mhlwF~snaMMs@</points>
      </polyline>
      <duration>
-      <value>22</value>
+      <value>17</value>
       <text>1 min</text>
      </duration>
      <html_instructions>Head &lt;b&gt;east&lt;/b&gt; on &lt;b&gt;Archer Ave&lt;/b&gt; toward &lt;b&gt;Sutphin Blvd&lt;/b&gt;</html_instructions>
      <distance>
-      <value>30</value>
-      <text>98 ft</text>
+      <value>24</value>
+      <text>79 ft</text>
      </distance>
     </step>
    </step>
    <step>
     <travel_mode>TRANSIT</travel_mode>
     <start_location>
-     <lat>40.7005160</lat>
-     <lng>-73.8078310</lng>
+     <lat>40.7004660</lat>
+     <lng>-73.8079070</lng>
     </start_location>
     <end_location>
      <lat>40.7287830</lat>
      <lng>-73.7928470</lng>
     </end_location>
     <polyline>
-     <points>gilwF|qnaMEBGWO}@a@aCOiBC[?I]iBKe@?MWoAAIa@sBCOGBOFc@NUHWJWHQy@c@{BIc@_@qB[eBEWy@iECSIg@e@cCg@cBKY_@sAQk@]kAm@sBUs@CIk@_BK[Qm@m@qBk@kB}@}CGM_@uA_@uAc@{AOk@I]k@qBEQG_@Ia@g@gCG[CQGW@KAQKg@]gBAC[eBQHs@\qAn@ID{C|AeD~A_Bv@{@b@e@Ti@Xw@^SJLb@Pn@Rv@HZJb@OMEAC?E??@SDE?]Cw@?K?a@?U?I?O@S@K@I@UD}@RIDi@REBeA`@IDC@G@C@A?KDI@IBM@M@M?M?K?GAG?KAOCIAGCKAICECOEGCGEUKYOi@YAACAkCwAKE_@UICMICAg@QGCEAGAC?C?WAKAM?IAMAM?OAWAWAUAM?EAG?MC]KSGICICKEICIGQGQMm@g@W[EGEEGKEICEIOGK@M?A?AAAGOEMEMCG?AA?IEICc@Ma@M}@Y[Ia@OGCKISIQEIAG?QA{ACQ@yAA[@a@?a@@sAB]?E?Q@Q??@iABQ@e@BQ@OBQBOFODOHOLULo@d@s@`@[P]PSLUNODYLSHIB]LWH[JWDQBu@Tu@VOBID}Af@A@IBk@PYJi@Pa@LGB{Ad@E?MDw@VAK</points>
+     <points>}hlwFlrnaMKDKi@O}@e@aCQiBCYAIYeBKi@CMUoAAI_@qBCOEYEc@ACGg@QqAEYKaAACGg@Ga@OiABMBGG[?A?AEWIc@G]EUW{AMq@Mw@CMCIG_@OwAMmA?CGm@E]Iq@AE?ECWUsACUO_AEYE_@QkAGYAAIICUOeASsAAEG[COO}@SkACQEMGMw@{BAEAG[_AK]K_@Sq@EMESm@wBACSy@Mc@yAz@OJMFKFiAl@i@Tq@XEQG_@Ia@Ia@]eBG[CQGW@KAQKg@]gBAC[eBQHs@\qAn@ID{C|AeD~A_Bv@{@b@e@Ti@Xw@^SJLb@Pn@Rv@HZJb@OMEAC?E??@SDE?]Cw@?K?a@?U?I?O@S@K@I@UD}@RIDi@REBeA`@IDC@G@C@A?KDI@IBM@M@M?M?K?GAG?KAOCIAGCKAICECOEGCGEUKYOi@YAACAkCwAKE_@UICMICAg@QGCEAGAC?C?WAKAM?IAMAM?OAWAWAUAM?EAG?MC]KSGICICKEICIGQGQMm@g@W[EGEEGKEICEIOGK@M?A?AAAGOEMEMCG?AA?IEICc@Ma@M}@Y[Ia@OGCKISIQEIAG?QA{ACQ@yAA[@a@?a@@sAB]?E?Q@Q??@iABQ@e@BQ@OBQBOFODOHOLULo@d@s@`@[P]PSLUNODYLSHIB]LWH[JWDQBu@Tu@VOBID}Af@A@IBk@PYJi@Pa@LGB{Ad@E?MDw@VAK</points>
     </polyline>
     <duration>
-     <value>1483</value>
-     <text>25 mins</text>
+     <value>1363</value>
+     <text>23 mins</text>
     </duration>
-    <html_instructions>Bus towards Bayside 27 Ave Francis Lewis Blvd</html_instructions>
+    <html_instructions>Bus towards Queensborough Community College</html_instructions>
     <distance>
-     <value>4494</value>
-     <text>2.8 mi</text>
+     <value>4630</value>
+     <text>2.9 mi</text>
     </distance>
     <transit_details>
      <departure_stop>
       <name>Archer Av/Sutphin Blvd</name>
       <location>
-       <lat>40.7005160</lat>
-       <lng>-73.8078310</lng>
+       <lat>40.7004660</lat>
+       <lng>-73.8079070</lng>
       </location>
      </departure_stop>
      <arrival_stop>
@@ -272,8 +273,8 @@
       </location>
      </arrival_stop>
      <line>
-      <name>Bayside - Jamaica</name>
-      <short_name>Q31</short_name>
+      <name>Little Neck or Queensborough Community College - Jamaica</name>
+      <short_name>Q30</short_name>
       <vehicle>
        <name>Bus</name>
        <type>BUS</type>
@@ -286,16 +287,16 @@
       <color>#1d59b3</color>
       <text_color>#ffffff</text_color>
      </line>
-     <num_stops>16</num_stops>
-     <headsign>Bayside 27 Ave Francis Lewis Blvd</headsign>
+     <num_stops>17</num_stops>
+     <headsign>Queensborough Community College</headsign>
      <departure_time>
-      <value>1628706900</value>
-      <text>2:35pm</text>
+      <value>1652914020</value>
+      <text>6:47pm</text>
       <time_zone>America/New_York</time_zone>
      </departure_time>
      <arrival_time>
-      <value>1628708383</value>
-      <text>2:59pm</text>
+      <value>1652915383</value>
+      <text>7:09pm</text>
       <time_zone>America/New_York</time_zone>
      </arrival_time>
     </transit_details>
@@ -307,11 +308,11 @@
      <lng>-73.7928353</lng>
     </start_location>
     <end_location>
-     <lat>40.7281120</lat>
-     <lng>-73.7947583</lng>
+     <lat>40.7282310</lat>
+     <lng>-73.7947785</lng>
     </end_location>
     <polyline>
-     <points>}yqwFftkaMr@U?\J\Jv@DV@FL~@BZBL\vC</points>
+     <points>}yqwFftkaMr@U?\J\Jv@DV@FL~@BZBL\vCWB</points>
     </polyline>
     <duration>
      <value>197</value>
@@ -376,11 +377,11 @@
       <lng>-73.7947583</lng>
      </start_location>
      <end_location>
-      <lat>40.7281120</lat>
-      <lng>-73.7947583</lng>
+      <lat>40.7282310</lat>
+      <lng>-73.7947785</lng>
      </end_location>
      <polyline>
-      <points>uuqwFf`laM</points>
+      <points>uuqwFf`laMWB</points>
      </polyline>
      <duration>
       <value>15</value>
@@ -395,11 +396,11 @@
     </step>
    </step>
    <duration>
-    <value>3367</value>
-    <text>56 mins</text>
+    <value>3427</value>
+    <text>57 mins</text>
    </duration>
    <distance>
-    <value>17465</value>
+    <value>17598</value>
     <text>10.9 mi</text>
    </distance>
    <start_location>
@@ -407,25 +408,25 @@
     <lng>-73.9442531</lng>
    </start_location>
    <end_location>
-    <lat>40.7281120</lat>
-    <lng>-73.7947583</lng>
+    <lat>40.7282310</lat>
+    <lng>-73.7947785</lng>
    </end_location>
    <start_address>Brooklyn, NY, USA</start_address>
    <end_address>Queens, NY, USA</end_address>
    <departure_time>
-    <value>1628705214</value>
-    <text>2:06pm</text>
+    <value>1652912154</value>
+    <text>6:15pm</text>
     <time_zone>America/New_York</time_zone>
    </departure_time>
    <arrival_time>
-    <value>1628708581</value>
-    <text>3:03pm</text>
+    <value>1652915581</value>
+    <text>7:13pm</text>
     <time_zone>America/New_York</time_zone>
    </arrival_time>
   </leg>
-  <copyrights>Map data ©2021</copyrights>
+  <copyrights>Map data ©2022 Google</copyrights>
   <overview_polyline>
-   <points>u}gwFpfibM`@BQzHMzF]vEMA@s@DuBFqCPyIFmDPkJFyCRqJNoGP_JPoGj@gY^kRxA{n@dBsx@~@gd@R}FLsBd@uGDoABmDCeGU_N[}Ha@{Gc@wFo@{Gi@{Ec@sDgAaIk@wDsAqHeBcJqCcOiBqJwCoO_F{WcPg{@mKkj@kJ}f@{B_MoLin@yUioAaHq^eA{FqEaVk@_C]uAe@kBs@sCYy@a@mBQu@UaBgAgJ[kBq@qDk@_DFCqCmAIBQaAMBWuAa@aCOiBCe@i@oCW}Ac@}BCOGBs@Vm@TWHQy@m@_D{@wEmA}Ge@cCg@cBk@mBsB_HmAsD_DiKsBsHu@oCMq@}@wEGW@KMy@_@kB[eBQHeClAeDbBgJpEaBx@SJLb@d@fBT~@UOI?SFc@C{B?y@D_@FgAX_C~@QDm@Lu@@k@Gg@Ke@S{Aw@{DuBWMk@SYGu@CiCKy@Qs@Uw@a@m@g@W[KM[k@GK@M?CUm@CIKEmCy@}@YSMe@OQAyEE{FHaCJa@Da@J_@Ne@ZcBfAy@b@i@\i@RsAd@s@PgAXeAZgBl@qAb@oDhASDw@VAKp@W?\J\PnANfAd@`E</points>
+   <points>u}gwFpfibM`@BQzHMzF]vEMA@s@DuBFqCPyIFmDPkJFyCRqJNoGP_JPoGj@gY^kRxA{n@dBsx@~@gd@R}FLsBd@uGDoABmDCeGU_N[}Ha@{Gc@wFo@{Gi@{Ec@sDgAaIk@wDsAqHeBcJqCcOiBqJwCoO_F{WcPg{@mKkj@kJ}f@{B_MoLin@yUioAaHq^eA{FqEaVk@_C]uAe@kBs@sCYy@a@mBQu@UaBg@_EWyBWyA}@}Eq@qDLEqCmAIBOq@KDKi@u@_EUcC[oBg@qCo@_Ea@wC]oCOiABMBGG[?CO{@s@aE]oBe@wEQ{Am@aEKy@YeBKKi@uDo@uDI_@_AiCk@kB}BmIcCvAsBbAq@XEQQaAg@gCKm@GW@KMy@_@kB[eBQHeClAkLzFcErBSJLb@d@fBT~@UO]FgBCqA@_AJgAXo@V{Aj@[Hs@Fi@Am@Kk@O_Ae@_G_Dy@Yg@C_CKq@CiA[i@Uc@Um@g@W[KMMUMUGK@M?CIQOe@wEyASMe@O_CGiD@yCDmBFyAJa@J_@NiCbBcB`AgA`@u@Vs@PmCt@sBr@qC|@cBh@SDw@VAKp@W?\J\PnAVpB\vCWB</points>
   </overview_polyline>
   <warning>Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths.</warning>
   <bounds>

@@ -98,6 +98,37 @@
   </structured_formatting>
  </prediction>
  <prediction>
+  <description>Victoria Station, Manchester, Royaume-Uni</description>
+  <type>premise</type>
+  <type>geocode</type>
+  <reference>ChIJBZFitcexe0gR2y8J3ATzfLk</reference>
+  <term>
+   <value>Victoria Station</value>
+   <offset>0</offset>
+  </term>
+  <term>
+   <value>Manchester</value>
+   <offset>18</offset>
+  </term>
+  <term>
+   <value>Royaume-Uni</value>
+   <offset>30</offset>
+  </term>
+  <matched_substring>
+   <offset>0</offset>
+   <length>4</length>
+  </matched_substring>
+  <place_id>ChIJBZFitcexe0gR2y8J3ATzfLk</place_id>
+  <structured_formatting>
+   <description>Victoria Station</description>
+   <subdescription>Manchester, Royaume-Uni</subdescription>
+   <description_matched_substring>
+    <offset>0</offset>
+    <length>4</length>
+   </description_matched_substring>
+  </structured_formatting>
+ </prediction>
+ <prediction>
   <description>Victoria, Texas, États-Unis</description>
   <type>locality</type>
   <type>political</type>
@@ -123,37 +154,6 @@
   <structured_formatting>
    <description>Victoria</description>
    <subdescription>Texas, États-Unis</subdescription>
-   <description_matched_substring>
-    <offset>0</offset>
-    <length>4</length>
-   </description_matched_substring>
-  </structured_formatting>
- </prediction>
- <prediction>
-  <description>Victoria Station, Manchester, Royaume-Uni</description>
-  <type>premise</type>
-  <type>geocode</type>
-  <reference>ChIJBZFitcexe0gR2y8J3ATzfLk</reference>
-  <term>
-   <value>Victoria Station</value>
-   <offset>0</offset>
-  </term>
-  <term>
-   <value>Manchester</value>
-   <offset>18</offset>
-  </term>
-  <term>
-   <value>Royaume-Uni</value>
-   <offset>30</offset>
-  </term>
-  <matched_substring>
-   <offset>0</offset>
-   <length>4</length>
-  </matched_substring>
-  <place_id>ChIJBZFitcexe0gR2y8J3ATzfLk</place_id>
-  <structured_formatting>
-   <description>Victoria Station</description>
-   <subdescription>Manchester, Royaume-Uni</subdescription>
    <description_matched_substring>
     <offset>0</offset>
     <length>4</length>

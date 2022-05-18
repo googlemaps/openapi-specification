@@ -122,6 +122,8 @@ ErrorObject:
   $ref: "./errors/ErrorObject.yml"
 ErrorDetail:
   $ref: "./errors/ErrorDetail.yml"
+FieldViolation:
+  $ref: "./errors/FieldViolation.yml"
 # Places
 Place:
   $ref: "./Place.yml"

@@ -16,8 +16,8 @@
 {
   "plus_code":
     {
-      "compound_code": "P27Q+MC New York, NY, USA",
-      "global_code": "87G8P27Q+MC",
+      "compound_code": "P27Q+MCM New York, NY, USA",
+      "global_code": "87G8P27Q+MCM",
     },
   "results":
     [
@@ -285,6 +285,56 @@
           },
         "place_id": "ChIJ8ThWRGBZwokR3E1zUisk3LU",
         "types": ["route"],
+      },
+      {
+        "address_components":
+          [
+            {
+              "long_name": "P27Q+MC",
+              "short_name": "P27Q+MC",
+              "types": ["plus_code"],
+            },
+            {
+              "long_name": "New York",
+              "short_name": "New York",
+              "types": ["locality", "political"],
+            },
+            {
+              "long_name": "New York",
+              "short_name": "NY",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "United States",
+              "short_name": "US",
+              "types": ["country", "political"],
+            },
+          ],
+        "formatted_address": "P27Q+MC New York, NY, USA",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 40.71425, "lng": -73.96137499999999 },
+                "southwest": { "lat": 40.714125, "lng": -73.9615 },
+              },
+            "location": { "lat": 40.714224, "lng": -73.961452 },
+            "location_type": "GEOMETRIC_CENTER",
+            "viewport":
+              {
+                "northeast":
+                  { "lat": 40.71553648029149, "lng": -73.96008851970849 },
+                "southwest":
+                  { "lat": 40.71283851970849, "lng": -73.96278648029151 },
+              },
+          },
+        "place_id": "GhIJWAIpsWtbREARHyv4bYh9UsA",
+        "plus_code":
+          {
+            "compound_code": "P27Q+MC New York, NY, USA",
+            "global_code": "87G8P27Q+MC",
+          },
+        "types": ["plus_code"],
       },
       {
         "address_components":
@@ -558,44 +608,6 @@
         "address_components":
           [
             {
-              "long_name": "Long Island",
-              "short_name": "Long Island",
-              "types": ["establishment", "natural_feature"],
-            },
-            {
-              "long_name": "New York",
-              "short_name": "NY",
-              "types": ["administrative_area_level_1", "political"],
-            },
-            {
-              "long_name": "United States",
-              "short_name": "US",
-              "types": ["country", "political"],
-            },
-          ],
-        "formatted_address": "Long Island, New York, USA",
-        "geometry":
-          {
-            "bounds":
-              {
-                "northeast": { "lat": 41.1612401, "lng": -71.85620109999999 },
-                "southwest": { "lat": 40.5429789, "lng": -74.0419497 },
-              },
-            "location": { "lat": 40.789142, "lng": -73.13496099999999 },
-            "location_type": "APPROXIMATE",
-            "viewport":
-              {
-                "northeast": { "lat": 41.1612401, "lng": -71.85620109999999 },
-                "southwest": { "lat": 40.5429789, "lng": -74.0419497 },
-              },
-          },
-        "place_id": "ChIJy6Xu4VRE6IkRGA2UhmH59x0",
-        "types": ["establishment", "natural_feature"],
-      },
-      {
-        "address_components":
-          [
-            {
               "long_name": "New York",
               "short_name": "NY",
               "types": ["administrative_area_level_1", "political"],
@@ -652,56 +664,6 @@
           },
         "place_id": "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
         "types": ["country", "political"],
-      },
-      {
-        "address_components":
-          [
-            {
-              "long_name": "P27Q+MC",
-              "short_name": "P27Q+MC",
-              "types": ["plus_code"],
-            },
-            {
-              "long_name": "New York",
-              "short_name": "New York",
-              "types": ["locality", "political"],
-            },
-            {
-              "long_name": "New York",
-              "short_name": "NY",
-              "types": ["administrative_area_level_1", "political"],
-            },
-            {
-              "long_name": "United States",
-              "short_name": "US",
-              "types": ["country", "political"],
-            },
-          ],
-        "formatted_address": "P27Q+MC New York, NY, USA",
-        "geometry":
-          {
-            "bounds":
-              {
-                "northeast": { "lat": 40.71425, "lng": -73.96137499999999 },
-                "southwest": { "lat": 40.714125, "lng": -73.9615 },
-              },
-            "location": { "lat": 40.714224, "lng": -73.961452 },
-            "location_type": "ROOFTOP",
-            "viewport":
-              {
-                "northeast":
-                  { "lat": 40.71553648029149, "lng": -73.96008851970849 },
-                "southwest":
-                  { "lat": 40.71283851970849, "lng": -73.96278648029151 },
-              },
-          },
-        "place_id": "GhIJWAIpsWtbREARHyv4bYh9UsA",
-        "plus_code":
-          {
-            "compound_code": "P27Q+MC New York, NY, USA",
-            "global_code": "87G8P27Q+MC",
-          },
-        "types": ["plus_code"],
       },
     ],
   "status": "OK",

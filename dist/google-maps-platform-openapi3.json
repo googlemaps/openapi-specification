@@ -33761,9 +33761,7 @@
             "description": "A list of field violations.",
             "type": "array",
             "items": {
-              "schema": {
-                "type": "object"
-              }
+              "$ref": "#/components/schemas/FieldViolation"
             }
           }
         },
@@ -33771,6 +33769,24 @@
           "message": "API key not valid. Please pass a valid API key.",
           "domain": "global",
           "reason": "badRequest"
+        }
+      },
+      "FieldViolation": {
+        "type": "object",
+        "title": "FieldViolation",
+        "required": [
+          "field",
+          "description"
+        ],
+        "properties": {
+          "field": {
+            "description": "The name of the invalid field.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A short description of the error.",
+            "type": "string"
+          }
         }
       },
       "Place": {

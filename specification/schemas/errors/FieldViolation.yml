@@ -13,31 +13,13 @@
 # limitations under the License.
 
 type: object
-title: ErrorDetail
+title: FieldViolation
+required: [field, description]
 properties:
-  "@type":
-    description: The type of error.
+  field:
+    description: The name of the invalid field.
     type: string
-    example: type.googleapis.com/google.rpc.ErrorInfo
-  message:
+  description:
     description: A short description of the error.
     type: string
-  reason:
-    type: string
-    description: A reason for the error.
-  domain:
-    type: string
-    description: The domain in which the error occurred.
-  metadata:
-    type: object
-    description: Additional metadata about the error.
-  fieldViolations:
-    description: A list of field violations.
-    type: array
-    items:
-      $ref: "./FieldViolation.yml"
-example:
-  message: API key not valid. Please pass a valid API key.
-  domain: global
-  reason: badRequest
-          
+    

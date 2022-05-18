@@ -34,4 +34,7 @@ properties:
   status:
     description: Contains the status of the request, and may contain debugging information to help you track down why the request failed.
     $ref: "./DistanceMatrixStatus.yml"
-    
+  error_message:
+    description: A string containing the human-readable text of any errors encountered while the request was being processed.
+    type: string
+    example: "You have exceeded your rate-limit for this API."

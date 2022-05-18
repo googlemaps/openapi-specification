@@ -32,15 +32,15 @@
       {
         "bounds":
           {
-            "northeast": { "lat": 37.7734882, "lng": -122.4649822 },
+            "northeast": { "lat": 37.7733928, "lng": -122.4662088 },
             "southwest": { "lat": 37.7732432, "lng": -122.4695019 },
           },
-        "copyrights": "Map data ©2021",
+        "copyrights": "Map data ©2022",
         "legs":
           [
             {
-              "distance": { "text": "0.5 mi", "value": 733 },
-              "duration": { "text": "2 mins", "value": 145 },
+              "distance": { "text": "0.3 mi", "value": 516 },
+              "duration": { "text": "2 mins", "value": 117 },
               "end_address": "3520 Fulton St, San Francisco, CA 94118, USA",
               "end_location": { "lat": 37.7732432, "lng": -122.4695019 },
               "start_address": "3426 Fulton St, San Francisco, CA 94118, USA",
@@ -48,30 +48,28 @@
               "steps":
                 [
                   {
-                    "distance": { "text": "0.2 mi", "value": 335 },
-                    "duration": { "text": "1 min", "value": 43 },
-                    "end_location": { "lat": 37.7734882, "lng": -122.4649822 },
+                    "distance": { "text": "0.1 mi", "value": 226 },
+                    "duration": { "text": "1 min", "value": 29 },
+                    "end_location": { "lat": 37.7733928, "lng": -122.4662088 },
                     "html_instructions": "Head <b>east</b> on <b>Fulton St</b> toward <b>10th Ave</b>",
                     "polyline":
-                      {
-                        "points": "_rpeFztnjVAm@AoAAS?UAg@E}AAy@?UAs@Ai@ASA{@?QAWCu@AOCm@Em@",
-                      },
+                      { "points": "_rpeFztnjVAm@AoAAS?UAg@E}AAy@?UAs@Ai@AS?Q" },
                     "start_location":
                       { "lat": 37.7732756, "lng": -122.4687797 },
                     "travel_mode": "DRIVING",
                   },
                   {
-                    "distance": { "text": "0.2 mi", "value": 398 },
-                    "duration": { "text": "2 mins", "value": 102 },
+                    "distance": { "text": "0.2 mi", "value": 290 },
+                    "duration": { "text": "1 min", "value": 88 },
                     "end_location": { "lat": 37.7732432, "lng": -122.4695019 },
                     "html_instructions": "Make a <b>U-turn</b>",
                     "maneuver": "uturn-left",
                     "polyline":
                       {
-                        "points": "ispeFb}mjVDl@Bl@@NBt@@V?P@z@@R@h@@r@?T@x@D|A@f@?T@R@nADnB@r@@X",
+                        "points": "urpeFxdnjV?P@R@h@@r@?T@x@D|A@f@?T@R@nADnB@r@@X",
                       },
                     "start_location":
-                      { "lat": 37.7734882, "lng": -122.4649822 },
+                      { "lat": 37.7733928, "lng": -122.4662088 },
                     "travel_mode": "DRIVING",
                   },
                 ],
@@ -79,7 +77,7 @@
               "via_waypoint": [],
             },
           ],
-        "overview_polyline": { "points": "_rpeFztnjVO}JGmDGoBI{AHzAFnBPbKLvH" },
+        "overview_polyline": { "points": "_rpeFztnjVO}JEcCDbCR~LBlA" },
         "summary": "Fulton St",
         "warnings": [],
         "waypoint_order": [],

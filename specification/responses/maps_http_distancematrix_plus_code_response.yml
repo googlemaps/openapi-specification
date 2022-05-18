@@ -15,8 +15,20 @@
 # [START maps_http_distancematrix_plus_code_response]
 {
   "destination_addresses": ["San Francisco, CA, USA"],
-  "origin_addresses": [""],
-  "rows": [{ "elements": [{ "status": "NOT_FOUND" }] }],
+  "origin_addresses": ["CWC8+R9 Mountain View, CA, USA"],
+  "rows":
+    [
+      {
+        "elements":
+          [
+            {
+              "distance": { "text": "56.8 km", "value": 56830 },
+              "duration": { "text": "41 mins", "value": 2449 },
+              "status": "OK",
+            },
+          ],
+      },
+    ],
   "status": "OK",
 }
 # [END maps_http_distancematrix_plus_code_response]

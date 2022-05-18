@@ -37,9 +37,9 @@
           ],
         "types":
           [
-            "electronics_store",
-            "home_goods_store",
             "point_of_interest",
+            "home_goods_store",
+            "electronics_store",
             "store",
             "establishment",
           ],
@@ -65,9 +65,9 @@
           ],
         "types":
           [
-            "electronics_store",
-            "home_goods_store",
             "point_of_interest",
+            "home_goods_store",
+            "electronics_store",
             "store",
             "establishment",
           ],
@@ -93,33 +93,12 @@
           ],
         "types":
           [
-            "electronics_store",
-            "home_goods_store",
             "point_of_interest",
+            "home_goods_store",
+            "electronics_store",
             "store",
             "establishment",
           ],
-      },
-      {
-        "description": "Amoeba, Sunset Boulevard, Los Angeles, CA, USA",
-        "matched_substrings": [{ "length": 6, "offset": 0 }],
-        "place_id": "ChIJc4h0lUK_woAR00GNJt9ZHXo",
-        "reference": "ChIJc4h0lUK_woAR00GNJt9ZHXo",
-        "structured_formatting":
-          {
-            "main_text": "Amoeba",
-            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
-            "secondary_text": "Sunset Boulevard, Los Angeles, CA, USA",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Amoeba" },
-            { "offset": 8, "value": "Sunset Boulevard" },
-            { "offset": 26, "value": "Los Angeles" },
-            { "offset": 39, "value": "CA" },
-            { "offset": 43, "value": "USA" },
-          ],
-        "types": ["point_of_interest", "establishment"],
       },
       {
         "description": "Amoeba CrossFit, Park Creek Drive, Clovis, CA, USA",
@@ -141,6 +120,29 @@
             { "offset": 47, "value": "USA" },
           ],
         "types": ["gym", "health", "point_of_interest", "establishment"],
+      },
+      {
+        "description": "Amoeba - HM Leisure, Church Street, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka, India",
+        "matched_substrings": [{ "length": 6, "offset": 0 }],
+        "place_id": "ChIJ8yiiSnwWrjsRmVzwBO5BqJo",
+        "reference": "ChIJ8yiiSnwWrjsRmVzwBO5BqJo",
+        "structured_formatting":
+          {
+            "main_text": "Amoeba - HM Leisure",
+            "main_text_matched_substrings": [{ "length": 6, "offset": 0 }],
+            "secondary_text": "Church Street, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka, India",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Amoeba - HM Leisure" },
+            { "offset": 21, "value": "Church Street" },
+            { "offset": 36, "value": "Shanthala Nagar" },
+            { "offset": 53, "value": "Ashok Nagar" },
+            { "offset": 66, "value": "Bengaluru" },
+            { "offset": 77, "value": "Karnataka" },
+            { "offset": 88, "value": "India" },
+          ],
+        "types": ["bowling_alley", "point_of_interest", "establishment"],
       },
     ],
   "status": "OK",

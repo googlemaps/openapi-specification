@@ -3,52 +3,34 @@
 <PlaceSearchResponse>
  <status>OK</status>
  <result>
-  <name>123 Main Street Restaurant : Seasonal June 21 -Labor Day</name>
-  <type>bakery</type>
-  <type>cafe</type>
-  <type>restaurant</type>
-  <type>food</type>
-  <type>point_of_interest</type>
-  <type>store</type>
-  <type>establishment</type>
-  <formatted_address>123 Main St, Northeast Harbor, ME 04662, United States</formatted_address>
+  <name>123 Main St</name>
+  <type>street_address</type>
+  <formatted_address>123 Main St, Boston, MA 02110, USA</formatted_address>
   <geometry>
    <location>
-    <lat>44.2937113</lat>
-    <lng>-68.2892093</lng>
+    <lat>42.3744917</lat>
+    <lng>-71.0634802</lng>
    </location>
    <viewport>
     <southwest>
-     <lat>44.2924135</lat>
-     <lng>-68.2904762</lng>
+     <lat>42.3731168</lat>
+     <lng>-71.0648907</lng>
     </southwest>
     <northeast>
-     <lat>44.2951131</lat>
-     <lng>-68.2877766</lng>
+     <lat>42.3758164</lat>
+     <lng>-71.0621911</lng>
     </northeast>
    </viewport>
   </geometry>
-  <rating>4.5</rating>
-  <icon>https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png</icon>
-  <reference>ChIJS10S9VW8rkwRhkCRo51uFnc</reference>
-  <opening_hours>
-   <open_now>false</open_now>
-  </opening_hours>
-  <photo>
-   <photo_reference>Aap_uECTNF51EjOA7SXMMcDNlP1zct-0iHKw0Ne2dDzq9I9t65DN_iHmsEf6NCUQxq60gRmRs1iZgtyQ4tf4K-GjuFeEff74uRJ6SpyI0JHoumi9n9llz_LScqLp5-F-6GyyvudJMMSO5rSOltH8RkxYM8RGuJHFlrSj0xQ6dE26SgVC2Hw</photo_reference>
-   <width>1024</width>
-   <height>768</height>
-   <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/102531981953403924466&quot;&gt;A Google User&lt;/a&gt;</html_attribution>
-  </photo>
-  <user_ratings_total>75</user_ratings_total>
-  <place_id>ChIJS10S9VW8rkwRhkCRo51uFnc</place_id>
+  <icon>https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png</icon>
+  <reference>ChIJd_ueCe1w44kRD_KFuN5w5nA</reference>
+  <place_id>ChIJd_ueCe1w44kRD_KFuN5w5nA</place_id>
   <plus_code>
-   <global_code>87PH7PV6+F8</global_code>
-   <compound_code>7PV6+F8 Northeast Harbor, Mt Desert, ME, United States</compound_code>
+   <global_code>87JC9WFP+QJ</global_code>
+   <compound_code>9WFP+QJ Boston, Massachusetts</compound_code>
   </plus_code>
-  <icon_background_color>#FF9E67</icon_background_color>
-  <business_status>OPERATIONAL</business_status>
-  <icon_mask_base_uri>https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet</icon_mask_base_uri>
+  <icon_background_color>#7B9EB0</icon_background_color>
+  <icon_mask_base_uri>https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet</icon_mask_base_uri>
  </result>
 </PlaceSearchResponse>
 <!-- [END maps_http_places_textsearch_location_response] -->

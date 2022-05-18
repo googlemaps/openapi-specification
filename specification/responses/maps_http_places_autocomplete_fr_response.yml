@@ -74,25 +74,6 @@
         "types": ["locality", "political", "geocode"],
       },
       {
-        "description": "Victoria, Texas, États-Unis",
-        "matched_substrings": [{ "length": 4, "offset": 0 }],
-        "place_id": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
-        "reference": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
-        "structured_formatting":
-          {
-            "main_text": "Victoria",
-            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
-            "secondary_text": "Texas, États-Unis",
-          },
-        "terms":
-          [
-            { "offset": 0, "value": "Victoria" },
-            { "offset": 10, "value": "Texas" },
-            { "offset": 17, "value": "États-Unis" },
-          ],
-        "types": ["locality", "political", "geocode"],
-      },
-      {
         "description": "Victoria Station, Manchester, Royaume-Uni",
         "matched_substrings": [{ "length": 4, "offset": 0 }],
         "place_id": "ChIJBZFitcexe0gR2y8J3ATzfLk",
@@ -110,6 +91,25 @@
             { "offset": 30, "value": "Royaume-Uni" },
           ],
         "types": ["premise", "geocode"],
+      },
+      {
+        "description": "Victoria, Texas, États-Unis",
+        "matched_substrings": [{ "length": 4, "offset": 0 }],
+        "place_id": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
+        "reference": "ChIJO6wtLttmQoYRfSZjb1YN4u4",
+        "structured_formatting":
+          {
+            "main_text": "Victoria",
+            "main_text_matched_substrings": [{ "length": 4, "offset": 0 }],
+            "secondary_text": "Texas, États-Unis",
+          },
+        "terms":
+          [
+            { "offset": 0, "value": "Victoria" },
+            { "offset": 10, "value": "Texas" },
+            { "offset": 17, "value": "États-Unis" },
+          ],
+        "types": ["locality", "political", "geocode"],
       },
     ],
   "status": "OK",

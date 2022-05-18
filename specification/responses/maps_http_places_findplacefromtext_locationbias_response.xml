@@ -2,24 +2,28 @@
 <!-- [START maps_http_places_findplacefromtext_locationbias_response] -->
 <FindPlaceFromTextResponse>
  <candidates>
-  <name>Mongolia</name>
-  <formatted_address>Mongolia</formatted_address>
+  <name>Mongolian Grill Kirkland</name>
+  <formatted_address>9738 NE 117th Ln ste c, Kirkland, WA 98034, United States</formatted_address>
   <geometry>
    <location>
-    <lat>46.8624960</lat>
-    <lng>103.8466560</lng>
+    <lat>47.7057451</lat>
+    <lng>-122.2111470</lng>
    </location>
    <viewport>
     <southwest>
-     <lat>41.5818330</lat>
-     <lng>87.7344789</lng>
+     <lat>47.7043428</lat>
+     <lng>-122.2124945</lng>
     </southwest>
     <northeast>
-     <lat>52.1483550</lat>
-     <lng>119.9315098</lng>
+     <lat>47.7070424</lat>
+     <lng>-122.2097948</lng>
     </northeast>
    </viewport>
   </geometry>
+  <rating>4.5</rating>
+  <opening_hours>
+   <open_now>true</open_now>
+  </opening_hours>
  </candidates>
  <status>OK</status>
 </FindPlaceFromTextResponse>

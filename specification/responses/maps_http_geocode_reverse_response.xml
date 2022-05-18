@@ -309,6 +309,65 @@
   <place_id>ChIJ8ThWRGBZwokR3E1zUisk3LU</place_id>
  </result>
  <result>
+  <type>plus_code</type>
+  <formatted_address>P27Q+MC New York, NY, USA</formatted_address>
+  <address_component>
+   <long_name>P27Q+MC</long_name>
+   <short_name>P27Q+MC</short_name>
+   <type>plus_code</type>
+  </address_component>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>New York</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>NY</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>40.7142240</lat>
+    <lng>-73.9614520</lng>
+   </location>
+   <location_type>GEOMETRIC_CENTER</location_type>
+   <viewport>
+    <southwest>
+     <lat>40.7128385</lat>
+     <lng>-73.9627865</lng>
+    </southwest>
+    <northeast>
+     <lat>40.7155365</lat>
+     <lng>-73.9600885</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>40.7141250</lat>
+     <lng>-73.9615000</lng>
+    </southwest>
+    <northeast>
+     <lat>40.7142500</lat>
+     <lng>-73.9613750</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>GhIJWAIpsWtbREARHyv4bYh9UsA</place_id>
+  <plus_code>
+   <global_code>87G8P27Q+MC</global_code>
+   <compound_code>P27Q+MC New York, NY, USA</compound_code>
+  </plus_code>
+ </result>
+ <result>
   <type>neighborhood</type>
   <type>political</type>
   <formatted_address>South Williamsburg, Brooklyn, NY, USA</formatted_address>
@@ -667,57 +726,6 @@
   <place_id>ChIJOwg_06VPwokRYv534QaPC8g</place_id>
  </result>
  <result>
-  <type>establishment</type>
-  <type>natural_feature</type>
-  <formatted_address>Long Island, New York, USA</formatted_address>
-  <address_component>
-   <long_name>Long Island</long_name>
-   <short_name>Long Island</short_name>
-   <type>establishment</type>
-   <type>natural_feature</type>
-  </address_component>
-  <address_component>
-   <long_name>New York</long_name>
-   <short_name>NY</short_name>
-   <type>administrative_area_level_1</type>
-   <type>political</type>
-  </address_component>
-  <address_component>
-   <long_name>United States</long_name>
-   <short_name>US</short_name>
-   <type>country</type>
-   <type>political</type>
-  </address_component>
-  <geometry>
-   <location>
-    <lat>40.7891420</lat>
-    <lng>-73.1349610</lng>
-   </location>
-   <location_type>APPROXIMATE</location_type>
-   <viewport>
-    <southwest>
-     <lat>40.5429789</lat>
-     <lng>-74.0419497</lng>
-    </southwest>
-    <northeast>
-     <lat>41.1612401</lat>
-     <lng>-71.8562011</lng>
-    </northeast>
-   </viewport>
-   <bounds>
-    <southwest>
-     <lat>40.5429789</lat>
-     <lng>-74.0419497</lng>
-    </southwest>
-    <northeast>
-     <lat>41.1612401</lat>
-     <lng>-71.8562011</lng>
-    </northeast>
-   </bounds>
-  </geometry>
-  <place_id>ChIJy6Xu4VRE6IkRGA2UhmH59x0</place_id>
- </result>
- <result>
   <type>administrative_area_level_1</type>
   <type>political</type>
   <formatted_address>New York, USA</formatted_address>
@@ -801,68 +809,9 @@
   </geometry>
   <place_id>ChIJCzYy5IS16lQRQrfeQ5K5Oxw</place_id>
  </result>
- <result>
-  <type>plus_code</type>
-  <formatted_address>P27Q+MC New York, NY, USA</formatted_address>
-  <address_component>
-   <long_name>P27Q+MC</long_name>
-   <short_name>P27Q+MC</short_name>
-   <type>plus_code</type>
-  </address_component>
-  <address_component>
-   <long_name>New York</long_name>
-   <short_name>New York</short_name>
-   <type>locality</type>
-   <type>political</type>
-  </address_component>
-  <address_component>
-   <long_name>New York</long_name>
-   <short_name>NY</short_name>
-   <type>administrative_area_level_1</type>
-   <type>political</type>
-  </address_component>
-  <address_component>
-   <long_name>United States</long_name>
-   <short_name>US</short_name>
-   <type>country</type>
-   <type>political</type>
-  </address_component>
-  <geometry>
-   <location>
-    <lat>40.7142240</lat>
-    <lng>-73.9614520</lng>
-   </location>
-   <location_type>ROOFTOP</location_type>
-   <viewport>
-    <southwest>
-     <lat>40.7128385</lat>
-     <lng>-73.9627865</lng>
-    </southwest>
-    <northeast>
-     <lat>40.7155365</lat>
-     <lng>-73.9600885</lng>
-    </northeast>
-   </viewport>
-   <bounds>
-    <southwest>
-     <lat>40.7141250</lat>
-     <lng>-73.9615000</lng>
-    </southwest>
-    <northeast>
-     <lat>40.7142500</lat>
-     <lng>-73.9613750</lng>
-    </northeast>
-   </bounds>
-  </geometry>
-  <place_id>GhIJWAIpsWtbREARHyv4bYh9UsA</place_id>
-  <plus_code>
-   <global_code>87G8P27Q+MC</global_code>
-   <compound_code>P27Q+MC New York, NY, USA</compound_code>
-  </plus_code>
- </result>
  <plus_code>
-  <global_code>87G8P27Q+MC</global_code>
-  <compound_code>P27Q+MC New York, NY, USA</compound_code>
+  <global_code>87G8P27Q+MCM</global_code>
+  <compound_code>P27Q+MCM New York, NY, USA</compound_code>
  </plus_code>
 </GeocodeResponse>
 <!-- [END maps_http_geocode_reverse_response] -->

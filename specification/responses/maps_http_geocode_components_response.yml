@@ -59,6 +59,54 @@
         "place_id": "ChIJcUElzOzMQQwRLuV30nMUEUM",
         "types": ["locality", "political"],
       },
+      {
+        "address_components":
+          [
+            {
+              "long_name": "Santa Cruz de Mieres",
+              "short_name": "Santa Cruz",
+              "types": ["locality", "political"],
+            },
+            {
+              "long_name": "Asturias",
+              "short_name": "O",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
+              "long_name": "Principado de Asturias",
+              "short_name": "AS",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "Spain",
+              "short_name": "ES",
+              "types": ["country", "political"],
+            },
+            {
+              "long_name": "33612",
+              "short_name": "33612",
+              "types": ["postal_code"],
+            },
+          ],
+        "formatted_address": "33612 Santa Cruz, Asturias, Spain",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 43.1983524, "lng": -5.773871199999999 },
+                "southwest": { "lat": 43.1931354, "lng": -5.7837618 },
+              },
+            "location": { "lat": 43.1975521, "lng": -5.7806561 },
+            "location_type": "APPROXIMATE",
+            "viewport":
+              {
+                "northeast": { "lat": 43.1983524, "lng": -5.773871199999999 },
+                "southwest": { "lat": 43.1931354, "lng": -5.7837618 },
+              },
+          },
+        "place_id": "ChIJf1Oca3H3Ng0RsaiMz2_EGCY",
+        "types": ["locality", "political"],
+      },
     ],
   "status": "OK",
 }

@@ -64,6 +64,54 @@
         "place_id": "ChIJ0fd4S_KbwoAR2hRDrsr3HmQ",
         "types": ["neighborhood", "political"],
       },
+      {
+        "address_components":
+          [
+            {
+              "long_name": "Winnetka",
+              "short_name": "Winnetka",
+              "types": ["locality", "political"],
+            },
+            {
+              "long_name": "New Trier Township",
+              "short_name": "New Trier Township",
+              "types": ["administrative_area_level_3", "political"],
+            },
+            {
+              "long_name": "Cook County",
+              "short_name": "Cook County",
+              "types": ["administrative_area_level_2", "political"],
+            },
+            {
+              "long_name": "Illinois",
+              "short_name": "IL",
+              "types": ["administrative_area_level_1", "political"],
+            },
+            {
+              "long_name": "United States",
+              "short_name": "US",
+              "types": ["country", "political"],
+            },
+          ],
+        "formatted_address": "Winnetka, IL, USA",
+        "geometry":
+          {
+            "bounds":
+              {
+                "northeast": { "lat": 42.1282269, "lng": -87.71080979999999 },
+                "southwest": { "lat": 42.0886089, "lng": -87.7708629 },
+              },
+            "location": { "lat": 42.10808340000001, "lng": -87.735895 },
+            "location_type": "APPROXIMATE",
+            "viewport":
+              {
+                "northeast": { "lat": 42.1282269, "lng": -87.71080979999999 },
+                "southwest": { "lat": 42.0886089, "lng": -87.7708629 },
+              },
+          },
+        "place_id": "ChIJW8Va5TnED4gRY91Ng47qy3Q",
+        "types": ["locality", "political"],
+      },
     ],
   "status": "OK",
 }

@@ -59,5 +59,67 @@
   </geometry>
   <place_id>ChIJcUElzOzMQQwRLuV30nMUEUM</place_id>
  </result>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>33612 Santa Cruz, Asturias, Spain</formatted_address>
+  <address_component>
+   <long_name>Santa Cruz de Mieres</long_name>
+   <short_name>Santa Cruz</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Asturias</long_name>
+   <short_name>O</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Principado de Asturias</long_name>
+   <short_name>AS</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Spain</long_name>
+   <short_name>ES</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>33612</long_name>
+   <short_name>33612</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>43.1975521</lat>
+    <lng>-5.7806561</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>43.1931354</lat>
+     <lng>-5.7837618</lng>
+    </southwest>
+    <northeast>
+     <lat>43.1983524</lat>
+     <lng>-5.7738712</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>43.1931354</lat>
+     <lng>-5.7837618</lng>
+    </southwest>
+    <northeast>
+     <lat>43.1983524</lat>
+     <lng>-5.7738712</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJf1Oca3H3Ng0RsaiMz2_EGCY</place_id>
+ </result>
 </GeocodeResponse>
 <!-- [END maps_http_geocode_components_response] -->

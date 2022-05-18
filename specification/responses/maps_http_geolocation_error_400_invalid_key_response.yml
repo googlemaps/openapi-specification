@@ -27,6 +27,15 @@
           },
         ],
       "status": "INVALID_ARGUMENT",
+      "details":
+        [
+          {
+            "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+            "reason": "API_KEY_INVALID",
+            "domain": "googleapis.com",
+            "metadata": { "service": "geolocation.googleapis.com" },
+          },
+        ],
     },
 }
 # [END maps_http_geolocation_error_400_invalid_key_response]

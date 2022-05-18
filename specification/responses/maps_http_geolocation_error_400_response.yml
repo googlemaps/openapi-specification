@@ -26,6 +26,19 @@
           },
         ],
       "status": "INVALID_ARGUMENT",
+      "details":
+        [
+          {
+            "@type": "type.googleapis.com/google.rpc.BadRequest",
+            "fieldViolations":
+              [
+                {
+                  "field": "cell_tower",
+                  "description": 'Invalid value at ''cell_tower'' (type.googleapis.com/maps_api.CellTower), "foo"',
+                },
+              ],
+          },
+        ],
     },
 }
 # [END maps_http_geolocation_error_400_response]

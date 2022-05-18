@@ -37,14 +37,14 @@
           ],
       },
       {
-        "description": "pizza à proximité de Parma, Parme, Italie",
+        "description": "pizza à proximité de Pari Chowk, NRI City, Omega II, Noida, Uttar Pradesh, Inde",
         "matched_substrings":
           [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "à proximité de Parma, Parme, Italie",
+            "secondary_text": "à proximité de Pari Chowk, NRI City, Omega II, Noida, Uttar Pradesh, Inde",
             "secondary_text_matched_substrings":
               [{ "length": 3, "offset": 15 }],
           },
@@ -52,71 +52,78 @@
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "à proximité de" },
-            { "offset": 21, "value": "Parma" },
-            { "offset": 28, "value": "Parme" },
-            { "offset": 35, "value": "Italie" },
+            { "offset": 21, "value": "Pari Chowk" },
+            { "offset": 33, "value": "NRI City" },
+            { "offset": 43, "value": "Omega II" },
+            { "offset": 53, "value": "Noida" },
+            { "offset": 60, "value": "Uttar Pradesh" },
+            { "offset": 75, "value": "Inde" },
           ],
       },
       {
-        "description": "pizza à proximité de Park City, Utah, États-Unis",
+        "description": "pizza à proximité de Disneyland, Disneyland Drive, Anaheim, Californie, États-Unis",
         "matched_substrings":
-          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+          [{ "length": 5, "offset": 0 }, { "length": 10, "offset": 21 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "à proximité de Park City, Utah, États-Unis",
+            "secondary_text": "à proximité de Disneyland, Disneyland Drive, Anaheim, Californie, États-Unis",
             "secondary_text_matched_substrings":
-              [{ "length": 3, "offset": 15 }],
+              [{ "length": 10, "offset": 15 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "à proximité de" },
-            { "offset": 21, "value": "Park City" },
-            { "offset": 32, "value": "Utah" },
-            { "offset": 38, "value": "États-Unis" },
+            { "offset": 21, "value": "Disneyland" },
+            { "offset": 33, "value": "Disneyland Drive" },
+            { "offset": 51, "value": "Anaheim" },
+            { "offset": 60, "value": "Californie" },
+            { "offset": 72, "value": "États-Unis" },
           ],
       },
       {
-        "description": "pizza à proximité de Parga, Grèce",
+        "description": "pizza à proximité de Puy du Fou, Les Epesses, France",
         "matched_substrings":
-          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+          [{ "length": 5, "offset": 0 }, { "length": 10, "offset": 21 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "à proximité de Parga, Grèce",
+            "secondary_text": "à proximité de Puy du Fou, Les Epesses, France",
             "secondary_text_matched_substrings":
-              [{ "length": 3, "offset": 15 }],
+              [{ "length": 10, "offset": 15 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "à proximité de" },
-            { "offset": 21, "value": "Parga" },
-            { "offset": 28, "value": "Grèce" },
+            { "offset": 21, "value": "Puy du Fou" },
+            { "offset": 33, "value": "Les Epesses" },
+            { "offset": 46, "value": "France" },
           ],
       },
       {
-        "description": "pizza à proximité de Paraná, Province d'Entre Ríos, Argentine",
+        "description": "pizza à proximité de Cathédrale Notre-Dame de Paris, Parvis Notre Dame - Place Jean-Paul II, Paris, France",
         "matched_substrings":
-          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 21 }],
+          [{ "length": 5, "offset": 0 }, { "length": 3, "offset": 46 }],
         "structured_formatting":
           {
             "main_text": "pizza",
             "main_text_matched_substrings": [{ "length": 5, "offset": 0 }],
-            "secondary_text": "à proximité de Paraná, Province d'Entre Ríos, Argentine",
+            "secondary_text": "à proximité de Cathédrale Notre-Dame de Paris, Parvis Notre Dame - Place Jean-Paul II, Paris, France",
             "secondary_text_matched_substrings":
-              [{ "length": 3, "offset": 15 }],
+              [{ "length": 3, "offset": 40 }],
           },
         "terms":
           [
             { "offset": 0, "value": "pizza" },
             { "offset": 6, "value": "à proximité de" },
-            { "offset": 21, "value": "Paraná" },
-            { "offset": 29, "value": "Province d'Entre Ríos" },
-            { "offset": 52, "value": "Argentine" },
+            { "offset": 21, "value": "Cathédrale Notre-Dame de Paris" },
+            { "offset": 53, "value": "Parvis Notre Dame - Place Jean-Paul II" },
+            { "offset": 93, "value": "Paris" },
+            { "offset": 100, "value": "France" },
           ],
       },
     ],

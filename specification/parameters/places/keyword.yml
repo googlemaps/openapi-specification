@@ -18,7 +18,7 @@ description: |
   Any other types of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches
   based on this string and order the results based on their perceived relevance.
   
-  Explicitly including location information using this parameter may conflict with the location, radius, and rank_by parameters, causing unexpected results.
+  Explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
   
   If this parameter is omitted, places with a business_status of CLOSED_TEMPORARILY or CLOSED_PERMANENTLY will not be returned.
 schema:

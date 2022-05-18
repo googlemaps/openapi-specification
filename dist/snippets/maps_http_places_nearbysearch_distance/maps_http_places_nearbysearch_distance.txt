@@ -1,0 +1,8 @@
+[START maps_http_places_nearbysearch_distance]
+https://maps.googleapis.com/maps/api/place/nearbysearch/json
+  ?keyword=cruise
+  &location=-33.8670522%2C151.1957362
+  &rankby=distance
+  &type=restaurant
+  &key=YOUR_API_KEY
+[END maps_http_places_nearbysearch_distance]

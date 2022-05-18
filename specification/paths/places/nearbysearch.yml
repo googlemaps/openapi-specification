@@ -25,7 +25,7 @@ parameters:
   - "$ref": "../../parameters/places/name.yml"
   - "$ref": "../../parameters/places/opennow.yml"
   - "$ref": "../../parameters/places/pagetoken.yml"
-  - "$ref": "../../parameters/places/rank_by.yml"
+  - "$ref": "../../parameters/places/rankby.yml"
   - "$ref": "../../parameters/places/radius.yml"
   - "$ref": "../../parameters/places/type.yml"
   - "$ref": "../../parameters/language.yml"
@@ -38,5 +38,8 @@ responses:
           default:
             value:
               $ref: "../../responses/maps_http_places_nearbysearch_response.yml"          
+          rankby_distance_default:
+            value:
+              $ref: "../../responses/maps_http_places_nearbysearch_distance_response.yml"          
         schema:
           $ref: "../../schemas/PlacesNearbySearchResponse.yml"

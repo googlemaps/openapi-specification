@@ -23190,6 +23190,7 @@ components:
           items:
             $ref: '#/components/schemas/DirectionsStep'
         traffic_speed_entry:
+          deprecated: true
           description: Information about traffic speed along the leg.
           type: array
           items:
@@ -23377,6 +23378,7 @@ components:
       required:
         - speed_category
         - offset_meters
+      deprecated: true
       properties:
         speed_category:
           type: string

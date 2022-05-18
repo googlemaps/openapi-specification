@@ -53,6 +53,7 @@ const argv = options({
     demandOption: true,
   },
   skip: { type: "string" },
+  only: { type: "string" },
 }).argv;
 
 const extractRequests = async (
@@ -122,16 +123,16 @@ const executeJSONRequest = async (
 const xmlInsertRegionTags = (destination: string, regionTag: string) => {
   const contents = readFileSync(destination, "utf8");
 
-  const lines = contents.split("\n").filter(value => value !== "");
+  const lines = contents.split("\n").filter((value) => value !== "");
   lines.splice(1, 0, `<!-- [START ${regionTag}] -->`);
   lines.push(`<!-- [END ${regionTag}] -->`);
-  lines.push('');
+  lines.push("");
   writeFileSync(destination, lines.join("\n"));
 };
 
 const response = async (output, regionTag, request, xml = false) => {
   regionTag += "_response";
-  console.log(`Generating response for: ${regionTag}`);
+  console.log(`Generating response for: ${regionTag}, format: ${xml ? "xml" : "json"}`);
 
   const captureError = /error/i.test(regionTag);
   const captureInvalid = /invalid/i.test(regionTag);
@@ -175,7 +176,7 @@ const response = async (output, regionTag, request, xml = false) => {
     try {
       unlinkSync(destination);
     } catch (e) {}
-    
+
     const writeStream = createWriteStream(destination);
     response.data.pipe(writeStream);
 
@@ -212,12 +213,29 @@ const response = async (output, regionTag, request, xml = false) => {
     )
   );
 };
+const toArray = (value: string | string[]): string[] => {
+  return Array.isArray(value) ? value : [value];
+};
 
 const main = async (argv: any) => {
-  for (let [regionTag, request] of Object.entries(
-    await extractRequests(argv.archive)
-  )) {
-    if (argv.skip.indexOf(regionTag) != -1) continue;
+  const skip = toArray(argv.skip ?? []);
+  const only = toArray(argv.only ?? []);
+
+  const requests = Object.entries(await extractRequests(argv.archive)).filter(
+    ([regionTag]) => {
+      if (skip.length && skip.indexOf(regionTag) !== -1) {
+        return false;
+      }
+
+      if (only.length && only.indexOf(regionTag) === -1) {
+        return false;
+      }
+      console.log(regionTag);
+      return true;
+    }
+  );
+
+  for (let [regionTag, request] of requests) {
     await response(argv.output, regionTag, request, false);
 
     if (request.match(/\/json\?/g)) {

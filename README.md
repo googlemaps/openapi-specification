@@ -50,12 +50,14 @@ The repository makes use of [Bazel](https://bazel.build/) to generate outputs fr
     > **Note**: If a documentation item is not generated, be sure it is included
     in the appropriate index.yml file.
 
-1. `npm run build:responses` (optional)
+1. `npm run responses` (optional)
 
     > **Note**: This is an optional step requiring an API key. Set the `GOOGLE_MAPS_API_KEY` environmental variable before running.
 
     > **Note**: This step only needs to run when the generation code or sample requests have been updated.
 
     > **Note**: The geolocation request that only provides an IP is not deterministic and skipped in the binary executed.
+
+    > **Note**: A single response can be updated similar to `npm run responses -- --only maps_http_places_nearbysearch`.
 
 1. `npm run test`

@@ -32,6 +32,7 @@ properties:
     type: object
     description: Additional metadata about the error.
   fieldViolations:
+    description: A list of field violations.
     type: array
     items:
       schema:

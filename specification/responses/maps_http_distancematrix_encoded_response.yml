@@ -14,10 +14,72 @@
 
 # [START maps_http_distancematrix_encoded_response]
 {
-  "destination_addresses": [],
-  "error_message": "You have exceeded your rate-limit for this API.",
-  "origin_addresses": [],
-  "rows": [],
-  "status": "OVER_QUERY_LIMIT",
+  "destination_addresses":
+    [
+      "339 Hicks St, Brooklyn, NY 11201, USA",
+      "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+      "102-01 66th Rd, Queens, NY 11375, USA",
+      "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+      "327 Beach 19th St, Far Rockaway, NY 11691, USA",
+      "585 Schenectady Ave, Brooklyn, NY 11203, USA",
+      "102-01 66th Rd, Queens, NY 11375, USA",
+      "1000 N Village Ave, Rockville Centre, NY 11570, USA",
+      "327 Beach 19th St, Far Rockaway, NY 11691, USA",
+    ],
+  "origin_addresses": ["P.O. Box 793, Brooklyn, NY 11207, USA"],
+  "rows":
+    [
+      {
+        "elements":
+          [
+            {
+              "distance": { "text": "10.4 km", "value": 10423 },
+              "duration": { "text": "35 mins", "value": 2078 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "4.6 km", "value": 4630 },
+              "duration": { "text": "18 mins", "value": 1103 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "13.8 km", "value": 13760 },
+              "duration": { "text": "23 mins", "value": 1375 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "25.6 km", "value": 25553 },
+              "duration": { "text": "30 mins", "value": 1779 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "21.3 km", "value": 21305 },
+              "duration": { "text": "34 mins", "value": 2065 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "4.6 km", "value": 4630 },
+              "duration": { "text": "18 mins", "value": 1103 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "13.8 km", "value": 13760 },
+              "duration": { "text": "23 mins", "value": 1375 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "25.6 km", "value": 25553 },
+              "duration": { "text": "30 mins", "value": 1779 },
+              "status": "OK",
+            },
+            {
+              "distance": { "text": "21.3 km", "value": 21305 },
+              "duration": { "text": "34 mins", "value": 2065 },
+              "status": "OK",
+            },
+          ],
+      },
+    ],
+  "status": "OK",
 }
 # [END maps_http_distancematrix_encoded_response]

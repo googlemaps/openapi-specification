@@ -18358,11 +18358,84 @@ paths:
                     status: OK
                 encoded_response:
                   value:
-                    destination_addresses: []
-                    error_message: You have exceeded your rate-limit for this API.
-                    origin_addresses: []
-                    rows: []
-                    status: OVER_QUERY_LIMIT
+                    destination_addresses:
+                      - '339 Hicks St, Brooklyn, NY 11201, USA'
+                      - '585 Schenectady Ave, Brooklyn, NY 11203, USA'
+                      - '102-01 66th Rd, Queens, NY 11375, USA'
+                      - '1000 N Village Ave, Rockville Centre, NY 11570, USA'
+                      - '327 Beach 19th St, Far Rockaway, NY 11691, USA'
+                      - '585 Schenectady Ave, Brooklyn, NY 11203, USA'
+                      - '102-01 66th Rd, Queens, NY 11375, USA'
+                      - '1000 N Village Ave, Rockville Centre, NY 11570, USA'
+                      - '327 Beach 19th St, Far Rockaway, NY 11691, USA'
+                    origin_addresses:
+                      - 'P.O. Box 793, Brooklyn, NY 11207, USA'
+                    rows:
+                      - elements:
+                          - distance:
+                              text: 10.4 km
+                              value: 10423
+                            duration:
+                              text: 35 mins
+                              value: 2078
+                            status: OK
+                          - distance:
+                              text: 4.6 km
+                              value: 4630
+                            duration:
+                              text: 18 mins
+                              value: 1103
+                            status: OK
+                          - distance:
+                              text: 13.8 km
+                              value: 13760
+                            duration:
+                              text: 23 mins
+                              value: 1375
+                            status: OK
+                          - distance:
+                              text: 25.6 km
+                              value: 25553
+                            duration:
+                              text: 30 mins
+                              value: 1779
+                            status: OK
+                          - distance:
+                              text: 21.3 km
+                              value: 21305
+                            duration:
+                              text: 34 mins
+                              value: 2065
+                            status: OK
+                          - distance:
+                              text: 4.6 km
+                              value: 4630
+                            duration:
+                              text: 18 mins
+                              value: 1103
+                            status: OK
+                          - distance:
+                              text: 13.8 km
+                              value: 13760
+                            duration:
+                              text: 23 mins
+                              value: 1375
+                            status: OK
+                          - distance:
+                              text: 25.6 km
+                              value: 25553
+                            duration:
+                              text: 30 mins
+                              value: 1779
+                            status: OK
+                          - distance:
+                              text: 21.3 km
+                              value: 21305
+                            duration:
+                              text: 34 mins
+                              value: 2065
+                            status: OK
+                    status: OK
                 place_id_response:
                   value:
                     destination_addresses:
@@ -22897,6 +22970,10 @@ components:
         status:
           description: 'Contains the status of the request, and may contain debugging information to help you track down why the request failed.'
           $ref: '#/components/schemas/DistanceMatrixStatus'
+        error_message:
+          description: A string containing the human-readable text of any errors encountered while the request was being processed.
+          type: string
+          example: You have exceeded your rate-limit for this API.
     DistanceMatrixRow:
       type: object
       title: DistanceMatrixRow
@@ -23900,34 +23977,37 @@ components:
         status:
           description: A status code that indicates the error type.
           type: string
+        details:
+          description: Additional details about the error.
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorDetail'
     ErrorDetail:
       type: object
       title: ErrorDetail
-      required:
-        - reason
-        - message
       properties:
+        '@type':
+          description: The type of error.
+          type: string
+          example: type.googleapis.com/google.rpc.ErrorInfo
         message:
           description: A short description of the error.
           type: string
         reason:
           type: string
           description: A reason for the error.
-          enum:
-            - badRequest
-            - dailyLimitExceeded
-            - invalid
-            - keyInvalid
-            - notFound
-            - parseError
-            - userRateLimitExceeded
         domain:
           type: string
           description: The domain in which the error occurred.
-          enum:
-            - global
-            - geolocation
-            - usageLimits
+        metadata:
+          type: object
+          description: Additional metadata about the error.
+        fieldViolations:
+          description: A list of field violations.
+          type: array
+          items:
+            schema:
+              type: object
       example:
         message: API key not valid. Please pass a valid API key.
         domain: global

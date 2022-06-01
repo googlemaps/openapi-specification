@@ -11,7 +11,7 @@
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
-    The language in which to return results.
+    The language in which to return results. The default is English.
 
     -   See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.
     -   If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.

@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "825d99e9-51fa-46ef-a59f-d1497cfeabbc",
+            "id": "8093fe83-8867-4e93-b856-cdb1ef274649",
             "name": "Directions",
             "description": {
                 "content": "The Directions API is a web service that uses an HTTP request to return JSON or XML-formatted directions between locations. You can receive directions for several modes of transportation, such as transit, driving, walking, or cycling.",
@@ -11,7 +11,7 @@
             "event": []
         },
         {
-            "id": "c192ea60-df52-4280-9a49-e6225f9cac32",
+            "id": "6baf18e7-7ec4-42fc-b31c-a5c820c578e5",
             "name": "Distance Matrix",
             "description": {
                 "content": "The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations.",
@@ -21,7 +21,7 @@
             "event": []
         },
         {
-            "id": "8614bbf6-8fae-4310-a815-b29bca80ab7c",
+            "id": "534d7f7b-c0d4-4656-ba06-4a08baf0e3af",
             "name": "Elevation",
             "description": {
                 "content": "The Elevation API provides a simple interface to query locations on the earth for elevation data. Additionally, you may request sampled elevation data along paths, allowing you to calculate elevation changes along routes.",
@@ -31,7 +31,7 @@
             "event": []
         },
         {
-            "id": "4c497213-94e0-49db-8478-784db4e08102",
+            "id": "61709ed0-ef02-4e1b-b3e4-c0a91d4903d9",
             "name": "Geocoding",
             "description": {
                 "content": "The Geocoding API is a service that provides geocoding and reverse geocoding of addresses.",
@@ -41,7 +41,7 @@
             "event": []
         },
         {
-            "id": "1972f44c-eda5-4a1d-a521-b1bc713aee16",
+            "id": "e62fd3d5-466f-48e4-98fc-b00e386ae131",
             "name": "Geolocation",
             "description": {
                 "content": "The Geolocation API returns a location and accuracy radius based on information about cell towers and WiFi nodes that the mobile client can detect.",
@@ -51,7 +51,7 @@
             "event": []
         },
         {
-            "id": "db4601fd-f95b-49b3-a64e-2295dd630f78",
+            "id": "991f8c7e-1314-443f-aae5-0c8dc989791c",
             "name": "Roads",
             "description": {
                 "content": "The Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.",
@@ -61,7 +61,7 @@
             "event": []
         },
         {
-            "id": "a4a8daf9-b58f-4427-b756-2334930c97ee",
+            "id": "5b1d6c60-673a-414d-958b-e6577ac01e96",
             "name": "Time Zone",
             "description": {
                 "content": "The Time Zone API provides a simple interface to request the time zone for locations on the surface of the earth, as well as the time offset from UTC for each of those locations.",
@@ -71,7 +71,7 @@
             "event": []
         },
         {
-            "id": "be80b01f-6789-47ac-b367-4dd0a98b7ca3",
+            "id": "69e0636c-f4a4-4019-924a-d96bdcbd8889",
             "name": "Street View",
             "description": {
                 "content": "The Street View API provides a simple interface to retrieve Street View images.",
@@ -81,7 +81,7 @@
             "event": []
         },
         {
-            "id": "51962ea5-695d-4f8a-b11c-e7ec2cf8174e",
+            "id": "65c0823d-ec85-4ebb-9f7e-43a6bb33859f",
             "name": "Places",
             "description": {
                 "content": "The Places API is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.",
@@ -91,7 +91,7 @@
             "event": []
         },
         {
-            "id": "1d3df3b6-9b2f-452b-824a-d9e02d0d1a9d",
+            "id": "43d9819f-93b3-43f4-9905-995309056f8a",
             "name": "Geolocation API",
             "description": {
                 "content": "",
@@ -99,7 +99,7 @@
             },
             "item": [
                 {
-                    "id": "806e2664-db75-4666-a439-dddfda28fd29",
+                    "id": "b794f9c6-522a-4965-9aa4-b5fe45a3d90b",
                     "name": "geolocate",
                     "request": {
                         "name": "geolocate",
@@ -146,7 +146,7 @@
                     },
                     "response": [
                         {
-                            "id": "7880e1b8-2175-45bd-94c2-ebbd11165cc8",
+                            "id": "e575c05b-5def-4656-9c61-54e9d6ab7bb2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -193,7 +193,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "959e2fa7-869d-496d-a7a7-a2ec9f8cd7ee",
+                            "id": "2ea46ca5-5382-4c9d-a849-791e283917ab",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -240,7 +240,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "20db1dc5-d4ab-4164-9c04-816a70469b66",
+                            "id": "7a050f62-9c5d-42d1-b3c0-eba42c960be9",
                             "name": "404 NOT FOUND",
                             "originalRequest": {
                                 "url": {
@@ -296,7 +296,7 @@
             "event": []
         },
         {
-            "id": "9ae7eb9b-9b28-4f69-a042-b37c5190e364",
+            "id": "a0a30d56-8e3e-40c8-9dc3-93d3f999419c",
             "name": "Directions API",
             "description": {
                 "content": "",
@@ -304,7 +304,7 @@
             },
             "item": [
                 {
-                    "id": "293769e6-12c9-4b6e-8d69-4592930dfc47",
+                    "id": "c8b8f05d-207e-45cc-9820-4ae0a13b0c46",
                     "name": "directions",
                     "request": {
                         "name": "directions",
@@ -378,7 +378,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -424,7 +424,7 @@
                     },
                     "response": [
                         {
-                            "id": "8e28d484-e4ce-44cf-94a0-706cbb723fe6",
+                            "id": "1ab6f08b-4ced-46c6-a03a-32c06a5e45c8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -526,7 +526,7 @@
             "event": []
         },
         {
-            "id": "4c8bc8a1-8feb-4a80-8230-899427af5a40",
+            "id": "ae7f25eb-f847-44b3-a173-c8202a62e1ae",
             "name": "Elevation API",
             "description": {
                 "content": "",
@@ -534,7 +534,7 @@
             },
             "item": [
                 {
-                    "id": "cf80b748-e24d-4677-93bf-9a76e5ba9368",
+                    "id": "da26ba90-d2f2-4ccb-a7f4-b10fc23396d7",
                     "name": "elevation",
                     "request": {
                         "name": "elevation",
@@ -588,7 +588,7 @@
                     },
                     "response": [
                         {
-                            "id": "26b8a238-c14f-4f4f-9943-a063477b2be6",
+                            "id": "f12a699d-1176-40cb-9711-8549a6f1eba5",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -646,7 +646,7 @@
             "event": []
         },
         {
-            "id": "9e3ae6f1-70e9-43d7-9df7-4ace7febf29e",
+            "id": "ecdd4828-af25-41c0-b837-3d70134eb928",
             "name": "Geocoding API",
             "description": {
                 "content": "",
@@ -654,7 +654,7 @@
             },
             "item": [
                 {
-                    "id": "1fa2e20c-f452-4b5a-88ba-03d2fa135047",
+                    "id": "59ed7663-3ff7-4753-ae13-e2ba9fa1349f",
                     "name": "geocode",
                     "request": {
                         "name": "geocode",
@@ -728,7 +728,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -750,7 +750,7 @@
                     },
                     "response": [
                         {
-                            "id": "0969f7c6-e026-4e00-b407-9c7db51dc0a1",
+                            "id": "d1120818-c572-4979-bfac-cf181956f8d2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -836,7 +836,7 @@
             "event": []
         },
         {
-            "id": "e9618646-83ad-477d-85e3-bbbcda2b024b",
+            "id": "c5aaefbb-d8bb-4adc-bffb-84d52cbaa7eb",
             "name": "Time Zone API",
             "description": {
                 "content": "",
@@ -844,7 +844,7 @@
             },
             "item": [
                 {
-                    "id": "f05cbb44-8d88-4be6-9fe4-563756c334bf",
+                    "id": "85b69f0f-633d-41ed-b7c9-b6500c63e691",
                     "name": "timezone",
                     "request": {
                         "name": "timezone",
@@ -870,7 +870,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": false,
@@ -898,7 +898,7 @@
                     },
                     "response": [
                         {
-                            "id": "e70f8bf1-6d28-4d0a-975a-997941506db8",
+                            "id": "fedeb8f8-5a59-466f-a0ed-395a0245ba20",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -956,7 +956,7 @@
             "event": []
         },
         {
-            "id": "898e1d63-92d3-44eb-a7cc-d20665ef4ad3",
+            "id": "5b0a28b3-28a9-46ba-87ef-5e18adaea98a",
             "name": "Roads API",
             "description": {
                 "content": "",
@@ -964,7 +964,7 @@
             },
             "item": [
                 {
-                    "id": "67264e3e-a172-4a42-ab06-ce7fa9cd28e9",
+                    "id": "efe22541-c724-44f7-a1a9-f254218d3c8f",
                     "name": "snap To Roads",
                     "request": {
                         "name": "snap To Roads",
@@ -1010,7 +1010,7 @@
                     },
                     "response": [
                         {
-                            "id": "0b558934-2b79-4b09-8dda-9bb43c987471",
+                            "id": "c9e71688-4b96-4d0b-968b-65730a5646e8",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1059,7 +1059,7 @@
                     "event": []
                 },
                 {
-                    "id": "670666f1-0a77-4e95-8657-1d2f6e4f2d95",
+                    "id": "98c66aeb-16c3-4ca5-a085-6153b0e73864",
                     "name": "nearest Roads",
                     "request": {
                         "name": "nearest Roads",
@@ -1099,7 +1099,7 @@
                     },
                     "response": [
                         {
-                            "id": "3ec09933-a61a-4721-b013-3127a1805b9a",
+                            "id": "56285989-a2f3-4b61-a770-ea361063c34b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1136,12 +1136,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n  \"snappedPoints\": [\n    {\n      \"location\": {\n        \"latitude\": -79824635.09238543,\n        \"longitude\": 32214384.77251421\n      },\n      \"placeId\": \"nulla ea aliquip sint enim\",\n      \"originalIndex\": 95998343.57620552\n    },\n    {\n      \"location\": {\n        \"latitude\": 17696621.27340746,\n        \"longitude\": 24577397.02721788\n      },\n      \"placeId\": \"sit eu et cillum proident\",\n      \"originalIndex\": 86930920.67003003\n    }\n  ]\n}",
+                            "body": "{\n  \"snappedPoints\": [\n    {\n      \"location\": {\n        \"latitude\": 46530855.11110392,\n        \"longitude\": -74877834.34124254\n      },\n      \"placeId\": \"ullamco\",\n      \"originalIndex\": 62305227.31112763\n    },\n    {\n      \"location\": {\n        \"latitude\": -32437644.516093343,\n        \"longitude\": 36084542.324801326\n      },\n      \"placeId\": \"ut\",\n      \"originalIndex\": 14130270.660395443\n    }\n  ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d8804a99-ffc7-45b9-b4b4-35cc1b2be8a4",
+                            "id": "390573f8-21ef-419d-b8d7-0ae87d795daa",
                             "name": "400 BAD REQUEST",
                             "originalRequest": {
                                 "url": {
@@ -1189,7 +1189,7 @@
             "event": []
         },
         {
-            "id": "afde781c-c668-46ff-a1ba-5b9ca1b64ead",
+            "id": "b7086960-1312-41a3-9fd8-3b88dbbd1012",
             "name": "Distance Matrix API",
             "description": {
                 "content": "",
@@ -1197,7 +1197,7 @@
             },
             "item": [
                 {
-                    "id": "20092d4a-2015-49d1-901e-c0767fd3559b",
+                    "id": "6d8b9144-bc1f-4334-a112-7062316edfec",
                     "name": "distance Matrix",
                     "request": {
                         "name": "distance Matrix",
@@ -1259,7 +1259,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -1305,7 +1305,7 @@
                     },
                     "response": [
                         {
-                            "id": "64bbc7ef-fdea-460a-84f1-831b11c34be9",
+                            "id": "2e4108d2-ba8a-4a0a-826c-40c63be732cd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1399,7 +1399,7 @@
             "event": []
         },
         {
-            "id": "7cb63a33-f0fc-4496-9208-e0774f3f001f",
+            "id": "e0d28d94-b156-4292-9b9c-9fc11133cf04",
             "name": "Places API",
             "description": {
                 "content": "",
@@ -1407,7 +1407,7 @@
             },
             "item": [
                 {
-                    "id": "8271ed28-d643-4654-bb15-a6a965b1fc79",
+                    "id": "a893527f-9910-4721-bee7-c04bce763f30",
                     "name": "place Details",
                     "request": {
                         "name": "place Details",
@@ -1452,7 +1452,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -1474,7 +1474,7 @@
                     },
                     "response": [
                         {
-                            "id": "b4ada02f-65b0-4335-986e-d25ef6b68c2d",
+                            "id": "02303b7f-3901-4564-a8c2-ecf8208f240b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1538,7 +1538,7 @@
                     "event": []
                 },
                 {
-                    "id": "4821f449-28f4-44cf-9db2-2c84b4a93734",
+                    "id": "1dfb5856-f16e-41a7-bb3d-ca5b63ab206f",
                     "name": "find Place From Text",
                     "request": {
                         "name": "find Place From Text",
@@ -1589,7 +1589,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 }
                             ],
                             "variable": []
@@ -1605,7 +1605,7 @@
                     },
                     "response": [
                         {
-                            "id": "82cbd6da-88b6-4df3-aa7d-1f4c6dd83ad4",
+                            "id": "32d65bea-8467-4e2a-9e48-0043c42398d9",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1669,7 +1669,7 @@
                     "event": []
                 },
                 {
-                    "id": "af3e2840-54d7-4f9d-b7e4-a86a6d61a046",
+                    "id": "4c78d983-4b0a-4f41-9f02-8adab167e073",
                     "name": "nearby Search",
                     "request": {
                         "name": "nearby Search",
@@ -1756,7 +1756,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 }
                             ],
                             "variable": []
@@ -1772,7 +1772,7 @@
                     },
                     "response": [
                         {
-                            "id": "a2f1a83b-949e-4682-95cb-12c94a8beac0",
+                            "id": "89f2d5c5-7d40-4190-8bd4-0d550f907e92",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -1860,7 +1860,7 @@
                     "event": []
                 },
                 {
-                    "id": "1b04c628-6bf1-4025-b46b-04a40942da58",
+                    "id": "fbb864b3-f86f-43bd-ad05-4d6681e048b5",
                     "name": "text Search",
                     "request": {
                         "name": "text Search",
@@ -1935,7 +1935,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -1957,7 +1957,7 @@
                     },
                     "response": [
                         {
-                            "id": "9c06ab50-ffc8-4ad5-9a69-b08a721202fe",
+                            "id": "a4d83281-fbac-47dd-bc5d-ce8381d50d46",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2041,7 +2041,7 @@
                     "event": []
                 },
                 {
-                    "id": "8888f2a2-9fa3-4dfb-b982-78d32f2907c5",
+                    "id": "fa481281-d117-4662-ae25-3f73ac5e9865",
                     "name": "place Photo",
                     "request": {
                         "name": "place Photo",
@@ -2095,7 +2095,7 @@
                     },
                     "response": [
                         {
-                            "id": "2243937f-9048-402e-a5f2-dbb8129153d3",
+                            "id": "87f243eb-be50-4b70-93c5-23dfa277a27b",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2142,7 +2142,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "nostrud eiusmod",
+                            "body": "mollit labo",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2150,7 +2150,7 @@
                     "event": []
                 },
                 {
-                    "id": "9a90ebcb-be27-4f92-9536-bdececa7fddd",
+                    "id": "964fa58b-d2fd-43ae-abdf-3111c9043083",
                     "name": "query Autocomplete",
                     "request": {
                         "name": "query Autocomplete",
@@ -2201,7 +2201,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 }
                             ],
                             "variable": []
@@ -2217,7 +2217,7 @@
                     },
                     "response": [
                         {
-                            "id": "741fec91-5fe1-4fc0-9d08-3f020572f434",
+                            "id": "4de31916-119e-4245-b90f-9ddd800fef60",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2281,7 +2281,7 @@
                     "event": []
                 },
                 {
-                    "id": "5ced2c84-4397-4e64-a9c9-9c5f4290be93",
+                    "id": "9151d85b-edef-4281-a7ad-6430412ddae6",
                     "name": "autocomplete",
                     "request": {
                         "name": "autocomplete",
@@ -2362,7 +2362,7 @@
                                     "disabled": true,
                                     "key": "language",
                                     "value": "en",
-                                    "description": "The language in which to return results.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
+                                    "description": "The language in which to return results. The default is English.\n\n* See the [list of supported languages](https://developers.google.com/maps/faq#languagesupport). Google often updates the supported languages, so this list may not be exhaustive.\n* If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header.\n* The API does its best to provide a street address that is readable for both the user and locals. To achieve that goal, it returns street addresses in the local language, transliterated to a script readable by the user if necessary, observing the preferred language. All other addresses are returned in the preferred language. Address components are all returned in the same language, which is chosen from the first component.\n* If a name is not available in the preferred language, the API uses the closest match.\n* The preferred language has a small influence on the set of results that the API chooses to return, and the order in which they are returned. The geocoder interprets abbreviations differently depending on language, such as the abbreviations for street types, or synonyms that may be valid in one language but not in another. For example, _utca_ and _tér_ are synonyms for street in Hungarian."
                                 },
                                 {
                                     "disabled": true,
@@ -2384,7 +2384,7 @@
                     },
                     "response": [
                         {
-                            "id": "896b66fa-789a-4af8-bc31-203c3e18ad52",
+                            "id": "6cc0ec4b-1df2-4deb-a476-6badabe07dec",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2475,7 +2475,7 @@
             "event": []
         },
         {
-            "id": "b5c4e77b-66b8-490c-9e5d-aac7eb9b48a3",
+            "id": "e9187183-dfad-4181-a058-c0e40497c29f",
             "name": "Street View API",
             "description": {
                 "content": "",
@@ -2483,7 +2483,7 @@
             },
             "item": [
                 {
-                    "id": "abe93563-809a-41c1-897e-18ebd2c6555b",
+                    "id": "1695d457-eac0-4531-b2be-a27ec3c4d3b3",
                     "name": "street View",
                     "request": {
                         "name": "street View",
@@ -2578,7 +2578,7 @@
                     },
                     "response": [
                         {
-                            "id": "c80c0523-2ee1-496d-bd9b-a68508a8dae3",
+                            "id": "e0355f4f-37c9-4320-96d9-9106278d52bd",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2652,7 +2652,7 @@
                                     "value": "image/*"
                                 }
                             ],
-                            "body": "nostrud eiusmod",
+                            "body": "mollit labo",
                             "cookie": [],
                             "_postman_previewlanguage": "text"
                         }
@@ -2660,7 +2660,7 @@
                     "event": []
                 },
                 {
-                    "id": "dba17529-7168-4bcf-aefc-1518d6dc00a6",
+                    "id": "3fb40311-8ffd-4e8a-b2f0-9768185e941d",
                     "name": "street View Metadata",
                     "request": {
                         "name": "street View Metadata",
@@ -2750,7 +2750,7 @@
                     },
                     "response": [
                         {
-                            "id": "b822410b-cd76-45ba-80c1-890d0b62e9de",
+                            "id": "0673e54c-cd22-4864-bd84-64132b6e64e2",
                             "name": "200 OK",
                             "originalRequest": {
                                 "url": {
@@ -2858,7 +2858,7 @@
         ]
     },
     "info": {
-        "_postman_id": "0ea8ce0b-9946-497d-91c0-c6a884c66f08",
+        "_postman_id": "ea3b3dd0-0e4e-4e1c-b5a3-06d6048e5d5c",
         "name": "Google Maps Platform",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

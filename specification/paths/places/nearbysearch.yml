@@ -26,7 +26,7 @@ parameters:
   - "$ref": "../../parameters/places/opennow.yml"
   - "$ref": "../../parameters/places/pagetoken.yml"
   - "$ref": "../../parameters/places/rankby.yml"
-  - "$ref": "../../parameters/places/radius.yml"
+  - "$ref": "../../parameters/places/radius-required.yml"
   - "$ref": "../../parameters/places/type.yml"
   - "$ref": "../../parameters/language.yml"
 responses:

@@ -1,0 +1,33 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: radius
+description: |
+  Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to _prefer_ showing results within that circle; results outside of the defined area may still be displayed.
+  
+  The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+  * Autocomplete: 50,000 meters
+  * Nearby Search: 
+    * with `keyword` or `name`: 50,000 meters
+    * without `keyword` or `name`
+      * Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
+      * When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
+  * Query Autocomplete: 50,000 meters
+  * Text Search: 50,000 meters
+required: true
+schema:
+  type: number
+in: query
+example: 1000

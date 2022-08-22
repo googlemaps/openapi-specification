@@ -135,6 +135,49 @@
     </p>
   </li>
   <li>
+    <h3 class="parameter-name" id="reviews_no_translations">
+      reviews_no_translations
+    </h3>
+    <p>
+      If omitted (default), translate reviews. If the
+      <code>language</code> parameter was specified in the request, use the
+      specified language as the preferred language for translation. If
+      <code>language</code> is omitted, the API attempts to use the
+      <code>Accept-Language</code> header as the preferred language.
+    </p>
+    <p>
+      If specified, disable translation of reviews. Reviews are returned in
+      their original language.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="reviews_sort">reviews_sort</h3>
+    <p>
+      The sorting method to use when returning reviews. Can be set to
+      <code>most_relevant</code> (default) or <code>newest</code>.
+    </p>
+    <p>
+      If <code>language</code> was specified in the request, use the specified
+      language as the preferred language for the reviews. If
+      <code>language</code> is omitted from the request, the API attempts to use
+      the <code>Accept-Language</code> header as the preferred language.
+    </p>
+    <ul>
+      <li>
+        For <code>most_relevant</code> (default), the service will bias the
+        results to return reviews originally written in the preferred language.
+      </li>
+      <li>
+        For <code>newest</code>, the preferred language does not affect the sort
+        order.
+      </li>
+    </ul>
+    <p>
+      Google recommends that you display how the reviews are being sorted to the
+      end user.
+    </p>
+  </li>
+  <li>
     <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
     <p>
       A random string which identifies an autocomplete

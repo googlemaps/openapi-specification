@@ -43,6 +43,23 @@
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
 
+-   <h3 class="parameter-name" id="reviews_no_translations">reviews_no_translations</h3>
+
+    If omitted (default), translate reviews. If the `language` parameter was specified in the request, use the specified language as the preferred language for translation. If `language` is omitted, the API attempts to use the `Accept-Language` header as the preferred language.
+
+    If specified, disable translation of reviews. Reviews are returned in their original language.
+
+-   <h3 class="parameter-name" id="reviews_sort">reviews_sort</h3>
+
+    The sorting method to use when returning reviews. Can be set to `most_relevant` (default) or `newest`.
+
+    If `language` was specified in the request, use the specified language as the preferred language for the reviews. If `language` is omitted from the request, the API attempts to use the `Accept-Language` header as the preferred language.
+
+    -   For `most_relevant` (default), the service will bias the results to return reviews originally written in the preferred language.
+    -   For `newest`, the preferred language does not affect the sort order.
+
+    Google recommends that you display how the reviews are being sorted to the end user.
+
 -   <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
 
     A random string which identifies an autocomplete [session](https://developers.google.com/maps/documentation/places/web-service/details#session_tokens) for billing purposes.

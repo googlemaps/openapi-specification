@@ -107,7 +107,15 @@ properties:
     deprecated: true
     type: string
   reviews:
-    description: A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.
+    description: |
+      A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.
+
+      If `language` was specified in the request, use the specified language as the preferred language for the reviews. If `language` is omitted from the request, the API attempts to use the `Accept-Language` header as the preferred language.
+      - By default, translate reviews to the preferred language. Set `reviews_no_translations` to disable translation.
+      - For a sort order of `most_relevant` (default), the service will bias the results to return reviews originally written in the preferred language.
+      - For a sort order of `newest`, the preferred language does not affect the sort order.
+
+      Google recommends indicating to users whether results are ordered by `most_relevant` or `newest`.
     type: array
     items:
       $ref: "./PlaceReview.yml"
@@ -133,7 +141,7 @@ properties:
     type: number
     example: 600
   vicinity:
-    description: |    
+    description: |
       For establishment (`types:["establishment", ...])` results only, the `vicinity` field contains a simplified address for the place, including the street name, street number, and locality, but not the province/state, postal code, or country.
 
       For all other results, the `vicinity` field contains the name of the narrowest political (`types:["political", ...]`) feature that is present in the address of the result.
@@ -145,3 +153,4 @@ properties:
     description: The authoritative website for this place, such as a business' homepage.
     type: string
     example: http://google.com
+    

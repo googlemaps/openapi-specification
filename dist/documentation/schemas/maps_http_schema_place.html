@@ -445,9 +445,35 @@
       <td>
         <div class="ref-property-description">
           <p>
-            A JSON array of up to five reviews. If a language parameter was
-            specified in the request, the service will bias the results to
-            prefer reviews written in that language.
+            A JSON array of up to five reviews. By default, the reviews are
+            sorted in order of relevance. Use the
+            <code>reviews_sort</code> request parameter to control sorting.
+          </p>
+          <p>
+            If <code>language</code> was specified in the request, use the
+            specified language as the preferred language for the reviews. If
+            <code>language</code> is omitted from the request, the API attempts
+            to use the <code>Accept-Language</code> header as the preferred
+            language.
+          </p>
+          <ul>
+            <li>
+              By default, translate reviews to the preferred language. Set
+              <code>reviews_no_translations</code> to disable translation.
+            </li>
+            <li>
+              For a sort order of <code>most_relevant</code> (default), the
+              service will bias the results to return reviews originally written
+              in the preferred language.
+            </li>
+            <li>
+              For a sort order of <code>newest</code>, the preferred language
+              does not affect the sort order.
+            </li>
+          </ul>
+          <p>
+            Google recommends indicating to users whether results are ordered by
+            <code>most_relevant</code> or <code>newest</code>.
           </p>
           <p>
             See <a href="#PlaceReview">PlaceReview</a> for more information.

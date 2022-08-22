@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Google Maps Platform
   description: API Specification for Google Maps Platform
-  version: 1.17.16
+  version: 1.17.17
 servers:
   - url: 'https://www.googleapis.com'
 paths:
@@ -22095,7 +22095,7 @@ components:
     places_location:
       name: location
       description: |
-        The point around which to retrieve place information. This must be specified as `latitude,longitude`. 
+        The point around which to retrieve place information. This must be specified as `latitude,longitude`. The `radius` parameter must also be provided when specifying a location. If `radius` is not provided, the `location` parameter is ignored.
 
         <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
       schema:

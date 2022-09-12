@@ -23,6 +23,8 @@ parameters:
   - "$ref": "../../parameters/places/sessiontoken.yml"
   - "$ref": "../../parameters/language.yml"
   - "$ref": "../../parameters/region.yml"
+  - "$ref": "../../parameters/places/reviewsort.yml"
+  - "$ref": "../../parameters/places/reviewnotranslation.yml"
 responses:
   "200":
     description: 200 OK

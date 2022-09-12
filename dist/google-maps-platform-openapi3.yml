@@ -18536,6 +18536,8 @@ paths:
         - $ref: '#/components/parameters/places_sessiontoken'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/places_reviewsort'
+        - $ref: '#/components/parameters/places_reviewnotranslation'
       responses:
         '200':
           description: 200 OK
@@ -22264,6 +22266,28 @@ components:
           - prominence
           - distance
       in: query
+    places_reviewnotranslation:
+      name: reviews_no_translations
+      description: |
+
+        Specify `reviews_no_translations=true` to enable translation of reviews; specify `reviews_no_translations=false` to disable translation of reviews. Reviews are returned in their original language.
+
+        If omitted, translation of reviews is enabled. If the `language` parameter was specified in the request, use the specified language as the preferred language for translation. If `language` is omitted, the API attempts to use the `Accept-Language` header as the preferred language.
+      schema:
+        type: boolean
+      in: query
+    places_reviewsort:
+      name: reviews_sort
+      description: |
+        The sorting method to use when returning reviews. Can be set to `most_relevant` (default) or `newest`.
+
+        - For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
+        - For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
+
+        Google recommends that you display how the reviews are being sorted to the end user.
+      schema:
+        type: string
+      in: query
     places_sessiontoken:
       name: sessiontoken
       description: |
@@ -24135,7 +24159,12 @@ components:
           deprecated: true
           type: string
         reviews:
-          description: 'A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.'
+          description: |
+            A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.
+
+            - For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
+            - For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
+            Google recommends indicating to users whether results are ordered by `most_relevant` or `newest`.
           type: array
           items:
             $ref: '#/components/schemas/PlaceReview'
@@ -24377,7 +24406,16 @@ components:
           description: 'The URL to the user''s profile photo, if available.'
           type: string
         language:
-          description: 'An IETF language code indicating the language used in the user''s review. This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as ''en'', and not ''en-AU'' or ''en-UK'' and so on.'
+          description: |
+            An IETF language code indicating the language of the returned review.
+            This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.
+            This field is empty if there is only a rating with no review text. 
+          type: string
+        original_language:
+          description: |
+            An IETF language code indicating the original language of the review. If the review has been translated, then `original_language` != `language`.
+            This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.
+            This field is empty if there is only a rating with no review text.
           type: string
         rating:
           description: 'The user''s overall rating for this place. This is a whole number, ranging from 1 to 5.'
@@ -24391,6 +24429,11 @@ components:
         time:
           description: 'The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.'
           type: number
+        translated:
+          description: |
+            A boolean value indicating if the review was translated from the original language it was written in.
+            If a review has been translated, corresponding to a value of true, Google recommends that you indicate this to your users. For example, you can add the following string, “Translated by Google”, to the review.
+          type: boolean
     PlacesAutocompleteResponse:
       type: object
       title: PlacesAutocompleteResponse

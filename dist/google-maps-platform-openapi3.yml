@@ -22025,7 +22025,11 @@ components:
 
         **Atmosphere**
 
-        The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
+
+        <aside class="note"><strong>Note: </strong><code>curbside_pickup</code>, <code>delivery</code>,
+        <code>dine_in</code>, and <code>takeout</code> are only supported for Place Details requests.
+        </aside>
       schema:
         type: array
         items:
@@ -24049,6 +24053,15 @@ components:
             - OPERATIONAL
             - CLOSED_TEMPORARILY
             - CLOSED_PERMANENTLY
+        curbside_pickup:
+          description: Specifies if the business supports curbside pickup.
+          type: boolean
+        delivery:
+          description: Specifies if the business supports delivery.
+          type: boolean
+        dine_in:
+          description: Specifies if the business supports indoor or outdoor seating options.
+          type: boolean
         formatted_address:
           description: |
             A string containing the human-readable address of this place.
@@ -24129,6 +24142,9 @@ components:
         scope:
           deprecated: true
           type: string
+        takeout:
+          description: Specifies if the business supports takeout.
+          type: boolean
         types:
           description: 'Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).'
           type: array

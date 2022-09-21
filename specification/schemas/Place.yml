@@ -16,6 +16,9 @@ type: object
 title: Place
 description: Attributes describing a place. Not all attributes will be available for all place types.
 properties:
+  accepts_reservations:
+    description: Specifies if the place supports reservations.
+    type: boolean
   address_components:
     description: An array containing the separate components applicable to this address.
     type: array
@@ -125,6 +128,36 @@ properties:
     type: array
     items:
       $ref: "./PlaceReview.yml"
+  serves_beer:
+    description: Specifies if the place serves beer.
+    type: boolean
+  serves_breakfast:
+    description: Specifies if the place serves breakfast.
+    type: boolean
+  serves_brunch:
+    description: Specifies if the place serves brunch.
+    type: boolean
+  serves_dinner:
+    description: Specifies if the place serves dinner.
+    type: boolean
+  serves_happy_hour:
+    description: Specifies if the place has a happy hour.
+    type: boolean
+  serves_lunch:
+    description: Specifies if the place serves lunch.
+    type: boolean
+  serves_vegetarian_food:
+    description: Specifies if the place serves vegetarian food.
+    type: boolean
+  serves_wine:
+    description: Specifies if the place serves wine.
+    type: boolean
+  welcomes_children:
+    description: Specifies if the place is child-friendly.
+    type: boolean
+  wheelchair_accessible_entrance:
+    description: Specifies if the place has an entrance that is wheelchair-accessible.
+    type: boolean
   scope:
     deprecated: true
     type: string

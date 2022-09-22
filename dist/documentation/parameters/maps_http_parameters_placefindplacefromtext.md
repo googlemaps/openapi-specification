@@ -31,11 +31,7 @@
 
     **Atmosphere**
 
-    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
-
-    <aside class="note"><strong>Note: </strong><code>curbside_pickup</code>, <code>delivery</code>,
-    <code>dine_in</code>, and <code>takeout</code> are only supported for Place Details requests.
-    </aside>
+    The Atmosphere category includes the following fields: `accepts_reservations`, `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `serves_beer`, `serves_breakfast`, `serves_brunch`, `serves_dinner`, `serves_happy_hour`, `serves_lunch`, `serves_vegetarian_food`, `serves_wine`, `takeout`, `user_ratings_total`, `welcomes_children`, `wheelchair_accessible_entrance`.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 

@@ -42,6 +42,9 @@ properties:
   dine_in:
     description: Specifies if the business supports indoor or outdoor seating options. 
     type: boolean
+  editorial_summary:
+    description: Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.
+    $ref: "./PlaceEditorialSummary.yml"
   formatted_address:
     description: |
       A string containing the human-readable address of this place.

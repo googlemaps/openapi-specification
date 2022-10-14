@@ -145,13 +145,13 @@
       reviews_no_translations
     </h3>
     <p>
-      Specify <code>reviews_no_translations=true</code> to enable translation of
-      reviews; specify <code>reviews_no_translations=false</code> to disable
+      Specify <code>reviews_no_translations=true</code> to disable translation
+      of reviews; specify <code>reviews_no_translations=false</code> to enable
       translation of reviews. Reviews are returned in their original language.
     </p>
     <p>
-      If omitted, translation of reviews is enabled. If the
-      <code>language</code> parameter was specified in the request, use the
+      If omitted, or passed with no value, translation of reviews is enabled. If
+      the <code>language</code> parameter was specified in the request, use the
       specified language as the preferred language for translation. If
       <code>language</code> is omitted, the API attempts to use the
       <code>Accept-Language</code> header as the preferred language.

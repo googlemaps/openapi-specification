@@ -37,13 +37,13 @@ properties:
     description: Specifies if the business supports curbside pickup.
     type: boolean
   current_opening_hours:
-    description: Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later.  This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.
-    $ref: "./PlaceOpeningHours.yml"  
+    description: Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later. This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.
+    $ref: "./PlaceOpeningHours.yml"
   delivery:
     description: Specifies if the business supports delivery.
     type: boolean
   dine_in:
-    description: Specifies if the business supports indoor or outdoor seating options. 
+    description: Specifies if the business supports indoor or outdoor seating options.
     type: boolean
   editorial_summary:
     description: Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.
@@ -56,8 +56,8 @@ properties:
 
       The formatted address is logically composed of one or more address components. For example, the address "111 8th Avenue, New York, NY" consists of the following components: "111" (the street number), "8th Avenue" (the route), "New York" (the city) and "NY" (the US state).
 
-      Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.      
-    
+      Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.
+
     type: string
     example: "48 Pirrama Rd, Pyrmont NSW 2009, Australia"
   formatted_phone_number:
@@ -71,7 +71,7 @@ properties:
     description: Contains the URL of a suggested icon which may be displayed to the user when indicating this result on a map.
     type: string
     example: https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png
-  icon_background_color: 
+  icon_background_color:
     description: Contains the default HEX color code for the place's category.
     type: string
   icon_mask_base_uri:
@@ -124,7 +124,7 @@ properties:
   reviews:
     description: |
       A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.
-     
+
       - For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
       - For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
       Google recommends indicating to users whether results are ordered by `most_relevant` or `newest`.
@@ -143,7 +143,7 @@ properties:
   types:
     description: Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).
     type: array
-    items:        
+    items:
       type: string
     example: ["point_of_interest", "establishment"]
   url:

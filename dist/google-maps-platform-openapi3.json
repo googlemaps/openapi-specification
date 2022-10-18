@@ -33847,7 +33847,7 @@
             "type": "boolean"
           },
           "current_opening_hours": {
-            "description": "Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later.  This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.",
+            "description": "Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later.  This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.",
             "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "delivery": {
@@ -33949,7 +33949,7 @@
             "type": "string"
           },
           "secondary_opening_hours": {
-            "description": "Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business's main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.",
+            "description": "Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business's main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.",
             "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "takeout": {

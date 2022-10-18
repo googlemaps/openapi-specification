@@ -13,21 +13,11 @@
 # limitations under the License.
 
 type: object
-title: PlaceOpeningHoursPeriodDetail
-required:
-  - day
-  - time
+title: PlaceSpecialDay
 properties:
   date:
     description: A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.
     type: string
-  day:
-    description: A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.
-    type: number
-  time:
-    description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.
-    type: string
-    example: 1700
-  truncated:
-    description: True if a given period was truncated due to a seven-day cutoff, where the period starts before midnight on the date of the request and/or ends at or after  midnight on the last day. This property indicates that the period for open or close can extend past this seven-day cutoff.
+  exceptional_hours:
+    description: True if there are exceptional hours for this day. If `true`, this means that there is at least one exception for this day. Exceptions cause different values to occur in the subfields of `current_opening_hours` and `secondary_opening_hours` such as `periods`, `weekday_text`, `open_now`. The exceptions apply to the hours, and the hours are used to generate the other fields.
     type: boolean

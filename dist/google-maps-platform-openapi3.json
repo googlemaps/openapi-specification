@@ -31582,7 +31582,7 @@
       },
       "places_fields": {
         "name": "fields",
-        "description": "\n<div class=\"caution\"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href=\"https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support\">Places API fields support</a>.</div>\n\nUse the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.\n\nFields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.\n\n**Basic**\n\nThe Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.\n\n**Contact**\n\nThe Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`\n\n**Atmosphere**\n\nThe Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.\n",
+        "description": "\n<div class=\"caution\"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href=\"https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support\">Places API fields support</a>.</div>\n\nUse the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.\n\nFields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.\n\n**Basic**\n\nThe Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.\n\n**Contact**\n\nThe Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`\n\n**Atmosphere**\n\nThe Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.\n",
         "schema": {
           "type": "array",
           "items": {
@@ -33846,6 +33846,10 @@
             "description": "Specifies if the business supports curbside pickup.",
             "type": "boolean"
           },
+          "current_opening_hours": {
+            "description": "Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later.  This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.",
+            "$ref": "#/components/schemas/PlaceOpeningHours"
+          },
           "delivery": {
             "description": "Specifies if the business supports delivery.",
             "type": "boolean"
@@ -33896,7 +33900,7 @@
             "example": "Google Workplace 6"
           },
           "opening_hours": {
-            "description": "Contains hours of operation.",
+            "description": "Contains the regular hours of operation.",
             "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "permanently_closed": {
@@ -33943,6 +33947,10 @@
           "scope": {
             "deprecated": true,
             "type": "string"
+          },
+          "secondary_opening_hours": {
+            "description": "Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business's main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.",
+            "$ref": "#/components/schemas/PlaceOpeningHours"
           },
           "takeout": {
             "description": "Specifies if the business supports takeout.",
@@ -34174,6 +34182,17 @@
               "$ref": "#/components/schemas/PlaceOpeningHoursPeriod"
             }
           },
+          "special_days": {
+            "description": "An array of up to seven entries corresponding to the next seven days.\n",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceSpecialDay"
+            }
+          },
+          "type": {
+            "description": "A type string used to identify the type of secondary hours (for example, `DRIVE_THROUGH`, `HAPPY_HOUR`, `DELIVERY`, `TAKEOUT`, `KITCHEN`, `BREAKFAST`, `LUNCH`, `DINNER`, `BRUNCH`, `PICKUP`, `SENIOR_HOURS`). Set for `secondary_opening_hours` only.",
+            "type": "string"
+          },
           "weekday_text": {
             "description": "An array of strings describing in human-readable text the hours of the place.",
             "type": "array",
@@ -34217,6 +34236,10 @@
           "time"
         ],
         "properties": {
+          "date": {
+            "description": "A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.",
+            "type": "string"
+          },
           "day": {
             "description": "A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.",
             "type": "number"
@@ -34225,6 +34248,10 @@
             "description": "May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.",
             "type": "string",
             "example": 1700
+          },
+          "truncated": {
+            "description": "True if a given period was truncated due to a seven-day cutoff, where the period starts before midnight on the date of the request and/or ends at or after  midnight on the last day. This property indicates that the period for open or close can extend past this seven-day cutoff.",
+            "type": "boolean"
           }
         }
       },
@@ -34278,6 +34305,20 @@
           },
           "translated": {
             "description": "A boolean value indicating if the review was translated from the original language it was written in.\nIf a review has been translated, corresponding to a value of true, Google recommends that you indicate this to your users. For example, you can add the following string, “Translated by Google”, to the review.\n",
+            "type": "boolean"
+          }
+        }
+      },
+      "PlaceSpecialDay": {
+        "type": "object",
+        "title": "PlaceSpecialDay",
+        "properties": {
+          "date": {
+            "description": "A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.",
+            "type": "string"
+          },
+          "exceptional_hours": {
+            "description": "True if there are exceptional hours for this day. If `true`, this means that there is at least one exception for this day. Exceptions cause different values to occur in the subfields of `current_opening_hours` and `secondary_opening_hours` such as `periods`, `weekday_text`, `open_now`. The exceptions apply to the hours, and the hours are used to generate the other fields.",
             "type": "boolean"
           }
         }

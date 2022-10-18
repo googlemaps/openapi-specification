@@ -22023,7 +22023,7 @@ components:
 
         **Contact**
 
-        The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+        The Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`
 
         **Atmosphere**
 
@@ -24076,6 +24076,9 @@ components:
         curbside_pickup:
           description: Specifies if the business supports curbside pickup.
           type: boolean
+        current_opening_hours:
+          description: 'Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later.  This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.'
+          $ref: '#/components/schemas/PlaceOpeningHours'
         delivery:
           description: Specifies if the business supports delivery.
           type: boolean
@@ -24122,7 +24125,7 @@ components:
           type: string
           example: Google Workplace 6
         opening_hours:
-          description: Contains hours of operation.
+          description: Contains the regular hours of operation.
           $ref: '#/components/schemas/PlaceOpeningHours'
         permanently_closed:
           deprecated: true
@@ -24170,6 +24173,9 @@ components:
         scope:
           deprecated: true
           type: string
+        secondary_opening_hours:
+          description: 'Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business''s main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_day` subfield of all hours, set for dates that have exceptional hours.'
+          $ref: '#/components/schemas/PlaceOpeningHours'
         takeout:
           description: Specifies if the business supports takeout.
           type: boolean
@@ -24355,6 +24361,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PlaceOpeningHoursPeriod'
+        special_days:
+          description: |
+            An array of up to seven entries corresponding to the next seven days.
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceSpecialDay'
+        type:
+          description: 'A type string used to identify the type of secondary hours (for example, `DRIVE_THROUGH`, `HAPPY_HOUR`, `DELIVERY`, `TAKEOUT`, `KITCHEN`, `BREAKFAST`, `LUNCH`, `DINNER`, `BRUNCH`, `PICKUP`, `SENIOR_HOURS`). Set for `secondary_opening_hours` only.'
+          type: string
         weekday_text:
           description: An array of strings describing in human-readable text the hours of the place.
           type: array
@@ -24388,6 +24403,9 @@ components:
         - day
         - time
       properties:
+        date:
+          description: 'A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.'
+          type: string
         day:
           description: 'A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.'
           type: number
@@ -24395,6 +24413,9 @@ components:
           description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.
           type: string
           example: 1700
+        truncated:
+          description: 'True if a given period was truncated due to a seven-day cutoff, where the period starts before midnight on the date of the request and/or ends at or after  midnight on the last day. This property indicates that the period for open or close can extend past this seven-day cutoff.'
+          type: boolean
     PlaceReview:
       type: object
       title: PlaceReview
@@ -24443,6 +24464,16 @@ components:
           description: |
             A boolean value indicating if the review was translated from the original language it was written in.
             If a review has been translated, corresponding to a value of true, Google recommends that you indicate this to your users. For example, you can add the following string, “Translated by Google”, to the review.
+          type: boolean
+    PlaceSpecialDay:
+      type: object
+      title: PlaceSpecialDay
+      properties:
+        date:
+          description: 'A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.'
+          type: string
+        exceptional_hours:
+          description: 'True if there are exceptional hours for this day. If `true`, this means that there is at least one exception for this day. Exceptions cause different values to occur in the subfields of `current_opening_hours` and `secondary_opening_hours` such as `periods`, `weekday_text`, `open_now`. The exceptions apply to the hours, and the hours are used to generate the other fields.'
           type: boolean
     PlacesAutocompleteResponse:
       type: object

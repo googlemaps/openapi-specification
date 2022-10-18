@@ -27,15 +27,11 @@
 
     **Contact**
 
-    The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+    The Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`
 
     **Atmosphere**
 
-    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
-
-    <aside class="note"><strong>Note: </strong><code>curbside_pickup</code>, <code>delivery</code>,
-    <code>dine_in</code>, and <code>takeout</code> are only supported for Place Details requests.
-    </aside>
+    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 

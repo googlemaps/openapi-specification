@@ -103,6 +103,37 @@
     </tr>
     <tr>
       <td align="left">
+        <h4
+          id="Place-current_opening_hours"
+          class="add-link schema-object-property-key"
+        >
+          <code>current_opening_hours</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#PlaceOpeningHours" title="PlaceOpeningHours"
+          >PlaceOpeningHours</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains the hours of operation for the next seven days (including
+            today). The time period starts at midnight on the date of the
+            request and ends at 11:59 pm six days later. This field includes the
+            <code>special_day</code> subfield of all hours, set for dates that
+            have exceptional hours.
+          </p>
+          <p>
+            See <a href="#PlaceOpeningHours">PlaceOpeningHours</a> for more
+            information.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
         <h4 id="Place-delivery" class="add-link schema-object-property-key">
           <code>delivery</code>
         </h4>
@@ -128,6 +159,36 @@
           <p>
             Specifies if the business supports indoor or outdoor seating
             options.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="Place-editorial_summary"
+          class="add-link schema-object-property-key"
+        >
+          <code>editorial_summary</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#PlaceEditorialSummary" title="PlaceEditorialSummary"
+          >PlaceEditorialSummary</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains a summary of the place. A summary is comprised of a textual
+            overview, and also includes the language code for these if
+            applicable. Summary text must be presented as-is and can not be
+            modified or altered.
+          </p>
+          <p>
+            See <a href="#PlaceEditorialSummary">PlaceEditorialSummary</a> for
+            more information.
           </p>
         </div>
       </td>
@@ -315,7 +376,7 @@
       </td>
       <td>
         <div class="ref-property-description">
-          <p>Contains hours of operation.</p>
+          <p>Contains the regular hours of operation.</p>
           <p>
             See <a href="#PlaceOpeningHours">PlaceOpeningHours</a> for more
             information.
@@ -532,6 +593,42 @@
       <td>
         <aside class="deprecated"><code>scope</code> is deprecated.</aside>
         <div class="nonref-property-description"></div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="Place-secondary_opening_hours"
+          class="add-link schema-object-property-key"
+        >
+          <code>secondary_opening_hours</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>
+        <a href="#PlaceOpeningHours" title="PlaceOpeningHours"
+          >PlaceOpeningHours</a
+        >
+      </td>
+      <td>
+        <div class="ref-property-description">
+          <p>
+            Contains an array of entries for the next seven days including
+            information about secondary hours of a business. Secondary hours are
+            different from a business's main hours. For example, a restaurant
+            can specify drive through hours or delivery hours as its secondary
+            hours. This field populates the <code>type</code> subfield, which
+            draws from a predefined list of opening hours types (such as
+            <code>DRIVE_THROUGH</code>, <code>PICKUP</code>, or
+            <code>TAKEOUT</code>) based on the types of the place. This field
+            includes the <code>special_day</code> subfield of all hours, set for
+            dates that have exceptional hours.
+          </p>
+          <p>
+            See <a href="#PlaceOpeningHours">PlaceOpeningHours</a> for more
+            information.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>

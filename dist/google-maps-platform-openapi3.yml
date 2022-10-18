@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Google Maps Platform
   description: API Specification for Google Maps Platform
-  version: 1.19.1
+  version: 1.20.0
 servers:
   - url: 'https://www.googleapis.com'
 paths:
@@ -22027,11 +22027,7 @@ components:
 
         **Atmosphere**
 
-        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
-
-        <aside class="note"><strong>Note: </strong><code>curbside_pickup</code>, <code>delivery</code>,
-        <code>dine_in</code>, and <code>takeout</code> are only supported for Place Details requests.
-        </aside>
+        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
       schema:
         type: array
         items:
@@ -24086,6 +24082,9 @@ components:
         dine_in:
           description: Specifies if the business supports indoor or outdoor seating options.
           type: boolean
+        editorial_summary:
+          description: 'Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.'
+          $ref: '#/components/schemas/PlaceEditorialSummary'
         formatted_address:
           description: |
             A string containing the human-readable address of this place.
@@ -24299,6 +24298,17 @@ components:
         offset:
           description: 'Defines the start position of this term in the description, measured in Unicode characters'
           type: number
+    PlaceEditorialSummary:
+      type: object
+      title: PlaceEditorialSummary
+      description: 'Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.'
+      properties:
+        overview:
+          description: A medium-length textual summary of the place.
+          type: string
+        language:
+          description: The language of the previous fields. May not always be present.
+          type: string
     PlacePhoto:
       type: object
       title: PlacePhoto

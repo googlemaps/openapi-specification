@@ -27,11 +27,11 @@
 
     **Contact**
 
-    The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+    The Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`
 
     **Atmosphere**
 
-    The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
@@ -49,13 +49,6 @@
 
     -   IP bias: Instructs the API to use IP address biasing. Pass the string `ipbias` (this option has no additional parameters).
     -   Point: A single lat/lng coordinate. Use the following format: `point:lat,lng`.
-    -   Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
-    -   Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
-
--   <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
-
-    Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
-
     -   Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
     -   Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
 

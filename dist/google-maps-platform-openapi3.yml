@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Google Maps Platform
   description: API Specification for Google Maps Platform
-  version: 1.17.16
+  version: 1.20.0
 servers:
   - url: 'https://www.googleapis.com'
 paths:
@@ -18536,6 +18536,8 @@ paths:
         - $ref: '#/components/parameters/places_sessiontoken'
         - $ref: '#/components/parameters/language'
         - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/places_reviewsort'
+        - $ref: '#/components/parameters/places_reviewnotranslation'
       responses:
         '200':
           description: 200 OK
@@ -18812,7 +18814,6 @@ paths:
           example: Museum of Contemporary Art Australia
         - $ref: '#/components/parameters/places_inputtype'
         - $ref: '#/components/parameters/places_locationbias'
-        - $ref: '#/components/parameters/places_locationrestriction'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -21215,7 +21216,6 @@ paths:
         - $ref: '#/components/parameters/places_origin'
         - $ref: '#/components/parameters/places_location'
         - $ref: '#/components/parameters/places_locationbias'
-        - $ref: '#/components/parameters/places_locationrestriction'
         - $ref: '#/components/parameters/places_radius'
         - $ref: '#/components/parameters/places_types'
         - $ref: '#/components/parameters/language'
@@ -22023,11 +22023,11 @@ components:
 
         **Contact**
 
-        The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+        The Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`
 
         **Atmosphere**
 
-        The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.
       schema:
         type: array
         items:
@@ -22120,20 +22120,6 @@ components:
           value: ipbias
         point:
           value: 'point:37.781157,-122.398720'
-        circular:
-          value: 'circle:1000@37.781157,-122.398720'
-        rectangular:
-          value: 'rectangle:37.7,-122.4|37.8,-122.3'
-    places_locationrestriction:
-      name: locationrestriction
-      description: |
-        Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
-        - Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
-        - Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
-      schema:
-        type: string
-      in: query
-      examples:
         circular:
           value: 'circle:1000@37.781157,-122.398720'
         rectangular:
@@ -22275,6 +22261,28 @@ components:
         enum:
           - prominence
           - distance
+      in: query
+    places_reviewnotranslation:
+      name: reviews_no_translations
+      description: |
+
+        Specify `reviews_no_translations=true` to disable translation of reviews; specify `reviews_no_translations=false` to enable translation of reviews. Reviews are returned in their original language.
+
+        If omitted, or passed with no value, translation of reviews is enabled. If the `language` parameter was specified in the request, use the specified language as the preferred language for translation. If `language` is omitted, the API attempts to use the `Accept-Language` header as the preferred language.
+      schema:
+        type: boolean
+      in: query
+    places_reviewsort:
+      name: reviews_sort
+      description: |
+        The sorting method to use when returning reviews. Can be set to `most_relevant` (default) or `newest`.
+
+        - For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
+        - For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
+
+        Google recommends that you display how the reviews are being sorted to the end user.
+      schema:
+        type: string
       in: query
     places_sessiontoken:
       name: sessiontoken
@@ -24065,6 +24073,21 @@ components:
             - OPERATIONAL
             - CLOSED_TEMPORARILY
             - CLOSED_PERMANENTLY
+        curbside_pickup:
+          description: Specifies if the business supports curbside pickup.
+          type: boolean
+        current_opening_hours:
+          description: 'Contains the hours of operation for the next seven days (including today). The time period starts at midnight on the date of the request and ends at 11:59 pm six days later. This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.'
+          $ref: '#/components/schemas/PlaceOpeningHours'
+        delivery:
+          description: Specifies if the business supports delivery.
+          type: boolean
+        dine_in:
+          description: Specifies if the business supports indoor or outdoor seating options.
+          type: boolean
+        editorial_summary:
+          description: 'Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.'
+          $ref: '#/components/schemas/PlaceEditorialSummary'
         formatted_address:
           description: |
             A string containing the human-readable address of this place.
@@ -24073,7 +24096,7 @@ components:
 
             The formatted address is logically composed of one or more address components. For example, the address "111 8th Avenue, New York, NY" consists of the following components: "111" (the street number), "8th Avenue" (the route), "New York" (the city) and "NY" (the US state).
 
-            Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.      
+            Do not parse the formatted address programmatically. Instead you should use the individual address components, which the API response includes in addition to the formatted address field.
           type: string
           example: '48 Pirrama Rd, Pyrmont NSW 2009, Australia'
         formatted_phone_number:
@@ -24102,7 +24125,7 @@ components:
           type: string
           example: Google Workplace 6
         opening_hours:
-          description: Contains hours of operation.
+          description: Contains the regular hours of operation.
           $ref: '#/components/schemas/PlaceOpeningHours'
         permanently_closed:
           deprecated: true
@@ -24138,13 +24161,24 @@ components:
           deprecated: true
           type: string
         reviews:
-          description: 'A JSON array of up to five reviews. If a language parameter was specified in the request, the service will bias the results to prefer reviews written in that language.'
+          description: |
+            A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.
+
+            - For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
+            - For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
+            Google recommends indicating to users whether results are ordered by `most_relevant` or `newest`.
           type: array
           items:
             $ref: '#/components/schemas/PlaceReview'
         scope:
           deprecated: true
           type: string
+        secondary_opening_hours:
+          description: 'Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business''s main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.'
+          $ref: '#/components/schemas/PlaceOpeningHours'
+        takeout:
+          description: Specifies if the business supports takeout.
+          type: boolean
         types:
           description: 'Contains an array of feature types describing the given result. See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table2).'
           type: array
@@ -24270,6 +24304,17 @@ components:
         offset:
           description: 'Defines the start position of this term in the description, measured in Unicode characters'
           type: number
+    PlaceEditorialSummary:
+      type: object
+      title: PlaceEditorialSummary
+      description: 'Contains a summary of the place. A summary is comprised of a textual overview, and also includes the language code for these if applicable. Summary text must be presented as-is and can not be modified or altered.'
+      properties:
+        overview:
+          description: A medium-length textual summary of the place.
+          type: string
+        language:
+          description: The language of the previous fields. May not always be present.
+          type: string
     PlacePhoto:
       type: object
       title: PlacePhoto
@@ -24316,6 +24361,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PlaceOpeningHoursPeriod'
+        special_days:
+          description: |
+            An array of up to seven entries corresponding to the next seven days.
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceSpecialDay'
+        type:
+          description: 'A type string used to identify the type of secondary hours (for example, `DRIVE_THROUGH`, `HAPPY_HOUR`, `DELIVERY`, `TAKEOUT`, `KITCHEN`, `BREAKFAST`, `LUNCH`, `DINNER`, `BRUNCH`, `PICKUP`, `SENIOR_HOURS`). Set for `secondary_opening_hours` only.'
+          type: string
         weekday_text:
           description: An array of strings describing in human-readable text the hours of the place.
           type: array
@@ -24349,6 +24403,9 @@ components:
         - day
         - time
       properties:
+        date:
+          description: 'A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.'
+          type: string
         day:
           description: 'A number from 0–6, corresponding to the days of the week, starting on Sunday. For example, 2 means Tuesday.'
           type: number
@@ -24356,6 +24413,9 @@ components:
           description: May contain a time of day in 24-hour hhmm format. Values are in the range 0000–2359. The time will be reported in the place’s time zone.
           type: string
           example: 1700
+        truncated:
+          description: 'True if a given period was truncated due to a seven-day cutoff, where the period starts before midnight on the date of the request and/or ends at or after  midnight on the last day. This property indicates that the period for open or close can extend past this seven-day cutoff.'
+          type: boolean
     PlaceReview:
       type: object
       title: PlaceReview
@@ -24377,7 +24437,16 @@ components:
           description: 'The URL to the user''s profile photo, if available.'
           type: string
         language:
-          description: 'An IETF language code indicating the language used in the user''s review. This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as ''en'', and not ''en-AU'' or ''en-UK'' and so on.'
+          description: |
+            An IETF language code indicating the language of the returned review.
+            This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.
+            This field is empty if there is only a rating with no review text. 
+          type: string
+        original_language:
+          description: |
+            An IETF language code indicating the original language of the review. If the review has been translated, then `original_language` != `language`.
+            This field contains the main language tag only, and not the secondary tag indicating country or region. For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.
+            This field is empty if there is only a rating with no review text.
           type: string
         rating:
           description: 'The user''s overall rating for this place. This is a whole number, ranging from 1 to 5.'
@@ -24391,6 +24460,21 @@ components:
         time:
           description: 'The time that the review was submitted, measured in the number of seconds since since midnight, January 1, 1970 UTC.'
           type: number
+        translated:
+          description: |
+            A boolean value indicating if the review was translated from the original language it was written in.
+            If a review has been translated, corresponding to a value of true, Google recommends that you indicate this to your users. For example, you can add the following string, “Translated by Google”, to the review.
+          type: boolean
+    PlaceSpecialDay:
+      type: object
+      title: PlaceSpecialDay
+      properties:
+        date:
+          description: 'A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.'
+          type: string
+        exceptional_hours:
+          description: 'True if there are exceptional hours for this day. If `true`, this means that there is at least one exception for this day. Exceptions cause different values to occur in the subfields of `current_opening_hours` and `secondary_opening_hours` such as `periods`, `weekday_text`, `open_now`. The exceptions apply to the hours, and the hours are used to generate the other fields.'
+          type: boolean
     PlacesAutocompleteResponse:
       type: object
       title: PlacesAutocompleteResponse

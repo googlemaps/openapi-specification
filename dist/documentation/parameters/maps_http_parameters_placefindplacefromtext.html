@@ -78,14 +78,16 @@
     <p><strong>Contact</strong></p>
     <p>
       The Contact category includes the following fields:
-      <code>formatted_phone_number</code>,
+      <code>current_opening_hours</code>, <code>formatted_phone_number</code>,
       <code>international_phone_number</code>, <code>opening_hours</code>,
-      <code>website</code>
+      <code>secondary_opening_hours</code>, <code>website</code>
     </p>
     <p><strong>Atmosphere</strong></p>
     <p>
       The Atmosphere category includes the following fields:
-      <code>price_level</code>, <code>rating</code>, <code>review</code>,
+      <code>curbside_pickup</code>, <code>delivery</code>, <code>dine_in</code>,
+      <code>editorial_summary</code>, <code>price_level</code>,
+      <code>rating</code>, <code>reviews</code>, <code>takeout</code>,
       <code>user_ratings_total</code>.
     </p>
   </li>
@@ -145,26 +147,6 @@
         Point: A single lat/lng coordinate. Use the following format:
         <code>point:lat,lng</code>.
       </li>
-      <li>
-        Circular: A string specifying radius in meters, plus lat/lng in decimal
-        degrees. Use the following format: <code>circle:radius@lat,lng</code>.
-      </li>
-      <li>
-        Rectangular: A string specifying two lat/lng pairs in decimal degrees,
-        representing the south/west and north/east points of a rectangle. Use
-        the following format:<code>rectangle:south,west|north,east</code>. Note
-        that east/west values are wrapped to the range -180, 180, and
-        north/south values are clamped to the range -90, 90.
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
-    <p>
-      Restrict results to a specified area, by specifying either a radius plus
-      lat/lng, or two lat/lng pairs representing the points of a rectangle.
-    </p>
-    <ul>
       <li>
         Circular: A string specifying radius in meters, plus lat/lng in decimal
         degrees. Use the following format: <code>circle:radius@lat,lng</code>.

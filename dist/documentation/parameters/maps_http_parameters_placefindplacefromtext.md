@@ -31,7 +31,7 @@
 
     **Atmosphere**
 
-    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `review`, `takeout`, `user_ratings_total`.
+    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 

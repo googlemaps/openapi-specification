@@ -25,6 +25,15 @@ properties:
     type: array
     items:
       $ref: "./PlaceOpeningHoursPeriod.yml"
+  special_days:
+    description: |
+      An array of up to seven entries corresponding to the next seven days.
+    type: array
+    items:
+      $ref: "./PlaceSpecialDay.yml"
+  type:
+    description: A type string used to identify the type of secondary hours (for example, `DRIVE_THROUGH`, `HAPPY_HOUR`, `DELIVERY`, `TAKEOUT`, `KITCHEN`, `BREAKFAST`, `LUNCH`, `DINNER`, `BRUNCH`, `PICKUP`, `SENIOR_HOURS`). Set for `secondary_opening_hours` only.
+    type: string
   weekday_text:
     description: An array of strings describing in human-readable text the hours of the place.
     type: array

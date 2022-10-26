@@ -1,0 +1,95 @@
+<!--- This is a generated file, do not edit! -->
+<!--- [START maps_http_schema_placespecialday] -->
+<h3 class="schema-object" id="PlaceSpecialDay">PlaceSpecialDay</h3>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Field</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        <h4
+          id="PlaceSpecialDay-date"
+          class="add-link schema-object-property-key"
+        >
+          <code>date</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>string</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            A date expressed in RFC3339 format in the local timezone for the
+            place, for example 2010-12-31.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <h4
+          id="PlaceSpecialDay-exceptional_hours"
+          class="add-link schema-object-property-key"
+        >
+          <code>exceptional_hours</code>
+        </h4>
+      </td>
+      <td>optional</td>
+      <td>boolean</td>
+      <td>
+        <div class="nonref-property-description">
+          <p>
+            True if there are exceptional hours for this day. If
+            <code>true</code>, this means that there is at least one exception
+            for this day. Exceptions cause different values to occur in the
+            subfields of <code>current_opening_hours</code> and
+            <code>secondary_opening_hours</code> such as <code>periods</code>,
+            <code>weekday_text</code>, <code>open_now</code>. The exceptions
+            apply to the hours, and the hours are used to generate the other
+            fields.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: right; font-size: smaller">
+  Generated from the
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github"
+    href="https://github.com/googlemaps/openapi-specification"
+    title="Google Maps Platform OpenAPI Specification"
+    class="external"
+    >OpenAPI specification</a
+  >.
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github-maps-http-schema-placespecialday"
+    data-action="edit"
+    style="margin-left: 5px"
+    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlaceSpecialDay.yml"
+    title="Edit on GitHub"
+    ><span class="material-icons">edit</span> Edit</a
+  >
+  <a
+    class="gc-analytics-event"
+    data-category="GMP"
+    data-label="openapi-github-maps-http-schema-placespecialday"
+    data-action="bug"
+    style="margin-left: 5px"
+    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - PlaceSpecialDay"
+    title="File bug for schemas on GitHub"
+    ><span class="material-icons">bug_report</span> Report bug</a
+  >
+</p>
+
+<!--- [END maps_http_schema_placespecialday] -->

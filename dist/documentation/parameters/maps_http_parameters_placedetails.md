@@ -23,11 +23,11 @@
 
     **Contact**
 
-    The Contact category includes the following fields: `formatted_phone_number`, `international_phone_number`, `opening_hours`, `website`
+    The Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`
 
     **Atmosphere**
 
-    The Atmosphere category includes the following fields: `price_level`, `rating`, `review`, `user_ratings_total`.
+    The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.
 
 -   <h3 class="parameter-name" id="language">language</h3>
 
@@ -42,6 +42,21 @@
 -   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
+
+-   <h3 class="parameter-name" id="reviews_no_translations">reviews_no_translations</h3>
+
+    Specify `reviews_no_translations=true` to disable translation of reviews; specify `reviews_no_translations=false` to enable translation of reviews. Reviews are returned in their original language.
+
+    If omitted, or passed with no value, translation of reviews is enabled. If the `language` parameter was specified in the request, use the specified language as the preferred language for translation. If `language` is omitted, the API attempts to use the `Accept-Language` header as the preferred language.
+
+-   <h3 class="parameter-name" id="reviews_sort">reviews_sort</h3>
+
+    The sorting method to use when returning reviews. Can be set to `most_relevant` (default) or `newest`.
+
+    -   For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.
+    -   For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.
+
+    Google recommends that you display how the reviews are being sorted to the end user.
 
 -   <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
 

@@ -16,7 +16,7 @@ type: object
 title: NearestRoadsResponse
 properties:
   snappedPoints:
-    description: An array of snapped points.
+    description: An array of snapped points. Sometimes containing several snapped points for the same point with differing placeId or location.
     type: array
     items:
       $ref: "./SnappedPoint.yml"

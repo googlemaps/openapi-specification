@@ -14,10 +14,12 @@
 
 name: Update dist
 on:
-  repository_dispatch:
-    types: [update-dist-command]
+  pull_request:
+    types: [ closed ]
 jobs:
   update-dist:
+    # will only run if the PR was merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -34,10 +36,3 @@ jobs:
           git add dist
           git commit -m "chore: update dist folder [skip ci]" || true
           git push origin
-      - name: Add reaction
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
-        with:
-          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
-          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: rocket

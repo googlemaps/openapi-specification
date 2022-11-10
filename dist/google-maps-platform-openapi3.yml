@@ -18814,6 +18814,7 @@ paths:
           example: Museum of Contemporary Art Australia
         - $ref: '#/components/parameters/places_inputtype'
         - $ref: '#/components/parameters/places_locationbias'
+        - $ref: '#/components/parameters/places_locationrestriction'
         - $ref: '#/components/parameters/language'
       responses:
         '200':
@@ -21216,6 +21217,7 @@ paths:
         - $ref: '#/components/parameters/places_origin'
         - $ref: '#/components/parameters/places_location'
         - $ref: '#/components/parameters/places_locationbias'
+        - $ref: '#/components/parameters/places_locationrestriction'
         - $ref: '#/components/parameters/places_radius'
         - $ref: '#/components/parameters/places_types'
         - $ref: '#/components/parameters/language'
@@ -22120,6 +22122,20 @@ components:
           value: ipbias
         point:
           value: 'point:37.781157,-122.398720'
+        circular:
+          value: 'circle:1000@37.781157,-122.398720'
+        rectangular:
+          value: 'rectangle:37.7,-122.4|37.8,-122.3'
+    places_locationrestriction:
+      name: locationrestriction
+      description: |
+        Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
+        - Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
+        - Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
+      schema:
+        type: string
+      in: query
+      examples:
         circular:
           value: 'circle:1000@37.781157,-122.398720'
         rectangular:

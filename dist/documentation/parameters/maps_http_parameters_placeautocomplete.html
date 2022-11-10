@@ -134,6 +134,26 @@
     </ul>
   </li>
   <li>
+    <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
+    <p>
+      Restrict results to a specified area, by specifying either a radius plus
+      lat/lng, or two lat/lng pairs representing the points of a rectangle.
+    </p>
+    <ul>
+      <li>
+        Circular: A string specifying radius in meters, plus lat/lng in decimal
+        degrees. Use the following format: <code>circle:radius@lat,lng</code>.
+      </li>
+      <li>
+        Rectangular: A string specifying two lat/lng pairs in decimal degrees,
+        representing the south/west and north/east points of a rectangle. Use
+        the following format:<code>rectangle:south,west|north,east</code>. Note
+        that east/west values are wrapped to the range -180, 180, and
+        north/south values are clamped to the range -90, 90.
+      </li>
+    </ul>
+  </li>
+  <li>
     <h3 class="parameter-name" id="offset">offset</h3>
     <p>
       The position, in the input term, of the last character that the service

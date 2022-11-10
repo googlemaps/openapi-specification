@@ -14,8 +14,10 @@
 
 name: Update dist
 on:
-  repository_dispatch:
-    types: [update-dist-command]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
 jobs:
   update-dist:
     runs-on: ubuntu-latest
@@ -31,13 +33,6 @@ jobs:
           npm run build
           git config --global user.name 'googlemaps-bot'
           git config --global user.email 'googlemaps-bot@google.com'
-          git add dist
+          git add -f dist
           git commit -m "chore: update dist folder [skip ci]" || true
           git push origin
-      - name: Add reaction
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
-        with:
-          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
-          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: rocket

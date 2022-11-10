@@ -70,14 +70,16 @@
     <p><strong>Contact</strong></p>
     <p>
       The Contact category includes the following fields:
-      <code>formatted_phone_number</code>,
+      <code>current_opening_hours</code>, <code>formatted_phone_number</code>,
       <code>international_phone_number</code>, <code>opening_hours</code>,
-      <code>website</code>
+      <code>secondary_opening_hours</code>, <code>website</code>
     </p>
     <p><strong>Atmosphere</strong></p>
     <p>
       The Atmosphere category includes the following fields:
-      <code>price_level</code>, <code>rating</code>, <code>review</code>,
+      <code>curbside_pickup</code>, <code>delivery</code>, <code>dine_in</code>,
+      <code>editorial_summary</code>, <code>price_level</code>,
+      <code>rating</code>, <code>reviews</code>, <code>takeout</code>,
       <code>user_ratings_total</code>.
     </p>
   </li>
@@ -132,6 +134,45 @@
       with some notable exceptions. For example, the United Kingdom's ccTLD is
       "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the
       entity of "The United Kingdom of Great Britain and Northern Ireland").
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="reviews_no_translations">
+      reviews_no_translations
+    </h3>
+    <p>
+      Specify <code>reviews_no_translations=true</code> to disable translation
+      of reviews; specify <code>reviews_no_translations=false</code> to enable
+      translation of reviews. Reviews are returned in their original language.
+    </p>
+    <p>
+      If omitted, or passed with no value, translation of reviews is enabled. If
+      the <code>language</code> parameter was specified in the request, use the
+      specified language as the preferred language for translation. If
+      <code>language</code> is omitted, the API attempts to use the
+      <code>Accept-Language</code> header as the preferred language.
+    </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="reviews_sort">reviews_sort</h3>
+    <p>
+      The sorting method to use when returning reviews. Can be set to
+      <code>most_relevant</code> (default) or <code>newest</code>.
+    </p>
+    <ul>
+      <li>
+        For <code>most_relevant</code> (default), reviews are sorted by
+        relevance; the service will bias the results to return reviews
+        originally written in the preferred language.
+      </li>
+      <li>
+        For <code>newest</code>, reviews are sorted in chronological order; the
+        preferred language does not affect the sort order.
+      </li>
+    </ul>
+    <p>
+      Google recommends that you display how the reviews are being sorted to the
+      end user.
     </p>
   </li>
   <li>

@@ -27268,9 +27268,6 @@
             "$ref": "#/components/parameters/places_locationbias"
           },
           {
-            "$ref": "#/components/parameters/places_locationrestriction"
-          },
-          {
             "$ref": "#/components/parameters/language"
           }
         ],
@@ -30765,9 +30762,6 @@
             "$ref": "#/components/parameters/places_locationbias"
           },
           {
-            "$ref": "#/components/parameters/places_locationrestriction"
-          },
-          {
             "$ref": "#/components/parameters/places_radius"
           },
           {
@@ -31660,7 +31654,7 @@
       },
       "places_location": {
         "name": "location",
-        "description": "The point around which to retrieve place information. This must be specified as `latitude,longitude`. The `radius` parameter must also be provided when specifying a location. If `radius` is not provided, the `location` parameter is ignored.\n\n<div class=\"note\">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>\n",
+        "description": "The point around which to retrieve place information. This must be specified as `latitude,longitude`. \n\n<div class=\"note\">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>\n",
         "schema": {
           "type": "string"
         },
@@ -31681,22 +31675,6 @@
           "point": {
             "value": "point:37.781157,-122.398720"
           },
-          "circular": {
-            "value": "circle:1000@37.781157,-122.398720"
-          },
-          "rectangular": {
-            "value": "rectangle:37.7,-122.4|37.8,-122.3"
-          }
-        }
-      },
-      "places_locationrestriction": {
-        "name": "locationrestriction",
-        "description": "Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.\n- Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.\n- Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.\n",
-        "schema": {
-          "type": "string"
-        },
-        "in": "query",
-        "examples": {
           "circular": {
             "value": "circle:1000@37.781157,-122.398720"
           },

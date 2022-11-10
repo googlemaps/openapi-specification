@@ -26,7 +26,7 @@
 
 -   <h3 class="parameter-name" id="location">location</h3>
 
-    The point around which to retrieve place information. This must be specified as `latitude,longitude`. The `radius` parameter must also be provided when specifying a location. If `radius` is not provided, the `location` parameter is ignored.
+    The point around which to retrieve place information. This must be specified as `latitude,longitude`.
 
     <div class="note">When using the Text Search API, the `location` parameter may be overriden if the `query` contains an explicit location such as `Market in Barcelona`.</div>
 
@@ -36,13 +36,6 @@
 
     -   IP bias: Instructs the API to use IP address biasing. Pass the string `ipbias` (this option has no additional parameters).
     -   Point: A single lat/lng coordinate. Use the following format: `point:lat,lng`.
-    -   Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
-    -   Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
-
--   <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
-
-    Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
-
     -   Circular: A string specifying radius in meters, plus lat/lng in decimal degrees. Use the following format: `circle:radius@lat,lng`.
     -   Rectangular: A string specifying two lat/lng pairs in decimal degrees, representing the south/west and north/east points of a rectangle. Use the following format:`rectangle:south,west|north,east`. Note that east/west values are wrapped to the range -180, 180, and north/south values are clamped to the range -90, 90.
 

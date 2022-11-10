@@ -14,8 +14,10 @@
 
 name: Update dist
 on:
-  pull_request:
-    types: [ closed ]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
 jobs:
   update-dist:
     # will only run if the PR was merged
@@ -33,6 +35,6 @@ jobs:
           npm run build
           git config --global user.name 'googlemaps-bot'
           git config --global user.email 'googlemaps-bot@google.com'
-          git add dist
+          git add -f dist
           git commit -m "chore: update dist folder [skip ci]" || true
           git push origin

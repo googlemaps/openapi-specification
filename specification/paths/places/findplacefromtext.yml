@@ -32,6 +32,7 @@ parameters:
     example: "Museum of Contemporary Art Australia"
   - "$ref": "../../parameters/places/inputtype.yml"
   - "$ref": "../../parameters/places/locationbias.yml"
+  - "$ref": "../../parameters/places/locationrestriction.yml"
   - "$ref": "../../parameters/language.yml"
 responses:
   "200":

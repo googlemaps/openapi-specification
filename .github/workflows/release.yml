@@ -16,14 +16,29 @@
 name: Release
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
 jobs:
   release:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     env:
       GOOGLE_MAPS_JS_SAMPLES_KEY: "${{ secrets.GOOGLE_MAPS_JS_SAMPLES_KEY }}"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
+      - run: npm ci
+      - name: Update dist
+        run: |
+          npm run build
+          git config --global user.name 'googlemaps-bot'
+          git config --global user.email 'googlemaps-bot@google.com'
+          git add -f dist
+          git commit -m "chore: update dist folder [skip ci]" || true
+          git push origin
     steps:
       - uses: actions/checkout@v2
         with:

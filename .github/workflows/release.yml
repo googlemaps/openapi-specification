@@ -39,10 +39,6 @@ jobs:
           git add -f dist
           git commit -m "chore: update dist folder [skip ci]" || true
           git push origin
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
       - run: npm ci
       - run: npm run build -- --jobs 8
       - run: npm test -- --jobs 8

@@ -31,6 +31,7 @@ properties:
     type: string
     enum:
       - OPERATIONAL
+      - FUTURE_OPENING
       - CLOSED_TEMPORARILY
       - CLOSED_PERMANENTLY
   curbside_pickup:

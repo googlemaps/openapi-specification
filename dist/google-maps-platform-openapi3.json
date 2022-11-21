@@ -31588,7 +31588,7 @@
       },
       "places_fields": {
         "name": "fields",
-        "description": "\n<div class=\"caution\"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href=\"https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support\">Places API fields support</a>.</div>\n\nUse the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.\n\nFields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.\n\n**Basic**\n\nThe Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.\n\n**Contact**\n\nThe Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`\n\n**Atmosphere**\n\nThe Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.\n",
+        "description": "\n<div class=\"caution\"> Caution: Place Search requests and Place Details requests do not return the same fields. Place Search requests return a subset of the fields that are returned by Place Details requests. If the field you want is not returned by Place Search, you can use Place Search to get a <code>place_id</code>, then use that Place ID to make a Place Details request. For more information on the fields that are unavailable in a Place Search request, see <a href=\"https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support\">Places API fields support</a>.</div>\n\nUse the fields parameter to specify a comma-separated list of place data types to return. For example: `fields=formatted_address,name,geometry`. Use a forward slash when specifying compound values. For example: `opening_hours/open_now`.\n\nFields are divided into three billing categories: Basic, Contact, and Atmosphere. Basic fields are billed at base rate, and incur no additional charges. Contact and Atmosphere fields are billed at a higher rate. See the [pricing sheet](https://cloud.google.com/maps-platform/pricing/sheet/) for more information. Attributions, `html_attributions`, are always returned with every call, regardless of whether the field has been requested.\n\n**Basic**\n\nThe Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`, `wheelchair_accessible_entrance`.\n\n**Contact**\n\nThe Contact category includes the following fields: `current_opening_hours`, `formatted_phone_number`, `international_phone_number`, `opening_hours`, `secondary_opening_hours`, `website`\n\n**Atmosphere**\n\nThe Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reservable`, `reviews`, `serves_beer`, `serves_breakfast`, `serves_brunch`, `serves_dinner`, `serves_lunch`, `serves_vegetarian_food`, `serves_wine`, `takeout`, `user_ratings_total`.\n",
         "schema": {
           "type": "array",
           "items": {
@@ -33959,12 +33959,44 @@
             "deprecated": true,
             "type": "string"
           },
+          "reservable": {
+            "description": "Specifies if the place supports reservations.",
+            "type": "boolean"
+          },
           "reviews": {
             "description": "A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.\n\n- For `most_relevant` (default), reviews are sorted by relevance; the service will bias the results to return reviews originally written in the preferred language.\n- For `newest`, reviews are sorted in chronological order; the preferred language does not affect the sort order.\nGoogle recommends indicating to users whether results are ordered by `most_relevant` or `newest`.\n",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PlaceReview"
             }
+          },
+          "serves_beer": {
+            "description": "Specifies if the place serves beer.",
+            "type": "boolean"
+          },
+          "serves_breakfast": {
+            "description": "Specifies if the place serves breakfast.",
+            "type": "boolean"
+          },
+          "serves_brunch": {
+            "description": "Specifies if the place serves brunch.",
+            "type": "boolean"
+          },
+          "serves_dinner": {
+            "description": "Specifies if the place serves dinner.",
+            "type": "boolean"
+          },
+          "serves_lunch": {
+            "description": "Specifies if the place serves lunch.",
+            "type": "boolean"
+          },
+          "serves_vegetarian_food": {
+            "description": "Specifies if the place serves vegetarian food.",
+            "type": "boolean"
+          },
+          "serves_wine": {
+            "description": "Specifies if the place serves wine.",
+            "type": "boolean"
           },
           "scope": {
             "deprecated": true,
@@ -34013,6 +34045,10 @@
             "description": "The authoritative website for this place, such as a business' homepage.",
             "type": "string",
             "example": "http://google.com"
+          },
+          "wheelchair_accessible_entrance": {
+            "description": "Specifies if the place has an entrance that is wheelchair-accessible.",
+            "type": "boolean"
           }
         }
       },

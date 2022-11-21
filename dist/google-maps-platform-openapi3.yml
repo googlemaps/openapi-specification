@@ -22021,7 +22021,7 @@ components:
 
         **Basic**
 
-        The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`.
+        The Basic category includes the following fields: `address_component`, `adr_address`, `business_status`, `formatted_address`, `geometry`, `icon`, `icon_mask_base_uri`, `icon_background_color`, `name`, `permanently_closed` ([deprecated](https://developers.google.com/maps/deprecations)), `photo`, `place_id`, `plus_code`, `type`, `url`, `utc_offset`, `vicinity`, `wheelchair_accessible_entrance`.
 
         **Contact**
 
@@ -22029,7 +22029,7 @@ components:
 
         **Atmosphere**
 
-        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reviews`, `takeout`, `user_ratings_total`.
+        The Atmosphere category includes the following fields: `curbside_pickup`, `delivery`, `dine_in`, `editorial_summary`, `price_level`, `rating`, `reservable`, `reviews`, `serves_beer`, `serves_breakfast`, `serves_brunch`, `serves_dinner`, `serves_lunch`, `serves_vegetarian_food`, `serves_wine`, `takeout`, `user_ratings_total`.
       schema:
         type: array
         items:
@@ -24176,6 +24176,9 @@ components:
         reference:
           deprecated: true
           type: string
+        reservable:
+          description: Specifies if the place supports reservations.
+          type: boolean
         reviews:
           description: |
             A JSON array of up to five reviews. By default, the reviews are sorted in order of relevance. Use the `reviews_sort` request parameter to control sorting.
@@ -24186,6 +24189,27 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PlaceReview'
+        serves_beer:
+          description: Specifies if the place serves beer.
+          type: boolean
+        serves_breakfast:
+          description: Specifies if the place serves breakfast.
+          type: boolean
+        serves_brunch:
+          description: Specifies if the place serves brunch.
+          type: boolean
+        serves_dinner:
+          description: Specifies if the place serves dinner.
+          type: boolean
+        serves_lunch:
+          description: Specifies if the place serves lunch.
+          type: boolean
+        serves_vegetarian_food:
+          description: Specifies if the place serves vegetarian food.
+          type: boolean
+        serves_wine:
+          description: Specifies if the place serves wine.
+          type: boolean
         scope:
           deprecated: true
           type: string
@@ -24228,6 +24252,9 @@ components:
           description: 'The authoritative website for this place, such as a business'' homepage.'
           type: string
           example: 'http://google.com'
+        wheelchair_accessible_entrance:
+          description: Specifies if the place has an entrance that is wheelchair-accessible.
+          type: boolean
     PlaceAutocompleteMatchedSubstring:
       type: object
       title: PlaceAutocompleteMatchedSubstring

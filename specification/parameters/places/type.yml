@@ -14,9 +14,11 @@
 
 name: type
 description: |
-  Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
+  Restricts the results to places matching the specified type. Only one type may be specified.
   
   If used, results may be limited even where there may be more results. E.g. if type is set to `locality` then the result can be limited to the best 2 matches according to the `radius` or `rankby` parameters.
+  
+  If more than one type is provided, all types following the first entry are ignored.
   
   * `type=hospital|pharmacy|doctor` becomes `type=hospital`
   * `type=hospital,pharmacy,doctor` is ignored entirely

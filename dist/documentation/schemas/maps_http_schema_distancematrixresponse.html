@@ -1,8 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_distancematrixresponse] -->
-<h3 class="schema-object" id="DistanceMatrixResponse">
-  DistanceMatrixResponse
-</h3>
 <table>
   <thead>
     <tr>
@@ -14,59 +11,29 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixResponse-destination_addresses"
-          class="add-link schema-object-property-key"
-        >
-          <code>destination_addresses</code>
-        </h4>
-      </td>
+      <td align="left">destination_addresses</td>
       <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array of addresses as returned by the API from your original
-            request. As with <code>origin_addresses</code>, these are localized
-            if appropriate. This content is meant to be read as-is. Do not
-            programatically parse the formatted addresses.
-          </p>
-        </div>
+        An array of addresses as returned by the API from your original request.
+        As with origin_addresses, these are localized if appropriate. This
+        content is meant to be read as-is. Do not programatically parse the
+        formatted addresses.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixResponse-origin_addresses"
-          class="add-link schema-object-property-key"
-        >
-          <code>origin_addresses</code>
-        </h4>
-      </td>
+      <td align="left">origin_addresses</td>
       <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array of addresses as returned by the API from your original
-            request. These are formatted by the geocoder and localized according
-            to the language parameter passed with the request. This content is
-            meant to be read as-is. Do not programatically parse the formatted
-            addresses.
-          </p>
-        </div>
+        An array of addresses as returned by the API from your original request.
+        These are formatted by the geocoder and localized according to the
+        language parameter passed with the request. This content is meant to be
+        read as-is. Do not programatically parse the formatted addresses.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixResponse-rows"
-          class="add-link schema-object-property-key"
-        >
-          <code>rows</code>
-        </h4>
-      </td>
+      <td align="left">rows</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#DistanceMatrixRow" title="DistanceMatrixRow"
@@ -74,28 +41,12 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array of elements, which in turn each contain a
-            <code>status</code>, <code>duration</code>, and
-            <code>distance</code> element.
-          </p>
-          <p>
-            See <a href="#DistanceMatrixRow">DistanceMatrixRow</a> for more
-            information.
-          </p>
-        </div>
+        An array of elements, which in turn each contain a status, duration, and
+        distance element.See DistanceMatrixRow for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixResponse-status"
-          class="add-link schema-object-property-key"
-        >
-          <code>status</code>
-        </h4>
-      </td>
+      <td align="left">status</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#DistanceMatrixStatus" title="DistanceMatrixStatus"
@@ -103,71 +54,21 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the status of the request, and may contain debugging
-            information to help you track down why the request failed.
-          </p>
-          <p>
-            See <a href="#DistanceMatrixStatus">DistanceMatrixStatus</a> for
-            more information.
-          </p>
-        </div>
+        Contains the status of the request, and may contain debugging
+        information to help you track down why the request failed.See
+        DistanceMatrixStatus for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixResponse-error_message"
-          class="add-link schema-object-property-key"
-        >
-          <code>error_message</code>
-        </h4>
-      </td>
+      <td align="left">error_message</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A string containing the human-readable text of any errors
-            encountered while the request was being processed.
-          </p>
-        </div>
+        A string containing the human-readable text of any errors encountered
+        while the request was being processed.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-distancematrixresponse"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DistanceMatrixResponse.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-distancematrixresponse"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DistanceMatrixResponse"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_distancematrixresponse] -->

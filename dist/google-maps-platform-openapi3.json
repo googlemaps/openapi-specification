@@ -26373,7 +26373,7 @@
         "tags": [
           "Roads API"
         ],
-        "description": "This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.",
+        "description": "This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segments for each point. The points passed do not need to be part of a continuous path.",
         "parameters": [
           {
             "$ref": "#/components/parameters/nearestroads_points"
@@ -33614,7 +33614,7 @@
         "title": "NearestRoadsResponse",
         "properties": {
           "snappedPoints": {
-            "description": "An array of snapped points.",
+            "description": "An array of snapped points. Sometimes containing several snapped points for the same point with differing placeId or location.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SnappedPoint"
@@ -33634,7 +33634,7 @@
             "$ref": "#/components/schemas/LatitudeLongitudeLiteral"
           },
           "originalIndex": {
-            "description": "An integer that indicates the corresponding value in the original request. Each value in the request should map to a snapped value in the response. However, if you've set interpolate=true, then it's possible that the response will contain more coordinates than the request. Interpolated values will not have an `originalIndex`. These values are indexed from `0`, so a point with an originalIndex of `4` will be the snapped value of the 5th latitude/longitude passed to the path parameter.",
+            "description": "An integer that indicates the corresponding value in the original request. Each value in the request should map to a snapped value in the response. However, if you've set interpolate=true or if you're using nearest roads, then it's possible that the response will contain more coordinates than the request. Interpolated values will not have an `originalIndex`. These values are indexed from `0`, so a point with an originalIndex of `4` will be the snapped value of the 5th latitude/longitude passed to the path parameter. Nearest Roads points may contain several points for single coordinates with differing location or placeId.",
             "type": "number"
           },
           "placeId": {

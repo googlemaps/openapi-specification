@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsresponse] -->
-<h3 class="schema-object" id="DirectionsResponse">DirectionsResponse</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsResponse-routes"
-          class="add-link schema-object-property-key"
-        >
-          <code>routes</code>
-        </h4>
-      </td>
+      <td align="left">routes</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#DirectionsRoute" title="DirectionsRoute"
@@ -27,27 +19,13 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an array of routes from the origin to the destination.
-            Routes consist of nested Legs and Steps.
-          </p>
-          <p>
-            See <a href="#DirectionsRoute">DirectionsRoute</a> for more
-            information.
-          </p>
-        </div>
+        Contains an array of routes from the origin to the destination. Routes
+        consist of nested Legs and Steps.See DirectionsRoute for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsResponse-status"
-          class="add-link schema-object-property-key"
-        >
-          <code>status</code>
-        </h4>
-      </td>
+      <td align="left">status</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#DirectionsStatus" title="DirectionsStatus"
@@ -55,76 +33,39 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the status of the request, and may contain debugging
-            information to help you track down why the request failed.
-          </p>
-          <p>
-            See <a href="#DirectionsStatus">DirectionsStatus</a> for more
-            information.
-          </p>
-        </div>
+        Contains the status of the request, and may contain debugging
+        information to help you track down why the request failed.See
+        DirectionsStatus for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsResponse-available_travel_modes"
-          class="add-link schema-object-property-key"
-        >
-          <code>available_travel_modes</code>
-        </h4>
-      </td>
+      <td align="left">available_travel_modes</td>
       <td>optional</td>
       <td>
         Array&#x3C;<a href="#TravelMode" title="TravelMode">TravelMode</a>>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an array of available travel modes. This field is returned
-            when a request specifies a travel mode and gets no results. The
-            array contains the available travel modes in the countries of the
-            given set of waypoints. This field is not returned if one or more of
-            the waypoints are 'via waypoints'.
-          </p>
-          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
-        </div>
+        Contains an array of available travel modes. This field is returned when
+        a request specifies a travel mode and gets no results. The array
+        contains the available travel modes in the countries of the given set of
+        waypoints. This field is not returned if one or more of the waypoints
+        are 'via waypoints'.See TravelMode for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsResponse-error_message"
-          class="add-link schema-object-property-key"
-        >
-          <code>error_message</code>
-        </h4>
-      </td>
+      <td align="left">error_message</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            When the service returns a status code other than <code>OK</code>,
-            there may be an additional <code>error_message</code> field within
-            the response object. This field contains more detailed information
-            about the reasons behind the given status code. This field is not
-            always returned, and its content is subject to change.
-          </p>
-        </div>
+        When the service returns a status code other than OK, there may be an
+        additional error_message field within the response object. This field
+        contains more detailed information about the reasons behind the given
+        status code. This field is not always returned, and its content is
+        subject to change.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsResponse-geocoded_waypoints"
-          class="add-link schema-object-property-key"
-        >
-          <code>geocoded_waypoints</code>
-        </h4>
-      </td>
+      <td align="left">geocoded_waypoints</td>
       <td>optional</td>
       <td>
         Array&#x3C;<a
@@ -134,62 +75,19 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an array with details about the geocoding of origin,
-            destination and waypoints. Elements in the geocoded_waypoints array
-            correspond, by their zero-based position, to the origin, the
-            waypoints in the order they are specified, and the destination.
-          </p>
-          <p>
-            These details will not be present for waypoints specified as textual
-            latitude/longitude values if the service returns no results. This is
-            because such waypoints are only reverse geocoded to obtain their
-            representative address after a route has been found. An empty JSON
-            object will occupy the corresponding places in the
-            geocoded_waypoints array.
-          </p>
-          <p>
-            See
-            <a href="#DirectionsGeocodedWaypoint">DirectionsGeocodedWaypoint</a>
-            for more information.
-          </p>
-        </div>
+        Contains an array with details about the geocoding of origin,
+        destination and waypoints. Elements in the geocoded_waypoints array
+        correspond, by their zero-based position, to the origin, the waypoints
+        in the order they are specified, and the destination.These details will
+        not be present for waypoints specified as textual latitude/longitude
+        values if the service returns no results. This is because such waypoints
+        are only reverse geocoded to obtain their representative address after a
+        route has been found. An empty JSON object will occupy the corresponding
+        places in the geocoded_waypoints array.See DirectionsGeocodedWaypoint
+        for more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsresponse"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsResponse.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsresponse"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsResponse"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionsresponse] -->

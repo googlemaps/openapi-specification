@@ -1,9 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_distancematrix] -->
-<h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="destinations">destinations</h3>
     <p>
       One or more locations to use as the finishing point for calculating travel
       distance and time. The options for the destinations parameter are the same
@@ -11,7 +9,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="origins">origins</h3>
     <p>
       The starting point for calculating travel distance and time. You can
       supply one or more locations separated by the pipe character (|), in the
@@ -28,15 +25,6 @@
         calculate distance. This coordinate may be different from that returned
         by the Geocoding API, for example a building entrance rather than its
         center.
-        <div class="note">
-          Note: using place IDs is preferred over using addresses or
-          latitude/longitude coordinates. Using coordinates will always result
-          in the point being snapped to the road nearest to those coordinates -
-          which may not be an access point to the property, or even a road that
-          will quickly or safely lead to the destination. Using the address will
-          provide the distance to the center of the building, as opposed to an
-          entrance to the building.
-        </div>
       </li>
       <li>
         <strong>Coordinates</strong>: If you pass latitude/longitude
@@ -89,10 +77,8 @@
     </ul>
   </li>
 </ul>
-<h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="arrival_time">arrival_time</h3>
     <p>
       Specifies the desired time of arrival for transit directions, in seconds
       since midnight, January 1, 1970 UTC. You can specify either
@@ -101,7 +87,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="avoid">avoid</h3>
     <p>
       Distances may be calculated that adhere to certain restrictions.
       Restrictions are indicated by use of the avoid parameter, and an argument
@@ -126,13 +111,8 @@
         indoor steps for walking and transit directions.
       </li>
     </ul>
-    <div class="note">
-      Note: The addition of restrictions does not preclude routes that include
-      the restricted feature; it biases the result to more favorable routes.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="departure_time">departure_time</h3>
     <p>
       Specifies the desired time of departure. You can specify the time as an
       integer in seconds since midnight, January 1, 1970 UTC. If a
@@ -157,23 +137,8 @@
         or some time in the future. It cannot be in the past.
       </li>
     </ul>
-    <div class="note">
-      Note: If departure time is not specified, choice of route and duration are
-      based on road network and average time-independent traffic conditions.
-      Results for a given request may vary over time due to changes in the road
-      network, updated average traffic conditions, and the distributed nature of
-      the service. Results may also vary between nearly-equivalent routes at any
-      time or frequency.
-    </div>
-    <div class="note">
-      Note: Distance Matrix requests specifying `departure_time` when
-      `mode=driving` are limited to a maximum of 100 elements per request. The
-      number of origins times the number of destinations defines the number of
-      elements.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -212,7 +177,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="mode">mode</h3>
     <p>
       For the calculation of distances and directions, you may specify the
       transportation mode to use. By default, <code>DRIVING</code> mode is used.
@@ -243,14 +207,8 @@
         <code>transit_routing_preference</code>.
       </li>
     </ul>
-    <div class="note">
-      Note: Both walking and bicycling directions may sometimes not include
-      clear pedestrian or bicycling paths, so these directions will return
-      warnings in the returned result which you must display to the user.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="region">region</h3>
     <p>
       The region code, specified as a
       <a
@@ -264,7 +222,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="traffic_model">traffic_model</h3>
     <p>
       Specifies the assumptions to use when calculating time in traffic. This
       setting affects the value returned in the duration_in_traffic field in the
@@ -305,7 +262,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="transit_mode">transit_mode</h3>
     <p>
       Specifies one or more preferred modes of transit. This parameter may only
       be specified for transit directions. The parameter supports the following
@@ -336,9 +292,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="transit_routing_preference">
-      transit_routing_preference
-    </h3>
     <p>
       Specifies preferences for transit routes. Using this parameter, you can
       bias the options returned, rather than accepting the default best route
@@ -357,46 +310,8 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="units">units</h3>
     <p>Specifies the unit system to use when displaying results.</p>
-    <div class="note">
-      Note: this unit system setting only affects the text displayed within
-      distance fields. The distance fields also contain values which are always
-      expressed in meters.
-    </div>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-distancematrix"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-distancematrix"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/distancematrix/json"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_distancematrix] -->

@@ -3,9 +3,6 @@
 workspace(
     # How this workspace would be referenced with absolute labels from another workspace
     name = "openapi-specification",
-    # Map the @npm bazel workspace to the node_modules directory.
-    # This lets Bazel use the same node_modules as other local tooling.
-    managed_directories = {"@npm": ["node_modules"]},
 )
 
 # Install the nodejs "bootstrap" package
@@ -13,10 +10,10 @@ workspace(
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # Fetch rules_nodejs so we can install our npm dependencies
-http_archive(
+http_archive( # https://github.com/bazelbuild/rules_nodejs/issues/2733#issuecomment-903111659
     name = "build_bazel_rules_nodejs",
-    sha256 = "dd4dc46066e2ce034cba0c81aa3e862b27e8e8d95871f567359f7a534cccb666",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/3.1.0/rules_nodejs-3.1.0.tar.gz"],
+    sha256 = "e79c08a488cc5ac40981987d862c7320cee8741122a2649e9b08e850b6f20442",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/3.8.0/rules_nodejs-3.8.0.tar.gz"],
 )
 
 # Check the bazel version and download npm dependencies
@@ -27,6 +24,7 @@ npm_install(
     name = "npm",
     package_json = "//:package.json",
     package_lock_json = "//:package-lock.json",
+    symlink_node_modules = False, # https://github.com/bazelbuild/bazel/issues/15463
 )
 
 http_archive(

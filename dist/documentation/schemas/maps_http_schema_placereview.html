@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placereview] -->
-<h3 class="schema-object" id="PlaceReview">PlaceReview</h3>
 <p>A review of the place submitted by a user.</p>
 <table>
   <thead>
@@ -13,241 +12,104 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-author_name"
-          class="add-link schema-object-property-key"
-        >
-          <code>author_name</code>
-        </h4>
-      </td>
+      <td align="left">author_name</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The name of the user who submitted the review. Anonymous reviews are
-            attributed to "A Google user".
-          </p>
-        </div>
+        The name of the user who submitted the review. Anonymous reviews are
+        attributed to "A Google user".
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4 id="PlaceReview-rating" class="add-link schema-object-property-key">
-          <code>rating</code>
-        </h4>
-      </td>
+      <td align="left">rating</td>
       <td><strong>required</strong></td>
       <td>number</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The user's overall rating for this place. This is a whole number,
-            ranging from 1 to 5.
-          </p>
-        </div>
+        The user's overall rating for this place. This is a whole number,
+        ranging from 1 to 5.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-relative_time_description"
-          class="add-link schema-object-property-key"
-        >
-          <code>relative_time_description</code>
-        </h4>
-      </td>
+      <td align="left">relative_time_description</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The time that the review was submitted in text, relative to the
-            current time.
-          </p>
-        </div>
+        The time that the review was submitted in text, relative to the current
+        time.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4 id="PlaceReview-time" class="add-link schema-object-property-key">
-          <code>time</code>
-        </h4>
-      </td>
+      <td align="left">time</td>
       <td><strong>required</strong></td>
       <td>number</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The time that the review was submitted, measured in the number of
-            seconds since since midnight, January 1, 1970 UTC.
-          </p>
-        </div>
+        The time that the review was submitted, measured in the number of
+        seconds since since midnight, January 1, 1970 UTC.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-author_url"
-          class="add-link schema-object-property-key"
-        >
-          <code>author_url</code>
-        </h4>
-      </td>
+      <td align="left">author_url</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The URL to the user's Google Maps Local Guides profile, if
-            available.
-          </p>
-        </div>
+        The URL to the user's Google Maps Local Guides profile, if available.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-language"
-          class="add-link schema-object-property-key"
-        >
-          <code>language</code>
-        </h4>
-      </td>
+      <td align="left">language</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An IETF language code indicating the language of the returned
-            review.This field contains the main language tag only, and not the
-            secondary tag indicating country or region. For example, all the
-            English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and
-            so on.This field is empty if there is only a rating with no review
-            text.
-          </p>
-        </div>
+        An IETF language code indicating the language of the returned
+        review.This field contains the main language tag only, and not the
+        secondary tag indicating country or region. For example, all the English
+        reviews are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.This
+        field is empty if there is only a rating with no review text.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-original_language"
-          class="add-link schema-object-property-key"
-        >
-          <code>original_language</code>
-        </h4>
-      </td>
+      <td align="left">original_language</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An IETF language code indicating the original language of the
-            review. If the review has been translated, then
-            <code>original_language</code> != <code>language</code>.This field
-            contains the main language tag only, and not the secondary tag
-            indicating country or region. For example, all the English reviews
-            are tagged as 'en', and not 'en-AU' or 'en-UK' and so on.This field
-            is empty if there is only a rating with no review text.
-          </p>
-        </div>
+        An IETF language code indicating the original language of the review. If
+        the review has been translated, then original_language != language.This
+        field contains the main language tag only, and not the secondary tag
+        indicating country or region. For example, all the English reviews are
+        tagged as 'en', and not 'en-AU' or 'en-UK' and so on.This field is empty
+        if there is only a rating with no review text.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-profile_photo_url"
-          class="add-link schema-object-property-key"
-        >
-          <code>profile_photo_url</code>
-        </h4>
-      </td>
+      <td align="left">profile_photo_url</td>
+      <td>optional</td>
+      <td>string</td>
+      <td>The URL to the user's profile photo, if available.</td>
+    </tr>
+    <tr>
+      <td align="left">text</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>The URL to the user's profile photo, if available.</p>
-        </div>
+        The user's review. When reviewing a location with Google Places, text
+        reviews are considered optional. Therefore, this field may be empty.
+        Note that this field may include simple HTML markup. For example, the
+        entity reference &#x26;amp; may represent an ampersand character.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4 id="PlaceReview-text" class="add-link schema-object-property-key">
-          <code>text</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The user's review. When reviewing a location with Google Places,
-            text reviews are considered optional. Therefore, this field may be
-            empty. Note that this field may include simple HTML markup. For
-            example, the entity reference <code>&#x26;amp;</code> may represent
-            an ampersand character.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="PlaceReview-translated"
-          class="add-link schema-object-property-key"
-        >
-          <code>translated</code>
-        </h4>
-      </td>
+      <td align="left">translated</td>
       <td>optional</td>
       <td>boolean</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A boolean value indicating if the review was translated from the
-            original language it was written in.If a review has been translated,
-            corresponding to a value of true, Google recommends that you
-            indicate this to your users. For example, you can add the following
-            string, “Translated by Google”, to the review.
-          </p>
-        </div>
+        A boolean value indicating if the review was translated from the
+        original language it was written in.If a review has been translated,
+        corresponding to a value of true, Google recommends that you indicate
+        this to your users. For example, you can add the following string,
+        “Translated by Google”, to the review.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placereview"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlaceReview.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placereview"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - PlaceReview"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_placereview] -->

@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsstep] -->
-<h3 class="schema-object" id="DirectionsStep">DirectionsStep</h3>
 <p>
   Each element in the steps array defines a single step of the calculated
   directions. A step is the most atomic unit of a direction's route, containing
@@ -33,81 +32,38 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-duration"
-          class="add-link schema-object-property-key"
-        >
-          <code>duration</code>
-        </h4>
-      </td>
+      <td align="left">duration</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the typical time required to perform the step, until the
-            next step. This field may be undefined if the duration is unknown.
-          </p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        Contains the typical time required to perform the step, until the next
+        step. This field may be undefined if the duration is unknown.See
+        TextValueObject for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-end_location"
-          class="add-link schema-object-property-key"
-        >
-          <code>end_location</code>
-        </h4>
-      </td>
+      <td align="left">end_location</td>
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>Contains the location of the last point of this step.</p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        Contains the location of the last point of this step.See LatLngLiteral
+        for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-html_instructions"
-          class="add-link schema-object-property-key"
-        >
-          <code>html_instructions</code>
-        </h4>
-      </td>
+      <td align="left">html_instructions</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains formatted instructions for this step, presented as an HTML
-            text string. This content is meant to be read as-is. Do not
-            programmatically parse this display-only content.
-          </p>
-        </div>
+        Contains formatted instructions for this step, presented as an HTML text
+        string. This content is meant to be read as-is. Do not programmatically
+        parse this display-only content.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-polyline"
-          class="add-link schema-object-property-key"
-        >
-          <code>polyline</code>
-        </h4>
-      </td>
+      <td align="left">polyline</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#DirectionsPolyline" title="DirectionsPolyline"
@@ -115,150 +71,72 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains a single points object that holds an
-            <a
-              href="https://developers..google.com/maps/documentation/utilities/polylinealgorithm"
-              >encoded polyline</a
-            >
-            representation of the step. This polyline is an approximate
-            (smoothed) path of the step.
-          </p>
-          <p>
-            See <a href="#DirectionsPolyline">DirectionsPolyline</a> for more
-            information.
-          </p>
-        </div>
+        Contains a single points object that holds an encoded polyline
+        representation of the step. This polyline is an approximate (smoothed)
+        path of the step.See DirectionsPolyline for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-start_location"
-          class="add-link schema-object-property-key"
-        >
-          <code>start_location</code>
-        </h4>
-      </td>
+      <td align="left">start_location</td>
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>Contains the location of the starting point of this step.</p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        Contains the location of the starting point of this step.See
+        LatLngLiteral for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-travel_mode"
-          class="add-link schema-object-property-key"
-        >
-          <code>travel_mode</code>
-        </h4>
-      </td>
+      <td align="left">travel_mode</td>
       <td><strong>required</strong></td>
       <td><a href="#TravelMode" title="TravelMode">TravelMode</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>Contains the type of travel mode used.</p>
-          <p>See <a href="#TravelMode">TravelMode</a> for more information.</p>
-        </div>
+        Contains the type of travel mode used.See TravelMode for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-distance"
-          class="add-link schema-object-property-key"
-        >
-          <code>distance</code>
-        </h4>
-      </td>
+      <td align="left">distance</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the distance covered by this step until the next step. This
-            field may be undefined if the distance is unknown.
-          </p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        Contains the distance covered by this step until the next step. This
+        field may be undefined if the distance is unknown.See TextValueObject
+        for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-maneuver"
-          class="add-link schema-object-property-key"
-        >
-          <code>maneuver</code>
-        </h4>
-      </td>
+      <td align="left">maneuver</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the action to take for the current step (turn left, merge,
-            straight, etc.). Values are subject to change, and new values may be
-            introduced without prior notice.
-          </p>
-          <div class="notranslate">
-            The allowed values include: <code>turn-slight-left</code>,
-            <code>turn-sharp-left</code>, <code>turn-left</code>,
-            <code>turn-slight-right</code>, <code>turn-sharp-right</code>,
-            <code>keep-right</code>, <code>keep-left</code>,
-            <code>uturn-left</code>, <code>uturn-right</code>,
-            <code>turn-right</code>, <code>straight</code>,
-            <code>ramp-left</code>, <code>ramp-right</code>, <code>merge</code>,
-            <code>fork-left</code>, <code>fork-right</code>, <code>ferry</code>,
-            <code>ferry-train</code>, <code>roundabout-left</code>, and
-            <code>roundabout-right</code>
-          </div>
-        </div>
+        Contains the action to take for the current step (turn left, merge,
+        straight, etc.). Values are subject to change, and new values may be
+        introduced without prior notice.The allowed values include:
+        <code>turn-slight-left</code>, <code>turn-sharp-left</code>,
+        <code>turn-left</code>, <code>turn-slight-right</code>,
+        <code>turn-sharp-right</code>, <code>keep-right</code>,
+        <code>keep-left</code>, <code>uturn-left</code>,
+        <code>uturn-right</code>, <code>turn-right</code>,
+        <code>straight</code>, <code>ramp-left</code>, <code>ramp-right</code>,
+        <code>merge</code>, <code>fork-left</code>, <code>fork-right</code>,
+        <code>ferry</code>, <code>ferry-train</code>,
+        <code>roundabout-left</code>, and <code>roundabout-right</code>
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-steps"
-          class="add-link schema-object-property-key"
-        >
-          <code>steps</code>
-        </h4>
-      </td>
+      <td align="left">steps</td>
       <td>optional</td>
       <td></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains detailed directions for walking or driving steps in transit
-            directions. Substeps are only available when travel_mode is set to
-            "transit". The inner steps array is of the same type as steps.
-          </p>
-        </div>
+        Contains detailed directions for walking or driving steps in transit
+        directions. Substeps are only available when travel_mode is set to
+        "transit". The inner steps array is of the same type as steps.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsStep-transit_details"
-          class="add-link schema-object-property-key"
-        >
-          <code>transit_details</code>
-        </h4>
-      </td>
+      <td align="left">transit_details</td>
       <td>optional</td>
       <td>
         <a href="#DirectionsTransitDetails" title="DirectionsTransitDetails"
@@ -266,52 +144,11 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Details pertaining to this step if the travel mode is
-            <code>TRANSIT</code>.
-          </p>
-          <p>
-            See
-            <a href="#DirectionsTransitDetails">DirectionsTransitDetails</a> for
-            more information.
-          </p>
-        </div>
+        Details pertaining to this step if the travel mode is TRANSIT.See
+        DirectionsTransitDetails for more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsstep"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsStep.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsstep"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsStep"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionsstep] -->

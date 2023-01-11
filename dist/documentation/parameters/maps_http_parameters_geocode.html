@@ -1,9 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_geocode] -->
-<h2 id="geocoding-optional-parameters">Geocoding optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="address">address</h3>
     <p>
       The street address or plus code that you want to geocode. Specify
       addresses in accordance with the format used by the national postal
@@ -29,12 +27,8 @@
         <code>CWC8%2BR9%20Mountain%20View%20CA%20USA</code>).
       </li>
     </ul>
-    <div class="note">
-      Note: At least one of `address` or `components` is required.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="bounds">bounds</h3>
     <p>
       The bounding box of the viewport within which to bias geocode results more
       prominently. This parameter will only influence, not fully restrict,
@@ -42,7 +36,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="components">components</h3>
     <p>
       A components filter with elements separated by a pipe (|). The components
       filter is also accepted as an optional parameter if an address is
@@ -61,13 +54,6 @@
         country code. The API follows the ISO standard for defining countries,
         and the filtering works best when using the corresponding ISO code of
         the country.
-        <aside class="note">
-          <strong>Note</strong>: If you receive unexpected results with a
-          country code, verify that you are using a code which includes the
-          countries, dependent territories, and special areas of geographical
-          interest you intend. You can find code information at Wikipedia: List
-          of ISO 3166 country codes or the ISO Online Browsing Platform.
-        </aside>
       </li>
     </ul>
     <p>
@@ -115,12 +101,8 @@
         both may result in <code>ZERO_RESULTS</code>.
       </li>
     </ul>
-    <div class="note">
-      Note: At least one of `address` or `components` is required.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -159,7 +141,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="region">region</h3>
     <p>
       The region code, specified as a
       <a
@@ -173,37 +154,5 @@
     </p>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-geocode"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-geocode"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/geocode/json"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_geocode] -->

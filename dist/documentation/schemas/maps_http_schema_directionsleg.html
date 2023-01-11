@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsleg] -->
-<h3 class="schema-object" id="DirectionsLeg">DirectionsLeg</h3>
 <table>
   <thead>
     <tr>
@@ -12,112 +11,54 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-end_address"
-          class="add-link schema-object-property-key"
-        >
-          <code>end_address</code>
-        </h4>
-      </td>
+      <td align="left">end_address</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the human-readable address (typically a street address)
-            from reverse geocoding the <code>end_location</code> of this leg.
-            This content is meant to be read as-is. Do not programmatically
-            parse the formatted address.
-          </p>
-        </div>
+        Contains the human-readable address (typically a street address) from
+        reverse geocoding the end_location of this leg. This content is meant to
+        be read as-is. Do not programmatically parse the formatted address.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-end_location"
-          class="add-link schema-object-property-key"
-        >
-          <code>end_location</code>
-        </h4>
-      </td>
+      <td align="left">end_location</td>
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the given destination of this
-            leg. Because the Directions API calculates directions between
-            locations by using the nearest transportation option (usually a
-            road) at the start and end points, <code>end_location</code> may be
-            different than the provided destination of this leg if, for example,
-            a road is not near the destination.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        The latitude/longitude coordinates of the given destination of this leg.
+        Because the Directions API calculates directions between locations by
+        using the nearest transportation option (usually a road) at the start
+        and end points, end_location may be different than the provided
+        destination of this leg if, for example, a road is not near the
+        destination.See LatLngLiteral for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-start_address"
-          class="add-link schema-object-property-key"
-        >
-          <code>start_address</code>
-        </h4>
-      </td>
+      <td align="left">start_address</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the human-readable address (typically a street address)
-            resulting from reverse geocoding the <code>start_location</code> of
-            this leg. This content is meant to be read as-is. Do not
-            programmatically parse the formatted address.
-          </p>
-        </div>
+        Contains the human-readable address (typically a street address)
+        resulting from reverse geocoding the start_location of this leg. This
+        content is meant to be read as-is. Do not programmatically parse the
+        formatted address.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-start_location"
-          class="add-link schema-object-property-key"
-        >
-          <code>start_location</code>
-        </h4>
-      </td>
+      <td align="left">start_location</td>
       <td><strong>required</strong></td>
       <td><a href="#LatLngLiteral" title="LatLngLiteral">LatLngLiteral</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The latitude/longitude coordinates of the origin of this leg.
-            Because the Directions API calculates directions between locations
-            by using the nearest transportation option (usually a road) at the
-            start and end points, <code>start_location</code> may be different
-            than the provided origin of this leg if, for example, a road is not
-            near the origin.
-          </p>
-          <p>
-            See <a href="#LatLngLiteral">LatLngLiteral</a> for more information.
-          </p>
-        </div>
+        The latitude/longitude coordinates of the origin of this leg. Because
+        the Directions API calculates directions between locations by using the
+        nearest transportation option (usually a road) at the start and end
+        points, start_location may be different than the provided origin of this
+        leg if, for example, a road is not near the origin.See LatLngLiteral for
+        more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-steps"
-          class="add-link schema-object-property-key"
-        >
-          <code>steps</code>
-        </h4>
-      </td>
+      <td align="left">steps</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#DirectionsStep" title="DirectionsStep"
@@ -125,27 +66,12 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array of steps denoting information about each separate step of
-            the leg of the journey.
-          </p>
-          <p>
-            See <a href="#DirectionsStep">DirectionsStep</a> for more
-            information.
-          </p>
-        </div>
+        An array of steps denoting information about each separate step of the
+        leg of the journey.See DirectionsStep for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-traffic_speed_entry"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>traffic_speed_entry</code>
-        </h4>
-      </td>
+      <td align="left">traffic_speed_entry</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
@@ -155,27 +81,12 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>Information about traffic speed along the leg.</p>
-          <p>
-            See
-            <a href="#DirectionsTrafficSpeedEntry"
-              >DirectionsTrafficSpeedEntry</a
-            >
-            for more information.
-          </p>
-        </div>
+        Information about traffic speed along the leg.See
+        DirectionsTrafficSpeedEntry for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-via_waypoint"
-          class="add-link schema-object-property-key"
-        >
-          <code>via_waypoint</code>
-        </h4>
-      </td>
+      <td align="left">via_waypoint</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
@@ -185,24 +96,12 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The locations of via waypoints along this leg.</p>
-          <p>
-            See <a href="#DirectionsViaWaypoint">DirectionsViaWaypoint</a> for
-            more information.
-          </p>
-        </div>
+        The locations of via waypoints along this leg.See DirectionsViaWaypoint
+        for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-arrival_time"
-          class="add-link schema-object-property-key"
-        >
-          <code>arrival_time</code>
-        </h4>
-      </td>
+      <td align="left">arrival_time</td>
       <td>optional</td>
       <td>
         <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
@@ -210,28 +109,13 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the estimated time of arrival for this leg. This property
-            is only returned for transit directions.
-          </p>
-          <p>
-            See
-            <a href="#TimeZoneTextValueObject">TimeZoneTextValueObject</a> for
-            more information.
-          </p>
-        </div>
+        Contains the estimated time of arrival for this leg. This property is
+        only returned for transit directions.See TimeZoneTextValueObject for
+        more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-departure_time"
-          class="add-link schema-object-property-key"
-        >
-          <code>departure_time</code>
-        </h4>
-      </td>
+      <td align="left">departure_time</td>
       <td>optional</td>
       <td>
         <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
@@ -239,144 +123,53 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the estimated time of departure for this leg, specified as
-            a Time object. The <code>departure_time</code> is only available for
-            transit directions.
-          </p>
-          <p>
-            See
-            <a href="#TimeZoneTextValueObject">TimeZoneTextValueObject</a> for
-            more information.
-          </p>
-        </div>
+        Contains the estimated time of departure for this leg, specified as a
+        Time object. The departure_time is only available for transit
+        directions.See TimeZoneTextValueObject for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-distance"
-          class="add-link schema-object-property-key"
-        >
-          <code>distance</code>
-        </h4>
-      </td>
+      <td align="left">distance</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The total distance covered by this leg.</p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        The total distance covered by this leg.See TextValueObject for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-duration"
-          class="add-link schema-object-property-key"
-        >
-          <code>duration</code>
-        </h4>
-      </td>
+      <td align="left">duration</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The total duration of this leg.</p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        The total duration of this leg.See TextValueObject for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsLeg-duration_in_traffic"
-          class="add-link schema-object-property-key"
-        >
-          <code>duration_in_traffic</code>
-        </h4>
-      </td>
+      <td align="left">duration_in_traffic</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Indicates the total duration of this leg. This value is an estimate
-            of the time in traffic based on current and historical traffic
-            conditions. See the <code>traffic_model</code> request parameter for
-            the options you can use to request that the returned value is
-            optimistic, pessimistic, or a best-guess estimate. The duration in
-            traffic is returned only if all of the following are true:
-          </p>
-          <ul>
-            <li>
-              The request does not include stopover waypoints. If the request
-              includes waypoints, they must be prefixed with
-              <code>via:</code> to avoid stopovers.
-            </li>
-            <li>
-              The request is specifically for driving directions—the mode
-              parameter is set to <code>driving</code>.
-            </li>
-            <li>
-              The request includes a <code>departure_time</code> parameter.
-            </li>
-            <li>Traffic conditions are available for the requested route.</li>
-          </ul>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        Indicates the total duration of this leg. This value is an estimate of
+        the time in traffic based on current and historical traffic conditions.
+        See the traffic_model request parameter for the options you can use to
+        request that the returned value is optimistic, pessimistic, or a
+        best-guess estimate. The duration in traffic is returned only if all of
+        the following are true:The request does not include stopover waypoints.
+        If the request includes waypoints, they must be prefixed with via: to
+        avoid stopovers.The request is specifically for driving directions—the
+        mode parameter is set to driving.The request includes a departure_time
+        parameter.Traffic conditions are available for the requested route.See
+        TextValueObject for more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsleg"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsLeg.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsleg"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsLeg"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionsleg] -->

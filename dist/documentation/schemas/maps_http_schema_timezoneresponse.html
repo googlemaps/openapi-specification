@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_timezoneresponse] -->
-<h3 class="schema-object" id="TimeZoneResponse">TimeZoneResponse</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-status"
-          class="add-link schema-object-property-key"
-        >
-          <code>status</code>
-        </h4>
-      </td>
+      <td align="left">status</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#TimeZoneStatus" title="TimeZoneStatus">TimeZoneStatus</a>
@@ -31,148 +23,58 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-dstOffset"
-          class="add-link schema-object-property-key"
-        >
-          <code>dstOffset</code>
-        </h4>
-      </td>
+      <td align="left">dstOffset</td>
       <td>optional</td>
       <td>number</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The offset for daylight-savings time in seconds. This will be zero
-            if the time zone is not in Daylight Savings Time during the
-            specified <code>timestamp</code>.
-          </p>
-        </div>
+        The offset for daylight-savings time in seconds. This will be zero if
+        the time zone is not in Daylight Savings Time during the specified
+        timestamp.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-errorMessage"
-          class="add-link schema-object-property-key"
-        >
-          <code>errorMessage</code>
-        </h4>
-      </td>
+      <td align="left">errorMessage</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Detailed information about the reasons behind the given status code.
-            Included if status other than <code>Ok</code>.
-          </p>
-        </div>
+        Detailed information about the reasons behind the given status code.
+        Included if status other than Ok.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-rawOffset"
-          class="add-link schema-object-property-key"
-        >
-          <code>rawOffset</code>
-        </h4>
-      </td>
+      <td align="left">rawOffset</td>
       <td>optional</td>
       <td>number</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The offset from UTC (in seconds) for the given location. This does
-            not take into effect daylight savings.
-          </p>
-        </div>
+        The offset from UTC (in seconds) for the given location. This does not
+        take into effect daylight savings.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-timeZoneId"
-          class="add-link schema-object-property-key"
-        >
-          <code>timeZoneId</code>
-        </h4>
-      </td>
+      <td align="left">timeZoneId</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            a string containing the ID of the time zone, such as
-            "America/Los_Angeles" or "Australia/Sydney". These IDs are defined
-            by
-            <a href="http://cldr.unicode.org/"
-              >Unicode Common Locale Data Repository (CLDR) project</a
-            >, and currently available in file timezone.xml. When a timezone has
-            several IDs, the canonical one is returned. In xml responses, this
-            is the first alias of each timezone. For example, "Asia/Calcutta" is
-            returned, not "Asia/Kolkata".
-          </p>
-        </div>
+        a string containing the ID of the time zone, such as
+        "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by
+        Unicode Common Locale Data Repository (CLDR) project, and currently
+        available in file timezone.xml. When a timezone has several IDs, the
+        canonical one is returned. In xml responses, this is the first alias of
+        each timezone. For example, "Asia/Calcutta" is returned, not
+        "Asia/Kolkata".
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="TimeZoneResponse-timeZoneName"
-          class="add-link schema-object-property-key"
-        >
-          <code>timeZoneName</code>
-        </h4>
-      </td>
+      <td align="left">timeZoneName</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The long form name of the time zone. This field will be localized if
-            the language parameter is set. eg.
-            <code>Pacific Daylight Time</code> or
-            <code>Australian Eastern Daylight Time</code>.
-          </p>
-        </div>
+        The long form name of the time zone. This field will be localized if the
+        language parameter is set. eg. Pacific Daylight Time or Australian
+        Eastern Daylight Time.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-timezoneresponse"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/TimeZoneResponse.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-timezoneresponse"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - TimeZoneResponse"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_timezoneresponse] -->

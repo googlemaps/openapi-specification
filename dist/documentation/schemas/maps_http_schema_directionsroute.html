@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionsroute] -->
-<h3 class="schema-object" id="DirectionsRoute">DirectionsRoute</h3>
 <p>Routes consist of nested <code>legs</code> and <code>steps</code>.</p>
 <table>
   <thead>
@@ -13,55 +12,25 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-bounds"
-          class="add-link schema-object-property-key"
-        >
-          <code>bounds</code>
-        </h4>
-      </td>
+      <td align="left">bounds</td>
       <td><strong>required</strong></td>
       <td><a href="#Bounds" title="Bounds">Bounds</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains the viewport bounding box of the
-            <code>overview_polyline</code>.
-          </p>
-          <p>See <a href="#Bounds">Bounds</a> for more information.</p>
-        </div>
+        Contains the viewport bounding box of the overview_polyline.See Bounds
+        for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-copyrights"
-          class="add-link schema-object-property-key"
-        >
-          <code>copyrights</code>
-        </h4>
-      </td>
+      <td align="left">copyrights</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains an array of warnings to be displayed when showing these
-            directions. You must handle and display these warnings yourself.
-          </p>
-        </div>
+        Contains an array of warnings to be displayed when showing these
+        directions. You must handle and display these warnings yourself.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-legs"
-          class="add-link schema-object-property-key"
-        >
-          <code>legs</code>
-        </h4>
-      </td>
+      <td align="left">legs</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#DirectionsLeg" title="DirectionsLeg"
@@ -69,29 +38,15 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array which contains information about a leg of the route,
-            between two locations within the given route. A separate leg will be
-            present for each waypoint or destination specified. (A route with no
-            waypoints will contain exactly one leg within the legs array.) Each
-            leg consists of a series of steps.
-          </p>
-          <p>
-            See <a href="#DirectionsLeg">DirectionsLeg</a> for more information.
-          </p>
-        </div>
+        An array which contains information about a leg of the route, between
+        two locations within the given route. A separate leg will be present for
+        each waypoint or destination specified. (A route with no waypoints will
+        contain exactly one leg within the legs array.) Each leg consists of a
+        series of steps.See DirectionsLeg for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-overview_polyline"
-          class="add-link schema-object-property-key"
-        >
-          <code>overview_polyline</code>
-        </h4>
-      </td>
+      <td align="left">overview_polyline</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#DirectionsPolyline" title="DirectionsPolyline"
@@ -99,136 +54,51 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an object that holds an encoded polyline representation of
-            the route. This polyline is an approximate (smoothed) path of the
-            resulting directions.
-          </p>
-          <p>
-            See <a href="#DirectionsPolyline">DirectionsPolyline</a> for more
-            information.
-          </p>
-        </div>
+        Contains an object that holds an encoded polyline representation of the
+        route. This polyline is an approximate (smoothed) path of the resulting
+        directions.See DirectionsPolyline for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-summary"
-          class="add-link schema-object-property-key"
-        >
-          <code>summary</code>
-        </h4>
-      </td>
+      <td align="left">summary</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains a short textual description for the route, suitable for
-            naming and disambiguating the route from alternatives.
-          </p>
-        </div>
+        Contains a short textual description for the route, suitable for naming
+        and disambiguating the route from alternatives.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-warnings"
-          class="add-link schema-object-property-key"
-        >
-          <code>warnings</code>
-        </h4>
-      </td>
+      <td align="left">warnings</td>
       <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains an array of warnings to be displayed when showing these
-            directions. You must handle and display these warnings yourself.
-          </p>
-        </div>
+        Contains an array of warnings to be displayed when showing these
+        directions. You must handle and display these warnings yourself.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-waypoint_order"
-          class="add-link schema-object-property-key"
-        >
-          <code>waypoint_order</code>
-        </h4>
-      </td>
+      <td align="left">waypoint_order</td>
       <td><strong>required</strong></td>
       <td>Array&#x3C;integer></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array indicating the order of any waypoints in the calculated
-            route. This waypoints may be reordered if the request was passed
-            optimize:true within its waypoints parameter.
-          </p>
-        </div>
+        An array indicating the order of any waypoints in the calculated route.
+        This waypoints may be reordered if the request was passed optimize:true
+        within its waypoints parameter.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsRoute-fare"
-          class="add-link schema-object-property-key"
-        >
-          <code>fare</code>
-        </h4>
-      </td>
+      <td align="left">fare</td>
       <td>optional</td>
       <td><a href="#Fare" title="Fare">Fare</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            If present, contains the total fare (that is, the total ticket
-            costs) on this route. This property is only returned for transit
-            requests and only for routes where fare information is available for
-            all transit legs.
-          </p>
-          <p>See <a href="#Fare">Fare</a> for more information.</p>
-        </div>
+        If present, contains the total fare (that is, the total ticket costs) on
+        this route. This property is only returned for transit requests and only
+        for routes where fare information is available for all transit legs.See
+        Fare for more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsroute"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsRoute.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionsroute"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsRoute"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionsroute] -->

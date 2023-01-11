@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_geocodingresult] -->
-<h3 class="schema-object" id="GeocodingResult">GeocodingResult</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-address_components"
-          class="add-link schema-object-property-key"
-        >
-          <code>address_components</code>
-        </h4>
-      </td>
+      <td align="left">address_components</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a href="#AddressComponent" title="AddressComponent"
@@ -27,44 +19,18 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array containing the separate components applicable to this
-            address.
-          </p>
-          <p>
-            See <a href="#AddressComponent">AddressComponent</a> for more
-            information.
-          </p>
-        </div>
+        An array containing the separate components applicable to this
+        address.See AddressComponent for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-formatted_address"
-          class="add-link schema-object-property-key"
-        >
-          <code>formatted_address</code>
-        </h4>
-      </td>
+      <td align="left">formatted_address</td>
       <td><strong>required</strong></td>
       <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>The human-readable address of this location.</p>
-        </div>
-      </td>
+      <td>The human-readable address of this location.</td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-geometry"
-          class="add-link schema-object-property-key"
-        >
-          <code>geometry</code>
-        </h4>
-      </td>
+      <td align="left">geometry</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#GeocodingGeometry" title="GeocodingGeometry"
@@ -80,91 +46,44 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-place_id"
-          class="add-link schema-object-property-key"
-        >
-          <code>place_id</code>
-        </h4>
-      </td>
+      <td align="left">place_id</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A unique identifier that can be used with other Google APIs. For
-            example, you can use the <code>place_id</code> in a Places API
-            request to get details of a local business, such as phone number,
-            opening hours, user reviews, and more. See the
-            <a href="https://developers.google.com/places/place-id"
-              >place ID overview</a
-            >.
-          </p>
-        </div>
+        A unique identifier that can be used with other Google APIs. For
+        example, you can use the place_id in a Places API request to get details
+        of a local business, such as phone number, opening hours, user reviews,
+        and more. See the place ID overview.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-types"
-          class="add-link schema-object-property-key"
-        >
-          <code>types</code>
-        </h4>
-      </td>
+      <td align="left">types</td>
       <td><strong>required</strong></td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The <code>types[]</code> array indicates the type of the returned
-            result. This array contains a set of zero or more tags identifying
-            the type of feature returned in the result. For example, a geocode
-            of "Chicago" returns "locality" which indicates that "Chicago" is a
-            city, and also returns "political" which indicates it is a political
-            entity.
-          </p>
-        </div>
+        The types[] array indicates the type of the returned result. This array
+        contains a set of zero or more tags identifying the type of feature
+        returned in the result. For example, a geocode of "Chicago" returns
+        "locality" which indicates that "Chicago" is a city, and also returns
+        "political" which indicates it is a political entity.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-partial_match"
-          class="add-link schema-object-property-key"
-        >
-          <code>partial_match</code>
-        </h4>
-      </td>
+      <td align="left">partial_match</td>
       <td>optional</td>
       <td>boolean</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Indicates that the geocoder did not return an exact match for the
-            original request, though it was able to match part of the requested
-            address. You may wish to examine the original request for
-            misspellings and/or an incomplete address.
-          </p>
-          <p>
-            Partial matches most often occur for street addresses that do not
-            exist within the locality you pass in the request. Partial matches
-            may also be returned when a request matches two or more locations in
-            the same locality.
-          </p>
-        </div>
+        Indicates that the geocoder did not return an exact match for the
+        original request, though it was able to match part of the requested
+        address. You may wish to examine the original request for misspellings
+        and/or an incomplete address.Partial matches most often occur for street
+        addresses that do not exist within the locality you pass in the request.
+        Partial matches may also be returned when a request matches two or more
+        locations in the same locality.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-plus_code"
-          class="add-link schema-object-property-key"
-        >
-          <code>plus_code</code>
-        </h4>
-      </td>
+      <td align="left">plus_code</td>
       <td>optional</td>
       <td><a href="#PlusCode" title="PlusCode">PlusCode</a></td>
       <td>
@@ -173,59 +92,16 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="GeocodingResult-postcode_localities"
-          class="add-link schema-object-property-key"
-        >
-          <code>postcode_localities</code>
-        </h4>
-      </td>
+      <td align="left">postcode_localities</td>
       <td>optional</td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array denoting all the localities contained in a postal code.
-            This is only present when the result is a postal code that contains
-            multiple localities.
-          </p>
-        </div>
+        An array denoting all the localities contained in a postal code. This is
+        only present when the result is a postal code that contains multiple
+        localities.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-geocodingresult"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/GeocodingResult.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-geocodingresult"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - GeocodingResult"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_geocodingresult] -->

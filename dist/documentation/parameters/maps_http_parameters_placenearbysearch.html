@@ -1,19 +1,15 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_placenearbysearch] -->
-<h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="location">location</h3>
     <p>
       The point around which to retrieve place information. This must be
       specified as <code>latitude,longitude</code>.
     </p>
   </li>
 </ul>
-<h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="keyword">keyword</h3>
     <p>
       The text string on which to search, for example: "restaurant" or "123 Main
       Street". This must be a place name, address, or category of
@@ -33,7 +29,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -72,7 +67,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="maxprice">maxprice</h3>
     <p>
       Restricts results to only those places within the specified range. Valid
       values range between 0 (most affordable) to 4 (most expensive), inclusive.
@@ -81,7 +75,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="minprice">minprice</h3>
     <p>
       Restricts results to only those places within the specified range. Valid
       values range between 0 (most affordable) to 4 (most expensive), inclusive.
@@ -90,8 +83,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name deprecated-item hide-from-toc" id="name">name</h3>
-    <aside class="deprecated"><code>name</code> is deprecated.</aside>
     <p>
       Equivalent to <code>keyword</code>. Values in this field are combined with
       values in the <code>keyword</code> field and passed as part of the same
@@ -99,7 +90,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="opennow">opennow</h3>
     <p>
       Returns only those places that are open for business at the time the query
       is sent. Places that do not specify opening hours in the Google Places
@@ -107,7 +97,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="pagetoken">pagetoken</h3>
     <p>
       Returns up to 20 results from a previously run search. Setting a
       <code>pagetoken</code> parameter will execute a search with the same
@@ -116,7 +105,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="radius">radius</h3>
     <p>
       Defines the distance (in meters) within which to return place results. You
       may bias results to a specified circle by passing a
@@ -155,7 +143,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="rankby">rankby</h3>
     <p>Specifies the order in which results are listed. Possible values are:</p>
     <ul>
       <li>
@@ -176,7 +163,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="type">type</h3>
     <p>
       Restricts the results to places matching the specified type. Only one type
       may be specified. If more than one type is provided, all types following
@@ -196,44 +182,7 @@
         >supported types</a
       >.
     </p>
-    <div class="note">
-      Note: Adding both `keyword` and `type` with the same value
-      (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield
-      `ZERO_RESULTS`.
-    </div>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placenearbysearch"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placenearbysearch"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/place/nearbysearch/json"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_placenearbysearch] -->

@@ -1,8 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionstransitdetails] -->
-<h3 class="schema-object" id="DirectionsTransitDetails">
-  DirectionsTransitDetails
-</h3>
 <p>
   Additional information that is not relevant for other modes of transportation.
 </p>
@@ -17,14 +14,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-arrival_stop"
-          class="add-link schema-object-property-key"
-        >
-          <code>arrival_stop</code>
-        </h4>
-      </td>
+      <td align="left">arrival_stop</td>
       <td>optional</td>
       <td>
         <a href="#DirectionsTransitStop" title="DirectionsTransitStop"
@@ -32,24 +22,11 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The arrival transit stop.</p>
-          <p>
-            See <a href="#DirectionsTransitStop">DirectionsTransitStop</a> for
-            more information.
-          </p>
-        </div>
+        The arrival transit stop.See DirectionsTransitStop for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-arrival_time"
-          class="add-link schema-object-property-key"
-        >
-          <code>arrival_time</code>
-        </h4>
-      </td>
+      <td align="left">arrival_time</td>
       <td>optional</td>
       <td>
         <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
@@ -65,14 +42,7 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-departure_stop"
-          class="add-link schema-object-property-key"
-        >
-          <code>departure_stop</code>
-        </h4>
-      </td>
+      <td align="left">departure_stop</td>
       <td>optional</td>
       <td>
         <a href="#DirectionsTransitStop" title="DirectionsTransitStop"
@@ -80,24 +50,12 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The departure transit stop.</p>
-          <p>
-            See <a href="#DirectionsTransitStop">DirectionsTransitStop</a> for
-            more information.
-          </p>
-        </div>
+        The departure transit stop.See DirectionsTransitStop for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-departure_time"
-          class="add-link schema-object-property-key"
-        >
-          <code>departure_time</code>
-        </h4>
-      </td>
+      <td align="left">departure_time</td>
       <td>optional</td>
       <td>
         <a href="#TimeZoneTextValueObject" title="TimeZoneTextValueObject"
@@ -113,57 +71,27 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-headsign"
-          class="add-link schema-object-property-key"
-        >
-          <code>headsign</code>
-        </h4>
-      </td>
+      <td align="left">headsign</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Specifies the direction in which to travel on this line, as it is
-            marked on the vehicle or at the departure stop. This will often be
-            the terminus station.
-          </p>
-        </div>
+        Specifies the direction in which to travel on this line, as it is marked
+        on the vehicle or at the departure stop. This will often be the terminus
+        station.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-headway"
-          class="add-link schema-object-property-key"
-        >
-          <code>headway</code>
-        </h4>
-      </td>
+      <td align="left">headway</td>
       <td>optional</td>
       <td>integer</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Specifies the expected number of seconds between departures from the
-            same stop at this time. For example, with a
-            <code>headway</code> value of 600, you would expect a ten minute
-            wait if you should miss your bus.
-          </p>
-        </div>
+        Specifies the expected number of seconds between departures from the
+        same stop at this time. For example, with a headway value of 600, you
+        would expect a ten minute wait if you should miss your bus.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-line"
-          class="add-link schema-object-property-key"
-        >
-          <code>line</code>
-        </h4>
-      </td>
+      <td align="left">line</td>
       <td>optional</td>
       <td>
         <a href="#DirectionsTransitLine" title="DirectionsTransitLine"
@@ -171,94 +99,33 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>Contains information about the transit line used in this step.</p>
-          <p>
-            See <a href="#DirectionsTransitLine">DirectionsTransitLine</a> for
-            more information.
-          </p>
-        </div>
+        Contains information about the transit line used in this step.See
+        DirectionsTransitLine for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-num_stops"
-          class="add-link schema-object-property-key"
-        >
-          <code>num_stops</code>
-        </h4>
-      </td>
+      <td align="left">num_stops</td>
       <td>optional</td>
       <td>integer</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The number of stops from the departure to the arrival stop. This
-            includes the arrival stop, but not the departure stop. For example,
-            if your directions involve leaving from Stop A, passing through
-            stops B and C, and arriving at stop D, <code>num_stops</code> will
-            return 3.
-          </p>
-        </div>
+        The number of stops from the departure to the arrival stop. This
+        includes the arrival stop, but not the departure stop. For example, if
+        your directions involve leaving from Stop A, passing through stops B and
+        C, and arriving at stop D, num_stops will return 3.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitDetails-trip_short_name"
-          class="add-link schema-object-property-key"
-        >
-          <code>trip_short_name</code>
-        </h4>
-      </td>
+      <td align="left">trip_short_name</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The text that appears in schedules and sign boards to identify a
-            transit trip to passengers. The text should uniquely identify a trip
-            within a service day. For example, "538" is the
-            <code>trip_short_name</code> of the Amtrak train that leaves San
-            Jose, CA at 15:10 on weekdays to Sacramento, CA.
-          </p>
-        </div>
+        The text that appears in schedules and sign boards to identify a transit
+        trip to passengers. The text should uniquely identify a trip within a
+        service day. For example, "538" is the trip_short_name of the Amtrak
+        train that leaves San Jose, CA at 15:10 on weekdays to Sacramento, CA.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitdetails"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsTransitDetails.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitdetails"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsTransitDetails"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionstransitdetails] -->

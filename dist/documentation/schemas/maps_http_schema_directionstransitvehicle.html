@@ -1,8 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionstransitvehicle] -->
-<h3 class="schema-object" id="DirectionsTransitVehicle">
-  DirectionsTransitVehicle
-</h3>
 <table>
   <thead>
     <tr>
@@ -14,153 +11,54 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitVehicle-name"
-          class="add-link schema-object-property-key"
-        >
-          <code>name</code>
-        </h4>
-      </td>
+      <td align="left">name</td>
+      <td><strong>required</strong></td>
+      <td>string</td>
+      <td>The name of this vehicle, capitalized.</td>
+    </tr>
+    <tr>
+      <td align="left">type</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>The name of this vehicle, capitalized.</p>
-        </div>
+        The type of vehicle used.BUS - Bus.CABLE_CAR - A vehicle that operates
+        on a cable, usually on the ground. Aerial cable cars may be of the type
+        GONDOLA_LIFT.COMMUTER_TRAIN - Commuter rail.FERRY - Ferry.FUNICULAR - A
+        vehicle that is pulled up a steep incline by a cable. A Funicular
+        typically consists of two cars, with each car acting as a counterweight
+        for the other.GONDOLA_LIFT - An aerial cable car.HEAVY_RAIL - Heavy
+        rail.HIGH_SPEED_TRAIN - High speed train.INTERCITY_BUS - Intercity
+        bus.LONG_DISTANCE_TRAIN - Long distance train.METRO_RAIL - Light rail
+        transit.MONORAIL - Monorail.OTHER - All other vehicles will return this
+        type.RAIL - Rail.SHARE_TAXI - Share taxi is a kind of bus with the
+        ability to drop off and pick up passengers anywhere on its route.SUBWAY
+        - Underground light rail.TRAM - Above ground light rail.TROLLEYBUS -
+        Trolleybus.The allowed values include: <code>BUS</code>,
+        <code>CABLE_CAR</code>, <code>COMMUTER_TRAIN</code>, <code>FERRY</code>,
+        <code>FUNICULAR</code>, <code>GONDOLA_LIFT</code>,
+        <code>HEAVY_RAIL</code>, <code>HIGH_SPEED_TRAIN</code>,
+        <code>INTERCITY_BUS</code>, <code>LONG_DISTANCE_TRAIN</code>,
+        <code>METRO_RAIL</code>, <code>MONORAIL</code>, <code>OTHER</code>,
+        <code>RAIL</code>, <code>SHARE_TAXI</code>, <code>SUBWAY</code>,
+        <code>TRAM</code>, and <code>TROLLEYBUS</code>
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitVehicle-type"
-          class="add-link schema-object-property-key"
-        >
-          <code>type</code>
-        </h4>
-      </td>
-      <td><strong>required</strong></td>
+      <td align="left">icon</td>
+      <td>optional</td>
       <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>The type of vehicle used.</p>
-          <ul>
-            <li><code>BUS</code> - Bus.</li>
-            <li>
-              <code>CABLE_CAR</code> - A vehicle that operates on a cable,
-              usually on the ground. Aerial cable cars may be of the type
-              GONDOLA_LIFT.
-            </li>
-            <li><code>COMMUTER_TRAIN</code> - Commuter rail.</li>
-            <li><code>FERRY</code> - Ferry.</li>
-            <li>
-              <code>FUNICULAR</code> - A vehicle that is pulled up a steep
-              incline by a cable. A Funicular typically consists of two cars,
-              with each car acting as a counterweight for the other.
-            </li>
-            <li><code>GONDOLA_LIFT</code> - An aerial cable car.</li>
-            <li><code>HEAVY_RAIL</code> - Heavy rail.</li>
-            <li><code>HIGH_SPEED_TRAIN</code> - High speed train.</li>
-            <li><code>INTERCITY_BUS</code> - Intercity bus.</li>
-            <li><code>LONG_DISTANCE_TRAIN</code> - Long distance train.</li>
-            <li><code>METRO_RAIL</code> - Light rail transit.</li>
-            <li><code>MONORAIL</code> - Monorail.</li>
-            <li>
-              <code>OTHER</code> - All other vehicles will return this type.
-            </li>
-            <li><code>RAIL</code> - Rail.</li>
-            <li>
-              <code>SHARE_TAXI</code> - Share taxi is a kind of bus with the
-              ability to drop off and pick up passengers anywhere on its route.
-            </li>
-            <li><code>SUBWAY</code> - Underground light rail.</li>
-            <li><code>TRAM</code> - Above ground light rail.</li>
-            <li><code>TROLLEYBUS</code> - Trolleybus.</li>
-          </ul>
-          <div class="notranslate">
-            The allowed values include: <code>BUS</code>,
-            <code>CABLE_CAR</code>, <code>COMMUTER_TRAIN</code>,
-            <code>FERRY</code>, <code>FUNICULAR</code>,
-            <code>GONDOLA_LIFT</code>, <code>HEAVY_RAIL</code>,
-            <code>HIGH_SPEED_TRAIN</code>, <code>INTERCITY_BUS</code>,
-            <code>LONG_DISTANCE_TRAIN</code>, <code>METRO_RAIL</code>,
-            <code>MONORAIL</code>, <code>OTHER</code>, <code>RAIL</code>,
-            <code>SHARE_TAXI</code>, <code>SUBWAY</code>, <code>TRAM</code>, and
-            <code>TROLLEYBUS</code>
-          </div>
-        </div>
-      </td>
+      <td>Contains the URL for an icon associated with this vehicle type.</td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitVehicle-icon"
-          class="add-link schema-object-property-key"
-        >
-          <code>icon</code>
-        </h4>
-      </td>
+      <td align="left">local_icon</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>Contains the URL for an icon associated with this vehicle type.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitVehicle-local_icon"
-          class="add-link schema-object-property-key"
-        >
-          <code>local_icon</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the URL for the icon associated with this vehicle type,
-            based on the local transport signage.
-          </p>
-        </div>
+        Contains the URL for the icon associated with this vehicle type, based
+        on the local transport signage.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitvehicle"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsTransitVehicle.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitvehicle"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsTransitVehicle"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionstransitvehicle] -->

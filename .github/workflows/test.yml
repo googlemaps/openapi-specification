@@ -27,7 +27,7 @@ jobs:
         if: github.actor == 'dependabot[bot]'
       - uses: actions/setup-python@v4
         with:
-          python-version: '2' 
+          python-version: '2.7' 
       - run: npm ci
       - run: npm run build -- --profile /tmp/bazel-profile-build.gz --jobs 8
       - run: npm test -- --jobs 8

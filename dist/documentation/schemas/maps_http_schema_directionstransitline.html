@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_directionstransitline] -->
-<h3 class="schema-object" id="DirectionsTransitLine">DirectionsTransitLine</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-agencies"
-          class="add-link schema-object-property-key"
-        >
-          <code>agencies</code>
-        </h4>
-      </td>
+      <td align="left">agencies</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
@@ -29,135 +21,54 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The transit agency (or agencies) that operates this transit line.
-          </p>
-          <p>
-            See
-            <a href="#DirectionsTransitAgency">DirectionsTransitAgency</a> for
-            more information.
-          </p>
-        </div>
+        The transit agency (or agencies) that operates this transit line.See
+        DirectionsTransitAgency for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-name"
-          class="add-link schema-object-property-key"
-        >
-          <code>name</code>
-        </h4>
-      </td>
+      <td align="left">name</td>
       <td><strong>required</strong></td>
       <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>The full name of this transit line, e.g. "8 Avenue Local".</p>
-        </div>
-      </td>
+      <td>The full name of this transit line, e.g. "8 Avenue Local".</td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-color"
-          class="add-link schema-object-property-key"
-        >
-          <code>color</code>
-        </h4>
-      </td>
+      <td align="left">color</td>
+      <td>optional</td>
+      <td>string</td>
+      <td>The color commonly used in signage for this line.</td>
+    </tr>
+    <tr>
+      <td align="left">icon</td>
+      <td>optional</td>
+      <td>string</td>
+      <td>Contains the URL for the icon associated with this line.</td>
+    </tr>
+    <tr>
+      <td align="left">short_name</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>The color commonly used in signage for this line.</p>
-        </div>
+        The short name of this transit line. This will normally be a line
+        number, such as "M7" or "355".
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-icon"
-          class="add-link schema-object-property-key"
-        >
-          <code>icon</code>
-        </h4>
-      </td>
+      <td align="left">text_color</td>
+      <td>optional</td>
+      <td>string</td>
+      <td>The color commonly used in signage for this line.</td>
+    </tr>
+    <tr>
+      <td align="left">url</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>Contains the URL for the icon associated with this line.</p>
-        </div>
+        Contains the URL for this transit line as provided by the transit
+        agency.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-short_name"
-          class="add-link schema-object-property-key"
-        >
-          <code>short_name</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            The short name of this transit line. This will normally be a line
-            number, such as "M7" or "355".
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-text_color"
-          class="add-link schema-object-property-key"
-        >
-          <code>text_color</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>The color commonly used in signage for this line.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-url"
-          class="add-link schema-object-property-key"
-        >
-          <code>url</code>
-        </h4>
-      </td>
-      <td>optional</td>
-      <td>string</td>
-      <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the URL for this transit line as provided by the transit
-            agency.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <h4
-          id="DirectionsTransitLine-vehicle"
-          class="add-link schema-object-property-key"
-        >
-          <code>vehicle</code>
-        </h4>
-      </td>
+      <td align="left">vehicle</td>
       <td>optional</td>
       <td>
         <a href="#DirectionsTransitVehicle" title="DirectionsTransitVehicle"
@@ -165,49 +76,11 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>The type of vehicle that operates on this transit line.</p>
-          <p>
-            See
-            <a href="#DirectionsTransitVehicle">DirectionsTransitVehicle</a> for
-            more information.
-          </p>
-        </div>
+        The type of vehicle that operates on this transit line.See
+        DirectionsTransitVehicle for more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitline"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DirectionsTransitLine.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-directionstransitline"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DirectionsTransitLine"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_directionstransitline] -->

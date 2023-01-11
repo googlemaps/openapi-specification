@@ -1,8 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placeautocompleteprediction] -->
-<h3 class="schema-object" id="PlaceAutocompletePrediction">
-  PlaceAutocompletePrediction
-</h3>
 <table>
   <thead>
     <tr>
@@ -14,36 +11,18 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-description"
-          class="add-link schema-object-property-key"
-        >
-          <code>description</code>
-        </h4>
-      </td>
+      <td align="left">description</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains the human-readable name for the returned result. For
-            <code>establishment</code> results, this is usually the business
-            name. This content is meant to be read as-is. Do not
-            programmatically parse the formatted address.
-          </p>
-        </div>
+        Contains the human-readable name for the returned result. For
+        establishment results, this is usually the business name. This content
+        is meant to be read as-is. Do not programmatically parse the formatted
+        address.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-matched_substrings"
-          class="add-link schema-object-property-key"
-        >
-          <code>matched_substrings</code>
-        </h4>
-      </td>
+      <td align="left">matched_substrings</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
@@ -53,31 +32,13 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            A list of substrings that describe the location of the entered term
-            in the prediction result text, so that the term can be highlighted
-            if desired.
-          </p>
-          <p>
-            See
-            <a href="#PlaceAutocompleteMatchedSubstring"
-              >PlaceAutocompleteMatchedSubstring</a
-            >
-            for more information.
-          </p>
-        </div>
+        A list of substrings that describe the location of the entered term in
+        the prediction result text, so that the term can be highlighted if
+        desired.See PlaceAutocompleteMatchedSubstring for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-structured_formatting"
-          class="add-link schema-object-property-key"
-        >
-          <code>structured_formatting</code>
-        </h4>
-      </td>
+      <td align="left">structured_formatting</td>
       <td><strong>required</strong></td>
       <td>
         <a
@@ -87,31 +48,14 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Provides pre-formatted text that can be shown in your autocomplete
-            results. This content is meant to be read as-is. Do not
-            programmatically parse the formatted address.
-          </p>
-          <p>
-            See
-            <a href="#PlaceAutocompleteStructuredFormat"
-              >PlaceAutocompleteStructuredFormat</a
-            >
-            for more information.
-          </p>
-        </div>
+        Provides pre-formatted text that can be shown in your autocomplete
+        results. This content is meant to be read as-is. Do not programmatically
+        parse the formatted address.See PlaceAutocompleteStructuredFormat for
+        more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-terms"
-          class="add-link schema-object-property-key"
-        >
-          <code>terms</code>
-        </h4>
-      </td>
+      <td align="left">terms</td>
       <td><strong>required</strong></td>
       <td>
         Array&#x3C;<a
@@ -121,144 +65,52 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            Contains an array of terms identifying each section of the returned
-            description (a section of the description is generally terminated
-            with a comma). Each entry in the array has a
-            <code>value</code> field, containing the text of the term, and an
-            <code>offset</code> field, defining the start position of this term
-            in the description, measured in Unicode characters.
-          </p>
-          <p>
-            See <a href="#PlaceAutocompleteTerm">PlaceAutocompleteTerm</a> for
-            more information.
-          </p>
-        </div>
+        Contains an array of terms identifying each section of the returned
+        description (a section of the description is generally terminated with a
+        comma). Each entry in the array has a value field, containing the text
+        of the term, and an offset field, defining the start position of this
+        term in the description, measured in Unicode characters.See
+        PlaceAutocompleteTerm for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-distance_meters"
-          class="add-link schema-object-property-key"
-        >
-          <code>distance_meters</code>
-        </h4>
-      </td>
+      <td align="left">distance_meters</td>
       <td>optional</td>
       <td>integer</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            The straight-line distance in meters from the origin. This field is
-            only returned for requests made with an <code>origin</code>.
-          </p>
-        </div>
+        The straight-line distance in meters from the origin. This field is only
+        returned for requests made with an origin.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-place_id"
-          class="add-link schema-object-property-key"
-        >
-          <code>place_id</code>
-        </h4>
-      </td>
+      <td align="left">place_id</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A textual identifier that uniquely identifies a place. To retrieve
-            information about the place, pass this identifier in the placeId
-            field of a Places API request. For more information about place IDs,
-            see the
-            <a
-              href="https://developers.google.com/maps/documentation/places/web-service/place-id"
-              >Place IDs</a
-            >
-            overview.
-          </p>
-        </div>
+        A textual identifier that uniquely identifies a place. To retrieve
+        information about the place, pass this identifier in the placeId field
+        of a Places API request. For more information about place IDs, see the
+        Place IDs overview.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-reference"
-          class="add-link schema-object-property-key deprecated-item hide-from-toc"
-        >
-          <code>reference</code>
-        </h4>
-      </td>
+      <td align="left">reference</td>
       <td>optional</td>
       <td>string</td>
-      <td>
-        <aside class="deprecated"><code>reference</code> is deprecated.</aside>
-        <div class="nonref-property-description"><p>See place_id.</p></div>
-      </td>
+      <td>reference is deprecated.See place_id.</td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceAutocompletePrediction-types"
-          class="add-link schema-object-property-key"
-        >
-          <code>types</code>
-        </h4>
-      </td>
+      <td align="left">types</td>
       <td>optional</td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            Contains an array of types that apply to this place. For example:
-            <code>[ "political", "locality" ]</code> or
-            <code>[ "establishment", "geocode", "beauty_salon" ]</code>. The
-            array can contain multiple values. Learn more about
-            <a
-              href="https://developers.google.com/maps/documentation/places/web-service/supported_types"
-              >Place types</a
-            >.
-          </p>
-        </div>
+        Contains an array of types that apply to this place. For example: [
+        "political", "locality" ] or [ "establishment", "geocode",
+        "beauty_salon" ]. The array can contain multiple values. Learn more
+        about Place types.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placeautocompleteprediction"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlaceAutocompletePrediction.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placeautocompleteprediction"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - PlaceAutocompletePrediction"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_placeautocompleteprediction] -->

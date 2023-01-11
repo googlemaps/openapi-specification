@@ -1,9 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_placefindplacefromtext] -->
-<h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="input">input</h3>
     <p>
       The text string on which to search, for example: "restaurant" or "123 Main
       Street". This must be a place name, address, or category of
@@ -14,7 +12,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="inputtype">inputtype</h3>
     <p>
       The type of input. This can be one of either <code>textquery</code> or
       <code>phonenumber</code>. Phone numbers must be in international format
@@ -25,23 +22,8 @@
     </p>
   </li>
 </ul>
-<h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="fields">fields</h3>
-    <div class="caution">
-      Caution: Place Search requests and Place Details requests do not return
-      the same fields. Place Search requests return a subset of the fields that
-      are returned by Place Details requests. If the field you want is not
-      returned by Place Search, you can use Place Search to get a
-      <code>place_id</code>, then use that Place ID to make a Place Details
-      request. For more information on the fields that are unavailable in a
-      Place Search request, see
-      <a
-        href="https://developers.google.com/maps/documentation/places/web-service/place-data-fields#places-api-fields-support"
-        >Places API fields support</a
-      >.
-    </div>
     <p>
       Use the fields parameter to specify a comma-separated list of place data
       types to return. For example:
@@ -96,7 +78,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -135,7 +116,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="locationbias">locationbias</h3>
     <p>
       Prefer results in a specified area, by specifying either a radius plus
       lat/lng, or two lat/lng pairs representing the points of a rectangle. If
@@ -165,7 +145,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
     <p>
       Restrict results to a specified area, by specifying either a radius plus
       lat/lng, or two lat/lng pairs representing the points of a rectangle.
@@ -185,37 +164,5 @@
     </ul>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placefindplacefromtext"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placefindplacefromtext"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/place/findplacefromtext/json"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_placefindplacefromtext] -->

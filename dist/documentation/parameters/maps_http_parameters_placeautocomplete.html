@@ -1,9 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_placeautocomplete] -->
-<h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="input">input</h3>
     <p>
       The text string on which to search. The Place Autocomplete service will
       return candidate matches based on this string and order results based on
@@ -11,10 +9,8 @@
     </p>
   </li>
 </ul>
-<h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="components">components</h3>
     <p>
       A grouping of places to which you would like to restrict your results.
       Currently, you can use components to filter by up to 5 countries.
@@ -29,28 +25,8 @@
       would restrict your results to places within the United States and its
       unincorporated organized territories.
     </p>
-    <div class="note">
-      <strong>Note:</strong> If you receive unexpected results with a country
-      code, verify that you are using a code which includes the countries,
-      dependent territories, and special areas of geographical interest you
-      intend. You can find code information at
-      <a
-        href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
-        target="blank"
-        class="external"
-        >Wikipedia: List of ISO 3166 country codes</a
-      >
-      or the
-      <a
-        href="https://www.iso.org/obp/ui/#search"
-        target="blank"
-        class="external"
-        >ISO Online Browsing Platform</a
-      >.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="language">language</h3>
     <p>The language in which to return results.</p>
     <ul>
       <li>
@@ -89,7 +65,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="location">location</h3>
     <p>
       The point around which to retrieve place information. This must be
       specified as <code>latitude,longitude</code>. The
@@ -97,14 +72,8 @@
       location. If <code>radius</code> is not provided, the
       <code>location</code> parameter is ignored.
     </p>
-    <div class="note">
-      When using the Text Search API, the `location` parameter may be overriden
-      if the `query` contains an explicit location such as `Market in
-      Barcelona`.
-    </div>
   </li>
   <li>
-    <h3 class="parameter-name" id="locationbias">locationbias</h3>
     <p>
       Prefer results in a specified area, by specifying either a radius plus
       lat/lng, or two lat/lng pairs representing the points of a rectangle. If
@@ -134,7 +103,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="locationrestriction">locationrestriction</h3>
     <p>
       Restrict results to a specified area, by specifying either a radius plus
       lat/lng, or two lat/lng pairs representing the points of a rectangle.
@@ -154,7 +122,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="offset">offset</h3>
     <p>
       The position, in the input term, of the last character that the service
       uses to match predictions. For example, if the input is
@@ -168,7 +135,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="origin">origin</h3>
     <p>
       The origin point from which to calculate straight-line distance to the
       destination (returned as <code>distance_meters</code>). If this value is
@@ -177,7 +143,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="radius">radius</h3>
     <p>
       Defines the distance (in meters) within which to return place results. You
       may bias results to a specified circle by passing a
@@ -216,7 +181,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="region">region</h3>
     <p>
       The region code, specified as a
       <a
@@ -230,7 +194,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="sessiontoken">sessiontoken</h3>
     <p>
       A random string which identifies an autocomplete
       <a
@@ -270,7 +233,6 @@
     </ul>
   </li>
   <li>
-    <h3 class="parameter-name" id="strictbounds">strictbounds</h3>
     <p>
       Returns only those places that are strictly within the region defined by
       <code>location</code> and <code>radius</code>. This is a restriction,
@@ -279,7 +241,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="types">types</h3>
     <p>
       You can restrict results from a Place Autocomplete request to be of a
       certain type by passing the <code>types</code> parameter. This parameter
@@ -345,37 +306,5 @@
     </ul>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placeautocomplete"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-placeautocomplete"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/place/autocomplete/json"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_placeautocomplete] -->

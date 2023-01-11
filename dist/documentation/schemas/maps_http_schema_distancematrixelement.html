@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_distancematrixelement] -->
-<h3 class="schema-object" id="DistanceMatrixElement">DistanceMatrixElement</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixElement-status"
-          class="add-link schema-object-property-key"
-        >
-          <code>status</code>
-        </h4>
-      </td>
+      <td align="left">status</td>
       <td><strong>required</strong></td>
       <td>
         <a
@@ -29,167 +21,67 @@
         >
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>A status for the element.</p>
-          <p>
-            See
-            <a href="#DistanceMatrixElementStatus"
-              >DistanceMatrixElementStatus</a
-            >
-            for more information.
-          </p>
-        </div>
+        A status for the element.See DistanceMatrixElementStatus for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixElement-distance"
-          class="add-link schema-object-property-key"
-        >
-          <code>distance</code>
-        </h4>
-      </td>
+      <td align="left">distance</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The total distance of this route, expressed in meters (value) and as
-            text. The textual value uses the unit system specified with the unit
-            parameter of the original request, or the origin's region.
-          </p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        The total distance of this route, expressed in meters (value) and as
+        text. The textual value uses the unit system specified with the unit
+        parameter of the original request, or the origin's region.See
+        TextValueObject for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixElement-duration"
-          class="add-link schema-object-property-key"
-        >
-          <code>duration</code>
-        </h4>
-      </td>
+      <td align="left">duration</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The length of time it takes to travel this route, expressed in
-            seconds (the value field) and as text. The textual representation is
-            localized according to the query's language parameter.
-          </p>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        The length of time it takes to travel this route, expressed in seconds
+        (the value field) and as text. The textual representation is localized
+        according to the query's language parameter.See TextValueObject for more
+        information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixElement-duration_in_traffic"
-          class="add-link schema-object-property-key"
-        >
-          <code>duration_in_traffic</code>
-        </h4>
-      </td>
+      <td align="left">duration_in_traffic</td>
       <td>optional</td>
       <td>
         <a href="#TextValueObject" title="TextValueObject">TextValueObject</a>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            The length of time it takes to travel this route, based on current
-            and historical traffic conditions. See the
-            <code>traffic_model</code> request parameter for the options you can
-            use to request that the returned value is optimistic, pessimistic,
-            or a best-guess estimate. The duration is expressed in seconds (the
-            value field) and as text. The textual representation is localized
-            according to the query's language parameter. The duration in traffic
-            is returned only if all of the following are true:
-          </p>
-          <ul>
-            <li>
-              The request includes a <code>departure_time</code> parameter.
-            </li>
-            <li>Traffic conditions are available for the requested route.</li>
-            <li>The mode parameter is set to driving.</li>
-          </ul>
-          <p>
-            See <a href="#TextValueObject">TextValueObject</a> for more
-            information.
-          </p>
-        </div>
+        The length of time it takes to travel this route, based on current and
+        historical traffic conditions. See the traffic_model request parameter
+        for the options you can use to request that the returned value is
+        optimistic, pessimistic, or a best-guess estimate. The duration is
+        expressed in seconds (the value field) and as text. The textual
+        representation is localized according to the query's language parameter.
+        The duration in traffic is returned only if all of the following are
+        true:The request includes a departure_time parameter.Traffic conditions
+        are available for the requested route.The mode parameter is set to
+        driving.See TextValueObject for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="DistanceMatrixElement-fare"
-          class="add-link schema-object-property-key"
-        >
-          <code>fare</code>
-        </h4>
-      </td>
+      <td align="left">fare</td>
       <td>optional</td>
       <td><a href="#Fare" title="Fare">Fare</a></td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            If present, contains the total fare (that is, the total ticket
-            costs) on this route. This property is only returned for transit
-            requests and only for transit providers where fare information is
-            available.
-          </p>
-          <p>See <a href="#Fare">Fare</a> for more information.</p>
-        </div>
+        If present, contains the total fare (that is, the total ticket costs) on
+        this route. This property is only returned for transit requests and only
+        for transit providers where fare information is available.See Fare for
+        more information.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-distancematrixelement"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/DistanceMatrixElement.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-distancematrixelement"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - DistanceMatrixElement"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_distancematrixelement] -->

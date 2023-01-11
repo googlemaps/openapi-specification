@@ -1,9 +1,7 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_parameters_streetview] -->
-<h2 id="required-parameters">Required parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="size">size</h3>
     <p>
       Specifies the output size of the image in pixels. Size is specified as
       <code>{width}x{height}</code> - for example,
@@ -11,10 +9,8 @@
     </p>
   </li>
 </ul>
-<h2 id="optional-parameters">Optional parameters</h2>
 <ul>
   <li>
-    <h3 class="parameter-name" id="fov">fov</h3>
     <p>
       Determines the horizontal field of view of the image. The field of view is
       expressed in degrees, with a maximum allowed value of 120. When dealing
@@ -24,7 +20,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="heading">heading</h3>
     <p>
       Indicates the compass heading of the camera. Accepted values are from 0 to
       360 (both values indicating North, with 90 indicating East, and 180
@@ -34,7 +29,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="location">location</h3>
     <p>
       The point around which to retrieve place information. The Street View
       Static API will snap to the panorama photographed closest to this
@@ -48,14 +42,12 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="pano">pano</h3>
     <p>
       A specific panorama ID. These are generally stable, though panoramas may
       change ID over time as imagery is refreshed.
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="pitch">pitch</h3>
     <p>
       Specifies the up or down angle of the camera relative to the Street View
       vehicle. This is often, but not always, flat horizontal. Positive values
@@ -65,7 +57,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="radius">radius</h3>
     <p>
       Sets a radius, specified in meters, in which to search for a panorama,
       centered on the given latitude and longitude. Valid values are
@@ -73,7 +64,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="return_error_code">return_error_code</h3>
     <p>
       Indicates whether the API should return a non <code>200 Ok</code> HTTP
       status when no image is found (<code>404 NOT FOUND</code>), or in response
@@ -85,7 +75,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="signature">signature</h3>
     <p>
       A digital signature used to verify that any site generating requests using
       your API key is authorized to do so. Requests that do not include a
@@ -97,7 +86,6 @@
     </p>
   </li>
   <li>
-    <h3 class="parameter-name" id="source">source</h3>
     <p>Limits Street View searches to selected sources. Valid values are:</p>
     <ul>
       <li>
@@ -115,37 +103,5 @@
     </ul>
   </li>
 </ul>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-streetview"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/tree/main/specification/parameters"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-parameters-streetview"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[parameters] Bug - /maps/api/streetview"
-    title="File bug for parameters on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_parameters_streetview] -->

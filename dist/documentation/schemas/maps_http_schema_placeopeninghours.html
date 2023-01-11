@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_placeopeninghours] -->
-<h3 class="schema-object" id="PlaceOpeningHours">PlaceOpeningHours</h3>
 <p>An object describing the opening hours of a place.</p>
 <table>
   <thead>
@@ -13,33 +12,15 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceOpeningHours-open_now"
-          class="add-link schema-object-property-key"
-        >
-          <code>open_now</code>
-        </h4>
-      </td>
+      <td align="left">open_now</td>
       <td>optional</td>
       <td>boolean</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A boolean value indicating if the place is open at the current time.
-          </p>
-        </div>
+        A boolean value indicating if the place is open at the current time.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceOpeningHours-periods"
-          class="add-link schema-object-property-key"
-        >
-          <code>periods</code>
-        </h4>
-      </td>
+      <td align="left">periods</td>
       <td>optional</td>
       <td>
         Array&#x3C;<a
@@ -49,28 +30,12 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array of opening periods covering seven days, starting from
-            Sunday, in chronological order.
-          </p>
-          <p>
-            See
-            <a href="#PlaceOpeningHoursPeriod">PlaceOpeningHoursPeriod</a> for
-            more information.
-          </p>
-        </div>
+        An array of opening periods covering seven days, starting from Sunday,
+        in chronological order.See PlaceOpeningHoursPeriod for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceOpeningHours-special_days"
-          class="add-link schema-object-property-key"
-        >
-          <code>special_days</code>
-        </h4>
-      </td>
+      <td align="left">special_days</td>
       <td>optional</td>
       <td>
         Array&#x3C;<a href="#PlaceSpecialDay" title="PlaceSpecialDay"
@@ -78,96 +43,31 @@
         >>
       </td>
       <td>
-        <div class="ref-property-description">
-          <p>
-            An array of up to seven entries corresponding to the next seven
-            days.
-          </p>
-          <p>
-            See <a href="#PlaceSpecialDay">PlaceSpecialDay</a> for more
-            information.
-          </p>
-        </div>
+        An array of up to seven entries corresponding to the next seven days.See
+        PlaceSpecialDay for more information.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceOpeningHours-type"
-          class="add-link schema-object-property-key"
-        >
-          <code>type</code>
-        </h4>
-      </td>
+      <td align="left">type</td>
       <td>optional</td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A type string used to identify the type of secondary hours (for
-            example, <code>DRIVE_THROUGH</code>, <code>HAPPY_HOUR</code>,
-            <code>DELIVERY</code>, <code>TAKEOUT</code>, <code>KITCHEN</code>,
-            <code>BREAKFAST</code>, <code>LUNCH</code>, <code>DINNER</code>,
-            <code>BRUNCH</code>, <code>PICKUP</code>,
-            <code>SENIOR_HOURS</code>). Set for
-            <code>secondary_opening_hours</code> only.
-          </p>
-        </div>
+        A type string used to identify the type of secondary hours (for example,
+        DRIVE_THROUGH, HAPPY_HOUR, DELIVERY, TAKEOUT, KITCHEN, BREAKFAST, LUNCH,
+        DINNER, BRUNCH, PICKUP, SENIOR_HOURS). Set for secondary_opening_hours
+        only.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="PlaceOpeningHours-weekday_text"
-          class="add-link schema-object-property-key"
-        >
-          <code>weekday_text</code>
-        </h4>
-      </td>
+      <td align="left">weekday_text</td>
       <td>optional</td>
       <td>Array&#x3C;string></td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An array of strings describing in human-readable text the hours of
-            the place.
-          </p>
-        </div>
+        An array of strings describing in human-readable text the hours of the
+        place.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placeopeninghours"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/PlaceOpeningHours.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-placeopeninghours"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - PlaceOpeningHours"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_placeopeninghours] -->

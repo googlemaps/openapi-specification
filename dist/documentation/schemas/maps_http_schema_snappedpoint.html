@@ -1,6 +1,5 @@
 <!--- This is a generated file, do not edit! -->
 <!--- [START maps_http_schema_snappedpoint] -->
-<h3 class="schema-object" id="SnappedPoint">SnappedPoint</h3>
 <table>
   <thead>
     <tr>
@@ -12,14 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td align="left">
-        <h4
-          id="SnappedPoint-location"
-          class="add-link schema-object-property-key"
-        >
-          <code>location</code>
-        </h4>
-      </td>
+      <td align="left">location</td>
       <td><strong>required</strong></td>
       <td>
         <a href="#LatitudeLongitudeLiteral" title="LatitudeLongitudeLiteral"
@@ -35,85 +27,32 @@
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="SnappedPoint-placeId"
-          class="add-link schema-object-property-key"
-        >
-          <code>placeId</code>
-        </h4>
-      </td>
+      <td align="left">placeId</td>
       <td><strong>required</strong></td>
       <td>string</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            A unique identifier for a place. All place IDs returned by the Roads
-            API correspond to road segments.
-          </p>
-        </div>
+        A unique identifier for a place. All place IDs returned by the Roads API
+        correspond to road segments.
       </td>
     </tr>
     <tr>
-      <td align="left">
-        <h4
-          id="SnappedPoint-originalIndex"
-          class="add-link schema-object-property-key"
-        >
-          <code>originalIndex</code>
-        </h4>
-      </td>
+      <td align="left">originalIndex</td>
       <td>optional</td>
       <td>number</td>
       <td>
-        <div class="nonref-property-description">
-          <p>
-            An integer that indicates the corresponding value in the original
-            request. Each value in the request should map to a snapped value in
-            the response. However, if you've set interpolate=true, then it's
-            possible that the response will contain more coordinates than the
-            request. Interpolated values will not have an
-            <code>originalIndex</code>. These values are indexed from
-            <code>0</code>, so a point with an originalIndex of
-            <code>4</code> will be the snapped value of the 5th
-            latitude/longitude passed to the path parameter.
-          </p>
-        </div>
+        An integer that indicates the corresponding value in the original
+        request. Each value in the request should map to a snapped value in the
+        response. However, if you've set interpolate=true or if you're using
+        nearest roads, then it's possible that the response will contain more
+        coordinates than the request. Interpolated values will not have an
+        originalIndex. These values are indexed from 0, so a point with an
+        originalIndex of 4 will be the snapped value of the 5th
+        latitude/longitude passed to the path parameter. Nearest Roads points
+        may contain several points for single coordinates with differing
+        location or placeId.
       </td>
     </tr>
   </tbody>
 </table>
-<p style="text-align: right; font-size: smaller">
-  Generated from the
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github"
-    href="https://github.com/googlemaps/openapi-specification"
-    title="Google Maps Platform OpenAPI Specification"
-    class="external"
-    >OpenAPI specification</a
-  >.
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-snappedpoint"
-    data-action="edit"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/blob/main/specification/schemas/SnappedPoint.yml"
-    title="Edit on GitHub"
-    ><span class="material-icons">edit</span> Edit</a
-  >
-  <a
-    class="gc-analytics-event"
-    data-category="GMP"
-    data-label="openapi-github-maps-http-schema-snappedpoint"
-    data-action="bug"
-    style="margin-left: 5px"
-    href="https://github.com/googlemaps/openapi-specification/issues/new?assignees=&labels=type%3A+bug%2C+triage+me&template=bug_report.md&title=[schemas] Bug - SnappedPoint"
-    title="File bug for schemas on GitHub"
-    ><span class="material-icons">bug_report</span> Report bug</a
-  >
-</p>
 
 <!--- [END maps_http_schema_snappedpoint] -->

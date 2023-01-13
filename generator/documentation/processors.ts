@@ -23,4 +23,4 @@ export const mdProcessor = unified().use(gfm).use(stringify, {
 export const htmlProcessor = unified()
   .use(remarkParse)
   .use(gfm)
-  .use(remarkHtml);
+  .use(remarkHtml, {sanitize: false});

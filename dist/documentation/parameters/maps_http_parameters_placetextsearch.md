@@ -8,6 +8,32 @@
     of input can generate errors and are not guaranteed to return valid results. The Google Places service will return candidate matches based on this string and order
     the results based on their perceived relevance.
 
+-   <h3 class="parameter-name" id="radius">radius</h3>
+
+    Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
+
+    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+    -   Autocomplete: 50,000 meters
+    -   Nearby Search:
+        -   with `keyword` or `name`: 50,000 meters
+        -   without `keyword` or `name`
+            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
+            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
+    -   Query Autocomplete: 50,000 meters
+    -   Text Search: 50,000 meters
+
+-   <h3 class="parameter-name" id="type">type</h3>
+
+    Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
+
+    -   `type=hospital|pharmacy|doctor` becomes `type=hospital`
+    -   `type=hospital,pharmacy,doctor` is ignored entirely
+
+    See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
+
+    <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
+
 <h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 class="parameter-name" id="language">language</h3>
@@ -42,35 +68,9 @@
 
     Returns up to 20 results from a previously run search. Setting a `pagetoken` parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored.
 
--   <h3 class="parameter-name" id="radius">radius</h3>
-
-    Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
-
-    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
-
-    -   Autocomplete: 50,000 meters
-    -   Nearby Search:
-        -   with `keyword` or `name`: 50,000 meters
-        -   without `keyword` or `name`
-            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
-            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
-    -   Query Autocomplete: 50,000 meters
-    -   Text Search: 50,000 meters
-
 -   <h3 class="parameter-name" id="region">region</h3>
 
     The region code, specified as a [ccTLD ("top-level domain")](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions. For example, the United Kingdom's ccTLD is "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the entity of "The United Kingdom of Great Britain and Northern Ireland").
-
--   <h3 class="parameter-name" id="type">type</h3>
-
-    Restricts the results to places matching the specified type. Only one type may be specified. If more than one type is provided, all types following the first entry are ignored.
-
-    -   `type=hospital|pharmacy|doctor` becomes `type=hospital`
-    -   `type=hospital,pharmacy,doctor` is ignored entirely
-
-    See the list of [supported types](https://developers.google.com/maps/documentation/places/web-service/supported_types).
-
-    <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
 
 
 <p style="text-align: right; font-size: smaller;">Generated from the <a class="gc-analytics-event" data-category="GMP" data-label="openapi-github" href="https://github.com/googlemaps/openapi-specification" title="Google Maps Platform OpenAPI Specification" class="external">OpenAPI specification</a>.

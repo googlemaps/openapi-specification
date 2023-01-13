@@ -10,6 +10,45 @@
       their perceived relevance.
     </p>
   </li>
+  <li>
+    <h3 class="parameter-name" id="radius">radius</h3>
+    <p>
+      Defines the distance (in meters) within which to return place results. You
+      may bias results to a specified circle by passing a
+      <code>location</code> and a <code>radius</code> parameter. Doing so
+      instructs the Places service to <em>prefer</em> showing results within
+      that circle; results outside of the defined area may still be displayed.
+    </p>
+    <p>
+      The radius will automatically be clamped to a maximum value depending on
+      the type of search and other parameters.
+    </p>
+    <ul>
+      <li>Autocomplete: 50,000 meters</li>
+      <li>
+        Nearby Search:
+        <ul>
+          <li>with <code>keyword</code> or <code>name</code>: 50,000 meters</li>
+          <li>
+            without <code>keyword</code> or <code>name</code>
+            <ul>
+              <li>
+                Up to 50,000 meters, adjusted dynamically based on area density,
+                independent of <code>rankby</code> parameter.
+              </li>
+              <li>
+                When using <code>rankby=distance</code>, the radius parameter
+                will not be accepted, and will result in an
+                <code>INVALID_REQUEST</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Query Autocomplete: 50,000 meters</li>
+      <li>Text Search: 50,000 meters</li>
+    </ul>
+  </li>
 </ul>
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
@@ -175,45 +214,6 @@
       omitted, straight-line distance will not be returned. Must be specified as
       <code>latitude,longitude</code>.
     </p>
-  </li>
-  <li>
-    <h3 class="parameter-name" id="radius">radius</h3>
-    <p>
-      Defines the distance (in meters) within which to return place results. You
-      may bias results to a specified circle by passing a
-      <code>location</code> and a <code>radius</code> parameter. Doing so
-      instructs the Places service to <em>prefer</em> showing results within
-      that circle; results outside of the defined area may still be displayed.
-    </p>
-    <p>
-      The radius will automatically be clamped to a maximum value depending on
-      the type of search and other parameters.
-    </p>
-    <ul>
-      <li>Autocomplete: 50,000 meters</li>
-      <li>
-        Nearby Search:
-        <ul>
-          <li>with <code>keyword</code> or <code>name</code>: 50,000 meters</li>
-          <li>
-            without <code>keyword</code> or <code>name</code>
-            <ul>
-              <li>
-                Up to 50,000 meters, adjusted dynamically based on area density,
-                independent of <code>rankby</code> parameter.
-              </li>
-              <li>
-                When using <code>rankby=distance</code>, the radius parameter
-                will not be accepted, and will result in an
-                <code>INVALID_REQUEST</code>.
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Query Autocomplete: 50,000 meters</li>
-      <li>Text Search: 50,000 meters</li>
-    </ul>
   </li>
   <li>
     <h3 class="parameter-name" id="region">region</h3>

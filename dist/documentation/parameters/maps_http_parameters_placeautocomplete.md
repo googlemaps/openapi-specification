@@ -6,6 +6,21 @@
 
     The text string on which to search. The Place Autocomplete service will return candidate matches based on this string and order results based on their perceived relevance.
 
+-   <h3 class="parameter-name" id="radius">radius</h3>
+
+    Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
+
+    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
+
+    -   Autocomplete: 50,000 meters
+    -   Nearby Search:
+        -   with `keyword` or `name`: 50,000 meters
+        -   without `keyword` or `name`
+            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
+            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
+    -   Query Autocomplete: 50,000 meters
+    -   Text Search: 50,000 meters
+
 <h2 id="optional-parameters">Optional parameters</h2>
 
 -   <h3 class="parameter-name" id="components">components</h3>
@@ -53,21 +68,6 @@
 -   <h3 class="parameter-name" id="origin">origin</h3>
 
     The origin point from which to calculate straight-line distance to the destination (returned as `distance_meters`). If this value is omitted, straight-line distance will not be returned. Must be specified as `latitude,longitude`.
-
--   <h3 class="parameter-name" id="radius">radius</h3>
-
-    Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing a `location` and a `radius` parameter. Doing so instructs the Places service to *prefer* showing results within that circle; results outside of the defined area may still be displayed.
-
-    The radius will automatically be clamped to a maximum value depending on the type of search and other parameters.
-
-    -   Autocomplete: 50,000 meters
-    -   Nearby Search:
-        -   with `keyword` or `name`: 50,000 meters
-        -   without `keyword` or `name`
-            -   Up to 50,000 meters, adjusted dynamically based on area density, independent of `rankby` parameter.
-            -   When using `rankby=distance`, the radius parameter will not be accepted, and will result in an `INVALID_REQUEST`.
-    -   Query Autocomplete: 50,000 meters
-    -   Text Search: 50,000 meters
 
 -   <h3 class="parameter-name" id="region">region</h3>
 

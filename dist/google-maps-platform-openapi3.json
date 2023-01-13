@@ -31835,6 +31835,7 @@
         "schema": {
           "type": "number"
         },
+        "required": true,
         "in": "query",
         "example": 1000
       },
@@ -31888,6 +31889,7 @@
         "schema": {
           "type": "string"
         },
+        "required": true,
         "in": "query"
       },
       "places_types": {

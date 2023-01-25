@@ -18814,7 +18814,6 @@ paths:
           example: Museum of Contemporary Art Australia
         - $ref: '#/components/parameters/places_inputtype'
         - $ref: '#/components/parameters/places_locationbias'
-        - $ref: '#/components/parameters/places_locationrestriction'
         - $ref: '#/components/parameters/language'
       responses:
         '200':

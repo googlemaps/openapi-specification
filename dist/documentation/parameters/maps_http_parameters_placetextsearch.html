@@ -52,33 +52,6 @@
       <li>Text Search: 50,000 meters</li>
     </ul>
   </li>
-  <li>
-    <h3 class="parameter-name" id="type">type</h3>
-    <p>
-      Restricts the results to places matching the specified type. Only one type
-      may be specified. If more than one type is provided, all types following
-      the first entry are ignored.
-    </p>
-    <ul>
-      <li>
-        <code>type=hospital|pharmacy|doctor</code> becomes
-        <code>type=hospital</code>
-      </li>
-      <li><code>type=hospital,pharmacy,doctor</code> is ignored entirely</li>
-    </ul>
-    <p>
-      See the list of
-      <a
-        href="https://developers.google.com/maps/documentation/places/web-service/supported_types"
-        >supported types</a
-      >.
-    </p>
-    <div class="note">
-      Note: Adding both `keyword` and `type` with the same value
-      (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield
-      `ZERO_RESULTS`.
-    </div>
-  </li>
 </ul>
 <h2 id="optional-parameters">Optional parameters</h2>
 <ul>
@@ -183,6 +156,33 @@
       "uk" (.co.uk) while its ISO 3166-1 code is "gb" (technically for the
       entity of "The United Kingdom of Great Britain and Northern Ireland").
     </p>
+  </li>
+  <li>
+    <h3 class="parameter-name" id="type">type</h3>
+    <p>
+      Restricts the results to places matching the specified type. Only one type
+      may be specified. If more than one type is provided, all types following
+      the first entry are ignored.
+    </p>
+    <ul>
+      <li>
+        <code>type=hospital|pharmacy|doctor</code> becomes
+        <code>type=hospital</code>
+      </li>
+      <li><code>type=hospital,pharmacy,doctor</code> is ignored entirely</li>
+    </ul>
+    <p>
+      See the list of
+      <a
+        href="https://developers.google.com/maps/documentation/places/web-service/supported_types"
+        >supported types</a
+      >.
+    </p>
+    <div class="note">
+      Note: Adding both `keyword` and `type` with the same value
+      (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield
+      `ZERO_RESULTS`.
+    </div>
   </li>
 </ul>
 <p style="text-align: right; font-size: smaller">

@@ -22334,7 +22334,6 @@ components:
         <div class="note">Note: Adding both `keyword` and `type` with the same value (`keyword=cafe&type=cafe` or `keyword=parking&type=parking`) can yield `ZERO_RESULTS`.</div>
       schema:
         type: string
-      required: true
       in: query
     places_types:
       name: types

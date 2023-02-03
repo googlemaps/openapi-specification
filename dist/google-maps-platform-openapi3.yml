@@ -23262,7 +23262,7 @@ components:
           $ref: '#/components/schemas/Bounds'
         copyrights:
           type: string
-          description: Contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself.
+          description: Contains the copyright notices to be displayed for this route. You must handle and display this information yourself. This content is meant to be read as-is. Do not programmatically parse this display-only content.
         summary:
           type: string
           description: 'Contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives.'
@@ -24800,7 +24800,7 @@ components:
         - status
       properties:
         copyright:
-          description: An array of snapped points.
+          description: Contains the copyright notices associated with this panorama.
           type: string
         date:
           description: A string indicating year and month that the panorama was captured.

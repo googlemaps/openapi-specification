@@ -4,7 +4,7 @@
 
 -   <h3 class="parameter-name" id="size">size</h3>
 
-    Specifies the output size of the image in pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
+    Specifies the output size of the image in pixels. Must not exceed 640 pixels wide or high, anything over will default to 640 pixels. Size is specified as `{width}x{height}` - for example, `size=600x400` returns an image 600 pixels wide, and 400 high.
 
 <h2 id="optional-parameters">Optional parameters</h2>
 

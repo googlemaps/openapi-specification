@@ -43,7 +43,7 @@ jobs:
       - run: npm run build -- --jobs 8
       - run: npm test -- --jobs 8
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v3
         with:
           semantic_version: 19
           extra_plugins: |

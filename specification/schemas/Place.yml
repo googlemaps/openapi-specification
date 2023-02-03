@@ -160,7 +160,9 @@ properties:
     type: string
   secondary_opening_hours:
     description: Contains an array of entries for the next seven days including information about secondary hours of a business. Secondary hours are different from a business's main hours. For example, a restaurant can specify drive through hours or delivery hours as its secondary hours. This field populates the `type` subfield, which draws from a predefined list of opening hours types (such as `DRIVE_THROUGH`, `PICKUP`, or `TAKEOUT`) based on the types of the place. This field includes the `special_days` subfield of all hours, set for dates that have exceptional hours.
-    $ref: "./PlaceOpeningHours.yml"
+    type: array
+    items:
+      $ref: "./PlaceOpeningHours.yml"
   takeout:
     description: Specifies if the business supports takeout.
     type: boolean

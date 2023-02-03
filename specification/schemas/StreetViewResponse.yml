@@ -17,7 +17,7 @@ title: StreetViewResponse
 required: [status]
 properties:
   copyright:
-    description: An array of snapped points.
+    description: Contains the copyright notices associated with this panorama.
     type: string
   date:
     description: A string indicating year and month that the panorama was captured.

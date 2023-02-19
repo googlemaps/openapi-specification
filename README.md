@@ -10,18 +10,18 @@
 
 An OpenAPI specification for Google Maps Platform APIs.
 
-| API                | Status       |
-| ------------------ | ------------ |
-| Elevation          | **Complete** |
-| GeoCoding          | **Complete** |
-| GeoLocation        | **Complete** |
-| Distance           | **Complete** |
-| Roads              | **Complete** |
-| Time Zone          | **Complete** |
-| Directions         | **Complete** |
-| Places             | **Complete** |
-| Street View        | **Complete** |
-| Maps Static        | Not Started  |
+| API                | Status       | Documentation |
+| ------------------ | ------------ | ------------- |
+| Elevation          | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/elevation), [API](https://developers.google.com/maps/documentation/elevation/overview) |
+| GeoCoding          | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/geocoding), [Android](https://developer.android.com/reference/android/location/Geocoder), [iOS](https://developers.google.com/maps/documentation/ios-sdk/reverse_geocoding), [API](https://developers.google.com/maps/documentation/geocoding) |
+| GeoLocation        | **Complete** | [API](https://developers.google.com/maps/documentation/geolocation/overview) |
+| Distance           | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/distancematrix), [API](https://developers.google.com/maps/documentation/distance-matrix) |
+| Roads              | **Complete** | [API](https://developers.google.com/maps/documentation/roads) |
+| Time Zone          | **Complete** | [API](https://developers.google.com/maps/documentation/timezone) |
+| Directions         | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/directions), [API](https://developers.google.com/maps/documentation/directions) |
+| Places             | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/places), [Android](https://developers.google.com/maps/documentation/places/android-sdk), [iOS](https://developers.google.com/maps/documentation/places/ios-sdk), [API](https://developers.google.com/maps/documentation/places/web-service) |
+| Street View        | **Complete** | [JS](https://developers.google.com/maps/documentation/javascript/streetview), [Android](https://developers.google.com/maps/documentation/android-sdk/streetview), [iOS](https://developers.google.com/maps/documentation/ios-sdk/streetview), [API](https://developers.google.com/maps/documentation/streetview) |
+| Maps Static        | In-progress  | [API](https://developers.google.com/maps/documentation/maps-static) |
 
 > **Note**: New APIs will be documented using Google Discovery documents and Protobuf files.
 

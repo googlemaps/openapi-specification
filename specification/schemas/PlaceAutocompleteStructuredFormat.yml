@@ -17,7 +17,6 @@ title: PlaceAutocompleteStructuredFormat
 required:
   - main_text
   - main_text_matched_substrings
-  - secondary_text
 properties:
   main_text:
     description: Contains the main text of a prediction, usually the name of the place.

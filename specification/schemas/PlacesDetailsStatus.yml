@@ -18,7 +18,7 @@ description: |
   Status codes returned by service.
   - `OK` indicating the API request was successful.
   - `ZERO_RESULTS` indicating that the referenced location, `place_id`, was valid but no longer refers to a valid result. This may occur if the establishment is no longer in business. 
-  - `NOT_FOUND` indicating that that the referenced location, `place_id`, was not found in the Places database. 
+  - `NOT_FOUND` indicating that the referenced location, `place_id`, was not found in the Places database. 
   - `INVALID_REQUEST` indicating the API request was malformed.
   - `OVER_QUERY_LIMIT` indicating any of the following:
     - You have exceeded the QPS limits.

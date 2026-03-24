@@ -1,9 +1,11 @@
 # Google Maps Platform OpenAPI3 Specification (Deprecated)
 
-> [!WARNING]
-> Detailed here: **all future updates and new API collections will continue ONLY through Postman.** This repository is a dated artifact and is no longer being actively maintained or updated. The build system and generation code may be broken. If you find this repository, please go to Postman for the most up-to-date information.
+<details open>
+<summary>⚠️ Deprecation Notice ⚠️</summary>
 
-We have moved to **Postman** as the primary source for Google Maps Platform OpenAPI specifications. Please use the Postman Collection to access, generate, and contribute to the specifications.
+**This repository is deprecated.** All future updates and new API collections will continue through Postman. Please visit the [Google Maps Platform Postman Workspace](https://www.postman.com/google-maps-platform) for the most up-to-date information.
+</details>
+
 
 ## 🔗 Getting Started with Postman
 

@@ -1,7 +1,0 @@
-[START maps_http_places_findplacefromtext_error]
-https://maps.googleapis.com/maps/api/place/findplacefromtext/json
-  ?fields=invalid
-  &input=%2B16502530000
-  &inputtype=textquery
-  &key=YOUR_API_KEY
-[END maps_http_places_findplacefromtext_error]

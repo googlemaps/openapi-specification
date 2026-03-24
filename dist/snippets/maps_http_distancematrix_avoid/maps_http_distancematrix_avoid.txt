@@ -1,7 +1,0 @@
-[START maps_http_distancematrix_avoid]
-https://maps.googleapis.com/maps/api/distancematrix/json
-  ?avoid=tolls
-  &destinations=Victoria%20BC
-  &origins=Seattle
-  &key=YOUR_API_KEY
-[END maps_http_distancematrix_avoid]

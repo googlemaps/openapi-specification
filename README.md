@@ -23,7 +23,7 @@ You can export an OpenAPI 3.0 or 2.0 specification directly from the Postman col
 
 ### 1. View the Collection
 1.  Open the [Google Maps Platform Postman Collections](https://www.postman.com/googlemaps-platform/workspace/google-maps-platform/overview).
-2.  Locate the collection you wish to export (e.g., Distance Matrix API, Places API).
+2.  Locate the collection you wish to export (e.g., Google Maps Platform Core APIs, Google Maps Route Optimization APIs, etc.).
 
 ### 2. Fork the Collection
 If you want to modify or save the collection to your own workspace:

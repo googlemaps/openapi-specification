@@ -1,8 +1,0 @@
-[START maps_http_places_findplacefromtext_locationbias]
-https://maps.googleapis.com/maps/api/place/findplacefromtext/json
-  ?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
-  &input=mongolian
-  &inputtype=textquery
-  &locationbias=circle%3A2000%4047.6918452%2C-122.2226413
-  &key=YOUR_API_KEY
-[END maps_http_places_findplacefromtext_locationbias]
